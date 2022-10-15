@@ -1,0 +1,330 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660468a208d48f5438f4cce3b033a32f, type: 3}
+  m_Name: MythsDatabase
+  m_EditorClassIdentifier: 
+  myths:
+  - name: Mito da Palmeira Buriti
+    description: "H\xE1 muito tempo atr\xE1s, a regi\xE3o de Buriti dos Lopes era
+      habitada por in\xFAmeras tribos ind\xEDgenas. A mais respeitada delas era uma
+      aldeia de Tapuias que eram comandados pelo cacique Airuan\xE3 que havia se
+      fixado na regi\xE3o do riacho Muriti (como era chamado o riacho Buriti na \xE9poca).
+      Os nativos viviam felizes plantando, nadando, ca\xE7ando e pescando e \xE0
+      noite se reuniam no terreiro \xE0 beira da fogueira para festejar e contar
+      hist\xF3rias de suas aventuras. Uma noite Araci, a filha do cacique, quis saber
+      do pai como havia nascido a primeira palmeira da regi\xE3o, dentre tantas que
+      lhes eram oferecidas pela natureza. O pai ent\xE3o contou a hist\xF3ria: Tup\xE3
+      tinha em suas m\xE3os a primeira semente de Muriti e resolveu presentear a
+      nossa na\xE7\xE3o com ela. S\xF3 que Mauar\xED, um esp\xEDrito mal, vendo as
+      suas inten\xE7\xF5es quis saber onde a semente seria plantada e como ela haveria
+      de se chamar. Pressentindo a inveja de Mauar\xED, Tup\xE3 n\xE3o deu aten\xE7\xE3o
+      \xE0s suas perguntas e o ignorou. Em seguida, entregou a semente aos \xEDndios
+      dizendo-lhes que da semente nasceria a maior de todas as palmeiras, que seria
+      a rainha da floresta. Disse a eles que os moradores deveriam preservar e respeitar
+      a exist\xEAncia da palmeira e, com seu nome, deveriam batizar aquelas terras,
+      para que esta se tornasse imponente como a planta. Da semente plantada nasceu
+      a primeira palmeira de buriti. Desta, surgiram outras, dando in\xEDcio a um
+      vasto buritizal. A palmeira apresentava v\xE1rias utilidades: seus cachos com
+      mais de dois metros de comprimento, seus frutos arredondados de escama vermelho
+      rubi, d\xE1 uma polpa amarela cor de ouro, utilizada para fabrica\xE7\xE3o
+      de pamonhas, sucos, azeite e doces. A palha serve de coberta para as ocas,
+      o volumoso riacho de forte correnteza tudo irriga, abastecendo com pura \xE1gua
+      as ra\xEDzes das palmeiras. Mauar\xED, invejoso que ele s\xF3, n\xE3o conseguia
+      ficar em paz diante da felicidade dos \xEDndios, e, tomado de raiva por Tup\xE3
+      n\xE3o ter lhe dado ouvidos, resolveu jogar uma maldi\xE7\xE3o sobre aquelas
+      terras: \u201CQuando a gan\xE2ncia e a inveja falarem mais alto, os homens
+      tornarem-se ambiciosos pelo poder e n\xE3o mais se respeitarem, essa harmonia
+      e fartura ter\xE1 fim. As \xE1guas secar\xE3o, o fogo queimar\xE1, o solo empobrecer\xE1
+      e estas palmeiras n\xE3o mais produzir\xE3o\u201D. Tup\xE3, ao tomar conhecimento
+      do mau agouro profetizou: \u201CO presente que entreguei n\xE3o pode ser maculado.
+      Acredito que sempre haver\xE1 homens de boa vontade e de bom cora\xE7\xE3o
+      que tudo far\xE3o para impedir essa maldi\xE7\xE3o. As nobres palmeiras resistir\xE3o
+      o m\xE1ximo poss\xEDvel e de p\xE9 ficar\xE3o, enquanto existir esperan\xE7a
+      na defesa de sua vida\u201D. Para proteger as palmeiras do Buriti, Tup\xE3
+      criou uma entidade para proteger as palmeiras dessa esp\xE9cie nos buritizais.
+      Segundo Rafael Noleto, \u201CO Mestre Buriti (\u2026) \xE9 uma figura ligada
+      aos mananciais e pant\xE2nos da regi\xE3o\u201D. A entidade costuma ser vista
+      em meio aos buritizais piauienses em noites de lua cheia, carregando nas m\xE3os
+      um cajado e alguns buritis.  Mas se algo estiver a amea\xE7ar as palmeiras
+      por ele protegidas, pode aparecer a qualquer momento. Os seus poderes m\xE1gicos
+      permitem-lhe aben\xE7oar n\xE3o s\xF3 os buritizais, mas tamb\xE9m os neg\xF3cios
+      e a vida pessoa, levando fartura aos homens de bom cora\xE7\xE3o que o cultuam
+      e respeitam o bioma dos buritizais. \xC9 por isso que at\xE9 hoje o Buriti
+      \xE9 a \xE1rvore s\xEDmbolo da cidade de Buriti dos Lopes, pois enquanto houverem
+      homens de bom cora\xE7\xE3o que respeitem a natureza, os buritizais se espalhar\xE3o
+      n\xE3o s\xF3 por aquelas terras, mas por todo o Piau\xED, sob a prote\xE7\xE3o
+      do Mestre Buriti. Em raz\xE3o do crescimento dos Buritizais, al\xE9m de Buriti
+      dos Lopes, outras cidades piauienses, al\xE9m de Buriti dos Lopes, receberam
+      seu nome como homenagem a essa palmeira. \xC9 o caso de Canto do Buriti, Palmeira
+      do Piau\xED e Buriti dos Montes. "
+  - name: "Lenda do A\xE7a\xED "
+    description: "Itaki, ent\xE3o cacique da tribo, se viu obrigado a tomar uma decis\xE3o
+      um tanto radical e que deixou todos preocupados e chocados. Como forma de controlar
+      o n\xFAmero de habitantes, o cacique decidiu que todas as crian\xE7as que nascessem
+      a partir de determinada data deveriam ser sacrificadas. Para ele, essa seria
+      uma maneira de conter o aumento populacional de sua tribo. Um dia, a medida
+      dr\xE1stica acometeu a pr\xF3pria fam\xEDlia de Itaki. Sua filha Ia\xE7\xE3
+      deu \xE0 luz uma crian\xE7a que logo teve de ser sacrificada para fazer valer
+      as decis\xF5es do pr\xF3prio av\xF4. Ia\xE7\xE3 sofreu demais com a morte da
+      filhinha. Diz-se que ela passou dias e dias sem sair de sua oca, sofrendo e
+      chorando sem parar por v\xE1rios dias e noites. Assim, Ia\xE7\xE3 elevou os
+      seus pensamentos a Tup\xE3, divindade ind\xEDgena, e pediu a ele que fizesse
+      com que seu pai encontrasse outra maneira de resolver a quest\xE3o da provis\xE3o
+      de alimentos, sem que fosse necess\xE1rio o sacrif\xEDcio das crian\xE7as.
+      Tup\xE3 ficou muito sensibilizado com a dor da \xEDndia e decidiu que ajudaria
+      Itaki a encontrar outra solu\xE7\xE3o para o problema da tribo. Foi ent\xE3o
+      que, certo dia, Ia\xE7\xE3 ouviu um choro de crian\xE7a vindo de fora de sua
+      oca. Ao sair, para sua surpresa e felicidade, avistou sua filhinha ao lado
+      de uma palmeira. Ia\xE7\xE3 correu em sua dire\xE7\xE3o e abra\xE7ou a menina
+      que, misteriosamente, desapareceu nos bra\xE7os da m\xE3e. Mais uma vez inconsol\xE1vel,
+      Ia\xE7\xE3 chorou tanto durante a noite a ponto de perder as for\xE7as e acabar
+      por falecer. O corpo da filha de Itaki foi encontrado na manh\xE3 seguinte,
+      abra\xE7ado \xE0 palmeira. Ia\xE7\xE3 estava com um semblante sereno e parecia
+      sorrir levemente. Seus olhos estavam abertos e direcionados ao topo da \xE1rvore.
+      Ao observar a palmeira, Itaki percebeu que no local para onde os olhos de Ia\xE7\xE3
+      estavam direcionados abundava um pequeno fruto escuro. Tratava-se do a\xE7a\xED.
+      O cacique mandou ent\xE3o que todos os frutos fossem colhidos. Com esses frutos,
+      foi feito um suco de aspecto avermelhado e bastante espesso, que alimentou
+      a popula\xE7\xE3o da tribo e findou a escassez de alimentos. Conta-se que o
+      nome do fruto foi uma homenagem que o cacique fez \xE0 sua filha. A frondosa
+      \xE1rvore e o seu fruto foram batizados de a\xE7a\xED, que \xE9 Ia\xE7\xE3
+      ao contr\xE1rio. Desde ent\xE3o, o a\xE7a\xED passou a servir de alimento para
+      toda a tribo do cacique Itaki e isso fez com que ele suspendesse a sua ordem
+      de sacrificar as crian\xE7as nascidas para controlar o crescimento populacional
+      e a consequente escassez de alimentos ."
+  - name: "Sama\xFAma "
+    description: "De origem ticuna, que \xE9 considerado um dos povos mais numerosos
+      da Amaz\xF4nia, espalhando-se pelo Brasil, Peru e Col\xF4mbia, a lenda mais
+      conhecida da Sama\xFAma \xE9 sobre a origem da luz no mundo. Segundo o povo
+      Ticuna/Tikuna, que vieram do igarap\xE9 Eware, pr\xF3ximo ao Rio Solim\xF5es,
+      no in\xEDcio da Terra era tudo noite e o povo sofria com o frio e a escurid\xE3o.
+      Acreditavam que era uma grande sama\xFAma, ou wotchine, que obstru\xEDa a luz
+      do Sol com seus galhos e folhas. Foi ent\xE3o que Yo'i e Ipi decidiram jogar
+      os caro\xE7os de outra \xE1rvore, a arara-tucupi (Parkia multijuga), para tentar
+      abrir buracos na folhagem densa. Os pontos de luz que atravessaram a sama\xFAma
+      e a noite s\xE3o as estrelas. Yo'i e Ipi tamb\xE9m puderam ver uma pregui\xE7a-real
+      (Choloepus didactylus) que vivia na copa da sama\xFAma prendendo seus galhos
+      ao c\xE9u. Para trazer mais luz, precisavam afugentar o bicho. Como n\xE3o
+      conseguiam fazer isso sozinhos, chamaram todos os animais da mata para ajudar.
+      Algumas vers\xF5es contam que foi um pequeno quatipuru (Sciurillus pusillus),
+      Taine, que conseguiu escalar a \xE1rvore e usar formigas-de-fogo para afugentar
+      a pregui\xE7a-real e tombar a Sama\xFAma. Os Ticunas tamb\xE9m dizem que do
+      tronco da samaumeira ca\xEDda nasceu o Rio Solim\xF5es e, e de seus galhos,
+      nasceram os igarap\xE9s. Tamb\xE9m dizem que depois de um tempo, Yo'i e Ipi
+      viram que o toco (nap\xFCne) da \xE1rvore estava rebrotando e ficaram com medo
+      dela crescer e tapar o Sol novamente. Para impedir, colocaram um jabut em cima
+      do tocoi para comer suas folhas, mas n\xE3o era suficiente e a sama\xFAma seguia
+      crescendo. Ent\xE3o chegaram bem perto e escutaram o cora\xE7\xE3o da Sama\xFAma
+      ainda batendo. Desse cora\xE7\xE3o, que foi tirado e replantado com ajuda de
+      outros animais, nasceu o umari ou tetchi (Geoffroea spinosa).   Outras lendas
+      de origem menos conhecidas dizem que uma curandeira e protetora da floresta
+      vive dentro de suas ra\xEDzes, as Sapopemas, que podem chegar a 2 metros de
+      altura e 30 metros de extens\xE3o, irradiando ao redor da \xE1rvore. Outros
+      acreditam que h\xE1 um portal dessas ra\xEDzes gigantes. Lendas envolvendo
+      o Curupira tamb\xE9m mencionam o uso das Sapopemas para a comunica\xE7\xE3o
+      com bichos e povos da floresta, usando-as como tambor.   Nativa do M\xE9xico
+      at\xE9 a Bacia Amaz\xF4nica na Am\xE9rica do Sul, incluindo o Caribe, a sama\xFAma
+      (Ceiba pentandra) pode chegar a 70 metros de altura e viver por centenas de
+      anos, sendo frequentemente considerada a \u201Crainha\u201D ou \u201Cm\xE3e\u201D
+      da floresta. \xC9 sagrada para muitos povos amer\xEDndios, incluindo os Maias,
+      que a chamavam Yaaxche. Outra varia\xE7\xE3o da esp\xE9cie (Ceiba pentandra
+      var guineensis) \xE9 nativa da \xC1frica Ocidental, indicando que sua ancestralidade
+      em rela\xE7\xE3o \xE0 forma\xE7\xE3o dos ecossistemas atuais.  Por isso, tem
+      muitos nomes: mafumeira, paina lisa, \xE1rvore da seda, kapok, pulin, malpanka,
+      ora, bongo, kumaka, lupuna, oc\xE1 (S\xE3o Tom\xE9 e Pr\xEDncipe) e poil\xE3o
+      (Guin\xE9-Bissau). Al\xE9m de propriedades medicinais da sama\xFAma, \xE9 conhecida
+      por estocar \xE1gua que serve para outros animais e plantas. De forma contr\xE1ria,
+      o umarizeiro \u201Cverte\u201D a \xE1gua de suas folhas para umedecer a terra
+      ao seu redor. "
+  - name: "Carna\xFAba"
+    description: "De origem tupi, pois faz refer\xEAncia ao Deus Tup\xE3, a lenda
+      conta a origem da carna\xFAba, carnaubeira ou carna\xEDba (Copernicia prunifera
+      ou cerifera), palmeira nativa das regi\xF5es de Caatinga brasileira e comum
+      em todo o Nordeste, que salvou um povo da extin\xE7\xE3o. Conta a hist\xF3ria
+      que esse povo vivia feliz com a Natureza, o sol aquecia as cabanas e amadurecia
+      os frutos, as nuvens davam sombra, a chuva molhava as plantas e aumentava os
+      rios. Com o tempo, por\xE9m, o sol come\xE7ou a ficar muito quente: t\xE3o
+      quente que secou os rios, matou plantas e animais. O povo rezava, dan\xE7ava
+      e implorava para Tup\xE3 enviar a chuva outra vez, mas o sol continuava queimando
+      tudo. Ent\xE3o come\xE7aram a morrer as pessoas, at\xE9 que daquele povo forte
+      s\xF3 restou um casal e seu filho, obrigados a abandonar suas terras em busca
+      de outras melhores. Mastigando as ra\xEDzes que lhes restavam, caminharam a
+      noite toda, e quando novamente o sol queimava no c\xE9u, o menino avistou uma
+      palmeira sozinha, no que parecia um deserto, balan\xE7ando suas palmas verdes.
+      Exaustos, pararam para descansar \xE0 sombra daquela palmeira e os pais adormeceram.
+      S\xF3 o filho continuava acordado e preocupado, pedindo ajuda para Tup\xE3.
+      Foi quando ouviu uma voz e viu, no topo da palmeira, uma \xEDndia, que lhe
+      disse: \u201CEu me chamo Carnaubeira. Estou aqui para te ajudar. H\xE1 muitos
+      anos a minha tribo tamb\xE9m foi atormentada pela seca. Socorri a todos, e,
+      quando morri, a lua me transformou nesta \xE1rvore destinada a salvar os desamparados.
+      Fa\xE7a o que te aconselho e ainda ser\xE1s feliz. Talha o meu tronco, e, com
+      a minha seiva, mata a sede dos teus pais e a tua. Come os meus frutos, e n\xE3o
+      sentir\xE1s mais fome. Cozinha um pouco das minhas ra\xEDzes, e rem\xE9dio
+      que, bebido, fecha as feridas. P\xF5e a secar minhas folhas e bate-as, delas
+      sair\xE1 um p\xF3 cinzento e perfumado, a minha cera, com que poder\xE1s iluminar
+      o teu caminho nas noites sem lua. Da palha que ficar, tece teu chap\xE9u e
+      tua esteira. Agora, fa\xE7o-te um pedido: plante os meus coquinhos para que
+      tenhas um carnaubal, ent\xE3o, poder\xE1s construir a tua cabana com a madeira
+      do meu tronco.\u201D O menino fez tudo o que a \xEDndia lhe aconselhou. Dentro
+      de alguns anos, um carnaubal imenso balan\xE7ava-se ao vento, e o indiozinho,
+      j\xE1 homem, despedia-se dos pais para levar a todas as aldeias os c\xF4cos
+      da boa dessa \u201C\xE1rvore da vida\u201D.  End\xEAmica ao semi\xE1rido do
+      Nordeste brasileiro, a Copernicia prunifera ou cerifera pode atingir de 10
+      a 15 metros de altura, com troncos finos e por vezes espinhentos na base ou
+      cobertos de folhas j\xE1 secas. Chamado tamb\xE9m de carna\xEDba, carna\xEDva,
+      carna\xFAva e carnanda\xFAba, os nomes populares da carnaubeira derivam do
+      tupi karana\xFDwa. Al\xE9m de ser a \xE1rvore-s\xEDmbolo do estado do Cear\xE1,
+      onde se encontra com abund\xE2ncia, a carna\xFAba teve sua import\xE2ncia reconhecida
+      por grandes escritores brasileiros como M\xE1rio de Andrade, Jos\xE9 de Alencar
+      e Euclides da Cunha. Conforme a lenda, a carna\xFAba pode ser aproveitada de
+      forma integral: as ra\xEDzes, casca e frutos s\xE3o usadas para produzir alimentos
+      e rem\xE9dios naturais; a madeira \xE9 excelente para caibros, barrotes ou
+      ripas usados em constru\xE7\xE3o e movelaria; as folhas se tornam palhas para
+      artesanato; e sua famosa cera, conhecida como \"rainha das ceras\" por sua
+      qualidade e resist\xEAncia, tem amplo uso pr\xE1tico, inclusive em escala industrial. "
+  - name: 'Lenda da Mandioca '
+    description: "Com alegria contagiante, Mani era uma indiazinha muito estimada
+      pela tribo tupi onde vivia. Ela era neta do cacique e a gravidez da sua m\xE3e
+      foi motivo de tristeza para o chefe da tribo. Isso porque ela tinha engravidado
+      e n\xE3o era casada com um bravo guerreiro, tal como ele desejava. O cacique
+      obrigou a filha a dizer quem era o pai do seu filho, mas a \xEDndia dizia que
+      n\xE3o sabia como tinha ficado gr\xE1vida. A desonestidade da filha desagradava
+      muito o cacique. At\xE9 que um dia, ele teve um sonho que o aconselhava a acreditar
+      na filha, pois ela continuava pura e dizia a verdade ao pai. Desde ent\xE3o,
+      aceitou a gravidez e ficou muito contente com a chegada da sua neta. Certo
+      dia, pela manh\xE3, Mani foi encontrada morta por sua m\xE3e. Ela simplesmente
+      tinha morrido durante o sono e, mesmo sem vida, apresentava um semblante sorridente.
+      Triste com a perda, sua m\xE3e enterrou Mani dentro da sua oca e suas l\xE1grimas
+      umedeciam a terra tal como se estivesse sendo regada. Dias depois, nesse mesmo
+      local nasceu uma planta, diferente de todas as que conhecia, a qual ela passou
+      a cuidar. Percebendo que a terra estava ficando rachada, cavou na esperan\xE7a
+      de que pudesse desenterrar sua filha com vida. No entanto, encontrou uma raiz,
+      a mandioca, que recebeu esse nome em decorr\xEAncia da jun\xE7\xE3o do nome
+      de Mani e da palavra oca. "
+  - name: Pequi
+    description: "A Lenda do Pequi conta a hist\xF3ria do fruto do amor dos ind\xEDgenas
+      Tain\xE1-Racan e Malu\xE1. Tain\xE1-Racan era uma linda \xEDndia e Malu\xE1
+      um jovem e formoso guerreiro que apaixonou-se assim que a viu. Pouco tempo
+      depois, estavam casados. A vida deles era bela e alegre como o ip\xEA florido.
+      Todas as manh\xE3s, Malu\xE1 sa\xEDa para ca\xE7ar e pescar, enquanto Tain\xE1-Racan
+      tecia e cozinhava para ofertar ao seu amado quando voltasse. Ao seu lado, sempre
+      se deitava um jacar\xE9, lhe fazendo companhia e conversando, pois, nessa \xE9poca,
+      os bichos tamb\xE9m falavam. O tempo foi passando. Ap\xF3s tr\xEAs anos de
+      casamento, deitados numa pedra grande \xE0 beira do rio calmo, indagaram-se
+      porque Cananxiu\xE9 ainda n\xE3o havia enviado o filho t\xE3o esperado. Dois
+      pequenos rios de l\xE1grimas deslizaram pelas faces coradas de Tain\xE1-Racan.
+      Malu\xE1 abra\xE7ou Tain\xE1-Racan e amou-a. Luas depois, quando os ip\xEAs
+      voltaram a florir, nasceu Uadi, o Arco-\xCDris. Era lindo, mas havia nele algo
+      diferente, que espantou o pai, a m\xE3e, a tribo inteira: Uadi tinha os cabelos
+      dourados como as flores do ip\xEA amarelo. Malu\xE1 recebeu o nascimento do
+      filho com alegria e para explicar a sua diferen\xE7a, espalhou pela tribo que
+      Uadi era filho de Cananxiu\xE9. No entanto, os pr\xF3prios \xEDndios de sua
+      tribo zombavam-no, dizendo que Uadi era filho do jacar\xE9. Alheio \xE0s piadas
+      maldosas, o menino crescia cheio de encanto, alegria, e com uma intelig\xEAncia
+      incomum. Um dia, Malu\xE1 foi chamado para a despedida, seus bracinhos agarram-se
+      ao pesco\xE7o do pai, e ele falou: \u201CPapai, tamb\xE9m estou indo embora.
+      Vou pra casa de minha m\xE3e, l\xE1 no c\xE9u\u201D. O corpo do guerreiro se
+      estremeceu. Nesse momento, Cananxui\xE9, desceu do c\xE9u sob a forma de Andrerura
+      \u2013 a arara vermelha, e gritou forte:  \u2013 \u201CVim buscar meu filho!\u201D.
+      Tain\xE1-Racan e Malu\xE1 ca\xEDram de joelhos. O guerreiro abriu os bra\xE7os
+      gritando  \u2013 \u201C Devolve meu filho!\u201D O grito de Malu\xE1 ecoou
+      pela mata, ferindo de dor o sil\xEAncio. Malu\xE1 partiu e Tain\xE1-Racan chorou
+      tr\xEAs dias e tr\xEAs noites. O jacar\xE9, seu amigo, que veio da mata ao
+      escutar os seus gritos de dor, ficava deitado \xE0 sua porta, dia e noite,
+      tomando conta dela. Uma noite, o jacar\xE9 implorou a Cananxiu\xE9 que tivesse
+      piedade, prometendo ir embora para sempre, nunca mais falar com os humanos
+      e morar somente nas margens dos rios, se a fizesse novamente feliz. Ouvindo-o,
+      Cananxiu\xE9 tomou novamente o corpo de uma arara vermelha e voltou \xE0 Terra,
+      dizendo a Tain\xE1-Racan: \u2013 \u201CDas suas l\xE1grimas nascer\xE1 uma
+      planta, que crescer\xE1 como uma \xE1rvore copada. Ela dar\xE1 flores t\xE3o
+      cheirosas que as pacas, veados, capivaras e os lobos vir\xE3o comer nas noites
+      de luar. Depois, nascer\xE3o frutos. Dentro da casca verde, os frutos ser\xE3o
+      dourados como os cabelos de Uadi. Mas a semente ser\xE1 cheia de espinhos,
+      como os espinhos da dor de seu cora\xE7\xE3o de m\xE3e. Seu aroma ser\xE1 t\xE3o
+      inesquec\xEDvel, como voc\xEA o ser\xE1 sempre para o seu amigo jacar\xE9.
+      E aquele que o provar, jamais o esquecer\xE1.\u201D Tain\xE1-Racan sorriu e
+      imediatamente viu nascer uma planta, que chamou de Tamau\xF3. A mesma que os
+      \xEDndios Mehinako, do Xingu, conhecem como akain; e que os homens brancos,
+      do Norte, Nordeste e Centro-Oeste chamam de Pequi. E, quando Malu\xE1 voltou,
+      encontrou uma linda e frondosa \xE1rvore, cheia de frutos, chamada de pequizeiro.
+      Ele pegou alguns no ch\xE3o, partiu, tirou os caro\xE7os dourados e os comeu,
+      com farinha, junto com Tain\xE1-Racan. E depois, se amaram ali mesmo \xE0 sombra
+      do pequizeiro. Foi assim que, durante muitos anos a seguir, sempre que os ip\xEAs
+      e os cajueiros voltavam a florir nas matas e os pequizeiros tamb\xE9m deixavam
+      seus frutos maduros cair na terra, servindo de alimentos para todos, Tain\xE1-Racan
+      e Malu\xE1 eram aben\xE7oados com mais filhos. E, a cada filho que nascia,
+      plantavam mais um pequizeiro. E eles tiveram muitos filhos. E viveram felizes
+      para sempre. O nome pequi, py (pele) + qui (espinho), com origem na l\xEDngua
+      Tupi faz refer\xEAncia aos espinhos no caro\xE7o, em seu nome cient\xEDfico
+      Caryocar brasiliense Cambess, o g\xEAnero Caryocar vem do grego caryon (n\xFAcleo
+      ou noz) + kara (cabe\xE7a), em refer\xEAncia ao fruto globoso, o ep\xEDteto
+      espec\xEDfico brasiliense se d\xE1 porque essa esp\xE9cie \xE9 origin\xE1ria
+      do Brasil. "
+  - name: O Homem Chuva
+    description: "A Lenda do Pequi conta a hist\xF3ria do fruto do amor dos ind\xEDgenas
+      Tain\xE1-Racan e Malu\xE1. Tain\xE1-Racan era uma linda \xEDndia e Malu\xE1
+      um jovem e formoso guerreiro que apaixonou-se assim que a viu. Pouco tempo
+      depois, estavam casados. A vida deles era bela e alegre como o ip\xEA florido.
+      Todas as manh\xE3s, Malu\xE1 sa\xEDa para ca\xE7ar e pescar, enquanto Tain\xE1-Racan
+      tecia e cozinhava para ofertar ao seu amado quando voltasse. Ao seu lado, sempre
+      se deitava um jacar\xE9, lhe fazendo companhia e conversando, pois, nessa \xE9poca,
+      os bichos tamb\xE9m falavam. O tempo foi passando. Ap\xF3s tr\xEAs anos de
+      casamento, deitados numa pedra grande \xE0 beira do rio calmo, indagaram-se
+      porque Cananxiu\xE9 ainda n\xE3o havia enviado o filho t\xE3o esperado. Dois
+      pequenos rios de l\xE1grimas deslizaram pelas faces coradas de Tain\xE1-Racan.
+      Malu\xE1 abra\xE7ou Tain\xE1-Racan e amou-a. Luas depois, quando os ip\xEAs
+      voltaram a florir, nasceu Uadi, o Arco-\xCDris. Era lindo, mas havia nele algo
+      diferente, que espantou o pai, a m\xE3e, a tribo inteira: Uadi tinha os cabelos
+      dourados como as flores do ip\xEA amarelo. Malu\xE1 recebeu o nascimento do
+      filho com alegria e para explicar a sua diferen\xE7a, espalhou pela tribo que
+      Uadi era filho de Cananxiu\xE9. No entanto, os pr\xF3prios \xEDndios de sua
+      tribo zombavam-no, dizendo que Uadi era filho do jacar\xE9. Alheio \xE0s piadas
+      maldosas, o menino crescia cheio de encanto, alegria, e com uma intelig\xEAncia
+      incomum. Um dia, Malu\xE1 foi chamado para a despedida, seus bracinhos agarram-se
+      ao pesco\xE7o do pai, e ele falou: \u201CPapai, tamb\xE9m estou indo embora.
+      Vou pra casa de minha m\xE3e, l\xE1 no c\xE9u\u201D. O corpo do guerreiro se
+      estremeceu. Nesse momento, Cananxui\xE9, desceu do c\xE9u sob a forma de Andrerura
+      \u2013 a arara vermelha, e gritou forte:  \u2013 \u201CVim buscar meu filho!\u201D.
+      Tain\xE1-Racan e Malu\xE1 ca\xEDram de joelhos. O guerreiro abriu os bra\xE7os
+      gritando  \u2013 \u201C Devolve meu filho!\u201D O grito de Malu\xE1 ecoou
+      pela mata, ferindo de dor o sil\xEAncio. Malu\xE1 partiu e Tain\xE1-Racan chorou
+      tr\xEAs dias e tr\xEAs noites. O jacar\xE9, seu amigo, que veio da mata ao
+      escutar os seus gritos de dor, ficava deitado \xE0 sua porta, dia e noite,
+      tomando conta dela. Uma noite, o jacar\xE9 implorou a Cananxiu\xE9 que tivesse
+      piedade, prometendo ir embora para sempre, nunca mais falar com os humanos
+      e morar somente nas margens dos rios, se a fizesse novamente feliz. Ouvindo-o,
+      Cananxiu\xE9 tomou novamente o corpo de uma arara vermelha e voltou \xE0 Terra,
+      dizendo a Tain\xE1-Racan: \u2013 \u201CDas suas l\xE1grimas nascer\xE1 uma
+      planta, que crescer\xE1 como uma \xE1rvore copada. Ela dar\xE1 flores t\xE3o
+      cheirosas que as pacas, veados, capivaras e os lobos vir\xE3o comer nas noites
+      de luar. Depois, nascer\xE3o frutos. Dentro da casca verde, os frutos ser\xE3o
+      dourados como os cabelos de Uadi. Mas a semente ser\xE1 cheia de espinhos,
+      como os espinhos da dor de seu cora\xE7\xE3o de m\xE3e. Seu aroma ser\xE1 t\xE3o
+      inesquec\xEDvel, como voc\xEA o ser\xE1 sempre para o seu amigo jacar\xE9.
+      E aquele que o provar, jamais o esquecer\xE1.\u201D Tain\xE1-Racan sorriu e
+      imediatamente viu nascer uma planta, que chamou de Tamau\xF3. A mesma que os
+      \xEDndios Mehinako, do Xingu, conhecem como akain; e que os homens brancos,
+      do Norte, Nordeste e Centro-Oeste chamam de Pequi. E, quando Malu\xE1 voltou,
+      encontrou uma linda e frondosa \xE1rvore, cheia de frutos, chamada de pequizeiro.
+      Ele pegou alguns no ch\xE3o, partiu, tirou os caro\xE7os dourados e os comeu,
+      com farinha, junto com Tain\xE1-Racan. E depois, se amaram ali mesmo \xE0 sombra
+      do pequizeiro. Foi assim que, durante muitos anos a seguir, sempre que os ip\xEAs
+      e os cajueiros voltavam a florir nas matas e os pequizeiros tamb\xE9m deixavam
+      seus frutos maduros cair na terra, servindo de alimentos para todos, Tain\xE1-Racan
+      e Malu\xE1 eram aben\xE7oados com mais filhos. E, a cada filho que nascia,
+      plantavam mais um pequizeiro. E eles tiveram muitos filhos. E viveram felizes
+      para sempre. O nome pequi, py (pele) + qui (espinho), com origem na l\xEDngua
+      Tupi faz refer\xEAncia aos espinhos no caro\xE7o, em seu nome cient\xEDfico
+      Caryocar brasiliense Cambess, o g\xEAnero Caryocar vem do grego caryon (n\xFAcleo
+      ou noz) + kara (cabe\xE7a), em refer\xEAncia ao fruto globoso, o ep\xEDteto
+      espec\xEDfico brasiliense se d\xE1 porque essa esp\xE9cie \xE9 origin\xE1ria
+      do Brasil. "
