@@ -7,6 +7,7 @@ namespace Kitchen
     {
         [SerializeField] private IngredientData ingredientData;
 
+        public IngredientName IngredientName => ingredientData.ingredientName;
         public CookingToolName NecessaryCookingTool => ingredientData.necessaryCookingTool;
         public IngredientState State 
         {
