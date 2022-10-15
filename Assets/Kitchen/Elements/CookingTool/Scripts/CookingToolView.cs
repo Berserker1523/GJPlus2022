@@ -12,8 +12,11 @@ namespace Kitchen
         protected override void OnClick()
         {
             IngredientView ingredientView = SelectionManager.selectedGameObject as IngredientView;
+            SelectionManager.selectedGameObject = null;
+
             if (ingredientView == null || ingredientView.NecessaryCookingTool != cookingToolData.cookingToolName)
                 return;
+
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
             currentlyCookingSeconds = 0;
         }
