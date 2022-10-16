@@ -139,4 +139,4 @@ MonoBehaviour:
   stateRaw: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
   stateCooked: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
   stateBurnt: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
-  stateDefault: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  stateDefault: {fileID: 1301431791, guid: 05d4c1313754b0349a65067c4a27ad85, type: 3}
