@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 4510765572266057341}
   cookingToolData: {fileID: 11400000, guid: 602ddcadf8a8c9b49829c641fcea5ee7, type: 2}
+  image: {fileID: 5299041337557991601}
 --- !u!1 &8860942647922971984
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,8 +16,8 @@ namespace Kitchen
 
             if (potionView != null)
                 potionView.Clear();
-            else if(ingredientView != null)
-                Destroy(ingredientView.gameObject);
+            else if (ingredientView != null)
+                ingredientView.Release();
         }
     }
 }

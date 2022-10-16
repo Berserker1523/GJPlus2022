@@ -29,7 +29,7 @@ namespace Kitchen
 
             Ingredients.Add(ingredientView.IngredientName);
             IngredientsLabel.text += $"{ingredientView.IngredientName}\n";
-            Destroy(ingredientView.gameObject);
+            ingredientView.Release();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
         }
     }
