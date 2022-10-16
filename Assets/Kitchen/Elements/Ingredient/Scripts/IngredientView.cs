@@ -45,11 +45,12 @@ namespace Kitchen
         }
 
         protected override void OnClick() =>
-            SelectionManager.selectedGameObject = this;
+            SelectionManager.SelectedGameObject = this;
 
         public void Release()
         {
-            CookingToolView.SetInitialSprite();
+            if(CookingToolView != null)
+                CookingToolView.SetInitialSprite();
             Destroy(gameObject);
         }
     }

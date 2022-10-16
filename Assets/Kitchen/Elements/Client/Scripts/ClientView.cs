@@ -37,6 +37,8 @@ namespace Kitchen
                 sliderBarImage.color = Color.red;
             else if(currentlyWaitingTime <= WaitingTime * 0.6)
                 sliderBarImage.color = Color.yellow;
+            else if (currentlyWaitingTime > WaitingTime * 0.6)
+                sliderBarImage.color = Color.white;
 
             if (currentlyWaitingTime <= 0)
             {
@@ -56,9 +58,9 @@ namespace Kitchen
 
         protected override void OnClick()
         {
-            PotionView potionView = SelectionManager.selectedGameObject as PotionView;
-            PainkillerView painkillerView = SelectionManager.selectedGameObject as PainkillerView;
-            SelectionManager.selectedGameObject = null;
+            PotionView potionView = SelectionManager.SelectedGameObject as PotionView;
+            PainkillerView painkillerView = SelectionManager.SelectedGameObject as PainkillerView;
+            SelectionManager.SelectedGameObject = null;
 
             if (painkillerView != null)
             {
@@ -79,7 +81,6 @@ namespace Kitchen
             AddMoney();
             EventManager.Dispatch(SpawnPointEvent.Released, ID);
             Destroy(transform.parent.gameObject);
-
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
         }
 

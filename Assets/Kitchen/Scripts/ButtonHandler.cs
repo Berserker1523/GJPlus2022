@@ -5,7 +5,7 @@ namespace Kitchen
 {
     public abstract class ButtonHandler : MonoBehaviour
     {
-        [SerializeField] protected Button button;
+        [SerializeField] public Button button;
 
         protected virtual void Awake() =>
             button.onClick.AddListener(OnClick);
@@ -14,5 +14,8 @@ namespace Kitchen
             button.onClick.RemoveListener(OnClick);
 
         protected abstract void OnClick();
+
+        public void SetButtonImageColor(Color color) =>
+            button.targetGraphic.color = color;
     }
 }
