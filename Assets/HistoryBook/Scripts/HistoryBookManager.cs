@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace HistoryBook {
     public class HistoryBookManager : MonoBehaviour
@@ -17,6 +18,7 @@ namespace HistoryBook {
         [SerializeField] private Scrollbar scrollbar;
 
         [HideInInspector] public List<Button> buttonsList;
+        [HideInInspector] public string mainMenuSceneName = "MainMenu";
 
         //public event Action<int> DefaultEntrySetted;
 
@@ -69,6 +71,11 @@ namespace HistoryBook {
         {
             buttonsList[entryId].Select();
             HandleChangeText(mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description);
+        }
+
+        public void Back()
+        {
+            SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
         }
     }
 }
