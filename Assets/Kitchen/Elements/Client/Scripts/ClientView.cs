@@ -18,9 +18,6 @@ namespace Kitchen
         protected override void Awake()
         {
             base.Awake();
-            SetRequiredIngredient(IngredientName.Yuca);
-            SetRequiredIngredient(IngredientName.Yuca);
-            SetRequiredIngredient(IngredientName.Yuca);
             WaitingTime = 30f;
             currentlyWaitingTime = WaitingTime;
             slider.value = currentlyWaitingTime;
@@ -37,10 +34,11 @@ namespace Kitchen
             }
         }
 
-        public void SetRequiredIngredient(IngredientName ingredientName)
+        public void SetRequiredRecipe(List<IngredientName> recipe)
         {
-            requiredRecipe.Add(ingredientName);
-            IngredientsLabel.text += $"{ingredientName}\n";
+            requiredRecipe = new List<IngredientName>(recipe);
+            foreach(IngredientName ingredient in requiredRecipe)
+                IngredientsLabel.text += $"{ingredient}\n";
         }
 
         protected override void OnClick()
