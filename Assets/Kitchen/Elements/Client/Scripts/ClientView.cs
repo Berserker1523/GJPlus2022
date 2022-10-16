@@ -58,7 +58,7 @@ namespace Kitchen
             if (painkillerView != null)
             {
                 currentlyWaitingTime = WaitingTime;
-                Destroy(painkillerView.gameObject);
+                Destroy(painkillerView.transform.parent.gameObject);
                 return;
             }
 

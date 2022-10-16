@@ -65,3 +65,7 @@ MonoBehaviour:
   - {fileID: 0}
   stovePrefab: {fileID: 8311942742168999634, guid: a246a5e068bb2f943b1140205d78aba9, type: 3}
   stovePositions: []
+  painkillerPrefab: {fileID: 2674788434048809875, guid: 5e6e3ae47bd38b440a2af7274ad042fd, type: 3}
+  painkillersPositions:
+  - {fileID: 0}
+  - {fileID: 0}
