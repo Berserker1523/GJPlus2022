@@ -63,3 +63,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  stovePrefab: {fileID: 8311942742168999634, guid: a246a5e068bb2f943b1140205d78aba9, type: 3}
+  stovePositions: []

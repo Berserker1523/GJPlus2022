@@ -815,9 +815,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
---- !u!224 &1447278675853439777 stripped
+--- !u!224 &596144606546975351 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6418198513498878052, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4990603697727265074, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
   m_PrefabInstance: {fileID: 5550618110533796677}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &2563777952974852549 stripped
@@ -825,9 +825,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7967887768174776960, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
   m_PrefabInstance: {fileID: 5550618110533796677}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &3169604197054477436 stripped
+--- !u!224 &3469782714015854056 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7420652328840296249, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9016458508421508781, guid: 2a22cd63ffd77e446964f7e077db0876, type: 3}
   m_PrefabInstance: {fileID: 5550618110533796677}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &6575182142615778276 stripped
@@ -1160,21 +1160,37 @@ PrefabInstance:
       value: LevelInstantiator
       objectReference: {fileID: 0}
     - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
-      propertyPath: mortarsPositions.Array.data[0]
-      value: 
-      objectReference: {fileID: 1447278675853439777}
+      propertyPath: stovePositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
-      propertyPath: mortarsPositions.Array.data[1]
+      propertyPath: mortarsPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
+      propertyPath: stovePositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 3469782714015854056}
+    - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
+      propertyPath: stovePositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 596144606546975351}
+    - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
+      propertyPath: mortarsPositions.Array.data[0]
       value: 
       objectReference: {fileID: 6575182142615778276}
     - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
-      propertyPath: mortarsPositions.Array.data[2]
+      propertyPath: mortarsPositions.Array.data[1]
       value: 
       objectReference: {fileID: 2563777952974852549}
     - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
+      propertyPath: mortarsPositions.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
       propertyPath: mortarsPositions.Array.data[3]
       value: 
-      objectReference: {fileID: 3169604197054477436}
+      objectReference: {fileID: 0}
     - target: {fileID: 4534598068720677657, guid: 5d187037b77832e419502af32ca79172, type: 3}
       propertyPath: potionsPositions.Array.data[0]
       value: 

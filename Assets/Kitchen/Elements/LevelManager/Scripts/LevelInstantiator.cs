@@ -17,10 +17,15 @@ namespace Kitchen
         [SerializeField] private GameObject mortarPrefab;
         [SerializeField] private List<Transform> mortarsPositions;
 
+        [Header("Stoves")]
+        [SerializeField] private GameObject stovePrefab;
+        [SerializeField] private List<Transform> stovePositions;
+
         private void Awake()
         {
             InstantiatePotions(levelData.minNumberOfPotionRecipients);
             InstantiateMortars(levelData.minNumberOfMortars);
+            InstantiateStoves(levelData.minNumberOfStoves);
         }
 
         private void InstantiatePotions(int quantity)
@@ -39,6 +44,17 @@ namespace Kitchen
             {
                 if (i < quantity)
                     Instantiate(mortarPrefab, mortarsPositions[i]);
+            }
+        }
+
+        private void InstantiateStoves(int quantity)
+        {
+            stovePositions = stovePositions.OrderBy(transform => int.Parse(transform.gameObject.name)).ToList();
+
+            for (int i = 0; i < stovePositions.Count; i++)
+            {
+                if (i < quantity)
+                    Instantiate(stovePrefab, stovePositions[i]);
             }
         }
     }

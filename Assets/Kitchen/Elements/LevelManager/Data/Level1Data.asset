@@ -18,7 +18,7 @@ MonoBehaviour:
   maxSpawnSeconds: 40
   minNumberOfPotionRecipients: 1
   minNumberOfMortars: 1
-  minNumberOfStoves: 0
+  minNumberOfStoves: 1
   minNumberOfPainKillers: 0
   levelRecipes:
   - ingredients: 000000000000000000000000
