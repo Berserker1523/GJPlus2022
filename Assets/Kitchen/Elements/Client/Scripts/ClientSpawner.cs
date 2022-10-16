@@ -9,7 +9,7 @@ namespace Kitchen
     public class ClientSpawner : MonoBehaviour
     {
         [SerializeField] private LevelData spawnData;
-        [SerializeField] private ClientView clientPrefab;
+        [SerializeField] private GameObject clientPrefab;
         [SerializeField] private List<SpawnPoint> spawnPoints = new();
 
         private int clientsSpawned;
@@ -39,10 +39,12 @@ namespace Kitchen
         {
             if (clientsSpawned >= spawnData.clientNumber)
                 return;
+
             SpawnPoint spawnPoint = GetRandomSpawnPoint(out int ID);
             if (spawnPoint == null)
                 return;
-            ClientView client = Instantiate(clientPrefab, spawnPoint.transform);
+
+            ClientView client = Instantiate(clientPrefab, spawnPoint.transform).GetComponentInChildren<ClientView>();
             client.Initialize(ID, spawnData.levelRecipes[Random.Range(0, spawnData.levelRecipes.Count)].ingredients);
             spawnPoint.isOpen = false;
             SetRandomNextSpawnTime();
