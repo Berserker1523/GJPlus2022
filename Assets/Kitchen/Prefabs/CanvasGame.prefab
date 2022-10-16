@@ -2294,6 +2294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowls
       objectReference: {fileID: 0}
+    - target: {fileID: 3584871262943168044, guid: b33c4f5496a57e142a5cb7164a906511, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b33c4f5496a57e142a5cb7164a906511, type: 3}
 --- !u!224 &5941022010241625512 stripped
