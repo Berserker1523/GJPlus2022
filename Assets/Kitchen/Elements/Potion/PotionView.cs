@@ -1,17 +1,16 @@
-using UnityEngine;
-using TMPro;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kitchen
 {
     public class PotionView : ButtonHandler
     {
-        [SerializeField] private TextMeshProUGUI IngredientsLabel;
+        [SerializeField] private LevelData recipesData;
 
         public List<IngredientName> Ingredients { get; private set; } = new();
-        [SerializeField] private LevelData recipesData;
+
         public Image[] ingredientsPlaces;
         public Image potionSkin;
         public Sprite failedPotionSkin;
@@ -20,11 +19,8 @@ namespace Kitchen
         public void Clear()
         {
             Ingredients.Clear();
-            IngredientsLabel.text = string.Empty;
-            foreach(Image img in ingredientsPlaces)
-            {
+            foreach (Image img in ingredientsPlaces)
                 img.sprite = null;
-            }
             potionSkin.sprite = defaultPotionSkin;
         }
 
@@ -39,21 +35,20 @@ namespace Kitchen
                 return;
             }
 
-            if (ingredientView == null || ( ingredientView.State != IngredientState.Cooked && ingredientView.NecessaryCookingTool != CookingToolName.None ))
+            if (ingredientView == null || (ingredientView.State != IngredientState.Cooked && ingredientView.NecessaryCookingTool != CookingToolName.None))
                 return;
 
             ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
 
             Ingredients.Add(ingredientView.IngredientName);
-            //IngredientsLabel.text += $"{ingredientView.IngredientName}\n";
             ingredientView.Release();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
         }
 
         private void changePotionView()
         {
-            bool acceptedRecipe =false;
-            foreach (IngredientList ingredientList in recipesData.levelRecipes) 
+            bool acceptedRecipe = false;
+            foreach (IngredientList ingredientList in recipesData.levelRecipes)
             {
                 acceptedRecipe = ingredientList.ingredients.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x));
                 if (acceptedRecipe)
@@ -62,11 +57,9 @@ namespace Kitchen
                     return;
                 }
             }
-            if (!acceptedRecipe)
-            {
 
+            if (!acceptedRecipe)
                 potionSkin.sprite = failedPotionSkin;
-            }
         }
 
         private void Update()
