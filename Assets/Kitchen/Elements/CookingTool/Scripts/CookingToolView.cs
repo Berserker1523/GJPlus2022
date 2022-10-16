@@ -16,6 +16,9 @@ namespace Kitchen
             IngredientView ingredientView = SelectionManager.selectedGameObject as IngredientView;
             SelectionManager.selectedGameObject = null;
 
+            if (currentlyCookingIngredient != null)
+                return;
+            
             if (ingredientView == null || ingredientView.NecessaryCookingTool != cookingToolData.cookingToolName)
                 return;
 

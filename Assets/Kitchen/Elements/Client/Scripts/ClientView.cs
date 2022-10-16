@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Events;
 using TMPro;
 using UnityEngine.UI;
+using System.Linq;
 
 namespace Kitchen
 {
@@ -10,6 +11,8 @@ namespace Kitchen
     {
         [SerializeField] private TextMeshProUGUI IngredientsLabel;
         [SerializeField] private Slider slider;
+
+        public int ID { get; set; }
 
         private List<IngredientName> requiredRecipe = new();
         public float WaitingTime { get; set; }
@@ -29,13 +32,15 @@ namespace Kitchen
             slider.value = currentlyWaitingTime / WaitingTime;
             if (currentlyWaitingTime <= 0)
             {
+                EventManager.Dispatch(SpawnPointEvent.Released, ID);
                 EventManager.Dispatch(ClientEvent.Died);
                 Destroy(gameObject);
             }
         }
 
-        public void SetRequiredRecipe(List<IngredientName> recipe)
+        public void Initialize(int ID, List<IngredientName> recipe)
         {
+            this.ID = ID;
             requiredRecipe = new List<IngredientName>(recipe);
             foreach(IngredientName ingredient in requiredRecipe)
                 IngredientsLabel.text += $"{ingredient}\n";
@@ -57,20 +62,13 @@ namespace Kitchen
             if (potionView == null)
                 return;
 
-            bool acceptedRecipe = true;
-            foreach (IngredientName ingredient in requiredRecipe)
-            {
-                if (!potionView.ingredients.Contains(ingredient))
-                {
-                    acceptedRecipe = false;
-                    break;
-                }
-            }
+            bool acceptedRecipe = requiredRecipe.OrderBy(x => x).SequenceEqual(potionView.Ingredients.OrderBy(x => x));
 
             if (!acceptedRecipe)
                 return;
 
             potionView.Clear();
+            EventManager.Dispatch(SpawnPointEvent.Released, ID);
             EventManager.Dispatch(ClientEvent.Served, currentlyWaitingTime);
             Destroy(gameObject);
         }

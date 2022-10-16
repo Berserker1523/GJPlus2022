@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   clientNumber: 5
-  minSpawnSeconds: 60
-  maxSpawnSeconds: 90
+  minSpawnSeconds: 20
+  maxSpawnSeconds: 40
   levelRecipes:
   - ingredients: 000000000000000000000000
   - ingredients: 000000000000000000000000
