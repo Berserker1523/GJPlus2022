@@ -8,7 +8,7 @@ namespace Kitchen
 
     public class ClientSpawner : MonoBehaviour
     {
-        [SerializeField] private ClientSpawnData spawnData;
+        [SerializeField] private LevelData spawnData;
         [SerializeField] private ClientView clientPrefab;
         [SerializeField] private List<SpawnPoint> spawnPoints = new();
 

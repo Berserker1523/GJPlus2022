@@ -9,13 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9246c4369ad196468776a07b751ca2b, type: 3}
-  m_Name: LevelData
+  m_Script: {fileID: 11500000, guid: 8dc8ed744b13a5847931fb34a8852261, type: 3}
+  m_Name: Level1Data
   m_EditorClassIdentifier: 
   level: 1
   clientNumber: 5
   minSpawnSeconds: 20
   maxSpawnSeconds: 40
+  minNumberOfPotionRecipients: 1
+  minNumberOfMortars: 0
+  minNumberOfStoves: 0
+  minNumberOfPainKillers: 0
   levelRecipes:
   - ingredients: 000000000000000000000000
   - ingredients: 000000000000000000000000
