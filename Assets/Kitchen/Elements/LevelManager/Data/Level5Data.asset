@@ -19,7 +19,7 @@ MonoBehaviour:
   minNumberOfPotionRecipients: 1
   minNumberOfMortars: 1
   minNumberOfStoves: 1
-  minNumberOfPainKillers: 0
+  minNumberOfPainKillers: 2
   levelRecipes:
   - ingredients: 000000000500000006000000
   - ingredients: 000000000500000006000000
