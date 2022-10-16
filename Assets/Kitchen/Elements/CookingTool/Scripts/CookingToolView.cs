@@ -25,6 +25,7 @@ namespace Kitchen
 
             CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enciende Sarten");
             CookingSound.start();
+            CookingSound.setParameterByName("Cocinando", 1);
         }
 
         private void Update()
@@ -43,6 +44,7 @@ namespace Kitchen
             {
                 currentlyCookingIngredient.State = IngredientState.Burned;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Comida Quemada", transform.position);
+                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
                 
         }
