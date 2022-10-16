@@ -47,7 +47,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2007644691709128854, guid: caed8032cb825554cbbb5c74e9aa935d, type: 3}
       propertyPath: m_Name
-      value: MortarSpawner
+      value: MortarSpawn
       objectReference: {fileID: 0}
     - target: {fileID: 4067337767263355468, guid: caed8032cb825554cbbb5c74e9aa935d, type: 3}
       propertyPath: m_Pivot.x
@@ -149,7 +149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3218988889574675989, guid: 2b94c12e859555b40a4bff41fbbb2c06, type: 3}
       propertyPath: m_Name
-      value: StoveSpawner
+      value: StoveSpawn
       objectReference: {fileID: 0}
     - target: {fileID: 7078691283444188010, guid: 2b94c12e859555b40a4bff41fbbb2c06, type: 3}
       propertyPath: m_Pivot.x
