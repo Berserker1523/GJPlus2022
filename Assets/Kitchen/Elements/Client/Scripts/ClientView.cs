@@ -42,7 +42,7 @@ namespace Kitchen
         {
             this.ID = ID;
             requiredRecipe = new List<IngredientName>(recipe);
-            foreach(IngredientName ingredient in requiredRecipe)
+            foreach (IngredientName ingredient in requiredRecipe)
                 IngredientsLabel.text += $"{ingredient}\n";
         }
 
@@ -68,9 +68,12 @@ namespace Kitchen
                 return;
 
             potionView.Clear();
+            AddMoney();
             EventManager.Dispatch(SpawnPointEvent.Released, ID);
-            EventManager.Dispatch(ClientEvent.Served, currentlyWaitingTime);
             Destroy(gameObject);
         }
+
+        private void AddMoney() =>
+            MoneyManager.Money += (int)(WaitingTime * currentlyWaitingTime / WaitingTime) + 10;
     }
 }
