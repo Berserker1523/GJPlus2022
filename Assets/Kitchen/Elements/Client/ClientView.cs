@@ -9,7 +9,7 @@ namespace Kitchen
     public class ClientView : ButtonHandler
     {
         [SerializeField] private TextMeshProUGUI IngredientsLabel;
-        [SerializeField] private Slider slider; 
+        [SerializeField] private Slider slider;
 
         private List<IngredientName> requiredRecipe = new();
         public float WaitingTime { get; set; }
@@ -49,7 +49,7 @@ namespace Kitchen
             PainkillerView painkillerView = SelectionManager.selectedGameObject as PainkillerView;
             SelectionManager.selectedGameObject = null;
 
-            if(painkillerView != null)
+            if (painkillerView != null)
             {
                 currentlyWaitingTime = WaitingTime;
                 Destroy(painkillerView.gameObject);
