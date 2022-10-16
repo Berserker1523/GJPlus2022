@@ -8,9 +8,8 @@ namespace Kitchen
 
         private IngredientView currentlyCookingIngredient;
         private float currentlyCookingSeconds;
-        public FMODUnity.EventReference cookingEvent;
+
         FMOD.Studio.EventInstance CookingSound;
-        FMOD.Studio.EventInstance ComidaLista;
 
         protected override void OnClick()
         {
@@ -25,12 +24,16 @@ namespace Kitchen
 
             CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enciende Sarten");
             CookingSound.start();
+            CookingSound.setParameterByName("Cocinando", 1);
         }
 
         private void Update()
         {
             if (currentlyCookingIngredient == null)
+            {
+                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 return;
+            }
 
             currentlyCookingSeconds += Time.deltaTime;
             if (currentlyCookingIngredient.State == IngredientState.Raw && currentlyCookingSeconds >= cookingToolData.cookingSeconds)
@@ -43,6 +46,7 @@ namespace Kitchen
             {
                 currentlyCookingIngredient.State = IngredientState.Burned;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Comida Quemada", transform.position);
+                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
                 
         }
