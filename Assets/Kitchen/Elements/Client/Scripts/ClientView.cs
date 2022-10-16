@@ -1,16 +1,16 @@
-using UnityEngine;
-using System.Collections.Generic;
 using Events;
-using TMPro;
-using UnityEngine.UI;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kitchen
 {
     public class ClientView : ButtonHandler
     {
-        [SerializeField] private TextMeshProUGUI IngredientsLabel;
         [SerializeField] private Slider slider;
+        [SerializeField] private Image sliderBarImage;
+        [SerializeField] private Image potionImage;
 
         public int ID { get; set; }
 
@@ -31,22 +31,27 @@ namespace Kitchen
         private void Update()
         {
             currentlyWaitingTime -= Time.deltaTime;
-            slider.value = currentlyWaitingTime / WaitingTime;
+            slider.value = currentlyWaitingTime / currentlyWaitingTime;
+
+            if (currentlyWaitingTime <= currentlyWaitingTime * 0.3)
+                sliderBarImage.color = Color.red;
+            else if(currentlyWaitingTime <= currentlyWaitingTime * 0.6)
+                sliderBarImage.color = Color.yellow;
+
             if (currentlyWaitingTime <= 0)
             {
                 EventManager.Dispatch(SpawnPointEvent.Released, ID);
                 EventManager.Dispatch(ClientEvent.Died);
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
             }
         }
 
-        public void Initialize(int ID, List<IngredientName> recipe)
+        public void Initialize(int ID, List<IngredientName> recipe, Sprite potionSkin)
         {
             this.ID = ID;
+            potionImage.sprite = potionSkin;
             requiredRecipe = new List<IngredientName>(recipe);
-            foreach (IngredientName ingredient in requiredRecipe)
-                IngredientsLabel.text += $"{ingredient}\n";
         }
 
         protected override void OnClick()
@@ -73,7 +78,7 @@ namespace Kitchen
             potionView.Clear();
             AddMoney();
             EventManager.Dispatch(SpawnPointEvent.Released, ID);
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
         }
