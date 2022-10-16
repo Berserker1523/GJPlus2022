@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc8ed744b13a5847931fb34a8852261, type: 3}
-  m_Name: Level1Data
+  m_Name: Level2Data
   m_EditorClassIdentifier: 
-  level: 1
+  level: 2
   clientNumber: 5
   minSpawnSeconds: 20
   maxSpawnSeconds: 40
