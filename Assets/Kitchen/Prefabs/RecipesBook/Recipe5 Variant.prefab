@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4199686265455407119, guid: 5541cf52470f14648a2eb9c5cc3a6e62, type: 3}
       propertyPath: m_Name
-      value: Recipe5
+      value: Recipe5 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4950332626453390626, guid: 5541cf52470f14648a2eb9c5cc3a6e62, type: 3}
       propertyPath: m_AnchorMax.y
@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963136434293490853, guid: 5541cf52470f14648a2eb9c5cc3a6e62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1973950467, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
     - target: {fileID: 4963136434533655394, guid: 5541cf52470f14648a2eb9c5cc3a6e62, type: 3}
       propertyPath: m_Sprite
       value: 
