@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookingToolName: 0
   cookingSeconds: 5
-  burningSeconds: 10
+  burningSeconds: 99999
