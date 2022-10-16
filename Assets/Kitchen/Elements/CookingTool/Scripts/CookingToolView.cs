@@ -30,7 +30,10 @@ namespace Kitchen
         private void Update()
         {
             if (currentlyCookingIngredient == null)
+            {
+                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 return;
+            }
 
             currentlyCookingSeconds += Time.deltaTime;
             if (currentlyCookingIngredient.State == IngredientState.Raw && currentlyCookingSeconds >= cookingToolData.cookingSeconds)
