@@ -21,7 +21,7 @@ namespace Kitchen
         protected override void Awake()
         {
             base.Awake();
-            WaitingTime = 30f;
+            WaitingTime = 70f;
             currentlyWaitingTime = WaitingTime;
             slider.value = currentlyWaitingTime;
 

@@ -3,6 +3,7 @@
     public enum CookingToolName
     {
         Mortar,
-        Stove
+        Stove,
+        None
     }
 }
