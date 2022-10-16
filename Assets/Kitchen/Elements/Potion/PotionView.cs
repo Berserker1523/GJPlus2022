@@ -8,7 +8,7 @@ namespace Kitchen
     {
         [SerializeField] private TextMeshProUGUI IngredientsLabel;
 
-        public List<IngredientName> ingredients = new();
+        [HideInInspector] public List<IngredientName> ingredients = new();
 
         public void Clear()
         {
