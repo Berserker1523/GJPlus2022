@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &506416144 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6559902634937273313, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-  m_PrefabInstance: {fileID: 4651197465813241945}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &997586614
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,14 +382,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4651197465059415515, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: associatedIngredient
-      value: 
-      objectReference: {fileID: 506416144}
-    - target: {fileID: 4651197465775906574, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -152.83875
-      objectReference: {fileID: 0}
     - target: {fileID: 4651197466216568735, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -408,22 +389,6 @@ PrefabInstance:
     - target: {fileID: 4651197466216568735, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651197466216568735, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651197466584360202, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000140070915
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651197466621608449, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: m_Size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651197466621608449, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d996cd306f5fcc74a80d1199c0a32ded, type: 3}

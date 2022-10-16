@@ -44,7 +44,7 @@ namespace HistoryBook {
         private void Start()
         {
             CreateBookEntrys();
-            scrollbar.value = 1;
+            
         }
 
         private void CreateBookEntrys()
@@ -67,6 +67,7 @@ namespace HistoryBook {
             titleText.text = mythName;
             historyText.text = mythDescription;
             associatedIngredient.sprite = ingredient;
+            scrollbar.value = 1;
         }
 
         public void SetDefaultEntry(int entryId)
