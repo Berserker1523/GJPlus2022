@@ -8,9 +8,8 @@ namespace Kitchen
 
         private IngredientView currentlyCookingIngredient;
         private float currentlyCookingSeconds;
-        public FMODUnity.EventReference cookingEvent;
+
         FMOD.Studio.EventInstance CookingSound;
-        FMOD.Studio.EventInstance ComidaLista;
 
         protected override void OnClick()
         {

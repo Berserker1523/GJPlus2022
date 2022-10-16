@@ -7,6 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject settingsPanel;
 
+
     public enum SceneNames
     {
         MainMenu, Kitchen, History, Credits, Garden
