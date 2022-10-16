@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Kitchen
 {
@@ -9,6 +10,7 @@ namespace Kitchen
         [SerializeField] private TextMeshProUGUI IngredientsLabel;
 
         public List<IngredientName> Ingredients { get; private set; } = new();
+        public Image[] ingredientsPlaces;
 
         public void Clear()
         {
@@ -27,8 +29,10 @@ namespace Kitchen
             if (ingredientView == null || ingredientView.State != IngredientState.Cooked)
                 return;
 
+            ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
+
             Ingredients.Add(ingredientView.IngredientName);
-            IngredientsLabel.text += $"{ingredientView.IngredientName}\n";
+           // IngredientsLabel.text += $"{ingredientView.IngredientName}\n";
             ingredientView.Release();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
         }

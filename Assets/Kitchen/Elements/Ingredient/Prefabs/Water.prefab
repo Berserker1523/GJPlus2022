@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1230609318039187158}
   ingredientData: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
-  stateRaw: {fileID: 0}
-  stateCooked: {fileID: 0}
-  stateBurnt: {fileID: 0}
+  stateRaw: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  stateCooked: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  stateBurnt: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  stateDefault: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}

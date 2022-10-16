@@ -10,6 +10,7 @@ namespace Kitchen
         [SerializeField] public Sprite stateRaw;
         [SerializeField] public Sprite stateCooked;
         [SerializeField] public Sprite stateBurnt;
+        [SerializeField] public Sprite stateDefault;
 
         private Image image;
         private IngredientState state;
