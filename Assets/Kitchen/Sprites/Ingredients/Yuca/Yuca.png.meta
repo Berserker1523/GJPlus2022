@@ -108,12 +108,12 @@ TextureImporter:
       name: Yuca_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 96
-        width: 111
-        height: 65
+        x: 70
+        y: 94
+        width: 115
+        height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
