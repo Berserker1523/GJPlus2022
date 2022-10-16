@@ -25,6 +25,7 @@ namespace Kitchen
                 return;
 
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
+            currentlyCookingIngredient.State = IngredientState.Raw;
             currentlyCookingSeconds = 0;
 
             CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");

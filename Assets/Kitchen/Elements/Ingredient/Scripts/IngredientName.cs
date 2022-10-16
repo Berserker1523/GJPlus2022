@@ -2,6 +2,6 @@
 {
     public enum IngredientName
     {
-        Yuca,
+        Yuca, Carnauba, Pequi, Asai, Aguaje, Coca
     }
 }

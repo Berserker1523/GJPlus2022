@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1230609318039187158}
   - component: {fileID: 1230609318039187157}
   m_Layer: 5
-  m_Name: Yuca
+  m_Name: Coca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -403597951, guid: f48b83810fcefbf428f62bdc87cf1095, type: 3}
+  m_Sprite: {fileID: 1192132634, guid: 57654bd221a94e7419bae71e17bbf1ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1230609318039187158}
-  ingredientData: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
-  stateRaw: {fileID: -826279406, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
-  stateCooked: {fileID: 1963296856, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
-  stateBurnt: {fileID: 1304277098, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
+  ingredientData: {fileID: 11400000, guid: 19524fb5a3271824c93f5d4232ffbbb3, type: 2}
+  stateRaw: {fileID: -1221875277, guid: fb00e4cf44f5aa1418e8055cefdadb8c, type: 3}
+  stateCooked: {fileID: -1849694421, guid: fb00e4cf44f5aa1418e8055cefdadb8c, type: 3}
+  stateBurnt: {fileID: 1962750885, guid: fb00e4cf44f5aa1418e8055cefdadb8c, type: 3}
