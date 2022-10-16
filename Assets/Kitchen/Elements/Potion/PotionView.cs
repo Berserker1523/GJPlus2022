@@ -35,10 +35,11 @@ namespace Kitchen
 
             if (Ingredients.Count >= 3)
             {
+                changePotionView();
                 return;
             }
 
-            if (ingredientView == null || ingredientView.State != IngredientState.Cooked)
+            if (ingredientView == null || ( ingredientView.State != IngredientState.Cooked && ingredientView.NecessaryCookingTool != CookingToolName.None ))
                 return;
 
             ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
@@ -63,6 +64,7 @@ namespace Kitchen
             }
             if (!acceptedRecipe)
             {
+
                 potionSkin.sprite = failedPotionSkin;
             }
         }
