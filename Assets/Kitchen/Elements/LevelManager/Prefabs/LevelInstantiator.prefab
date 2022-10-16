@@ -57,3 +57,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  mortarPrefab: {fileID: 4838055890721297914, guid: 9a8a1e7b43ee1fd4ea736df915beff1d, type: 3}
+  mortarsPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
