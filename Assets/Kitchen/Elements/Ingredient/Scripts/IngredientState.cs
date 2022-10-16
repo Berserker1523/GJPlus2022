@@ -4,6 +4,6 @@
     {
         Raw,
         Cooked,
-        Burned
+        Burnt
     }
 }

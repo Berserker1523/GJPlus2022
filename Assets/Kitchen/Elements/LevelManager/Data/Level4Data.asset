@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level4Data
   m_EditorClassIdentifier: 
   level: 4
-  clientNumber: 5
-  minSpawnSeconds: 20
-  maxSpawnSeconds: 40
+  clientNumber: 39
+  minSpawnSeconds: 5
+  maxSpawnSeconds: 7
   minNumberOfPotionRecipients: 1
   minNumberOfMortars: 1
   minNumberOfStoves: 1
@@ -23,3 +23,6 @@ MonoBehaviour:
   levelRecipes:
   - ingredients: 000000000500000006000000
   - ingredients: 000000000500000006000000
+  - ingredients: 020000000500000006000000
+  - ingredients: 010000000200000006000000
+  - ingredients: 040000000500000006000000
