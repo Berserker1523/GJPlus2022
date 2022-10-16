@@ -9,6 +9,8 @@ namespace Kitchen
         private IngredientView currentlyCookingIngredient;
         private float currentlyCookingSeconds;
 
+        FMOD.Studio.EventInstance MorteroSound;
+
         FMOD.Studio.EventInstance CookingSound;
 
         protected override void OnClick()
@@ -25,9 +27,12 @@ namespace Kitchen
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
             currentlyCookingSeconds = 0;
 
-            CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Enciende Sarten");
+            CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
             CookingSound.start();
             CookingSound.setParameterByName("Cocinando", 1);
+
+            //MorteroSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
+            //MorteroSound.start();
         }
 
         private void Update()
@@ -42,16 +47,17 @@ namespace Kitchen
             if (currentlyCookingIngredient.State == IngredientState.Raw && currentlyCookingSeconds >= cookingToolData.cookingSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Cooked;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Comida Lista", transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista", transform.position);
             }
                 
             else if(currentlyCookingIngredient.State == IngredientState.Cooked && currentlyCookingSeconds >= cookingToolData.burningSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Burned;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Comida Quemada", transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Quemada", transform.position);
                 CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
                 
         }
+        
     }
 }

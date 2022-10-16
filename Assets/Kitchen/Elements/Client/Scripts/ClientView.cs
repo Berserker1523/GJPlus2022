@@ -24,6 +24,8 @@ namespace Kitchen
             WaitingTime = 30f;
             currentlyWaitingTime = WaitingTime;
             slider.value = currentlyWaitingTime;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Llega Cliente");
         }
 
         private void Update()
@@ -35,6 +37,7 @@ namespace Kitchen
                 EventManager.Dispatch(SpawnPointEvent.Released, ID);
                 EventManager.Dispatch(ClientEvent.Died);
                 Destroy(gameObject);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
             }
         }
 
@@ -71,6 +74,8 @@ namespace Kitchen
             AddMoney();
             EventManager.Dispatch(SpawnPointEvent.Released, ID);
             Destroy(gameObject);
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
         }
 
         private void AddMoney() =>
