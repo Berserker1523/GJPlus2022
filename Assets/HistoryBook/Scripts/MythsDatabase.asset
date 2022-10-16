@@ -66,6 +66,7 @@ MonoBehaviour:
       dos Lopes, outras cidades piauienses, al\xE9m de Buriti dos Lopes, receberam
       seu nome como homenagem a essa palmeira. \xC9 o caso de Canto do Buriti, Palmeira
       do Piau\xED e Buriti dos Montes. "
+    ingredientSprite: {fileID: 21300000, guid: 57cc8f8a4c06bcb4c8a2f2cbc16f92c8, type: 3}
   - name: "Lenda do A\xE7a\xED "
     description: "Itaki, ent\xE3o cacique da tribo, se viu obrigado a tomar uma decis\xE3o
       um tanto radical e que deixou todos preocupados e chocados. Como forma de controlar
@@ -101,6 +102,7 @@ MonoBehaviour:
       toda a tribo do cacique Itaki e isso fez com que ele suspendesse a sua ordem
       de sacrificar as crian\xE7as nascidas para controlar o crescimento populacional
       e a consequente escassez de alimentos ."
+    ingredientSprite: {fileID: 21300000, guid: e56c71a3cde17d44eb45904146ae4eb7, type: 3}
   - name: "Sama\xFAma "
     description: "De origem ticuna, que \xE9 considerado um dos povos mais numerosos
       da Amaz\xF4nia, espalhando-se pelo Brasil, Peru e Col\xF4mbia, a lenda mais
@@ -145,6 +147,7 @@ MonoBehaviour:
       por estocar \xE1gua que serve para outros animais e plantas. De forma contr\xE1ria,
       o umarizeiro \u201Cverte\u201D a \xE1gua de suas folhas para umedecer a terra
       ao seu redor. "
+    ingredientSprite: {fileID: 21300000, guid: bcbfd513508bf424cbab8c7c69cd3498, type: 3}
   - name: "Carna\xFAba"
     description: "De origem tupi, pois faz refer\xEAncia ao Deus Tup\xE3, a lenda
       conta a origem da carna\xFAba, carnaubeira ou carna\xEDba (Copernicia prunifera
@@ -191,6 +194,7 @@ MonoBehaviour:
       ripas usados em constru\xE7\xE3o e movelaria; as folhas se tornam palhas para
       artesanato; e sua famosa cera, conhecida como \"rainha das ceras\" por sua
       qualidade e resist\xEAncia, tem amplo uso pr\xE1tico, inclusive em escala industrial. "
+    ingredientSprite: {fileID: 21300000, guid: f3997303da7cb0b48a66e038c3e6a055, type: 3}
   - name: 'Lenda da Mandioca '
     description: "Com alegria contagiante, Mani era uma indiazinha muito estimada
       pela tribo tupi onde vivia. Ela era neta do cacique e a gravidez da sua m\xE3e
@@ -210,6 +214,7 @@ MonoBehaviour:
       de que pudesse desenterrar sua filha com vida. No entanto, encontrou uma raiz,
       a mandioca, que recebeu esse nome em decorr\xEAncia da jun\xE7\xE3o do nome
       de Mani e da palavra oca. "
+    ingredientSprite: {fileID: 21300000, guid: 117f546b63cda6843a37163eb3548ebc, type: 3}
   - name: Pequi
     description: "A Lenda do Pequi conta a hist\xF3ria do fruto do amor dos ind\xEDgenas
       Tain\xE1-Racan e Malu\xE1. Tain\xE1-Racan era uma linda \xEDndia e Malu\xE1
@@ -269,6 +274,7 @@ MonoBehaviour:
       ou noz) + kara (cabe\xE7a), em refer\xEAncia ao fruto globoso, o ep\xEDteto
       espec\xEDfico brasiliense se d\xE1 porque essa esp\xE9cie \xE9 origin\xE1ria
       do Brasil. "
+    ingredientSprite: {fileID: 21300000, guid: b4b3c275315c6954787eb7c6b970c817, type: 3}
   - name: O Homem Chuva
     description: "A Lenda do Pequi conta a hist\xF3ria do fruto do amor dos ind\xEDgenas
       Tain\xE1-Racan e Malu\xE1. Tain\xE1-Racan era uma linda \xEDndia e Malu\xE1
@@ -328,3 +334,4 @@ MonoBehaviour:
       ou noz) + kara (cabe\xE7a), em refer\xEAncia ao fruto globoso, o ep\xEDteto
       espec\xEDfico brasiliense se d\xE1 porque essa esp\xE9cie \xE9 origin\xE1ria
       do Brasil. "
+    ingredientSprite: {fileID: 21300000, guid: f1d23b208b933b34ba5a0be2b4f2b793, type: 3}

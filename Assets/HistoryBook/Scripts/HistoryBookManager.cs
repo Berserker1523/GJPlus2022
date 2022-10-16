@@ -12,6 +12,7 @@ namespace HistoryBook {
         [SerializeField] public LegendsScriptableObject mythsDatabase;
         [SerializeField] public TextMeshProUGUI historyText;
         [SerializeField] public TextMeshProUGUI titleText;
+        [SerializeField] public Image associatedIngredient;
 
         [SerializeField] private GameObject buttonPrefab;
         [SerializeField] private Transform mythsList;
@@ -54,23 +55,24 @@ namespace HistoryBook {
                 button.name = myth.name;
                 button.GetComponentInChildren<TextMeshProUGUI>().text = myth.name;
                 Button newbutton = button.GetComponent<Button>();
-                newbutton.onClick.AddListener(delegate { HandleChangeText(myth.name, myth.description); });
+                newbutton.onClick.AddListener(delegate { HandleChangeText(myth.name, myth.description, myth.ingredientSprite); });
                 buttonsList.Add(newbutton);
             }
             // DefaultEntrySetted?.Invoke(0);
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
         }
 
-        public void HandleChangeText(string mythName, string mythDescription)
+        public void HandleChangeText(string mythName, string mythDescription, Sprite ingredient)
         {
             titleText.text = mythName;
             historyText.text = mythDescription;
+            associatedIngredient.sprite = ingredient;
         }
 
         public void SetDefaultEntry(int entryId)
         {
             buttonsList[entryId].Select();
-            HandleChangeText(mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description);
+            HandleChangeText(mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description,mythsDatabase.myths[entryId].ingredientSprite);
         }
 
         public void Back()
