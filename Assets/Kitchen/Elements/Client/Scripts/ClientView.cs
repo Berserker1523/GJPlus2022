@@ -23,7 +23,7 @@ namespace Kitchen
             base.Awake();
             WaitingTime = 70f;
             currentlyWaitingTime = WaitingTime;
-            slider.value = currentlyWaitingTime;
+            slider.value = 1;
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Llega Cliente");
         }
@@ -31,11 +31,11 @@ namespace Kitchen
         private void Update()
         {
             currentlyWaitingTime -= Time.deltaTime;
-            slider.value = currentlyWaitingTime / currentlyWaitingTime;
+            slider.value = currentlyWaitingTime / WaitingTime;
 
-            if (currentlyWaitingTime <= currentlyWaitingTime * 0.3)
+            if (currentlyWaitingTime <= WaitingTime * 0.3)
                 sliderBarImage.color = Color.red;
-            else if(currentlyWaitingTime <= currentlyWaitingTime * 0.6)
+            else if(currentlyWaitingTime <= WaitingTime * 0.6)
                 sliderBarImage.color = Color.yellow;
 
             if (currentlyWaitingTime <= 0)
