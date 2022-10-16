@@ -108,10 +108,10 @@ TextureImporter:
       name: Remedios_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 568
-        width: 124
-        height: 144
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: Remedios_1
       rect:
         serializedVersion: 2
-        x: 327
-        y: 568
-        width: 124
-        height: 144
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: Remedios_2
       rect:
         serializedVersion: 2
-        x: 583
-        y: 568
-        width: 124
-        height: 150
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Remedios_3
       rect:
         serializedVersion: 2
-        x: 71
-        y: 312
-        width: 124
-        height: 144
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: Remedios_4
       rect:
         serializedVersion: 2
-        x: 327
-        y: 312
-        width: 124
-        height: 144
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Remedios_5
       rect:
         serializedVersion: 2
-        x: 583
-        y: 312
-        width: 124
-        height: 144
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: Remedios_6
       rect:
         serializedVersion: 2
-        x: 71
-        y: 56
-        width: 124
-        height: 152
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: Remedios_7
       rect:
         serializedVersion: 2
-        x: 327
-        y: 56
-        width: 124
-        height: 144
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

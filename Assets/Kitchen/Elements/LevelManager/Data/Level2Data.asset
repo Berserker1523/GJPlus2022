@@ -22,5 +22,8 @@ MonoBehaviour:
   minNumberOfPainKillers: 1
   levelRecipes:
   - ingredients: 000000000500000006000000
+    potionSkin: {fileID: 1631752840, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   - ingredients: 000000000500000006000000
+    potionSkin: {fileID: 202713676, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   - ingredients: 020000000500000006000000
+    potionSkin: {fileID: -297921847, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}

@@ -542,10 +542,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 2022718364792542135}
   IngredientsLabel: {fileID: 1146853414164490341}
+  recipesData: {fileID: 11400000, guid: 7568994cfc241084fb8ae15ff1b4fec8, type: 2}
   ingredientsPlaces:
   - {fileID: 878222049542308066}
   - {fileID: 3946182584350310666}
   - {fileID: 6833058881449206441}
+  potionSkin: {fileID: 8709529017572256672}
+  failedPotionSkin: {fileID: -2068719087, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
+  defaultPotionSkin: {fileID: 1647915234, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
 --- !u!1 &3083755486098291184
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 295d9d604bfd46e4a918cfb9ad0048fe, type: 3}
+  m_Sprite: {fileID: 1647915234, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

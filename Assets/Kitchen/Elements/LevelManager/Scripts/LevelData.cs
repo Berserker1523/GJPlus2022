@@ -22,5 +22,6 @@ namespace Kitchen
     public class IngredientList
     {
         public List<IngredientName> ingredients;
+        public Sprite potionSkin;
     }
 }
