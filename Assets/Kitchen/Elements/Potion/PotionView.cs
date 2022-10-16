@@ -8,11 +8,11 @@ namespace Kitchen
     {
         [SerializeField] private TextMeshProUGUI IngredientsLabel;
 
-        [HideInInspector] public List<IngredientName> ingredients = new();
+        public List<IngredientName> Ingredients { get; private set; } = new();
 
         public void Clear()
         {
-            ingredients.Clear();
+            Ingredients.Clear();
             IngredientsLabel.text = string.Empty;
         }
 
@@ -21,13 +21,13 @@ namespace Kitchen
             IngredientView ingredientView = SelectionManager.selectedGameObject as IngredientView;
             SelectionManager.selectedGameObject = this;
 
-            if (ingredients.Count >= 3)
+            if (Ingredients.Count >= 3)
                 return;
             
             if (ingredientView == null || ingredientView.State != IngredientState.Cooked)
                 return;
 
-            ingredients.Add(ingredientView.IngredientName);
+            Ingredients.Add(ingredientView.IngredientName);
             IngredientsLabel.text += $"{ingredientView.IngredientName}\n";
             Destroy(ingredientView.gameObject);
         }
