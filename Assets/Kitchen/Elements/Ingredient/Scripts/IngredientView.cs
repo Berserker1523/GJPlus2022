@@ -6,9 +6,9 @@ namespace Kitchen
     public class IngredientView : ButtonHandler
     {
         [SerializeField] private IngredientData ingredientData;
-        [SerializeField] private Sprite stateRaw;
-        [SerializeField] private Sprite stateCooked;
-        [SerializeField] private Sprite stateBurnt;
+        [SerializeField] public Sprite stateRaw;
+        [SerializeField] public Sprite stateCooked;
+        [SerializeField] public Sprite stateBurnt;
 
         public IngredientName IngredientName => ingredientData.ingredientName;
         public CookingToolName NecessaryCookingTool => ingredientData.necessaryCookingTool;
@@ -17,13 +17,7 @@ namespace Kitchen
             get { return state; }
             set
             {
-                state = value;
-                if (state == IngredientState.Cooked)
-                    button.image.sprite = stateCooked;
-                else if (state == IngredientState.Burned)
-                    button.image.sprite = stateBurnt;
-                else if (state == IngredientState.Raw)
-                    button.image.sprite = stateRaw;
+                state = value;               
             }
         }
         private IngredientState state;

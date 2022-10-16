@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kitchen
 {
@@ -7,11 +8,13 @@ namespace Kitchen
         [SerializeField] private CookingToolData cookingToolData;
 
         private IngredientView currentlyCookingIngredient;
+        [SerializeField] private Image image;
         private float currentlyCookingSeconds;
 
         FMOD.Studio.EventInstance MorteroSound;
 
         FMOD.Studio.EventInstance CookingSound;
+
 
         protected override void OnClick()
         {
@@ -26,6 +29,8 @@ namespace Kitchen
 
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
             currentlyCookingIngredient.State = IngredientState.Raw;
+            currentlyCookingIngredient.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
+            image.sprite = currentlyCookingIngredient.stateRaw;
             currentlyCookingSeconds = 0;
 
             CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
@@ -48,12 +53,14 @@ namespace Kitchen
             if (currentlyCookingIngredient.State == IngredientState.Raw && currentlyCookingSeconds >= cookingToolData.cookingSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Cooked;
+            image.sprite = currentlyCookingIngredient.stateCooked;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista", transform.position);
             }
                 
             else if(currentlyCookingIngredient.State == IngredientState.Cooked && currentlyCookingSeconds >= cookingToolData.burningSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Burned;
+            image.sprite = currentlyCookingIngredient.stateBurnt;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Quemada", transform.position);
                 CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
