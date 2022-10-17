@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 2
   clientNumber: 14
-  minSpawnSeconds: 10
-  maxSpawnSeconds: 15
+  minSpawnSeconds: 15
+  maxSpawnSeconds: 25
   minNumberOfPotionRecipients: 1
   minNumberOfMortars: 1
   minNumberOfStoves: 1
