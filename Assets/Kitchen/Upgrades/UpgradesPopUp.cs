@@ -54,6 +54,7 @@ namespace Kitchen
             UpgradesManager.clientsUpgrades++;                
             clientCapacityBar.fillAmount = (UpgradesManager.clientsUpgrades / maxClients);
             MoneyManager.Money -= clientsCost;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Upgrade");
         }
         public void UpgradeMedicines()
         {
@@ -63,6 +64,7 @@ namespace Kitchen
             UpgradesManager.medicineUpgrades++;
             MedicineJarsBar.fillAmount = (UpgradesManager.medicineUpgrades / maxMedicines);
             MoneyManager.Money -= medicineCost;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Upgrade");
         }
         public void UpgradeKitchen()
         {
@@ -72,6 +74,7 @@ namespace Kitchen
             UpgradesManager.kitchenUpgrades++;
             KitchensBar.fillAmount = (UpgradesManager.kitchenUpgrades / maxOthers);
             MoneyManager.Money -= kitchenCost;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Upgrade");
         }
         public void UpgradeMortar()
         {
@@ -81,6 +84,7 @@ namespace Kitchen
             UpgradesManager.mortarsUpgradeds++;
             MortarBar.fillAmount = (UpgradesManager.mortarsUpgradeds / maxOthers);
             MoneyManager.Money -= mortarCost;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Upgrade");
         }
         public void UpgradePainReliever()
         {
@@ -90,6 +94,7 @@ namespace Kitchen
             UpgradesManager.painkillerUpgrades++;
             PainRelieverBar.fillAmount = (UpgradesManager.painkillerUpgrades / maxOthers);
             MoneyManager.Money -= painRelieverCost;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Upgrade");
         }
 
         public void ÇloseUpgrades()
