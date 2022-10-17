@@ -44,8 +44,13 @@ namespace Kitchen
             image = GetComponent<Image>();
         }
 
-        protected override void OnClick() =>
+        protected override void OnClick()
+        {
             SelectionManager.SelectedGameObject = this;
+            if (ingredientData.ingredientName == IngredientName.Water)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Coge Agua");
+        }
+            
 
         public void Release()
         {
