@@ -27,10 +27,12 @@ namespace Kitchen
 
         private void HandleWon()
         {
+            gameObject.SetActive(true);
             if (LevelManager.CurrentLevel == 5)
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
+                SceneManager.LoadScene("Credits", LoadSceneMode.Single);
             }
             else
                 LevelManager.CurrentLevel++;
@@ -38,6 +40,7 @@ namespace Kitchen
 
         private void HandleLost()
         {
+            gameObject.SetActive(true);
             continueButton.SetActive(false);
         }
 
@@ -55,6 +58,7 @@ namespace Kitchen
 
         public void TryAgain()
         {
+            LevelManager.CurrentLevel = currentLevel;
             SceneManager.LoadScene($"{kitchenScene}{currentLevel}", LoadSceneMode.Single);
         }
 

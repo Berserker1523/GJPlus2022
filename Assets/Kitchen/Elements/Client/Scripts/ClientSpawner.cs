@@ -31,16 +31,11 @@ namespace Kitchen
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
         }
 
-        private void HandleClientServed()
-        {
-            throw new System.NotImplementedException();
-        }
-
         private void OnDestroy()
         {
             EventManager.RemoveListener<int>(SpawnPointEvent.Released, HandleSpawnPointReleased);
             EventManager.RemoveListener(ClientEvent.Died, HandleClientDied);
-            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
         }
 
         private void Start() =>
@@ -97,6 +92,13 @@ namespace Kitchen
             clientsDied++;
             if (clientsDied >= 5)
                 EventManager.Dispatch(GameStatus.Lost);
+        }
+
+        private void HandleClientServed()
+        {
+            clientsGood++;
+            if (clientsGood >= spawnData.clientNumber)
+                EventManager.Dispatch(GameStatus.Won);
         }
     }
 }

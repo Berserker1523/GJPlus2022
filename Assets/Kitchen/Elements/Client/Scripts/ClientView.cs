@@ -83,6 +83,7 @@ namespace Kitchen
             EventManager.Dispatch(SpawnPointEvent.Released, ID);
             Destroy(transform.parent.gameObject);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
+            EventManager.Dispatch(ClientEvent.Served);
         }
 
         private void AddMoney() =>
