@@ -13,6 +13,7 @@ public class EndLevelPopUp : MonoBehaviour
     private void Start()
     {
         UpgradesPopUp(false);
+        gameObject.SetActive(false);
     }
 
     public void NextLevel()
