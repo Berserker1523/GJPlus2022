@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Client Capacity
+  m_text: Clients Capacity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kitchens
+  m_text: Pots
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pain reliever jar
+  m_text: Painkiller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -3692,7 +3692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Medicine Jars
+  m_text: Medicine Cups
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
