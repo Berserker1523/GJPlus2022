@@ -359,7 +359,7 @@ RectTransform:
   - {fileID: 1889744754}
   - {fileID: 1159522169}
   m_Father: {fileID: 1603265392076679716}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -593,7 +593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8228455, y: -94.70699}
+  m_AnchoredPosition: {x: 1.8228455, y: -118}
   m_SizeDelta: {x: 700.6457, y: 165.18602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1603265391504437857
@@ -702,7 +702,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1603265392076679716}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -912,8 +912,8 @@ RectTransform:
   - {fileID: 2895795865972928040}
   - {fileID: 1603265393204271703}
   - {fileID: 1603265393138530736}
-  - {fileID: 1424777569}
   - {fileID: 1603265391976082298}
+  - {fileID: 1424777569}
   m_Father: {fileID: 1603265392143562099}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1718,6 +1718,7 @@ GameObject:
   - component: {fileID: 1603265393138530736}
   - component: {fileID: 1603265393138530739}
   - component: {fileID: 1337613171}
+  - component: {fileID: 7213139948282035294}
   m_Layer: 5
   m_Name: SFXSlider
   m_TagString: Untagged
@@ -1746,7 +1747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.00003, y: -68.59999}
+  m_AnchoredPosition: {x: 135.00003, y: -71.700005}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603265393138530739
@@ -1800,7 +1801,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1337613171}
+      - m_Target: {fileID: 7213139948282035294}
         m_TargetAssemblyTypeName: VCASlider, Assembly-CSharp
         m_MethodName: setVCAVolume
         m_Mode: 0
@@ -1825,6 +1826,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vcaName: SFX
+--- !u!114 &7213139948282035294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603265393138530737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa10d7df0d4e5841bcf6d0457c7c983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vcaName: SFX
 --- !u!1 &1603265393204271700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1850,7 @@ GameObject:
   - component: {fileID: 1603265393204271703}
   - component: {fileID: 1603265393204271702}
   - component: {fileID: 1502043702}
+  - component: {fileID: 8598626920299007755}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -1864,7 +1879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: -2.9}
+  m_AnchoredPosition: {x: 135, y: -6}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603265393204271702
@@ -1918,7 +1933,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1502043702}
+      - m_Target: {fileID: 8598626920299007755}
         m_TargetAssemblyTypeName: VCASlider, Assembly-CSharp
         m_MethodName: setVCAVolume
         m_Mode: 0
@@ -1931,6 +1946,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1502043702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603265393204271700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa10d7df0d4e5841bcf6d0457c7c983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vcaName: Music
+--- !u!114 &8598626920299007755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2493,7 +2521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5052462, y: 60.363388}
+  m_AnchoredPosition: {x: 2.5052462, y: 81.3}
   m_SizeDelta: {x: 167.5439, y: 44.4592}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1546373961881435859
