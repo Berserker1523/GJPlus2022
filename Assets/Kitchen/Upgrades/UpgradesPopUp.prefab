@@ -1977,7 +1977,13 @@ MonoBehaviour:
   kitchenUpgrades: 0
   mortarUpgrades: 0
   painRelieverUpgrades: 0
+  clientsCost: 100
+  medicineCost: 300
+  kitchenCost: 500
+  mortarCost: 400
+  painRelieverCost: 600
   maxUpggrades: 4
+  instantiator: {fileID: 0}
 --- !u!1 &7657206764879799865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $200
+  m_text: $300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -2332,7 +2338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $200
+  m_text: $100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -2601,7 +2607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $200
+  m_text: $400
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -2853,7 +2859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $200
+  m_text: $600
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
@@ -3819,7 +3825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $200
+  m_text: $500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}
   m_sharedMaterial: {fileID: -5355776642419328996, guid: e2c9a79d9f7bb3d468f5808d517434ea, type: 2}

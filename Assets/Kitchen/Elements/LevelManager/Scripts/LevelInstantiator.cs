@@ -27,10 +27,10 @@ namespace Kitchen
 
         private void Awake()
         {
-            InstantiatePotions(levelData.minNumberOfPotionRecipients);
-            InstantiateMortars(levelData.minNumberOfMortars);
-            InstantiateStoves(levelData.minNumberOfStoves);
-            InstantiatePainKillers(levelData.minNumberOfPainKillers);
+            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.clientsUpgrades);
+            InstantiateMortars(levelData.minNumberOfMortars+ UpgradesManager.mortarsUpgradeds);
+            InstantiateStoves(levelData.minNumberOfStoves+ UpgradesManager.kitchenUpgrades);
+            InstantiatePainKillers(levelData.minNumberOfPainKillers+ UpgradesManager.painkillerUpgrades);
         }
 
         private void InstantiatePotions(int quantity)
