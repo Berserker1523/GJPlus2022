@@ -54,7 +54,10 @@ namespace Kitchen
         private void TrySpawnClient()
         {
             if (clientsSpawned >= spawnData.clientNumber)
+            {
+                EventManager.Dispatch(GameStatus.Won);
                 return;
+            }
 
             SpawnPoint spawnPoint = GetRandomSpawnPoint(out int ID);
             if (spawnPoint == null)
