@@ -26,8 +26,8 @@ namespace Kitchen
 
         protected override void OnClick()
         {
-            IngredientView ingredientView = SelectionManager.selectedGameObject as IngredientView;
-            SelectionManager.selectedGameObject = this;
+            IngredientView ingredientView = SelectionManager.SelectedGameObject as IngredientView;
+            SelectionManager.SelectedGameObject = this;
 
             if (Ingredients.Count >= 3)
             {
@@ -39,7 +39,6 @@ namespace Kitchen
                 return;
 
             ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
-
             Ingredients.Add(ingredientView.IngredientName);
             ingredientView.Release();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");

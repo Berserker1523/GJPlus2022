@@ -13,8 +13,7 @@ namespace Kitchen
         private IngredientView currentlyCookingIngredient;
         private float currentlyCookingSeconds;
 
-        FMOD.Studio.EventInstance MorteroSound;
-        FMOD.Studio.EventInstance CookingSound;
+        FMOD.Studio.EventInstance cookingSound;
 
         protected override void Awake()
         {
@@ -26,7 +25,7 @@ namespace Kitchen
         {
             if (currentlyCookingIngredient == null)
             {
-                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 return;
             }
 
@@ -35,19 +34,21 @@ namespace Kitchen
             {
                 currentlyCookingIngredient.State = IngredientState.Cooked;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista", transform.position);
+                if(cookingToolData.cookingToolName == CookingToolName.Mortar)
+                    cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
             else if (currentlyCookingIngredient.State == IngredientState.Cooked && currentlyCookingSeconds >= cookingToolData.burningSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Burnt;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Quemada", transform.position);
-                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
 
         protected override void OnClick()
         {
-            IngredientView ingredientView = SelectionManager.selectedGameObject as IngredientView;
-            SelectionManager.selectedGameObject = null;
+            IngredientView ingredientView = SelectionManager.SelectedGameObject as IngredientView;
+            SelectionManager.SelectedGameObject = null;
 
             if (currentlyCookingIngredient != null)
                 return;
@@ -58,17 +59,27 @@ namespace Kitchen
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
             currentlyCookingIngredient.CookingToolView = this;
             currentlyCookingIngredient.State = IngredientState.Raw;
+            currentlyCookingIngredient.button.targetGraphic = button.targetGraphic;
+            button.enabled = false;
             currentlyCookingSeconds = 0;
 
-            CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
-            CookingSound.start();
-            CookingSound.setParameterByName("Cocinando", 1);
-
-            //MorteroSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
-            //MorteroSound.start();
+            if(cookingToolData.cookingToolName == CookingToolName.Stove)
+            {
+                cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
+                cookingSound.start();
+                cookingSound.setParameterByName("Cocinando", 1);
+            }
+            else if(cookingToolData.cookingToolName == CookingToolName.Mortar)
+            {
+                cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
+                cookingSound.start();
+            }
         }
 
-        public void SetInitialSprite() =>
+        public void SetInitialSprite()
+        {
+            button.enabled = true;
             image.sprite = initialSprite;
+        }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1a65b39a9136d041b5e2abba585bea6
+guid: d42eb69982956824db536b6901895fd2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -109,7 +109,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 44
-        y: 30
+        y: 286
         width: 153
         height: 142
       alignment: 0
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a1d299e65993a4d9df14f8985e57b1
-      internalID: 566370433
+      spriteID: 8fe7462ccae9c7b4d8abb6454a561058
+      internalID: 1609010225
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 302
-        y: 30
+        y: 286
         width: 151
         height: 142
       alignment: 0
@@ -140,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e437d32cca83d2e41a7d9e5152492750
-      internalID: 430671922
+      spriteID: 8551ee4a58c308041b1faf1875794f6b
+      internalID: 23922847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coca_mortero_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 31
+        width: 153
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6d8633e3ca4e54b948902831b81dca
+      internalID: -1734063126
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coca_mortero_0: 566370433
-      Coca_mortero_1: 430671922
+      Coca_mortero_0: 1609010225
+      Coca_mortero_1: 23922847
+      Coca_mortero_2: -1734063126
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
