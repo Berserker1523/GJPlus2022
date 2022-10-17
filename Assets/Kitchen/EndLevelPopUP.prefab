@@ -705,6 +705,7 @@ MonoBehaviour:
   continueButton: {fileID: 4999398450420615616}
   mainMenuSceneName: MainMenu
   kitchenScene: Kitchen
+  victoryDefeatText: {fileID: 2960786480135831151}
 --- !u!1 &4999398450868554410
 GameObject:
   m_ObjectHideFlags: 0

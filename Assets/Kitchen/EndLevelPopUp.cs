@@ -1,6 +1,7 @@
 using Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Kitchen
 {
@@ -10,6 +11,7 @@ namespace Kitchen
         [SerializeField] private GameObject continueButton;
         [SerializeField] string mainMenuSceneName = "MainMenu";
         [SerializeField] string kitchenScene = "Kitchen";
+        [SerializeField] TextMeshProUGUI victoryDefeatText;
 
         private int currentLevel;
 
@@ -33,6 +35,7 @@ namespace Kitchen
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
                 SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+                victoryDefeatText.text = "Victory";
             }
             else
                 LevelManager.CurrentLevel++;
@@ -42,6 +45,8 @@ namespace Kitchen
         {
             gameObject.SetActive(true);
             continueButton.SetActive(false);
+            victoryDefeatText.text = "Defeat";
+
         }
 
         private void Start()
