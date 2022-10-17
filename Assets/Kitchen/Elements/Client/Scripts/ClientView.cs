@@ -43,10 +43,10 @@ namespace Kitchen
 
             if (currentlyWaitingTime <= 0)
             {
-                EventManager.Dispatch(ClientEvent.Died);
                 Instantiate(treePrefab, transform.parent.parent);
                 Destroy(transform.parent.gameObject);
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
+                EventManager.Dispatch(ClientEvent.Died);
             }
         }
 

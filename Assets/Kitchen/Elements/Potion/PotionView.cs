@@ -7,8 +7,6 @@ namespace Kitchen
 {
     public class PotionView : ButtonHandler
     {
-        [SerializeField] private LevelData recipesData;
-
         public List<IngredientName> Ingredients { get; private set; } = new();
 
         public Image[] ingredientsPlaces;
@@ -47,7 +45,7 @@ namespace Kitchen
         private void changePotionView()
         {
             bool acceptedRecipe = false;
-            foreach (IngredientList ingredientList in recipesData.levelRecipes)
+            foreach (IngredientList ingredientList in LevelInstantiator.levelDataGlobal.levelRecipes)
             {
                 acceptedRecipe = ingredientList.ingredients.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x));
                 if (acceptedRecipe)
