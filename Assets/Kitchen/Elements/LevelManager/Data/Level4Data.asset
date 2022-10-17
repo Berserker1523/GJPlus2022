@@ -30,4 +30,4 @@ MonoBehaviour:
   - ingredients: 010000000200000006000000
     potionSkin: {fileID: -625112638, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   - ingredients: 040000000500000006000000
-    potionSkin: {fileID: 0}
+    potionSkin: {fileID: 1973950467, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
