@@ -54,10 +54,7 @@ namespace Kitchen
         private void TrySpawnClient()
         {
             if (clientsSpawned >= spawnData.clientNumber)
-            {
-                EventManager.Dispatch(GameStatus.Won);
                 return;
-            }
 
             SpawnPoint spawnPoint = GetRandomSpawnPoint(out int ID);
             if (spawnPoint == null)
@@ -95,12 +92,16 @@ namespace Kitchen
             clientsDied++;
             if (clientsDied >= 5)
                 EventManager.Dispatch(GameStatus.Lost);
+            else if(clientsSpawned >= spawnData.clientNumber)
+            {
+                EventManager.Dispatch(GameStatus.Won);
+            }
         }
 
         private void HandleClientServed()
         {
             clientsGood++;
-            if (clientsGood >= spawnData.clientNumber)
+            if (clientsGood >= spawnData.clientNumber || clientsSpawned >= spawnData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
         }
     }
