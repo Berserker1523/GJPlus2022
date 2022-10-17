@@ -49,7 +49,10 @@ namespace Kitchen
 
         public void Release()
         {
-            if(CookingToolView != null)
+            if (ingredientData.ingredientName == IngredientName.Water)
+                return;
+
+            if (CookingToolView != null)
                 CookingToolView.SetInitialSprite();
             Destroy(gameObject);
         }

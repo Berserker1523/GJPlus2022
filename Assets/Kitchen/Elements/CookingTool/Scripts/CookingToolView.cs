@@ -13,7 +13,7 @@ namespace Kitchen
         private IngredientView currentlyCookingIngredient;
         private float currentlyCookingSeconds;
 
-        FMOD.Studio.EventInstance CookingSound;
+        FMOD.Studio.EventInstance cookingSound;
 
         protected override void Awake()
         {
@@ -25,7 +25,7 @@ namespace Kitchen
         {
             if (currentlyCookingIngredient == null)
             {
-                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 return;
             }
 
@@ -34,12 +34,14 @@ namespace Kitchen
             {
                 currentlyCookingIngredient.State = IngredientState.Cooked;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista", transform.position);
+                if(cookingToolData.cookingToolName == CookingToolName.Mortar)
+                    cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
             else if (currentlyCookingIngredient.State == IngredientState.Cooked && currentlyCookingSeconds >= cookingToolData.burningSeconds)
             {
                 currentlyCookingIngredient.State = IngredientState.Burnt;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Quemada", transform.position);
-                CookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
 
@@ -63,14 +65,14 @@ namespace Kitchen
 
             if(cookingToolData.cookingToolName == CookingToolName.Stove)
             {
-                CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
-                CookingSound.start();
-                CookingSound.setParameterByName("Cocinando", 1);
+                cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
+                cookingSound.start();
+                cookingSound.setParameterByName("Cocinando", 1);
             }
             else if(cookingToolData.cookingToolName == CookingToolName.Mortar)
             {
-                CookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
-                CookingSound.start();
+                cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
+                cookingSound.start();
             }
         }
 

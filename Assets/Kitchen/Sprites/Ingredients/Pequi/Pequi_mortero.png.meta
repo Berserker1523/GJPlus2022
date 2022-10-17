@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67608653e3bf1cf4698881d3ac2b42af
+guid: 854834296eb5889498a166bd054a0157
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -109,7 +109,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 44
-        y: 30
+        y: 286
         width: 153
         height: 142
       alignment: 0
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c963ab7868597b41b8d1187c8ef323d
-      internalID: -328465175
+      spriteID: 5b4e04257ce38f843b78a217e64a1131
+      internalID: 273143303
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,29 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 302
-        y: 30
-        width: 151
+        y: 286
+        width: 158
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40921a79f231fd4eaff8486eb734c43
+      internalID: 1760720829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pequi_mortero_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 31
+        width: 153
         height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2c8bc2b0fedfc04d8a3c111e3b46300
-      internalID: -444366964
+      spriteID: 4c851c891cadda8409e9c7e9430e0258
+      internalID: -1135457639
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pequi_mortero_0: -328465175
-      Pequi_mortero_1: -444366964
+      Pequi_mortero_0: 273143303
+      Pequi_mortero_2: -1135457639
+      Pequi_mortero_1: 1760720829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
