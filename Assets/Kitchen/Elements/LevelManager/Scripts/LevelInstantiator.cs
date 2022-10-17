@@ -6,6 +6,7 @@ namespace Kitchen
 {
     public class LevelInstantiator : MonoBehaviour
     {
+        public static LevelData levelDataGlobal;
         [SerializeField] private LevelData levelData;
 
         [Header("Potions")]
@@ -27,10 +28,11 @@ namespace Kitchen
 
         private void Awake()
         {
-            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.clientsUpgrades);
-            InstantiateMortars(levelData.minNumberOfMortars+ UpgradesManager.mortarsUpgradeds);
-            InstantiateStoves(levelData.minNumberOfStoves+ UpgradesManager.kitchenUpgrades);
-            InstantiatePainKillers(levelData.minNumberOfPainKillers+ UpgradesManager.painkillerUpgrades);
+            levelDataGlobal = levelData;
+            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.medicineUpgrades);
+            InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.mortarsUpgradeds);
+            InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.kitchenUpgrades);
+            InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.painkillerUpgrades);
         }
 
         private void InstantiatePotions(int quantity)
