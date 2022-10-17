@@ -2,6 +2,7 @@
 {
     public enum IngredientState
     {
+        None,
         Raw,
         Cooked,
         Burnt

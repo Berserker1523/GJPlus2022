@@ -11,6 +11,7 @@ namespace Kitchen
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;
         [SerializeField] private Image potionImage;
+        [SerializeField] private GameObject treePrefab;
 
         public int ID { get; set; }
 
@@ -42,8 +43,8 @@ namespace Kitchen
 
             if (currentlyWaitingTime <= 0)
             {
-                EventManager.Dispatch(SpawnPointEvent.Released, ID);
                 EventManager.Dispatch(ClientEvent.Died);
+                Instantiate(treePrefab, transform.parent.parent);
                 Destroy(transform.parent.gameObject);
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
             }

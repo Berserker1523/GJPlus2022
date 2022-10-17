@@ -8,12 +8,12 @@ namespace Kitchen
             IngredientView ingredientView = SelectionManager.SelectedGameObject as IngredientView;
             SelectionManager.SelectedGameObject = null;
 
-            if (potionView != null || ingredientView != null) 
+            if (potionView != null || (ingredientView != null && ingredientView.State != IngredientState.None)) 
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Trash");
 
             if (potionView != null)
                 potionView.Clear();
-            else if (ingredientView != null)
+            else if (ingredientView != null && ingredientView.State != IngredientState.None)
                 ingredientView.Release();
         }
     }
