@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 1762485781}
   - component: {fileID: 1762485780}
   - component: {fileID: 1762485779}
+  - component: {fileID: 1762485782}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -275,6 +276,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762485782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762485778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &5508049852608436482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -432,3 +446,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
+--- !u!1 &5508049852608436483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5508049851002970608, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
+  m_PrefabInstance: {fileID: 5508049852608436482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5508049852608436484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508049852608436483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1927263676
+      Data2: 1313609337
+      Data3: 925118903
+      Data4: 1373619254
+    Path: event:/Music/MusicaFondo
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
