@@ -13,6 +13,7 @@ namespace Kitchen
         [SerializeField] Image KitchensBar;
         [SerializeField] Image MortarBar;
         [SerializeField] Image PainRelieverBar;
+        [SerializeField] Button deactivatedButton;
 
         [SerializeField] float clientsUpgrades;
         [SerializeField] float medicineUpgrades;
@@ -20,13 +21,15 @@ namespace Kitchen
         [SerializeField] float mortarUpgrades;
         [SerializeField] float painRelieverUpgrades;
 
-        [SerializeField] int clientsCost=60;
+        [SerializeField] int clientsCost=100;
         [SerializeField] int medicineCost=300;
         [SerializeField] int kitchenCost=500;
         [SerializeField] int mortarCost=400;
         [SerializeField] int painRelieverCost=600;
 
-        [SerializeField] float maxUpggrades = 4;
+        [SerializeField] float maxMedicines = 3;
+        [SerializeField] float maxClients = 2;
+        [SerializeField] float maxOthers = 1;
 
         public void Start()
         {
@@ -35,56 +38,57 @@ namespace Kitchen
 
         public void FillAllBarsInStart()
         {
-            clientCapacityBar.fillAmount = (UpgradesManager.clientsUpgrades / maxUpggrades);
-            MedicineJarsBar.fillAmount = (UpgradesManager.medicineUpgrades / maxUpggrades);
-            KitchensBar.fillAmount = (UpgradesManager.kitchenUpgrades / maxUpggrades);
-            MortarBar.fillAmount = (UpgradesManager.mortarsUpgradeds / maxUpggrades);
-            PainRelieverBar.fillAmount = (UpgradesManager.painkillerUpgrades / maxUpggrades);         
+            clientCapacityBar.fillAmount = (UpgradesManager.clientsUpgrades / maxClients);
+            MedicineJarsBar.fillAmount = (UpgradesManager.medicineUpgrades / maxMedicines);
+            KitchensBar.fillAmount = (UpgradesManager.kitchenUpgrades / maxOthers);
+            MortarBar.fillAmount = (UpgradesManager.mortarsUpgradeds / maxOthers);
+            PainRelieverBar.fillAmount = (UpgradesManager.painkillerUpgrades / maxOthers);
+            deactivatedButton.interactable = false;
         }
 
         public void UpgradeClients()
         {
-            if (MoneyManager.Money-clientsCost < 0 || UpgradesManager.clientsUpgrades == maxUpggrades)
+            if (MoneyManager.Money-clientsCost < 0 || UpgradesManager.clientsUpgrades == maxClients)
                 return;
 
             UpgradesManager.clientsUpgrades++;                
-            clientCapacityBar.fillAmount = (UpgradesManager.clientsUpgrades / maxUpggrades);
+            clientCapacityBar.fillAmount = (UpgradesManager.clientsUpgrades / maxClients);
             MoneyManager.Money -= clientsCost;
         }
         public void UpgradeMedicines()
         {
-            if (MoneyManager.Money - medicineCost < 0 || UpgradesManager.medicineUpgrades == maxUpggrades)
+            if (MoneyManager.Money - medicineCost < 0 || UpgradesManager.medicineUpgrades == maxMedicines)
                 return;
 
             UpgradesManager.medicineUpgrades++;
-            MedicineJarsBar.fillAmount = (UpgradesManager.medicineUpgrades / maxUpggrades);
+            MedicineJarsBar.fillAmount = (UpgradesManager.medicineUpgrades / maxMedicines);
             MoneyManager.Money -= medicineCost;
         }
         public void UpgradeKitchen()
         {
-            if (MoneyManager.Money - kitchenCost < 0 || UpgradesManager.kitchenUpgrades == maxUpggrades)
+            if (MoneyManager.Money - kitchenCost < 0 || UpgradesManager.kitchenUpgrades == maxOthers)
                 return;
 
             UpgradesManager.kitchenUpgrades++;
-            KitchensBar.fillAmount = (UpgradesManager.kitchenUpgrades / maxUpggrades);
+            KitchensBar.fillAmount = (UpgradesManager.kitchenUpgrades / maxOthers);
             MoneyManager.Money -= kitchenCost;
         }
         public void UpgradeMortar()
         {
-            if (MoneyManager.Money - mortarCost < 0 || UpgradesManager.mortarsUpgradeds == maxUpggrades)
+            if (MoneyManager.Money - mortarCost < 0 || UpgradesManager.mortarsUpgradeds == maxOthers)
                 return;
 
             UpgradesManager.mortarsUpgradeds++;
-            MortarBar.fillAmount = (UpgradesManager.mortarsUpgradeds / maxUpggrades);
+            MortarBar.fillAmount = (UpgradesManager.mortarsUpgradeds / maxOthers);
             MoneyManager.Money -= mortarCost;
         }
         public void UpgradePainReliever()
         {
-            if (MoneyManager.Money - painRelieverCost < 0 || UpgradesManager.painkillerUpgrades == maxUpggrades)
+            if (MoneyManager.Money - painRelieverCost < 0 || UpgradesManager.painkillerUpgrades == maxOthers)
                 return;
 
             UpgradesManager.painkillerUpgrades++;
-            PainRelieverBar.fillAmount = (UpgradesManager.painkillerUpgrades / maxUpggrades);
+            PainRelieverBar.fillAmount = (UpgradesManager.painkillerUpgrades / maxOthers);
             MoneyManager.Money -= painRelieverCost;
         }
 
