@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using Kitchen;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Mainmenu
 {
-public class MainMenuManager : MonoBehaviour
+    public class MainMenuManager : MonoBehaviour
 {
         [SerializeField] GameObject settingsPanel;
 
@@ -22,7 +21,7 @@ public class MainMenuManager : MonoBehaviour
 
         public void PlayGame()
         {
-            SceneManager.LoadSceneAsync(((int)SceneNames.Kitchen), LoadSceneMode.Single);
+            SceneManager.LoadScene($"Kitchen{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         }
 
         public void Options()

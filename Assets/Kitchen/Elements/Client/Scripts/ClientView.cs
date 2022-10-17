@@ -36,7 +36,7 @@ namespace Kitchen
 
             if (currentlyWaitingTime <= WaitingTime * 0.3)
                 sliderBarImage.color = Color.red;
-            else if(currentlyWaitingTime <= WaitingTime * 0.6)
+            else if (currentlyWaitingTime <= WaitingTime * 0.6)
                 sliderBarImage.color = Color.yellow;
             else if (currentlyWaitingTime > WaitingTime * 0.6)
                 sliderBarImage.color = Color.white;

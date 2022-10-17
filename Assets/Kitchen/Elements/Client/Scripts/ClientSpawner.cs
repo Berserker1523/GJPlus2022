@@ -5,22 +5,43 @@ using Events;
 
 namespace Kitchen
 {
+    public enum GameStatus
+    {
+        Lost,
+        Won
+    }
 
     public class ClientSpawner : MonoBehaviour
     {
         [SerializeField] private LevelData spawnData;
         [SerializeField] private GameObject clientPrefab;
+        [SerializeField] private GameObject endScreen;
         [SerializeField] private List<SpawnPoint> spawnPoints = new();
 
         private int clientsSpawned;
         private float timer;
         private float nextSpawnTime;
+        private int clientsDied;
+        private int clientsGood;
 
-        private void Awake() =>
+        private void Awake()
+        {
             EventManager.AddListener<int>(SpawnPointEvent.Released, HandleSpawnPointReleased);
+            EventManager.AddListener(ClientEvent.Died, HandleClientDied);
+            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+        }
 
-        private void OnDestroy() =>
+        private void HandleClientServed()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void OnDestroy()
+        {
             EventManager.RemoveListener<int>(SpawnPointEvent.Released, HandleSpawnPointReleased);
+            EventManager.RemoveListener(ClientEvent.Died, HandleClientDied);
+            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+        }
 
         private void Start() =>
             TrySpawnClient();
@@ -69,6 +90,13 @@ namespace Kitchen
             nextSpawnTime = Random.Range(spawnData.minSpawnSeconds, spawnData.maxSpawnSeconds);
 
         private void HandleSpawnPointReleased(int ID) =>
-            spawnPoints[ID].isOpen = true; 
+            spawnPoints[ID].isOpen = true;
+
+        private void HandleClientDied()
+        {
+            clientsDied++;
+            if (clientsDied >= 5)
+                EventManager.Dispatch(GameStatus.Lost);
+        }
     }
 }
