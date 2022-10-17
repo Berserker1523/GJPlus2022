@@ -837,3 +837,4 @@ MonoBehaviour:
   slider: {fileID: 3964778237543796826}
   sliderBarImage: {fileID: 3964778235653714039}
   potionImage: {fileID: 159153469442938327}
+  treePrefab: {fileID: 2554928730892972631, guid: 403be9a1218d39f4bab7b85d1bc5198a, type: 3}
