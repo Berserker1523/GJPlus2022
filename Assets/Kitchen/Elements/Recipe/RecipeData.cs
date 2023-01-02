@@ -1,17 +1,16 @@
 using Kitchen;
 using UnityEngine;
-using ScriptableObjectDropdown;
-
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "ScriptableObjects/Recipe", order = 1)]
 
 public class RecipeData : ScriptableObject
 {
+    [SerializeField] public new string name;
+    [SerializeField] public DiseaseName diseasesItCures;
+    [SerializeField] public Sprite sprite;
     [SerializeField] public Ingredient[] ingredients;
-    //[SerializeField] public IngredientData[] ingredients;
-    //[SerializeField] public CookingToolName[] cookingTool;
-    
+
 
     [System.Serializable]
     public struct Ingredient 
