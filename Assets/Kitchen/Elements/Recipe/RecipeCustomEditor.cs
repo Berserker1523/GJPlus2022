@@ -59,7 +59,7 @@ public class RecipeCustomEditor : Editor
           
                 EditorGUILayout.BeginVertical();
                 EditorGUILayout.PropertyField(ingredient, new GUIContent("Ingredient " + (i + 1)));
-            if (ingredient != null && ingredient.isExpanded)
+            if (ingredient.FindPropertyRelative("ingredient").objectReferenceValue != null  && ingredient.isExpanded)
             {
                 SerializedObject ingredientSO = new SerializedObject(ingredient.FindPropertyRelative("ingredient").objectReferenceValue);
                 if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.Stove) != 0
@@ -80,7 +80,7 @@ public class RecipeCustomEditor : Editor
             if (ingredient.isExpanded)
             {
                EditorGUILayout.BeginVertical();
-               EditorGUILayout.Space(30f);
+               EditorGUILayout.Space(20f);
                     if (GUILayout.Button(new GUIContent("Delete"),GUILayout.Height ( 30f)))
                     {
                         ingredients.DeleteArrayElementAtIndex(i);
@@ -93,11 +93,12 @@ public class RecipeCustomEditor : Editor
 
             EditorGUILayout.Space(10f);
 
-
+            
         }
             if (GUILayout.Button(new GUIContent("Add ingredient"), GUILayout.Height(30f)))
             {
                 ingredients.arraySize++;
+            Debug.Log(ingredients.arraySize);
             }
 
 
