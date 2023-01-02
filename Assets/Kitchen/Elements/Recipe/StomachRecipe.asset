@@ -10,17 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0347b3ac5aca8314082ff98abddfaf47, type: 3}
-  m_Name: Recipe
+  m_Name: StomachRecipe
   m_EditorClassIdentifier: 
+  name: Solitary Killer
+  diseasesItCures: 4
+  sprite: {fileID: 1631752840, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   ingredients:
   - name: 
-    ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
+    ingredient: {fileID: 11400000, guid: 206fdf01312cc8141ab17a608b1a8161, type: 2}
     cookingToolOnlyMortar: 0
-    cookingToolOnlyStove: 1
-    cookingToolOnlyNone: 2
+    cookingToolOnlyStove: 0
+    cookingToolOnlyNone: 0
     cookingToolBoth: 0
   - name: 
     ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
+    cookingToolOnlyMortar: 0
+    cookingToolOnlyStove: 0
+    cookingToolOnlyNone: 2
+    cookingToolBoth: 0
+  - name: 
+    ingredient: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
     cookingToolOnlyMortar: 0
     cookingToolOnlyStove: 1
     cookingToolOnlyNone: 2
