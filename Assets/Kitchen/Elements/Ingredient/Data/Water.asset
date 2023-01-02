@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   ingredientName: 6
-  necessaryCookingTool: 2
+  necessaryCookingTool: 4

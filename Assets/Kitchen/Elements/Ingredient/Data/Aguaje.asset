@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Aguaje
   m_EditorClassIdentifier: 
   ingredientName: 4
-  necessaryCookingTool: 1
+  necessaryCookingTool: 2

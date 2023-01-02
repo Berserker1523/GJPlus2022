@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Yuca
   m_EditorClassIdentifier: 
   ingredientName: 0
-  cookingType: 1
-  necessaryCookingTool: 1
+  necessaryCookingTool: 2

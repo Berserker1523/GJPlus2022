@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pequi
   m_EditorClassIdentifier: 
   ingredientName: 2
-  necessaryCookingTool: 0
+  necessaryCookingTool: 1

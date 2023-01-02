@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Carnauba
   m_EditorClassIdentifier: 
   ingredientName: 1
-  necessaryCookingTool: 1
+  necessaryCookingTool: 2

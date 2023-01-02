@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Coca
   m_EditorClassIdentifier: 
   ingredientName: 5
-  necessaryCookingTool: 1
+  necessaryCookingTool: 3

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Asai
   m_EditorClassIdentifier: 
   ingredientName: 3
-  necessaryCookingTool: 0
+  necessaryCookingTool: 1
