@@ -7,10 +7,8 @@ namespace Kitchen
     public class IngredientView : ButtonHandler
     {
         [SerializeField] private IngredientData ingredientData;
-        [SerializeField] public Sprite stateRaw;
-        [SerializeField] public Sprite stateCooked;
-        [SerializeField] public Sprite stateBurnt;
         [SerializeField] public Sprite stateDefault;
+        [SerializeField] public CookingToolName usedCookingTool;
 
         private Image image;
         private IngredientState state;
@@ -29,12 +27,23 @@ namespace Kitchen
                 if (state == IngredientState.Raw)
                 {
                     image.color = new Color32(0, 0, 0, 0);
-                    CookingToolView.image.sprite = stateRaw;
+                    usedCookingTool = CookingToolView.cookingToolData.cookingToolName;
+                    if (usedCookingTool == CookingToolName.Stove)
+                        CookingToolView.image.sprite = ingredientData.rawState;
+                    else if(usedCookingTool == CookingToolName.Mortar)
+                        CookingToolView.image.sprite = ingredientData.entireState;
                 }
                 else if (state == IngredientState.Cooked)
-                    CookingToolView.image.sprite = stateCooked;
+                {
+                    if(usedCookingTool == CookingToolName.Stove)
+                        CookingToolView.image.sprite = ingredientData.cookedState;
+                    else if(usedCookingTool == CookingToolName.Mortar)
+                        CookingToolView.image.sprite = ingredientData.crushedState;
+                }
                 else if (state == IngredientState.Burnt)
-                    CookingToolView.image.sprite = stateBurnt;
+                    CookingToolView.image.sprite = ingredientData.burntState;
+
+                Debug.Log(usedCookingTool);
             }
         }
 

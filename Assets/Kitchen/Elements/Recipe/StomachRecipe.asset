@@ -17,9 +17,9 @@ MonoBehaviour:
   sprite: {fileID: 1631752840, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
   ingredients:
   - name: 
-    ingredient: {fileID: 11400000, guid: 206fdf01312cc8141ab17a608b1a8161, type: 2}
+    ingredient: {fileID: 11400000, guid: a4a033059514ea348b97ba6885496247, type: 2}
     cookingToolOnlyMortar: 0
-    cookingToolOnlyStove: 0
+    cookingToolOnlyStove: 1
     cookingToolOnlyNone: 0
     cookingToolBoth: 0
   - name: 
@@ -29,7 +29,7 @@ MonoBehaviour:
     cookingToolOnlyNone: 2
     cookingToolBoth: 0
   - name: 
-    ingredient: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
+    ingredient: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
     cookingToolOnlyMortar: 0
     cookingToolOnlyStove: 1
     cookingToolOnlyNone: 2

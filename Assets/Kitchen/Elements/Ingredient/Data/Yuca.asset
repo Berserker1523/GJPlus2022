@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: 0
   necessaryCookingTool: 2
+  rawState: {fileID: -826279406, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
+  cookedState: {fileID: 1963296856, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
+  burntState: {fileID: 1304277098, guid: 7ea7930e634db0c4083bba1b954661b9, type: 3}
+  entireState: {fileID: 0}
+  crushedState: {fileID: 0}

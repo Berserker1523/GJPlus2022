@@ -5,7 +5,7 @@ namespace Kitchen
 {
     public class CookingToolView : ButtonHandler
     {
-        [SerializeField] private CookingToolData cookingToolData;
+        [SerializeField] public CookingToolData cookingToolData;
         [SerializeField] public Image image;
 
         private Sprite initialSprite;
@@ -53,7 +53,7 @@ namespace Kitchen
             if (currentlyCookingIngredient != null)
                 return;
 
-            if (ingredientView == null || !ingredientView.NecessaryCookingTool.HasFlag( cookingToolData.cookingToolName))
+            if (ingredientView == null || !ingredientView.NecessaryCookingTool.HasFlag( cookingToolData.cookingToolName) || ingredientView.usedCookingTool !=0)
                 return;
             
 
