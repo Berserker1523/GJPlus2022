@@ -62,7 +62,7 @@ namespace Kitchen
 
             ClientView client = Instantiate(clientPrefab, spawnPoint.transform).GetComponentInChildren<ClientView>();
             int randomRecipeNumber = Random.Range(0, spawnData.levelRecipes.Count);
-            client.Initialize(ID, spawnData.levelRecipes[randomRecipeNumber].ingredients, spawnData.levelRecipes[randomRecipeNumber].potionSkin);
+           client.Initialize(ID, spawnData.levelRecipes[randomRecipeNumber], spawnData.levelRecipes[randomRecipeNumber].sprite);
             spawnPoint.isOpen = false;
             SetRandomNextSpawnTime();
             clientsSpawned += 1;

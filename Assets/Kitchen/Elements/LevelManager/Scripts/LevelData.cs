@@ -15,13 +15,6 @@ namespace Kitchen
         public int minNumberOfMortars;
         public int minNumberOfStoves;
         public int minNumberOfPainKillers;
-        public List<IngredientList> levelRecipes;
-    }
-
-    [Serializable]
-    public class IngredientList
-    {
-        public List<IngredientName> ingredients;
-        public Sprite potionSkin;
+        public List<RecipeData> levelRecipes;
     }
 }

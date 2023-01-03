@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fb1f56e20e34a429ac57ef21b1c678, type: 3}
   m_Name: Stove
   m_EditorClassIdentifier: 
-  cookingToolName: 1
+  cookingToolName: 2
   cookingSeconds: 5
   burningSeconds: 10

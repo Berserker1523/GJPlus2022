@@ -15,7 +15,7 @@ namespace Kitchen
 
         public int ID { get; set; }
 
-        private List<IngredientName> requiredRecipe = new();
+        private RecipeData requiredRecipe;
         public float WaitingTime { get; set; }
         private float currentlyWaitingTime;
 
@@ -50,11 +50,11 @@ namespace Kitchen
             }
         }
 
-        public void Initialize(int ID, List<IngredientName> recipe, Sprite potionSkin)
+        public void Initialize(int ID, RecipeData recipe, Sprite potionSkin)
         {
             this.ID = ID;
             potionImage.sprite = potionSkin;
-            requiredRecipe = new List<IngredientName>(recipe);
+            requiredRecipe = recipe;
         }
 
         protected override void OnClick()
@@ -73,7 +73,7 @@ namespace Kitchen
             if (potionView == null)
                 return;
 
-            bool acceptedRecipe = requiredRecipe.OrderBy(x => x).SequenceEqual(potionView.Ingredients.OrderBy(x => x));
+            bool acceptedRecipe = potionView.currentRecipe == requiredRecipe;
 
             if (!acceptedRecipe)
                 return;
