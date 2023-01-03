@@ -53,8 +53,9 @@ namespace Kitchen
             if (currentlyCookingIngredient != null)
                 return;
 
-            if (ingredientView == null || ingredientView.NecessaryCookingTool != cookingToolData.cookingToolName)
+            if (ingredientView == null || !ingredientView.NecessaryCookingTool.HasFlag( cookingToolData.cookingToolName))
                 return;
+            
 
             currentlyCookingIngredient = Instantiate(ingredientView, transform.position, transform.rotation, transform);
             currentlyCookingIngredient.CookingToolView = this;
