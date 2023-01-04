@@ -43,7 +43,6 @@ namespace Kitchen
                 else if (state == IngredientState.Burnt)
                     CookingToolView.image.sprite = ingredientData.burntState;
 
-                Debug.Log(usedCookingTool);
             }
         }
 

@@ -8,6 +8,7 @@ namespace Kitchen
     public class PotionView : ButtonHandler
     {
         public List<IngredientName> Ingredients { get; private set; } = new();
+        public List<CookingToolName> IngredientsMethod { get; private set; } = new();
 
         public Image[] ingredientsPlaces;
         public Image potionSkin;
@@ -19,6 +20,7 @@ namespace Kitchen
         public void Clear()
         {
             Ingredients.Clear();
+            IngredientsMethod.Clear();
             foreach (Image img in ingredientsPlaces)
                 img.sprite = null;
             potionSkin.sprite = defaultPotionSkin;
@@ -42,11 +44,8 @@ namespace Kitchen
 
             ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
             Ingredients.Add(ingredientView.IngredientName);
-            foreach (var item in Ingredients)
-            {
-                Debug.Log(item);
+            IngredientsMethod.Add(ingredientView.usedCookingTool);
 
-            }
             ingredientView.Release();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
         }
@@ -58,14 +57,18 @@ namespace Kitchen
 
             bool acceptedRecipe = false;
             List<IngredientName> tempList = new List<IngredientName>();
+            List<CookingToolName> tempList2= new List<CookingToolName>();
 
             foreach (RecipeData recipe in LevelInstantiator.levelDataGlobal.levelRecipes)
             {
                 foreach (var ingredient in recipe.ingredients)
+                {
                     tempList.Add(ingredient.ingredient.ingredientName);
-
-                acceptedRecipe = tempList.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x));
-                tempList.Clear();
+                    tempList2.Add(ingredient.cookingToolName);
+                }
+                
+                if(tempList.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x)) && tempList2.OrderBy(x => x).SequenceEqual(IngredientsMethod.OrderBy(x => x)))
+                    acceptedRecipe = true;
 
                 if (acceptedRecipe)
                 {
