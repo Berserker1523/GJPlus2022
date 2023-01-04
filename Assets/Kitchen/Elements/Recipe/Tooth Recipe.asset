@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0347b3ac5aca8314082ff98abddfaf47, type: 3}
-  m_Name: ToothRecipe
+  m_Name: Tooth Recipe
   m_EditorClassIdentifier: 
   name: Tooth Saver
   diseasesItCures: 2
@@ -18,19 +18,11 @@ MonoBehaviour:
   ingredients:
   - name: 
     ingredient: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
-    cookingToolOnlyMortar: 0
-    cookingToolOnlyStove: 1
-    cookingToolOnlyNone: 0
-    cookingToolBoth: 0
+    cookingToolName: 2
   - name: 
     ingredient: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
-    cookingToolOnlyMortar: 0
-    cookingToolOnlyStove: 0
-    cookingToolOnlyNone: 0
-    cookingToolBoth: 0
+    cookingToolName: 1
   - name: 
     ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
-    cookingToolOnlyMortar: 0
-    cookingToolOnlyStove: 0
-    cookingToolOnlyNone: 2
-    cookingToolBoth: 0
+    cookingToolName: 4
+  popUp: 000000000000000000000000
