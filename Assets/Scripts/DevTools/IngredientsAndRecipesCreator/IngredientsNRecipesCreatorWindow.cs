@@ -1,14 +1,12 @@
 using UnityEditor;
 using UnityEngine;
 using Kitchen;
-using UnityEngine.PlayerLoop;
 using System.IO;
-using static RecipeData;
-using System.Xml.Linq;
 using System.Collections.Generic;
 using System;
 using System.Text;
 using System.Linq;
+using UnityEditor.Callbacks;
 
 public class IngredientsNRecipesCreatorWindow : EditorWindow
 {
@@ -23,7 +21,7 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
     ScriptableObject target;
     SerializedObject so =null;
 
-    private static string IngredientsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Ingredient", "Data");
+    public static string IngredientsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Ingredient", "Data");
 
     [MenuItem("DevWindows/RecipesManager", false, 51)]
     public static void ShowWindow() =>
@@ -55,6 +53,8 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
     void Ingredients()
     {
         so.Update();
+        if(foldsBools.Length != ingredients.Count)
+            UpdateList();
 
         scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
 
@@ -124,14 +124,15 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
 
 public class NewIngredientPopUP: EditorWindow
 {
+    static NewIngredientPopUP popUp_instance;
     ScriptableObject target;
     SerializedObject so = null;
 
     [SerializeField] string newIngredientName;
     [SerializeField] CookingToolName cookingTool;
 
-    SerializedProperty m_newIngredientName;
-    SerializedProperty m_cookingTool;
+   static SerializedProperty m_newIngredientName;
+   static SerializedProperty m_cookingTool;
 
     string[] enumValues;
     private string enumFolder = Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
@@ -175,10 +176,9 @@ public class NewIngredientPopUP: EditorWindow
                 warningLabel = "";
                 Debug.Log("Ingredient " + m_newIngredientName.stringValue + " created");
             }
-
         }
-
         EditorGUILayout.LabelField(warningLabel, style);
+
         so.ApplyModifiedProperties();
     }
 
@@ -199,25 +199,37 @@ public class NewIngredientPopUP: EditorWindow
         string filePath = Path.Combine(enumFolder, enumFile);
         CheckAndCreate(enumFolder, filePath, sb);
     }
-     void CreateSCritpableObject()
+    [DidReloadScripts]
+    static void InstantiateScriptableObject()
     {
+        if (typeof(IngredientData) != null)
+        {
+            IngredientData SO = (IngredientData)ScriptableObject.CreateInstance(typeof(IngredientData));
+            SO.ingredientName = (IngredientName)Enum.Parse(typeof(IngredientName), m_newIngredientName.stringValue);
+            SO.necessaryCookingTool = (CookingToolName)m_cookingTool.enumValueFlag;
 
+            string scriptSOFolder = IngredientsNRecipesCreatorWindow.IngredientsSOPath;
+            string scriptSOFile = m_newIngredientName.stringValue;
+            AssetDatabase.CreateAsset(SO, Path.Combine(scriptSOFolder, scriptSOFile + ".asset"));
+            AssetDatabase.ImportAsset(Path.Combine(scriptSOFolder, scriptSOFile + ".asset"));
+        }
     }
-    static void CheckDirectory(string folder)
+
+     void CheckDirectory(string folder)
     {
-        Debug.Log(Path.Combine(Application.dataPath, folder));
         if (!Directory.Exists(Path.Combine(Application.dataPath, folder)))
             Directory.CreateDirectory(Path.Combine(Application.dataPath, folder));
     }
-    static void CheckFile(string file)
+     void CheckFile(string file)
     {
         if (File.Exists(Path.Combine(Application.dataPath, file)))
             File.Delete(Path.Combine(Application.dataPath, file));
     }
-    static void CreateAutogneratedFile(string filePath, StringBuilder sb)
-    {
+     void CreateAutogneratedFile(string filePath, StringBuilder sb)
+    { 
         File.WriteAllText(Path.Combine(Application.dataPath, filePath), sb.ToString(), Encoding.UTF8);
-        AssetDatabase.ImportAsset(Path.Combine(filePath));
+        AssetDatabase.ImportAsset(Path.Combine("Assets",filePath), ImportAssetOptions.ForceUpdate);
+
     }
 
     void CheckAndCreate(string folder, string file, StringBuilder sb)
