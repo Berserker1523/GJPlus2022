@@ -7,6 +7,8 @@ using static RecipeData;
 using System.Xml.Linq;
 using System.Collections.Generic;
 using System;
+using System.Text;
+using System.Linq;
 
 public class IngredientsNRecipesCreatorWindow : EditorWindow
 {
@@ -88,6 +90,11 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
             currentObject.ApplyModifiedProperties();
         }
 
+        if(GUILayout.Button("Add new Ingredient", GUILayout.Height(30f)))      
+           GetWindow<NewIngredientPopUP>("Create New Ingredient");
+        
+
+
         EditorGUILayout.EndScrollView();
         so.ApplyModifiedProperties();
     }
@@ -113,4 +120,110 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
         System.Array.Fill(foldsBools, true);
     }
 
+}
+
+public class NewIngredientPopUP: EditorWindow
+{
+    ScriptableObject target;
+    SerializedObject so = null;
+
+    [SerializeField] string newIngredientName;
+    [SerializeField] CookingToolName cookingTool;
+
+    SerializedProperty m_newIngredientName;
+    SerializedProperty m_cookingTool;
+
+    string[] enumValues;
+    private string enumFolder = Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
+    private string enumFile ="IngredientName.cs";
+
+    string warningLabel = "";
+    GUIStyle style = new GUIStyle();
+
+    private void OnEnable()
+    {
+        target = this;
+        so = new SerializedObject(target);
+
+        m_newIngredientName = so.FindProperty("newIngredientName");
+        m_cookingTool = so.FindProperty("cookingTool");
+        enumValues = Enum.GetValues(typeof(IngredientName)).OfType<IngredientName>().Select(o => o.ToString()).ToArray();
+
+        style.normal.textColor = Color.red; 
+        style.fontStyle = FontStyle.Bold;
+    }
+
+    private void OnGUI()
+    {
+        so.Update();
+        EditorGUILayout.PropertyField(m_newIngredientName);
+        EditorGUILayout.PropertyField(m_cookingTool);
+
+        if (GUILayout.Button("Create new Ingredient", GUILayout.Height(30f)))         
+        {
+            if (String.IsNullOrEmpty(m_newIngredientName.stringValue))
+                warningLabel = "Ingredient Name cannot be empty";
+
+            else if (Array.Exists<string>(enumValues, element => element == m_newIngredientName.stringValue))
+                warningLabel = "Ingredient Name already exists";
+
+            else if (m_cookingTool.enumValueFlag == 0)
+                warningLabel = "Must Select At least One Cooking Tool";
+            else
+            {
+                AddToEnum();
+                warningLabel = "";
+                Debug.Log("Ingredient " + m_newIngredientName.stringValue + " created");
+            }
+
+        }
+
+        EditorGUILayout.LabelField(warningLabel, style);
+        so.ApplyModifiedProperties();
+    }
+
+    void AddToEnum()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("namespace Kitchen");
+        sb.AppendLine("{");
+        sb.AppendLine("    public enum IngredientName");
+        sb.AppendLine("    {");
+        sb.Append("        ");
+        foreach (var ingredient in enumValues)
+            sb.Append(ingredient +", ");
+        sb.AppendLine(m_newIngredientName.stringValue);
+        sb.AppendLine("    }");
+        sb.AppendLine("}");
+
+        string filePath = Path.Combine(enumFolder, enumFile);
+        CheckAndCreate(enumFolder, filePath, sb);
+    }
+     void CreateSCritpableObject()
+    {
+
+    }
+    static void CheckDirectory(string folder)
+    {
+        Debug.Log(Path.Combine(Application.dataPath, folder));
+        if (!Directory.Exists(Path.Combine(Application.dataPath, folder)))
+            Directory.CreateDirectory(Path.Combine(Application.dataPath, folder));
+    }
+    static void CheckFile(string file)
+    {
+        if (File.Exists(Path.Combine(Application.dataPath, file)))
+            File.Delete(Path.Combine(Application.dataPath, file));
+    }
+    static void CreateAutogneratedFile(string filePath, StringBuilder sb)
+    {
+        File.WriteAllText(Path.Combine(Application.dataPath, filePath), sb.ToString(), Encoding.UTF8);
+        AssetDatabase.ImportAsset(Path.Combine(filePath));
+    }
+
+    void CheckAndCreate(string folder, string file, StringBuilder sb)
+    {
+        CheckDirectory(folder); 
+        CheckFile(file);
+        CreateAutogneratedFile(file, sb);
+    }
 }
