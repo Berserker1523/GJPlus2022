@@ -1,12 +1,12 @@
-using UnityEditor;
-using UnityEngine;
 using Kitchen;
-using System.IO;
-using System.Collections.Generic;
 using System;
-using System.Text;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
+using UnityEditor;
 using UnityEditor.Callbacks;
+using UnityEngine;
 
 public class IngredientsNRecipesCreatorWindow : EditorWindow
 {
@@ -119,14 +119,13 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
         foldsBools = new bool[ingredients.Count];
         System.Array.Fill(foldsBools, true);
     }
-
 }
 
 public class NewIngredientPopUP: EditorWindow
 {
     static NewIngredientPopUP popUp_instance;
     ScriptableObject target;
-    SerializedObject so = null;
+    static SerializedObject so = null;
 
     [SerializeField] string newIngredientName;
     [SerializeField] CookingToolName cookingTool;
@@ -145,7 +144,7 @@ public class NewIngredientPopUP: EditorWindow
 
     protected Vector2 scrollPos = Vector2.zero;
 
-    static SerializedProperty m_newIngredientName;
+   static SerializedProperty m_newIngredientName;
    static SerializedProperty m_cookingTool;
 
    static SerializedProperty m_rawState;
@@ -225,11 +224,11 @@ public class NewIngredientPopUP: EditorWindow
                 AddToEnum();
                 warningLabel = "";
                 Debug.Log("Ingredient " + m_newIngredientName.stringValue + " created");
+               
             }
         }
         EditorGUILayout.LabelField(warningLabel, style);
         EditorGUILayout.EndScrollView();
-
         so.ApplyModifiedProperties();
     }
 
@@ -253,7 +252,7 @@ public class NewIngredientPopUP: EditorWindow
     [DidReloadScripts]
     static void InstantiateScriptableObject()
     {
-        if (typeof(IngredientData) != null)
+        if (typeof(IngredientData) != null && !String.IsNullOrEmpty( m_newIngredientName.stringValue)) 
         {
             IngredientData SO = (IngredientData)ScriptableObject.CreateInstance(typeof(IngredientData));
             SO.ingredientName = (IngredientName)Enum.Parse(typeof(IngredientName), m_newIngredientName.stringValue);
@@ -268,10 +267,20 @@ public class NewIngredientPopUP: EditorWindow
             string scriptSOFile = m_newIngredientName.stringValue;
             AssetDatabase.CreateAsset(SO, Path.Combine(scriptSOFolder, scriptSOFile + ".asset"));
             AssetDatabase.ImportAsset(Path.Combine(scriptSOFolder, scriptSOFile + ".asset"));
+
+            so.Update();
+            m_newIngredientName.stringValue = null;
+            m_cookingTool.enumValueFlag = 0;
+            m_rawState.objectReferenceValue = null;
+            m_cookedState.objectReferenceValue = null;
+            m_burntState.objectReferenceValue = null;
+            m_entireState.objectReferenceValue = null;
+            m_crushedState.objectReferenceValue = null;
+            so.ApplyModifiedProperties();
         }
     }
 
-     void CheckDirectory(string folder)
+    void CheckDirectory(string folder)
     {
         if (!Directory.Exists(Path.Combine(Application.dataPath, folder)))
             Directory.CreateDirectory(Path.Combine(Application.dataPath, folder));
