@@ -131,8 +131,29 @@ public class NewIngredientPopUP: EditorWindow
     [SerializeField] string newIngredientName;
     [SerializeField] CookingToolName cookingTool;
 
-   static SerializedProperty m_newIngredientName;
+    [Header("Stove Sprites")]
+    [SerializeField] Sprite rawState;
+    [SerializeField] Sprite cookedState;
+    [SerializeField] Sprite burntState;
+
+    [Header("Mortar Sprites")]
+    [SerializeField] Sprite entireState;
+    [SerializeField] Sprite crushedState;
+
+    bool stoveChossed = false;
+    bool mortarChossed = false;
+
+    protected Vector2 scrollPos = Vector2.zero;
+
+    static SerializedProperty m_newIngredientName;
    static SerializedProperty m_cookingTool;
+
+   static SerializedProperty m_rawState;
+   static SerializedProperty m_cookedState;
+   static SerializedProperty m_burntState;
+
+   static SerializedProperty m_entireState;
+   static SerializedProperty m_crushedState;
 
     string[] enumValues;
     private string enumFolder = Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
@@ -148,6 +169,11 @@ public class NewIngredientPopUP: EditorWindow
 
         m_newIngredientName = so.FindProperty("newIngredientName");
         m_cookingTool = so.FindProperty("cookingTool");
+        m_rawState = so.FindProperty("rawState");
+        m_cookedState = so.FindProperty("cookedState");
+        m_burntState = so.FindProperty("burntState");
+        m_entireState = so.FindProperty("entireState");
+        m_crushedState = so.FindProperty("crushedState");
         enumValues = Enum.GetValues(typeof(IngredientName)).OfType<IngredientName>().Select(o => o.ToString()).ToArray();
 
         style.normal.textColor = Color.red; 
@@ -157,8 +183,29 @@ public class NewIngredientPopUP: EditorWindow
     private void OnGUI()
     {
         so.Update();
+        scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
+
         EditorGUILayout.PropertyField(m_newIngredientName);
         EditorGUILayout.PropertyField(m_cookingTool);
+
+        if ((m_cookingTool.enumValueFlag & (int)CookingToolName.Stove) != 0)
+        {
+            stoveChossed = true;
+            EditorGUILayout.PropertyField(m_rawState);
+            EditorGUILayout.PropertyField(m_cookedState);
+            EditorGUILayout.PropertyField(m_burntState);
+        }
+        else
+            stoveChossed = false;
+
+        if ((m_cookingTool.enumValueFlag & (int)CookingToolName.Mortar) != 0)
+        {
+            mortarChossed = true;
+            EditorGUILayout.PropertyField(m_entireState);
+            EditorGUILayout.PropertyField(m_crushedState);
+        }
+        else
+            mortarChossed = false;
 
         if (GUILayout.Button("Create new Ingredient", GUILayout.Height(30f)))         
         {
@@ -170,6 +217,9 @@ public class NewIngredientPopUP: EditorWindow
 
             else if (m_cookingTool.enumValueFlag == 0)
                 warningLabel = "Must Select At least One Cooking Tool";
+            else if((stoveChossed && (m_rawState.objectReferenceValue == null || m_cookedState.objectReferenceValue == null || m_burntState.objectReferenceValue == null))             
+                    || (mortarChossed && (m_entireState.objectReferenceValue == null || m_crushedState.objectReferenceValue == null)))
+                warningLabel = "Must set all sprites for selected(s) cooking tool";               
             else
             {
                 AddToEnum();
@@ -178,6 +228,7 @@ public class NewIngredientPopUP: EditorWindow
             }
         }
         EditorGUILayout.LabelField(warningLabel, style);
+        EditorGUILayout.EndScrollView();
 
         so.ApplyModifiedProperties();
     }
