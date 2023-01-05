@@ -258,6 +258,11 @@ public class NewIngredientPopUP: EditorWindow
             IngredientData SO = (IngredientData)ScriptableObject.CreateInstance(typeof(IngredientData));
             SO.ingredientName = (IngredientName)Enum.Parse(typeof(IngredientName), m_newIngredientName.stringValue);
             SO.necessaryCookingTool = (CookingToolName)m_cookingTool.enumValueFlag;
+            SO.rawState = (Sprite)m_rawState.objectReferenceValue;
+            SO.cookedState = (Sprite)m_cookedState.objectReferenceValue;
+            SO.burntState = (Sprite)m_burntState.objectReferenceValue;
+            SO.entireState = (Sprite)m_entireState.objectReferenceValue;
+            SO.crushedState = (Sprite)m_crushedState.objectReferenceValue;
 
             string scriptSOFolder = IngredientsNRecipesCreatorWindow.IngredientsSOPath;
             string scriptSOFile = m_newIngredientName.stringValue;
