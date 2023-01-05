@@ -29,7 +29,8 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
 
     private void OnGUI()
     {
-        selectedTab = GUILayout.Toolbar(selectedTab, tabs);
+        selectedTab = GUILayout.Toolbar(selectedTab, tabs, GUILayout.Height(30f)) ;
+        GUILayout.Space(20f);
         switch (selectedTab)
         {
             case 0:
@@ -60,8 +61,8 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
             SerializedObject currentObject = new SerializedObject( m_list.GetArrayElementAtIndex(i).objectReferenceValue);
             currentObject.Update();
 
+            EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
             foldsBools[i] = EditorGUILayout.Foldout(foldsBools[i],  Enum.GetName(typeof(IngredientName) ,currentObject.FindProperty("ingredientName").enumValueFlag));
-
             if (foldsBools[i])
             {
                 EditorGUI.indentLevel++;
@@ -82,6 +83,7 @@ public class IngredientsNRecipesCreatorWindow : EditorWindow
                 }
                 EditorGUI.indentLevel--;
             }
+            EditorGUILayout.EndVertical();
                 EditorGUILayout.Space(10f);
             currentObject.ApplyModifiedProperties();
         }
