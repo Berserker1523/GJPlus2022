@@ -75,7 +75,6 @@ namespace DevTools
             ingredientsBools = UpdateList(ingredients.Count);
             recipesBools = UpdateList(recipes.Count);
             Repaint();
-            Debug.Log("updated all");
         }
 
         void Ingredients()
@@ -136,8 +135,8 @@ namespace DevTools
                     currentObject.Update();
 
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
-                    ingredientsBools[i] = EditorGUILayout.Foldout(recipesBools[i], currentObject.FindProperty("name").stringValue);
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("name"), new GUIContent("Recipe Name"));
+                    ingredientsBools[i] = EditorGUILayout.Foldout(recipesBools[i], Enum.GetName(typeof(RecipeName), currentObject.FindProperty("recipeName").enumValueFlag));
+                    EditorGUILayout.PropertyField(currentObject.FindProperty("recipeName"), new GUIContent("Recipe Name"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"));
 

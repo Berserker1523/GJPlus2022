@@ -29,7 +29,7 @@ public class RecipeCustomEditor : Editor
     {
         //recipe = (RecipeData)target;
         ingredients = serializedObject.FindProperty("ingredients");
-        name = serializedObject.FindProperty("name");
+        name = serializedObject.FindProperty("recipeName");
         diseases = serializedObject.FindProperty("diseasesItCures");
         sprite = serializedObject.FindProperty("sprite");
         array = serializedObject.FindProperty("popUp");
@@ -38,13 +38,13 @@ public class RecipeCustomEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
         EditorGUILayout.PropertyField(name, new GUIContent("Recipe Name"));
         EditorGUILayout.PropertyField(diseases, new GUIContent("Desease(s) it cures"));
         EditorGUILayout.PropertyField(sprite);
 
         EditorGUILayout.Space(20f);
         EditorGUILayout.LabelField("Ingredients List");
-        serializedObject.Update();
         for (int i = 0; i < ingredients.arraySize; i++)
         {
             SerializedProperty ingredient = ingredients.GetArrayElementAtIndex(i);
@@ -92,8 +92,8 @@ public class RecipeCustomEditor : Editor
                 ingredients.arraySize++;
                 array.arraySize++;
             }
-
             serializedObject.ApplyModifiedProperties();     
+
     }
 }
 

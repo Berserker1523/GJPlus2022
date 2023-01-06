@@ -9,7 +9,8 @@ using UnityEditor;
 
 public class RecipeData : ScriptableObject
 {
-    [SerializeField] public new string name;
+    [HideInInspector] public new string name;
+    [SerializeField] public RecipeName recipeName;
     [SerializeField] public DiseaseName diseasesItCures;
     [SerializeField] public Sprite sprite;
     [SerializeField] public Ingredient[] ingredients;

@@ -9,7 +9,7 @@ namespace DevTools.PopUps
 {
     public abstract class AbstractNewAssetPopUP<T> : EditorWindow where T: Enum
     {
-        [SerializeField] string name;
+        [SerializeField] new string name;
 
         protected ScriptableObject target;
         protected static SerializedObject so = null;
