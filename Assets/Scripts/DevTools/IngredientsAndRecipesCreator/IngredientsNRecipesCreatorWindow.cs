@@ -65,6 +65,7 @@ namespace DevTools
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
 
             RecipeData.assetsChanged += UpdateAll; 
+            IngredientData.assetsChanged += UpdateAll; 
         }
 
         void UpdateAll()
@@ -84,34 +85,39 @@ namespace DevTools
 
             for (int i=0; i<ingredients.Count;i++)
             {
-                SerializedObject currentObject = new SerializedObject( m_list.GetArrayElementAtIndex(i).objectReferenceValue);
-                currentObject.Update();
-
-                EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
-                ingredientsBools[i] = EditorGUILayout.Foldout(ingredientsBools[i],  Enum.GetName(typeof(IngredientName) ,currentObject.FindProperty("ingredientName").enumValueFlag));
-                if (ingredientsBools[i])
+                if (m_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
                 {
-                    EditorGUI.indentLevel++;
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("ingredientName"));
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("necessaryCookingTool"), new GUIContent("Cooking Tool"));
+                    SerializedObject currentObject = new SerializedObject(m_list.GetArrayElementAtIndex(i).objectReferenceValue);
+                    currentObject.Update();
 
-                    if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Stove))
+                    EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
+                    ingredientsBools[i] = EditorGUILayout.Foldout(ingredientsBools[i], Enum.GetName(typeof(IngredientName), currentObject.FindProperty("ingredientName").enumValueFlag));
+                    if (ingredientsBools[i])
                     {
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("rawState"));
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("cookedState"));
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("burntState"));
-                    }
+                        EditorGUI.indentLevel++;
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("ingredientName"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("necessaryCookingTool"), new GUIContent("Cooking Tool"));
 
-                    if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Mortar))
-                    {
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("entireState"));
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("crushedState"));
+                        if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Stove))
+                        {
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("rawState"));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("cookedState"));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("burntState"));
+                        }
+
+                        if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Mortar))
+                        {
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("entireState"));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("crushedState"));
+                        }
+                        EditorGUI.indentLevel--;
                     }
-                    EditorGUI.indentLevel--;
-                }
-                EditorGUILayout.EndVertical();
+                    EditorGUILayout.EndVertical();
                     EditorGUILayout.Space(10f);
-                currentObject.ApplyModifiedProperties();
+                    currentObject.ApplyModifiedProperties();
+                }
+                else if (Event.current.type != EventType.Layout)
+                    UpdateAll();
             }
 
             if(GUILayout.Button("Add new Ingredient", GUILayout.Height(30f)))      
@@ -189,13 +195,12 @@ namespace DevTools
                     EditorGUILayout.Space(10f);
                     currentObject.ApplyModifiedProperties();
                 }
-                else
-                {
-                    if (Event.current.type != EventType.Layout)
-                        UpdateAll();
-                }
+                else if(Event.current.type != EventType.Layout)
+                        UpdateAll();              
             }
 
+            if (GUILayout.Button("Create new Recipe", GUILayout.Height(30f)))
+                GetWindow<NewIngredientPopUP>("Create New Recipe");
         }
         List<T> GetAssetsList<T>(string folder) where T: ScriptableObject
         {

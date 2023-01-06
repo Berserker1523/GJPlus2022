@@ -2,6 +2,8 @@ using Kitchen;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Events;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "ScriptableObjects/Recipe", order = 1)]
 
@@ -12,6 +14,11 @@ public class RecipeData : ScriptableObject
     [SerializeField] public Sprite sprite;
     [SerializeField] public Ingredient[] ingredients;
     [SerializeField] public List<int> popUp = new List<int>();
+
+    public static UnityAction assetsChanged;
+
+    public void Awake() => 
+        assetsChanged?.Invoke();
 
 
     [System.Serializable]
