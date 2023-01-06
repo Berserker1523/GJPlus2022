@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0347b3ac5aca8314082ff98abddfaf47, type: 3}
+  m_Name: TapewormKiller
+  m_EditorClassIdentifier: 
+  name: 
+  recipeName: 1
+  diseasesItCures: 4
+  sprite: {fileID: 202713676, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
+  ingredients:
+  - name: 
+    ingredient: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
+    cookingToolName: 2
+  - name: 
+    ingredient: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
+    cookingToolName: 1
+  - name: 
+    ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
+    cookingToolName: 4
+  popUp: 000000000000000000000000

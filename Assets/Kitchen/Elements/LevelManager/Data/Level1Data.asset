@@ -21,5 +21,5 @@ MonoBehaviour:
   minNumberOfStoves: 1
   minNumberOfPainKillers: 1
   levelRecipes:
-  - {fileID: 11400000, guid: 28df6154f55931245915d90f750cc2d6, type: 2}
-  - {fileID: 11400000, guid: 23768af11a9c86b42a41e6adc3efc522, type: 2}
+  - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
+  - {fileID: 11400000, guid: 2db822341adc12e47acdf5d48df25e8a, type: 2}
