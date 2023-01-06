@@ -70,6 +70,9 @@ namespace Kitchen
                 if(tempList.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x)) && tempList2.OrderBy(x => x).SequenceEqual(IngredientsMethod.OrderBy(x => x)))
                     acceptedRecipe = true;
 
+                tempList.Clear();
+                tempList2.Clear();
+
                 if (acceptedRecipe)
                 {
                     currentRecipe = recipe;

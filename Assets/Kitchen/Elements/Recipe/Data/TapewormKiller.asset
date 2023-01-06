@@ -21,7 +21,7 @@ MonoBehaviour:
     ingredient: {fileID: 11400000, guid: 66e8562cff299a94298584856625e71e, type: 2}
     cookingToolName: 2
   - name: 
-    ingredient: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
+    ingredient: {fileID: 11400000, guid: 206fdf01312cc8141ab17a608b1a8161, type: 2}
     cookingToolName: 1
   - name: 
     ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
