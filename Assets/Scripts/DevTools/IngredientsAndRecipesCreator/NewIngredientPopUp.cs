@@ -5,6 +5,7 @@ using System;
 using UnityEditor.Callbacks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DevTools.PopUps
 {
@@ -36,6 +37,8 @@ namespace DevTools.PopUps
         static SerializedProperty m_crushedState = null;
         protected override string enumFolder  => Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
         protected override string enumFile => "IngredientName.cs";
+
+        public static UnityAction assetCreated;
 
         private new void OnEnable()
         {
@@ -141,6 +144,8 @@ namespace DevTools.PopUps
                 m_entireState.objectReferenceValue = null;
                 m_crushedState.objectReferenceValue = null;
                 so.ApplyModifiedProperties();
+
+                assetCreated?.Invoke();
             }
         }
     }

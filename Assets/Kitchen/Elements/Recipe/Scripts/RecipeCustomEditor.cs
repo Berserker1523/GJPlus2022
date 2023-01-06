@@ -33,6 +33,7 @@ public class RecipeCustomEditor : Editor
         diseases = serializedObject.FindProperty("diseasesItCures");
         sprite = serializedObject.FindProperty("sprite");
         array = serializedObject.FindProperty("popUp");
+        cookingTools = serializedObject.FindProperty("popUp");
     }
 
     public override void OnInspectorGUI()
@@ -43,7 +44,7 @@ public class RecipeCustomEditor : Editor
 
         EditorGUILayout.Space(20f);
         EditorGUILayout.LabelField("Ingredients List");
-
+        serializedObject.Update();
         for (int i = 0; i < ingredients.arraySize; i++)
         {
             SerializedProperty ingredient = ingredients.GetArrayElementAtIndex(i);
@@ -67,7 +68,7 @@ public class RecipeCustomEditor : Editor
 
                         array.GetArrayElementAtIndex(i).intValue = EditorGUILayout.Popup("Cooking tool", array.GetArrayElementAtIndex(i).intValue, options.ToArray());           
                        ingredient.FindPropertyRelative("cookingToolName").enumValueFlag = (int)Enum.Parse(typeof(CookingToolName), options[array.GetArrayElementAtIndex(i).intValue]);
-                    }
+            }
                 EditorGUILayout.EndVertical();
 
                 if (ingredient.isExpanded)
