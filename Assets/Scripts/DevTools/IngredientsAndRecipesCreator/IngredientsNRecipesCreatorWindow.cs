@@ -200,7 +200,8 @@ namespace DevTools
             }
 
             if (GUILayout.Button("Create new Recipe", GUILayout.Height(30f)))
-                GetWindow<NewIngredientPopUP>("Create New Recipe");
+                GetWindow<NewRecipePopUp>("Create New Recipe");
+            
         }
         List<T> GetAssetsList<T>(string folder) where T: ScriptableObject
         {

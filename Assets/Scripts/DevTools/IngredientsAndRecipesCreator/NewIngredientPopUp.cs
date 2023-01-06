@@ -11,7 +11,6 @@ namespace DevTools.PopUps
 {
     public class NewIngredientPopUP : AbstractNewAssetPopUP<IngredientName>
     {
-        [SerializeField] string newIngredientName;
         [SerializeField] CookingToolName cookingTool;
 
         [Header("Stove Sprites")]
@@ -43,7 +42,7 @@ namespace DevTools.PopUps
         private new void OnEnable()
         {
             base.OnEnable();
-            m_newIngredientName = so.FindProperty("newIngredientName");
+            m_newIngredientName = so.FindProperty("name");
             m_cookingTool = so.FindProperty("cookingTool");
             m_rawState = so.FindProperty("rawState");
             m_cookedState = so.FindProperty("cookedState");
