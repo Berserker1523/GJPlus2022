@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DevTools
 {
@@ -62,6 +63,18 @@ namespace DevTools
             recipesBools = UpdateList(recipes.Count);
             ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
+
+            RecipeData.assetsChanged += UpdateAll; 
+        }
+
+        void UpdateAll()
+        {
+            ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
+            recipes = GetAssetsList<RecipeData>(RecipesSOPath);
+            ingredientsBools = UpdateList(ingredients.Count);
+            recipesBools = UpdateList(recipes.Count);
+            Repaint();
+            Debug.Log("updated all");
         }
 
         void Ingredients()
@@ -111,10 +124,12 @@ namespace DevTools
                 recipesBools = UpdateList(recipes.Count);
             for (int i = 0; i < recipes.Count; i++)
             {
-                SerializedObject currentObject = new SerializedObject(r_list.GetArrayElementAtIndex(i).objectReferenceValue);
-                currentObject.Update();
+                if (r_list.GetArrayElementAtIndex(i).objectReferenceValue !=null)
+                {
+                    SerializedObject currentObject = new SerializedObject(r_list.GetArrayElementAtIndex(i).objectReferenceValue);
+                    currentObject.Update();
 
-                EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
+                    EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     //ingredientsBools[i] = EditorGUILayout.Foldout(ingredientsBools[i], Enum.GetName(typeof(C), currentObject.FindProperty("ingredientName").enumValueFlag));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("name"), new GUIContent("Recipe Name"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
@@ -122,57 +137,63 @@ namespace DevTools
 
                     SerializedProperty ingredients = currentObject.FindProperty("ingredients");
                     SerializedProperty array = currentObject.FindProperty("popUp");
-                
-                    for(int j=0; j< ingredients.arraySize; j++)
+
+                    for (int j = 0; j < ingredients.arraySize; j++)
                     {
                         SerializedProperty ingredient = ingredients.GetArrayElementAtIndex(j);
 
                         EditorGUILayout.BeginHorizontal();
-                            EditorGUILayout.BeginVertical();
-                                EditorGUILayout.PropertyField(ingredient, new GUIContent("Ingredient " + (j + 1)));
-                                if (ingredient.FindPropertyRelative("ingredient").objectReferenceValue != null && ingredient.isExpanded)
-                                {
-                                    List<string> options = new List<string>();
-                                    SerializedObject ingredientSO = new SerializedObject(ingredient.FindPropertyRelative("ingredient").objectReferenceValue);
-
-                                    if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.Stove) != 0 && !options.Contains("Stove"))
-                                        options.Add("Stove");
-
-                                    if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.Mortar) != 0 && !options.Contains("Mortar"))
-                                        options.Add("Mortar");
-
-                                    if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.None) != 0 && !options.Contains("None"))
-                                        options.Add("None");
-
-                                    array.GetArrayElementAtIndex(j).intValue = EditorGUILayout.Popup("Cooking tool", array.GetArrayElementAtIndex(j).intValue, options.ToArray());
-                                    ingredient.FindPropertyRelative("cookingToolName").enumValueFlag = (int)Enum.Parse(typeof(CookingToolName), options[array.GetArrayElementAtIndex(j).intValue]);
-                                }
-                            EditorGUILayout.EndVertical();
-                    if(ingredient.isExpanded)
-                    {
                         EditorGUILayout.BeginVertical();
-                        EditorGUILayout.Space(20f);
-                        if (GUILayout.Button(new GUIContent("Delete"), GUILayout.Height(30f)))
+                        EditorGUILayout.PropertyField(ingredient, new GUIContent("Ingredient " + (j + 1)));
+                        if (ingredient.FindPropertyRelative("ingredient").objectReferenceValue != null && ingredient.isExpanded)
                         {
-                            ingredients.DeleteArrayElementAtIndex(i);
-                            array.DeleteArrayElementAtIndex(i);
+                            List<string> options = new List<string>();
+                            SerializedObject ingredientSO = new SerializedObject(ingredient.FindPropertyRelative("ingredient").objectReferenceValue);
+
+                            if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.Stove) != 0 && !options.Contains("Stove"))
+                                options.Add("Stove");
+
+                            if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.Mortar) != 0 && !options.Contains("Mortar"))
+                                options.Add("Mortar");
+
+                            if ((ingredientSO.FindProperty("necessaryCookingTool").enumValueFlag & (int)CookingToolName.None) != 0 && !options.Contains("None"))
+                                options.Add("None");
+
+                            array.GetArrayElementAtIndex(j).intValue = EditorGUILayout.Popup("Cooking tool", array.GetArrayElementAtIndex(j).intValue, options.ToArray());
+                            ingredient.FindPropertyRelative("cookingToolName").enumValueFlag = (int)Enum.Parse(typeof(CookingToolName), options[array.GetArrayElementAtIndex(j).intValue]);
                         }
                         EditorGUILayout.EndVertical();
+                        if (ingredient.isExpanded)
+                        {
+                            EditorGUILayout.BeginVertical();
+                            EditorGUILayout.Space(20f);
+                            if (GUILayout.Button(new GUIContent("Delete"), GUILayout.Height(30f)))
+                            {
+                                ingredients.DeleteArrayElementAtIndex(i);
+                                array.DeleteArrayElementAtIndex(i);
+                            }
+                            EditorGUILayout.EndVertical();
+                        }
+
+                        EditorGUILayout.EndHorizontal();
                     }
 
-                    EditorGUILayout.EndHorizontal();
+                    EditorGUILayout.Space(10f);
+                    if (GUILayout.Button(new GUIContent("Add ingredient"), GUILayout.Height(30f)))
+                    {
+                        ingredients.arraySize++;
+                        array.arraySize++;
                     }
 
-                EditorGUILayout.Space(10f);
-                if (GUILayout.Button(new GUIContent("Add ingredient"), GUILayout.Height(30f)))
-                {
-                    ingredients.arraySize++;
-                    array.arraySize++;
+                    EditorGUILayout.EndVertical();
+                    EditorGUILayout.Space(10f);
+                    currentObject.ApplyModifiedProperties();
                 }
-
-                EditorGUILayout.EndVertical();
-                EditorGUILayout.Space(10f);
-                currentObject.ApplyModifiedProperties();
+                else
+                {
+                    if (Event.current.type != EventType.Layout)
+                        UpdateAll();
+                }
             }
 
         }
