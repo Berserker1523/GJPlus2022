@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: 4
   necessaryCookingTool: 2
-  rawState: {fileID: -386737614, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
-  cookedState: {fileID: 993399780, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
-  burntState: {fileID: 73446155, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
-  entireState: {fileID: 0}
-  crushedState: {fileID: 0}
+  rawSprite: {fileID: -386737614, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
+  dishSprite: {fileID: -2088501921, guid: 1e6291bde8bf98345b63890f2397f41c, type: 3}
+  stoveRawSprite: {fileID: -386737614, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
+  stoveCookedSprite: {fileID: 993399780, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
+  stoveBurntSprite: {fileID: 73446155, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
+  mortarRawSprite: {fileID: 0}
+  mortarCrushedSprite: {fileID: 0}

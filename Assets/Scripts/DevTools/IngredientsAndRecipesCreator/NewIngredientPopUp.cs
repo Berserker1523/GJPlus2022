@@ -11,30 +11,34 @@ namespace DevTools.PopUps
 {
     public class NewIngredientPopUP : AbstractNewAssetPopUP<IngredientName>
     {
-        [SerializeField] CookingToolName cookingTool;
+        [SerializeField] CookingToolName necessaryCookingTool;
+        [SerializeField] Sprite rawSprite;
+        [SerializeField] Sprite dishSprite;
 
         [Header("Stove Sprites")]
-        [SerializeField] Sprite rawState;
-        [SerializeField] Sprite cookedState;
-        [SerializeField] Sprite burntState;
+        [SerializeField] Sprite stoveRawSprite;
+        [SerializeField] Sprite stoveCookedSprite;
+        [SerializeField] Sprite stoveBurntSprite;
 
         [Header("Mortar Sprites")]
-        [SerializeField] Sprite entireState;
-        [SerializeField] Sprite crushedState;
+        [SerializeField] Sprite mortarRawSprite;
+        [SerializeField] Sprite mortarCrushedSprite;
 
         bool stoveChossed = false;
         bool mortarChossed = false;
 
-        static SerializedProperty m_newIngredientName =null;
+        static SerializedProperty m_newIngredientName = null;
         static SerializedProperty m_cookingTool = null;
+        static SerializedProperty m_rawSprite = null;
+        static SerializedProperty m_dishSprite = null;
 
-        static SerializedProperty m_rawState = null;
-        static SerializedProperty m_cookedState = null;
-        static SerializedProperty m_burntState = null;
+        static SerializedProperty m_stoveRawSprite = null;
+        static SerializedProperty m_stoveCookedSprite = null;
+        static SerializedProperty m_stoveBurntSprite = null;
 
-        static SerializedProperty m_entireState = null;
-        static SerializedProperty m_crushedState = null;
-        protected override string enumFolder  => Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
+        static SerializedProperty m_mortarRawSprite = null;
+        static SerializedProperty m_mortarCrushedSprite = null;
+        protected override string enumFolder => Path.Combine("Kitchen", "Elements", "Ingredient", "Scripts");
         protected override string enumFile => "IngredientName.cs";
 
         public static UnityAction assetCreated;
@@ -42,26 +46,30 @@ namespace DevTools.PopUps
         private new void OnEnable()
         {
             base.OnEnable();
-            m_newIngredientName = so.FindProperty("name");
-            m_cookingTool = so.FindProperty("cookingTool");
-            m_rawState = so.FindProperty("rawState");
-            m_cookedState = so.FindProperty("cookedState");
-            m_burntState = so.FindProperty("burntState");
-            m_entireState = so.FindProperty("entireState");
-            m_crushedState = so.FindProperty("crushedState");
+            m_newIngredientName = so.FindProperty(nameof(name));
+            m_cookingTool = so.FindProperty(nameof(necessaryCookingTool));
+            m_rawSprite = so.FindProperty(nameof(rawSprite));
+            m_dishSprite = so.FindProperty(nameof(dishSprite));
+            m_stoveRawSprite = so.FindProperty(nameof(stoveRawSprite));
+            m_stoveCookedSprite = so.FindProperty(nameof(stoveCookedSprite));
+            m_stoveBurntSprite = so.FindProperty(nameof(stoveBurntSprite));
+            m_mortarRawSprite = so.FindProperty(nameof(mortarRawSprite));
+            m_mortarCrushedSprite = so.FindProperty(nameof(mortarCrushedSprite));
         }
 
         protected override void DisplayProperties()
         {
             EditorGUILayout.PropertyField(m_newIngredientName);
             EditorGUILayout.PropertyField(m_cookingTool);
+            EditorGUILayout.PropertyField(m_rawSprite);
+            EditorGUILayout.PropertyField(m_dishSprite);
 
             if ((m_cookingTool.enumValueFlag & (int)CookingToolName.Stove) != 0)
             {
                 stoveChossed = true;
-                EditorGUILayout.PropertyField(m_rawState);
-                EditorGUILayout.PropertyField(m_cookedState);
-                EditorGUILayout.PropertyField(m_burntState);
+                EditorGUILayout.PropertyField(m_stoveRawSprite);
+                EditorGUILayout.PropertyField(m_stoveCookedSprite);
+                EditorGUILayout.PropertyField(m_stoveBurntSprite);
             }
             else
                 stoveChossed = false;
@@ -69,8 +77,8 @@ namespace DevTools.PopUps
             if ((m_cookingTool.enumValueFlag & (int)CookingToolName.Mortar) != 0)
             {
                 mortarChossed = true;
-                EditorGUILayout.PropertyField(m_entireState);
-                EditorGUILayout.PropertyField(m_crushedState);
+                EditorGUILayout.PropertyField(m_mortarRawSprite);
+                EditorGUILayout.PropertyField(m_mortarCrushedSprite);
             }
             else
                 mortarChossed = false;
@@ -85,8 +93,8 @@ namespace DevTools.PopUps
 
                 else if (m_cookingTool.enumValueFlag == 0)
                     warningLabel = "Must Select At least One Cooking Tool";
-                else if ((stoveChossed && (m_rawState.objectReferenceValue == null || m_cookedState.objectReferenceValue == null || m_burntState.objectReferenceValue == null))
-                        || (mortarChossed && (m_entireState.objectReferenceValue == null || m_crushedState.objectReferenceValue == null)))
+                else if ((stoveChossed && (m_stoveRawSprite.objectReferenceValue == null || m_stoveCookedSprite.objectReferenceValue == null || m_stoveBurntSprite.objectReferenceValue == null))
+                        || (mortarChossed && (m_mortarRawSprite.objectReferenceValue == null || m_mortarCrushedSprite.objectReferenceValue == null)))
                     warningLabel = "Must set all sprites for selected(s) cooking tool";
                 else
                 {
@@ -112,22 +120,24 @@ namespace DevTools.PopUps
             sb.AppendLine("}");
 
             string filePath = Path.Combine(enumFolder, enumFile);
-            CheckAndCreate(enumFolder, filePath, sb); 
+            CheckAndCreate(enumFolder, filePath, sb);
         }
 
         [DidReloadScripts]
         protected static void InstantiateScriptableObject()
         {
-            if (typeof(IngredientData) != null && m_newIngredientName!=null && !String.IsNullOrEmpty(m_newIngredientName.stringValue))
+            if (typeof(IngredientData) != null && m_newIngredientName != null && !String.IsNullOrEmpty(m_newIngredientName.stringValue))
             {
                 IngredientData SO = (IngredientData)ScriptableObject.CreateInstance(typeof(IngredientData));
                 SO.ingredientName = (IngredientName)Enum.Parse(typeof(IngredientName), m_newIngredientName.stringValue);
                 SO.necessaryCookingTool = (CookingToolName)m_cookingTool.enumValueFlag;
-                SO.rawState = (Sprite)m_rawState.objectReferenceValue;
-                SO.cookedState = (Sprite)m_cookedState.objectReferenceValue;
-                SO.burntState = (Sprite)m_burntState.objectReferenceValue;
-                SO.entireState = (Sprite)m_entireState.objectReferenceValue;
-                SO.crushedState = (Sprite)m_crushedState.objectReferenceValue;
+                SO.rawSprite = (Sprite)m_rawSprite.objectReferenceValue;
+                SO.dishSprite = (Sprite)m_dishSprite.objectReferenceValue;
+                SO.stoveRawSprite = (Sprite)m_stoveRawSprite.objectReferenceValue;
+                SO.stoveCookedSprite = (Sprite)m_stoveCookedSprite.objectReferenceValue;
+                SO.stoveBurntSprite = (Sprite)m_stoveBurntSprite.objectReferenceValue;
+                SO.mortarRawSprite = (Sprite)m_mortarRawSprite.objectReferenceValue;
+                SO.mortarCrushedSprite = (Sprite)m_mortarCrushedSprite.objectReferenceValue;
 
                 string scriptSOFolder = IngredientsNRecipesCreatorWindow.IngredientsSOPath;
                 string scriptSOFile = m_newIngredientName.stringValue;
@@ -137,11 +147,13 @@ namespace DevTools.PopUps
                 so.Update();
                 m_newIngredientName.stringValue = null;
                 m_cookingTool.enumValueFlag = 0;
-                m_rawState.objectReferenceValue = null;
-                m_cookedState.objectReferenceValue = null;
-                m_burntState.objectReferenceValue = null;
-                m_entireState.objectReferenceValue = null;
-                m_crushedState.objectReferenceValue = null;
+                m_rawSprite.objectReferenceValue = null;
+                m_dishSprite.objectReferenceValue = null;
+                m_stoveRawSprite.objectReferenceValue = null;
+                m_stoveCookedSprite.objectReferenceValue = null;
+                m_stoveBurntSprite.objectReferenceValue = null;
+                m_mortarRawSprite.objectReferenceValue = null;
+                m_mortarCrushedSprite.objectReferenceValue = null;
                 so.ApplyModifiedProperties();
 
                 assetCreated?.Invoke();

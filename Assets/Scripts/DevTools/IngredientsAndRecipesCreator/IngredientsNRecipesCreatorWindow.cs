@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace DevTools
 {
@@ -14,8 +13,8 @@ namespace DevTools
         string[] tabs = { "Ingredients", "Recipes", "Illnesses" };
         int selectedTab = 0;
 
-        [SerializeField]  List<IngredientData> ingredients = new List<IngredientData>();
-        [SerializeField]  List<RecipeData> recipes = new List<RecipeData>();
+        [SerializeField] List<IngredientData> ingredients = new List<IngredientData>();
+        [SerializeField] List<RecipeData> recipes = new List<RecipeData>();
         protected SerializedProperty m_list = null;
         protected SerializedProperty r_list = null;
         protected bool[] ingredientsBools;
@@ -23,7 +22,7 @@ namespace DevTools
         protected Vector2 scrollPos = Vector2.zero;
 
         ScriptableObject target;
-        SerializedObject so =null;
+        SerializedObject so = null;
 
         public static string IngredientsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Ingredient", "Data");
         public static string RecipesSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Recipe", "Data");
@@ -33,7 +32,7 @@ namespace DevTools
 
         private void OnGUI()
         {
-            selectedTab = GUILayout.Toolbar(selectedTab, tabs, GUILayout.Height(30f)) ;
+            selectedTab = GUILayout.Toolbar(selectedTab, tabs, GUILayout.Height(30f));
             GUILayout.Space(20f);
 
             so.Update();
@@ -64,8 +63,8 @@ namespace DevTools
             ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
 
-            RecipeData.assetsChanged += UpdateAll; 
-            IngredientData.assetsChanged += UpdateAll; 
+            RecipeData.assetsChanged += UpdateAll;
+            IngredientData.assetsChanged += UpdateAll;
         }
 
         void UpdateAll()
@@ -78,11 +77,11 @@ namespace DevTools
         }
 
         void Ingredients()
-        {      
-            if(ingredientsBools.Length != ingredients.Count)
+        {
+            if (ingredientsBools.Length != ingredients.Count)
                 ingredientsBools = UpdateList(ingredients.Count);
 
-            for (int i=0; i<ingredients.Count;i++)
+            for (int i = 0; i < ingredients.Count; i++)
             {
                 if (m_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
                 {
@@ -90,24 +89,26 @@ namespace DevTools
                     currentObject.Update();
 
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
-                    ingredientsBools[i] = EditorGUILayout.Foldout(ingredientsBools[i], Enum.GetName(typeof(IngredientName), currentObject.FindProperty("ingredientName").enumValueFlag));
+                    ingredientsBools[i] = EditorGUILayout.Foldout(ingredientsBools[i], Enum.GetName(typeof(IngredientName), currentObject.FindProperty(nameof(IngredientData.ingredientName)).enumValueFlag));
                     if (ingredientsBools[i])
                     {
                         EditorGUI.indentLevel++;
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("ingredientName"));
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("necessaryCookingTool"), new GUIContent("Cooking Tool"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.ingredientName)));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.necessaryCookingTool)), new GUIContent("Cooking Tool"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.rawSprite)));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.dishSprite)));
 
                         if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Stove))
                         {
-                            EditorGUILayout.PropertyField(currentObject.FindProperty("rawState"));
-                            EditorGUILayout.PropertyField(currentObject.FindProperty("cookedState"));
-                            EditorGUILayout.PropertyField(currentObject.FindProperty("burntState"));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.stoveRawSprite)));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.stoveCookedSprite)));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.stoveBurntSprite)));
                         }
 
                         if (ingredients[i].necessaryCookingTool.HasFlag(CookingToolName.Mortar))
                         {
-                            EditorGUILayout.PropertyField(currentObject.FindProperty("entireState"));
-                            EditorGUILayout.PropertyField(currentObject.FindProperty("crushedState"));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.mortarRawSprite)));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty(nameof(IngredientData.mortarCrushedSprite)));
                         }
                         EditorGUI.indentLevel--;
                     }
@@ -119,17 +120,17 @@ namespace DevTools
                     UpdateAll();
             }
 
-            if(GUILayout.Button("Add new Ingredient", GUILayout.Height(30f)))      
-               GetWindow<NewIngredientPopUP>("Create New Ingredient");      
+            if (GUILayout.Button("Add new Ingredient", GUILayout.Height(30f)))
+                GetWindow<NewIngredientPopUP>("Create New Ingredient");
         }
 
-        void Recipes() 
+        void Recipes()
         {
             if (recipesBools.Length != recipes.Count)
                 recipesBools = UpdateList(recipes.Count);
             for (int i = 0; i < recipes.Count; i++)
             {
-                if (r_list.GetArrayElementAtIndex(i).objectReferenceValue !=null)
+                if (r_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
                 {
                     SerializedObject currentObject = new SerializedObject(r_list.GetArrayElementAtIndex(i).objectReferenceValue);
                     currentObject.Update();
@@ -194,15 +195,15 @@ namespace DevTools
                     EditorGUILayout.Space(10f);
                     currentObject.ApplyModifiedProperties();
                 }
-                else if(Event.current.type != EventType.Layout)
-                        UpdateAll();              
+                else if (Event.current.type != EventType.Layout)
+                    UpdateAll();
             }
 
             if (GUILayout.Button("Create new Recipe", GUILayout.Height(30f)))
                 GetWindow<NewRecipePopUp>("Create New Recipe");
-            
+
         }
-        List<T> GetAssetsList<T>(string folder) where T: ScriptableObject
+        List<T> GetAssetsList<T>(string folder) where T : ScriptableObject
         {
             string[] dataFiles = Directory.GetFiles(folder, "*.asset");
             List<T> list = new List<T>();

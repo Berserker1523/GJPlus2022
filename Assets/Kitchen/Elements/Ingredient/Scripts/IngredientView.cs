@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 namespace Kitchen
 {
-
     public class IngredientView : ButtonHandler
     {
         [SerializeField] private IngredientData ingredientData;
@@ -29,19 +28,19 @@ namespace Kitchen
                     image.color = new Color32(0, 0, 0, 0);
                     usedCookingTool = CookingToolView.cookingToolData.cookingToolName;
                     if (usedCookingTool == CookingToolName.Stove)
-                        CookingToolView.image.sprite = ingredientData.rawState;
+                        CookingToolView.image.sprite = ingredientData.stoveRawSprite;
                     else if(usedCookingTool == CookingToolName.Mortar)
-                        CookingToolView.image.sprite = ingredientData.entireState;
+                        CookingToolView.image.sprite = ingredientData.mortarRawSprite;
                 }
                 else if (state == IngredientState.Cooked)
                 {
                     if(usedCookingTool == CookingToolName.Stove)
-                        CookingToolView.image.sprite = ingredientData.cookedState;
+                        CookingToolView.image.sprite = ingredientData.stoveCookedSprite;
                     else if(usedCookingTool == CookingToolName.Mortar)
-                        CookingToolView.image.sprite = ingredientData.crushedState;
+                        CookingToolView.image.sprite = ingredientData.mortarCrushedSprite;
                 }
                 else if (state == IngredientState.Burnt)
-                    CookingToolView.image.sprite = ingredientData.burntState;
+                    CookingToolView.image.sprite = ingredientData.stoveBurntSprite;
 
             }
         }

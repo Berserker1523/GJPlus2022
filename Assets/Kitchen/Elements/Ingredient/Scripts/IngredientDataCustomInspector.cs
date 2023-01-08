@@ -5,42 +5,28 @@ namespace Kitchen
     [CustomEditor(typeof(IngredientData))]
     public class IngredientDataCustomInspector : Editor
     {
-        SerializedProperty ingredientName;
-        SerializedProperty cookingTool;
-
-        SerializedProperty rawState;
-        SerializedProperty cookedState;
-        SerializedProperty burntState;
-        SerializedProperty entireState;
-        SerializedProperty crushedState;
-        private void OnEnable()
-        {
-            ingredientName = serializedObject.FindProperty("ingredientName");
-            cookingTool = serializedObject.FindProperty("necessaryCookingTool");
-            rawState = serializedObject.FindProperty("rawState");
-            cookedState = serializedObject.FindProperty("cookedState");
-            burntState = serializedObject.FindProperty("burntState");
-            entireState = serializedObject.FindProperty("entireState");
-            crushedState = serializedObject.FindProperty("crushedState");
-        }
-
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-            EditorGUILayout.PropertyField(ingredientName);
-            EditorGUILayout.PropertyField(cookingTool);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.ingredientName)));
 
-            if((cookingTool.enumValueFlag & (int)CookingToolName.Stove) != 0)
+            SerializedProperty necessaryCookingTool = serializedObject.FindProperty(nameof(IngredientData.necessaryCookingTool));
+            EditorGUILayout.PropertyField(necessaryCookingTool);
+
+            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.rawSprite)));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.dishSprite)));
+
+            if((necessaryCookingTool.enumValueFlag & (int)CookingToolName.Stove) != 0)
             {
-                EditorGUILayout.PropertyField(rawState);
-                EditorGUILayout.PropertyField(cookedState);
-                EditorGUILayout.PropertyField(burntState);
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.stoveRawSprite)));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.stoveCookedSprite)));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.stoveBurntSprite)));
             }
 
-            if((cookingTool.enumValueFlag & (int)CookingToolName.Mortar) != 0)
+            if((necessaryCookingTool.enumValueFlag & (int)CookingToolName.Mortar) != 0)
             {
-                EditorGUILayout.PropertyField(entireState);
-                EditorGUILayout.PropertyField(crushedState);
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.mortarRawSprite)));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(IngredientData.mortarCrushedSprite)));
             }
 
             serializedObject.ApplyModifiedProperties();
