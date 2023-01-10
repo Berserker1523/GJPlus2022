@@ -285,14 +285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5508049850853303441, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2530c053fe2312240bac843e226420a6, type: 3}
-    - target: {fileID: 5508049850912282335, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bfe6fee20d6f3004e94685a24551fd51, type: 3}
     - target: {fileID: 5508049851002970608, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
       propertyPath: m_Name
       value: Credits
@@ -381,92 +373,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5508049851024287641, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 77542918e7ee1ca419e786ed7e39768c, type: 3}
-    - target: {fileID: 5508049851148865798, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_text
-      value: Berserker
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049851361093250, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 74fd94b3688d6dd459ca0b9bc1acc4d2, type: 3}
-    - target: {fileID: 5508049852466031009, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_text
-      value: '- Systems Dev
-
-        - Sleep enthusiast
-
-
-
-        - Artist
-
-        -
-        [Unknown info]
-
-
-
-        -UI Dev
-
-        -Mario''s BFF'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049852466031009, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_margin.w
-      value: -205.69347
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049852466031009, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_margin.y
-      value: -203.64865
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049852466031009, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_margin.z
-      value: 86.32232
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049852484469509, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_text
-      value: "Sound Designer -\nTeam's adopted son -\n\n\nGame Designer -\nTime traveler
-        -\n\n\nSystems Designer -\nMar\xEDa's main account -\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508049852484469509, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-      propertyPath: m_margin.x
-      value: -293.14246
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
---- !u!1 &5508049852608436483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5508049851002970608, guid: d817c2f3000d69b448e8d027580bce92, type: 3}
-  m_PrefabInstance: {fileID: 5508049852608436482}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5508049852608436484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5508049852608436483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1927263676
-      Data2: 1313609337
-      Data3: 925118903
-      Data4: 1373619254
-    Path: event:/Music/MusicaFondo
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20

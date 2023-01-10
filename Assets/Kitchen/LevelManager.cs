@@ -8,8 +8,8 @@ namespace Kitchen
 
         public static int CurrentLevel
         {
-            get { return PlayerPrefs.GetInt(CurrentLevelPlayerPrefsKey, 1); }
-            set { PlayerPrefs.SetInt(CurrentLevelPlayerPrefsKey, value); }
+            get => PlayerPrefs.GetInt(CurrentLevelPlayerPrefsKey, 1);
+            set => PlayerPrefs.SetInt(CurrentLevelPlayerPrefsKey, value);
         }
     }
 }

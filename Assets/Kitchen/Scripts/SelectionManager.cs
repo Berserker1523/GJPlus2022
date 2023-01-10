@@ -4,15 +4,15 @@ namespace Kitchen
 {
     public static class SelectionManager
     {
-        private static ButtonHandler selectedGameObject;
-        public static ButtonHandler SelectedGameObject
+        private static ClickHandlerBase selectedGameObject;
+        public static ClickHandlerBase SelectedGameObject
         {
-            get { return selectedGameObject; }
+            get => selectedGameObject;
             set
             {
-                selectedGameObject?.SetButtonImageColor(Color.white);
+                selectedGameObject?.SetImageColor(Color.white);
                 selectedGameObject = value;
-                selectedGameObject?.SetButtonImageColor(Color.yellow);
+                selectedGameObject?.SetImageColor(Color.yellow);
             }
         }
     }

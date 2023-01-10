@@ -1,15 +1,8 @@
-using FMOD.Studio;
 using Kitchen;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
-using static RecipeData;
 
 [CustomEditor(typeof(RecipeData))]
 public class RecipeCustomEditor : Editor

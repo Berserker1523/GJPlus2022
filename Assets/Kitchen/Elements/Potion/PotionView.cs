@@ -1,99 +1,106 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    public class PotionView : ButtonHandler
+    public class PotionView : ClickHandlerBase, IReleaseable
     {
-        public List<IngredientName> Ingredients { get; private set; } = new();
-        public List<CookingToolName> IngredientsMethod { get; private set; } = new();
+        public const int MaxAllowedIngredients = 3;
 
-        public Image[] ingredientsPlaces;
-        public Image potionSkin;
-        public Sprite failedPotionSkin;
-        public Sprite defaultPotionSkin;
-        public RecipeData currentRecipe;
-        public bool failedRecipe=false;
+        [SerializeField] private Sprite failedPotionSkin;
+        [SerializeField] private Sprite defaultPotionSkin;
+        [SerializeField] private SpriteRenderer[] potionBranchesSprites;
 
-        public void Clear()
+        private LevelInstantiator levelInstantiator;
+
+        private readonly List<PotionIngredient> potionIngredients = new();
+
+        public RecipeData CurrentRecipe { get; private set; }
+
+        private void Awake() =>
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
+
+        public override void OnPointerClick(PointerEventData eventData)
         {
-            Ingredients.Clear();
-            IngredientsMethod.Clear();
-            foreach (Image img in ingredientsPlaces)
-                img.sprite = null;
-            potionSkin.sprite = defaultPotionSkin;
-            currentRecipe = null;
-            failedRecipe = false;
-        }
-
-        protected override void OnClick()
-        {
-            IngredientView ingredientView = SelectionManager.SelectedGameObject as IngredientView;
+            CookingToolController cookingToolController = SelectionManager.SelectedGameObject as CookingToolController;
+            IngredientController ingredientController = SelectionManager.SelectedGameObject as IngredientController;
             SelectionManager.SelectedGameObject = this;
 
-            if (Ingredients.Count >= 3 && currentRecipe==null)
+            if (potionIngredients.Count == MaxAllowedIngredients)
+                return;
+
+            if (cookingToolController != null)
             {
-                changePotionView();
+                HandleCookingToolReceived(cookingToolController);
                 return;
             }
 
-            if (ingredientView == null || (ingredientView.State != IngredientState.Cooked && ingredientView.NecessaryCookingTool != CookingToolName.None))
+            if (ingredientController != null)
+            {
+                HandleIngredientReceived(ingredientController);
                 return;
+            }
+        }
 
-            ingredientsPlaces[Ingredients.Count].sprite = ingredientView.stateDefault;
-            Ingredients.Add(ingredientView.IngredientName);
-            IngredientsMethod.Add(ingredientView.usedCookingTool);
+        private void HandleCookingToolReceived(CookingToolController cookingToolController)
+        {
+            if (cookingToolController.CurrentCookingIngredient.state != IngredientState.Cooked)
+                return;
+            AddIngredient(cookingToolController.CurrentCookingIngredient.data, cookingToolController.CookingToolData.cookingToolName);
+            cookingToolController.Release();
+        }
 
-            ingredientView.Release();
+        private void HandleIngredientReceived(IngredientController ingredientController)
+        {
+            if (ingredientController.IngredientData.necessaryCookingTool != CookingToolName.None)
+                return;
+            AddIngredient(ingredientController.IngredientData, CookingToolName.None);
+        }
+
+        private void AddIngredient(IngredientData ingredientData, CookingToolName usedCookingTool)
+        {
+            PotionIngredient potionIngredient = new(ingredientData, usedCookingTool);
+            potionIngredients.Add(potionIngredient);
+            potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
+
+            if (potionIngredients.Count == MaxAllowedIngredients)
+                CheckRecipe();
         }
 
-        private void changePotionView()
+        private void CheckRecipe()
         {
-            if (currentRecipe != null || failedRecipe)
+            if (CurrentRecipe != null)
                 return;
 
-            bool acceptedRecipe = false;
-            List<IngredientName> tempList = new List<IngredientName>();
-            List<CookingToolName> tempList2= new List<CookingToolName>();
+            List<PotionIngredient> recipeIngredients = new();
 
-            foreach (RecipeData recipe in LevelInstantiator.levelDataGlobal.levelRecipes)
+            foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
             {
+                recipeIngredients.Clear();
                 foreach (var ingredient in recipe.ingredients)
-                {
-                    tempList.Add(ingredient.ingredient.ingredientName);
-                    tempList2.Add(ingredient.cookingToolName);
-                }
-                
-                if(tempList.OrderBy(x => x).SequenceEqual(Ingredients.OrderBy(x => x)) && tempList2.OrderBy(x => x).SequenceEqual(IngredientsMethod.OrderBy(x => x)))
-                    acceptedRecipe = true;
+                    recipeIngredients.Add(new(ingredient.ingredient, ingredient.cookingToolName));
 
-                tempList.Clear();
-                tempList2.Clear();
+                if (!recipeIngredients.OrderBy(x => x.data.ingredientName).SequenceEqual(potionIngredients.OrderBy(x => x.data.ingredientName)) || !recipeIngredients.OrderBy(x => x.usedCookingTool).SequenceEqual(potionIngredients.OrderBy(x => x.usedCookingTool)))
+                    continue;
 
-                if (acceptedRecipe)
-                {
-                    currentRecipe = recipe;
-                    potionSkin.sprite = recipe.sprite;
-                    return;
-                }
+                CurrentRecipe = recipe;
+                spriteRenderer.sprite = recipe.sprite;
+                return;
             }
 
-            if (!acceptedRecipe)
-            {
-                potionSkin.sprite = failedPotionSkin;
-                failedRecipe = true;
-            }        
+            spriteRenderer.sprite = failedPotionSkin;
         }
 
-        private void Update()
+        public void Release()
         {
-            if (Ingredients.Count < 3 || Ingredients.Count > 3)
-                return;
-
-            changePotionView();
+            potionIngredients.Clear();
+            CurrentRecipe = null;
+            spriteRenderer.sprite = defaultPotionSkin;
+            foreach (SpriteRenderer renderer in potionBranchesSprites)
+                renderer.sprite = null;
         }
     }
 }

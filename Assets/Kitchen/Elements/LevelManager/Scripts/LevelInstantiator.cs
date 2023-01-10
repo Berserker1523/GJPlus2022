@@ -6,7 +6,6 @@ namespace Kitchen
 {
     public class LevelInstantiator : MonoBehaviour
     {
-        public static LevelData levelDataGlobal;
         [SerializeField] private LevelData levelData;
 
         [Header("Potions")]
@@ -26,13 +25,14 @@ namespace Kitchen
         [SerializeField] private GameObject painkillerPrefab;
         [SerializeField] private List<Transform> painkillersPositions;
 
+        public LevelData LevelData => levelData;
+
         private void Awake()
         {
-            levelDataGlobal = levelData;
-            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.medicineUpgrades);
-            InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.mortarsUpgradeds);
-            InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.kitchenUpgrades);
-            InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.painkillerUpgrades);
+            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.MedicineUpgrades);
+            InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.MortarsUpgrades);
+            InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.KitchenUpgrades);
+            InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.PainkillerUpgrades);
         }
 
         private void InstantiatePotions(int quantity)
@@ -47,33 +47,24 @@ namespace Kitchen
         {
             mortarsPositions = mortarsPositions.OrderBy(transform => int.Parse(transform.gameObject.name)).ToList();
 
-            for (int i = 0; i < mortarsPositions.Count; i++)
-            {
-                if (i < quantity)
-                    Instantiate(mortarPrefab, mortarsPositions[i]);
-            }
+            for (int i = 0; i < mortarsPositions.Count && i < quantity; i++)
+                Instantiate(mortarPrefab, mortarsPositions[i]);
         }
 
         private void InstantiateStoves(int quantity)
         {
             stovePositions = stovePositions.OrderBy(transform => int.Parse(transform.gameObject.name)).ToList();
 
-            for (int i = 0; i < stovePositions.Count; i++)
-            {
-                if (i < quantity)
-                    Instantiate(stovePrefab, stovePositions[i]);
-            }
+            for (int i = 0; i < stovePositions.Count && i < quantity; i++)
+                Instantiate(stovePrefab, stovePositions[i]);
         }
 
         private void InstantiatePainKillers(int quantity)
         {
             painkillersPositions = painkillersPositions.OrderBy(transform => int.Parse(transform.gameObject.name)).ToList();
 
-            for (int i = 0; i < painkillersPositions.Count; i++)
-            {
-                if (i < quantity)
-                    Instantiate(painkillerPrefab, painkillersPositions[i]);
-            }
+            for (int i = 0; i < painkillersPositions.Count && i < quantity; i++)
+                Instantiate(painkillerPrefab, painkillersPositions[i]);
         }
     }
 }

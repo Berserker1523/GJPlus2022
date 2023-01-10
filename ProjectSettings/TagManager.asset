@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1726160355
+    locked: 0
+  - name: Client
+    uniqueID: 3343280947
+    locked: 0
+  - name: CookingStand
+    uniqueID: 366915147
+    locked: 0
+  - name: FoodTable
+    uniqueID: 2915684747
+    locked: 0
+  - name: Draggable
+    uniqueID: 2073871431
+    locked: 0
+  - name: UI
+    uniqueID: 22837539
+    locked: 0

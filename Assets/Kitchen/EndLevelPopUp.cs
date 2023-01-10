@@ -31,7 +31,7 @@ namespace Kitchen
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Gana Nivel");
             gameObject.SetActive(true);
-            if (LevelManager.CurrentLevel == 5)
+            if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
@@ -48,7 +48,6 @@ namespace Kitchen
             gameObject.SetActive(true);
             continueButton.SetActive(false);
             victoryDefeatText.text = "Defeat";
-
         }
 
         private void Start()

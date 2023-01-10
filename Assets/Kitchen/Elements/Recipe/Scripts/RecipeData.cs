@@ -1,9 +1,7 @@
 using Kitchen;
-using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.PlayerLoop;
+using UnityEngine;
 using UnityEngine.Events;
-using UnityEditor;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "ScriptableObjects/Recipe", order = 1)]
 
@@ -18,14 +16,13 @@ public class RecipeData : ScriptableObject
 
     public static UnityAction assetsChanged;
 
-    public void Awake() => 
+    public void Awake() =>
         assetsChanged?.Invoke();
 
-
     [System.Serializable]
-    public struct Ingredient 
+    public struct Ingredient
     {
-        [HideInInspector] public  string name;
+        [HideInInspector] public string name;
         public IngredientData ingredient;
         [HideInInspector] public CookingToolName cookingToolName;
     }

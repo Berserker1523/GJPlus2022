@@ -13,27 +13,26 @@ namespace Kitchen
 
     public class ClientSpawner : MonoBehaviour
     {
-        [SerializeField] private LevelData spawnData;
-        [SerializeField] private GameObject clientPrefab;
-        [SerializeField] private GameObject endScreen;
-        [SerializeField] private List<SpawnPoint> spawnPoints = new();
+        [SerializeField] private ClientController clientPrefab;
+        [SerializeField] private List<Transform> spawnPoints = new();
+
+        private LevelInstantiator levelInstantiator;
 
         private int clientsSpawned;
-        private float timer;
+        private float spawnTimer;
         private float nextSpawnTime;
         private int clientsDied;
         private int clientsGood;
 
         private void Awake()
         {
-            EventManager.AddListener<int>(SpawnPointEvent.Released, HandleSpawnPointReleased);
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
             EventManager.AddListener(ClientEvent.Died, HandleClientDied);
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
         }
 
         private void OnDestroy()
         {
-            EventManager.RemoveListener<int>(SpawnPointEvent.Released, HandleSpawnPointReleased);
             EventManager.RemoveListener(ClientEvent.Died, HandleClientDied);
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
         }
@@ -43,65 +42,52 @@ namespace Kitchen
 
         private void Update()
         {
-            timer += Time.deltaTime;
-            if (timer >= nextSpawnTime)
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer >= nextSpawnTime)
             {
                 TrySpawnClient();
-                timer = 0;
+                spawnTimer = 0;
             }
         }
 
         private void TrySpawnClient()
         {
-            if (clientsSpawned >= spawnData.clientNumber)
+            if (clientsSpawned >= levelInstantiator.LevelData.clientNumber)
                 return;
 
-            SpawnPoint spawnPoint = GetRandomSpawnPoint(out int ID);
+            Transform spawnPoint = GetRandomSpawnPoint();
             if (spawnPoint == null)
                 return;
 
-            ClientView client = Instantiate(clientPrefab, spawnPoint.transform).GetComponentInChildren<ClientView>();
-            int randomRecipeNumber = Random.Range(0, spawnData.levelRecipes.Count);
-           client.Initialize(ID, spawnData.levelRecipes[randomRecipeNumber], spawnData.levelRecipes[randomRecipeNumber].sprite);
-            spawnPoint.isOpen = false;
+            ClientController client = Instantiate(clientPrefab, spawnPoint.transform);
+            int randomRecipeNumber = Random.Range(0, levelInstantiator.LevelData.levelRecipes.Count);
+            client.Initialize(levelInstantiator.LevelData.levelRecipes[randomRecipeNumber], levelInstantiator.LevelData.levelRecipes[randomRecipeNumber].sprite);
             SetRandomNextSpawnTime();
             clientsSpawned += 1;
         }
 
-        private SpawnPoint GetRandomSpawnPoint(out int ID)
+        private Transform GetRandomSpawnPoint()
         {
-            List<SpawnPoint> availableSpawnPoints = spawnPoints.Where(s => s.isOpen).ToList();
-            availableSpawnPoints = availableSpawnPoints.OrderBy(s => System.Guid.NewGuid()).ToList();
-            if (availableSpawnPoints.Count > 0)
-            {
-                ID = spawnPoints.IndexOf(availableSpawnPoints[0]);
-                return availableSpawnPoints[0];
-            }
-            ID = -1;
-            return null;
+            List<Transform> availableSpawnPoints = spawnPoints.Where(s => s.childCount == 0).OrderBy(s => System.Guid.NewGuid()).ToList();
+            return availableSpawnPoints.Count > 0 ? availableSpawnPoints[0] : null;
         }
 
         private void SetRandomNextSpawnTime() =>
-            nextSpawnTime = Random.Range(spawnData.minSpawnSeconds, spawnData.maxSpawnSeconds);
-
-        private void HandleSpawnPointReleased(int ID) =>
-            spawnPoints[ID].isOpen = true;
+            nextSpawnTime = Random.Range(levelInstantiator.LevelData.minSpawnSeconds, levelInstantiator.LevelData.maxSpawnSeconds);
 
         private void HandleClientDied()
         {
             clientsDied++;
-            if (clientsDied >= 5)
+            if (clientsDied >= 5) //TODO Burned Variable
                 EventManager.Dispatch(GameStatus.Lost);
-            else if(clientsSpawned >= spawnData.clientNumber)
-            {
+            else if (clientsSpawned >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
-            }
         }
 
         private void HandleClientServed()
         {
             clientsGood++;
-            if (clientsGood >= spawnData.clientNumber || clientsSpawned >= spawnData.clientNumber)
+            if (clientsGood >= levelInstantiator.LevelData.clientNumber || clientsSpawned >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
         }
     }
