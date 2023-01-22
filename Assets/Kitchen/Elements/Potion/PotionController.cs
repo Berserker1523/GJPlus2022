@@ -5,39 +5,48 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    public class PotionView : ClickHandlerBase, IReleaseable
+    [RequireComponent(typeof(DragView))]
+    public class PotionController : MonoBehaviour, IReleaseable
     {
         public const int MaxAllowedIngredients = 3;
 
         [SerializeField] private Sprite failedPotionSkin;
         [SerializeField] private Sprite defaultPotionSkin;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
 
         private LevelInstantiator levelInstantiator;
+
+        private DragView dragView;
 
         private readonly List<PotionIngredient> potionIngredients = new();
 
         public RecipeData CurrentRecipe { get; private set; }
 
-        private void Awake() =>
-            levelInstantiator = FindObjectOfType<LevelInstantiator>();
-
-        public override void OnPointerClick(PointerEventData eventData)
+        private void Awake()
         {
-            CookingToolController cookingToolController = SelectionManager.SelectedGameObject as CookingToolController;
-            IngredientController ingredientController = SelectionManager.SelectedGameObject as IngredientController;
-            SelectionManager.SelectedGameObject = this;
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
+            dragView = GetComponent<DragView>();
+            dragView.OnDropped += HandleDropped;
+        }
 
+        private void OnDestroy()
+        {
+            dragView.OnDropped -= HandleDropped;
+        }
+
+        public void HandleDropped(PointerEventData pointerEventData)
+        {
             if (potionIngredients.Count == MaxAllowedIngredients)
                 return;
 
-            if (cookingToolController != null)
+            if (pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController))
             {
                 HandleCookingToolReceived(cookingToolController);
                 return;
             }
 
-            if (ingredientController != null)
+            if (pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
             {
                 HandleIngredientReceived(ingredientController);
                 return;

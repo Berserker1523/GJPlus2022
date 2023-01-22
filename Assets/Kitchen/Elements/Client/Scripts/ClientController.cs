@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 namespace Kitchen
 {
-    public class ClientController : ClickHandlerBase
+    [RequireComponent(typeof(Collider2D))]
+    public class ClientController : MonoBehaviour, IDropHandler
     {
         public const float MaxWaitingSeconds = 70f;
 
@@ -13,7 +14,6 @@ namespace Kitchen
         [SerializeField] private Image sliderBarImage;
         [SerializeField] private Image potionImage;
         [SerializeField] private GameObject treePrefab;
-
 
         private RecipeData requiredRecipe;
         private float waitingTimer;
@@ -52,28 +52,27 @@ namespace Kitchen
             }
         }
 
-        public override void OnPointerClick(PointerEventData eventData)
+        public void OnDrop(PointerEventData pointerEventData)
         {
-            PotionView potionView = SelectionManager.SelectedGameObject as PotionView;
-            PainkillerController painkillerView = SelectionManager.SelectedGameObject as PainkillerController;
-            SelectionManager.SelectedGameObject = null;
+            pointerEventData.pointerDrag.TryGetComponent(out PotionController potionController);
+            pointerEventData.pointerDrag.TryGetComponent(out PainkillerController painkillerController);
 
-            if (painkillerView != null)
+            if (painkillerController != null)
             {
                 waitingTimer = MaxWaitingSeconds;
-                Destroy(painkillerView.gameObject);
+                Destroy(painkillerController.gameObject);
                 return;
             }
 
-            if (potionView == null)
+            if (potionController == null)
                 return;
 
-            bool acceptedRecipe = potionView.CurrentRecipe == requiredRecipe;
+            bool acceptedRecipe = potionController.CurrentRecipe == requiredRecipe;
 
             if (!acceptedRecipe)
                 return;
 
-            potionView.Release();
+            potionController.Release();
             AddMoney();
             EventManager.Dispatch(ClientEvent.Served);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");

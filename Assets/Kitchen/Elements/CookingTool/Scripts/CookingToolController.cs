@@ -3,9 +3,14 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    public class CookingToolController : ClickHandlerBase, IReleaseable
+    [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(DragView))]
+    public class CookingToolController : MonoBehaviour, IReleaseable
     {
         [SerializeField] private CookingToolData cookingToolData;
+
+        private SpriteRenderer spriteRenderer;
+        private DragView dragView;
 
         private Sprite initialSprite;
         private FMOD.Studio.EventInstance cookingSound;
@@ -13,8 +18,16 @@ namespace Kitchen
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
 
-        private void Awake() =>
+        private void Awake()
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            dragView = GetComponent<DragView>();
             initialSprite = spriteRenderer.sprite;
+            dragView.OnDropped += HandleDropped;
+        }
+
+        private void OnDestroy() =>
+            dragView.OnDropped -= HandleDropped;
 
         private void Update()
         {
@@ -39,18 +52,18 @@ namespace Kitchen
             }
         }
 
-        public override void OnPointerClick(PointerEventData eventData)
+        private void HandleDropped(PointerEventData pointerEventData)
         {
-            IngredientController ingredientView = SelectionManager.SelectedGameObject as IngredientController;
-            SelectionManager.SelectedGameObject = this;
-
             if (CurrentCookingIngredient != null)
                 return;
 
-            if (ingredientView == null || !ingredientView.IngredientData.necessaryCookingTool.HasFlag(cookingToolData.cookingToolName))
+            if (!pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
                 return;
 
-            CurrentCookingIngredient = new(ingredientView.IngredientData);
+            if (!ingredientController.IngredientData.necessaryCookingTool.HasFlag(cookingToolData.cookingToolName))
+                return;
+
+            CurrentCookingIngredient = new(ingredientController.IngredientData);
             spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveRawSprite : CurrentCookingIngredient.data.mortarRawSprite;
             PlayCookingSound();
         }

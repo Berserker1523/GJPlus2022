@@ -38,11 +38,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 1726160355
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Client
     uniqueID: 3343280947
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Draggable
     uniqueID: 2073871431
+    locked: 0
+  - name: Dragged
+    uniqueID: 2907678249
     locked: 0
   - name: UI
     uniqueID: 22837539

@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7485238131655332044}
-  - component: {fileID: 2038964648802909238}
   - component: {fileID: 8195080166055144246}
   - component: {fileID: 2152473043833142461}
+  - component: {fileID: 2038964648802909238}
+  - component: {fileID: 1825739876063303890}
+  - component: {fileID: -7463807218569124246}
   m_Layer: 5
   m_Name: Stove
   m_TagString: Untagged
@@ -34,20 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2038964648802909238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8311942742168999634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58194e9a3b996e84fb17b7ce207933e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 8195080166055144246}
-  cookingToolData: {fileID: 11400000, guid: f1a82439e82a27847a9302bcbc2c0d4e, type: 2}
 --- !u!212 &8195080166055144246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2073871431
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1847060284, guid: 982b1b05219de2d40895bc2e0d0ba5fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,3 +114,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.27, y: 1.87}
   m_EdgeRadius: 0
+--- !u!114 &2038964648802909238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311942742168999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58194e9a3b996e84fb17b7ce207933e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookingToolData: {fileID: 11400000, guid: f1a82439e82a27847a9302bcbc2c0d4e, type: 2}
+--- !u!114 &1825739876063303890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311942742168999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2b4be31c4683846af67741304390fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7463807218569124246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311942742168999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14ab2c10d8301a44bf1dca49c5fea23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

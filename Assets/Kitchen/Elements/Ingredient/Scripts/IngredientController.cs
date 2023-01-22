@@ -3,15 +3,28 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    public class IngredientController : ClickHandlerBase
+    [RequireComponent(typeof(DragView))]
+    public class IngredientController : MonoBehaviour
     {
         [SerializeField] private IngredientData ingredientData;
 
+        private DragView dragView;
+
         public IngredientData IngredientData => ingredientData;
 
-        public override void OnPointerClick(PointerEventData eventData)
+        private void Awake()
         {
-            SelectionManager.SelectedGameObject = this;
+            dragView = GetComponent<DragView>();
+            dragView.OnDragBegan += HandleDragBegan;
+        }
+
+        private void OnDestroy()
+        {
+            dragView.OnDragBegan -= HandleDragBegan;
+        } 
+
+        private void HandleDragBegan(PointerEventData _)
+        {
             if (ingredientData.ingredientName == IngredientName.Water)
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Coge Agua");
         }

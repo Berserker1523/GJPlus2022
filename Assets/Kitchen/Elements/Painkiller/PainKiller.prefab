@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4009178887869568794}
   - component: {fileID: 8081242476561251135}
-  - component: {fileID: 8928771764506826912}
   - component: {fileID: 2347496369127595708}
+  - component: {fileID: 8928771764506826912}
+  - component: {fileID: 1328375225940374732}
+  - component: {fileID: -7328306961976711038}
   m_Layer: 5
   m_Name: PainKiller
   m_TagString: Untagged
@@ -73,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2073871431
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1595732434, guid: 5d53584c9485ccc49ba10cd2c92deeb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8928771764506826912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2674788434048809875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9847f668e498d74b9618a4212815577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 8081242476561251135}
 --- !u!61 &2347496369127595708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +114,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.03, y: 1.12}
   m_EdgeRadius: 0
+--- !u!114 &8928771764506826912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674788434048809875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9847f668e498d74b9618a4212815577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1328375225940374732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674788434048809875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2b4be31c4683846af67741304390fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7328306961976711038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674788434048809875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14ab2c10d8301a44bf1dca49c5fea23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

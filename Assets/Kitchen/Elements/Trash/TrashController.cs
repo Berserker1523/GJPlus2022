@@ -1,15 +1,14 @@
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    public class TrashController : ClickHandlerBase
+    [RequireComponent(typeof(Collider2D))]
+    public class TrashController : MonoBehaviour, IDropHandler
     {
-        public override void OnPointerClick(PointerEventData eventData)
+        public void OnDrop(PointerEventData pointerEventData)
         {
-            IReleaseable releaseable = SelectionManager.SelectedGameObject as IReleaseable;
-            SelectionManager.SelectedGameObject = null;
-
-            if (releaseable == null)
+            if (!pointerEventData.pointerDrag.TryGetComponent(out IReleaseable releaseable))
                 return;
 
             releaseable.Release();

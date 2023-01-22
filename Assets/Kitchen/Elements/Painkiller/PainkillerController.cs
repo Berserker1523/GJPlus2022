@@ -1,10 +1,8 @@
-using UnityEngine.EventSystems;
+using UnityEngine;
 
 namespace Kitchen
 {
-    public class PainkillerController : ClickHandlerBase
+    public class PainkillerController : MonoBehaviour
     {
-        public override void OnPointerClick(PointerEventData eventData) =>
-            SelectionManager.SelectedGameObject = this;
     }
 }
