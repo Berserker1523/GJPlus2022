@@ -236,10 +236,11 @@ namespace DevTools
                     currentObject.Update();
 
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
-                    levelsBools[i] = EditorGUILayout.Foldout(levelsBools[i], "level "+(i+1));
+                    levelsBools[i] = EditorGUILayout.Foldout(levelsBools[i], "Level "+ currentObject.FindProperty("level").intValue.ToString() + ":");
 
                     if (levelsBools[i])
                     {
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("level"), new GUIContent("LevelID"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("clientNumber"), new GUIContent("Clients Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minSpawnSeconds"), new GUIContent("Min SpawnSeconds"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("maxSpawnSeconds"), new GUIContent("Max SpawnSeconds"));
@@ -247,6 +248,7 @@ namespace DevTools
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfMortars"), new GUIContent("Mortars Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfStoves"), new GUIContent("Stoves Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPainKillers"), new GUIContent("Painkillers Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("levelRecipes"), new GUIContent("Level Recipes"));
 
                     }
                     EditorGUILayout.EndVertical();

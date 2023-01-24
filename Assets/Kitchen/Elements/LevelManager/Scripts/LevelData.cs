@@ -19,6 +19,7 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfMortars;
         [Range(1, 4)] public int minNumberOfStoves;
         [Range(1, 4)] public int minNumberOfPainKillers;
+        [Header("Recipes")]
         public List<RecipeData> levelRecipes;
     }
 }
