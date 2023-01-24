@@ -10,15 +10,20 @@ namespace DevTools
 {
     public class IngredientsNRecipesCreatorWindow : EditorWindow
     {
-        string[] tabs = { "Ingredients", "Recipes", "Illnesses" };
+        string[] tabs = { "Ingredients", "Recipes", "Illnesses", "Levels" };
         int selectedTab = 0;
 
         [SerializeField] List<IngredientData> ingredients = new List<IngredientData>();
         [SerializeField] List<RecipeData> recipes = new List<RecipeData>();
+        [SerializeField] List<LevelData> levels = new List<LevelData>();
+
         protected SerializedProperty m_list = null;
         protected SerializedProperty r_list = null;
+        protected SerializedProperty l_list = null;
         protected bool[] ingredientsBools;
         protected bool[] recipesBools;
+        protected bool[] levelsBools;
+
         protected Vector2 scrollPos = Vector2.zero;
 
         ScriptableObject target;
@@ -26,6 +31,8 @@ namespace DevTools
 
         public static string IngredientsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Ingredient", "Data");
         public static string RecipesSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Recipe", "Data");
+        public static string LevelsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "LevelManager", "Data");
+
 
         [MenuItem("DevWindows/RecipesManager", false, 51)]
         public static void ShowWindow() => GetWindow<IngredientsNRecipesCreatorWindow>("RecipesManager");
@@ -46,6 +53,9 @@ namespace DevTools
                 case 1:
                     Recipes();
                     break;
+                case 3:
+                    Levels();
+                    break;
             }
 
             EditorGUILayout.EndScrollView();
@@ -58,21 +68,31 @@ namespace DevTools
             so = new SerializedObject(target);
             m_list = so.FindProperty("ingredients");
             r_list = so.FindProperty("recipes");
+            l_list = so.FindProperty("levels");
+
             ingredientsBools = UpdateList(ingredients.Count);
             recipesBools = UpdateList(recipes.Count);
+            levelsBools = UpdateList(levels.Count);
+
             ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
+            levels = GetAssetsList<LevelData>(LevelsSOPath);
 
             RecipeData.assetsChanged += UpdateAll;
             IngredientData.assetsChanged += UpdateAll;
+            LevelData.assetsChanged += UpdateAll;
         }
 
         void UpdateAll()
         {
             ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
+            levels = GetAssetsList<LevelData>(LevelsSOPath);
+
             ingredientsBools = UpdateList(ingredients.Count);
             recipesBools = UpdateList(recipes.Count);
+            levelsBools = UpdateList(levels.Count);
+
             Repaint();
         }
 
@@ -203,6 +223,42 @@ namespace DevTools
                 GetWindow<NewRecipePopUp>("Create New Recipe");
 
         }
+
+        void Levels()
+        {
+            if (levelsBools.Length != levels.Count)
+                levelsBools = UpdateList(levels.Count);
+            for (int i = 0; i < levels.Count; i++)
+            {
+                if (l_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
+                {
+                    SerializedObject currentObject = new SerializedObject(l_list.GetArrayElementAtIndex(i).objectReferenceValue);
+                    currentObject.Update();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
+                    levelsBools[i] = EditorGUILayout.Foldout(levelsBools[i], "level "+(i+1));
+
+                    if (levelsBools[i])
+                    {
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("clientNumber"), new GUIContent("Clients Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("minSpawnSeconds"), new GUIContent("Min SpawnSeconds"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("maxSpawnSeconds"), new GUIContent("Max SpawnSeconds"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPotionRecipients"), new GUIContent("Shakers Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfMortars"), new GUIContent("Mortars Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfStoves"), new GUIContent("Stoves Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPainKillers"), new GUIContent("Painkillers Amount"));
+
+                    }
+                    EditorGUILayout.EndVertical();
+                    EditorGUILayout.Space(10f);
+                    currentObject.ApplyModifiedProperties();
+                }
+                else if (Event.current.type != EventType.Layout)
+                    UpdateAll();
+            }
+
+        }
+
         List<T> GetAssetsList<T>(string folder) where T : ScriptableObject
         {
             string[] dataFiles = Directory.GetFiles(folder, "*.asset");
