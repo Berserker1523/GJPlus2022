@@ -233,10 +233,11 @@ namespace DevTools
                 if (l_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
                 {
                     SerializedObject currentObject = new SerializedObject(l_list.GetArrayElementAtIndex(i).objectReferenceValue);
-                    currentObject.Update();
 
+                    currentObject.Update();
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     levelsBools[i] = EditorGUILayout.Foldout(levelsBools[i], "Level "+ currentObject.FindProperty("level").intValue.ToString() + ":");
+                    SerializedProperty array = currentObject.FindProperty("levelPercentages");
 
                     if (levelsBools[i])
                     {
@@ -248,9 +249,29 @@ namespace DevTools
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfMortars"), new GUIContent("Mortars Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfStoves"), new GUIContent("Stoves Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPainKillers"), new GUIContent("Painkillers Amount"));
-                        EditorGUILayout.PropertyField(currentObject.FindProperty("levelRecipes"), new GUIContent("Level Recipes"));
+
+                        for (int j=0; j< currentObject.FindProperty("levelRecipes").arraySize ; j++)
+                        {
+                            EditorGUILayout.BeginHorizontal();
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("levelRecipes").GetArrayElementAtIndex(j), new GUIContent("Recipe"+(j+1)));
+                            EditorGUILayout.PropertyField(currentObject.FindProperty("levelPercentages").GetArrayElementAtIndex(j), new GUIContent(""));
+
+                            if (GUILayout.Button("Delete"))
+                            {
+                                currentObject.FindProperty("levelRecipes").DeleteArrayElementAtIndex(j);
+                                currentObject.FindProperty("levelPercentages").DeleteArrayElementAtIndex(j);
+                            }                           
+                            
+                            EditorGUILayout.EndHorizontal();
+                        }
 
                     }
+                    if(GUILayout.Button("Add Recipe", GUILayout.Height(30f)))
+                    {
+                        currentObject.FindProperty("levelRecipes").arraySize++;
+                        currentObject.FindProperty("levelPercentages").arraySize++;
+                    }
+
                     EditorGUILayout.EndVertical();
                     EditorGUILayout.Space(10f);
                     currentObject.ApplyModifiedProperties();

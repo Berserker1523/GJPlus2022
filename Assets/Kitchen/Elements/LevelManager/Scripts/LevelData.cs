@@ -20,6 +20,32 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfStoves;
         [Range(1, 4)] public int minNumberOfPainKillers;
         [Header("Recipes")]
-        public List<RecipeData> levelRecipes;
+        public List<RecipeData> levelRecipes = new List<RecipeData>();
+        public List<IngredientPercentage> levelPercentages = new List<IngredientPercentage>();        
+    }
+
+    public enum IngredientPercentage
+    {  
+        _5 =5,
+        _10 =10, 
+        _15=15,
+        _20=20,
+        _25=25,
+        _30=30,
+        _35=35,
+        _40 =40,
+        _45=45,
+        _50=50,
+        _55=55,
+        _60=60,
+        _65=65,
+        _70=70,
+        _75=75,
+        _80=80,
+        _85=85,
+        _90=90,
+        _95=95,
+        _100=100,
+        _0 = 0
     }
 }
