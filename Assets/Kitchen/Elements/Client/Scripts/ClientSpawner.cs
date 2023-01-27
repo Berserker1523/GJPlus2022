@@ -60,10 +60,27 @@ namespace Kitchen
                 return;
 
             ClientController client = Instantiate(clientPrefab, spawnPoint.transform);
-            int randomRecipeNumber = Random.Range(0, levelInstantiator.LevelData.levelRecipes.Count);
-            client.Initialize(levelInstantiator.LevelData.levelRecipes[randomRecipeNumber], levelInstantiator.LevelData.levelRecipes[randomRecipeNumber].sprite);
+
+            int recipeNumber = SetRandomRecipe(Random.Range(0, 101));
+            client.Initialize(levelInstantiator.LevelData.levelRecipes[recipeNumber], levelInstantiator.LevelData.levelRecipes[recipeNumber].sprite);
             SetRandomNextSpawnTime();
             clientsSpawned += 1;
+        }
+
+        private int SetRandomRecipe(int randomNum)
+        {
+            List<RecipePercentage> probabilities = levelInstantiator.LevelData.levelPercentages;
+            int currentProbability = 0;
+            for (int i = 0; i < levelInstantiator.LevelData.levelRecipes.Count; i++)
+            {
+                currentProbability += (int)probabilities[i];
+                if (randomNum <= currentProbability)
+                {
+                    Debug.Log("Seted recipe " + i + " With a probability of " + ((int)probabilities[i]) + "\n % random num=" + randomNum + " | Cummulative % = " + currentProbability+"%");
+                    return i;
+                }
+            }
+            return 0;
         }
 
         private Transform GetRandomSpawnPoint()

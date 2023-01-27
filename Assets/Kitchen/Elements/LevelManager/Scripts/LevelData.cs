@@ -21,10 +21,10 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfPainKillers;
         [Header("Recipes")]
         public List<RecipeData> levelRecipes = new List<RecipeData>();
-        public List<IngredientPercentage> levelPercentages = new List<IngredientPercentage>();        
+        public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();        
     }
 
-    public enum IngredientPercentage
+    public enum RecipePercentage
     {  
         _5 =5,
         _10 =10, 

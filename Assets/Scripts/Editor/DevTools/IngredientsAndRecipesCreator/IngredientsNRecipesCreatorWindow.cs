@@ -33,6 +33,10 @@ namespace DevTools
         public static string RecipesSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Recipe", "Data");
         public static string LevelsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "LevelManager", "Data");
 
+        protected GUIStyle style = new GUIStyle();
+        protected string warningLabel = "";
+
+
 
         [MenuItem("DevWindows/RecipesManager", false, 51)]
         public static void ShowWindow() => GetWindow<IngredientsNRecipesCreatorWindow>("RecipesManager");
@@ -81,6 +85,9 @@ namespace DevTools
             RecipeData.assetsChanged += UpdateAll;
             IngredientData.assetsChanged += UpdateAll;
             LevelData.assetsChanged += UpdateAll;
+
+            style.normal.textColor = Color.red;
+            style.fontStyle = FontStyle.Bold;
         }
 
         void UpdateAll()
@@ -238,6 +245,7 @@ namespace DevTools
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     levelsBools[i] = EditorGUILayout.Foldout(levelsBools[i], "Level "+ currentObject.FindProperty("level").intValue.ToString() + ":");
                     SerializedProperty array = currentObject.FindProperty("levelPercentages");
+                    int cummulativePercentage = 0;
 
                     if (levelsBools[i])
                     {
@@ -255,7 +263,7 @@ namespace DevTools
                             EditorGUILayout.BeginHorizontal();
                             EditorGUILayout.PropertyField(currentObject.FindProperty("levelRecipes").GetArrayElementAtIndex(j), new GUIContent("Recipe"+(j+1)));
                             EditorGUILayout.PropertyField(currentObject.FindProperty("levelPercentages").GetArrayElementAtIndex(j), new GUIContent(""));
-
+                            cummulativePercentage += currentObject.FindProperty("levelPercentages").GetArrayElementAtIndex(j).enumValueFlag;
                             if (GUILayout.Button("Delete"))
                             {
                                 currentObject.FindProperty("levelRecipes").DeleteArrayElementAtIndex(j);
@@ -266,6 +274,16 @@ namespace DevTools
                         }
 
                     }
+
+                    if (cummulativePercentage > 100)
+                        warningLabel = "Warning: Total Percentage over 100%";
+                    else if (cummulativePercentage < 100)
+                        warningLabel = "Warning: Total Percentage under 100%";
+                    else
+                        warningLabel = "";
+                    
+
+                    EditorGUILayout.LabelField(warningLabel, style);
                     if(GUILayout.Button("Add Recipe", GUILayout.Height(30f)))
                     {
                         currentObject.FindProperty("levelRecipes").arraySize++;
