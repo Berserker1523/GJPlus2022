@@ -13,6 +13,7 @@ namespace Kitchen
         [SerializeField] private Sprite failedPotionSkin;
         [SerializeField] private Sprite defaultPotionSkin;
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private SpriteRenderer resultSprite;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
 
         private LevelInstantiator levelInstantiator;
@@ -28,6 +29,11 @@ namespace Kitchen
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             dragView = GetComponent<DragView>();
             dragView.OnDropped += HandleDropped;
+        }
+
+        private void Start()
+        {
+            resultSprite.enabled= false;
         }
 
         private void OnDestroy()
@@ -86,6 +92,7 @@ namespace Kitchen
                 return;
 
             List<PotionIngredient> recipeIngredients = new();
+            resultSprite.enabled = true;
 
             foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
             {
@@ -97,18 +104,19 @@ namespace Kitchen
                     continue;
 
                 CurrentRecipe = recipe;
-                spriteRenderer.sprite = recipe.sprite;
+                resultSprite.sprite = recipe.sprite;
                 return;
             }
 
-            spriteRenderer.sprite = failedPotionSkin;
+            resultSprite.sprite = failedPotionSkin;
         }
 
         public void Release()
         {
             potionIngredients.Clear();
             CurrentRecipe = null;
-            spriteRenderer.sprite = defaultPotionSkin;
+            resultSprite.enabled = false;
+            // spriteRenderer.sprite = defaultPotionSkin;
             foreach (SpriteRenderer renderer in potionBranchesSprites)
                 renderer.sprite = null;
         }
