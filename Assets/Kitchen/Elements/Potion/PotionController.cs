@@ -75,9 +75,10 @@ namespace Kitchen
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
 
-            if (potionIngredients.Count == MaxAllowedIngredients)
-                CheckRecipe();
+          /*  if (potionIngredients.Count == MaxAllowedIngredients)
+                CheckRecipe();*/
         }
+
 
         private void CheckRecipe()
         {
@@ -110,6 +111,12 @@ namespace Kitchen
             spriteRenderer.sprite = defaultPotionSkin;
             foreach (SpriteRenderer renderer in potionBranchesSprites)
                 renderer.sprite = null;
+        }
+
+        public void OnMouseDown()
+        {
+            CheckRecipe();
+            //Invoke Mix SFX event.
         }
     }
 }
