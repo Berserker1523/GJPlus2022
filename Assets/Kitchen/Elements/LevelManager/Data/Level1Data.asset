@@ -16,10 +16,10 @@ MonoBehaviour:
   clientNumber: 10
   minSpawnSeconds: 1
   maxSpawnSeconds: 3.6
-  minNumberOfPotionRecipients: 1
-  minNumberOfMortars: 1
-  minNumberOfStoves: 1
-  minNumberOfPainKillers: 1
+  minNumberOfPotionRecipients: 4
+  minNumberOfMortars: 4
+  minNumberOfStoves: 4
+  minNumberOfPainKillers: 4
   levelRecipes:
   - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
   - {fileID: 11400000, guid: 2db822341adc12e47acdf5d48df25e8a, type: 2}
