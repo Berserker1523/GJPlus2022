@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
+ 
+    [RequireComponent(typeof(Animator))]
     public class PotionController : MonoBehaviour, IDropHandler
     {
         public const int MaxAllowedIngredients = 3;
@@ -15,6 +17,7 @@ namespace Kitchen
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
         [SerializeField] private PotionResultController potionResult;
 
+        [SerializeField] private Animator anim;
         private LevelInstantiator levelInstantiator;
         public readonly List<PotionIngredient> potionIngredients = new();
 
@@ -22,9 +25,11 @@ namespace Kitchen
 
         private void Awake()=>      
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
+
+        private void Start()=>        
+           anim = GetComponent<Animator>();
         
 
-    
         public void OnDrop(PointerEventData pointerEventData)
         {
             if (potionIngredients.Count == MaxAllowedIngredients)
@@ -68,11 +73,7 @@ namespace Kitchen
 
 
         private void CheckRecipe()
-        {
-            if (potionResult.CurrentRecipe != null || potionIngredients.Count==0)
-                return;
-
-            
+        {  
             List<PotionIngredient> recipeIngredients = new();
 
             foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
@@ -104,8 +105,18 @@ namespace Kitchen
 
         public void OnMouseDown()
         {
-            CheckRecipe();
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count == 0)
+                return;
+
+            anim.SetBool("Shake", true);
             //Invoke Mix SFX event.
+        }
+
+        //This method must be called with an animation Event at the end of Shaking Animation
+        public void EndAShakingnimationEvent()
+        {
+            anim.SetBool("Shake", false);
+            CheckRecipe();
         }
     }
 }

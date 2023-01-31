@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 7086716262021648408}
   - component: {fileID: 3364502948069066462}
   - component: {fileID: 4070418602072471352}
+  - component: {fileID: 5012975737639786915}
   m_Layer: 5
   m_Name: Potion
   m_TagString: Untagged
@@ -255,6 +256,28 @@ MonoBehaviour:
   - {fileID: 6593856291382089527}
   - {fileID: 4980190416810730176}
   potionResult: {fileID: 7155985123903874121}
+  anim: {fileID: 0}
+  CurrentRecipe: {fileID: 0}
+--- !u!95 &5012975737639786915
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146853414210837075}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bdf3b7e4b84a6c429402b3cd317393b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1513059967581619944
 GameObject:
   m_ObjectHideFlags: 0
