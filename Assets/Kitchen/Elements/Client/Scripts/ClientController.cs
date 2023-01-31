@@ -1,4 +1,5 @@
 using Events;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private GameObject treePrefab;
 
+        private bool clientServed =false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
 
@@ -33,6 +35,9 @@ namespace Kitchen
 
         private void Update()
         {
+            if (clientServed)
+                return;
+
             waitingTimer -= Time.deltaTime;
             slider.value = waitingTimer / MaxWaitingSeconds;
 
@@ -74,6 +79,15 @@ namespace Kitchen
 
             potionController.Release();
             AddMoney();
+            StartCoroutine(ClientServedRoutine());
+        }
+
+        public IEnumerator ClientServedRoutine()
+        {
+            //Display Happy Animation Here!
+            clientServed = true;
+            yield return new WaitForSeconds(3f);
+
             EventManager.Dispatch(ClientEvent.Served);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
             Destroy(gameObject);
