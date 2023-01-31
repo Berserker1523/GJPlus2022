@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    [RequireComponent(typeof(DragView))]
-    public class PotionController : MonoBehaviour, IReleaseable
+    public class PotionController : MonoBehaviour, IDropHandler
     {
         public const int MaxAllowedIngredients = 3;
 
@@ -14,28 +13,19 @@ namespace Kitchen
         [SerializeField] private Sprite defaultPotionSkin;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
+        [SerializeField] private PotionResultController potionResult;
 
         private LevelInstantiator levelInstantiator;
+        public readonly List<PotionIngredient> potionIngredients = new();
 
-        private DragView dragView;
+        public RecipeData CurrentRecipe;
 
-        private readonly List<PotionIngredient> potionIngredients = new();
-
-        public RecipeData CurrentRecipe { get; private set; }
-
-        private void Awake()
-        {
+        private void Awake()=>      
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
-            dragView = GetComponent<DragView>();
-            dragView.OnDropped += HandleDropped;
-        }
+        
 
-        private void OnDestroy()
-        {
-            dragView.OnDropped -= HandleDropped;
-        }
-
-        public void HandleDropped(PointerEventData pointerEventData)
+    
+        public void OnDrop(PointerEventData pointerEventData)
         {
             if (potionIngredients.Count == MaxAllowedIngredients)
                 return;
@@ -53,7 +43,7 @@ namespace Kitchen
             }
         }
 
-        private void HandleCookingToolReceived(CookingToolController cookingToolController)
+        public void HandleCookingToolReceived(CookingToolController cookingToolController)
         {
             if (cookingToolController.CurrentCookingIngredient.state != IngredientState.Cooked)
                 return;
@@ -61,7 +51,7 @@ namespace Kitchen
             cookingToolController.Release();
         }
 
-        private void HandleIngredientReceived(IngredientController ingredientController)
+        public void HandleIngredientReceived(IngredientController ingredientController)
         {
             if (ingredientController.IngredientData.necessaryCookingTool != CookingToolName.None)
                 return;
@@ -74,16 +64,15 @@ namespace Kitchen
             potionIngredients.Add(potionIngredient);
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
-
-            if (potionIngredients.Count == MaxAllowedIngredients)
-                CheckRecipe();
         }
+
 
         private void CheckRecipe()
         {
-            if (CurrentRecipe != null)
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count==0)
                 return;
 
+            
             List<PotionIngredient> recipeIngredients = new();
 
             foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
@@ -96,20 +85,27 @@ namespace Kitchen
                     continue;
 
                 CurrentRecipe = recipe;
-                spriteRenderer.sprite = recipe.sprite;
+                potionResult.SetPotion(CurrentRecipe, recipe.sprite);
+                ClearShaker();
                 return;
             }
-
-            spriteRenderer.sprite = failedPotionSkin;
+            potionResult.SetPotion(CurrentRecipe, failedPotionSkin);
+            ClearShaker();
         }
 
-        public void Release()
+        public void ClearShaker()
         {
             potionIngredients.Clear();
             CurrentRecipe = null;
-            spriteRenderer.sprite = defaultPotionSkin;
+            // spriteRenderer.sprite = defaultPotionSkin;
             foreach (SpriteRenderer renderer in potionBranchesSprites)
                 renderer.sprite = null;
+        }
+
+        public void OnMouseDown()
+        {
+            CheckRecipe();
+            //Invoke Mix SFX event.
         }
     }
 }
