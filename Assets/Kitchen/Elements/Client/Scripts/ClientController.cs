@@ -54,7 +54,7 @@ namespace Kitchen
 
         public void OnDrop(PointerEventData pointerEventData)
         {
-            pointerEventData.pointerDrag.TryGetComponent(out PotionController potionController);
+            pointerEventData.pointerDrag.TryGetComponent(out PotionResultController potionController);
             pointerEventData.pointerDrag.TryGetComponent(out PainkillerController painkillerController);
 
             if (painkillerController != null)
