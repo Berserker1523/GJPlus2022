@@ -16,6 +16,9 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private GameObject treePrefab;
 
+        private SpriteRenderer clientSpriteRend;
+        [SerializeField] private Sprite happyClientSprite;
+
         private bool clientServed =false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
@@ -31,6 +34,7 @@ namespace Kitchen
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
+            clientSpriteRend = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
@@ -86,6 +90,7 @@ namespace Kitchen
         {
             //Display Happy Animation Here!
             clientServed = true;
+            clientSpriteRend.sprite = happyClientSprite;
             yield return new WaitForSeconds(3f);
 
             EventManager.Dispatch(ClientEvent.Served);
