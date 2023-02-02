@@ -91,9 +91,9 @@ namespace Kitchen
             //Display Happy Animation Here!
             clientServed = true;
             clientSpriteRend.sprite = happyClientSprite;
+            EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 
-            EventManager.Dispatch(ClientEvent.Served);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
             Destroy(gameObject);
         }
@@ -101,4 +101,6 @@ namespace Kitchen
         private void AddMoney() =>
             MoneyManager.Money += (int)(MaxWaitingSeconds * waitingTimer / MaxWaitingSeconds) + 10; //TODO Burned Variable
     }
+
+
 }

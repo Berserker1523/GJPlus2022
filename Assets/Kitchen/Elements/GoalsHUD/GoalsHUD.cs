@@ -1,3 +1,4 @@
+using Events;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,7 +14,8 @@ namespace Kitchen
         [SerializeField] private TextMeshProUGUI goalText;
         [SerializeField] private TextMeshProUGUI speedText;
         [SerializeField] private Image[] stars = new Image[3];
-        [SerializeField] private float currentTime;
+        [SerializeField] private int currentTime;
+        [SerializeField] private int currentGoal;
 
         private void Awake()
         {
@@ -22,14 +24,19 @@ namespace Kitchen
 
         private void Start()
         {
-            goalText.text = levelInstantiator.LevelData.goal.ToString();
+            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            currentGoal = levelInstantiator.LevelData.goal;
+            SetGoal();
+
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
 
             foreach (var star in stars)
                 star.color = Color.black;
-
         }
+
+        private void SetGoal()=>
+            goalText.text = currentGoal.ToString();
 
         private IEnumerator LevelTimer()
         {
@@ -40,9 +47,31 @@ namespace Kitchen
             {
                 currentTime--;
                 speedText.text = string.Format("{0:0}:{1:00}", (currentTime / 60) % 60, currentTime % 60);
+
+
+                if (currentTime < 10)
+                    speedText.color = Color.red;
+                else if (currentTime < 30)
+                    speedText.color = Color.yellow;
+
                 yield return wait;
+
             }
             yield return null;
+        }
+
+        private void HandleClientServed()
+        {
+            currentGoal--;
+            SetGoal();
+
+            if (currentGoal <= 0)
+            {
+                stars[0].color = Color.white;
+
+                if (currentTime > 0)
+                    stars[1].color = Color.white;
+            }
         }
     }
 
