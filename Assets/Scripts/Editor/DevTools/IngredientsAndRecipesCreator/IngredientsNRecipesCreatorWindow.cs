@@ -257,6 +257,9 @@ namespace DevTools
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfMortars"), new GUIContent("Mortars Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfStoves"), new GUIContent("Stoves Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPainKillers"), new GUIContent("Painkillers Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("time"), new GUIContent("Level Time"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("goal"), new GUIContent("Goal"));
+                        EditorGUILayout.Space(10f);
 
                         for (int j=0; j< currentObject.FindProperty("levelRecipes").arraySize ; j++)
                         {
