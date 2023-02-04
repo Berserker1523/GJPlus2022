@@ -1,3 +1,4 @@
+using Events;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -68,7 +69,7 @@ namespace Kitchen
             PotionIngredient potionIngredient = new(ingredientData, usedCookingTool);
             potionIngredients.Add(potionIngredient);
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
+            EventManager.Dispatch(PotionEvent.AddIngredient);
         }
 
 
@@ -109,13 +110,14 @@ namespace Kitchen
                 return;
 
             anim.SetBool("Shake", true);
-            //Invoke Mix SFX event.
+            EventManager.Dispatch(PotionEvent.Shake);
         }
 
         //This method must be called with an animation Event at the end of Shaking Animation
         public void EndAShakingnimationEvent()
         {
             anim.SetBool("Shake", false);
+            EventManager.Dispatch(PotionEvent.Poof);
             CheckRecipe();
         }
     }

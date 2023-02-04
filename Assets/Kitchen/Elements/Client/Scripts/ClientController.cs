@@ -27,7 +27,7 @@ namespace Kitchen
         {
             waitingTimer = MaxWaitingSeconds;
             slider.value = 1;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Llega Cliente");
+            EventManager.Dispatch(ClientEvent.Arrived);
         }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
@@ -56,7 +56,6 @@ namespace Kitchen
             {
                 Instantiate(treePrefab, transform.parent);
                 Destroy(gameObject);
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
                 EventManager.Dispatch(ClientEvent.Died);
             }
         }
@@ -94,7 +93,6 @@ namespace Kitchen
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
             Destroy(gameObject);
         }
 
