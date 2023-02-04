@@ -33,6 +33,9 @@ namespace Kitchen
             InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.MortarsUpgrades);
             InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.KitchenUpgrades);
             InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.PainkillerUpgrades);
+
+            new GameObject("SoundsManager").AddComponent<SoundsManager>();
+            
         }
 
         private void InstantiatePotions(int quantity)
