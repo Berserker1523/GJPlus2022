@@ -1,3 +1,4 @@
+using Events;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -23,12 +24,17 @@ namespace Kitchen
 
         public RecipeData CurrentRecipe;
 
+        public Timer timer;
+
         private void Awake()=>      
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
 
-        private void Start()=>        
+        private void Start()
+        {
            anim = GetComponent<Animator>();
-        
+           timer = GetComponentInChildren<Timer>();
+        }
+
 
         public void OnDrop(PointerEventData pointerEventData)
         {
@@ -110,6 +116,8 @@ namespace Kitchen
 
             anim.SetBool("Shake", true);
             //Invoke Mix SFX event.
+            
+            timer.StartTimer(2f);
         }
 
         //This method must be called with an animation Event at the end of Shaking Animation
