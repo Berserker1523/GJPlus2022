@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Events;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Kitchen
@@ -43,7 +44,7 @@ namespace Kitchen
             {
                 CurrentCookingIngredient.state = IngredientState.Cooked;
                 spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveCookedSprite : CurrentCookingIngredient.data.mortarCrushedSprite;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista");
+                EventManager.Dispatch(IngredientState.Cooked);
                 if (cookingToolData.cookingToolName == CookingToolName.Mortar)
                     cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 else
@@ -53,7 +54,7 @@ namespace Kitchen
             {
                 CurrentCookingIngredient.state = IngredientState.Burnt;
                 spriteRenderer.sprite = CurrentCookingIngredient.data.stoveBurntSprite;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Quemada");
+                EventManager.Dispatch(IngredientState.Burnt);
                 cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
