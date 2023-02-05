@@ -1,7 +1,9 @@
 using Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
 using TMPro;
+using UnityEngine.Localization.Components;
 
 namespace Kitchen
 {
@@ -11,7 +13,7 @@ namespace Kitchen
         [SerializeField] private GameObject continueButton;
         [SerializeField] string mainMenuSceneName = "MainMenu";
         [SerializeField] string kitchenScene = "Kitchen";
-        [SerializeField] TextMeshProUGUI victoryDefeatText;
+        [SerializeField] LocalizeStringEvent victoryDefeatText;
 
         private int currentLevel;
 
@@ -36,7 +38,7 @@ namespace Kitchen
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
                 SceneManager.LoadScene("Credits", LoadSceneMode.Single);
-                victoryDefeatText.text = "Victory";
+                victoryDefeatText.SetEntry ( "Title_VictoryText");
             }
             else
                 LevelManager.CurrentLevel++;
@@ -47,7 +49,7 @@ namespace Kitchen
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Jugabilidad/Pierde Nivel");
             gameObject.SetActive(true);
             continueButton.SetActive(false);
-            victoryDefeatText.text = "Defeat";
+            victoryDefeatText.SetEntry("Title_DefeatText");
         }
 
         private void Start()
