@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Appendicitis
   m_EditorClassIdentifier: 
   name: Appendicitis
-  disease: 3
+  disease: 8
   sprite: {fileID: 0}

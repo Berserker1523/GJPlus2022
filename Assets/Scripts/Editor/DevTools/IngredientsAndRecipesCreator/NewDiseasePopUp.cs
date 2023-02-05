@@ -56,6 +56,7 @@ public class NewDiseasePopUp : AbstractNewAssetPopUP<DiseaseName>
         {
             DiseaseData SO = (DiseaseData)ScriptableObject.CreateInstance(typeof(DiseaseData));
             SO.disease = (DiseaseName)Enum.Parse(typeof(DiseaseName), m_DiseaseName.stringValue);
+            SO.name = m_DiseaseName.stringValue;
             SO.sprite = (Sprite)m_sprite.objectReferenceValue;
 
             string scriptSOFolder = IngredientsNRecipesCreatorWindow.DiseasesSOPath;
@@ -76,12 +77,12 @@ public class NewDiseasePopUp : AbstractNewAssetPopUP<DiseaseName>
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("namespace Kitchen");
         sb.AppendLine("{");
+        sb.AppendLine("    [System.Flags]");
         sb.AppendLine("    public enum DiseaseName");
         sb.AppendLine("    {");
-        sb.Append("        ");
-        foreach (var disease in enumValues)
-            sb.Append(disease + ", ");
-        sb.AppendLine(m_DiseaseName.stringValue);
+        for(int i=0; i<enumValues.Length; i++)
+            sb.AppendLine("        " + enumValues[i] + " = (1 << "+ i + "), ");
+        sb.AppendLine("        " + m_DiseaseName.stringValue + " = (1 << " + (enumValues.Length+1) + ")");
         sb.AppendLine("    }");
         sb.AppendLine("}");
 

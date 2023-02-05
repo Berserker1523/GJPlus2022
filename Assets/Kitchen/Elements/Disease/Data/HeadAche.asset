@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HeadAche
   m_EditorClassIdentifier: 
   name: HeadAche
-  disease: 0
+  disease: 1
   sprite: {fileID: 0}
