@@ -18,12 +18,16 @@ namespace Kitchen
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
 
+        public Timer timer;
+
         private void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             dragView = GetComponent<DragView>();
             initialSprite = spriteRenderer.sprite;
             dragView.OnDropped += HandleDropped;
+
+            timer = GetComponentInChildren<Timer>();
         }
 
         private void OnDestroy() =>
@@ -42,6 +46,8 @@ namespace Kitchen
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Comida Lista");
                 if (cookingToolData.cookingToolName == CookingToolName.Mortar)
                     cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                else
+                    timer.StartRedTimer(cookingToolData.burningSeconds);
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)
             {
@@ -66,6 +72,7 @@ namespace Kitchen
             CurrentCookingIngredient = new(ingredientController.IngredientData);
             spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveRawSprite : CurrentCookingIngredient.data.mortarRawSprite;
             PlayCookingSound();
+            timer.StartTimer(cookingToolData.cookingSeconds); 
         }
 
         private void PlayCookingSound()
