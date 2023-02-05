@@ -24,6 +24,8 @@ namespace Kitchen
         private int clientsDied;
         private int clientsGood;
 
+        private bool lastClientSpawned;
+
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
@@ -65,6 +67,7 @@ namespace Kitchen
             client.Initialize(levelInstantiator.LevelData.levelRecipes[recipeNumber], levelInstantiator.LevelData.levelRecipes[recipeNumber].sprite);
             SetRandomNextSpawnTime();
             clientsSpawned += 1;
+            Debug.Log(clientsSpawned);
         }
 
         private int SetRandomRecipe(int randomNum)
@@ -97,7 +100,9 @@ namespace Kitchen
             clientsDied++;
             if (clientsDied >= 5) //TODO Burned Variable
                 EventManager.Dispatch(GameStatus.Lost);
-            else if (clientsSpawned >= levelInstantiator.LevelData.clientNumber)
+
+            //Call Victory if no more clients will arrive
+            else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
         }
 
