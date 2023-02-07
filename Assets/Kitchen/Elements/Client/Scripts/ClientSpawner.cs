@@ -98,9 +98,8 @@ namespace Kitchen
         private void HandleClientDied()
         {
             clientsDied++;
-            if (clientsDied >= 5) //TODO Burned Variable
+            if (clientsDied >= spawnPoints.Count)
                 EventManager.Dispatch(GameStatus.Lost);
-
             //Call Victory if no more clients will arrive
             else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);

@@ -1,8 +1,10 @@
 using Events;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static Kitchen.RecipeData;
 
 namespace Kitchen
 {
@@ -14,6 +16,8 @@ namespace Kitchen
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;
         [SerializeField] private Image potionImage;
+        [SerializeField] private List<Image> ingredientsImages;
+        [SerializeField] private List<Image> cookingToolsImages;
         [SerializeField] private GameObject treePrefab;
 
         private SpriteRenderer clientSpriteRend;
@@ -25,6 +29,7 @@ namespace Kitchen
 
         protected void Awake()
         {
+            clientSpriteRend = GetComponent<SpriteRenderer>();
             waitingTimer = MaxWaitingSeconds;
             slider.value = 1;
             EventManager.Dispatch(ClientEvent.Arrived);
@@ -34,7 +39,25 @@ namespace Kitchen
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
-            clientSpriteRend = GetComponent<SpriteRenderer>();
+
+            int i = 0;
+            while(i < requiredRecipe.ingredients.Length)
+            {
+                ingredientsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.rawSprite;
+                if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Mortar)
+                    cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.mortarRawSprite;
+                else if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
+                    cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.stoveRawSprite;
+                else
+                    cookingToolsImages[i].enabled = false;
+                i++;
+            }
+
+            for(; i < ingredientsImages.Count; i++)
+            {
+                ingredientsImages[i].enabled = false;
+                cookingToolsImages[i].enabled = false;
+            }
         }
 
         private void Update()
