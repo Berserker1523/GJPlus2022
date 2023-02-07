@@ -58,6 +58,8 @@ namespace Kitchen
                 ingredientsImages[i].enabled = false;
                 cookingToolsImages[i].enabled = false;
             }
+            if(requiredRecipe.clientSprite !=null)
+                clientSpriteRend.sprite = requiredRecipe.clientSprite;
         }
 
         private void Update()

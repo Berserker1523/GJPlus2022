@@ -17,7 +17,7 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
     protected override string enumFile => "RecipeName.cs";
 
     static SerializedProperty m_RecipeName = null;
-    static SerializedProperty m_Disease = null;
+   // static SerializedProperty m_Disease = null;
     static SerializedProperty m_sprite = null;
 
     [SerializeField] DiseaseName diseasesItCures;
@@ -28,7 +28,7 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
     {
         base.OnEnable();
         m_RecipeName = so.FindProperty("name");
-        m_Disease = so.FindProperty("diseasesItCures");
+       // m_Disease = so.FindProperty("diseasesItCures");
         m_sprite = so.FindProperty("recipeSprite");
     }
 
@@ -36,7 +36,7 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
     protected override void DisplayProperties()
     {
         EditorGUILayout.PropertyField(m_RecipeName);
-        EditorGUILayout.PropertyField(m_Disease, new GUIContent("Disease(s) it cures"));
+      //  EditorGUILayout.PropertyField(m_Disease, new GUIContent("Disease(s) it cures"));
         EditorGUILayout.PropertyField(m_sprite, new GUIContent("Sprite"));
 
         if (GUILayout.Button("Create new Recipe", GUILayout.Height(30f)))
@@ -45,8 +45,8 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
                 warningLabel = "Recipe Name cannot be empty";
             else if (Array.Exists<string>(enumValues, element => element == m_RecipeName.stringValue))
                 warningLabel = "Recipe Name already exists";
-            else if (m_Disease.enumValueFlag == 0)
-                warningLabel = "Must Select At least One Disease"; 
+           /* else if (m_Disease.enumValueFlag == 0)
+                warningLabel = "Must Select At least One Disease"; */
             else if (m_sprite.objectReferenceValue == null)
                 warningLabel = "Must Set the recipe Sprite";
             else
@@ -64,7 +64,7 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
         {
             RecipeData SO = (RecipeData)ScriptableObject.CreateInstance(typeof(RecipeData));
             SO.recipeName = (RecipeName)Enum.Parse(typeof(RecipeName), m_RecipeName.stringValue);
-            SO.diseasesItCures = (DiseaseName)m_Disease.enumValueFlag;
+            //SO.diseasesItCures = (DiseaseName)m_Disease.enumValueFlag;
             SO.sprite = (Sprite)m_sprite.objectReferenceValue;
 
             string scriptSOFolder = IngredientsNRecipesCreatorWindow.RecipesSOPath;
@@ -75,7 +75,7 @@ public class NewRecipePopUp : AbstractNewAssetPopUP<RecipeName>
 
             so.Update();
             m_RecipeName.stringValue = null;
-            m_Disease.enumValueFlag = 0;
+           // m_Disease.enumValueFlag = 0;
             m_sprite.objectReferenceValue=null;
             so.ApplyModifiedProperties();
         }

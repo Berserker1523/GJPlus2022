@@ -10,7 +10,7 @@ namespace DevTools
 {
     public class IngredientsNRecipesCreatorWindow : EditorWindow
     {
-        string[] tabs = { "Ingredients", "Recipes", "Diseases", "Levels" };
+        string[] tabs = { "Ingredients", "Recipes", "Levels" };
         int selectedTab = 0;
 
         [SerializeField] List<IngredientData> ingredients = new List<IngredientData>();
@@ -62,11 +62,11 @@ namespace DevTools
                     Recipes();
                     break;
                 case 2:
-                    Diseases();
-                    break;
-                case 3:
                     Levels();
                     break;
+                /*case 2:
+                    Diseases();
+                    break;*/
             }
 
             EditorGUILayout.EndScrollView();
@@ -176,8 +176,9 @@ namespace DevTools
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     ingredientsBools[i] = EditorGUILayout.Foldout(recipesBools[i], Enum.GetName(typeof(RecipeName), currentObject.FindProperty("recipeName").enumValueFlag));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("recipeName"), new GUIContent("Recipe Name"));
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
+                    //EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"));
+                    EditorGUILayout.PropertyField(currentObject.FindProperty("clientSprite"), new GUIContent("Sick Client Sprite"));
 
                     SerializedProperty ingredients = currentObject.FindProperty("ingredients");
                     SerializedProperty array = currentObject.FindProperty("popUp");
@@ -314,7 +315,7 @@ namespace DevTools
 
         }
 
-        void Diseases()
+       /* void Diseases()
         {
             if (diseasesBools.Length != diseases.Count)
                 diseasesBools = UpdateList(diseases.Count);
@@ -348,7 +349,7 @@ namespace DevTools
             if (GUILayout.Button("Create new Disease", GUILayout.Height(30f)))
                 GetWindow<NewDiseasePopUp>("Create New Disease");
 
-        }
+        }*/
 
         List<T> GetAssetsList<T>(string folder) where T : ScriptableObject
         {
