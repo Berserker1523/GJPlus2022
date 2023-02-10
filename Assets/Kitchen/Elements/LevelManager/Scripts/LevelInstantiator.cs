@@ -29,11 +29,7 @@ namespace Kitchen
 
         private void Awake()
         {
-            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.MedicineUpgrades);
-            InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.MortarsUpgrades);
-            InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.KitchenUpgrades);
-            InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.PainkillerUpgrades);
-
+           
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
             
         }
@@ -69,5 +65,17 @@ namespace Kitchen
             for (int i = 0; i < painkillersPositions.Count && i < quantity; i++)
                 Instantiate(painkillerPrefab, painkillersPositions[i]);
         }
+
+        public void SetLevelData(LevelData newlevelData)
+        {
+            levelData = newlevelData;
+
+            InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.MedicineUpgrades);
+            InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.MortarsUpgrades);
+            InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.KitchenUpgrades);
+            InstantiatePainKillers(levelData.minNumberOfPainKillers + UpgradesManager.PainkillerUpgrades);
+
+        }
+
     }
 }

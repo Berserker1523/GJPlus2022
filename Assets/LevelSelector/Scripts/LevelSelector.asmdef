@@ -1,0 +1,16 @@
+{
+    "name": "LevelSelector",
+    "rootNamespace": "",
+    "references": [
+        "GUID:66ab0eca08ad1aa498974d87b69fa7d3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

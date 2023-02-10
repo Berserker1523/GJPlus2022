@@ -26,7 +26,9 @@ namespace Kitchen
 
         [Header("Recipes")]
         public List<RecipeData> levelRecipes = new List<RecipeData>();
-        public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();        
+        public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();       
+        
+        public bool[] stars = new bool[3];
     }
 
     public enum RecipePercentage

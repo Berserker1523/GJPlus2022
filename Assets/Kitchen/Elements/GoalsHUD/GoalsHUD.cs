@@ -1,4 +1,5 @@
 using Events;
+using log4net.Core;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -31,8 +32,11 @@ namespace Kitchen
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
 
-            foreach (var star in stars)
-                star.color = Color.black;
+            for (int i = 0; i < stars.Length; i++)
+            {
+                if (!levelInstantiator.LevelData.stars[i])
+                    stars[i].color = Color.black;
+            }
         }
 
         private void SetGoal()=>
@@ -65,12 +69,18 @@ namespace Kitchen
             currentGoal--;
             SetGoal();
 
+            //Goal Star
             if (currentGoal <= 0)
             {
                 stars[0].color = Color.white;
+                levelInstantiator.LevelData.stars[0] = true;
 
+                //Time Star
                 if (currentTime > 0)
+                {
                     stars[1].color = Color.white;
+                    levelInstantiator.LevelData.stars[1] = true;
+                }
             }
         }
     }
