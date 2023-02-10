@@ -10,18 +10,21 @@ namespace DevTools
 {
     public class IngredientsNRecipesCreatorWindow : EditorWindow
     {
-        string[] tabs = { "Ingredients", "Recipes", "Illnesses", "Levels" };
+        string[] tabs = { "Ingredients", "Recipes", "Levels" };
         int selectedTab = 0;
 
         [SerializeField] List<IngredientData> ingredients = new List<IngredientData>();
         [SerializeField] List<RecipeData> recipes = new List<RecipeData>();
+        [SerializeField] List<DiseaseData> diseases = new List<DiseaseData>();
         [SerializeField] List<LevelData> levels = new List<LevelData>();
 
         protected SerializedProperty m_list = null;
         protected SerializedProperty r_list = null;
+        protected SerializedProperty d_list = null;
         protected SerializedProperty l_list = null;
         protected bool[] ingredientsBools;
         protected bool[] recipesBools;
+        protected bool[] diseasesBools;
         protected bool[] levelsBools;
 
         protected Vector2 scrollPos = Vector2.zero;
@@ -31,6 +34,7 @@ namespace DevTools
 
         public static string IngredientsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Ingredient", "Data");
         public static string RecipesSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Recipe", "Data");
+        public static string DiseasesSOPath = Path.Combine("Assets", "Kitchen", "Elements", "Disease", "Data");
         public static string LevelsSOPath = Path.Combine("Assets", "Kitchen", "Elements", "LevelManager", "Data");
 
         protected GUIStyle style = new GUIStyle();
@@ -57,9 +61,12 @@ namespace DevTools
                 case 1:
                     Recipes();
                     break;
-                case 3:
+                case 2:
                     Levels();
                     break;
+                /*case 2:
+                    Diseases();
+                    break;*/
             }
 
             EditorGUILayout.EndScrollView();
@@ -72,18 +79,22 @@ namespace DevTools
             so = new SerializedObject(target);
             m_list = so.FindProperty("ingredients");
             r_list = so.FindProperty("recipes");
+            d_list = so.FindProperty("diseases");
             l_list = so.FindProperty("levels");
 
             ingredientsBools = UpdateList(ingredients.Count);
             recipesBools = UpdateList(recipes.Count);
+            diseasesBools = UpdateList(diseases.Count);
             levelsBools = UpdateList(levels.Count);
 
             ingredients = GetAssetsList<IngredientData>(IngredientsSOPath);
             recipes = GetAssetsList<RecipeData>(RecipesSOPath);
+            diseases = GetAssetsList<DiseaseData>(DiseasesSOPath);
             levels = GetAssetsList<LevelData>(LevelsSOPath);
 
             RecipeData.assetsChanged += UpdateAll;
             IngredientData.assetsChanged += UpdateAll;
+            DiseaseData.assetsChanged += UpdateAll;
             LevelData.assetsChanged += UpdateAll;
 
             style.normal.textColor = Color.red;
@@ -165,8 +176,9 @@ namespace DevTools
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     ingredientsBools[i] = EditorGUILayout.Foldout(recipesBools[i], Enum.GetName(typeof(RecipeName), currentObject.FindProperty("recipeName").enumValueFlag));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("recipeName"), new GUIContent("Recipe Name"));
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
+                    //EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"));
+                    EditorGUILayout.PropertyField(currentObject.FindProperty("clientSprite"), new GUIContent("Sick Client Sprite"));
 
                     SerializedProperty ingredients = currentObject.FindProperty("ingredients");
                     SerializedProperty array = currentObject.FindProperty("popUp");
@@ -257,6 +269,9 @@ namespace DevTools
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfMortars"), new GUIContent("Mortars Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfStoves"), new GUIContent("Stoves Amount"));
                         EditorGUILayout.PropertyField(currentObject.FindProperty("minNumberOfPainKillers"), new GUIContent("Painkillers Amount"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("time"), new GUIContent("Level Time"));
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("goal"), new GUIContent("Goal"));
+                        EditorGUILayout.Space(10f);
 
                         for (int j=0; j< currentObject.FindProperty("levelRecipes").arraySize ; j++)
                         {
@@ -299,6 +314,42 @@ namespace DevTools
             }
 
         }
+
+       /* void Diseases()
+        {
+            if (diseasesBools.Length != diseases.Count)
+                diseasesBools = UpdateList(diseases.Count);
+            for (int i = 0; i < diseases.Count; i++)
+            {
+                if (d_list.GetArrayElementAtIndex(i).objectReferenceValue != null)
+                {
+                    SerializedObject currentObject = new SerializedObject(d_list.GetArrayElementAtIndex(i).objectReferenceValue);
+                    currentObject.Update();
+                    EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
+                    diseasesBools[i] = EditorGUILayout.Foldout(diseasesBools[i], currentObject.FindProperty("name").stringValue);
+
+
+                    if (diseasesBools[i])
+                    {
+                        SerializedProperty disease = currentObject.FindProperty(nameof(DiseaseData.disease));
+                        disease.enumValueIndex = EditorGUILayout.Popup("Disease", disease.enumValueIndex, Enum.GetNames(typeof(DiseaseName)));
+
+                        EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"), new GUIContent("Aldean Sprite"));
+                    }
+
+                    EditorGUILayout.EndVertical();
+                    EditorGUILayout.Space(10f);
+                    currentObject.ApplyModifiedProperties();
+                }
+                else if (Event.current.type != EventType.Layout)
+                    UpdateAll();
+
+            }
+
+            if (GUILayout.Button("Create new Disease", GUILayout.Height(30f)))
+                GetWindow<NewDiseasePopUp>("Create New Disease");
+
+        }*/
 
         List<T> GetAssetsList<T>(string folder) where T : ScriptableObject
         {

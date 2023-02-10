@@ -1,7 +1,10 @@
 using Events;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static Kitchen.RecipeData;
 
 namespace Kitchen
 {
@@ -13,26 +16,57 @@ namespace Kitchen
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;
         [SerializeField] private Image potionImage;
+        [SerializeField] private List<Image> ingredientsImages;
+        [SerializeField] private List<Image> cookingToolsImages;
         [SerializeField] private GameObject treePrefab;
 
+        private SpriteRenderer clientSpriteRend;
+        [SerializeField] private Sprite happyClientSprite;
+
+        private bool clientServed =false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
 
         protected void Awake()
         {
+            clientSpriteRend = GetComponent<SpriteRenderer>();
             waitingTimer = MaxWaitingSeconds;
             slider.value = 1;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Llega Cliente");
+            EventManager.Dispatch(ClientEvent.Arrived);
         }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
+
+            int i = 0;
+            while(i < requiredRecipe.ingredients.Length)
+            {
+                ingredientsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.rawSprite;
+                if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Mortar)
+                    cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.mortarRawSprite;
+                else if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
+                    cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.stoveRawSprite;
+                else
+                    cookingToolsImages[i].enabled = false;
+                i++;
+            }
+
+            for(; i < ingredientsImages.Count; i++)
+            {
+                ingredientsImages[i].enabled = false;
+                cookingToolsImages[i].enabled = false;
+            }
+            if(requiredRecipe.clientSprite !=null)
+                clientSpriteRend.sprite = requiredRecipe.clientSprite;
         }
 
         private void Update()
         {
+            if (clientServed)
+                return;
+
             waitingTimer -= Time.deltaTime;
             slider.value = waitingTimer / MaxWaitingSeconds;
 
@@ -47,14 +81,13 @@ namespace Kitchen
             {
                 Instantiate(treePrefab, transform.parent);
                 Destroy(gameObject);
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Muere Cliente");
                 EventManager.Dispatch(ClientEvent.Died);
             }
         }
 
         public void OnDrop(PointerEventData pointerEventData)
         {
-            pointerEventData.pointerDrag.TryGetComponent(out PotionController potionController);
+            pointerEventData.pointerDrag.TryGetComponent(out PotionResultController potionController);
             pointerEventData.pointerDrag.TryGetComponent(out PainkillerController painkillerController);
 
             if (painkillerController != null)
@@ -74,12 +107,23 @@ namespace Kitchen
 
             potionController.Release();
             AddMoney();
+            StartCoroutine(ClientServedRoutine());
+        }
+
+        public IEnumerator ClientServedRoutine()
+        {
+            //Display Happy Animation Here!
+            clientServed = true;
+            clientSpriteRend.sprite = happyClientSprite;
             EventManager.Dispatch(ClientEvent.Served);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Clientes/Atiende cliente");
+            yield return new WaitForSeconds(3f);
+
             Destroy(gameObject);
         }
 
         private void AddMoney() =>
             MoneyManager.Money += (int)(MaxWaitingSeconds * waitingTimer / MaxWaitingSeconds) + 10; //TODO Burned Variable
     }
+
+
 }

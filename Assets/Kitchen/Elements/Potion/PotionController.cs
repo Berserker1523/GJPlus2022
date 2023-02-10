@@ -1,3 +1,4 @@
+using Events;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -5,43 +6,37 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    [RequireComponent(typeof(DragView))]
-    public class PotionController : MonoBehaviour, IReleaseable
+ 
+    [RequireComponent(typeof(Animator))]
+    public class PotionController : MonoBehaviour, IDropHandler
     {
         public const int MaxAllowedIngredients = 3;
 
         [SerializeField] private Sprite failedPotionSkin;
         [SerializeField] private Sprite defaultPotionSkin;
         [SerializeField] private SpriteRenderer spriteRenderer;
-        [SerializeField] private SpriteRenderer resultSprite;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
+        [SerializeField] private PotionResultController potionResult;
 
+        [SerializeField] private Animator anim;
         private LevelInstantiator levelInstantiator;
+        public readonly List<PotionIngredient> potionIngredients = new();
 
-        private DragView dragView;
+        public RecipeData CurrentRecipe;
 
-        private readonly List<PotionIngredient> potionIngredients = new();
+        public Timer timer;
 
-        public RecipeData CurrentRecipe { get; private set; }
-
-        private void Awake()
-        {
+        private void Awake()=>      
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
-            dragView = GetComponent<DragView>();
-            dragView.OnDropped += HandleDropped;
-        }
 
         private void Start()
         {
-            resultSprite.enabled= false;
+           anim = GetComponent<Animator>();
+           timer = GetComponentInChildren<Timer>();
         }
 
-        private void OnDestroy()
-        {
-            dragView.OnDropped -= HandleDropped;
-        }
 
-        public void HandleDropped(PointerEventData pointerEventData)
+        public void OnDrop(PointerEventData pointerEventData)
         {
             if (potionIngredients.Count == MaxAllowedIngredients)
                 return;
@@ -59,7 +54,7 @@ namespace Kitchen
             }
         }
 
-        private void HandleCookingToolReceived(CookingToolController cookingToolController)
+        public void HandleCookingToolReceived(CookingToolController cookingToolController)
         {
             if (cookingToolController.CurrentCookingIngredient.state != IngredientState.Cooked)
                 return;
@@ -67,7 +62,7 @@ namespace Kitchen
             cookingToolController.Release();
         }
 
-        private void HandleIngredientReceived(IngredientController ingredientController)
+        public void HandleIngredientReceived(IngredientController ingredientController)
         {
             if (ingredientController.IngredientData.necessaryCookingTool != CookingToolName.None)
                 return;
@@ -79,20 +74,13 @@ namespace Kitchen
             PotionIngredient potionIngredient = new(ingredientData, usedCookingTool);
             potionIngredients.Add(potionIngredient);
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Infusión");
-
-          /*  if (potionIngredients.Count == MaxAllowedIngredients)
-                CheckRecipe();*/
+            EventManager.Dispatch(PotionEvent.AddIngredient);
         }
 
 
         private void CheckRecipe()
-        {
-            if (CurrentRecipe != null)
-                return;
-
+        {  
             List<PotionIngredient> recipeIngredients = new();
-            resultSprite.enabled = true;
 
             foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
             {
@@ -104,18 +92,18 @@ namespace Kitchen
                     continue;
 
                 CurrentRecipe = recipe;
-                resultSprite.sprite = recipe.sprite;
+                potionResult.SetPotion(CurrentRecipe, recipe.sprite);
+                ClearShaker();
                 return;
             }
-
-            resultSprite.sprite = failedPotionSkin;
+            potionResult.SetPotion(CurrentRecipe, failedPotionSkin);
+            ClearShaker();
         }
 
-        public void Release()
+        public void ClearShaker()
         {
             potionIngredients.Clear();
             CurrentRecipe = null;
-            resultSprite.enabled = false;
             // spriteRenderer.sprite = defaultPotionSkin;
             foreach (SpriteRenderer renderer in potionBranchesSprites)
                 renderer.sprite = null;
@@ -123,8 +111,20 @@ namespace Kitchen
 
         public void OnMouseDown()
         {
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count == 0)
+                return;
+
+            anim.SetBool("Shake", true);
+            EventManager.Dispatch(PotionEvent.Shake);
+            timer.StartTimer(2f);
+        }
+
+        //This method must be called with an animation Event at the end of Shaking Animation
+        public void EndAShakingnimationEvent()
+        {
+            anim.SetBool("Shake", false);
+            EventManager.Dispatch(PotionEvent.Poof);
             CheckRecipe();
-            //Invoke Mix SFX event.
         }
     }
 }

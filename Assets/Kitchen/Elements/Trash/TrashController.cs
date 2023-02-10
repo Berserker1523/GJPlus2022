@@ -1,3 +1,4 @@
+using Events;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +13,7 @@ namespace Kitchen
                 return;
 
             releaseable.Release();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Trash");
+            EventManager.Dispatch(TrashEvent.Throw);
         }
     }
 }

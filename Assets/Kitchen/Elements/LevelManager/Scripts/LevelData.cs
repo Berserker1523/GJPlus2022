@@ -19,6 +19,11 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfMortars;
         [Range(1, 4)] public int minNumberOfStoves;
         [Range(1, 4)] public int minNumberOfPainKillers;
+
+        [Header("LevelGoals")]
+        [Range(1, 200)] public int time =200;
+        [Range(1, 200)] public int goal =5;
+
         [Header("Recipes")]
         public List<RecipeData> levelRecipes = new List<RecipeData>();
         public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();        

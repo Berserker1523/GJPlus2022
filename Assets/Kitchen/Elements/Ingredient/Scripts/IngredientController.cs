@@ -1,3 +1,4 @@
+using Events;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -25,8 +26,7 @@ namespace Kitchen
 
         private void HandleDragBegan(PointerEventData _)
         {
-            if (ingredientData.ingredientName == IngredientName.Water)
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cocina/Coge Agua");
+            EventManager.Dispatch(IngredientData.ingredientName);
         }
     }
 }
