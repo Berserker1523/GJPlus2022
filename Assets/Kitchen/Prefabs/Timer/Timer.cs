@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kitchen
@@ -18,7 +17,12 @@ namespace Kitchen
             SwitchTimerVisibility(false);
         }
 
-        public void StartTimer(float seconds) => StartCoroutine(StartTimerCoroutine(seconds));
+        public void StartBlueTimer(float seconds)
+        {
+            radiusFill.color = Color.cyan;
+            timerShader.SetFloat("_Arc1", 0f);
+            StartCoroutine(StartTimerCoroutine(seconds));
+        }
 
         public void StartRedTimer(float seconds)
         {
@@ -37,13 +41,21 @@ namespace Kitchen
                timerShader.SetFloat("_Arc1", timerShader.GetFloat("_Arc1") + FillAmountPerInterval);
                yield return new WaitForSeconds(0.1f);
             }
-            SwitchTimerVisibility(false);
+
+            StopTimer();
        }
 
         void SwitchTimerVisibility(bool display)
         {
             radiusFill.enabled = display;
             background.enabled = display;
+        }
+
+        public void StopTimer()
+        {
+            SwitchTimerVisibility(false);
+            StopAllCoroutines();
+            timerShader.SetFloat("_Arc1", 0f);
         }
     }
 }

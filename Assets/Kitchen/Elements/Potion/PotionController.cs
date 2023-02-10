@@ -8,7 +8,7 @@ namespace Kitchen
 {
  
     [RequireComponent(typeof(Animator))]
-    public class PotionController : MonoBehaviour, IDropHandler
+    public class PotionController : MonoBehaviour, IDropHandler, IPointerDownHandler
     {
         public const int MaxAllowedIngredients = 3;
 
@@ -109,22 +109,22 @@ namespace Kitchen
                 renderer.sprite = null;
         }
 
-        public void OnMouseDown()
-        {
-            if (potionResult.CurrentRecipe != null || potionIngredients.Count == 0)
-                return;
-
-            anim.SetBool("Shake", true);
-            EventManager.Dispatch(PotionEvent.Shake);
-            timer.StartTimer(2f);
-        }
-
         //This method must be called with an animation Event at the end of Shaking Animation
         public void EndAShakingnimationEvent()
         {
             anim.SetBool("Shake", false);
             EventManager.Dispatch(PotionEvent.Poof);
             CheckRecipe();
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count == 0)
+                return;
+
+            anim.SetBool("Shake", true);
+            EventManager.Dispatch(PotionEvent.Shake);
+            timer.StartBlueTimer(2f);
         }
     }
 }
