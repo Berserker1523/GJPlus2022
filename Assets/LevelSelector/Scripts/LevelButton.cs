@@ -13,10 +13,16 @@ namespace LevelSelector
         [SerializeField] public LevelData level;
         [SerializeField] SpriteRenderer[] stars;
         [SerializeField] public TextMesh text;
+        [SerializeField] PregamePopUp pregamePopUP;
+        [SerializeField] CircleCollider2D circleCollider;
 
         private void Awake()
         {
             stars =  transform.GetChild(0).GetComponentsInChildren<SpriteRenderer>();
+            pregamePopUP = FindObjectOfType<PregamePopUp>(); 
+            circleCollider= GetComponent<CircleCollider2D>(); 
+
+            pregamePopUP.popUpEnabled+= SwitchButtonsActivation;
         }
         private void Start()
         {
@@ -27,24 +33,15 @@ namespace LevelSelector
             }
         }
 
-        public void OnMouseDown()
-        {
-            SceneManager.LoadScene("Kitchen1");
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
+        private void SwitchButtonsActivation(bool activated)=>
+            circleCollider.enabled= !activated;
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            GameObject[] gameObjects = scene.GetRootGameObjects();
-            foreach (GameObject gameObject in gameObjects)
-            {
-                if (gameObject.GetComponent<LevelInstantiator>() != null)
-                {
-                    gameObject.GetComponent<LevelInstantiator>().SetLevelData(level);
-                    break;
-                }
-            }
-        }
+        public void OnMouseDown()=>   
+            pregamePopUP.EnablePopUP(level, text.text) ;
+        
 
+        public void OnMouseUp()=>     
+            pregamePopUP.EnablePlayButton();
+        
     }
 }
