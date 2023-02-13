@@ -37,7 +37,7 @@ namespace LevelSelector
             circleCollider.enabled= !activated;
 
         public void OnMouseDown()=>   
-            pregamePopUP.EnablePopUP(level, text.text) ;
+            pregamePopUP.EnablePopUP(level) ;
         
 
         public void OnMouseUp()=>     

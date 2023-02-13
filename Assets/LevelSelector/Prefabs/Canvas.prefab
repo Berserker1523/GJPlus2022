@@ -196,6 +196,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2519024558350609631, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: localStringLevel.m_TableEntryReference.m_KeyId
+      value: 2986759481556992
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519024558350609631, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: localStringLevel.m_TableReference.m_TableCollectionName
+      value: GUID:69d786c88acdd364d99d064d633c7737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657333153638042937, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657333153638042937, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696439347924989752, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696439347924989752, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2986230894395392
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413224a9bef719645a482293e8f6ae07, type: 3}
 --- !u!224 &7982966392197847234 stripped

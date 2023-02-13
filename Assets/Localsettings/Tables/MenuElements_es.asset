@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 69d786c88acdd364d99d064d633c7737, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 326297980984098820
   m_TableData:
   - m_Id: 21591064576
     m_Localized: Victoria
@@ -54,6 +55,19 @@ MonoBehaviour:
     m_Localized: SFX
     m_Metadata:
       m_Items: []
+  - m_Id: 2986230894395392
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2986759481556992
+    m_Localized: Nivel {0}
+    m_Metadata:
+      m_Items:
+      - rid: 326297980984098820
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 326297980984098820
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0080ed21719c0a00

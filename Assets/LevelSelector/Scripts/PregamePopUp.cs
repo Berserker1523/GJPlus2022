@@ -1,12 +1,9 @@
 using Kitchen;
-using log4net.Core;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 namespace LevelSelector
 {
@@ -16,18 +13,29 @@ namespace LevelSelector
         public LevelData level;
         [SerializeField] public Image[] stars;
         public TextMeshProUGUI text;
+        [SerializeField] private LocalizedString localStringLevel;
         public UnityAction<bool> popUpEnabled;
         public UnityAction<bool> enablePlayButton;
-        private void Start()
-        {
+
+        private int levelNum;
+
+        private void Start()=>     
             gameObject.SetActive(false);
+        
+        private void OnEnable()
+        {
+            localStringLevel.Arguments = new object[] { levelNum };
+            localStringLevel.StringChanged += UpdateText;
         }
 
-        public void EnablePopUP(LevelData newLevel, string newText)
+        private void OnDisable()=>      
+            localStringLevel.StringChanged -= UpdateText;
+      
+        public void EnablePopUP(LevelData newLevel)
         {
             level = newLevel;
-            text.text = "Level "+ newText;
-            for (int i = 0; i < stars.Length; i++)
+            UpdateLevel();
+            for (int i = 0; i < stars.Length; i++) 
             {
                 if (!level.stars[i])
                     stars[i].color = Color.black;
@@ -45,9 +53,18 @@ namespace LevelSelector
             enablePlayButton?.Invoke(false);
         }
 
-        public void EnablePlayButton()
-        {
+        public void EnablePlayButton()=>     
             enablePlayButton?.Invoke(true);
+        
+        private void UpdateLevel()
+        {
+            levelNum = level.level;
+            localStringLevel.Arguments[0] = levelNum;
+            localStringLevel.RefreshString(); 
         }
+
+        private void UpdateText(string value)=>
+            text.text = value;
+        
     }
 }

@@ -465,6 +465,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 197749750056778022, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 197749750056778022, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788542534475629351, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788542534475629351, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2986230894395392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982966392197847232, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: localStringLevel.m_TableEntryReference.m_KeyId
+      value: 2986759481556992
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982966392197847232, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
+      propertyPath: localStringLevel.m_TableReference.m_TableCollectionName
+      value: GUID:69d786c88acdd364d99d064d633c7737
+      objectReference: {fileID: 0}
     - target: {fileID: 8645724788262964469, guid: 3a2103e45beea86429bec0bbb74eec5a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
