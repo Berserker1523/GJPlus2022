@@ -21,7 +21,7 @@ namespace Mainmenu
 
         public void PlayGame()
         {
-            SceneManager.LoadScene($"Kitchen{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+            SceneManager.LoadScene($"LevelSelector", LoadSceneMode.Single);
         }
 
         public void Options()
