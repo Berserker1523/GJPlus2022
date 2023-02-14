@@ -20,8 +20,11 @@ MonoBehaviour:
   minNumberOfMortars: 1
   minNumberOfStoves: 1
   minNumberOfPainKillers: 1
+  time: 200
+  goal: 5
   levelRecipes:
   - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
   - {fileID: 11400000, guid: 2db822341adc12e47acdf5d48df25e8a, type: 2}
   - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
   levelPercentages: 23000000370000000a000000
+  stars: 010100
