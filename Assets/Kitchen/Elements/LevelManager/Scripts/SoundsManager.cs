@@ -25,6 +25,9 @@ namespace Kitchen
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
         string lostEvent = "event:/SFX/Jugabilidad/Pierde Nivel";
 
+        //Main Menu Events
+        string playButtonEvent = "";
+
         //Note: Upgrades are deactivated in-game 
         string upgradeEvent = "event:/SFX/Jugabilidad/Upgrade";
 
@@ -48,6 +51,9 @@ namespace Kitchen
             //Game Status SFX
             Events.EventManager.AddListener(GameStatus.Won, PlayWonSFX);
             Events.EventManager.AddListener(GameStatus.Lost, PlayLostSFX);
+
+            //Main Menu SFX
+            Events.EventManager.AddListener(Events.GlobalEvent.Play, PlayplayButtonSFX);
         }
 
         void PlaySFX(string sFX) =>
@@ -70,6 +76,9 @@ namespace Kitchen
         //Game Status SFX
         void PlayWonSFX() => PlaySFX(wonEvent);
         void PlayLostSFX() => PlaySFX(lostEvent);
+
+        //Main Menu SFX
+        void PlayplayButtonSFX() => PlaySFX(playButtonEvent);
 
     }
 }

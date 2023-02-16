@@ -1,6 +1,8 @@
 using Kitchen;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Events;
+using System.Collections;
 
 namespace Mainmenu
 {
@@ -19,8 +21,14 @@ namespace Mainmenu
             settingsPanel.SetActive(false);
         }
 
-        public void PlayGame()
+        public void PlayGame()=>     
+          StartCoroutine(OpenKitchenScene());
+        
+
+        private IEnumerator OpenKitchenScene()
         {
+            EventManager.Dispatch(GlobalEvent.Play);
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene($"Kitchen{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         }
 
