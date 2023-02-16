@@ -31,7 +31,7 @@ namespace Kitchen
         {
            
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
-            
+            SetLevelData(levelData);
         }
 
         private void InstantiatePotions(int quantity)
