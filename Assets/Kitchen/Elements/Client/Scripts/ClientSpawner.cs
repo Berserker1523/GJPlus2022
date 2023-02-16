@@ -67,7 +67,6 @@ namespace Kitchen
             client.Initialize(levelInstantiator.LevelData.levelRecipes[recipeNumber], levelInstantiator.LevelData.levelRecipes[recipeNumber].sprite);
             SetRandomNextSpawnTime();
             clientsSpawned += 1;
-            Debug.Log(clientsSpawned);
         }
 
         private int SetRandomRecipe(int randomNum)
