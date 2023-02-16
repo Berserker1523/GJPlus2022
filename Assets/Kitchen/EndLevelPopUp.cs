@@ -32,15 +32,7 @@ namespace Kitchen
         private void HandleWon()
         {
             gameObject.SetActive(true);
-            if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
-            {
-                PlayerPrefs.DeleteAll();
-                LevelManager.CurrentLevel = 1;
-                SceneManager.LoadScene("Credits", LoadSceneMode.Single);
-                victoryDefeatText.SetEntry ( "Title_VictoryText");
-            }
-            else
-                LevelManager.CurrentLevel++;
+            victoryDefeatText.SetEntry("Title_VictoryText");
         }
 
         private void HandleLost()
@@ -59,6 +51,15 @@ namespace Kitchen
 
         public void NextLevel()
         {
+            if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
+            {
+                PlayerPrefs.DeleteAll();
+                LevelManager.CurrentLevel = 1;
+                SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+               
+            }
+            else
+                LevelManager.CurrentLevel++;
             SceneManager.LoadScene($"{kitchenScene}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         }
 

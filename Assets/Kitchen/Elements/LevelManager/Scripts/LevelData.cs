@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Events;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +30,42 @@ namespace Kitchen
         public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();       
         
         public bool[] stars = new bool[3];
+
+        private void OnEnable()
+        {
+            GameData gameData = SaveManager.LoadStarsData();
+
+            if(level == gameData.currentLevel)
+            {
+                for(int i=0; i<stars.Length; i++)
+                {
+                    stars[i] = gameData.stars[level-1, i];
+                    Debug.Log(gameData.stars[level-1, i]);
+
+                }
+            }
+            EventManager.AddListener(GoalEvent.Goal, SetGoalStar);
+            EventManager.AddListener(GoalEvent.Speed, SetSpeedStar);
+            EventManager.AddListener(GoalEvent.Streak, SetStreak);
+        }
+
+        public void SetGoalStar()
+        {
+            if (LevelManager.CurrentLevel == level)
+                stars[0] = true;
+        }
+
+        public void SetSpeedStar()
+        {
+            if (LevelManager.CurrentLevel == level)
+                stars[1] = true;
+        }
+
+        public void SetStreak()
+        {
+            if (LevelManager.CurrentLevel == level)
+                stars[2] = true;
+        }
     }
 
     public enum RecipePercentage

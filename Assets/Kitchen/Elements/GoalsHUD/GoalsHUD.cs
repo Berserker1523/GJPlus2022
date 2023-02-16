@@ -71,13 +71,13 @@ namespace Kitchen
             if (currentGoal <= 0)
             {
                 stars[0].color = Color.white;
-                levelInstantiator.LevelData.stars[0] = true;
+                EventManager.Dispatch(GoalEvent.Goal);
 
                 //Time Star
                 if (currentTime > 0)
                 {
                     stars[1].color = Color.white;
-                    levelInstantiator.LevelData.stars[1] = true;
+                    EventManager.Dispatch(GoalEvent.Speed);
                 }
             }
         }
