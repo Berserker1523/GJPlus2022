@@ -19,6 +19,7 @@ namespace Kitchen
         string addIngredientEvent = "event:/SFX/Cocina/Infusión";
         string shakeIngredientsEvent = "";
         string shakerPoofEvent = "";
+        string failedRecipeEvent = "";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
         //Game Status SFX Events
@@ -46,6 +47,7 @@ namespace Kitchen
             Events.EventManager.AddListener(IngredientState.Cooked, PlayFoodReadySFX);
             Events.EventManager.AddListener(IngredientState.Burnt, PlayFoodBurntSFX);
             Events.EventManager.AddListener(PotionEvent.AddIngredient, PlayAddIngredientSFX);
+            Events.EventManager.AddListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
             Events.EventManager.AddListener(TrashEvent.Throw, PlayThrowTrashSFX);
 
             //Game Status SFX
@@ -71,6 +73,7 @@ namespace Kitchen
         void PlayFoodReadySFX() => PlaySFX(foodReadyEvent);
         void PlayFoodBurntSFX() => PlaySFX(foodBurntEvent);
         void PlayAddIngredientSFX() => PlaySFX(addIngredientEvent);
+        void PlayFailedRecipeSFX() => PlaySFX(failedRecipeEvent);
         void PlayThrowTrashSFX() => PlaySFX(throwTrashEvent);
 
         //Game Status SFX
