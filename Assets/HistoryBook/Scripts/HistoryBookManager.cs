@@ -78,6 +78,7 @@ namespace HistoryBook {
             }
             // DefaultEntrySetted?.Invoke(0);
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
+
         }
 
         public void HandleChangeText(LocalizedString ingredientName, LocalizedString mythName, LocalizedString mythDescription, LocalizedString region, LocalizedString mythP1 , LocalizedString mythP2,Sprite ingredient, int buttonPos)
@@ -94,7 +95,7 @@ namespace HistoryBook {
             if (gameData.stars[buttonPos, 1])
                 value1 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP1.TableReference, mythP1.TableEntryReference);
             else
-               value1 = "\n\n"+lockedTextTag;
+                value1 = "\n\n" + lockedTextTag;
 
             if (gameData.stars[buttonPos, 2])
                 value2 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP2.TableReference, mythP2.TableEntryReference);
@@ -103,16 +104,20 @@ namespace HistoryBook {
 
             var tableReference = mythDescription.TableReference;
 
-            string mythText = value1 + value2 ;
+            string mythText = value1 + value2;
 
             historyText.text = mythText;
 
+            UpdateButtonTags(buttonPos);
+        }
 
-            for(int i=0; buttonsList.Count>i;i++)
+        private void UpdateButtonTags(int buttonPos)
+        {
+            for (int i = 0; buttonsList.Count > i; i++)
             {
                 Image[] buttonSprites = buttonsList[i].GetComponentsInChildren<Image>();
 
-                if (i!=buttonPos) 
+                if (i != buttonPos)
                 {
                     buttonSprites[0].rectTransform.sizeDelta = new Vector2(100f, 100f);
                     buttonSprites[0].rectTransform.localPosition = new Vector3(0f, 0, 0);
@@ -126,7 +131,7 @@ namespace HistoryBook {
                     buttonSprites[0].color = selectedTagColor;
                     buttonSprites[1].rectTransform.localPosition = new Vector3(70f, 0, 0);
                 }
-            }        
+            }
         }
 
         public void SetDefaultEntry(int entryId)
