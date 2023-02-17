@@ -27,7 +27,10 @@ namespace HistoryBook {
 
         [HideInInspector] public List<Button> buttonsList;
         [HideInInspector] public string mainMenuSceneName = "MainMenu";
-        [HideInInspector] public string lockedTextTag = "[Earn Stars To unlock more] "; 
+        [HideInInspector] public string lockedTextTag = "[Earn Stars To unlock more] ";
+
+        [HideInInspector] public Color selectedTagColor;
+        [HideInInspector] public Color unselectedTagColor;
 
         //public event Action<int> DefaultEntrySetted;
 
@@ -41,6 +44,8 @@ namespace HistoryBook {
             buttonPrefab = Resources.Load<GameObject>("BookEntryButton");
             //DefaultEntrySetted += SetDefaultEntry;     
             EventManager.AddListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
+            selectedTagColor = new Color(255f / 255f, 227f / 255f, 83f / 255f);
+            unselectedTagColor = new Color(113f / 255f, 79f / 255f, 35f / 255f);
         }
 
         private void OnDestroy()
@@ -52,7 +57,7 @@ namespace HistoryBook {
         private void Start()
         {
             CreateBookEntrys();
-            
+        
         }
 
         private void CreateBookEntrys()
@@ -61,7 +66,8 @@ namespace HistoryBook {
             {
                 GameObject button = Instantiate(buttonPrefab, mythsList);
                 //button.name = myth.name;
-                button.GetComponentInChildren<LocalizeStringEvent>().StringReference = myth.name;
+                //button.GetComponentInChildren<LocalizeStringEvent>().StringReference = myth.name;
+                button.GetComponentsInChildren<Image>()[1].sprite = myth.ingredientSprite;
                 Button newbutton = button.GetComponent<Button>();
                 buttonsList.Add(newbutton);
                 newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText(myth.ingredient,myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.ingredientSprite, buttonsList.IndexOf(newbutton)); });
@@ -101,6 +107,26 @@ namespace HistoryBook {
 
             historyText.text = mythText;
 
+
+            for(int i=0; buttonsList.Count>i;i++)
+            {
+                Image[] buttonSprites = buttonsList[i].GetComponentsInChildren<Image>();
+
+                if (i!=buttonPos) 
+                {
+                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(100f, 100f);
+                    buttonSprites[0].rectTransform.localPosition = new Vector3(0f, 0, 0);
+                    buttonSprites[0].color = unselectedTagColor;
+                    buttonSprites[1].rectTransform.localPosition = new Vector3(0f, 0, 0);
+                }
+                else
+                {
+                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(200f, 100f);
+                    buttonSprites[0].rectTransform.localPosition = new Vector3(70f, 0, 0);
+                    buttonSprites[0].color = selectedTagColor;
+                    buttonSprites[1].rectTransform.localPosition = new Vector3(70f, 0, 0);
+                }
+            }        
         }
 
         public void SetDefaultEntry(int entryId)
