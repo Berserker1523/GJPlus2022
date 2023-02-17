@@ -18,7 +18,7 @@ namespace Kitchen
         string foodBurntEvent = "event:/SFX/Cocina/Comida Quemada";
         string addIngredientEvent = "event:/SFX/Cocina/Infusión";
         string shakeIngredientsEvent = "";
-        string shakerPoofEvent = "";
+        string shakerPoofEvent = "event:/SFX/Jugabilidad/Completa receta";
         string failedRecipeEvent = "";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
