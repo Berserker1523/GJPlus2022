@@ -13,201 +13,46 @@ MonoBehaviour:
   m_Name: MythsDatabase
   m_EditorClassIdentifier: 
   myths:
-  - name: Buriti Palm Tree Myth
-    description: "A long time ago, the Buriti dos Lopes region was inhabited by numerous
-      indigenous tribes. The most respected of them was a village of Tapuias that
-      were commanded by the chief Airuan\xE3 who had settled in the region of the
-      Muriti creek (as the Buriti creek was called at the time). The natives lived
-      happily planting, swimming, hunting and fishing and at night they gathered
-      in the yard by the fire to celebrate and tell stories of their adventures.
-      One night, Araci, the chief's daughter, wanted to know from her father how
-      the first palm tree in the region had been born, among many that were offered
-      to them by nature. The father then told the story: Tup\xE3 had in his hands
-      the first seed of Muriti and decided to give it to our nation as a gift. But
-      Mauari, an evil spirit, seeing his intentions, wanted to know where the seed
-      would be planted and what it would be called. Sensing Mauar\xED's envy, Tup\xE3
-      paid no attention to his questions and ignored him. Then he gave the seed to
-      the Indians telling them that from the seed the largest of all palm trees would
-      grow, which would be the queen of the forest. She told them that the residents
-      should preserve and respect the existence of the palm tree and, with her name,
-      they should name those lands, so that it would become as imposing as the plant.
-      From the planted seed, the first buriti palm was born. From this, others emerged,
-      giving rise to a vast buritizal plantation. The palm tree had several uses:
-      its bunches of more than two meters in length, its rounded fruits with a ruby-red
-      scale, it gives a golden yellow pulp, used to make pamonhas, juices, oil and
-      sweets. The straw serves as a cover for the hollows, the voluminous stream
-      with a strong current irrigates everything, supplying the roots of the palm
-      trees with pure water. Mauar\xED, envious as he was, could not be at peace
-      in the face of the happiness of the Indians, and, taken by rage that Tup\xE3
-      had not listened to him, he decided to curse those lands: \u201CWhen greed
-      and envy speak louder, when men become greedy for power and no longer respect
-      each other, this harmony and plenty will come to an end. The waters will dry
-      up, the fire will burn, the soil will become poor and these palm trees will
-      no longer produce.\u201D Tup\xE3, upon learning of the bad omen, prophesied:
-      \u201CThe gift I gave cannot be tarnished. I believe that there will always
-      be men of good will and of good heart who will do everything to prevent this
-      curse. The noble palm trees will resist as long as possible and will remain
-      standing, as long as there is hope in the defense of their lives.\u201D To
-      protect the palm trees of Buriti, Tup\xE3 created an entity to protect the
-      palm trees of this species in the buritizais. According to Rafael Noleto, \u201CMaster
-      Buriti (\u2026) is a figure linked to the springs and swamps of the region\u201D.
-      The entity is usually seen amidst the buritizais of Piau\xED on nights of full
-      moon, carrying a staff and some buritis in its hands. But if something is threatening
-      the palm trees it protects, it could appear at any time. His magical powers
-      allow him to bless not only the buritizais, but also business and personal
-      life, bringing abundance to the good-hearted men who worship him and respect
-      the buritizais biome. That is why, until today, Buriti is the symbol tree of
-      the city of Buriti dos Lopes, because as long as there are men of good heart
-      who respect nature, the buritizais will spread not only in those lands, but
-      throughout Piau\xED, under the protection by Master Buriti. Due to the growth
-      of Buritizais, in addition to Buriti dos Lopes, other cities in Piau\xED, in
-      addition to Buriti dos Lopes, received their name as a tribute to this palm
-      tree. This is the case of Canto do Buriti, Palmeira do Piau\xED and Buriti
-      dos Montes."
-    ingredientSprite: {fileID: -1951158596, guid: c6935a37506cf8647aaf664ebfb347d2, type: 3}
-  - name: "A\xE7a\xED Leyend"
-    description: "Itaki, then chief of the tribe, was forced to make a rather radical
-      decision that left everyone worried and shocked. As a way of controlling the
-      number of inhabitants, the chief decided that all children born after a certain
-      date should be sacrificed. For him, this would be a way to contain the population
-      increase of his tribe. One day, the drastic measure befell Itaki's own family.
-      His daughter Ia\xE7\xE3 gave birth to a child who soon had to be sacrificed
-      to enforce his grandfather's decisions. Ia\xE7\xE3 suffered too much with the
-      death of her little daughter. It is said that she spent days and days without
-      coming out of her hollow, suffering and crying nonstop for several days and
-      nights. Thus, Ia\xE7\xE3 raised her thoughts to Tup\xE3, an indigenous deity,
-      and asked him to make her father find another way to solve the issue of food
-      provision, without the need for the sacrifice of children. Tup\xE3 was very
-      touched by the Indian's pain and decided that he would help Itaki to find another
-      solution to the tribe's problem. It was then that, one day, Ia\xE7\xE3 heard
-      the cry of a child coming from outside its hollow. As she left, to her surprise
-      and happiness, she spotted her little daughter next to a palm tree. Ia\xE7\xE3
-      ran towards her and hugged the girl who, mysteriously, disappeared in her mother's
-      arms. Once again inconsolable, Ia\xE7\xE3 cried so much during the night that
-      he lost his strength and ended up dying. The body of Itaki's daughter was found
-      the next morning, hugging the palm tree. Ia\xE7\xE3 had a serene face and seemed
-      to smile slightly. Her eyes were open and directed toward the top of the tree.
-      When observing the palm tree, Itaki noticed that in the place where Ia\xE7\xE3's
-      eyes were directed, there was an abundance of a small dark fruit. It was a\xE7a\xED.
-      The chief then ordered that all the fruits be harvested. With these fruits,
-      a juice with a reddish appearance and quite thick was made, which fed the population
-      of the tribe and ended the food shortage. It is said that the name of the fruit
-      was a tribute that the chief paid to his daughter. The leafy tree and its fruit
-      were named a\xE7a\xED, which is Ia\xE7\xE3 in reverse. Since then, a\xE7a\xED
-      has \u200B\u200Bbeen used as food for the entire tribe of the chief Itaki and
-      this has caused him to suspend his order to sacrifice the children born to
-      control population growth and the consequent food shortages."
-    ingredientSprite: {fileID: -1224909002, guid: 0e4c289d68686114fa6664002e9ceaa8, type: 3}
-  - name: "Sama\xFAma Legend"
-    description: "Of Ticuna origin, which is considered one of the most numerous
-      peoples in the Amazon, spreading across Brazil, Peru and Colombia, the best
-      known legend of Sama\xFAma is about the origin of light in the world. According
-      to the Ticuna/Tikuna people, who came from the Eware creek, near the Solim\xF5es
-      River, at the beginning of the Earth it was all night and the people suffered
-      from the cold and darkness. It was believed to be a large sama\xFAma, or wotchine,
-      which blocked the sunlight with its branches and leaves. It was then that Yo'i
-      and Ipi decided to throw the pits of another tree, the tucupi macaw (Parkia
-      multijuga), to try to open holes in the dense foliage. The points of light
-      that crossed the sama\xFAma and the night are the stars. Yo'i and Ipi could
-      also see a sloth (Choloepus didactylus) that lived in the canopy of the sama\xFAma,
-      attaching its branches to the sky. To bring more light, they needed to scare
-      the animal away. As they couldn't do it alone, they called all the animals
-      in the forest to help. Some versions say that it was a small coatipur (Sciurillus
-      pusillus), Taine, who managed to climb the tree and use fire ants to scare
-      away the royal sloth and topple the Sama\xFAma. The Ticuna also say that the
-      Solim\xF5es River was born from the trunk of the fallen samaumeira, and from
-      its branches, the streams were born. They also say that after a while, Yo'i
-      and Ipi saw that the stump (nap\xFCne) of the tree was sprouting and they were
-      afraid of it growing and blocking the sun again. To prevent it, they placed
-      a tortoise on top of the tocoi to eat its leaves, but it was not enough and
-      the sama\xFAma continued to grow. Then they got very close and heard Sama\xFAma's
-      heart still beating. From this heart, which was taken and replanted with the
-      help of other animals, the umari or tetchi (Geoffroea spinosa) was born. Other
-      legends of lesser-known origin say that a healer and protector of the forest
-      lives within its roots, the Sapopemas, which can reach 2 meters in height and
-      30 meters in length, radiating around the tree. Others believe that there is
-      a portal to these giant roots. Legends involving the Curupira also mention
-      the use of Sapopemas to communicate with animals and forest peoples, using
-      them as a drum. Native from Mexico to the Amazon Basin in South America, including
-      the Caribbean, the sama\xFAma (Ceiba pentandra) can reach 70 meters in height
-      and live for hundreds of years, often being considered the \u201Cqueen\u201D
-      or \u201Cmother\u201D of the forest. It is sacred to many Amerindian peoples,
-      including the Mayans, who called it Yaaxche. Another variation of the species
-      (Ceiba pentandra var guineensis) is native to West Africa, indicating its ancestry
-      in relation to the formation of current ecosystems. For this reason, it has
-      many names: mafumeira, kapok, silk tree, kapok, pulin, malpanka, ora, bongo,
-      kumaka, lupuna, oc\xE1 (S\xE3o Tom\xE9 and Pr\xEDncipe) and poil\xE3o (Guinea-Bissau).
-      In addition to the medicinal properties of the sama\xFAma, it is known for
-      storing water that is used for other animals and plants. On the other hand,
-      the umizeiro \u201Cpours\u201D water from its leaves to moisten the earth around
-      it."
-    ingredientSprite: {fileID: 1595732434, guid: 5d53584c9485ccc49ba10cd2c92deeb4, type: 3}
-  - name: "Carna\xFAba Legend"
-    description: "Of Tupi origin, as it refers to the God Tup\xE3, the legend tells
-      the origin of carnauba, carnaubeira or carna\xEDba (Copernicia prunifera or
-      cerifera), a palm native to the Brazilian Caatinga regions and common throughout
-      the Northeast, which saved a people from extinction. The story tells that these
-      people lived happily with Nature, the sun warmed the huts and ripened the fruits,
-      the clouds gave shade, the rain wet the plants and increased the rivers. Over
-      time, however, the sun began to get very hot: so hot that it dried up rivers,
-      killed plants and animals. The people prayed, danced and begged Tup\xE3 to
-      send the rain again, but the sun kept burning everything. Then people began
-      to die, until that strong people only left a couple and their son, forced to
-      abandon their lands in search of better ones. Chewing the roots that were left
-      to them, they walked all night, and when again the sun burned in the sky, the
-      boy saw a palm tree alone, in what looked like a desert, swaying its green
-      palms. Exhausted, they stopped to rest in the shade of that palm tree and the
-      parents fell asleep. Only the son was still awake and worried, asking Tup\xE3
-      for help. It was when he heard a voice and saw, at the top of the palm tree,
-      an Indian woman, who said to him: \u201CMy name is Carnaubeira. I'm here to
-      help you. Many years ago my tribe was also plagued by drought. I helped everyone,
-      and when I died, the moon turned me into this tree destined to save the helpless.
-      Do what I advise you and you will still be happy. Hew my trunk, and with my
-      sap, quench your parents' thirst and yours. Eat my fruits, and you won't be
-      hungry anymore. Cook some of my roots, and medicine that, drunk, closes the
-      wounds. Put my leaves to dry and beat them, a gray and fragrant powder will
-      come out of them, my wax, with which you will be able to light your way on
-      moonless nights. From the straw that remains, weave your hat and mat. Now,
-      I make a request of you: plant my coconuts so that you have a carnaubal, then
-      you can build your hut with the wood of my trunk.\u201D The boy did everything
-      the India advised him to do. Within a few years, a huge carnauba tree swayed
-      in the wind, and the little Indian, now a man, said goodbye to his parents
-      to take the coconuts from this \u201Ctree of life\u201D to all the villages.
-      Endemic to the semi-arid region of Northeast Brazil, Copernicia prunifera or
-      cerifera can reach 10 to 15 meters in height, with thin trunks that are sometimes
-      prickly at the base or covered with dried leaves. Also called carna\xEDba,
-      carna\xEDva, carna\xFAva and carnanda\xFAba, the popular names of the carnauba
-      tree derive from the Tupi karana\xFDwa. In addition to being the symbol tree
-      of the state of Cear\xE1, where it is abundantly found, the importance of carnauba
-      was recognized by great Brazilian writers such as M\xE1rio de Andrade, Jos\xE9
-      de Alencar and Euclides da Cunha. According to legend, carnauba can be used
-      in its entirety: the roots, bark and fruits are used to produce food and natural
-      remedies; wood is excellent for rafters, joists or battens used in construction
-      and furniture; leaves become straw for crafts; and its famous wax, known as
-      \"queen of waxes\" for its quality and resistance, has wide practical use,
-      including on an industrial scale."
-    ingredientSprite: {fileID: 1404954014, guid: 8d53ad60ab85a47448a5e3371b1bcb51, type: 3}
-  - name: Cassava Legend
-    description: With contagious joy, Mani was a very esteemed Indian girl by the
-      Tupi tribe where she lived. She was the granddaughter of the chief and her
-      mother's pregnancy was a cause of sadness for the chief of the tribe. That
-      was because she had become pregnant and was not married to a brave warrior,
-      as he wished. The chief forced the daughter to say who the father of her child
-      was, but the Indian woman said that she did not know how she had become pregnant.
-      The daughter's dishonesty greatly displeased the chief. Until one day, he had
-      a dream that advised him to believe in his daughter, because she remained pure
-      and told the truth to her father. Since then, he accepted the pregnancy and
-      was very happy with the arrival of his granddaughter. One morning, Mani was
-      found dead by her mother. She had simply died in her sleep and, even lifeless,
-      had a smiling face. Saddened by the loss, her mother buried Mani inside her
-      hollow and her tears moistened the earth as if she were being watered. A few
-      days later, in that same place, a plant was born, different from all the ones
-      she knew, which she started to take care of. Noticing that the earth was getting
-      cracked, she dug in hopes that she could dig up her daughter alive. However,
-      she found a root, manioc, which was named after the junction of the name Mani
-      and the word hollow.
-    ingredientSprite: {fileID: -403597951, guid: f48b83810fcefbf428f62bdc87cf1095, type: 3}
-  - name: Pequi Leyend
+  - ingredient: 6
+    name: The Rain Man
+    region: 
+    description: "Begorotire was a happy Indian. One day, however, having been wronged
+      in the hunting division, he was furious, deciding that he would leave in search
+      of another place to live. He cut the hair of his wife and daughter, painting
+      the whole family with a black dye he had taken from the genipap fruit. He took
+      a heavy, sturdy piece of wood, making the first Caiap\xF3 club, with the handle
+      braided in black and the tip stained with the blood of the game. He then reached
+      the top of a mountain, carrying his weapon, and began to scream. His screams
+      sounded like heavy thunder. He swung the club sharply in the air and lightning
+      flashed from its ends. Amidst the noise and lights, Begorotire soared into
+      the skies. The frightened Indians shot their arrows, but nothing could prevent
+      the Indian from disappearing into the sky. The clouds, also frightened, poured
+      rain. That's why Begorotire became the rain man. Later, he took the whole family
+      to heaven, where they lacked nothing, and from there he did much to help those
+      who remained on earth. He gathered seeds from his bountiful gardens, dried
+      them on the girau, giving them to a daughter to bring. The Indian descended
+      inside a huge gourd tied to a long rope, woven with the plant's own branches.
+      Walking through the forest, a young man found the gourd, tied it with vines
+      and pieces of wood and, with the help of his friends, took it to the village.
+      The mother, opening the gourd, found the Indian woman, the daughter of the
+      rain, who was thin and had long hair, having remained there for a long time.
+      The young woman was taken out and fed, and her hair was trimmed. When asked,
+      the daughter of rain explained why she had come, giving them the seeds sent
+      by her father and making everyone very happy. The young man who found the gourd
+      married the girl, and the girl began to live on earth again. Eventually, he
+      decided to visit his parents. He asked her husband to bend a Pinda\xEDba foot,
+      bringing the canopy to the ground. He sat on it, and when the tree was released,
+      the Indian was thrown into the sky. When he returned, he brought with him the
+      whole family and baskets full of bananas and other wild fruits. Begorotire
+      taught everyone how to grow the seeds and tend the gardens, then returned to
+      his new home. Even today, when plants need water, the rain man causes thunder,
+      causing it to fall on the gardens to keep them always green and abundant."
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  - ingredient: 2
+    name: Pequi Leyend
+    region: 
     description: "A Lenda do Pequi tells the story of the fruit of the love of the
       Tain\xE1-Racan and Malu\xE1 Indians. Tain\xE1-Racan was a beautiful Indian
       and Malu\xE1 a young and beautiful warrior who fell in love as soon as he saw
@@ -264,37 +109,220 @@ MonoBehaviour:
       Cambess, the genus Caryocar comes from the Greek caryon (core or nut) + kara
       (head ), referring to the globose fruit, the specific epithet brasiliense is
       given because this species is originally from Brazil."
+    mythP1: 
+    mythP2: 
     ingredientSprite: {fileID: -2004986893, guid: dc2f5022274368448a07b8625ca149e8, type: 3}
-  - name: The Rain Man
-    description: "Begorotire was a happy Indian. One day, however, having been wronged
-      in the hunting division, he was furious, deciding that he would leave in search
-      of another place to live. He cut the hair of his wife and daughter, painting
-      the whole family with a black dye he had taken from the genipap fruit. He took
-      a heavy, sturdy piece of wood, making the first Caiap\xF3 club, with the handle
-      braided in black and the tip stained with the blood of the game. He then reached
-      the top of a mountain, carrying his weapon, and began to scream. His screams
-      sounded like heavy thunder. He swung the club sharply in the air and lightning
-      flashed from its ends. Amidst the noise and lights, Begorotire soared into
-      the skies. The frightened Indians shot their arrows, but nothing could prevent
-      the Indian from disappearing into the sky. The clouds, also frightened, poured
-      rain. That's why Begorotire became the rain man. Later, he took the whole family
-      to heaven, where they lacked nothing, and from there he did much to help those
-      who remained on earth. He gathered seeds from his bountiful gardens, dried
-      them on the girau, giving them to a daughter to bring. The Indian descended
-      inside a huge gourd tied to a long rope, woven with the plant's own branches.
-      Walking through the forest, a young man found the gourd, tied it with vines
-      and pieces of wood and, with the help of his friends, took it to the village.
-      The mother, opening the gourd, found the Indian woman, the daughter of the
-      rain, who was thin and had long hair, having remained there for a long time.
-      The young woman was taken out and fed, and her hair was trimmed. When asked,
-      the daughter of rain explained why she had come, giving them the seeds sent
-      by her father and making everyone very happy. The young man who found the gourd
-      married the girl, and the girl began to live on earth again. Eventually, he
-      decided to visit his parents. He asked her husband to bend a Pinda\xEDba foot,
-      bringing the canopy to the ground. He sat on it, and when the tree was released,
-      the Indian was thrown into the sky. When he returned, he brought with him the
-      whole family and baskets full of bananas and other wild fruits. Begorotire
-      taught everyone how to grow the seeds and tend the gardens, then returned to
-      his new home. Even today, when plants need water, the rain man causes thunder,
-      causing it to fall on the gardens to keep them always green and abundant."
-    ingredientSprite: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
+  - ingredient: 1
+    name: "Carna\xFAba Legend"
+    region: 
+    description: "Of Tupi origin, as it refers to the God Tup\xE3, the legend tells
+      the origin of carnauba, carnaubeira or carna\xEDba (Copernicia prunifera or
+      cerifera), a palm native to the Brazilian Caatinga regions and common throughout
+      the Northeast, which saved a people from extinction. The story tells that these
+      people lived happily with Nature, the sun warmed the huts and ripened the fruits,
+      the clouds gave shade, the rain wet the plants and increased the rivers. Over
+      time, however, the sun began to get very hot: so hot that it dried up rivers,
+      killed plants and animals. The people prayed, danced and begged Tup\xE3 to
+      send the rain again, but the sun kept burning everything. Then people began
+      to die, until that strong people only left a couple and their son, forced to
+      abandon their lands in search of better ones. Chewing the roots that were left
+      to them, they walked all night, and when again the sun burned in the sky, the
+      boy saw a palm tree alone, in what looked like a desert, swaying its green
+      palms. Exhausted, they stopped to rest in the shade of that palm tree and the
+      parents fell asleep. Only the son was still awake and worried, asking Tup\xE3
+      for help. It was when he heard a voice and saw, at the top of the palm tree,
+      an Indian woman, who said to him: \u201CMy name is Carnaubeira. I'm here to
+      help you. Many years ago my tribe was also plagued by drought. I helped everyone,
+      and when I died, the moon turned me into this tree destined to save the helpless.
+      Do what I advise you and you will still be happy. Hew my trunk, and with my
+      sap, quench your parents' thirst and yours. Eat my fruits, and you won't be
+      hungry anymore. Cook some of my roots, and medicine that, drunk, closes the
+      wounds. Put my leaves to dry and beat them, a gray and fragrant powder will
+      come out of them, my wax, with which you will be able to light your way on
+      moonless nights. From the straw that remains, weave your hat and mat. Now,
+      I make a request of you: plant my coconuts so that you have a carnaubal, then
+      you can build your hut with the wood of my trunk.\u201D The boy did everything
+      the India advised him to do. Within a few years, a huge carnauba tree swayed
+      in the wind, and the little Indian, now a man, said goodbye to his parents
+      to take the coconuts from this \u201Ctree of life\u201D to all the villages.
+      Endemic to the semi-arid region of Northeast Brazil, Copernicia prunifera or
+      cerifera can reach 10 to 15 meters in height, with thin trunks that are sometimes
+      prickly at the base or covered with dried leaves. Also called carna\xEDba,
+      carna\xEDva, carna\xFAva and carnanda\xFAba, the popular names of the carnauba
+      tree derive from the Tupi karana\xFDwa. In addition to being the symbol tree
+      of the state of Cear\xE1, where it is abundantly found, the importance of carnauba
+      was recognized by great Brazilian writers such as M\xE1rio de Andrade, Jos\xE9
+      de Alencar and Euclides da Cunha. According to legend, carnauba can be used
+      in its entirety: the roots, bark and fruits are used to produce food and natural
+      remedies; wood is excellent for rafters, joists or battens used in construction
+      and furniture; leaves become straw for crafts; and its famous wax, known as
+      \"queen of waxes\" for its quality and resistance, has wide practical use,
+      including on an industrial scale."
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: 1404954014, guid: 8d53ad60ab85a47448a5e3371b1bcb51, type: 3}
+  - ingredient: 4
+    name: Buriti Palm Tree Myth
+    region: 
+    description: "A long time ago, the Buriti dos Lopes region was inhabited by numerous
+      indigenous tribes. The most respected of them was a village of Tapuias that
+      were commanded by the chief Airuan\xE3 who had settled in the region of the
+      Muriti creek (as the Buriti creek was called at the time). The natives lived
+      happily planting, swimming, hunting and fishing and at night they gathered
+      in the yard by the fire to celebrate and tell stories of their adventures.
+      One night, Araci, the chief's daughter, wanted to know from her father how
+      the first palm tree in the region had been born, among many that were offered
+      to them by nature. The father then told the story: Tup\xE3 had in his hands
+      the first seed of Muriti and decided to give it to our nation as a gift. But
+      Mauari, an evil spirit, seeing his intentions, wanted to know where the seed
+      would be planted and what it would be called. Sensing Mauar\xED's envy, Tup\xE3
+      paid no attention to his questions and ignored him. Then he gave the seed to
+      the Indians telling them that from the seed the largest of all palm trees would
+      grow, which would be the queen of the forest. She told them that the residents
+      should preserve and respect the existence of the palm tree and, with her name,
+      they should name those lands, so that it would become as imposing as the plant.
+      From the planted seed, the first buriti palm was born. From this, others emerged,
+      giving rise to a vast buritizal plantation. The palm tree had several uses:
+      its bunches of more than two meters in length, its rounded fruits with a ruby-red
+      scale, it gives a golden yellow pulp, used to make pamonhas, juices, oil and
+      sweets. The straw serves as a cover for the hollows, the voluminous stream
+      with a strong current irrigates everything, supplying the roots of the palm
+      trees with pure water. Mauar\xED, envious as he was, could not be at peace
+      in the face of the happiness of the Indians, and, taken by rage that Tup\xE3
+      had not listened to him, he decided to curse those lands: \u201CWhen greed
+      and envy speak louder, when men become greedy for power and no longer respect
+      each other, this harmony and plenty will come to an end. The waters will dry
+      up, the fire will burn, the soil will become poor and these palm trees will
+      no longer produce.\u201D Tup\xE3, upon learning of the bad omen, prophesied:
+      \u201CThe gift I gave cannot be tarnished. I believe that there will always
+      be men of good will and of good heart who will do everything to prevent this
+      curse. The noble palm trees will resist as long as possible and will remain
+      standing, as long as there is hope in the defense of their lives.\u201D To
+      protect the palm trees of Buriti, Tup\xE3 created an entity to protect the
+      palm trees of this species in the buritizais. According to Rafael Noleto, \u201CMaster
+      Buriti (\u2026) is a figure linked to the springs and swamps of the region\u201D.
+      The entity is usually seen amidst the buritizais of Piau\xED on nights of full
+      moon, carrying a staff and some buritis in its hands. But if something is threatening
+      the palm trees it protects, it could appear at any time. His magical powers
+      allow him to bless not only the buritizais, but also business and personal
+      life, bringing abundance to the good-hearted men who worship him and respect
+      the buritizais biome. That is why, until today, Buriti is the symbol tree of
+      the city of Buriti dos Lopes, because as long as there are men of good heart
+      who respect nature, the buritizais will spread not only in those lands, but
+      throughout Piau\xED, under the protection by Master Buriti. Due to the growth
+      of Buritizais, in addition to Buriti dos Lopes, other cities in Piau\xED, in
+      addition to Buriti dos Lopes, received their name as a tribute to this palm
+      tree. This is the case of Canto do Buriti, Palmeira do Piau\xED and Buriti
+      dos Montes."
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: -1951158596, guid: c6935a37506cf8647aaf664ebfb347d2, type: 3}
+  - ingredient: 3
+    name: "A\xE7a\xED Leyend"
+    region: 
+    description: "Itaki, then chief of the tribe, was forced to make a rather radical
+      decision that left everyone worried and shocked. As a way of controlling the
+      number of inhabitants, the chief decided that all children born after a certain
+      date should be sacrificed. For him, this would be a way to contain the population
+      increase of his tribe. One day, the drastic measure befell Itaki's own family.
+      His daughter Ia\xE7\xE3 gave birth to a child who soon had to be sacrificed
+      to enforce his grandfather's decisions. Ia\xE7\xE3 suffered too much with the
+      death of her little daughter. It is said that she spent days and days without
+      coming out of her hollow, suffering and crying nonstop for several days and
+      nights. Thus, Ia\xE7\xE3 raised her thoughts to Tup\xE3, an indigenous deity,
+      and asked him to make her father find another way to solve the issue of food
+      provision, without the need for the sacrifice of children. Tup\xE3 was very
+      touched by the Indian's pain and decided that he would help Itaki to find another
+      solution to the tribe's problem. It was then that, one day, Ia\xE7\xE3 heard
+      the cry of a child coming from outside its hollow. As she left, to her surprise
+      and happiness, she spotted her little daughter next to a palm tree. Ia\xE7\xE3
+      ran towards her and hugged the girl who, mysteriously, disappeared in her mother's
+      arms. Once again inconsolable, Ia\xE7\xE3 cried so much during the night that
+      he lost his strength and ended up dying. The body of Itaki's daughter was found
+      the next morning, hugging the palm tree. Ia\xE7\xE3 had a serene face and seemed
+      to smile slightly. Her eyes were open and directed toward the top of the tree.
+      When observing the palm tree, Itaki noticed that in the place where Ia\xE7\xE3's
+      eyes were directed, there was an abundance of a small dark fruit. It was a\xE7a\xED.
+      The chief then ordered that all the fruits be harvested. With these fruits,
+      a juice with a reddish appearance and quite thick was made, which fed the population
+      of the tribe and ended the food shortage. It is said that the name of the fruit
+      was a tribute that the chief paid to his daughter. The leafy tree and its fruit
+      were named a\xE7a\xED, which is Ia\xE7\xE3 in reverse. Since then, a\xE7a\xED
+      has \u200B\u200Bbeen used as food for the entire tribe of the chief Itaki and
+      this has caused him to suspend his order to sacrifice the children born to
+      control population growth and the consequent food shortages."
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: -1224909002, guid: 0e4c289d68686114fa6664002e9ceaa8, type: 3}
+  - ingredient: 7
+    name: "Sama\xFAma Legend"
+    region: 
+    description: "Of Ticuna origin, which is considered one of the most numerous
+      peoples in the Amazon, spreading across Brazil, Peru and Colombia, the best
+      known legend of Sama\xFAma is about the origin of light in the world. According
+      to the Ticuna/Tikuna people, who came from the Eware creek, near the Solim\xF5es
+      River, at the beginning of the Earth it was all night and the people suffered
+      from the cold and darkness. It was believed to be a large sama\xFAma, or wotchine,
+      which blocked the sunlight with its branches and leaves. It was then that Yo'i
+      and Ipi decided to throw the pits of another tree, the tucupi macaw (Parkia
+      multijuga), to try to open holes in the dense foliage. The points of light
+      that crossed the sama\xFAma and the night are the stars. Yo'i and Ipi could
+      also see a sloth (Choloepus didactylus) that lived in the canopy of the sama\xFAma,
+      attaching its branches to the sky. To bring more light, they needed to scare
+      the animal away. As they couldn't do it alone, they called all the animals
+      in the forest to help. Some versions say that it was a small coatipur (Sciurillus
+      pusillus), Taine, who managed to climb the tree and use fire ants to scare
+      away the royal sloth and topple the Sama\xFAma. The Ticuna also say that the
+      Solim\xF5es River was born from the trunk of the fallen samaumeira, and from
+      its branches, the streams were born. They also say that after a while, Yo'i
+      and Ipi saw that the stump (nap\xFCne) of the tree was sprouting and they were
+      afraid of it growing and blocking the sun again. To prevent it, they placed
+      a tortoise on top of the tocoi to eat its leaves, but it was not enough and
+      the sama\xFAma continued to grow. Then they got very close and heard Sama\xFAma's
+      heart still beating. From this heart, which was taken and replanted with the
+      help of other animals, the umari or tetchi (Geoffroea spinosa) was born. Other
+      legends of lesser-known origin say that a healer and protector of the forest
+      lives within its roots, the Sapopemas, which can reach 2 meters in height and
+      30 meters in length, radiating around the tree. Others believe that there is
+      a portal to these giant roots. Legends involving the Curupira also mention
+      the use of Sapopemas to communicate with animals and forest peoples, using
+      them as a drum. Native from Mexico to the Amazon Basin in South America, including
+      the Caribbean, the sama\xFAma (Ceiba pentandra) can reach 70 meters in height
+      and live for hundreds of years, often being considered the \u201Cqueen\u201D
+      or \u201Cmother\u201D of the forest. It is sacred to many Amerindian peoples,
+      including the Mayans, who called it Yaaxche. Another variation of the species
+      (Ceiba pentandra var guineensis) is native to West Africa, indicating its ancestry
+      in relation to the formation of current ecosystems. For this reason, it has
+      many names: mafumeira, kapok, silk tree, kapok, pulin, malpanka, ora, bongo,
+      kumaka, lupuna, oc\xE1 (S\xE3o Tom\xE9 and Pr\xEDncipe) and poil\xE3o (Guinea-Bissau).
+      In addition to the medicinal properties of the sama\xFAma, it is known for
+      storing water that is used for other animals and plants. On the other hand,
+      the umizeiro \u201Cpours\u201D water from its leaves to moisten the earth around
+      it."
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: 1595732434, guid: 5d53584c9485ccc49ba10cd2c92deeb4, type: 3}
+  - ingredient: 0
+    name: Cassava Legend
+    region: 
+    description: With contagious joy, Mani was a very esteemed Indian girl by the
+      Tupi tribe where she lived. She was the granddaughter of the chief and her
+      mother's pregnancy was a cause of sadness for the chief of the tribe. That
+      was because she had become pregnant and was not married to a brave warrior,
+      as he wished. The chief forced the daughter to say who the father of her child
+      was, but the Indian woman said that she did not know how she had become pregnant.
+      The daughter's dishonesty greatly displeased the chief. Until one day, he had
+      a dream that advised him to believe in his daughter, because she remained pure
+      and told the truth to her father. Since then, he accepted the pregnancy and
+      was very happy with the arrival of his granddaughter. One morning, Mani was
+      found dead by her mother. She had simply died in her sleep and, even lifeless,
+      had a smiling face. Saddened by the loss, her mother buried Mani inside her
+      hollow and her tears moistened the earth as if she were being watered. A few
+      days later, in that same place, a plant was born, different from all the ones
+      she knew, which she started to take care of. Noticing that the earth was getting
+      cracked, she dug in hopes that she could dig up her daughter alive. However,
+      she found a root, manioc, which was named after the junction of the name Mani
+      and the word hollow.
+    mythP1: 
+    mythP2: 
+    ingredientSprite: {fileID: -403597951, guid: f48b83810fcefbf428f62bdc87cf1095, type: 3}

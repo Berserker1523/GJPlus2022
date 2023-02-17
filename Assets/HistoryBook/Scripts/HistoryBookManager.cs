@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Kitchen;
 
 namespace HistoryBook {
     public class HistoryBookManager : MonoBehaviour
@@ -12,6 +13,8 @@ namespace HistoryBook {
         [SerializeField] public LegendsScriptableObject mythsDatabase;
         [SerializeField] public TextMeshProUGUI historyText;
         [SerializeField] public TextMeshProUGUI titleText;
+        [SerializeField] public TextMeshProUGUI mythTitle;
+        [SerializeField] public TextMeshProUGUI zoneText;
         [SerializeField] public Image associatedIngredient;
 
         [SerializeField] private GameObject buttonPrefab;
@@ -20,6 +23,7 @@ namespace HistoryBook {
 
         [HideInInspector] public List<Button> buttonsList;
         [HideInInspector] public string mainMenuSceneName = "MainMenu";
+        [HideInInspector] public string lockedTextTag = "[Earn Stars To unlock more] "; 
 
         //public event Action<int> DefaultEntrySetted;
 
@@ -55,25 +59,42 @@ namespace HistoryBook {
                 button.name = myth.name;
                 button.GetComponentInChildren<TextMeshProUGUI>().text = myth.name;
                 Button newbutton = button.GetComponent<Button>();
-                newbutton.onClick.AddListener(delegate { HandleChangeText(myth.name, myth.description, myth.ingredientSprite); });
                 buttonsList.Add(newbutton);
+                newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText((string)myth.ingredient.ToString(),(string)myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.ingredientSprite, buttonsList.IndexOf(newbutton)); });
+               
+                //Myths limitation for vertical slice
+                if (buttonsList.Count >= 3)
+                    break;
             }
             // DefaultEntrySetted?.Invoke(0);
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
         }
 
-        public void HandleChangeText(string mythName, string mythDescription, Sprite ingredient)
+        public void HandleChangeText(string ingredientName, string mythName, string mythDescription, string region, string mythP1 , string mythP2,Sprite ingredient, int buttonPos)
         {
-            titleText.text = mythName;
-            historyText.text = mythDescription;
+            titleText.text = ingredientName;
+            mythTitle.text = mythName;
+            zoneText.text = region;
             associatedIngredient.sprite = ingredient;
             scrollbar.value = 1;
+
+            GameData gameData = SaveManager.LoadStarsData();
+            if (!gameData.stars[buttonPos, 1])           
+                mythP1 = lockedTextTag;
+
+            if (!gameData.stars[buttonPos, 2])
+                mythP2 = lockedTextTag;
+
+            string mythText = mythDescription+ "\n\n"+mythP1+"\n\n"+mythP2;
+
+            historyText.text = mythText;
+
         }
 
         public void SetDefaultEntry(int entryId)
         {
             buttonsList[entryId].Select();
-            HandleChangeText(mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description,mythsDatabase.myths[entryId].ingredientSprite);
+            HandleChangeText(mythsDatabase.myths[entryId].ingredient.ToString(), mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description, mythsDatabase.myths[entryId].region, mythsDatabase.myths[entryId].mythP1, mythsDatabase.myths[entryId].mythP2, mythsDatabase.myths[entryId].ingredientSprite, 0);
         }
 
         public void Back()
