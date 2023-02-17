@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MythsBook_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 8a8c794817939ba458237a9fd42a2fee, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 45939707904
+    m_Localized: Agua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153280335872
+    m_Localized: "Asa\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178597154816
+    m_Localized: "Carna\xFAba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 554566176768
+    m_Localized: El Hombre de la Lluvia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 644823404544
+    m_Localized: "Leyenda del Asa\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664394027008
+    m_Localized: "Leyenda de la Carna\xFAba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730649018368
+    m_Localized: "Begorotire era un indio feliz. Un d\xEDa, sin embargo, habiendo
+      sido agraviado en el reparto de la caza, se puso furioso y decidi\xF3 que saldr\xEDa
+      a buscar otro lugar para vivir.\nCort\xF3 el pelo a su mujer y a su hija y
+      pint\xF3 a toda la familia con un tinte negro que hab\xEDa sacado del fruto
+      del jenipap. Cogi\xF3 un trozo de madera pesada y resistente e hizo el primer
+      bast\xF3n de Caiap\xF3, con el mango trenzado de negro y la punta te\xF1ida
+      con la sangre de los cazados. Luego lleg\xF3 a la cima de una monta\xF1a, cargando
+      su arma, y comenz\xF3 a gritar. Sus gritos sonaban como fuertes truenos. Gir\xF3
+      bruscamente el bast\xF3n en el aire y de sus puntas salieron rayos.\nEn medio
+      del ruido y las luces, Begorotire se elev\xF3 hacia el cielo. Los indios, asustados,
+      dispararon sus flechas, pero nada pudo impedir que el indio desapareciera en
+      el firmamento. Las nubes, tambi\xE9n asustadas, descargaron lluvia. Por eso
+      Begorotire se convirti\xF3 en el hombre de la lluvia.\nTiempo despu\xE9s, se
+      llev\xF3 a toda su familia al cielo, donde no les faltaba de nada, y desde
+      all\xED hizo mucho por ayudar a los que se quedaron en la tierra. Recogi\xF3
+      semillas de sus abundantes campos, las sec\xF3 en el girau y se las dio a una
+      hija para que se las trajera.\n\n\nTraducci\xF3n realizada con la versi\xF3n
+      gratuita del traductor www.DeepL.com/Translator"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1790329769984
+    m_Localized: "La Leyenda del Pequi cuenta la historia de amor de los indios Tain\xE1-Racan
+      y Malu\xE1. Tain\xE1-Racan era una hermosa india y Malu\xE1 un joven y bello
+      guerrero que se enamor\xF3 nada m\xE1s verla. Poco despu\xE9s se casaron. Su
+      vida era tan hermosa y alegre como el \xE1rbol de ipe en flor. Cada ma\xF1ana,
+      Malu\xE1 sal\xEDa a cazar y pescar, mientras Tain\xE1-Racan tej\xEDa y cocinaba
+      para d\xE1rselo a su amado cuando volviera. Un caim\xE1n yac\xEDa siempre a
+      su lado, haci\xE9ndole compa\xF1\xEDa y charlando, porque en aquella \xE9poca
+      los animales tambi\xE9n pod\xEDan hablar. Pas\xF3 el tiempo. Despu\xE9s de
+      tres a\xF1os de matrimonio, tumbados en una gran roca junto al tranquilo r\xEDo,
+      se preguntaban por qu\xE9 Cananxiu\xE9 a\xFAn no hab\xEDa enviado al hijo tan
+      esperado. Dos peque\xF1os r\xEDos de l\xE1grimas corrieron por las mejillas
+      sonrojadas de Tain\xE1-Racan. Malu\xE1 abraz\xF3 a Tain\xE1-Racan y la am\xF3.
+      Meses despu\xE9s, cuando los \xE1rboles de ip\xEA empezaron a florecer de nuevo,
+      naci\xF3 Uadi el Arco Iris. Era hermoso, pero hab\xEDa algo diferente en \xE9l
+      que asombr\xF3 a su padre, a su madre y a toda la tribu: Uadi ten\xEDa el pelo
+      tan dorado como las flores del ip\xEA amarillo. Malu\xE1 recibi\xF3 el nacimiento
+      de su hijo con alegr\xEDa y para explicar su diferencia hizo correr la voz
+      por toda la tribu de que Uadi era hijo de Cananxiu\xE9. Sin embargo, los propios
+      indios se burlaron de \xE9l, diciendo que Uadi era hijo del caim\xE1n. Ajeno
+      a las malvadas bromas, el ni\xF1o creci\xF3 lleno de encanto y alegr\xEDa,
+      y con una inteligencia fuera de lo com\xFAn. Un d\xEDa, cuando llamaron a Malu\xE1,
+      sus brazos se aferraron al cuello de su padre y le dijo: \"Pap\xE1, yo tambi\xE9n
+      me voy. Me voy a casa de mi madre, al cielo\". El cuerpo del guerrero tembl\xF3.
+      En ese momento, Cananxui\xE9 baj\xF3 del cielo en forma de Andrerura -el guacamayo
+      rojo- y grit\xF3 con fuerza: \"\xA1He venido a por mi hijo! Tain\xE1-Racan
+      y Malu\xE1 cayeron de rodillas. El guerrero abri\xF3 los brazos y grit\xF3:
+      \"\xA1Devu\xE9lveme a mi hijo! El grito de Malu\xE1 reson\xF3 en el bosque,
+      hiriendo de dolor el silencio. Malu\xE1 se fue y Tain\xE1-Racan llor\xF3 durante
+      tres d\xEDas y tres noches."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1765671456768
+    m_Localized: " El indio descendi\xF3 dentro de una enorme calabaza atada a una
+      larga cuerda, tejida con las propias ramas de la planta. Caminando por el bosque,
+      un joven encontr\xF3 la calabaza, la at\xF3 con lianas y trozos de madera y,
+      con la ayuda de sus amigos, la llev\xF3 de vuelta a la aldea.\nLa madre abri\xF3
+      la calabaza y encontr\xF3 a la india, la hija de la lluvia, que estaba delgada
+      y ten\xEDa el pelo largo porque llevaba mucho tiempo all\xED. Sacaron a la
+      joven, le dieron de comer y le cortaron el pelo. Al ser interrogada, la hija
+      de la lluvia explic\xF3 por qu\xE9 hab\xEDa venido, d\xE1ndoles las semillas
+      enviadas por su padre y haciendo muy felices a todos.\nEl joven que encontr\xF3
+      la calabaza se cas\xF3 con la muchacha y \xE9sta empez\xF3 a vivir de nuevo
+      en la tierra. Con el tiempo, decidi\xF3 visitar a sus padres. Pidi\xF3 a su
+      marido que doblara un \xE1rbol de Pinda\xEDba, llevando la copa al suelo. Se
+      sent\xF3 en ella y, cuando el \xE1rbol se solt\xF3, la india se lanz\xF3 al
+      cielo. Cuando regres\xF3, tra\xEDa consigo a toda su familia y cestas llenas
+      de pl\xE1tanos y otras frutas silvestres.\nBegorotire ense\xF1\xF3 a todos
+      a cultivar las semillas y a cuidar los campos, y luego regres\xF3 a su nuevo
+      hogar. Hasta el d\xEDa de hoy, cuando las plantas necesitan agua, el hombre
+      de la lluvia hace caer truenos sobre los campos para mantenerlos siempre verdes
+      y abundantes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828246278144
+    m_Localized: "El caim\xE1n, su amigo, que vino del bosque al o\xEDr sus gritos
+      de dolor, se qued\xF3 a su puerta, d\xEDa y noche, cuid\xE1ndola. Una noche,
+      el caim\xE1n suplic\xF3 a Cananxiu\xE9 que se apiadara de ella, prometi\xE9ndole
+      marcharse para siempre, no volver a hablar con los humanos y vivir s\xF3lo
+      en las orillas de los r\xEDos si la hac\xEDa feliz de nuevo.\nAl o\xEDrle,
+      Cananxiu\xE9 volvi\xF3 a tomar el cuerpo de un guacamayo rojo y regres\xF3
+      a la Tierra, diciendo a Tain\xE1-Racan: - \"De tus l\xE1grimas nacer\xE1 una
+      planta que crecer\xE1 como un \xE1rbol coronado. Dar\xE1 flores tan fragantes
+      que pacas, venados, carpinchos y lobos vendr\xE1n a comer en las noches de
+      luna. Luego nacer\xE1n los frutos. Dentro de la corteza verde, el fruto ser\xE1
+      dorado como el pelo de Uadi. Pero la semilla estar\xE1 llena de espinas, como
+      las espinas del dolor en el coraz\xF3n de su madre. Su aroma ser\xE1 tan inolvidable
+      como t\xFA lo ser\xE1s siempre para tu amigo caim\xE1n. Y quien lo pruebe nunca
+      lo olvidar\xE1\". Tain\xE1-Racan sonri\xF3 e inmediatamente vio crecer una
+      planta a la que llam\xF3 Tamau\xF3. La misma planta que los indios mehinako
+      del Xingu conocen como akain y que los hombres blancos del Norte, Nordeste
+      y Centro Oeste llaman Pequi. Y cuando Malu\xE1 regres\xF3, encontr\xF3 un hermoso
+      \xE1rbol frondoso, lleno de frutos, llamado pequizeiro. Cogi\xF3 un poco en
+      el suelo, lo abri\xF3, sac\xF3 las semillas doradas y se las comi\xF3, con
+      harina, junto con Tain\xE1-Racan. Y luego se amaron all\xED mismo, a la sombra
+      del pequizeiro. As\xED fue como, durante muchos a\xF1os despu\xE9s, cada vez
+      que el ip\xEA y el anacardo volv\xEDan a florecer en el bosque y el pequi tambi\xE9n
+      dejaba caer al suelo sus frutos maduros, que serv\xEDan de alimento para todos,
+      Tain\xE1-Racan y Malu\xE1 eran bendecidos con m\xE1s hijos. Y por cada ni\xF1o
+      que nac\xEDa, plantaban otro \xE1rbol de pequi. Y tuvieron muchos hijos. Y
+      vivieron felices para siempre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1853068169216
+    m_Localized: "De origen tup\xED, ya que hace referencia al Dios Tup\xE3, la leyenda
+      cuenta el origen de la carnauba, carnauba o carna\xEDba (Copernicia prunifera
+      o cerifera), palmera originaria de las regiones caatingas brasile\xF1as y com\xFAn
+      en todo el Nordeste, que salv\xF3 a un pueblo de la extinci\xF3n. La historia
+      cuenta que este pueblo viv\xEDa feliz con la naturaleza, el sol calentaba las
+      chozas y maduraba los frutos, las nubes daban sombra, la lluvia mojaba las
+      plantas y aumentaba los r\xEDos. Con el tiempo, sin embargo, el sol empez\xF3
+      a calentar mucho: tanto que sec\xF3 los r\xEDos, mat\xF3 plantas y animales.
+      La gente rezaba, bailaba y rogaba a Tup\xE3 que volviera a enviar lluvia, pero
+      el sol segu\xEDa quem\xE1ndolo todo. Entonces la gente empez\xF3 a morir, hasta
+      que de aquel pueblo fuerte s\xF3lo qued\xF3 una pareja y su hijo, obligados
+      a abandonar su tierra en busca de otras mejores. Masticando las ra\xEDces que
+      les quedaban, caminaron toda la noche, y cuando el sol volvi\xF3 a arder en
+      el cielo, el ni\xF1o vio una palmera sola en lo que parec\xEDa un desierto,
+      meciendo sus verdes palmas. Agotados, se detuvieron a descansar a la sombra
+      de aquella palmera y los padres se durmieron. S\xF3lo el hijo segu\xEDa despierto
+      y preocupado, pidiendo ayuda a Tup\xE3. Fue entonces cuando oy\xF3 una voz
+      y vio, en lo alto de la palmera, a una india que le dijo: \"Me llamo Carnaubeira.
+      Estoy aqu\xED para ayudarte. Hace muchos a\xF1os, mi tribu tambi\xE9n fue asolada
+      por la sequ\xEDa. Ayud\xE9 a todos y, cuando mor\xED, la luna me transform\xF3
+      en este \xE1rbol destinado a salvar a los indefensos. Haz lo que te aconsejo
+      y seguir\xE1s siendo feliz. Arranca mi tronco y, con mi savia, sacia la sed
+      de tus padres y la tuya. Come mis frutos y ya no tendr\xE1s hambre. Cuece algunas
+      de mis ra\xEDces, y remedios que, bebidos, cierren las heridas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857535102976
+    m_Localized: "Pon mis hojas a secar y golp\xE9alas, de ellas saldr\xE1 un polvo
+      gris y fragante, mi cera, con la que podr\xE1s alumbrar tu camino en las noches
+      sin luna. Con la paja que quede, teje tu sombrero y tu alfombra. Ahora, te
+      hago una petici\xF3n: planta mis cocos para que tengas un palmeral de carnauba,
+      entonces podr\xE1s construir tu caba\xF1a con la madera de mi tronco. El muchacho
+      hizo todo lo que India le aconsej\xF3. En pocos a\xF1os, un enorme \xE1rbol
+      de carnauba se mec\xEDa con el viento y el peque\xF1o indio, convertido ya
+      en hombre, se despidi\xF3 de sus padres para llevar los cocos de este \"\xE1rbol
+      de la vida\" a todas las aldeas.\n\nEnd\xE9mica de la regi\xF3n semi\xE1rida
+      del nordeste de Brasil, la Copernicia prunifera o cerifera puede alcanzar una
+      altura de 10 a 15 metros, con troncos delgados a veces espinosos en la base
+      o cubiertos de hojas secas. Tambi\xE9n llamada carna\xEDba, carna\xEDva, carna\xFAva
+      y carnanda\xFAba, los nombres populares de la carnauba derivan del tup\xED
+      karana\xFDwa carnauba. Adem\xE1s de ser el \xE1rbol s\xEDmbolo del estado de
+      Cear\xE1, donde abunda, la importancia de la carnauba fue reconocida por grandes
+      escritores brasile\xF1os como M\xE1rio de Andrade, Jos\xE9 de Alencar y Euclides
+      da Cunha. Seg\xFAn la leyenda, la carnauba puede utilizarse en su totalidad:
+      las ra\xEDces, la corteza y el fruto se emplean para producir alimentos y remedios
+      naturales; la madera es excelente para vigas, viguetas o listones utilizados
+      en la construcci\xF3n y el mobiliario; las hojas se convierten en paja para
+      la artesan\xEDa; y su famosa cera, conocida como la \"reina de las ceras\"
+      por su calidad y resistencia, tiene un amplio uso pr\xE1ctico, incluso a escala
+      industrial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110476136448
+    m_Localized: "Regi\xE3o Visitada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4137193852928
+    m_Localized: "Observa\xE7\xF5es sobre o ingrediente"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

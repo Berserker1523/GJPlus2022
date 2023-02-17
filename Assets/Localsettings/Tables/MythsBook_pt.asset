@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MythsBook_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 8a8c794817939ba458237a9fd42a2fee, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 45939707904
+    m_Localized: "\xC1gua"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153280335872
+    m_Localized: "A\xE7a\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178597154816
+    m_Localized: "Carna\xFAba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 554566176768
+    m_Localized: O Homem Chuva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 644823404544
+    m_Localized: "Lenda do A\xE7a\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664394027008
+    m_Localized: "Lenda do Carna\xFAba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730649018368
+    m_Localized: "Begorotire era um \xEDndio feliz. Certo dia, por\xE9m, havendo
+      sido injusti\xE7ado na divis\xE3o da ca\xE7a, ficou furioso, decidindo que
+      sairia \xE0 procura de outro lugar para viver.\r\nCortou os cabelos da esposa
+      e da filha, pintando toda a fam\xEDlia com uma tintura preta que havia retirado
+      do fruto do jenipapo. Pegou um peda\xE7o de madeira pesada e resistente, fazendo
+      a primeira borduna Caiap\xF3, com o cabo tran\xE7ado em preto e a ponta tingida
+      com sangue da ca\xE7a. Chegou ent\xE3o ao alto de uma montanha, levando sua
+      arma, e come\xE7ou a gritar. Seus gritos soaram como fortes trov\xF5es. Girou
+      fortemente a borduna no ar e de suas pontas sa\xEDram rel\xE2mpagos.\r\nEm
+      meio ao barulho e \xE0s luzes, Begorotire subiu aos c\xE9us. Os \xEDndios assustados
+      atiraram suas flechas, mas nada conseguiu impedir que o \xEDndio desaparecesse
+      no firmamento. As nuvens, tamb\xE9m assustadas, derramaram chuva. Por isso
+      Begorotire tornou-se o homem chuva.\r\nTempos depois, levou toda a fam\xEDlia
+      para o c\xE9u, onde nada lhes faltava, e de l\xE1 muito fez para ajudar os
+      que na terra ficaram. Juntou sementes de suas fartas ro\xE7as, secou-as sobre
+      o girau, entregando-as a uma filha para traz\xEA-las.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1765671456768
+    m_Localized: " A \xEDndia desceu dentro de uma caba\xE7a enorme amarrada a uma
+      longa corda, tecida com as pr\xF3prias ramas do vegetal. Caminhando pela floresta,
+      um jovem encontrou a caba\xE7a, amarroua com os cip\xF3s e peda\xE7os de madeira
+      e, com ajuda dos amigos levou-a para a aldeia.\r\nA m\xE3e, abrindo a caba\xE7a,
+      encontrou a \xEDndia, a filha da chuva, que estava magra e com longos cabelos,
+      por l\xE1 haver permanecido muito tempo. A jovem foi retirada e alimentada,
+      e teve seus cabelos aparados. Ao ser indagada, a filha da chuva explicou por
+      que viera, entregando-lhes as sementes enviadas por seu pai e deixando a todos
+      muito felizes.\r\nO jovem que encontrou a caba\xE7a casou-se com a mo\xE7a,
+      passando esta a morar novamente na terra. Com o tempo, resolveu visitar os
+      pais. Pediu ao esposo que vergasse um p\xE9 de Pinda\xEDba, trazendo a copa
+      at\xE9 o ch\xE3o. Sentou-se sobre ela e, ao soltarem a \xE1rvore, a \xEDndia
+      foi lan\xE7ada ao c\xE9u. Ao retornar, trouxe consigo toda a fam\xEDlia e cestos
+      repletos de bananas e outros frutos silvestres.\r\nBegorotire ensinou a todos
+      como cultivar as sementes e cuidar das ro\xE7as, regressando depois ao seu
+      novo lar. At\xE9 hoje, quando as plantas necessitam de \xE1gua, o homem chuva
+      provoca trov\xF5es, fazendo-a cair sobre as ro\xE7as para mant\xEA-las sempre
+      verdes e fartas.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1790329769984
+    m_Localized: "A Lenda do Pequi conta a hist\xF3ria do fruto do amor dos ind\xEDgenas
+      Tain\xE1-Racan e Malu\xE1. Tain\xE1-Racan era uma linda \xEDndia e Malu\xE1
+      um jovem e formoso guerreiro que apaixonou-se assim que a viu. Pouco tempo
+      depois, estavam casados. A vida deles era bela e alegre como o ip\xEA florido.
+      Todas as manh\xE3s, Malu\xE1 sa\xEDa para ca\xE7ar e pescar, enquanto Tain\xE1-Racan
+      tecia e cozinhava para ofertar ao seu amado quando voltasse. Ao seu lado, sempre
+      se deitava um jacar\xE9, lhe fazendo companhia e conversando, pois, nessa \xE9poca,
+      os bichos tamb\xE9m falavam. O tempo foi passando. Ap\xF3s tr\xEAs anos de
+      casamento, deitados numa pedra grande \xE0 beira do rio calmo, indagaram-se
+      porque Cananxiu\xE9 ainda n\xE3o havia enviado o filho t\xE3o esperado. Dois
+      pequenos rios de l\xE1grimas deslizaram pelas faces coradas de Tain\xE1-Racan.
+      Malu\xE1 abra\xE7ou Tain\xE1-Racan e amou-a. Luas depois, quando os ip\xEAs
+      voltaram a florir, nasceu Uadi, o Arco-\xCDris. Era lindo, mas havia nele algo
+      diferente, que espantou o pai, a m\xE3e, a tribo inteira: Uadi tinha os cabelos
+      dourados como as flores do ip\xEA amarelo. Malu\xE1 recebeu o nascimento do
+      filho com alegria e para explicar a sua diferen\xE7a, espalhou pela tribo que
+      Uadi era filho de Cananxiu\xE9. No entanto, os pr\xF3prios \xEDndios de sua
+      tribo zombavam-no, dizendo que Uadi era filho do jacar\xE9. Alheio \xE0s piadas
+      maldosas, o menino crescia cheio de encanto, alegria, e com uma intelig\xEAncia
+      incomum. Um dia, Malu\xE1 foi chamado para a despedida, seus bracinhos agarram-se
+      ao pesco\xE7o do pai, e ele falou: \u201CPapai, tamb\xE9m estou indo embora.
+      Vou pra casa de minha m\xE3e, l\xE1 no c\xE9u\u201D. O corpo do guerreiro se
+      estremeceu. Nesse momento, Cananxui\xE9, desceu do c\xE9u sob a forma de Andrerura
+      \u2013 a arara vermelha, e gritou forte:  \u2013 \u201CVim buscar meu filho!\u201D.
+      Tain\xE1-Racan e Malu\xE1 ca\xEDram de joelhos. O guerreiro abriu os bra\xE7os
+      gritando  \u2013 \u201C Devolve meu filho!\u201D O grito de Malu\xE1 ecoou
+      pela mata, ferindo de dor o sil\xEAncio. Malu\xE1 partiu e Tain\xE1-Racan chorou
+      tr\xEAs dias e tr\xEAs noites"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828246278144
+    m_Localized: "O jacar\xE9, seu amigo, que veio da mata ao escutar os seus gritos
+      de dor, ficava deitado \xE0 sua porta, dia e noite, tomando conta dela. Uma
+      noite, o jacar\xE9 implorou a Cananxiu\xE9 que tivesse piedade, prometendo
+      ir embora para sempre, nunca mais falar com os humanos e morar somente nas
+      margens dos rios, se a fizesse novamente feliz.\r\nOuvindo-o, Cananxiu\xE9
+      tomou novamente o corpo de uma arara vermelha e voltou \xE0 Terra, dizendo
+      a Tain\xE1-Racan: \u2013 \u201CDas suas l\xE1grimas nascer\xE1 uma planta,
+      que crescer\xE1 como uma \xE1rvore copada. Ela dar\xE1 flores t\xE3o cheirosas
+      que as pacas, veados, capivaras e os lobos vir\xE3o comer nas noites de luar.
+      Depois, nascer\xE3o frutos. Dentro da casca verde, os frutos ser\xE3o dourados
+      como os cabelos de Uadi. Mas a semente ser\xE1 cheia de espinhos, como os espinhos
+      da dor de seu cora\xE7\xE3o de m\xE3e. Seu aroma ser\xE1 t\xE3o inesquec\xEDvel,
+      como voc\xEA o ser\xE1 sempre para o seu amigo jacar\xE9. E aquele que o provar,
+      jamais o esquecer\xE1.\u201D Tain\xE1-Racan sorriu e imediatamente viu nascer
+      uma planta, que chamou de Tamau\xF3. A mesma que os \xEDndios Mehinako, do
+      Xingu, conhecem como akain; e que os homens brancos, do Norte, Nordeste e Centro-Oeste
+      chamam de Pequi. E, quando Malu\xE1 voltou, encontrou uma linda e frondosa
+      \xE1rvore, cheia de frutos, chamada de pequizeiro. Ele pegou alguns no ch\xE3o,
+      partiu, tirou os caro\xE7os dourados e os comeu, com farinha, junto com Tain\xE1-Racan.
+      E depois, se amaram ali mesmo \xE0 sombra do pequizeiro. Foi assim que, durante
+      muitos anos a seguir, sempre que os ip\xEAs e os cajueiros voltavam a florir
+      nas matas e os pequizeiros tamb\xE9m deixavam seus frutos maduros cair na terra,
+      servindo de alimentos para todos, Tain\xE1-Racan e Malu\xE1 eram aben\xE7oados
+      com mais filhos. E, a cada filho que nascia, plantavam mais um pequizeiro.
+      E eles tiveram muitos filhos. E viveram felizes para sempre.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1853068169216
+    m_Localized: "De origem tupi, como se refere ao Deus Tup\xE3, a lenda conta a
+      origem da carna\xFAba, carnaubeira ou carna\xEDba (Copernicia prunifera ou
+      cerifera), palmeira nativa das regi\xF5es caatinga brasileira e comum em todo
+      o Nordeste, que salvou um povo da extin\xE7\xE3o. A hist\xF3ria conta que este
+      povo viveu feliz com a natureza, o sol aqueceu as cabanas e amadureceu os frutos,
+      as nuvens deram sombra, a chuva molhou as plantas e aumentou os rios. Com o
+      tempo, por\xE9m, o sol come\xE7ou a ficar muito quente: t\xE3o quente que secou
+      os rios, matou plantas e animais. As pessoas rezavam, dan\xE7avam e imploravam
+      a Tup\xE3 para mandar a chuva novamente, mas o sol continuava queimando tudo.
+      Ent\xE3o as pessoas come\xE7aram a morrer, at\xE9 que aquele povo forte s\xF3
+      deixou um casal e seu filho, for\xE7ados a abandonar suas terras em busca de
+      outras melhores. Mastigando as ra\xEDzes que lhes restavam, eles caminharam
+      a noite toda, e quando novamente o sol queimou no c\xE9u, o menino viu uma
+      palmeira sozinha, no que parecia ser um deserto, balan\xE7ando suas palmeiras
+      verdes. Exausto, eles pararam para descansar \xE0 sombra daquela palmeira e
+      os pais adormeceram. Somente o filho ainda estava acordado e preocupado, pedindo
+      ajuda a Tup\xE3. Foi quando ele ouviu uma voz e viu, no alto da palmeira, uma
+      mulher indiana, que lhe disse: \"Meu nome \xE9 Carnaubeira. Estou aqui para
+      ajud\xE1-la. H\xE1 muitos anos atr\xE1s, minha tribo tamb\xE9m foi assolada
+      pela seca. Ajudei a todos, e quando morri, a lua me transformou nesta \xE1rvore
+      destinada a salvar os indefesos. Fa\xE7a o que eu lhe aconselho e voc\xEA ainda
+      ser\xE1 feliz. Remova meu tronco, e com minha seiva, sacie a sede de seus pais
+      e a sua. Coma meus frutos, e n\xE3o ter\xE1 mais fome. Cozinhe algumas de minhas
+      ra\xEDzes, e rem\xE9dios que, b\xEAbados, fecham as feridas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857535102976
+    m_Localized: "Ponha minhas folhas para secar e bata-as, um p\xF3 cinza e perfumado
+      sair\xE1 delas, minha cera, com a qual voc\xEA poder\xE1 iluminar seu caminho
+      em noites sem lua. Da palha que sobra, teca seu chap\xE9u e seu tapete. Agora,
+      fa\xE7o um pedido a voc\xEA: plante meus cocos para que voc\xEA tenha um carnaubal,
+      depois voc\xEA pode construir sua cabana com a madeira do meu tronco\". O menino
+      fez tudo o que a \xCDndia o aconselhou a fazer. Em poucos anos, uma enorme
+      carnaubeira balan\xE7ou ao vento e o pequeno indiano, agora um homem, despediu-se
+      de seus pais para levar os cocos desta \"\xE1rvore da vida\" para todas as
+      aldeias.\r\n\r\nEnd\xEAmica da regi\xE3o semi-\xE1rida do Nordeste do Brasil,
+      Copernicia prunifera ou cerifera pode atingir de 10 a 15 metros de altura,
+      com troncos finos que \xE0s vezes s\xE3o espinhosos na base ou cobertos de
+      folhas secas. Tamb\xE9m chamada carna\xEDba, carna\xEDva, carna\xFAva e carnanda\xFAba,
+      os nomes populares da carna\xFAba derivam da carna\xFAba Tupi karana\xFDwa.
+      Al\xE9m de ser a \xE1rvore s\xEDmbolo do estado do Cear\xE1, onde ela \xE9
+      abundantemente encontrada, a import\xE2ncia da carna\xFAba foi reconhecida
+      por grandes escritores brasileiros como M\xE1rio de Andrade, Jos\xE9 de Alencar
+      e Euclides da Cunha. Segundo a lenda, a carna\xFAba pode ser utilizada em sua
+      totalidade: as ra\xEDzes, casca e frutas s\xE3o utilizadas para produzir alimentos
+      e rem\xE9dios naturais; a madeira \xE9 excelente para vigas, vigas ou ripas
+      utilizadas na constru\xE7\xE3o civil e em m\xF3veis; as folhas se tornam palha
+      para o artesanato; e sua famosa cera, conhecida como \"rainha das ceras\" por
+      sua qualidade e resist\xEAncia, tem amplo uso pr\xE1tico, inclusive em escala
+      industrial.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110476136448
+    m_Localized: "Regi\xF3n Visitada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4137193852928
+    m_Localized: Observaciones del ingrediente
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

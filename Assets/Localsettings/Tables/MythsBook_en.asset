@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MythsBook_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8a8c794817939ba458237a9fd42a2fee, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 45939707904
+    m_Localized: Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153280335872
+    m_Localized: Acai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178597154816
+    m_Localized: Carnauba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 554566176768
+    m_Localized: The Rain Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 644823404544
+    m_Localized: Acai Legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664394027008
+    m_Localized: Carnauba Legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730649018368
+    m_Localized: "Begorotire was a happy Indian. One day, however, having been wronged
+      in the hunting division, he was furious, deciding that he would leave in search
+      of another place to live. He cut the hair of his wife and daughter, painting
+      the whole family with a black dye he had taken from the genipap fruit. He took
+      a heavy, sturdy piece of wood, making the first Caiap\xF3 club, with the handle
+      braided in black and the tip stained with the blood of the game. He then reached
+      the top of a mountain, carrying his weapon, and began to scream. His screams
+      sounded like heavy thunder. He swung the club sharply in the air and lightning
+      flashed from its ends. Amidst the noise and lights, Begorotire soared into
+      the skies. The frightened Indians shot their arrows, but nothing could prevent
+      the Indian from disappearing into the sky. The clouds, also frightened, poured
+      rain. That's why Begorotire became the rain man. Later, he took the whole family
+      to heaven, where they lacked nothing, and from there he did much to help those
+      who remained on earth. He gathered seeds from his bountiful gardens, dried
+      them on the girau, giving them to a daughter to bring. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1765671456768
+    m_Localized: "The Indian descended inside a huge gourd tied to a long rope, woven
+      with the plant's own branches. Walking through the forest, a young man found
+      the gourd, tied it with vines and pieces of wood and, with the help of his
+      friends, took it to the village. The mother, opening the gourd, found the Indian
+      woman, the daughter of the rain, who was thin and had long hair, having remained
+      there for a long time. The young woman was taken out and fed, and her hair
+      was trimmed. When asked, the daughter of rain explained why she had come, giving
+      them the seeds sent by her father and making everyone very happy. The young
+      man who found the gourd married the girl, and the girl began to live on earth
+      again. Eventually, he decided to visit his parents. He asked her husband to
+      bend a Pinda\xEDba foot, bringing the canopy to the ground. He sat on it, and
+      when the tree was released, the Indian was thrown into the sky. When he returned,
+      he brought with him the whole family and baskets full of bananas and other
+      wild fruits. Begorotire taught everyone how to grow the seeds and tend the
+      gardens, then returned to his new home. Even today, when plants need water,
+      the rain man causes thunder, causing it to fall on the gardens to keep them
+      always green and abundant. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1790329769984
+    m_Localized: "Pequi Legend tells the story of the fruit of the love of the Tain\xE1-Racan
+      and Malu\xE1 Indians. Tain\xE1-Racan was a beautiful Indian and Malu\xE1 a
+      young and beautiful warrior who fell in love as soon as he saw her. Shortly
+      thereafter, they were married. Their lives were as beautiful and happy as the
+      flowering ip\xEA. Every morning, Malu\xE1 went out to hunt and fish, while
+      Tain\xE1-Racan weaved and cooked to offer to her lover when he returned. Beside
+      him, an alligator always lay down, keeping him company and talking, because,
+      at that time, the animals also talked. The time was passing. After three years
+      of marriage, lying on a large rock by the calm river, they asked themselves
+      why Cananxiu\xE9 still hadn't sent the long-awaited son. Two small rivers of
+      tears ran down Taina-Racan's flushed cheeks. Malu\xE1 embraced Taina-Racan
+      and loved her. Moons later, when the ip\xEAs began to bloom again, Uadi, the
+      Rainbow, was born. He was beautiful, but there was something different about
+      him that amazed his father, mother, the entire tribe: Uadi had golden hair
+      like the flowers of the yellow ip\xEA. Malu\xE1 welcomed the birth of his son
+      with joy and to explain his difference, spread throughout the tribe that Uadi
+      was the son of Cananxiu\xE9. However, the Indians of his tribe mocked him,
+      saying that Uadi was the son of the alligator. Oblivious to malicious jokes,
+      the boy grew up full of charm, joy, and an unusual intelligence. One day, Malu\xE1
+      was called to say goodbye, his little arms wrapped around his father's neck,
+      and he said: \u201CDaddy, I'm leaving too. I'm going to my mother's house,
+      up in heaven\u201D. The warrior's body shuddered. At that moment, Cananxui\xE9,
+      came down from the sky in the form of Andrerura \u2013 the red macaw, and shouted
+      loudly: \u2013 \u201CI came to get my son!\u201D. Tain\xE1-Racan and Malu\xE1
+      fell to their knees. The warrior opened his arms shouting \u2013 \u201CGive
+      me back my son!\u201D Malu\xE1's cry echoed through the forest, hurting the
+      silence with pain. Malu\xE1 left and Taina-Racan wept three days and three
+      nights. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1828246278144
+    m_Localized: "The alligator, his friend, who came from the forest when he heard
+      his cries of pain, would lie at his door, day and night, taking care of her.
+      One night, the alligator begged Cananxiu\xE9 to have mercy, promising to leave
+      forever, never to speak to humans again, and to live only on the banks of rivers,
+      if he would make her happy again. Hearing him, Cananxiu\xE9 took the body of
+      a red macaw again and returned to Earth, saying to Taina-Racan: \u2013 \u201CFrom
+      your tears a plant will be born, which will grow like a leafy tree. It will
+      give such fragrant flowers that pacas, deer, capybaras and wolves will come
+      to eat on moonlit nights. Then, fruits will be born. Inside the green shell,
+      the fruits will be golden like the hair of Wadi. But the seed will be full
+      of thorns, like the thorns of the pain of your mother's heart. Your scent will
+      be as unforgettable as you will always be for your alligator friend. And whoever
+      tastes it will never forget it.\u201D Tain\xE1-Racan smiled and immediately
+      saw a plant grow, which he called Tamau\xF3. The same one that the Mehinako
+      Indians of the Xingu know as akain; and that white men from the North, Northeast
+      and Midwest call Pequi. And when Malu\xE1 returned, she found a beautiful and
+      leafy tree, full of fruits, called a pequizeiro. He took some from the ground,
+      broke them, removed the golden kernels and ate them, with flour, along with
+      Taina-Racan. And then they made love right there in the shade of the pequi
+      tree. This is how, for many years to come, whenever the ip\xEA and cashew trees
+      returned to bloom in the forests and the pequi trees also dropped their ripe
+      fruits on the ground, serving as food for everyone, Tain\xE1-Racan and Malu\xE1
+      were blessed with more children. . And for each child that was born, they planted
+      another pequi tree. And they had many children. And they lived happily ever
+      after. The name pequi, py (skin) + qui (thorn), with origin in the Tupi language
+      refers to the thorns in the core, in its scientific name Caryocar brasiliense
+      Cambess, the genus Caryocar comes from the Greek caryon (core or nut) + kara
+      (head ), referring to the globose fruit, the specific epithet brasiliense is
+      given because this species is originally from Brazil. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1853068169216
+    m_Localized: "Of Tupi origin, as it refers to the God Tup\xE3, the legend tells
+      the origin of carnauba, carnaubeira or carna\xEDba (Copernicia prunifera or
+      cerifera), a palm native to the Brazilian Caatinga regions and common throughout
+      the Northeast, which saved a people from extinction. The story tells that these
+      people lived happily with Nature, the sun warmed the huts and ripened the fruits,
+      the clouds gave shade, the rain wet the plants and increased the rivers. Over
+      time, however, the sun began to get very hot: so hot that it dried up rivers,
+      killed plants and animals. The people prayed, danced and begged Tup\xE3 to
+      send the rain again, but the sun kept burning everything. Then people began
+      to die, until that strong people only left a couple and their son, forced to
+      abandon their lands in search of better ones. Chewing the roots that were left
+      to them, they walked all night, and when again the sun burned in the sky, the
+      boy saw a palm tree alone, in what looked like a desert, swaying its green
+      palms. Exhausted, they stopped to rest in the shade of that palm tree and the
+      parents fell asleep. Only the son was still awake and worried, asking Tup\xE3
+      for help. It was when he heard a voice and saw, at the top of the palm tree,
+      an Indian woman, who said to him: \u201CMy name is Carnaubeira. I'm here to
+      help you. Many years ago my tribe was also plagued by drought. I helped everyone,
+      and when I died, the moon turned me into this tree destined to save the helpless.
+      Do what I advise you and you will still be happy. Hew my trunk, and with my
+      sap, quench your parents' thirst and yours. Eat my fruits, and you won't be
+      hungry anymore. Cook some of my roots, and medicine that, drunk, closes the
+      wounds."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1857535102976
+    m_Localized: "Put my leaves to dry and beat them, a gray and fragrant powder
+      will come out of them, my wax, with which you will be able to light your way
+      on moonless nights. From the straw that remains, weave your hat and mat. Now,
+      I make a request of you: plant my coconuts so that you have a carnaubal, then
+      you can build your hut with the wood of my trunk.\u201D The boy did everything
+      the India advised him to do. Within a few years, a huge carnauba tree swayed
+      in the wind, and the little Indian, now a man, said goodbye to his parents
+      to take the coconuts from this \u201Ctree of life\u201D to all the villages.
+      Endemic to the semi-arid region of Northeast Brazil, Copernicia prunifera or
+      cerifera can reach 10 to 15 meters in height, with thin trunks that are sometimes
+      prickly at the base or covered with dried leaves. Also called carna\xEDba,
+      carna\xEDva, carna\xFAva and carnanda\xFAba, the popular names of the carnauba
+      tree derive from the Tupi karana\xFDwa. In addition to being the symbol tree
+      of the state of Cear\xE1, where it is abundantly found, the importance of carnauba
+      was recognized by great Brazilian writers such as M\xE1rio de Andrade, Jos\xE9
+      de Alencar and Euclides da Cunha. According to legend, carnauba can be used
+      in its entirety: the roots, bark and fruits are used to produce food and natural
+      remedies; wood is excellent for rafters, joists or battens used in construction
+      and furniture; leaves become straw for crafts; and its famous wax, known as
+      \"queen of waxes\" for its quality and resistance, has wide practical use,
+      including on an industrial scale. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110476136448
+    m_Localized: Visited Region
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4137193852928
+    m_Localized: Ingredient Observations
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
