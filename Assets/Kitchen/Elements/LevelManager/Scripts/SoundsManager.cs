@@ -1,10 +1,13 @@
 using UnityEngine;
 using FMODUnity;
+using FMOD.Studio;
+using System.Collections;
 
 namespace Kitchen
 { 
     public class SoundsManager : MonoBehaviour
     {
+        [Header("SFX Dictionary")]
         //Clients SFX Events
         string clientArriveEvent = "event:/SFX/Clientes/Llega Cliente";
         string clientDieEvent = "event:/SFX/Clientes/Muere Cliente";
@@ -22,6 +25,10 @@ namespace Kitchen
         string failedRecipeEvent = "";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
+        //InGameEvents
+        public static string backgroundMusic = "event:/Music/MusicaFondo";
+        public static string hurryParameter = "";
+
         //Game Status SFX Events
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
         string lostEvent = "event:/SFX/Jugabilidad/Pierde Nivel";
@@ -32,10 +39,9 @@ namespace Kitchen
         //History Book Events
         string unlockedButtonEvent = "";
         string lockedButtonEvent = "";
-
+        
         //Note: Upgrades are deactivated in-game 
         string upgradeEvent = "event:/SFX/Jugabilidad/Upgrade";
-
 
         private void Awake()
         {
@@ -93,8 +99,7 @@ namespace Kitchen
 
         //History Book SFX
         void PlayLockedButtonSFX() =>PlaySFX(lockedButtonEvent);
-        void PlayUnLockedButtonSFX() =>PlaySFX(unlockedButtonEvent);
-
+        void PlayUnLockedButtonSFX() =>PlaySFX(unlockedButtonEvent);    
     }
 }
 
