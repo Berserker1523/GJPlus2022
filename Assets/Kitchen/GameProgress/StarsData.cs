@@ -11,9 +11,9 @@ namespace Kitchen
 
         private void OnEnable()
         {
-            EventManager.AddListener(GoalEvent.Goal, SetGoalStar);
-            EventManager.AddListener(GoalEvent.Speed, SetSpeedStar);
-            EventManager.AddListener(GoalEvent.Streak, SetStreak);
+            EventManager.AddListener(LevelEvents.Goal, SetGoalStar);
+            EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
+            EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
         }
 

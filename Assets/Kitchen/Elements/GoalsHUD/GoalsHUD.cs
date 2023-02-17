@@ -15,6 +15,7 @@ namespace Kitchen
         [SerializeField] private Image[] stars = new Image[3];
         [SerializeField] private int currentTime;
         [SerializeField] private int currentGoal;
+        [SerializeField] private bool hurryDispatched;
 
         private void Awake()
         {
@@ -53,8 +54,12 @@ namespace Kitchen
 
                 if (currentTime < 10)
                     speedText.color = Color.red;
-                else if (currentTime < 30)
+                else if (currentTime < 30  && !hurryDispatched)
+                {
                     speedText.color = Color.yellow;
+                    EventManager.Dispatch(LevelEvents.Hurry);
+                    hurryDispatched = true;
+                }
 
                 yield return wait;
 
@@ -71,13 +76,13 @@ namespace Kitchen
             if (currentGoal <= 0)
             {
                 stars[0].color = Color.white;
-                EventManager.Dispatch(GoalEvent.Goal);
+                EventManager.Dispatch(LevelEvents.Goal);
 
                 //Time Star
                 if (currentTime > 0)
                 {
                     stars[1].color = Color.white;
-                    EventManager.Dispatch(GoalEvent.Speed);
+                    EventManager.Dispatch(LevelEvents.Speed);
                 }
             }
         }

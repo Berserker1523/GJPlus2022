@@ -40,13 +40,13 @@ namespace Kitchen
                 for(int i=0; i<stars.Length; i++)
                 {
                     stars[i] = gameData.stars[level-1, i];
-                    Debug.Log(gameData.stars[level-1, i]);
+                   // Debug.Log(gameData.stars[level-1, i]);
 
                 }
             }
-            EventManager.AddListener(GoalEvent.Goal, SetGoalStar);
-            EventManager.AddListener(GoalEvent.Speed, SetSpeedStar);
-            EventManager.AddListener(GoalEvent.Streak, SetStreak);
+            EventManager.AddListener(LevelEvents.Goal, SetGoalStar);
+            EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
+            EventManager.AddListener(LevelEvents.Streak, SetStreak);
         }
 
         public void SetGoalStar()
