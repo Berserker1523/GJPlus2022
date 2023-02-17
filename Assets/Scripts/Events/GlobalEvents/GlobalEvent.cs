@@ -2,7 +2,9 @@ namespace Events
 {
     public enum GlobalEvent
     {
-        Play
+        Play,
+        Unlocked,
+        Locked
     }
 
 }

@@ -29,6 +29,10 @@ namespace Kitchen
         //Main Menu Events
         string playButtonEvent = "";
 
+        //History Book Events
+        string unlockedButtonEvent = "";
+        string lockedButtonEvent = "";
+
         //Note: Upgrades are deactivated in-game 
         string upgradeEvent = "event:/SFX/Jugabilidad/Upgrade";
 
@@ -56,6 +60,10 @@ namespace Kitchen
 
             //Main Menu SFX
             Events.EventManager.AddListener(Events.GlobalEvent.Play, PlayplayButtonSFX);
+
+            //History Book SFX
+            Events.EventManager.AddListener(Events.GlobalEvent.Locked, PlayLockedButtonSFX);
+            Events.EventManager.AddListener(Events.GlobalEvent.Unlocked, PlayUnLockedButtonSFX);
         }
 
         void PlaySFX(string sFX) =>
@@ -82,6 +90,10 @@ namespace Kitchen
 
         //Main Menu SFX
         void PlayplayButtonSFX() => PlaySFX(playButtonEvent);
+
+        //History Book SFX
+        void PlayLockedButtonSFX() =>PlaySFX(lockedButtonEvent);
+        void PlayUnLockedButtonSFX() =>PlaySFX(unlockedButtonEvent);
 
     }
 }

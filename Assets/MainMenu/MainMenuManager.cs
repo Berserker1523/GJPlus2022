@@ -19,6 +19,7 @@ namespace Mainmenu
         public void Awake()
         {
             settingsPanel.SetActive(false);
+            new GameObject("SoundsManager").AddComponent<SoundsManager>();
         }
 
         public void PlayGame()=>     

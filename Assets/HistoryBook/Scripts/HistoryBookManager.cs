@@ -22,6 +22,7 @@ namespace HistoryBook {
         [SerializeField] public Image associatedIngredient;
 
         [SerializeField] private GameObject buttonPrefab;
+        [SerializeField] private GameObject buttonLockedPrefab;
         [SerializeField] private Transform mythsList;
         [SerializeField] private Scrollbar scrollbar;
 
@@ -42,15 +43,17 @@ namespace HistoryBook {
         private void Awake()
         {
             buttonPrefab = Resources.Load<GameObject>("BookEntryButton");
+            buttonLockedPrefab = Resources.Load<GameObject>("BookEntryButtonLocked");
+            new GameObject("SoundsManager").AddComponent<SoundsManager>();
             //DefaultEntrySetted += SetDefaultEntry;     
             EventManager.AddListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
             selectedTagColor = new Color(255f / 255f, 227f / 255f, 83f / 255f);
             unselectedTagColor = new Color(113f / 255f, 79f / 255f, 35f / 255f);
+
         }
 
         private void OnDestroy()
         {
-            //DefaultEntrySetted -= SetDefaultEntry;
             EventManager.RemoveListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
         }
 
@@ -65,8 +68,7 @@ namespace HistoryBook {
             foreach (Myth myth in mythsDatabase.myths)
             {
                 GameObject button = Instantiate(buttonPrefab, mythsList);
-                //button.name = myth.name;
-                //button.GetComponentInChildren<LocalizeStringEvent>().StringReference = myth.name;
+
                 button.GetComponentsInChildren<Image>()[1].sprite = myth.ingredientSprite;
                 Button newbutton = button.GetComponent<Button>();
                 buttonsList.Add(newbutton);
@@ -76,8 +78,17 @@ namespace HistoryBook {
                 if (buttonsList.Count >= 3)
                     break;
             }
-            // DefaultEntrySetted?.Invoke(0);
+
+            //Myths limitation for vertical slice
+                GameObject buttonlocked1 =   Instantiate(buttonLockedPrefab, mythsList);
+                GameObject buttonlocked2 = Instantiate(buttonLockedPrefab, mythsList);
+
+                buttonlocked1.GetComponent<Button>().onClick.AddListener(HandleClickLockedButton);
+                buttonlocked2.GetComponent<Button>().onClick.AddListener(HandleClickLockedButton);
+
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
+
+
 
         }
 
@@ -108,6 +119,7 @@ namespace HistoryBook {
 
             historyText.text = mythText;
 
+            EventManager.Dispatch(GlobalEvent.Unlocked);
             UpdateButtonTags(buttonPos);
         }
 
@@ -144,5 +156,8 @@ namespace HistoryBook {
         {
             SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
         }
+
+        public void HandleClickLockedButton() =>
+            EventManager.Dispatch(GlobalEvent.Locked);
     }
 }
