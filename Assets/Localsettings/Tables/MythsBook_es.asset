@@ -207,6 +207,14 @@ MonoBehaviour:
     m_Localized: "Observa\xE7\xF5es sobre o ingrediente"
     m_Metadata:
       m_Items: []
+  - m_Id: 6637615599616
+    m_Localized: Pequi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6742695497728
+    m_Localized: Lenda do Pequi
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
