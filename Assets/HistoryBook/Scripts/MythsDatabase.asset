@@ -16,7 +16,8 @@ MonoBehaviour:
   - ingredient: 6
     name: The Rain Man
     region: 
-    description: "Begorotire was a happy Indian. One day, however, having been wronged
+    description: 
+    mythP1: "Begorotire was a happy Indian. One day, however, having been wronged
       in the hunting division, he was furious, deciding that he would leave in search
       of another place to live. He cut the hair of his wife and daughter, painting
       the whole family with a black dye he had taken from the genipap fruit. He took
@@ -30,57 +31,58 @@ MonoBehaviour:
       rain. That's why Begorotire became the rain man. Later, he took the whole family
       to heaven, where they lacked nothing, and from there he did much to help those
       who remained on earth. He gathered seeds from his bountiful gardens, dried
-      them on the girau, giving them to a daughter to bring. The Indian descended
-      inside a huge gourd tied to a long rope, woven with the plant's own branches.
-      Walking through the forest, a young man found the gourd, tied it with vines
-      and pieces of wood and, with the help of his friends, took it to the village.
-      The mother, opening the gourd, found the Indian woman, the daughter of the
-      rain, who was thin and had long hair, having remained there for a long time.
-      The young woman was taken out and fed, and her hair was trimmed. When asked,
-      the daughter of rain explained why she had come, giving them the seeds sent
-      by her father and making everyone very happy. The young man who found the gourd
-      married the girl, and the girl began to live on earth again. Eventually, he
-      decided to visit his parents. He asked her husband to bend a Pinda\xEDba foot,
-      bringing the canopy to the ground. He sat on it, and when the tree was released,
-      the Indian was thrown into the sky. When he returned, he brought with him the
-      whole family and baskets full of bananas and other wild fruits. Begorotire
-      taught everyone how to grow the seeds and tend the gardens, then returned to
-      his new home. Even today, when plants need water, the rain man causes thunder,
-      causing it to fall on the gardens to keep them always green and abundant."
-    mythP1: 
-    mythP2: 
+      them on the girau, giving them to a daughter to bring. "
+    mythP2: "The Indian descended inside a huge gourd tied to a long rope, woven
+      with the plant's own branches. Walking through the forest, a young man found
+      the gourd, tied it with vines and pieces of wood and, with the help of his
+      friends, took it to the village. The mother, opening the gourd, found the Indian
+      woman, the daughter of the rain, who was thin and had long hair, having remained
+      there for a long time. The young woman was taken out and fed, and her hair
+      was trimmed. When asked, the daughter of rain explained why she had come, giving
+      them the seeds sent by her father and making everyone very happy. The young
+      man who found the gourd married the girl, and the girl began to live on earth
+      again. Eventually, he decided to visit his parents. He asked her husband to
+      bend a Pinda\xEDba foot, bringing the canopy to the ground. He sat on it, and
+      when the tree was released, the Indian was thrown into the sky. When he returned,
+      he brought with him the whole family and baskets full of bananas and other
+      wild fruits. Begorotire taught everyone how to grow the seeds and tend the
+      gardens, then returned to his new home. Even today, when plants need water,
+      the rain man causes thunder, causing it to fall on the gardens to keep them
+      always green and abundant. "
     ingredientSprite: {fileID: 1219516042, guid: 6eed2882c06601e4780bedff55d32df5, type: 3}
   - ingredient: 2
     name: Pequi Leyend
     region: 
-    description: "A Lenda do Pequi tells the story of the fruit of the love of the
-      Tain\xE1-Racan and Malu\xE1 Indians. Tain\xE1-Racan was a beautiful Indian
-      and Malu\xE1 a young and beautiful warrior who fell in love as soon as he saw
-      her. Shortly thereafter, they were married. Their lives were as beautiful and
-      happy as the flowering ip\xEA. Every morning, Malu\xE1 went out to hunt and
-      fish, while Tain\xE1-Racan weaved and cooked to offer to her lover when he
-      returned. Beside him, an alligator always lay down, keeping him company and
-      talking, because, at that time, the animals also talked. The time was passing.
-      After three years of marriage, lying on a large rock by the calm river, they
-      asked themselves why Cananxiu\xE9 still hadn't sent the long-awaited son. Two
-      small rivers of tears ran down Taina-Racan's flushed cheeks. Malu\xE1 embraced
-      Taina-Racan and loved her. Moons later, when the ip\xEAs began to bloom again,
-      Uadi, the Rainbow, was born. He was beautiful, but there was something different
-      about him that amazed his father, mother, the entire tribe: Uadi had golden
-      hair like the flowers of the yellow ip\xEA. Malu\xE1 welcomed the birth of
-      his son with joy and to explain his difference, spread throughout the tribe
-      that Uadi was the son of Cananxiu\xE9. However, the Indians of his tribe mocked
-      him, saying that Uadi was the son of the alligator. Oblivious to malicious
-      jokes, the boy grew up full of charm, joy, and an unusual intelligence. One
-      day, Malu\xE1 was called to say goodbye, his little arms wrapped around his
-      father's neck, and he said: \u201CDaddy, I'm leaving too. I'm going to my mother's
-      house, up in heaven\u201D. The warrior's body shuddered. At that moment, Cananxui\xE9,
+    description: 
+    mythP1: "A Lenda do Pequi tells the story of the fruit of the love of the Tain\xE1-Racan
+      and Malu\xE1 Indians. Tain\xE1-Racan was a beautiful Indian and Malu\xE1 a
+      young and beautiful warrior who fell in love as soon as he saw her. Shortly
+      thereafter, they were married. Their lives were as beautiful and happy as the
+      flowering ip\xEA. Every morning, Malu\xE1 went out to hunt and fish, while
+      Tain\xE1-Racan weaved and cooked to offer to her lover when he returned. Beside
+      him, an alligator always lay down, keeping him company and talking, because,
+      at that time, the animals also talked. The time was passing. After three years
+      of marriage, lying on a large rock by the calm river, they asked themselves
+      why Cananxiu\xE9 still hadn't sent the long-awaited son. Two small rivers of
+      tears ran down Taina-Racan's flushed cheeks. Malu\xE1 embraced Taina-Racan
+      and loved her. Moons later, when the ip\xEAs began to bloom again, Uadi, the
+      Rainbow, was born. He was beautiful, but there was something different about
+      him that amazed his father, mother, the entire tribe: Uadi had golden hair
+      like the flowers of the yellow ip\xEA. Malu\xE1 welcomed the birth of his son
+      with joy and to explain his difference, spread throughout the tribe that Uadi
+      was the son of Cananxiu\xE9. However, the Indians of his tribe mocked him,
+      saying that Uadi was the son of the alligator. Oblivious to malicious jokes,
+      the boy grew up full of charm, joy, and an unusual intelligence. One day, Malu\xE1
+      was called to say goodbye, his little arms wrapped around his father's neck,
+      and he said: \u201CDaddy, I'm leaving too. I'm going to my mother's house,
+      up in heaven\u201D. The warrior's body shuddered. At that moment, Cananxui\xE9,
       came down from the sky in the form of Andrerura \u2013 the red macaw, and shouted
       loudly: \u2013 \u201CI came to get my son!\u201D. Tain\xE1-Racan and Malu\xE1
       fell to their knees. The warrior opened his arms shouting \u2013 \u201CGive
       me back my son!\u201D Malu\xE1's cry echoed through the forest, hurting the
       silence with pain. Malu\xE1 left and Taina-Racan wept three days and three
-      nights. The alligator, his friend, who came from the forest when he heard his
+      nights. "
+    mythP2: "The alligator, his friend, who came from the forest when he heard his
       cries of pain, would lie at his door, day and night, taking care of her. One
       night, the alligator begged Cananxiu\xE9 to have mercy, promising to leave
       forever, never to speak to humans again, and to live only on the banks of rivers,
@@ -108,36 +110,35 @@ MonoBehaviour:
       refers to the thorns in the core, in its scientific name Caryocar brasiliense
       Cambess, the genus Caryocar comes from the Greek caryon (core or nut) + kara
       (head ), referring to the globose fruit, the specific epithet brasiliense is
-      given because this species is originally from Brazil."
-    mythP1: 
-    mythP2: 
+      given because this species is originally from Brazil. "
     ingredientSprite: {fileID: -2004986893, guid: dc2f5022274368448a07b8625ca149e8, type: 3}
   - ingredient: 1
     name: "Carna\xFAba Legend"
     region: 
-    description: "Of Tupi origin, as it refers to the God Tup\xE3, the legend tells
-      the origin of carnauba, carnaubeira or carna\xEDba (Copernicia prunifera or
-      cerifera), a palm native to the Brazilian Caatinga regions and common throughout
-      the Northeast, which saved a people from extinction. The story tells that these
-      people lived happily with Nature, the sun warmed the huts and ripened the fruits,
-      the clouds gave shade, the rain wet the plants and increased the rivers. Over
-      time, however, the sun began to get very hot: so hot that it dried up rivers,
-      killed plants and animals. The people prayed, danced and begged Tup\xE3 to
-      send the rain again, but the sun kept burning everything. Then people began
-      to die, until that strong people only left a couple and their son, forced to
-      abandon their lands in search of better ones. Chewing the roots that were left
-      to them, they walked all night, and when again the sun burned in the sky, the
-      boy saw a palm tree alone, in what looked like a desert, swaying its green
-      palms. Exhausted, they stopped to rest in the shade of that palm tree and the
-      parents fell asleep. Only the son was still awake and worried, asking Tup\xE3
-      for help. It was when he heard a voice and saw, at the top of the palm tree,
-      an Indian woman, who said to him: \u201CMy name is Carnaubeira. I'm here to
-      help you. Many years ago my tribe was also plagued by drought. I helped everyone,
-      and when I died, the moon turned me into this tree destined to save the helpless.
-      Do what I advise you and you will still be happy. Hew my trunk, and with my
-      sap, quench your parents' thirst and yours. Eat my fruits, and you won't be
-      hungry anymore. Cook some of my roots, and medicine that, drunk, closes the
-      wounds. Put my leaves to dry and beat them, a gray and fragrant powder will
+    description: 
+    mythP1: "Of Tupi origin, as it refers to the God Tup\xE3, the legend tells the
+      origin of carnauba, carnaubeira or carna\xEDba (Copernicia prunifera or cerifera),
+      a palm native to the Brazilian Caatinga regions and common throughout the Northeast,
+      which saved a people from extinction. The story tells that these people lived
+      happily with Nature, the sun warmed the huts and ripened the fruits, the clouds
+      gave shade, the rain wet the plants and increased the rivers. Over time, however,
+      the sun began to get very hot: so hot that it dried up rivers, killed plants
+      and animals. The people prayed, danced and begged Tup\xE3 to send the rain
+      again, but the sun kept burning everything. Then people began to die, until
+      that strong people only left a couple and their son, forced to abandon their
+      lands in search of better ones. Chewing the roots that were left to them, they
+      walked all night, and when again the sun burned in the sky, the boy saw a palm
+      tree alone, in what looked like a desert, swaying its green palms. Exhausted,
+      they stopped to rest in the shade of that palm tree and the parents fell asleep.
+      Only the son was still awake and worried, asking Tup\xE3 for help. It was when
+      he heard a voice and saw, at the top of the palm tree, an Indian woman, who
+      said to him: \u201CMy name is Carnaubeira. I'm here to help you. Many years
+      ago my tribe was also plagued by drought. I helped everyone, and when I died,
+      the moon turned me into this tree destined to save the helpless. Do what I
+      advise you and you will still be happy. Hew my trunk, and with my sap, quench
+      your parents' thirst and yours. Eat my fruits, and you won't be hungry anymore.
+      Cook some of my roots, and medicine that, drunk, closes the wounds."
+    mythP2: "Put my leaves to dry and beat them, a gray and fragrant powder will
       come out of them, my wax, with which you will be able to light your way on
       moonless nights. From the straw that remains, weave your hat and mat. Now,
       I make a request of you: plant my coconuts so that you have a carnaubal, then
@@ -157,9 +158,7 @@ MonoBehaviour:
       remedies; wood is excellent for rafters, joists or battens used in construction
       and furniture; leaves become straw for crafts; and its famous wax, known as
       \"queen of waxes\" for its quality and resistance, has wide practical use,
-      including on an industrial scale."
-    mythP1: 
-    mythP2: 
+      including on an industrial scale. "
     ingredientSprite: {fileID: 1404954014, guid: 8d53ad60ab85a47448a5e3371b1bcb51, type: 3}
   - ingredient: 4
     name: Buriti Palm Tree Myth
