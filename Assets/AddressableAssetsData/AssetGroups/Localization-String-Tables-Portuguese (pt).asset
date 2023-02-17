@@ -23,6 +23,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-pt
     - Preload
+  - m_GUID: dfb77bcd0bb39364f9c30c95c26f2631
+    m_Address: MythsBook_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: af67620bcdf644242ad668575b01b8e9, type: 2}
   m_SchemaSet:
