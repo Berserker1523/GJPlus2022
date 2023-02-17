@@ -59,8 +59,7 @@ MonoBehaviour:
       llev\xF3 a toda su familia al cielo, donde no les faltaba de nada, y desde
       all\xED hizo mucho por ayudar a los que se quedaron en la tierra. Recogi\xF3
       semillas de sus abundantes campos, las sec\xF3 en el girau y se las dio a una
-      hija para que se las trajera.\n\n\nTraducci\xF3n realizada con la versi\xF3n
-      gratuita del traductor www.DeepL.com/Translator"
+      hija para que se las trajera."
     m_Metadata:
       m_Items: []
   - m_Id: 1790329769984
@@ -212,7 +211,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6742695497728
-    m_Localized: Lenda do Pequi
+    m_Localized: Leyenda del Pequi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5522673127424
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5579564666880
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   references:

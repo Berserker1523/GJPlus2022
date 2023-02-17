@@ -58,7 +58,7 @@ MonoBehaviour:
       Begorotire tornou-se o homem chuva.\r\nTempos depois, levou toda a fam\xEDlia
       para o c\xE9u, onde nada lhes faltava, e de l\xE1 muito fez para ajudar os
       que na terra ficaram. Juntou sementes de suas fartas ro\xE7as, secou-as sobre
-      o girau, entregando-as a uma filha para traz\xEA-las.\r\n"
+      o girau, entregando-as a uma filha para traz\xEA-las.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1765671456768
@@ -138,7 +138,7 @@ MonoBehaviour:
       nas matas e os pequizeiros tamb\xE9m deixavam seus frutos maduros cair na terra,
       servindo de alimentos para todos, Tain\xE1-Racan e Malu\xE1 eram aben\xE7oados
       com mais filhos. E, a cada filho que nascia, plantavam mais um pequizeiro.
-      E eles tiveram muitos filhos. E viveram felizes para sempre.\r"
+      E eles tiveram muitos filhos. E viveram felizes para sempre."
     m_Metadata:
       m_Items: []
   - m_Id: 1853068169216
@@ -207,7 +207,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6742695497728
-    m_Localized: Leyenda del Pequi
+    m_Localized: Lenda do Pequi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5522673127424
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5579564666880
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7247052165120
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   references:
