@@ -23,7 +23,7 @@ namespace Kitchen
         private SpriteRenderer clientSpriteRend;
         [SerializeField] private Sprite happyClientSprite;
 
-        private bool clientServed =false;
+        private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
 
@@ -41,24 +41,24 @@ namespace Kitchen
             potionImage.sprite = potionSprite;
 
             int i = 0;
-            while(i < requiredRecipe.ingredients.Length)
+            while (i < requiredRecipe.ingredients.Length)
             {
                 ingredientsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.rawSprite;
-                if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Mortar)
+                if (requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Mortar)
                     cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.mortarRawSprite;
-                else if(requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
+                else if (requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
                     cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.stoveRawSprite;
                 else
                     cookingToolsImages[i].enabled = false;
                 i++;
             }
 
-            for(; i < ingredientsImages.Count; i++)
+            for (; i < ingredientsImages.Count; i++)
             {
                 ingredientsImages[i].enabled = false;
                 cookingToolsImages[i].enabled = false;
             }
-            if(requiredRecipe.clientSprite !=null)
+            if (requiredRecipe.clientSprite != null)
                 clientSpriteRend.sprite = requiredRecipe.clientSprite;
         }
 
@@ -70,12 +70,26 @@ namespace Kitchen
             waitingTimer -= Time.deltaTime;
             slider.value = waitingTimer / MaxWaitingSeconds;
 
-            if (waitingTimer <= MaxWaitingSeconds * 0.3)
-                sliderBarImage.color = Color.red;
-            else if (waitingTimer <= MaxWaitingSeconds * 0.6)
-                sliderBarImage.color = Color.yellow;
-            else if (waitingTimer > MaxWaitingSeconds * 0.6)
-                sliderBarImage.color = Color.white;
+            if (waitingTimer <= MaxWaitingSeconds * 0.25)
+            {
+                ColorUtility.TryParseHtmlString("#ef2424", out Color color);
+                sliderBarImage.color = color;
+            }
+            else if (waitingTimer <= MaxWaitingSeconds * 0.5)
+            {
+                ColorUtility.TryParseHtmlString("#ef7824", out Color color);
+                sliderBarImage.color = color;
+            }
+            else if (waitingTimer <= MaxWaitingSeconds * 0.75)
+            {
+                ColorUtility.TryParseHtmlString("#efd924", out Color color);
+                sliderBarImage.color = color;
+            }
+            else if (waitingTimer > MaxWaitingSeconds * 0.75)
+            {
+                ColorUtility.TryParseHtmlString("#73bd06", out Color color);
+                sliderBarImage.color = color;
+            }
 
             if (waitingTimer <= 0)
             {
