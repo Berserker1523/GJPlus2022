@@ -16,6 +16,7 @@ namespace HistoryBook {
     {
         [SerializeField] public LegendsScriptableObject mythsDatabase;
         [SerializeField] public TextMeshProUGUI historyText;
+        [SerializeField] public TextMeshProUGUI attendedPatientsText;
         [SerializeField] public LocalizeStringEvent titleText;
         [SerializeField] public LocalizeStringEvent mythTitle;
         [SerializeField] public LocalizeStringEvent zoneText;
@@ -49,7 +50,6 @@ namespace HistoryBook {
             EventManager.AddListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
             selectedTagColor = new Color(255f / 255f, 227f / 255f, 83f / 255f);
             unselectedTagColor = new Color(113f / 255f, 79f / 255f, 35f / 255f);
-
         }
 
         private void OnDestroy()
@@ -121,6 +121,8 @@ namespace HistoryBook {
 
             EventManager.Dispatch(GlobalEvent.Unlocked);
             UpdateButtonTags(buttonPos);
+            
+            attendedPatientsText.text = gameData.attendedClients[(int)mythsDatabase.myths[buttonPos].refIngredient].ToString();
         }
 
         private void UpdateButtonTags(int buttonPos)

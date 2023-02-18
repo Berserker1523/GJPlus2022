@@ -21,4 +21,5 @@ public class Myth
     [SerializeField] public LocalizedString mythP1;
     [SerializeField] public LocalizedString mythP2;
     [SerializeField] public Sprite ingredientSprite;
+    [SerializeField] public IngredientName refIngredient;
 }
