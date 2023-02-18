@@ -5,6 +5,7 @@ namespace Kitchen
         Goal, 
         Speed,
         Streak,
+        StreakCheckpoint,
         Hurry,
     }
 }

@@ -17,6 +17,12 @@ namespace Kitchen
         [SerializeField] private int currentGoal;
         [SerializeField] private bool hurryDispatched;
 
+        [Header("StreakSystem")]
+        [SerializeField] private bool[] streakStar = new bool[3];
+        [SerializeField] private int streakProgress= 0;
+        [SerializeField] private int streakCheckpoint= 0;
+        [SerializeField] Image streakBar;
+
         private void Awake()
         {
             levelInstantiator= FindObjectOfType<LevelInstantiator>();
@@ -25,6 +31,7 @@ namespace Kitchen
         private void Start()
         {
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            EventManager.AddListener(TrashEvent.Throw, HandleResetStreak);
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
@@ -69,7 +76,12 @@ namespace Kitchen
 
         private void HandleClientServed()
         {
+            CheckStreak();
+
+
             currentGoal--;
+            if (currentGoal < 0)
+                return;
             SetGoal();
 
             //Goal Star
@@ -85,7 +97,37 @@ namespace Kitchen
                     EventManager.Dispatch(LevelEvents.Speed);
                 }
             }
+
         }
+
+        private void CheckStreak()
+        {
+            streakProgress++;
+            SetBarProgress();
+            if (streakProgress % 3 == 0)
+            {
+                streakCheckpoint = streakProgress;
+                streakStar[(streakCheckpoint / 3) - 1] = true;
+                EventManager.Dispatch(LevelEvents.StreakCheckpoint);
+            }
+            if (streakStar[2])
+            {
+                stars[2].color = Color.white;
+                EventManager.Dispatch(LevelEvents.Streak);
+            }
+        }
+
+        private void SetBarProgress()
+        {
+            streakBar.rectTransform.sizeDelta = new Vector2(26f * streakProgress, 33f);
+        }
+
+        private void HandleResetStreak()
+        {
+            streakProgress = streakCheckpoint;
+            SetBarProgress();
+        }
+
     }
 
 
