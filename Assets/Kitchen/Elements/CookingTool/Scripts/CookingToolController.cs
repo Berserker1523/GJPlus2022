@@ -6,7 +6,7 @@ namespace Kitchen
 {
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(DragView))]
-    public class CookingToolController : MonoBehaviour, IReleaseable
+    public class CookingToolController : MonoBehaviour, IReleaseable, IPointerEnterHandler
     {
         [SerializeField] private CookingToolData cookingToolData;
 
@@ -108,6 +108,20 @@ namespace Kitchen
             spriteRenderer.sprite = initialSprite;
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             timer.gameObject.SetActive(false);
+        }
+
+        public void OnPointerEnter(PointerEventData pointerEventData)
+        {
+            if (CurrentCookingIngredient != null)
+                return;
+
+            if (pointerEventData.pointerDrag ==null||!pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
+                return;
+
+            if (!ingredientController.IngredientData.necessaryCookingTool.HasFlag(cookingToolData.cookingToolName))
+                return;
+
+            EventManager.Dispatch(CookingToolEvents.Hover);
         }
     }
 }
