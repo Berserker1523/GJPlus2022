@@ -195,7 +195,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4110476136448
-    m_Localized: "Regi\xF3n Visitada"
+    m_Localized: "Regi\xE3o Visitada"
     m_Metadata:
       m_Items: []
   - m_Id: 4137193852928
@@ -220,6 +220,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7247052165120
     m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 334622029795328
+    m_Localized: "N\xFAmero total de pacientes vistos"
     m_Metadata:
       m_Items: []
   references:
