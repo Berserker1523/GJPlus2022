@@ -12,6 +12,7 @@ namespace Kitchen
 
         private SpriteRenderer spriteRenderer;
         private DragView dragView;
+        private CookingTimerView timer;
 
         private Sprite initialSprite;
         private FMOD.Studio.EventInstance cookingSound;
@@ -19,16 +20,16 @@ namespace Kitchen
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
 
-        public Timer timer;
+
 
         private void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             dragView = GetComponent<DragView>();
+            timer = GetComponentInChildren<CookingTimerView>();
+            timer.gameObject.SetActive(false);
             initialSprite = spriteRenderer.sprite;
             dragView.OnDropped += HandleDropped;
-
-            timer = GetComponentInChildren<Timer>();
         }
 
         private void OnDestroy() =>
@@ -40,20 +41,29 @@ namespace Kitchen
                 return;
 
             CurrentCookingIngredient.currentCookingSeconds += Time.deltaTime;
+            if (CurrentCookingIngredient.state == IngredientState.Cooked)
+                timer.SetFillAmount((CurrentCookingIngredient.currentCookingSeconds - cookingToolData.cookingSeconds) / (cookingToolData.burningSeconds - cookingToolData.cookingSeconds));
+            else
+                timer.SetFillAmount(CurrentCookingIngredient.currentCookingSeconds / cookingToolData.cookingSeconds);
+
             if (CurrentCookingIngredient.state == IngredientState.Raw && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.cookingSeconds)
             {
                 CurrentCookingIngredient.state = IngredientState.Cooked;
                 spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveCookedSprite : CurrentCookingIngredient.data.mortarCrushedSprite;
                 EventManager.Dispatch(IngredientState.Cooked);
                 if (cookingToolData.cookingToolName == CookingToolName.Mortar)
+                {
+                    timer.gameObject.SetActive(false);
                     cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
                 else
-                    timer.StartRedTimer(cookingToolData.burningSeconds);
+                    timer.SetBurning();
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)
             {
                 CurrentCookingIngredient.state = IngredientState.Burnt;
                 spriteRenderer.sprite = CurrentCookingIngredient.data.stoveBurntSprite;
+                timer.gameObject.SetActive(false);
                 EventManager.Dispatch(IngredientState.Burnt);
                 cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
@@ -73,7 +83,8 @@ namespace Kitchen
             CurrentCookingIngredient = new(ingredientController.IngredientData);
             spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveRawSprite : CurrentCookingIngredient.data.mortarRawSprite;
             PlayCookingSound();
-            timer.StartBlueTimer(cookingToolData.cookingSeconds); 
+            timer.gameObject.SetActive(true);
+            timer.SetCooking();
         }
 
         private void PlayCookingSound()
@@ -96,7 +107,7 @@ namespace Kitchen
             CurrentCookingIngredient = null;
             spriteRenderer.sprite = initialSprite;
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            timer.StopTimer();
+            timer.gameObject.SetActive(false);
         }
     }
 }

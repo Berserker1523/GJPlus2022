@@ -1,4 +1,5 @@
 using Events;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
- 
+
     [RequireComponent(typeof(Animator))]
     public class PotionController : MonoBehaviour, IDropHandler, IPointerDownHandler
     {
@@ -24,15 +25,17 @@ namespace Kitchen
 
         public RecipeData CurrentRecipe;
 
-        public Timer timer;
+        private CookingTimerView timer;
+        private IEnumerator updateTimerRoutine;
 
-        private void Awake()=>      
+        private void Awake() =>
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
 
         private void Start()
         {
-           anim = GetComponent<Animator>();
-           timer = GetComponentInChildren<Timer>();
+            anim = GetComponent<Animator>();
+            timer = GetComponentInChildren<CookingTimerView>();
+            timer.gameObject.SetActive(false);
         }
 
 
@@ -79,7 +82,7 @@ namespace Kitchen
 
 
         private void CheckRecipe()
-        {  
+        {
             List<PotionIngredient> recipeIngredients = new();
 
             foreach (RecipeData recipe in levelInstantiator.LevelData.levelRecipes)
@@ -114,6 +117,8 @@ namespace Kitchen
         {
             anim.SetBool("Shake", false);
             EventManager.Dispatch(PotionEvent.Poof);
+            StopCoroutine(updateTimerRoutine);
+            timer.gameObject.SetActive(false);
             CheckRecipe();
         }
 
@@ -124,7 +129,21 @@ namespace Kitchen
 
             anim.SetBool("Shake", true);
             EventManager.Dispatch(PotionEvent.Shake);
-            timer.StartBlueTimer(2f);
+            timer.gameObject.SetActive(true);
+            timer.SetCooking();
+            updateTimerRoutine = ShakingTimerRoutine(2);
+            StartCoroutine(updateTimerRoutine);
+        }
+
+        private IEnumerator ShakingTimerRoutine(float seconds)
+        {
+            float currentTime = 0;
+            while(true)
+            {
+                yield return new WaitForEndOfFrame();
+                currentTime += Time.deltaTime;
+                timer.SetFillAmount(currentTime / seconds);
+            }
         }
     }
 }
