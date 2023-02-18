@@ -35,6 +35,10 @@ namespace Kitchen
         {
             GameData gameData = SaveManager.LoadStarsData();
 
+            if (gameData == null)      
+                gameData = new GameData();
+            
+
             if(level == gameData.currentLevel)
             {
                 if (gameData.stars != null)

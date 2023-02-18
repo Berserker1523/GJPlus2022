@@ -16,6 +16,14 @@ namespace Kitchen
             stars = starsData.stars;
             attendedClients = GlobalCounter.attendedClients;
         }
+
+        public GameData()
+        {
+            currentLevel = LevelManager.CurrentLevel;
+            stars= new bool[5, 3];
+            attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
+        }
     }
+    
 }
 

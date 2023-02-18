@@ -101,6 +101,10 @@ namespace HistoryBook {
             scrollbar.value = 1;
 
             GameData gameData = SaveManager.LoadStarsData();
+
+            if (gameData == null)
+                gameData = new GameData();
+
             string value1, value2;
 
             if (gameData.stars[buttonPos, 1])
