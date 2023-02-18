@@ -1,4 +1,5 @@
 using Events;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -118,6 +119,15 @@ namespace Kitchen
 
             if (!acceptedRecipe)
                 return;
+
+            for(int i=0; i< potionController.CurrentRecipe.ingredients.Length;i++)
+            {
+                for(int j=0; j<Enum.GetValues(typeof(IngredientName)).Length;j++)
+                {
+                    if ((int)potionController.CurrentRecipe.ingredients[i].ingredient.ingredientName == j)
+                        GlobalCounter.attendedClients[j]++;              
+                }
+            }
 
             potionController.Release();
             AddMoney();

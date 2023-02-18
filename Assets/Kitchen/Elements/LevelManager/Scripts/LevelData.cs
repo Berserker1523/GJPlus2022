@@ -37,16 +37,22 @@ namespace Kitchen
 
             if(level == gameData.currentLevel)
             {
-                for(int i=0; i<stars.Length; i++)
+                if (gameData.stars != null)
                 {
-                    stars[i] = gameData.stars[level-1, i];
-                   // Debug.Log(gameData.stars[level-1, i]);
+                    for(int i=0; i<stars.Length; i++)
+                    {
+                        stars[i] = gameData.stars[level-1, i];
+                       // Debug.Log(gameData.stars[level-1, i]);
+                    }
 
                 }
             }
             EventManager.AddListener(LevelEvents.Goal, SetGoalStar);
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
+
+            if(gameData.attendedClients!= null)
+                GlobalCounter.attendedClients = gameData.attendedClients;
         }
 
         public void SetGoalStar()
