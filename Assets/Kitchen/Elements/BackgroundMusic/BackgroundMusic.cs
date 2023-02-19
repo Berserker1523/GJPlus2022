@@ -40,7 +40,8 @@ namespace Kitchen
         void PlayLevelTimerParameter()
         {
             EventManager.RemoveListener(LevelEvents.Hurry, PlayLevelTimerParameter);
-            StartCoroutine(CallLevelTimerParameter());
+            instance.setParameterByName("Hurry", 1);
+            //StartCoroutine(CallLevelTimerParameter());
         }
 
         IEnumerator CallLevelTimerParameter()
@@ -54,5 +55,4 @@ namespace Kitchen
         }
         void OnDestroy() => EventManager.RemoveListener(LevelEvents.Hurry, PlayLevelTimerParameter);
     }
-
 }

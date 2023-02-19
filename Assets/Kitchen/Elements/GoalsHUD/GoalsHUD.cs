@@ -8,7 +8,6 @@ namespace Kitchen
 {
     public class GoalsHUD : MonoBehaviour
     {
-
         private LevelInstantiator levelInstantiator;
         [SerializeField] private TextMeshProUGUI goalText;
         [SerializeField] private TextMeshProUGUI speedText;
@@ -19,13 +18,16 @@ namespace Kitchen
 
         [Header("StreakSystem")]
         [SerializeField] private bool[] streakStar = new bool[3];
-        [SerializeField] private int streakProgress= 0;
-        [SerializeField] private int streakCheckpoint= 0;
+        [SerializeField] private int streakProgress = 0;
+        [SerializeField] private int streakCheckpoint = 0;
         [SerializeField] Image streakBar;
+
+        private FMOD.Studio.EventInstance comboSound;
 
         private void Awake()
         {
-            levelInstantiator= FindObjectOfType<LevelInstantiator>();
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
+            comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
         }
 
         private void Start()
@@ -45,7 +47,7 @@ namespace Kitchen
             }
         }
 
-        private void SetGoal()=>
+        private void SetGoal() =>
             goalText.text = currentGoal.ToString();
 
         private IEnumerator LevelTimer()
@@ -61,7 +63,7 @@ namespace Kitchen
 
                 if (currentTime < 10)
                     speedText.color = Color.red;
-                else if (currentTime < 30  && !hurryDispatched)
+                else if (currentTime < 30 && !hurryDispatched)
                 {
                     speedText.color = Color.yellow;
                     EventManager.Dispatch(LevelEvents.Hurry);
@@ -108,7 +110,9 @@ namespace Kitchen
             {
                 streakCheckpoint = streakProgress;
                 streakStar[(streakCheckpoint / 3) - 1] = true;
-                EventManager.Dispatch(LevelEvents.StreakCheckpoint);
+                EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
+                comboSound.setParameterByName("Combo counter", (streakCheckpoint / 3) - 1);
+                comboSound.start();
             }
             if (streakStar[2])
             {
@@ -127,8 +131,5 @@ namespace Kitchen
             streakProgress = streakCheckpoint;
             SetBarProgress();
         }
-
     }
-
-
 }

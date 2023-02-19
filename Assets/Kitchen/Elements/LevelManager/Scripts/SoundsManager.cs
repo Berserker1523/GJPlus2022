@@ -12,6 +12,8 @@ namespace Kitchen
         string clientArriveEvent = "event:/SFX/Clientes/Llega Cliente";
         string clientDieEvent = "event:/SFX/Clientes/Muere Cliente";
         string clientServedEvent = "event:/SFX/Clientes/Atiende cliente";
+        string clientMaleGruntEvent = "event:/SFX/Clientes/Grunt Male"; //TODO client waiting bar is red
+        string clientFemaleGruntEvent = "event:/SFX/Clientes/Grunt Female"; //TODO
 
         //Ingredients SFX Events
         string takesWaterEvent = "event:/SFX/Cocina/Coge Agua";
@@ -28,7 +30,7 @@ namespace Kitchen
 
         //InGameEvents
         public static string backgroundMusic = "event:/Music/MusicaFondo";
-        public static string hurryParameter = "";
+        public static string hurryParameter = "Hurry";
 
         //Game Status SFX Events
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
