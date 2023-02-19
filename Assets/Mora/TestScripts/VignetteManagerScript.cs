@@ -36,10 +36,10 @@ public class VignetteManagerScript : MonoBehaviour
     //cases
     private int cases;
     //box collider objects
-    private GameObject PequiObject;
-    private GameObject WaterObject;
-    private GameObject MortarObject;
-    private GameObject stoveObject;
+    public GameObject PequiObject;
+    public GameObject WaterObject;
+    public GameObject MortarObject;
+    public GameObject stoveObject;
     // Start is called before the first frame update
     void Start()
     {
