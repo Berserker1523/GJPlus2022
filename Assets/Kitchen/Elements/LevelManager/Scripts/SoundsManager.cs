@@ -23,7 +23,7 @@ namespace Kitchen
         string shakeIngredientsEvent = "";
         string shakerPoofEvent = "event:/SFX/Jugabilidad/Completa receta";
         string failedRecipeEvent = "";
-        string hoverEvent = "";
+        string hoverEvent = "event:/SFX/Cocina/Snap Object";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
         //InGameEvents
