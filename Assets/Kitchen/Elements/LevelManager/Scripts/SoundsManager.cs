@@ -20,9 +20,9 @@ namespace Kitchen
         string foodReadyEvent = "event:/SFX/Cocina/Comida Lista";
         string foodBurntEvent = "event:/SFX/Cocina/Comida Quemada";
         string addIngredientEvent = "event:/SFX/Cocina/Infusión";
-        string shakeIngredientsEvent = "";
+        string shakeIngredientsEvent = "event:/SFX/Cocina/Shaker";
         string shakerPoofEvent = "event:/SFX/Jugabilidad/Completa receta";
-        string failedRecipeEvent = "";
+        string failedRecipeEvent = "event:/SFX/Cocina/Receta incorrecta";
         string hoverEvent = "event:/SFX/Cocina/Snap Object";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
@@ -35,11 +35,11 @@ namespace Kitchen
         string lostEvent = "event:/SFX/Jugabilidad/Pierde Nivel";
 
         //Main Menu Events
-        string playButtonEvent = "";
+        string playButtonEvent = "event:/SFX/UI/Play Button";
 
         //History Book Events
-        string unlockedButtonEvent = "";
-        string lockedButtonEvent = "";
+        string unlockedButtonEvent = "event:/SFX/UI/Flip page";
+        string lockedButtonEvent = "event:/SFX/UI/Blocked button";
         
         //Note: Upgrades are deactivated in-game 
         string upgradeEvent = "event:/SFX/Jugabilidad/Upgrade";

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffd7bdf9367f014180e08b92e9e31a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent: 
+  fmodEvent: event:/Music/MusicaFondo
   fmodParameterName: 
   levelTimerTransitionVelocity: 0.2
   levelTimertransitionIncrease: 0
