@@ -30,7 +30,7 @@ namespace Mainmenu
         {
             EventManager.Dispatch(GlobalEvent.Play);
             yield return new WaitForSeconds(2f);
-            SceneManager.LoadScene($"Kitchen{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+            SceneManager.LoadScene($"Kitchen{/*LevelManager.CurrentLevel*/1}", LoadSceneMode.Single); //Todo level save
         }
 
         public void Options()

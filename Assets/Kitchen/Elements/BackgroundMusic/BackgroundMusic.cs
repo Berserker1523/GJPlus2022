@@ -37,6 +37,12 @@ namespace Kitchen
             Events.EventManager.AddListener(LevelEvents.Hurry, PlayLevelTimerParameter);
         }
 
+        private void OnDestroy()
+        {
+            EventManager.RemoveListener(LevelEvents.Hurry, PlayLevelTimerParameter);
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+
         void PlayLevelTimerParameter()
         {
             EventManager.RemoveListener(LevelEvents.Hurry, PlayLevelTimerParameter);
@@ -53,6 +59,5 @@ namespace Kitchen
                 levelTimertransitionIncrease += levelTimerTransitionVelocity;
             }
         }
-        void OnDestroy() => EventManager.RemoveListener(LevelEvents.Hurry, PlayLevelTimerParameter);
     }
 }
