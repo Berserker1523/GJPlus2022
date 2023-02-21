@@ -251,7 +251,7 @@ TextureImporter:
         width: 38
         height: 467
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 16, z: 0, w: 16}
       outline: []
       physicsShape: []
@@ -259,6 +259,153 @@ TextureImporter:
       bones: []
       spriteID: d003bf87a22adbc4fa0a20e109646306
       internalID: -862097160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_0
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 469
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b06bf1fd0c98864fa256f7f05ca464b
+      internalID: 1941089288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_1
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 412
+        width: 124
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4958110ca24a5bd478b4fc3e8e8d4105
+      internalID: 507158901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 407
+        width: 124
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c315fc06cf61847b1a9d3fd01cbe76
+      internalID: 422836590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_3
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 411
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3dec93065216342840315e177885ff
+      internalID: 1963637027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_4
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 420
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3caf6fe87d23a9e40a316ce75fa9c0f1
+      internalID: 936512485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_5
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 192
+        width: 468
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 90, y: 0, z: 90, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac575e165ec81543a6304d8ad35ed4e
+      internalID: -2035768675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_6
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 817
+        width: 468
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 90, y: 0, z: 90, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11c70dbc3b57cf479abe88650751291
+      internalID: -1906654684
       vertices: []
       indices: 
       edges: []
@@ -276,11 +423,18 @@ TextureImporter:
     nameFileIdTable:
       Atlas 3_4: -569457064
       Atlas 3_3: 2137583075
+      Atlas_03_4: 936512485
       Atlas 3_1: -113942138
+      Atlas_03_0: 1941089288
+      Atlas_03_2: 422836590
       Atlas 3_5: 1684983721
+      Atlas_03_6: -1906654684
+      Atlas_03_1: 507158901
+      Atlas_03_3: 1963637027
       Atlas 3_2: 1732534723
       Atlas 3_0: -878012911
       Atlas 3_6: -862097160
+      Atlas_03_5: -2035768675
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
