@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class ButtonObjectActiveToggle : MonoBehaviour
+public class ObjectActivationToggle : MonoBehaviour
 {
     [SerializeField] private GameObject objectToActivate;
 

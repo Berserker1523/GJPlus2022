@@ -30,7 +30,6 @@ namespace Kitchen
 
         private void Awake()
         {
-           
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
             SetLevelData(levelData);
         }

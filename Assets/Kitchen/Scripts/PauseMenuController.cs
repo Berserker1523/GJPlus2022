@@ -2,11 +2,6 @@ using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
-
     private void OnEnable()
     {
         Time.timeScale = 0;

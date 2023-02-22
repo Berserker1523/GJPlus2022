@@ -4,13 +4,14 @@ using UnityEngine.Localization.Settings;
 
 public class LocaleSelector : MonoBehaviour
 {
-    private void Start()
+    private bool active = false;
+
+    private void Awake()
     {
         int ID = PlayerPrefs.GetInt("LocaleKey", 0);
         ChangeLocale(ID);
     }
 
-    private bool active = false;
     public void ChangeLocale(int localeID)
     {
         if (active == true)
@@ -20,10 +21,10 @@ public class LocaleSelector : MonoBehaviour
 
     IEnumerator SetLocale(int localeID)
     {
-        active= true;
+        active = true;
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
         PlayerPrefs.SetInt("LocaleKey", localeID);
-        active= false;
+        active = false;
     }
 }

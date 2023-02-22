@@ -1,10 +1,8 @@
-using UnityEngine;
 using FMODUnity;
-using FMOD.Studio;
-using System.Collections;
+using UnityEngine;
 
 namespace Kitchen
-{ 
+{
     public class SoundsManager : MonoBehaviour
     {
         [Header("SFX Dictionary")]
@@ -116,4 +114,3 @@ namespace Kitchen
         void MenuPopUpSFX() => PlaySFX(openMenu);
     }
 }
-
