@@ -410,6 +410,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Atlas_03_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 58
+        width: 120
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512d03c0bcf3ab147aa49c78aa288d49
+      internalID: -796224869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_8
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 58
+        width: 120
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1449e6ea939b0147a780ba93affaa92
+      internalID: -1276148989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_03_9
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 58
+        width: 120
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1b0efabdb95b447bcaa84c8f1929e3
+      internalID: 1686282234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -421,6 +484,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Atlas_03_9: 1686282234
+      Atlas_03_7: -796224869
       Atlas 3_4: -569457064
       Atlas 3_3: 2137583075
       Atlas_03_4: 936512485
@@ -435,6 +500,7 @@ TextureImporter:
       Atlas 3_0: -878012911
       Atlas 3_6: -862097160
       Atlas_03_5: -2035768675
+      Atlas_03_8: -1276148989
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
