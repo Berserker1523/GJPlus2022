@@ -1,4 +1,7 @@
 public enum SceneName
 {
-    MainMenu
+    MainMenu,
+    Kitchen, 
+    HistoryBook,
+    Credits
 }
