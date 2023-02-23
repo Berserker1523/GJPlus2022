@@ -2,6 +2,6 @@
 {
     public enum RecipeName
     {
-        ToothSaver, TapewormKiller
+        ToothSaver, TapewormKiller, YellowFeverKiller
     }
 }
