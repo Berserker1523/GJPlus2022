@@ -20,6 +20,7 @@ namespace Kitchen
         string foodReadyEvent = "event:/SFX/Cocina/Comida Lista";
         string foodBurntEvent = "event:/SFX/Cocina/Comida Quemada";
         string addIngredientEvent = "event:/SFX/Cocina/Infusi�n";
+        string addWaterEvent = "";
         string shakeIngredientsEvent = "event:/SFX/Cocina/Shaker";
         string shakerPoofEvent = "event:/SFX/Jugabilidad/Completa receta";
         string failedRecipeEvent = "event:/SFX/Cocina/Receta incorrecta";
