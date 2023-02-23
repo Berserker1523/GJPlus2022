@@ -70,6 +70,7 @@ namespace Kitchen
             if (ingredientController.IngredientData.necessaryCookingTool != CookingToolName.None)
                 return;
             AddIngredient(ingredientController.IngredientData, CookingToolName.None);
+            EventManager.Dispatch(PotionEvent.AddWater);
         }
 
         private void AddIngredient(IngredientData ingredientData, CookingToolName usedCookingTool)

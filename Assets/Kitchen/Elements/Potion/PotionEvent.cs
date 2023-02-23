@@ -5,4 +5,5 @@ public enum PotionEvent
     Shake, 
     Poof,
     FailedRecipe,
+    AddWater
 }
