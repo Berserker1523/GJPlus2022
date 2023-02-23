@@ -4,16 +4,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
 using TMPro;
 using UnityEngine.Localization.Components;
+using UnityEngine.UI;
 
 namespace Kitchen
 {
     public class EndLevelPopUp : MonoBehaviour
     {
         [SerializeField] GameObject upgradesPopUp;
-        [SerializeField] private GameObject continueButton;
         [SerializeField] string mainMenuSceneName = "MainMenu";
         [SerializeField] string kitchenScene = "Kitchen";
         [SerializeField] LocalizeStringEvent victoryDefeatText;
+        [SerializeField] LocalizeStringEvent victoryDefeatTextDilate;
+        [SerializeField] Button button;
+        [SerializeField] LocalizeStringEvent buttonText;
 
         private int currentLevel;
 
@@ -33,13 +36,18 @@ namespace Kitchen
         {
             gameObject.SetActive(true);
             victoryDefeatText.SetEntry("Title_VictoryText");
+            victoryDefeatTextDilate.SetEntry("Title_VictoryText");
+            buttonText.SetEntry("Button_Continue");
+            button.onClick.AddListener(NextLevel);
         }
 
         private void HandleLost()
         {
             gameObject.SetActive(true);
-            continueButton.SetActive(false);
             victoryDefeatText.SetEntry("Title_DefeatText");
+            victoryDefeatTextDilate.SetEntry("Title_DefeatText");
+            buttonText.SetEntry("Button_TryAgain");
+            button.onClick.AddListener(TryAgain); 
         }
 
         private void Start()

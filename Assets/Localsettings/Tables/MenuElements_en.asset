@@ -20,11 +20,11 @@ MonoBehaviour:
     - rid: 326297980984098818
   m_TableData:
   - m_Id: 21591064576
-    m_Localized: "Victory\t"
+    m_Localized: Level Completed!!!
     m_Metadata:
       m_Items: []
   - m_Id: 10674615713792
-    m_Localized: Defeat
+    m_Localized: Level Failed
     m_Metadata:
       m_Items: []
   - m_Id: 10893176700928

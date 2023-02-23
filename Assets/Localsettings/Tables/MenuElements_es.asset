@@ -20,11 +20,11 @@ MonoBehaviour:
     - rid: 326297980984098820
   m_TableData:
   - m_Id: 21591064576
-    m_Localized: Victoria
+    m_Localized: Nivel Completado
     m_Metadata:
       m_Items: []
   - m_Id: 10674615713792
-    m_Localized: Derrota
+    m_Localized: Nivel Fallido
     m_Metadata:
       m_Items: []
   - m_Id: 10893176700928
