@@ -21,24 +21,26 @@ namespace Kitchen
 
         private int currentStreakProgress;
         private int streakCheckpoint;
-        
 
-        private FMOD.Studio.EventInstance comboSound;
+        [SerializeField, Range(1f,10f)] private float streakWaitTime = 5f;
+        Coroutine streakCoroutine;
+
+       // private FMOD.Studio.EventInstance comboSound;
 
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
-            comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
+          //  comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
         }
 
         private void Start()
         {
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
-            EventManager.AddListener(TrashEvent.Throw, HandleResetStreak);
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
             streakText.text = "0";
+            streakBar.maxValue = streakWaitTime;
             streakBar.value = 0;
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
@@ -94,35 +96,42 @@ namespace Kitchen
             }
         }
 
+        private IEnumerator StreakBar()
+        {
+            float currentStreakTime=0f;
+            streakBar.value = streakWaitTime;
+            UpdateStreakText();
+            while (currentStreakTime < streakWaitTime)
+            {
+                yield return new WaitForSeconds(0.1f);
+                currentStreakTime += 0.1f;
+                streakBar.value -= 0.1f;
+            }
+
+            currentStreakProgress =0;
+            UpdateStreakText();
+            yield return null; 
+        }
+
         private void CheckStreak()
         {
             currentStreakProgress++;
-           
-            if (currentStreakProgress == 3) //TODO burned variable
-            {
-                streakCheckpoint++;
-                currentStreakProgress = 0;
-                EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
-                comboSound.setParameterByName("Combo counter", streakCheckpoint);
-                comboSound.start();
-            }
-
+            EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
             SetBarProgress();
-
-            if (streakCheckpoint == 2) //TODO burned variable
+            
+            if (currentStreakProgress == 3) //TODO burned variable
                 EventManager.Dispatch(LevelEvents.Streak);
         }
 
         private void SetBarProgress()
         {
             streakText.text = $"{streakCheckpoint}";
-            streakBar.value = currentStreakProgress == 0 ? 0 : (float)currentStreakProgress / 3; //TODO burned variable
+            if(currentStreakProgress>1)
+                StopCoroutine(streakCoroutine); 
+
+            streakCoroutine = StartCoroutine(StreakBar());
         }
 
-        private void HandleResetStreak()
-        {
-            currentStreakProgress = 0;
-            SetBarProgress();
-        }
+        private void UpdateStreakText () => streakText.text = currentStreakProgress.ToString();
     }
 }
