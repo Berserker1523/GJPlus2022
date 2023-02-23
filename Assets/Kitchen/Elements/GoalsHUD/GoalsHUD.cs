@@ -8,19 +8,20 @@ namespace Kitchen
 {
     public class GoalsHUD : MonoBehaviour
     {
-        private LevelInstantiator levelInstantiator;
         [SerializeField] private TextMeshProUGUI goalText;
         [SerializeField] private TextMeshProUGUI speedText;
-        [SerializeField] private Image[] stars = new Image[3];
-        [SerializeField] private int currentTime;
-        [SerializeField] private int currentGoal;
-        [SerializeField] private bool hurryDispatched;
 
-        [Header("StreakSystem")]
-        [SerializeField] private bool[] streakStar = new bool[3];
-        [SerializeField] private int streakProgress = 0;
-        [SerializeField] private int streakCheckpoint = 0;
-        [SerializeField] Image streakBar;
+        [SerializeField] private TextMeshProUGUI streakText;
+        [SerializeField] Slider streakBar;
+
+        private LevelInstantiator levelInstantiator;
+        private int currentTime;
+        private int currentGoal;
+        private bool hurryDispatched;
+
+        private int currentStreakProgress;
+        private int streakCheckpoint;
+        
 
         private FMOD.Studio.EventInstance comboSound;
 
@@ -37,14 +38,10 @@ namespace Kitchen
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
+            streakText.text = "0";
+            streakBar.value = 0;
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
-
-            for (int i = 0; i < stars.Length; i++)
-            {
-                if (!levelInstantiator.LevelData.stars[i])
-                    stars[i].color = Color.black;
-            }
         }
 
         private void SetGoal() =>
@@ -61,9 +58,9 @@ namespace Kitchen
                 speedText.text = string.Format("{0:0}:{1:00}", (currentTime / 60) % 60, currentTime % 60);
 
 
-                if (currentTime < 10)
+                if (currentTime < 15)
                     speedText.color = Color.red;
-                else if (currentTime < 30 && !hurryDispatched)
+                else if (currentTime < 40 && !hurryDispatched)
                 {
                     speedText.color = Color.yellow;
                     EventManager.Dispatch(LevelEvents.Hurry);
@@ -79,56 +76,52 @@ namespace Kitchen
         private void HandleClientServed()
         {
             CheckStreak();
-
-
             currentGoal--;
+
             if (currentGoal < 0)
                 return;
+
             SetGoal();
 
             //Goal Star
             if (currentGoal <= 0)
             {
-                stars[0].color = Color.white;
                 EventManager.Dispatch(LevelEvents.Goal);
 
                 //Time Star
                 if (currentTime > 0)
-                {
-                    stars[1].color = Color.white;
                     EventManager.Dispatch(LevelEvents.Speed);
-                }
             }
-
         }
 
         private void CheckStreak()
         {
-            streakProgress++;
-            SetBarProgress();
-            if (streakProgress % 3 == 0)
+            currentStreakProgress++;
+           
+            if (currentStreakProgress == 3) //TODO burned variable
             {
-                streakCheckpoint = streakProgress;
-                streakStar[(streakCheckpoint / 3) - 1] = true;
+                streakCheckpoint++;
+                currentStreakProgress = 0;
                 EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
-                comboSound.setParameterByName("Combo counter", (streakCheckpoint / 3) - 1);
+                comboSound.setParameterByName("Combo counter", streakCheckpoint);
                 comboSound.start();
             }
-            if (streakStar[2])
-            {
-                stars[2].color = Color.white;
+
+            SetBarProgress();
+
+            if (streakCheckpoint == 2) //TODO burned variable
                 EventManager.Dispatch(LevelEvents.Streak);
-            }
         }
 
         private void SetBarProgress()
         {
-            streakBar.rectTransform.sizeDelta = new Vector2(26f * streakProgress, 33f);
+            streakText.text = $"{streakCheckpoint}";
+            streakBar.value = currentStreakProgress == 0 ? 0 : (float)currentStreakProgress / 3; //TODO burned variable
         }
 
         private void HandleResetStreak()
         {
-            streakProgress = streakCheckpoint;
+            currentStreakProgress = 0;
             SetBarProgress();
         }
     }

@@ -145,7 +145,7 @@ namespace Kitchen
         }
 
         private void AddMoney() =>
-            MoneyManager.Money += (int)(MaxWaitingSeconds * waitingTimer / MaxWaitingSeconds) + 10; //TODO Burned Variable
+            MoneyManager.Money += (int)waitingTimer + 10; //TODO Burned Variable
     }
 
 

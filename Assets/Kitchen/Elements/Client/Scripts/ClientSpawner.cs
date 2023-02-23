@@ -99,6 +99,7 @@ namespace Kitchen
             clientsDied++;
             if (clientsDied >= spawnPoints.Count)
                 EventManager.Dispatch(GameStatus.Lost);
+
             //Call Victory if no more clients will arrive
             else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
@@ -107,7 +108,7 @@ namespace Kitchen
         private void HandleClientServed()
         {
             clientsGood++;
-            if (clientsGood >= levelInstantiator.LevelData.clientNumber || clientsSpawned >= levelInstantiator.LevelData.clientNumber)
+            if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.Won);
         }
     }
