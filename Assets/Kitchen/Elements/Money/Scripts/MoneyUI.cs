@@ -37,6 +37,8 @@ namespace Kitchen
             currentLevelMoney = money - initialMoney;
             moneyText.text = $"{currentLevelMoney}/{maxLevelMoney}";
             slider.SetValueWithoutNotify((float)currentLevelMoney / maxLevelMoney);
-        }    
+        }
+
+        public float GetCurrentLevelMoney() => currentLevelMoney;
     }
 }

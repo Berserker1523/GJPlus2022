@@ -18,6 +18,15 @@ namespace Kitchen
         [SerializeField] Button button;
         [SerializeField] LocalizeStringEvent buttonText;
 
+        //Money
+        MoneyUI moneyUI;
+        [SerializeField] TextMeshProUGUI moneyText;
+
+        //Stars 
+        [SerializeField] Image[] stars = new Image[3];
+        [SerializeField] Sprite collectedStarSprite;
+        [SerializeField] Sprite uncollectedStarSprite;
+
         private int currentLevel;
 
         private void Awake()
@@ -39,6 +48,7 @@ namespace Kitchen
             victoryDefeatTextDilate.SetEntry("Title_VictoryText");
             buttonText.SetEntry("Button_Continue");
             button.onClick.AddListener(NextLevel);
+            moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
         }
 
         private void HandleLost()
@@ -47,13 +57,15 @@ namespace Kitchen
             victoryDefeatText.SetEntry("Title_DefeatText");
             victoryDefeatTextDilate.SetEntry("Title_DefeatText");
             buttonText.SetEntry("Button_TryAgain");
-            button.onClick.AddListener(TryAgain); 
+            button.onClick.AddListener(TryAgain);
+            moneyText.text = "0";
         }
 
         private void Start()
         {
             currentLevel = LevelManager.CurrentLevel;
             UpgradesPopUp(false);
+            moneyUI = FindObjectOfType<MoneyUI>();
             gameObject.SetActive(false);
         }
 

@@ -219,7 +219,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Level Completed!!!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
   m_sharedMaterial: {fileID: 1847652355112364022, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
@@ -868,7 +870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -3.6, y: -104}
+  m_AnchoredPosition: {x: -3.6, y: -88}
   m_SizeDelta: {x: 872, y: 179.29999}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &369289395735159980
@@ -899,7 +901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Level Completed!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 351f150a0aff21545a5c388acc993dbf, type: 2}
@@ -2053,6 +2055,13 @@ MonoBehaviour:
   victoryDefeatTextDilate: {fileID: 5367203923432531310}
   button: {fileID: 4999398450420615622}
   buttonText: {fileID: 2250608599089333358}
+  moneyText: {fileID: 5026231051630046278}
+  stars:
+  - {fileID: 5844079513102006843}
+  - {fileID: 6695191854146480908}
+  - {fileID: 4921945661110459866}
+  collectedStarSprite: {fileID: 507158901, guid: 3f6d5ade7be5fe54f89c77e79d81a16d, type: 3}
+  uncollectedStarSprite: {fileID: 422836590, guid: 3f6d5ade7be5fe54f89c77e79d81a16d, type: 3}
 --- !u!1 &4999398451105869895
 GameObject:
   m_ObjectHideFlags: 0
