@@ -226,6 +226,18 @@ MonoBehaviour:
     m_Localized: "N\xFAmero total de pacientes vistos"
     m_Metadata:
       m_Items: []
+  - m_Id: 7191553134592
+    m_Localized: "Yorub\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5500233601024
+    m_Localized: "Yorub\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5426644537344
+    m_Localized: "Yorub\xE1"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
