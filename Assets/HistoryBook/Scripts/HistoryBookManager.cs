@@ -31,8 +31,8 @@ namespace HistoryBook {
         [HideInInspector] public string mainMenuSceneName = "MainMenu";
         [HideInInspector] public string lockedTextTag = "[Earn Stars To unlock more] ";
 
-        [HideInInspector] public Color selectedTagColor;
-        [HideInInspector] public Color unselectedTagColor;
+        [SerializeField] public Sprite selectedTagSprite;
+        [SerializeField] public Sprite unselectedTagSprite; 
 
         //public event Action<int> DefaultEntrySetted;
 
@@ -48,8 +48,7 @@ namespace HistoryBook {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
             //DefaultEntrySetted += SetDefaultEntry;     
             EventManager.AddListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
-            selectedTagColor = new Color(255f / 255f, 227f / 255f, 83f / 255f);
-            unselectedTagColor = new Color(113f / 255f, 79f / 255f, 35f / 255f);
+           
         }
 
         private void OnDestroy()
@@ -137,17 +136,15 @@ namespace HistoryBook {
 
                 if (i != buttonPos)
                 {
-                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(100f, 100f);
-                    buttonSprites[0].rectTransform.localPosition = new Vector3(0f, 0, 0);
-                    //buttonSprites[0].color = unselectedTagColor;
+                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(120f, 130f);
+                    buttonSprites[0].sprite = unselectedTagSprite;
                     buttonSprites[1].rectTransform.localPosition = new Vector3(0f, 0, 0);
                 }
                 else
                 {
-                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(200f, 100f);
-                    buttonSprites[0].rectTransform.localPosition = new Vector3(70f, 0, 0);
-                    //buttonSprites[0].color = selectedTagColor;
-                    buttonSprites[1].rectTransform.localPosition = new Vector3(70f, 0, 0);
+                    buttonSprites[0].rectTransform.sizeDelta = new Vector2(220f, 130f);
+                    buttonSprites[0].sprite = selectedTagSprite;
+                    buttonSprites[1].rectTransform.localPosition = new Vector3(30f, 0, 0);
                 }
             }
         }
