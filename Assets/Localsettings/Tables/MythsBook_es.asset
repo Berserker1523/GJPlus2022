@@ -238,6 +238,10 @@ MonoBehaviour:
     m_Localized: "Yorub\xE1"
     m_Metadata:
       m_Items: []
+  - m_Id: 2828520156659712
+    m_Localized: "[Gana Estrellas Para Desbloquear M\xE1s]"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

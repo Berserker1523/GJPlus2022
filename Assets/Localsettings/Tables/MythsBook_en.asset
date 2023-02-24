@@ -237,6 +237,10 @@ MonoBehaviour:
     m_Localized: Yoruba
     m_Metadata:
       m_Items: []
+  - m_Id: 2828520156659712
+    m_Localized: '[Earn Stars To Unlock More]'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

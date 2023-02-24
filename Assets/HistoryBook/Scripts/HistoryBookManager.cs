@@ -29,7 +29,7 @@ namespace HistoryBook {
 
         [HideInInspector] public List<Button> buttonsList;
         [HideInInspector] public string mainMenuSceneName = "MainMenu";
-        [HideInInspector] public string lockedTextTag = "[Earn Stars To unlock more] ";
+        [SerializeField] public LocalizedString lockedTextTag ;
 
         [SerializeField] public Sprite selectedTagSprite;
         [SerializeField] public Sprite unselectedTagSprite; 
@@ -108,18 +108,18 @@ namespace HistoryBook {
             if (gameData.stars[buttonPos, 1])
                 value1 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP1.TableReference, mythP1.TableEntryReference);
             else
-                value1 = "\n\n" + lockedTextTag;
+                value1 = "\n\n" + LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference); 
 
             if (gameData.stars[buttonPos, 2])
                 value2 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP2.TableReference, mythP2.TableEntryReference);
             else
-                value2 = "\n\n" + lockedTextTag;
+                value2 = "\n\n" + LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference);
 
             var tableReference = mythDescription.TableReference;
 
             string mythText = value1 + value2;
 
-            historyText.text = mythText;
+            historyText.text = mythText; 
 
             EventManager.Dispatch(GlobalEvent.Unlocked);
             UpdateButtonTags(buttonPos);

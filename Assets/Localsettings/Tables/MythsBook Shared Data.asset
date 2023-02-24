@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Key: Other_TotalPatientsAttended
     m_Metadata:
       m_Items: []
+  - m_Id: 2828520156659712
+    m_Key: Text_GetStarsToUnlock
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

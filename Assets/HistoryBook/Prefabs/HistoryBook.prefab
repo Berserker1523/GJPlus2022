@@ -2005,9 +2005,20 @@ MonoBehaviour:
   scrollbar: {fileID: 4651197466621608449}
   buttonsList: []
   mainMenuSceneName: MainMenu
-  lockedTextTag: '[Earn Stars To unlock more] '
+  lockedTextTag:
+    m_TableReference:
+      m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+    m_TableEntryReference:
+      m_KeyId: 2828520156659712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   selectedTagSprite: {fileID: -612814335, guid: 2ce50f8ca16d7e74e8584ae4c15dedc3, type: 3}
   unselectedTagSprite: {fileID: -1543694724, guid: 2ce50f8ca16d7e74e8584ae4c15dedc3, type: 3}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1342428597
 MonoBehaviour:
   m_ObjectHideFlags: 0
