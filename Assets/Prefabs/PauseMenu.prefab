@@ -330,6 +330,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
+--- !u!1 &7687566041439196876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5110028782185544969, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
+  m_PrefabInstance: {fileID: 3190167635726052293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8383827229484433223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687566041439196876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:69d786c88acdd364d99d064d633c7737
+    m_TableEntryReference:
+      m_KeyId: 6738082685353984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &7687566041498369556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5110028782144296401, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
@@ -340,3 +373,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5110028782144296400, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
   m_PrefabInstance: {fileID: 3190167635726052293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7687566041914272182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5110028781725270643, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
+  m_PrefabInstance: {fileID: 3190167635726052293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4052875484380630510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687566041914272182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:69d786c88acdd364d99d064d633c7737
+    m_TableEntryReference:
+      m_KeyId: 6738082685353984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []

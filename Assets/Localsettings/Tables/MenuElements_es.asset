@@ -64,6 +64,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 326297980984098820
+  - m_Id: 6738082685353984
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
