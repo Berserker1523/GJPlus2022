@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964778235840464446, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_Name
-      value: Client
+      value: Client Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4858116934972563360, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_IsActive
@@ -400,7 +400,8 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1450327192403000067, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
 --- !u!1 &3736235639770265228 stripped
 GameObject:
@@ -427,6 +428,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3743587817958972947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736235639770265228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302285600a19feb4a93479c831a50e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredRecipe: {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
+  happyClientSprite: {fileID: 21300000, guid: c928aba4f1c58f6418f734929cfcf86c, type: 3}
 --- !u!224 &6221821200968711490 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5945920437877362160, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
