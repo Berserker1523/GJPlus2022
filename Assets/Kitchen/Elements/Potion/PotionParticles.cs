@@ -1,24 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Events;
-public class PotionParticles : MonoBehaviour
+
+namespace Kitchen
 {
-    [SerializeField] ParticleSystem successParticle;
-    [SerializeField] ParticleSystem failureParticle;
-    // Start is called before the first frame update
-    private void Awake()
+    public class PotionParticles : MonoBehaviour
     {
-        EventManager.AddListener(PotionEvent.Poof, succesActivator);
-        EventManager.AddListener(PotionEvent.FailedRecipe, failureActivator);
-        successParticle.Stop();
-        failureParticle.Stop();
+        [SerializeField] ParticleSystem successParticle;
+        [SerializeField] ParticleSystem failureParticle;
+        // Start is called before the first frame update
+        private void Awake()
+        {
+            successParticle.Stop();
+            failureParticle.Stop();
+        }
+
+        public void SuccesActivator() => successParticle.Play();
+        public void FailureActivator() => failureParticle.Play();
     }
-    void succesActivator() => successParticle.Play();
-    void failureActivator() => failureParticle.Play();
-    private void OnDestroy()
-    {
-        EventManager.RemoveListener(PotionEvent.FailedRecipe, failureActivator);
-        EventManager.RemoveListener(PotionEvent.Poof, succesActivator); 
-    }
+
 }

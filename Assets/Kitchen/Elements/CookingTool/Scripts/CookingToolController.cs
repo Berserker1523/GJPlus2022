@@ -30,7 +30,9 @@ namespace Kitchen
             timer.gameObject.SetActive(false);
             initialSprite = spriteRenderer.sprite;
             dragView.OnDropped += HandleDropped;
-            shakingMortarParticle.Stop();
+            
+            if(shakingMortarParticle!= null ) 
+                shakingMortarParticle.Stop();
         }
 
         private void OnDestroy() =>

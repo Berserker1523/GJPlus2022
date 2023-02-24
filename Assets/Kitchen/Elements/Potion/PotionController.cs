@@ -28,6 +28,8 @@ namespace Kitchen
         private CookingTimerView timer;
         private IEnumerator updateTimerRoutine;
 
+        private PotionParticles potionParticles;
+
         private void Awake() =>
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
 
@@ -36,6 +38,7 @@ namespace Kitchen
             anim = GetComponent<Animator>();
             timer = GetComponentInChildren<CookingTimerView>();
             timer.gameObject.SetActive(false);
+            potionParticles = GetComponentInChildren<PotionParticles>();
         }
 
 
@@ -98,12 +101,15 @@ namespace Kitchen
                 CurrentRecipe = recipe;
                 potionResult.SetPotion(CurrentRecipe, recipe.sprite);
                 EventManager.Dispatch(PotionEvent.Poof);
+                potionParticles.SuccesActivator();
+                
                 ClearShaker();
                 return;
             }
             potionResult.SetPotion(CurrentRecipe, failedPotionSkin);
 
             EventManager.Dispatch(PotionEvent.FailedRecipe);
+            potionParticles.FailureActivator();
             ClearShaker();
         }
 
