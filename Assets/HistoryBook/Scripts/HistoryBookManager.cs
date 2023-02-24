@@ -62,7 +62,6 @@ namespace HistoryBook {
             CreateBookEntrys();
         
         }
-
         private void CreateBookEntrys()
         {
             foreach (Myth myth in mythsDatabase.myths)
@@ -89,7 +88,7 @@ namespace HistoryBook {
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
 
 
-
+            StartCoroutine(ResetHandlePos());
         }
 
         public void HandleChangeText(LocalizedString ingredientName, LocalizedString mythName, LocalizedString mythDescription, LocalizedString region, LocalizedString mythP1 , LocalizedString mythP2,Sprite ingredient, int buttonPos)
@@ -98,7 +97,7 @@ namespace HistoryBook {
             mythTitle.StringReference = mythName;
             zoneText.StringReference = region;
             associatedIngredient.sprite = ingredient;
-            scrollbar.value = 1;
+            scrollbar.value = 0.9999f;
 
             GameData gameData = SaveManager.LoadStarsData();
 
@@ -127,6 +126,7 @@ namespace HistoryBook {
             UpdateButtonTags(buttonPos);
             
             attendedPatientsText.text = gameData.attendedClients[(int)mythsDatabase.myths[buttonPos].refIngredient].ToString();
+            StartCoroutine( ResetHandlePos());
         }
 
         private void UpdateButtonTags(int buttonPos)
@@ -139,17 +139,23 @@ namespace HistoryBook {
                 {
                     buttonSprites[0].rectTransform.sizeDelta = new Vector2(100f, 100f);
                     buttonSprites[0].rectTransform.localPosition = new Vector3(0f, 0, 0);
-                    buttonSprites[0].color = unselectedTagColor;
+                    //buttonSprites[0].color = unselectedTagColor;
                     buttonSprites[1].rectTransform.localPosition = new Vector3(0f, 0, 0);
                 }
                 else
                 {
                     buttonSprites[0].rectTransform.sizeDelta = new Vector2(200f, 100f);
                     buttonSprites[0].rectTransform.localPosition = new Vector3(70f, 0, 0);
-                    buttonSprites[0].color = selectedTagColor;
+                    //buttonSprites[0].color = selectedTagColor;
                     buttonSprites[1].rectTransform.localPosition = new Vector3(70f, 0, 0);
                 }
             }
+        }
+
+        private IEnumerator ResetHandlePos()
+        {
+            yield return new WaitForSeconds(0.1f);
+            scrollbar.value = 0.9999f; 
         }
 
         public void SetDefaultEntry(int entryId)
