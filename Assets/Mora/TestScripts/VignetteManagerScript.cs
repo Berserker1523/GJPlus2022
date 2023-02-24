@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Events;
 using Kitchen;
+using UnityEngine.SceneManagement;
 
 public class VignetteManagerScript : MonoBehaviour
 {
@@ -89,6 +90,9 @@ public class VignetteManagerScript : MonoBehaviour
     //timer cross animation 22 - 23
     public float twentythirdTimer;
     private float initialTwentythirdTimer;
+    //timer cross animation 23 - 24
+    public float twentyfourthTimer;
+    private float initialTwentyfourthTimer;
     //cases
     private int cases;
     //box collider objects
@@ -110,6 +114,7 @@ public class VignetteManagerScript : MonoBehaviour
         EventManager.AddListener(PotionEvent.AddIngredient, eleventhVignette);
         EventManager.AddListener(PotionEvent.AddWater, sixteenthVignette);
         EventManager.AddListener(PotionEvent.Poof, nineteenthVignette);
+        EventManager.AddListener(ClientEvent.Served, twentyfourthVignette);
     }
     void Start()
     {
@@ -140,6 +145,7 @@ public class VignetteManagerScript : MonoBehaviour
         initialTwentyfirstTimer = twentyfirstTimer;
         initialTwentysecondTimer = twentysecondTimer;
         initialTwentythirdTimer = twentythirdTimer;
+        initialTwentyfourthTimer = twentiethTimer;
         vignetteVolume = this.gameObject.GetComponent<Volume>();
         vignetteVolume.profile.TryGet<Vignette>(out vignetteInstance);
         cases = 0;
@@ -468,7 +474,14 @@ public class VignetteManagerScript : MonoBehaviour
                 {
                     shakerObject.gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 }
-                break;
+            break;
+            case 24:
+                twentyfourthTimer -= Time.deltaTime;
+                if (twentyfourthTimer <= 0)
+                {
+                    SceneManager.LoadScene("Kitchen1");
+                }
+            break;
         }
 
     }
@@ -564,10 +577,16 @@ public class VignetteManagerScript : MonoBehaviour
     {
         cases = 23;
     }
-
+    public void twentyfourthVignette()
+    {
+        cases = 24;
+    }
     void OnDestroy()
     {
         EventManager.RemoveListener(IngredientState.Cooked, SixthVignette);
+        EventManager.RemoveListener(PotionEvent.AddIngredient, eleventhVignette);
+        EventManager.RemoveListener(PotionEvent.AddWater, sixteenthVignette);
+        EventManager.RemoveListener(PotionEvent.Poof, nineteenthVignette);
     }
     public void calculateCenter()
     {
