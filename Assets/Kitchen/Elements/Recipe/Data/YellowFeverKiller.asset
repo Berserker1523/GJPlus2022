@@ -24,4 +24,9 @@ MonoBehaviour:
     ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
     cookingToolName: 4
   popUp: 0000000000000000
-  clientSprite: {fileID: 0}
+  clientSprites:
+  - {fileID: 21300000, guid: 6d460ea190accab4d973fb20ee1c7426, type: 3}
+  - {fileID: 21300000, guid: 10a1620b662462a4da1c006398f45d36, type: 3}
+  happyClientSprites:
+  - {fileID: 21300000, guid: a5aef3e14073df840a129de3872fd028, type: 3}
+  - {fileID: 21300000, guid: af6e5f75c0ff1934ca7d4388c4df2b10, type: 3}

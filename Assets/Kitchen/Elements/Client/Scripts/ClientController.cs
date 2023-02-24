@@ -21,12 +21,13 @@ namespace Kitchen
         [SerializeField] private GameObject treePrefab;
 
         private SpriteRenderer clientSpriteRend;
-        [SerializeField] private Sprite happyClientSprite;
+        [SerializeField] private Sprite[] happyClientSprite = new Sprite[2];
 
         private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
 
+        private int clientGender =0;
         protected void Awake()
         {
             clientSpriteRend = GetComponent<SpriteRenderer>();
@@ -39,6 +40,8 @@ namespace Kitchen
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
+
+            clientGender = UnityEngine.Random.Range(0, 2);
 
             int i = 0;
             while (i < requiredRecipe.ingredients.Length)
@@ -58,8 +61,10 @@ namespace Kitchen
                 ingredientsImages[i].enabled = false;
                 cookingToolsImages[i].enabled = false;
             }
-            if (requiredRecipe.clientSprite != null)
-                clientSpriteRend.sprite = requiredRecipe.clientSprite;
+            if (requiredRecipe.clientSprites != null)
+            {
+                clientSpriteRend.sprite = requiredRecipe.clientSprites[clientGender];
+            }
         }
 
         private void Update()
@@ -137,7 +142,7 @@ namespace Kitchen
         {
             //Display Happy Animation Here!
             clientServed = true;
-            clientSpriteRend.sprite = happyClientSprite;
+            clientSpriteRend.sprite = happyClientSprite[clientGender];
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 

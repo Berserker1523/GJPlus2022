@@ -564,7 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: -951686349
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78b18b40cfdacd543a5384c6037208d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90d16332dea24ef4480d121ea236840f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -592,7 +592,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 2.13, y: 5.26}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -625,7 +625,9 @@ MonoBehaviour:
   - {fileID: 7913729770480753531}
   - {fileID: 5600226633313767149}
   treePrefab: {fileID: 2554928730892972631, guid: 403be9a1218d39f4bab7b85d1bc5198a, type: 3}
-  happyClientSprite: {fileID: 21300000, guid: c928aba4f1c58f6418f734929cfcf86c, type: 3}
+  happyClientSprite:
+  - {fileID: 21300000, guid: a5aef3e14073df840a129de3872fd028, type: 3}
+  - {fileID: 21300000, guid: af6e5f75c0ff1934ca7d4388c4df2b10, type: 3}
 --- !u!1 &4858116934972563360
 GameObject:
   m_ObjectHideFlags: 0

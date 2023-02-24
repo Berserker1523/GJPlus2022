@@ -15,7 +15,7 @@ namespace Kitchen
         [SerializeField] public Sprite sprite;
         [SerializeField] public Ingredient[] ingredients;
         [SerializeField] public List<int> popUp = new List<int>();
-        [SerializeField] public Sprite clientSprite;
+        [SerializeField] public Sprite[] clientSprites = new Sprite[2];
 
         public static UnityAction assetsChanged;
 

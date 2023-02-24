@@ -178,7 +178,7 @@ namespace DevTools
                     EditorGUILayout.PropertyField(currentObject.FindProperty("recipeName"), new GUIContent("Recipe Name"));
                     //EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"));
-                    EditorGUILayout.PropertyField(currentObject.FindProperty("clientSprite"), new GUIContent("Sick Client Sprite"));
+                  //  EditorGUILayout.PropertyField(currentObject.FindProperty("clientSprite"), new GUIContent("Sick Client Sprite"));
 
                     SerializedProperty ingredients = currentObject.FindProperty("ingredients");
                     SerializedProperty array = currentObject.FindProperty("popUp");
