@@ -20,7 +20,7 @@ namespace Kitchen
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
 
-
+        [SerializeField] ParticleSystem shakingMortarParticle;
 
         private void Awake()
         {
@@ -30,6 +30,7 @@ namespace Kitchen
             timer.gameObject.SetActive(false);
             initialSprite = spriteRenderer.sprite;
             dragView.OnDropped += HandleDropped;
+            shakingMortarParticle.Stop();
         }
 
         private void OnDestroy() =>
@@ -99,6 +100,7 @@ namespace Kitchen
             {
                 cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Mortero");
                 cookingSound.start();
+                shakingMortarParticle.Play();
             }
         }
 
