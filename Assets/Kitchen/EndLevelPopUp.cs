@@ -1,36 +1,35 @@
 using Events;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Localization;
 using TMPro;
-using UnityEngine.Localization.Components;
+using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Kitchen
 {
     public class EndLevelPopUp : MonoBehaviour
     {
-        [SerializeField] GameObject upgradesPopUp;
-        [SerializeField] string mainMenuSceneName = "MainMenu";
-        [SerializeField] string kitchenScene = "Kitchen";
-        [SerializeField] LocalizeStringEvent victoryDefeatText;
-        [SerializeField] LocalizeStringEvent victoryDefeatTextDilate;
-        [SerializeField] Button button;
-        [SerializeField] LocalizeStringEvent buttonText;
+        [SerializeField] private Image[] stars = new Image[3];
+        [SerializeField] private TextMeshProUGUI titleText;
+        [SerializeField] private TextMeshProUGUI titleDilateText;
+        [SerializeField] private Color wonTitleColor;
+        [SerializeField] private Color lostTitleColor;
+        [SerializeField] private TextMeshProUGUI adviceText;
+        [SerializeField] private TextMeshProUGUI moneyText;
+        [SerializeField] private Button positiveButton;
+        [SerializeField] private TextMeshProUGUI positiveButtonText;
 
-        //Money
-        MoneyUI moneyUI;
-        [SerializeField] TextMeshProUGUI moneyText;
+        [SerializeField] private LocalizedString levelCompletedString;
+        [SerializeField] private LocalizedString levelFailedString;
+        [SerializeField] private LocalizedString continueString;
+        [SerializeField] private LocalizedString retryString;
 
-        //Stars 
-        [SerializeField] Image[] stars = new Image[3];
-        [SerializeField] Sprite collectedStarSprite;
-        [SerializeField] Sprite uncollectedStarSprite;
-
-        private int currentLevel;
+        private MoneyUI moneyUI;
 
         private void Awake()
         {
+            moneyUI = FindObjectOfType<MoneyUI>();
+
             EventManager.AddListener(GameStatus.Lost, HandleLost);
             EventManager.AddListener(GameStatus.Won, HandleWon);
         }
@@ -44,29 +43,29 @@ namespace Kitchen
         private void HandleWon()
         {
             gameObject.SetActive(true);
-            victoryDefeatText.SetEntry("Title_VictoryText");
-            victoryDefeatTextDilate.SetEntry("Title_VictoryText");
-            buttonText.SetEntry("Button_Continue");
-            button.onClick.AddListener(NextLevel);
+            titleText.text = levelCompletedString.GetLocalizedString();
+            titleDilateText.text = levelCompletedString.GetLocalizedString();
+            titleText.color = wonTitleColor;
+
+            //TODO set advice text
+
+            positiveButtonText.text = continueString.GetLocalizedString();
+            positiveButton.onClick.AddListener(NextLevel);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
         }
 
         private void HandleLost()
         {
             gameObject.SetActive(true);
-            victoryDefeatText.SetEntry("Title_DefeatText");
-            victoryDefeatTextDilate.SetEntry("Title_DefeatText");
-            buttonText.SetEntry("Button_TryAgain");
-            button.onClick.AddListener(TryAgain);
-            moneyText.text = "0";
-        }
+            titleText.text = levelFailedString.GetLocalizedString();
+            titleDilateText.text = levelFailedString.GetLocalizedString();
+            titleText.color = lostTitleColor;
 
-        private void Start()
-        {
-            currentLevel = LevelManager.CurrentLevel;
-            UpgradesPopUp(false);
-            moneyUI = FindObjectOfType<MoneyUI>();
-            gameObject.SetActive(false);
+            //TODO set advice text
+
+            positiveButtonText.text = retryString.GetLocalizedString();
+            positiveButton.onClick.AddListener(TryAgain);
+            moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
         }
 
         public void NextLevel()
@@ -76,27 +75,16 @@ namespace Kitchen
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
                 SceneManager.LoadScene("Credits", LoadSceneMode.Single);
-               
+
             }
             else
                 LevelManager.CurrentLevel++;
-            SceneManager.LoadScene($"{kitchenScene}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+            SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         }
 
         public void TryAgain()
         {
-            LevelManager.CurrentLevel = currentLevel;
-            SceneManager.LoadScene($"{kitchenScene}{currentLevel}", LoadSceneMode.Single);
-        }
-
-        public void UpgradesPopUp(bool showPopUP)
-        {
-            upgradesPopUp.SetActive(showPopUP);
-        }
-
-        public void ExitGame()
-        {
-            SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+            SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         }
     }
 }

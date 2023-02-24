@@ -30,12 +30,18 @@ namespace Kitchen
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
-          //  comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
+            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            // comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
         }
 
         private void Start()
         {
-            EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
