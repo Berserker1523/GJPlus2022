@@ -97,10 +97,13 @@ namespace Kitchen
 
                 CurrentRecipe = recipe;
                 potionResult.SetPotion(CurrentRecipe, recipe.sprite);
+                EventManager.Dispatch(PotionEvent.Poof);
                 ClearShaker();
                 return;
             }
             potionResult.SetPotion(CurrentRecipe, failedPotionSkin);
+
+            EventManager.Dispatch(PotionEvent.FailedRecipe);
             ClearShaker();
         }
 
@@ -117,7 +120,6 @@ namespace Kitchen
         public void EndAShakingnimationEvent()
         {
             anim.SetBool("Shake", false);
-            EventManager.Dispatch(PotionEvent.Poof);
             StopCoroutine(updateTimerRoutine);
             timer.gameObject.SetActive(false);
             CheckRecipe();
