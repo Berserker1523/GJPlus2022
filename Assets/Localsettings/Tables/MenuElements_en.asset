@@ -68,6 +68,14 @@ MonoBehaviour:
     m_Localized: Pause
     m_Metadata:
       m_Items: []
+  - m_Id: 6740264411299840
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6741597788930048
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
