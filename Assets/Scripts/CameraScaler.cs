@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraScaler : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer logicalScene;
+    [SerializeField] private Collider2D logicalScene;
 
     private float targetScreenRatio;
     private float currentScreenRatio;

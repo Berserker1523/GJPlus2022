@@ -54,12 +54,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4879829157542338051, guid: 7ef33508dd9aa3143abba72b87c39b5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879829157542338051, guid: 7ef33508dd9aa3143abba72b87c39b5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879829157542338051, guid: 7ef33508dd9aa3143abba72b87c39b5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: -5.45
       objectReference: {fileID: 0}
     - target: {fileID: 4879829157542338051, guid: 7ef33508dd9aa3143abba72b87c39b5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4879829157542338051, guid: 7ef33508dd9aa3143abba72b87c39b5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 1230609318039187115, guid: 199569f7adc0fd64cbd5aebf6b719e3e, type: 3}
       propertyPath: m_Name
       value: Coca
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230609318039187115, guid: 199569f7adc0fd64cbd5aebf6b719e3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079666019721920018, guid: 199569f7adc0fd64cbd5aebf6b719e3e, type: 3}
       propertyPath: m_RootOrder
@@ -172,6 +184,10 @@ PrefabInstance:
     - target: {fileID: 1230609318039187115, guid: dc0d4ce7e3dbf4240922a0b819a5c046, type: 3}
       propertyPath: m_Name
       value: "Asa\xED"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230609318039187115, guid: dc0d4ce7e3dbf4240922a0b819a5c046, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1532110917515835504, guid: dc0d4ce7e3dbf4240922a0b819a5c046, type: 3}
       propertyPath: m_RootOrder
@@ -279,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yuca
       objectReference: {fileID: 0}
+    - target: {fileID: 1230609318039187115, guid: 40420f4c5d1b44c4e85cb2883a308b9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40420f4c5d1b44c4e85cb2883a308b9f, type: 3}
 --- !u!4 &6783673118994953525 stripped
@@ -298,12 +318,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 132225616663187152, guid: cceb16c4fc4c0014eba51fac13e724e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 132225616663187152, guid: cceb16c4fc4c0014eba51fac13e724e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 132225616663187152, guid: cceb16c4fc4c0014eba51fac13e724e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.69
+      value: 7.18
       objectReference: {fileID: 0}
     - target: {fileID: 132225616663187152, guid: cceb16c4fc4c0014eba51fac13e724e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 132225616663187152, guid: cceb16c4fc4c0014eba51fac13e724e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -358,6 +386,10 @@ PrefabInstance:
     - target: {fileID: 1230609318039187115, guid: 7bd723b2333ac1b4ba29ee9347d34956, type: 3}
       propertyPath: m_Name
       value: Aguaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230609318039187115, guid: 7bd723b2333ac1b4ba29ee9347d34956, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1862118141445048267, guid: 7bd723b2333ac1b4ba29ee9347d34956, type: 3}
       propertyPath: m_RootOrder
@@ -427,11 +459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445103872901593958, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.27
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: 1445103872901593958, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 1445103872901593958, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
       propertyPath: m_LocalPosition.z
