@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4160327030229101348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7399034544997757209}
-  m_Layer: 5
-  m_Name: MortarParticle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7399034544997757209
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160327030229101348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3302560025659872119}
-  m_Father: {fileID: 1179243777938976876}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4838055890721297914
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4583095311777049448}
-  - {fileID: 7399034544997757209}
+  - {fileID: 8363014367205665854}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 2073871431
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1257236702, guid: 65bb109d33779d54488b023679a2a0f6, type: 3}
+  m_Sprite: {fileID: -1381503908, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,7 +107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.53, y: 1.42}
+    oldSize: {x: 2.88, y: 1.6}
     newSize: {x: 1.53, y: 1.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -161,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingToolData: {fileID: 11400000, guid: 602ddcadf8a8c9b49829c641fcea5ee7, type: 2}
-  shakingMortarParticle: {fileID: 3302560025659872118}
+  shakingMortarParticle: {fileID: 8363014367205665855}
 --- !u!114 &934993098367615919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,48 +154,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14ab2c10d8301a44bf1dca49c5fea23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1271912674400725776
+--- !u!1001 &5223283094432011353
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7399034544997757209}
+    m_TransformParent: {fileID: 1179243777938976876}
     m_Modifications:
     - target: {fileID: 4356019941978437732, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_Name
       value: MixingParticle
       objectReference: {fileID: 0}
-    - target: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-      propertyPath: lengthInSec
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.553
+      value: -0.7757623
       objectReference: {fileID: 0}
     - target: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -259,15 +211,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
---- !u!198 &3302560025659872118 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-  m_PrefabInstance: {fileID: 1271912674400725776}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3302560025659872119 stripped
+--- !u!4 &8363014367205665854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4356019941978437735, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
-  m_PrefabInstance: {fileID: 1271912674400725776}
+  m_PrefabInstance: {fileID: 5223283094432011353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8363014367205665855 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4356019941978437734, guid: 7185d9fded40d6b46a4850c8a736f9b6, type: 3}
+  m_PrefabInstance: {fileID: 5223283094432011353}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9103525819625406595
 PrefabInstance:
