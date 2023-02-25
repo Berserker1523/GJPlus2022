@@ -484,7 +484,7 @@ public class VignetteManagerScript : MonoBehaviour
                 twentyfourthTimer -= Time.deltaTime;
                 if (twentyfourthTimer <= 0)
                 {
-                    EventManager.Dispatch(TutorialEvent.Completed);
+                    EventManager.Dispatch(GlobalEvent.TutorialCompleted);
 
                     LoadKitchen1();
                 }

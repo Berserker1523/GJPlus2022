@@ -15,7 +15,7 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
-            EventManager.AddListener(TutorialEvent.Completed, TutorialCompleted);
+            EventManager.AddListener(GlobalEvent.TutorialCompleted, TutorialCompleted);
 
             LoadStarsDataFileIfExists();
         }
