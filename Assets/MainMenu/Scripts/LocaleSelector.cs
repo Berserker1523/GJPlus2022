@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
 
 public class LocaleSelector : MonoBehaviour
 {
-    private bool active = false;
-
+    [SerializeField] Image[] circles = new Image[3];
     private void Awake()
     {
         int ID = PlayerPrefs.GetInt("LocaleKey", 0);
@@ -14,17 +14,22 @@ public class LocaleSelector : MonoBehaviour
 
     public void ChangeLocale(int localeID)
     {
-        if (active == true)
-            return;
         StartCoroutine(SetLocale(localeID));
+
+        for(int i=0; i<circles.Length; i++)
+        {
+            if (i == localeID)
+                circles[i].enabled = true;
+            else
+                circles[i].enabled = false;
+        }
+
     }
 
     IEnumerator SetLocale(int localeID)
     {
-        active = true;
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
         PlayerPrefs.SetInt("LocaleKey", localeID);
-        active = false;
     }
 }
