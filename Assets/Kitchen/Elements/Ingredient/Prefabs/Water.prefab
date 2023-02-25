@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1445103872901593958}
   - component: {fileID: 3600632465376983016}
-  - component: {fileID: 1989617358813732690}
+  - component: {fileID: 90147127896936713}
   - component: {fileID: 1230609318039187157}
   - component: {fileID: 8614529390143249379}
   - component: {fileID: -2712584570609782355}
+  - component: {fileID: 3126899241817283003}
   m_Layer: 5
   m_Name: Water
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1989617358813732690
+--- !u!61 &90147127896936713
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0062499046, y: 0.0359959}
+  m_Offset: {x: 0.011736512, y: 1.050415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8491659, y: 1.2010123}
+  m_Size: {x: 1.8515537, y: 4.1128025}
   m_EdgeRadius: 0
 --- !u!114 &1230609318039187157
 MonoBehaviour:
@@ -149,5 +150,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14ab2c10d8301a44bf1dca49c5fea23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3126899241817283003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230609318039187115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16867a5e24a988b4299f4aba9a0c65a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
