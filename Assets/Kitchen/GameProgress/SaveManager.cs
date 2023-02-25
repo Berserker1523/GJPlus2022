@@ -15,16 +15,6 @@ public static class SaveManager
         fileStream.Close();
     }
 
-    public static void SaveTutorialData()
-    {
-        GameData gameData = new GameData(true);
-        string dataPath = Application.persistentDataPath + "/kumu.save";
-        FileStream fileStream = new FileStream(dataPath, FileMode.Create);
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        binaryFormatter.Serialize(fileStream, gameData);
-        fileStream.Close();
-    }
-
     public static GameData LoadStarsData()
     {
         string dataPath = Application.persistentDataPath + "/kumu.save";

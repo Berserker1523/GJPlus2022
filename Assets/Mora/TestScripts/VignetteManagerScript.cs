@@ -154,6 +154,8 @@ public class VignetteManagerScript : MonoBehaviour
         cases = 0;
         PequiObject = GameObject.Find("Pequi");
         WaterObject = GameObject.Find("Water");
+
+        LevelManager.CurrentLevel = 0;
     }
 
     // Update is called once per frame
@@ -483,8 +485,7 @@ public class VignetteManagerScript : MonoBehaviour
                 if (twentyfourthTimer <= 0)
                 {
                     EventManager.Dispatch(TutorialEvent.Completed);
-                    LevelManager.CurrentLevel = 1;
-                    SaveManager.SaveTutorialData();
+
                     LoadKitchen1();
                 }
             break;

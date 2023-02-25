@@ -88,7 +88,7 @@ namespace Kitchen
             int starsAmount =0;
             for (int i = 0; i < 3; i++)
             {
-                if (starsData.stars[LevelManager.CurrentLevel-1, i])
+                if (starsData.stars[LevelManager.CurrentLevel, i])
                 {
                     stars[i].SetTrigger("TriggerStar");
                     starsAmount++;

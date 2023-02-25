@@ -15,6 +15,7 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
+            EventManager.AddListener(TutorialEvent.Completed, TutorialCompleted);
         }
 
         public void CallSaveData()
@@ -26,16 +27,23 @@ namespace Kitchen
 
         public void SetGoalStar()
         {
-            stars[LevelManager.CurrentLevel-1, 0] =true;
-           
+            stars[LevelManager.CurrentLevel, 0] =true;          
         }
 
          public void SetSpeedStar()=>       
-            stars[LevelManager.CurrentLevel-1, 1] =true;
+            stars[LevelManager.CurrentLevel, 1] =true;
 
          public void SetStreak()=>       
-            stars[LevelManager.CurrentLevel-1, 2] =true;
+            stars[LevelManager.CurrentLevel, 2] =true;
 
+        public void TutorialCompleted()
+        {
+            SetGoalStar();
+            SetSpeedStar();
+            SetStreak();
+            LevelManager.CurrentLevel = 1;
+            CallSaveData();
+        }
 
         private void OnDisable()
         {
