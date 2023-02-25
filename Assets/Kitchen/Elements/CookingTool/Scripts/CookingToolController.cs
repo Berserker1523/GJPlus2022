@@ -58,6 +58,7 @@ namespace Kitchen
                 EventManager.Dispatch(IngredientState.Cooked);
                 if (cookingToolData.cookingToolName == CookingToolName.Mortar)
                 {
+                    shakingMortarParticle.Stop();
                     timer.gameObject.SetActive(false);
                     cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
