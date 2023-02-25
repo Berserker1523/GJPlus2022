@@ -31,6 +31,9 @@ namespace Kitchen
         public static string backgroundMusic = "event:/Music/MusicaFondo";
         public static string hurryParameter = "Hurry";
 
+        public static string endlevelStarsMusic = "";
+        public static string endLevelStarsParameter = "";
+
         //Game Status SFX Events
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
         string lostEvent = "event:/SFX/Jugabilidad/Pierde Nivel";

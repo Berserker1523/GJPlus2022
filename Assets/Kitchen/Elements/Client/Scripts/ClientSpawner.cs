@@ -101,15 +101,15 @@ namespace Kitchen
                 EventManager.Dispatch(GameStatus.Lost);
 
             //Call Victory if no more clients will arrive
-            else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
-                EventManager.Dispatch(GameStatus.Won);
+            /*else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
+                EventManager.Dispatch(GameStatus.Won);*/
         }
 
         private void HandleClientServed()
         {
             clientsGood++;
-            if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
-                EventManager.Dispatch(GameStatus.Won);
+           /* if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
+                EventManager.Dispatch(GameStatus.Won);*/
         }
     }
 }
