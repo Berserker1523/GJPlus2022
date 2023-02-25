@@ -22,7 +22,6 @@ namespace Kitchen
         private int currentStreakProgress;
         private int streakCheckpoint;
 
-        [SerializeField, Range(1f,10f)] private float streakWaitTime = 5f;
         Coroutine streakCoroutine;
 
         private FMOD.Studio.EventInstance comboSound;
@@ -42,12 +41,12 @@ namespace Kitchen
 
         private void Start()
         {
-            
+
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
             streakText.text = "0";
-            streakBar.maxValue = streakWaitTime;
+            streakBar.maxValue = levelInstantiator.LevelData.streakWaitTime;
             streakBar.value = 0;
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
@@ -58,14 +57,13 @@ namespace Kitchen
 
         private IEnumerator LevelTimer()
         {
-            speedText.text = currentTime.ToString();
+            speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
 
-            WaitForSeconds wait = new WaitForSeconds(1f);
             while (currentTime > 0)
             {
+                yield return new WaitForSeconds(1f);
                 currentTime--;
-                speedText.text = string.Format("{0:0}:{1:00}", (currentTime / 60) % 60, currentTime % 60);
-
+                speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
 
                 if (currentTime < 15)
                     speedText.color = Color.red;
@@ -75,9 +73,6 @@ namespace Kitchen
                     EventManager.Dispatch(LevelEvents.Hurry);
                     hurryDispatched = true;
                 }
-
-                yield return wait;
-
             }
             yield return null;
         }
@@ -107,19 +102,19 @@ namespace Kitchen
 
         private IEnumerator StreakBar()
         {
-            float currentStreakTime=0f;
-            streakBar.value = streakWaitTime;
+            float currentStreakTime = 0f;
+            streakBar.value = levelInstantiator.LevelData.streakWaitTime;
             UpdateStreakText();
-            while (currentStreakTime < streakWaitTime)
+            while (currentStreakTime < levelInstantiator.LevelData.streakWaitTime)
             {
                 yield return new WaitForSeconds(0.1f);
                 currentStreakTime += 0.1f;
                 streakBar.value -= 0.1f;
             }
 
-            currentStreakProgress =0;
+            currentStreakProgress = 0;
             UpdateStreakText();
-            yield return null; 
+            yield return null;
         }
 
         private void CheckStreak()
@@ -127,20 +122,20 @@ namespace Kitchen
             currentStreakProgress++;
             EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
             SetBarProgress();
-            
-            if (currentStreakProgress == 3) //TODO burned variable
+
+            if (currentStreakProgress == levelInstantiator.LevelData.streak)
                 EventManager.Dispatch(LevelEvents.Streak);
         }
 
         private void SetBarProgress()
         {
             streakText.text = $"{streakCheckpoint}";
-            if(currentStreakProgress>1)
-                StopCoroutine(streakCoroutine); 
+            if (currentStreakProgress > 1)
+                StopCoroutine(streakCoroutine);
 
             streakCoroutine = StartCoroutine(StreakBar());
         }
 
-        private void UpdateStreakText () => streakText.text = currentStreakProgress.ToString();
+        private void UpdateStreakText() => streakText.text = currentStreakProgress.ToString();
     }
 }

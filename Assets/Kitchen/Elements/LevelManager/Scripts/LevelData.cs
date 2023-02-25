@@ -12,7 +12,8 @@ namespace Kitchen
 
         public int level;
         [Header("Clients")]
-        [Range (1,200)] public int clientNumber;
+        [Range(1, 200)] public int clientNumber;
+        [Range(1, 200)] public float initialSpawnSeconds;
         [Range(1, 200)] public float minSpawnSeconds;
         [Range(1, 200)] public float maxSpawnSeconds;
         [Header("Kitchen Elements")]
@@ -22,31 +23,33 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfPainKillers;
 
         [Header("LevelGoals")]
-        [Range(1, 200)] public int time =200;
-        [Range(1, 200)] public int goal =5;
+        [Range(1, 200)] public int time = 200;
+        [Range(1, 200)] public int goal = 5;
+        [Range(1, 10)] public int streak = 3;
+        public float streakWaitTime = 15f;
 
         [Header("Recipes")]
         public List<RecipeData> levelRecipes = new List<RecipeData>();
-        public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();       
-        
+        public List<RecipePercentage> levelPercentages = new List<RecipePercentage>();
+
         public bool[] stars = new bool[3];
 
         private void OnEnable()
         {
             GameData gameData = SaveManager.LoadStarsData();
 
-            if (gameData == null)      
+            if (gameData == null)
                 gameData = new GameData();
-            
 
-            if(level == gameData.currentLevel)
+
+            if (level == gameData.currentLevel)
             {
                 if (gameData.stars != null)
                 {
-                    for(int i=0; i<stars.Length; i++)
+                    for (int i = 0; i < stars.Length; i++)
                     {
-                        stars[i] = gameData.stars[level-1, i];
-                       // Debug.Log(gameData.stars[level-1, i]);
+                        stars[i] = gameData.stars[level - 1, i];
+                        // Debug.Log(gameData.stars[level-1, i]);
                     }
 
                 }
@@ -55,7 +58,7 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
 
-            if(gameData.attendedClients!= null)
+            if (gameData.attendedClients != null)
                 GlobalCounter.attendedClients = gameData.attendedClients;
         }
 
@@ -79,27 +82,27 @@ namespace Kitchen
     }
 
     public enum RecipePercentage
-    {  
-        _5 =5,
-        _10 =10, 
-        _15=15,
-        _20=20,
-        _25=25,
-        _30=30,
-        _35=35,
-        _40 =40,
-        _45=45,
-        _50=50,
-        _55=55,
-        _60=60,
-        _65=65,
-        _70=70,
-        _75=75,
-        _80=80,
-        _85=85,
-        _90=90,
-        _95=95,
-        _100=100,
+    {
+        _5 = 5,
+        _10 = 10,
+        _15 = 15,
+        _20 = 20,
+        _25 = 25,
+        _30 = 30,
+        _35 = 35,
+        _40 = 40,
+        _45 = 45,
+        _50 = 50,
+        _55 = 55,
+        _60 = 60,
+        _65 = 65,
+        _70 = 70,
+        _75 = 75,
+        _80 = 80,
+        _85 = 85,
+        _90 = 90,
+        _95 = 95,
+        _100 = 100,
         _0 = 0
     }
 }

@@ -24,8 +24,6 @@ namespace Kitchen
         private int clientsDied;
         private int clientsGood;
 
-        private bool lastClientSpawned;
-
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
@@ -40,7 +38,7 @@ namespace Kitchen
         }
 
         private void Start() =>
-            TrySpawnClient();
+            nextSpawnTime = levelInstantiator.LevelData.initialSpawnSeconds;
 
         private void Update()
         {
@@ -97,8 +95,8 @@ namespace Kitchen
         private void HandleClientDied()
         {
             clientsDied++;
-            if (clientsDied >= spawnPoints.Count)
-                EventManager.Dispatch(GameStatus.Lost);
+           /*if (clientsDied >= spawnPoints.Count)
+                EventManager.Dispatch(GameStatus.Lost);*/
 
             //Call Victory if no more clients will arrive
             /*else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
