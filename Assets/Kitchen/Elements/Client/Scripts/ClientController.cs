@@ -108,8 +108,8 @@ namespace Kitchen
         }
 
         private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData) =>
-            !pointerEventData.pointerDrag.TryGetComponent(out PotionResultController _) &&
-            !pointerEventData.pointerDrag.TryGetComponent(out PainkillerController _);
+            pointerEventData.pointerDrag.TryGetComponent(out PotionResultController _) ||
+            pointerEventData.pointerDrag.TryGetComponent(out PainkillerController _);
 
         public void HandleDropped(PointerEventData pointerEventData)
         {
