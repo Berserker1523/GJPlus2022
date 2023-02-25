@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class VignetteManagerScript : MonoBehaviour
 {
+    #region variables
     //post process values
     private Volume vignetteVolume;
     private Vignette vignetteInstance;
@@ -107,6 +108,8 @@ public class VignetteManagerScript : MonoBehaviour
     //coordenates
     private Vector2 currentCenter;
     private Vector2 targetCenter;
+
+    #endregion
     // Start is called before the first frame update
     void Awake()
     {
@@ -479,12 +482,18 @@ public class VignetteManagerScript : MonoBehaviour
                 twentyfourthTimer -= Time.deltaTime;
                 if (twentyfourthTimer <= 0)
                 {
-                    SceneManager.LoadScene("Kitchen1");
+                    EventManager.Dispatch(TutorialEvent.Completed);
+                    LevelManager.CurrentLevel = 1;
+                    SaveManager.SaveTutorialData();
+                    LoadKitchen1();
                 }
             break;
         }
-
     }
+
+    void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
+
+    #region Vignettes
     public void initialVignette()
     {
         cases = 1;
@@ -581,7 +590,9 @@ public class VignetteManagerScript : MonoBehaviour
     {
         cases = 24;
     }
-    void OnDestroy()
+
+        #endregion
+        void OnDestroy()
     {
         EventManager.RemoveListener(IngredientState.Cooked, SixthVignette);
         EventManager.RemoveListener(PotionEvent.AddIngredient, eleventhVignette);
