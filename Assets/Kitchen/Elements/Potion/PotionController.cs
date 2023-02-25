@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-
     [RequireComponent(typeof(Animator))]
-    public class PotionController : MonoBehaviour, IDropHandler, IPointerDownHandler
+    [RequireComponent(typeof(DropView))]
+    public class PotionController : MonoBehaviour, IPointerDownHandler
     {
         public const int MaxAllowedIngredients = 3;
 
@@ -18,33 +18,49 @@ namespace Kitchen
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
         [SerializeField] private PotionResultController potionResult;
-
         [SerializeField] private Animator anim;
+
         private LevelInstantiator levelInstantiator;
-        public readonly List<PotionIngredient> potionIngredients = new();
-
-        public RecipeData CurrentRecipe;
-
         private CookingTimerView timer;
+        private PotionParticles potionParticles;
+        private DropView dropView;
+
+        public readonly List<PotionIngredient> potionIngredients = new();
+        private RecipeData currentRecipe;
         private IEnumerator updateTimerRoutine;
 
-        private PotionParticles potionParticles;
-
-        private void Awake() =>
-            levelInstantiator = FindObjectOfType<LevelInstantiator>();
-
-        private void Start()
+        private void Awake()
         {
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
             anim = GetComponent<Animator>();
             timer = GetComponentInChildren<CookingTimerView>();
             timer.gameObject.SetActive(false);
             potionParticles = GetComponentInChildren<PotionParticles>();
+            dropView = GetComponent<DropView>();
+            dropView.OnDropped += HandleDropped;
+            dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
         }
 
+        private void OnDestroy()
+        {
+            dropView.OnDropped -= HandleDropped;
+        }
 
-        public void OnDrop(PointerEventData pointerEventData)
+        private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData)
         {
             if (potionIngredients.Count == MaxAllowedIngredients)
+                return false;
+
+            if (!pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController) &&
+                !pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
+                return false;
+
+            return true;
+        }
+
+        public void HandleDropped(PointerEventData pointerEventData)
+        {
+            if (!IsDraggedObjectInteractableWithMe(pointerEventData))
                 return;
 
             if (pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController))
@@ -84,7 +100,6 @@ namespace Kitchen
             EventManager.Dispatch(PotionEvent.AddIngredient);
         }
 
-
         private void CheckRecipe()
         {
             List<PotionIngredient> recipeIngredients = new();
@@ -98,15 +113,15 @@ namespace Kitchen
                 if (!recipeIngredients.OrderBy(x => x.data.ingredientName).SequenceEqual(potionIngredients.OrderBy(x => x.data.ingredientName)) || !recipeIngredients.OrderBy(x => x.usedCookingTool).SequenceEqual(potionIngredients.OrderBy(x => x.usedCookingTool)))
                     continue;
 
-                CurrentRecipe = recipe;
-                potionResult.SetPotion(CurrentRecipe, recipe.sprite);
+                currentRecipe = recipe;
+                potionResult.SetPotion(currentRecipe, recipe.sprite);
                 EventManager.Dispatch(PotionEvent.Poof);
                 potionParticles.SuccesActivator();
                 
                 ClearShaker();
                 return;
             }
-            potionResult.SetPotion(CurrentRecipe, failedPotionSkin);
+            potionResult.SetPotion(currentRecipe, failedPotionSkin);
 
             EventManager.Dispatch(PotionEvent.FailedRecipe);
             potionParticles.FailureActivator();
@@ -116,7 +131,7 @@ namespace Kitchen
         public void ClearShaker()
         {
             potionIngredients.Clear();
-            CurrentRecipe = null;
+            currentRecipe = null;
             // spriteRenderer.sprite = defaultPotionSkin;
             foreach (SpriteRenderer renderer in potionBranchesSprites)
                 renderer.sprite = null;

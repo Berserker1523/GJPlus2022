@@ -19,14 +19,10 @@ namespace Kitchen
             dragView.OnDragBegan += HandleDragBegan;
         }
 
-        private void OnDestroy()
-        {
+        private void OnDestroy() =>
             dragView.OnDragBegan -= HandleDragBegan;
-        } 
 
-        private void HandleDragBegan(PointerEventData _)
-        {
+        private void HandleDragBegan(PointerEventData _) =>
             EventManager.Dispatch(IngredientData.ingredientName);
-        }
     }
 }

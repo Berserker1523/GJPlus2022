@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 namespace Kitchen
 {
-    [RequireComponent(typeof(Collider2D))]
-    public class ClientController : MonoBehaviour, IDropHandler
+    [RequireComponent(typeof(DropView))]
+    public class ClientController : MonoBehaviour
     {
         public const float MaxWaitingSeconds = 70f;
 
@@ -18,30 +18,33 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private List<Image> ingredientsImages;
         [SerializeField] private List<Image> cookingToolsImages;
-        [SerializeField] private GameObject treePrefab;
-
-        private SpriteRenderer clientSpriteRend;
         [SerializeField] private Sprite[] happyClientSprite = new Sprite[2];
+
+        private SpriteRenderer clientSpriteRenderer;
+        private DropView dropView;
 
         private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
+        private int clientGender = 0;
 
-        private int clientGender =0;
         protected void Awake()
         {
-            clientSpriteRend = GetComponent<SpriteRenderer>();
+            clientSpriteRenderer = GetComponent<SpriteRenderer>();
+            dropView = GetComponent<DropView>();
+
             waitingTimer = MaxWaitingSeconds;
             slider.value = 1;
             EventManager.Dispatch(ClientEvent.Arrived);
+
+            dropView.OnDropped += HandleDropped;
+            dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
         }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
-
-            clientGender = UnityEngine.Random.Range(0, 2);
 
             int i = 0;
             while (i < requiredRecipe.ingredients.Length)
@@ -61,10 +64,10 @@ namespace Kitchen
                 ingredientsImages[i].enabled = false;
                 cookingToolsImages[i].enabled = false;
             }
+
+            clientGender = UnityEngine.Random.Range(0, 2);
             if (requiredRecipe.clientSprites != null)
-            {
-                clientSpriteRend.sprite = requiredRecipe.clientSprites[clientGender];
-            }
+                clientSpriteRenderer.sprite = requiredRecipe.clientSprites[clientGender];
         }
 
         private void Update()
@@ -75,6 +78,7 @@ namespace Kitchen
             waitingTimer -= Time.deltaTime;
             slider.value = waitingTimer / MaxWaitingSeconds;
 
+            //TODO burned colors and variables
             if (waitingTimer <= MaxWaitingSeconds * 0.25)
             {
                 ColorUtility.TryParseHtmlString("#ef2424", out Color color);
@@ -98,13 +102,16 @@ namespace Kitchen
 
             if (waitingTimer <= 0)
             {
-                Instantiate(treePrefab, transform.parent);
                 Destroy(gameObject);
                 EventManager.Dispatch(ClientEvent.Died);
             }
         }
 
-        public void OnDrop(PointerEventData pointerEventData)
+        private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData) =>
+            !pointerEventData.pointerDrag.TryGetComponent(out PotionResultController _) &&
+            !pointerEventData.pointerDrag.TryGetComponent(out PainkillerController _);
+
+        public void HandleDropped(PointerEventData pointerEventData)
         {
             pointerEventData.pointerDrag.TryGetComponent(out PotionResultController potionController);
             pointerEventData.pointerDrag.TryGetComponent(out PainkillerController painkillerController);
@@ -124,12 +131,12 @@ namespace Kitchen
             if (!acceptedRecipe)
                 return;
 
-            for(int i=0; i< potionController.CurrentRecipe.ingredients.Length;i++)
+            for (int i = 0; i < potionController.CurrentRecipe.ingredients.Length; i++)
             {
-                for(int j=0; j<Enum.GetValues(typeof(IngredientName)).Length;j++)
+                for (int j = 0; j < Enum.GetValues(typeof(IngredientName)).Length; j++)
                 {
                     if ((int)potionController.CurrentRecipe.ingredients[i].ingredient.ingredientName == j)
-                        GlobalCounter.attendedClients[j]++;              
+                        GlobalCounter.attendedClients[j]++;
                 }
             }
 
@@ -142,7 +149,7 @@ namespace Kitchen
         {
             //Display Happy Animation Here!
             clientServed = true;
-            clientSpriteRend.sprite = happyClientSprite[clientGender];
+            clientSpriteRenderer.sprite = happyClientSprite[clientGender];
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 
@@ -152,6 +159,4 @@ namespace Kitchen
         private void AddMoney() =>
             MoneyManager.Money += (int)waitingTimer + 10; //TODO Burned Variable
     }
-
-
 }
