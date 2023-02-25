@@ -1,4 +1,7 @@
 using Events;
+using FMOD.Studio;
+using FMODUnity;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -9,7 +12,8 @@ namespace Kitchen
 {
     public class EndLevelPopUp : MonoBehaviour
     {
-        [SerializeField] private Image[] stars = new Image[3];
+        [SerializeField] private Animator[] stars = new Animator[3];
+        [SerializeField] private StarsData starsData;
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI titleDilateText;
         [SerializeField] private Color wonTitleColor;
@@ -26,12 +30,20 @@ namespace Kitchen
 
         private MoneyUI moneyUI;
 
+        //FMOD Parameter
+        public PARAMETER_ID starsParameterId;
+        public EventInstance starsInstance;
+
+        [EventRef, SerializeField] public string fmodEvent;
+        [SerializeField] public string fmodParameterName;
+
         private void Awake()
         {
             moneyUI = FindObjectOfType<MoneyUI>();
 
             EventManager.AddListener(GameStatus.Lost, HandleLost);
             EventManager.AddListener(GameStatus.Won, HandleWon);
+            SetFmodParameter();
         }
 
         private void OnDestroy()
@@ -52,6 +64,7 @@ namespace Kitchen
             positiveButtonText.text = continueString.GetLocalizedString();
             positiveButton.onClick.AddListener(NextLevel);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
+            StartCoroutine(DisplayStars());
         }
 
         private void HandleLost()
@@ -66,6 +79,21 @@ namespace Kitchen
             positiveButtonText.text = retryString.GetLocalizedString();
             positiveButton.onClick.AddListener(TryAgain);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
+        }
+
+        private IEnumerator DisplayStars()
+        {
+            int starsAmount =0;
+            for (int i = 0; i < 3; i++)
+            {
+                if (starsData.stars[LevelManager.CurrentLevel-1, i])
+                {
+                    stars[i].SetTrigger("TriggerStar");
+                    starsAmount++;
+                    yield return new WaitForSeconds(1f); 
+                }
+            }
+            PlayStarsParameter(starsAmount);
         }
 
         public void NextLevel()
@@ -85,6 +113,25 @@ namespace Kitchen
         public void TryAgain()
         {
             SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+        }
+
+        void SetFmodParameter()
+        {
+            fmodEvent = SoundsManager.endlevelStarsMusic;
+            fmodParameterName = SoundsManager.endLevelStarsParameter;
+
+            starsInstance = RuntimeManager.CreateInstance(fmodEvent);
+            EventDescription pitchEventDescription;
+            starsInstance.getDescription(out pitchEventDescription);
+            PARAMETER_DESCRIPTION pitchParameterDescription;
+            pitchEventDescription.getParameterDescriptionByName(fmodParameterName, out pitchParameterDescription);
+            starsParameterId = pitchParameterDescription.id;
+        }
+
+        void PlayStarsParameter(int starsAmount)
+        {
+            starsInstance.setParameterByName(fmodParameterName, starsAmount);
+            starsInstance.start();
         }
     }
 }
