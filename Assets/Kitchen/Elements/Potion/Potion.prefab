@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7155985123903874121}
   - component: {fileID: 2722781061215498098}
   - component: {fileID: 6138420174921853029}
+  - component: {fileID: 5013139971172740894}
   m_Layer: 5
   m_Name: Result
   m_TagString: Untagged
@@ -135,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae8651e52845634d8700692753f829c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRecipe: {fileID: 0}
   resultSprite: {fileID: 4243459301807081500}
 --- !u!61 &2722781061215498098
 BoxCollider2D:
@@ -175,6 +175,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2b4be31c4683846af67741304390fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &5013139971172740894
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941804671854729076}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1146853414210837075
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +284,6 @@ MonoBehaviour:
   - {fileID: 6593856291382089527}
   - {fileID: 4980190416810730176}
   potionResult: {fileID: 7155985123903874121}
-  anim: {fileID: 0}
 --- !u!95 &5012975737639786915
 Animator:
   serializedVersion: 4

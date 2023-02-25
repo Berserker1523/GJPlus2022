@@ -18,7 +18,8 @@ namespace Kitchen
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
         [SerializeField] private PotionResultController potionResult;
-        [SerializeField] private Animator anim;
+
+        private Animator anim;
 
         private LevelInstantiator levelInstantiator;
         private CookingTimerView timer;
@@ -51,11 +52,13 @@ namespace Kitchen
             if (potionIngredients.Count == MaxAllowedIngredients)
                 return false;
 
-            if (!pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController) &&
-                !pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
-                return false;
+            if (pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController) && 
+                cookingToolController.CurrentCookingIngredient.state == IngredientState.Cooked ||
+                pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController) &&
+                ingredientController.IngredientData.necessaryCookingTool == CookingToolName.None)
+                return true;
 
-            return true;
+            return false;
         }
 
         public void HandleDropped(PointerEventData pointerEventData)
@@ -78,16 +81,12 @@ namespace Kitchen
 
         public void HandleCookingToolReceived(CookingToolController cookingToolController)
         {
-            if (cookingToolController.CurrentCookingIngredient.state != IngredientState.Cooked)
-                return;
             AddIngredient(cookingToolController.CurrentCookingIngredient.data, cookingToolController.CookingToolData.cookingToolName);
             cookingToolController.Release();
         }
 
         public void HandleIngredientReceived(IngredientController ingredientController)
         {
-            if (ingredientController.IngredientData.necessaryCookingTool != CookingToolName.None)
-                return;
             AddIngredient(ingredientController.IngredientData, CookingToolName.None);
             EventManager.Dispatch(PotionEvent.AddWater);
         }
