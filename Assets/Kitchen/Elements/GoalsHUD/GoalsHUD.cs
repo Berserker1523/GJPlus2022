@@ -25,11 +25,12 @@ namespace Kitchen
         [SerializeField, Range(1f,10f)] private float streakWaitTime = 5f;
         Coroutine streakCoroutine;
 
-       // private FMOD.Studio.EventInstance comboSound;
+        private FMOD.Studio.EventInstance comboSound;
 
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
+            comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
             // comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
         }
