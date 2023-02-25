@@ -469,18 +469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterTank
       objectReference: {fileID: 0}
-    - target: {fileID: 2939021120857935251, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939021120857935251, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4684149189314146303, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8705381494403747112, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -491,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705381494403747112, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8705381494403747112, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -532,20 +520,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8705381494403747112, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
   m_PrefabInstance: {fileID: 8032336839558883072}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4803965418232266590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3302135595145255006, guid: d042f198e9516c842a9a46a42b06eea3, type: 3}
-  m_PrefabInstance: {fileID: 8032336839558883072}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5091126474069587102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4803965418232266590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16867a5e24a988b4299f4aba9a0c65a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
