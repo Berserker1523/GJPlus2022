@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredRecipe: {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
-  happyClientSprite: {fileID: 21300000, guid: c928aba4f1c58f6418f734929cfcf86c, type: 3}
+  happyClientSprite: {fileID: 21300000, guid: a5aef3e14073df840a129de3872fd028, type: 3}
 --- !u!224 &6221821200968711490 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5945920437877362160, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
