@@ -16,7 +16,10 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
             EventManager.AddListener(TutorialEvent.Completed, TutorialCompleted);
+
+            LoadStarsDataFileIfExists();
         }
+
 
         public void CallSaveData()
         {
@@ -44,6 +47,15 @@ namespace Kitchen
             LevelManager.CurrentLevel = 1;
             CallSaveData();
         }
+
+        void LoadStarsDataFileIfExists()
+        {
+          GameData gameData= SaveManager.LoadStarsData();
+
+            if (gameData != null)
+                stars = gameData.stars;
+        }
+
 
         private void OnDisable()
         {

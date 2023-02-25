@@ -9,7 +9,6 @@ using Kitchen;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
-using System.Text.RegularExpressions;
 
 namespace HistoryBook {
     public class HistoryBookManager : MonoBehaviour
@@ -32,7 +31,9 @@ namespace HistoryBook {
         [SerializeField] public LocalizedString lockedTextTag ;
 
         [SerializeField] public Sprite selectedTagSprite;
-        [SerializeField] public Sprite unselectedTagSprite; 
+        [SerializeField] public Sprite unselectedTagSprite;
+
+        GameData gameData;
 
         //public event Action<int> DefaultEntrySetted;
 
@@ -46,47 +47,52 @@ namespace HistoryBook {
             buttonPrefab = Resources.Load<GameObject>("BookEntryButton");
             buttonLockedPrefab = Resources.Load<GameObject>("BookEntryButtonLocked");
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
-            //DefaultEntrySetted += SetDefaultEntry;     
+               
             EventManager.AddListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
            
         }
 
-        private void OnDestroy()
-        {
-            EventManager.RemoveListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
-        }
-
-        private void Start()
-        {
-            CreateBookEntrys();
+        private void OnDestroy()=> EventManager.RemoveListener<int>(EventsHistoryBook.setDefault, SetDefaultEntry);
         
-        }
+
+        private void Start()=>  CreateBookEntrys();
+        
+        
         private void CreateBookEntrys()
         {
+            gameData = SaveManager.LoadStarsData();
+            if (gameData == null)
+                gameData = new GameData();
+
+            int index = 0;
             foreach (Myth myth in mythsDatabase.myths)
             {
-                GameObject button = Instantiate(buttonPrefab, mythsList);
+                GameObject prefab;
 
-                button.GetComponentsInChildren<Image>()[1].sprite = myth.ingredientSprite;
-                Button newbutton = button.GetComponent<Button>();
-                buttonsList.Add(newbutton);
-                newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText(myth.ingredient,myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.ingredientSprite, buttonsList.IndexOf(newbutton)); });
-               
+                if (gameData.stars[index, 0])             
+                    prefab = buttonPrefab;                             
+                else             
+                    prefab = buttonLockedPrefab;
+                
+                    GameObject button = Instantiate(prefab, mythsList);
+                    Button newbutton = button.GetComponent<Button>();
+
+                if (prefab == buttonPrefab)
+                {
+                    buttonsList.Add(newbutton);
+                    button.GetComponentsInChildren<Image>()[1].sprite = myth.ingredientSprite;
+                    newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText(myth.ingredient, myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.ingredientSprite, buttonsList.IndexOf(newbutton)); });
+                }
+                else
+                    newbutton.onClick.AddListener(HandleClickLockedButton);
+
+                index++;
                 //Myths limitation for vertical slice
-                if (buttonsList.Count >= 3)
+                if (buttonsList.Count >= 3 || index >=5)
                     break;
             }
 
-            //Myths limitation for vertical slice
-                GameObject buttonlocked1 =   Instantiate(buttonLockedPrefab, mythsList);
-                GameObject buttonlocked2 = Instantiate(buttonLockedPrefab, mythsList);
-
-                buttonlocked1.GetComponent<Button>().onClick.AddListener(HandleClickLockedButton);
-                buttonlocked2.GetComponent<Button>().onClick.AddListener(HandleClickLockedButton);
-
             EventManager.Dispatch(EventsHistoryBook.setDefault, 0);
-
-
             StartCoroutine(ResetHandlePos());
         }
 
@@ -97,8 +103,6 @@ namespace HistoryBook {
             zoneText.StringReference = region;
             associatedIngredient.sprite = ingredient;
             scrollbar.value = 0.9999f;
-
-            GameData gameData = SaveManager.LoadStarsData();
 
             if (gameData == null)
                 gameData = new GameData();
@@ -115,10 +119,7 @@ namespace HistoryBook {
             else
                 value2 = "\n\n" + LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference);
 
-            var tableReference = mythDescription.TableReference;
-
             string mythText = value1 + value2;
-
             historyText.text = mythText; 
 
             EventManager.Dispatch(GlobalEvent.Unlocked);
