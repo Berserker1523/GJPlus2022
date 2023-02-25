@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level1Data
   m_EditorClassIdentifier: 
   level: 1
-  clientNumber: 10
+  clientNumber: 1
   minSpawnSeconds: 1
   maxSpawnSeconds: 3.6
   minNumberOfPotionRecipients: 4
@@ -21,10 +21,8 @@ MonoBehaviour:
   minNumberOfStoves: 2
   minNumberOfPainKillers: 2
   time: 200
-  goal: 5
+  goal: 1
   levelRecipes:
-  - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
-  - {fileID: 11400000, guid: 2db822341adc12e47acdf5d48df25e8a, type: 2}
-  - {fileID: 11400000, guid: 5937aa3d27b497b49b9baed6706ff355, type: 2}
-  levelPercentages: 23000000370000000a000000
-  stars: 010100
+  - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
+  levelPercentages: 64000000
+  stars: 000000
