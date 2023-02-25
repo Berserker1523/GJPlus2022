@@ -67,7 +67,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    ingredientSprite: {fileID: 1595732434, guid: 5d53584c9485ccc49ba10cd2c92deeb4, type: 3}
+    ingredientSprite: {fileID: 1519564248, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
     refIngredient: 6
   - ingredient:
       m_TableReference:
