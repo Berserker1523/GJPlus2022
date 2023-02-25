@@ -4,23 +4,36 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
-    [RequireComponent(typeof(Collider2D))]
-    public class TrashController : MonoBehaviour, IDropHandler
+    [RequireComponent(typeof(DropView))]
+    public class TrashController : MonoBehaviour
     {
         [SerializeField] ParticleSystem trashParticle;
 
-        void Awake()
+        private DropView dropView;
+
+        private void Awake()
         {
+            dropView = GetComponent<DropView>();
+            dropView.OnDropped += HandleDropped;
+            dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
             trashParticle.Stop();
         }
-        public void OnDrop(PointerEventData pointerEventData)
+
+        private void OnDestroy() =>
+            dropView.OnDropped -= HandleDropped;
+
+        public void HandleDropped(PointerEventData pointerEventData)
         {
-            if (!pointerEventData.pointerDrag.TryGetComponent(out IReleaseable releaseable))
+            if (!IsDraggedObjectInteractableWithMe(pointerEventData))
                 return;
 
+            IReleaseable releaseable = pointerEventData.pointerDrag.GetComponent<IReleaseable>();
             releaseable.Release();
             EventManager.Dispatch(TrashEvent.Throw);
             trashParticle.Play();
         }
+
+        private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData) =>
+            pointerEventData.pointerDrag.TryGetComponent(out IReleaseable _);
     }
 }

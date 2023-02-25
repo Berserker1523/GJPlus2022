@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 5012975737639786915}
   - component: {fileID: 4098894945369791180}
   - component: {fileID: 8575295626705374604}
+  - component: {fileID: 7061343534937708617}
   m_Layer: 5
   m_Name: Potion
   m_TagString: Untagged
@@ -261,7 +262,6 @@ MonoBehaviour:
   - {fileID: 4980190416810730176}
   potionResult: {fileID: 7155985123903874121}
   anim: {fileID: 0}
-  CurrentRecipe: {fileID: 0}
 --- !u!95 &5012975737639786915
 Animator:
   serializedVersion: 4
@@ -303,6 +303,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5e53fbf3dff2e4aab8c6852ac689d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7061343534937708617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146853414210837075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3aa2ac5f29c4f469fa5ed154c9cb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1513059967581619944

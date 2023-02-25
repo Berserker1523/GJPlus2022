@@ -4,12 +4,12 @@ using UnityEngine.EventSystems;
 
 namespace Kitchen
 {
+
     [RequireComponent(typeof(Collider2D))]
-    public class DragView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+    public class DragView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public event Action<PointerEventData> OnDragBegan;
         public event Action<PointerEventData> OnDragEnded;
-        public event Action<PointerEventData> OnDropped;
 
         private new Collider2D collider;
         private Camera mainCamera;
@@ -45,12 +45,6 @@ namespace Kitchen
             transform.position = initialDragPosition;
             collider.enabled = true;
             OnDragEnded?.Invoke(eventData);
-        }
-
-        public void OnDrop(PointerEventData eventData)
-        {
-            //Debug.Log($"OnDrop {eventData.position}", gameObject);
-            OnDropped?.Invoke(eventData);
         }
     }
 }

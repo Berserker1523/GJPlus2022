@@ -6,12 +6,14 @@ namespace Kitchen
 {
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(DragView))]
-    public class CookingToolController : MonoBehaviour, IReleaseable, IPointerEnterHandler
+    [RequireComponent(typeof(DropView))]
+    public class CookingToolController : MonoBehaviour, IReleaseable
     {
         [SerializeField] private CookingToolData cookingToolData;
+        [SerializeField] private ParticleSystem shakingMortarParticle;
 
         private SpriteRenderer spriteRenderer;
-        private DragView dragView;
+        private DropView dropView;
         private CookingTimerView timer;
 
         private Sprite initialSprite;
@@ -20,23 +22,23 @@ namespace Kitchen
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
 
-        [SerializeField] ParticleSystem shakingMortarParticle;
-
         private void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            dragView = GetComponent<DragView>();
+            dropView = GetComponent<DropView>();
             timer = GetComponentInChildren<CookingTimerView>();
             timer.gameObject.SetActive(false);
+
             initialSprite = spriteRenderer.sprite;
-            dragView.OnDropped += HandleDropped;
-            
-            if(shakingMortarParticle!= null ) 
+            dropView.OnDropped += HandleDropped;
+            dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
+
+            if (shakingMortarParticle != null)
                 shakingMortarParticle.Stop();
         }
 
         private void OnDestroy() =>
-            dragView.OnDropped -= HandleDropped;
+            dropView.OnDropped -= HandleDropped;
 
         private void Update()
         {
@@ -72,17 +74,26 @@ namespace Kitchen
             }
         }
 
-        private void HandleDropped(PointerEventData pointerEventData)
+        private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData)
         {
             if (CurrentCookingIngredient != null)
-                return;
+                return false;
 
             if (!pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
-                return;
+                return false;
 
             if (!ingredientController.IngredientData.necessaryCookingTool.HasFlag(cookingToolData.cookingToolName))
+                return false;
+
+            return true;
+        }
+
+        private void HandleDropped(PointerEventData pointerEventData)
+        {
+            if (!IsDraggedObjectInteractableWithMe(pointerEventData))
                 return;
 
+            IngredientController ingredientController = pointerEventData.pointerDrag.GetComponent<IngredientController>();
             CurrentCookingIngredient = new(ingredientController.IngredientData);
             spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveRawSprite : CurrentCookingIngredient.data.mortarRawSprite;
             PlayCookingSound();
@@ -112,20 +123,6 @@ namespace Kitchen
             spriteRenderer.sprite = initialSprite;
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             timer.gameObject.SetActive(false);
-        }
-
-        public void OnPointerEnter(PointerEventData pointerEventData)
-        {
-            if (CurrentCookingIngredient != null)
-                return;
-
-            if (pointerEventData.pointerDrag ==null||!pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController))
-                return;
-
-            if (!ingredientController.IngredientData.necessaryCookingTool.HasFlag(cookingToolData.cookingToolName))
-                return;
-
-            EventManager.Dispatch(CookingToolEvents.Hover);
         }
     }
 }

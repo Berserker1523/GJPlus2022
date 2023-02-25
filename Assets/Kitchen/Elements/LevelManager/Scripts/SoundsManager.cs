@@ -64,7 +64,7 @@ namespace Kitchen
             Events.EventManager.AddListener(PotionEvent.AddIngredient, PlayAddIngredientSFX);
             Events.EventManager.AddListener(PotionEvent.AddWater, PlayAddWater);
             Events.EventManager.AddListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
-            Events.EventManager.AddListener(CookingToolEvents.Hover, PlayHoverSFX);
+            Events.EventManager.AddListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
             Events.EventManager.AddListener(TrashEvent.Throw, PlayThrowTrashSFX);
 
             //Game Status SFX
@@ -133,7 +133,7 @@ namespace Kitchen
             Events.EventManager.RemoveListener(PotionEvent.AddIngredient, PlayAddIngredientSFX);
             Events.EventManager.RemoveListener(PotionEvent.AddWater, PlayAddWater);
             Events.EventManager.RemoveListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
-            Events.EventManager.RemoveListener(CookingToolEvents.Hover, PlayHoverSFX);
+            Events.EventManager.RemoveListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
             Events.EventManager.RemoveListener(TrashEvent.Throw, PlayThrowTrashSFX);
 
             //Game Status SFX
