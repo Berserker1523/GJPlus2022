@@ -15,15 +15,6 @@ public class LocaleSelector : MonoBehaviour
     public void ChangeLocale(int localeID)
     {
         StartCoroutine(SetLocale(localeID));
-
-        for(int i=0; i<circles.Length; i++)
-        {
-            if (i == localeID)
-                circles[i].enabled = true;
-            else
-                circles[i].enabled = false;
-        }
-
     }
 
     IEnumerator SetLocale(int localeID)
@@ -31,5 +22,13 @@ public class LocaleSelector : MonoBehaviour
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
         PlayerPrefs.SetInt("LocaleKey", localeID);
+
+        for (int i = 0; i < circles.Length; i++)
+        {
+            if (i == localeID)
+                circles[i].enabled = true;
+            else
+                circles[i].enabled = false;
+        }
     }
 }
