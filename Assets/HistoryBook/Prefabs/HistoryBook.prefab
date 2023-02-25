@@ -282,7 +282,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Acai
+  m_text: '???
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -730,7 +732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Regi\xF3n Visitada"
+  m_text: ???
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
   m_sharedMaterial: {fileID: 1847652355112364022, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
@@ -757,7 +759,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.45
+  m_fontSize: 43.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -813,9 +815,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 4110476136448
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -905,7 +907,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: '???
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
   m_sharedMaterial: {fileID: 1847652355112364022, guid: 90126d0652ddb744eb913795e8de802a, type: 2}
@@ -2302,21 +2306,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in
-    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting
-    industry. Lorem Ipsum has been the industry's standard dummy text ever since
-    the 1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged. It was
-    popularised in the 1960s with the release of Letraset sheets containing Lorem
-    Ipsum passages, and more recently with desktop publishing software like Aldus
-    PageMaker including versions of Lorem Ipsum
+  m_text: "        ????????????????????????????\n        ????????????????????????????\n       
+    ????????????????????????????\n        ????????????????????????????\n        ????????????????????????????"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2510,7 +2501,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lenda Do Acai
+  m_text: '???
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2740,8 +2733,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4651197466621608448}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
-  m_Value: 0.49999854
-  m_Size: 0.9239597
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2966,7 +2959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1656958356, guid: c6b0d18c6fb18854bb028aefeeade266, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
