@@ -36,7 +36,14 @@ namespace Kitchen
          public void SetStreak()=>       
             stars[LevelManager.CurrentLevel-1, 2] =true;
 
-        
+
+        private void OnDisable()
+        {
+            EventManager.RemoveListener(LevelEvents.Goal, SetGoalStar);
+            EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
+            EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
+            EventManager.RemoveListener(GameStatus.Won, CallSaveData);
+        }
     }
 
 }
