@@ -98,7 +98,7 @@ namespace Kitchen
 
         public void NextLevel()
         {
-            if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
+            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
