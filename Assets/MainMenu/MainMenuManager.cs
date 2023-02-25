@@ -8,21 +8,30 @@ namespace Mainmenu
 {
     public class MainMenuManager : MonoBehaviour
     {
+        GameData gameData;
         public void Awake()
         {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
         }
 
-        public void PlayGame() =>
-          StartCoroutine(OpenKitchenScene());
+        private void Start()
+        {
+             gameData = SaveManager.LoadStarsData();           
+        }
 
+        public void PlayGame()=>  StartCoroutine(OpenKitchenScene());
 
         private IEnumerator OpenKitchenScene()
         {
             EventManager.Dispatch(GlobalEvent.Play);
             yield return new WaitForSeconds(2f);
-            SceneManager.LoadScene($"{SceneName.Kitchen}{/*LevelManager.CurrentLevel*/1}", LoadSceneMode.Single); //Todo level save
+
+            if (gameData != null && gameData.tutorialCompleted)
+                SceneManager.LoadScene($"{SceneName.Kitchen}{/*LevelManager.CurrentLevel*/1}", LoadSceneMode.Single); //Todo level save
+            else
+                SceneManager.LoadScene("Tutorial");
         }
+
 
         public void Credits()
         {
