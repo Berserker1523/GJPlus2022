@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: 2
   necessaryCookingTool: 1
-  rawSprite: {fileID: -2004986893, guid: dc2f5022274368448a07b8625ca149e8, type: 3}
+  rawSprite: {fileID: -1573586799, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
   dishSprite: {fileID: 1409172979, guid: 95428947af8eb354785891d00754a21c, type: 3}
   stoveRawSprite: {fileID: 0}
   stoveCookedSprite: {fileID: 0}
