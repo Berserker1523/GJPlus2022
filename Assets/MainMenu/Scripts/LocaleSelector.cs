@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
@@ -10,12 +11,11 @@ public class LocaleSelector : MonoBehaviour
     {
         int ID = PlayerPrefs.GetInt("LocaleKey", 0);
         ChangeLocale(ID);
+        SetCircleSelector(ID); ;
     }
 
-    public void ChangeLocale(int localeID)
-    {
-        StartCoroutine(SetLocale(localeID));
-    }
+    public void ChangeLocale(int localeID)=>  StartCoroutine(SetLocale(localeID));
+    
 
     IEnumerator SetLocale(int localeID)
     {
@@ -23,6 +23,11 @@ public class LocaleSelector : MonoBehaviour
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeID];
         PlayerPrefs.SetInt("LocaleKey", localeID);
 
+        SetCircleSelector(localeID);
+    }
+
+    private void SetCircleSelector(int localeID)
+    {
         for (int i = 0; i < circles.Length; i++)
         {
             if (i == localeID)
