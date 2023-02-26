@@ -18,8 +18,8 @@ namespace Kitchen
         [Range(1, 200)] public float maxSpawnSeconds;
         [Header("Kitchen Elements")]
         [Range(1, 4)] public int minNumberOfPotionRecipients;
-        [Range(1, 4)] public int minNumberOfMortars;
-        [Range(1, 4)] public int minNumberOfStoves;
+        [Range(0, 4)] public int minNumberOfMortars;
+        [Range(0, 4)] public int minNumberOfStoves;
         [Range(1, 4)] public int minNumberOfPainKillers;
 
         [Header("LevelGoals")]

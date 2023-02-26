@@ -19,7 +19,7 @@ MonoBehaviour:
   maxSpawnSeconds: 35
   minNumberOfPotionRecipients: 2
   minNumberOfMortars: 2
-  minNumberOfStoves: 2
+  minNumberOfStoves: 0
   minNumberOfPainKillers: 2
   time: 260
   goal: 10
