@@ -98,7 +98,9 @@ namespace Kitchen
             potionIngredients.Add(potionIngredient);
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
             potionBranchesScalers[potionIngredients.Count - 1].ScaleSpriteToBounds();
-            EventManager.Dispatch(PotionEvent.AddIngredient);
+
+            if(ingredientData.ingredientName != IngredientName.Water)
+                EventManager.Dispatch(PotionEvent.AddIngredient);
         }
 
         private void CheckRecipe()
