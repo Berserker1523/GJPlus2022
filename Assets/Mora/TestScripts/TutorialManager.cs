@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     private enum TutorialActors
     {
-        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Stove = 4, Client = 5
+        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Stove = 4, Client = 5, PotionResult =6,
     }
     public PlayableDirector finalTimeline;
     //Assing Pequi Water an client from inspector
@@ -65,6 +65,7 @@ public class TutorialManager : MonoBehaviour
         tutorialElements[(int)TutorialActors.Mortar] = GameObject.Find("Mortar(Clone)").GetComponent<Transform>();
         tutorialElements[(int)TutorialActors.Shaker] = GameObject.Find("Potion(Clone)").GetComponent<Transform>();
         tutorialElements[(int)TutorialActors.Stove] = GameObject.Find("Stove(Clone)").GetComponent<Transform>();
+        tutorialElements[(int)TutorialActors.PotionResult] = GameObject.Find("Result").GetComponent<Transform>();
 
         foreach (var tutorialActor in tutorialElements)
             SwitchObjectCollider(tutorialActor, false);
@@ -226,9 +227,10 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator fifthVignetteCoroutine()
     {
         //deactivate colliders
-        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], false);
 
-        //vignette shows on shaker
+        //vignette shows on potion result
+        yield return MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.PotionResult]);
         yield return StartCoroutine(DisplayVignette());
 
         //vignette waits
@@ -243,7 +245,7 @@ public class TutorialManager : MonoBehaviour
         //vignette disappears
         yield return StartCoroutine(DispelVignette());
 
-        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
     }
     public void sixthVignetteCoroutine()

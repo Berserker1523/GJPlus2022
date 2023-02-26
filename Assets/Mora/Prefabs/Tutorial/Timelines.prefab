@@ -860,6 +860,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   starsData: {fileID: 11400000, guid: 72af623b995d89d48a51ac9c4f4afe1c, type: 2}
   currentPos: {fileID: 1221739211421877506}
 --- !u!1 &789642639245653510
