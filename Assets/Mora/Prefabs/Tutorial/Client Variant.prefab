@@ -432,6 +432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Client Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4457050025299396745, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d460ea190accab4d973fb20ee1c7426, type: 3}
     - target: {fileID: 4858116934972563360, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_IsActive
       value: 0
