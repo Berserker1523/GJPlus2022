@@ -10,35 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Tutorial Shared Data
+  m_Name: TutorialTable Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Tutorial
-  m_TableCollectionNameGuidString: 7428f515900933945a073642358f9131
+  m_TableCollectionName: TutorialTable
+  m_TableCollectionNameGuidString: e94954df35a6a76499eb2f6e8d906f8d
   m_Entries:
-  - m_Id: 95716999168
+  - m_Id: 8580333568
     m_Key: Client_Dialogue1
     m_Metadata:
       m_Items: []
-  - m_Id: 168643362816
+  - m_Id: 13089210368
     m_Key: Client_Dialogue2
     m_Metadata:
       m_Items: []
-  - m_Id: 188838936576
+  - m_Id: 16385933312
     m_Key: Kumu_Dialogue1
     m_Metadata:
       m_Items: []
-  - m_Id: 207805579264
+  - m_Id: 21624619008
     m_Key: Kumu_Dialogue2
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 326298264800854018
+    rid: 326298267454537730
   references:
     version: 2
     RefIds:
-    - rid: 326298264800854018
+    - rid: 326298267454537730
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1677405506416
+        m_CustomEpoch: 1677411557924
