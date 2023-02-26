@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: TutorialTable_pt
+  m_Name: Tutorial_pt
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: pt
-  m_SharedData: {fileID: 11400000, guid: e94954df35a6a76499eb2f6e8d906f8d, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 7428f515900933945a073642358f9131, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 8580333568
+  - m_Id: 95716999168
     m_Localized: "Por favor, me ajude! Sinto que estou muito doente, com muita febre
       e dores pelo corpo. Voc\xEA pode me ajudar, Kumu?"
     m_Metadata:
       m_Items: []
-  - m_Id: 16385933312
+  - m_Id: 188838936576
     m_Localized: "Claro, deixe-me ver seus sintomas. Parece que voc\xEA est\xE1 com
       uma infec\xE7\xE3o grave. Vou preparar uma po\xE7\xE3o especial que ir\xE1
       aliviar seus sintomas e ajudar a curar a infec\xE7\xE3o."
     m_Metadata:
       m_Items: []
-  - m_Id: 13089210368
+  - m_Id: 168643362816
     m_Localized: "Muito obrigada, j\xE1 me sinto melhor!"
     m_Metadata:
       m_Items: []
-  - m_Id: 21624619008
+  - m_Id: 207805579264
     m_Localized: "Fico feliz em poder ajudar. Tornei-me um Kumu para ajudar pessoas
       como voc\xEA. Se precisar dos meus servi\xE7os novamente, basta voltar aqui."
     m_Metadata:

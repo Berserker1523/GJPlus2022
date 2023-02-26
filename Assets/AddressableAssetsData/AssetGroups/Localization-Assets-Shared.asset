@@ -17,11 +17,17 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 879312ae05ed6ff4fa1edbd19dde037c
   m_SerializeEntries:
-  - m_GUID: e94954df35a6a76499eb2f6e8d906f8d
-    m_Address: Assets/Localsettings/Tables/TutorialTable Shared Data.asset
+  - m_GUID: 69d786c88acdd364d99d064d633c7737
+    m_Address: Assets/Localsettings/Tables/MenuElements Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8a8c794817939ba458237a9fd42a2fee
+    m_Address: Assets/Localsettings/Tables/MythsBook Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: af67620bcdf644242ad668575b01b8e9, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: b6739f63d5c2cee4da70efad13a4ef5e, type: 2}
+    - {fileID: 11400000, guid: 19cf17e94586fd24a90fac376bb5b8b4, type: 2}
