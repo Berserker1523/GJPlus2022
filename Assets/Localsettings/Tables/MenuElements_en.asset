@@ -84,6 +84,10 @@ MonoBehaviour:
     m_Localized: Myths have been updated
     m_Metadata:
       m_Items: []
+  - m_Id: 7661770248040448
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

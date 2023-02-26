@@ -35,7 +35,7 @@ namespace Mainmenu
 
         public void Credits()
         {
-            SceneManager.LoadSceneAsync(SceneName.Credits.ToString(), LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneName.Credits2.ToString(), LoadSceneMode.Single);
         }
 
         public void History()

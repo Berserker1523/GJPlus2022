@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 7505652541189864317}
   - component: {fileID: 6126334306352809985}
   - component: {fileID: 7674466609272392262}
+  - component: {fileID: 5991548041053997438}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -1181,19 +1182,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6126334306352809985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 436175460455983389}
-        m_TargetAssemblyTypeName: Mainmenu.MainMenuManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5991548041053997438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652650768969465052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06c3a15f5e7164479f73bf920ca42f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 3
 --- !u!1 &3160196243539800583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1348,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:69d786c88acdd364d99d064d633c7737
     m_TableEntryReference:
-      m_KeyId: 2986230894395392
+      m_KeyId: 7661770248040448
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

@@ -156,18 +156,17 @@ namespace Kitchen
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
-                SceneManager.LoadScene("Credits", LoadSceneMode.Single);
-
+                SceneManager.LoadScene(SceneName.Credits2.ToString(), LoadSceneMode.Single);
             }
             else
+            {
                 LevelManager.CurrentLevel++;
-            SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+                SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+            }
         }
 
-        public void TryAgain()
-        {
+        public void TryAgain() =>
             SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
-        }
 
         void SetFmodParameter()
         {
