@@ -56,7 +56,7 @@ namespace tutorial
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
     }
