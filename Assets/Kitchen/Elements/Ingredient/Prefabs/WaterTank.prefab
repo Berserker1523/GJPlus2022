@@ -92,22 +92,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8705381494403747112}
     m_Modifications:
-    - target: {fileID: 90147127896936713, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
-      propertyPath: m_Size.x
-      value: 1.7980945
-      objectReference: {fileID: 0}
-    - target: {fileID: 90147127896936713, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
-      propertyPath: m_Size.y
-      value: 4.1008377
-      objectReference: {fileID: 0}
-    - target: {fileID: 90147127896936713, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.038819075
-      objectReference: {fileID: 0}
-    - target: {fileID: 90147127896936713, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.2574252
-      objectReference: {fileID: 0}
     - target: {fileID: 1230609318039187115, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
       propertyPath: m_Name
       value: Water
@@ -163,20 +147,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1445103872901593958, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
   m_PrefabInstance: {fileID: 4379621391713744629}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3302135595145255006 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1230609318039187115, guid: ae3968290265e324d95dbfbb5078dd7a, type: 3}
-  m_PrefabInstance: {fileID: 4379621391713744629}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5091126474069587102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3302135595145255006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16867a5e24a988b4299f4aba9a0c65a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
