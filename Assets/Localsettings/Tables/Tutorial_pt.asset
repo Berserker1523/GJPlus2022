@@ -19,14 +19,14 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 95716999168
-    m_Localized: "Por favor, me ajude! Sinto que estou muito doente, com muita febre
-      e dores pelo corpo. Voc\xEA pode me ajudar, Kumu?"
+    m_Localized: "Por favor, me ajude! Sinto que Estou doente. Tenho muita febre
+      e do no corpo. Voc\xEA pode me ajudar, Kumu?"
     m_Metadata:
       m_Items: []
   - m_Id: 188838936576
-    m_Localized: "Claro, deixe-me ver seus sintomas. Parece que voc\xEA est\xE1 com
-      uma infec\xE7\xE3o grave. Vou preparar uma po\xE7\xE3o especial que ir\xE1
-      aliviar seus sintomas e ajudar a curar a infec\xE7\xE3o."
+    m_Localized: "Claro, me deixe ver seus sintomas. Parece que voc\xEA tem uma infec\xE7\xE3o.
+      Vou preparar uma po\xE7\xE3o especial que ajudar\xE1 a aliviar seus sintomas
+      e curar a infec\xE7\xE3o em breve."
     m_Metadata:
       m_Items: []
   - m_Id: 168643362816
