@@ -48,11 +48,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22835660423168
-    m_Localized: "M\xFAsica"
+    m_Localized: Som
     m_Metadata:
       m_Items: []
   - m_Id: 22917566791680
-    m_Localized: Effeitos Sonoros
+    m_Localized: Efeitos sonoros
     m_Metadata:
       m_Items: []
   - m_Id: 2986230894395392
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6741597788930048
-    m_Localized: Confirme
+    m_Localized: Confirmar
     m_Metadata:
       m_Items: []
   - m_Id: 7555858979192832
@@ -86,6 +86,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7661770248040448
     m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7722514280886272
+    m_Localized: Objetivo
     m_Metadata:
       m_Items: []
   references:

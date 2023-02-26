@@ -68,7 +68,7 @@ namespace Kitchen
         public void SetLevelData(LevelData newlevelData)
         {
             levelData = newlevelData;
-
+            LevelManager.CurrentLevel = levelData.level;
             InstantiatePotions(levelData.minNumberOfPotionRecipients + UpgradesManager.MedicineUpgrades);
             InstantiateMortars(levelData.minNumberOfMortars + UpgradesManager.MortarsUpgrades);
             InstantiateStoves(levelData.minNumberOfStoves + UpgradesManager.KitchenUpgrades);

@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: Button_Credits
     m_Metadata:
       m_Items: []
+  - m_Id: 7722514280886272
+    m_Key: Title_Objective
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

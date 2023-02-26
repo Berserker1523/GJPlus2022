@@ -40,7 +40,7 @@ namespace Kitchen
             if (shakingMortarParticle != null)
                 shakingMortarParticle.Stop();
 
-           SceneManager.sceneLoaded += StopCookingSoundsOnNewSceneLoaded;
+            SceneManager.sceneLoaded += StopCookingSoundsOnNewSceneLoaded;
         }
 
         private void OnDestroy() =>
@@ -56,7 +56,7 @@ namespace Kitchen
             {
                 timer.SetFillAmount((CurrentCookingIngredient.currentCookingSeconds - cookingToolData.cookingSeconds) / (cookingToolData.burningSeconds - cookingToolData.cookingSeconds));
                 spriteRenderer.material.SetFloat("_Temperature", ((CurrentCookingIngredient.currentCookingSeconds - cookingToolData.cookingSeconds) / (cookingToolData.burningSeconds - cookingToolData.cookingSeconds)));
-            }    
+            }
             else
                 timer.SetFillAmount(CurrentCookingIngredient.currentCookingSeconds / cookingToolData.cookingSeconds);
 
@@ -72,14 +72,16 @@ namespace Kitchen
                     cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
                 else
+                {
                     timer.SetBurning();
-                overcookingParticle.Play();
+                    overcookingParticle.Play();
+                }
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)
             {
                 CurrentCookingIngredient.state = IngredientState.Burnt;
                 overcookedParticle.Play();
-                spriteRenderer.material.SetFloat("_Temperature",0f);
+                spriteRenderer.material.SetFloat("_Temperature", 0f);
                 spriteRenderer.sprite = CurrentCookingIngredient.data.stoveBurntSprite;
                 timer.gameObject.SetActive(false);
                 EventManager.Dispatch(IngredientState.Burnt);
@@ -136,11 +138,21 @@ namespace Kitchen
             CurrentCookingIngredient = null;
             spriteRenderer.sprite = initialSprite;
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            spriteRenderer.material.SetFloat("_Temperature", 0f);
             timer.gameObject.SetActive(false);
+
+            if (shakingMortarParticle != null)
+                shakingMortarParticle.Stop();
+            if (cookingParticle != null)
+                cookingParticle.Stop();
+            if (overcookingParticle != null)
+                overcookingParticle.Stop();
+            if(overcookedParticle != null)
+                overcookedParticle.Stop();
         }
 
-        public void StopCookingSoundsOnNewSceneLoaded(Scene scene, LoadSceneMode mode) =>        
+        public void StopCookingSoundsOnNewSceneLoaded(Scene scene, LoadSceneMode mode) =>
            cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        
+
     }
 }

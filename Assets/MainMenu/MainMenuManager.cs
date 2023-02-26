@@ -16,10 +16,10 @@ namespace Mainmenu
 
         private void Start()
         {
-             gameData = SaveManager.LoadStarsData();           
+            gameData = SaveManager.LoadStarsData();
         }
 
-        public void PlayGame()=>  StartCoroutine(OpenKitchenScene());
+        public void PlayGame() => StartCoroutine(OpenKitchenScene());
 
         private IEnumerator OpenKitchenScene()
         {
@@ -29,7 +29,7 @@ namespace Mainmenu
             if (gameData != null && gameData.tutorialCompleted)
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single); //Todo level save
             else
-               SceneManager.LoadScene("Tutorial2");
+                SceneManager.LoadScene("Tutorial2");
         }
 
 

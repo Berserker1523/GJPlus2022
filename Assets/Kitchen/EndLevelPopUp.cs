@@ -43,11 +43,14 @@ namespace Kitchen
         [EventRef, SerializeField] public string fmodEvent;
         [SerializeField] public string fmodParameterName;
 
+        private int currentlevel;
+
         private void Awake()
         {
             mythsUpdatedGO.SetActive(false);
             moneyUI = FindObjectOfType<MoneyUI>();
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
+            currentlevel = LevelManager.CurrentLevel;
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
             SetFmodParameter();
 
@@ -58,12 +61,12 @@ namespace Kitchen
 
         private void HandleLevelFinished()
         {
+            EventManager.RemoveListener(GameStatus.LevelFinished, HandleLevelFinished);
             DisplayAdvice();
             if (levelInstantiator.LevelData.stars[0])
             {
-                HandleWon();
+                gameObject.SetActive(true);
                 StartCoroutine(CheckMythsData());
-                
             }
             else
             {
@@ -108,14 +111,22 @@ namespace Kitchen
                     if (gameData.stars[LevelManager.CurrentLevel, i] == false && levelInstantiator.LevelData.stars[i] == true)
                     {
                         mythsUpdatedGO.SetActive(true);
-                        yield return new WaitForSeconds(2f);
+                        yield return new WaitForSecondsRealtime(5f);
                         mythsUpdatedGO.SetActive(false);
                         break;
                     }
                 }
             }
 
+            HandleWon();
             EventManager.Dispatch(GameStatus.Won);
+            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
+            {
+                PlayerPrefs.DeleteAll();
+                LevelManager.CurrentLevel = 1;
+            }
+            else
+                LevelManager.CurrentLevel++;
         }
 
         private IEnumerator DisplayStars()
@@ -127,7 +138,7 @@ namespace Kitchen
                 {
                     stars[i].SetTrigger("TriggerStar");
                     starsAmount++;
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSecondsRealtime(1f);
                 }
             }
             PlayStarsParameter(starsAmount);
@@ -135,12 +146,12 @@ namespace Kitchen
         private void DisplayAdvice()
         {
             string reference = "";
-            if (!levelInstantiator.LevelData.stars[0])          
-                reference = "Ad_Goal";          
-            else if(!levelInstantiator.LevelData.stars[1])        
-                reference = "Ad_Time";           
-            else if(!levelInstantiator.LevelData.stars[2])           
-                reference = "Ad_Combo";            
+            if (!levelInstantiator.LevelData.stars[0])
+                reference = "Ad_Goal";
+            else if (!levelInstantiator.LevelData.stars[1])
+                reference = "Ad_Time";
+            else if (!levelInstantiator.LevelData.stars[2])
+                reference = "Ad_Combo";
             else
                 reference = "Ad_Win";
 
@@ -152,21 +163,17 @@ namespace Kitchen
 
         public void NextLevel()
         {
-            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
-            {
-                PlayerPrefs.DeleteAll();
-                LevelManager.CurrentLevel = 1;
+            if (currentlevel == 2)
                 SceneManager.LoadScene(SceneName.Credits2.ToString(), LoadSceneMode.Single);
-            }
             else
-            {
-                LevelManager.CurrentLevel++;
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
-            }
         }
 
-        public void TryAgain() =>
-            SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
+        public void TryAgain()
+        {
+            LevelManager.CurrentLevel = currentlevel;
+            SceneManager.LoadScene($"{SceneName.Kitchen}{currentlevel}", LoadSceneMode.Single);
+        }
 
         void SetFmodParameter()
         {

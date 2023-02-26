@@ -24,18 +24,21 @@ namespace Kitchen
         private float nextSpawnTime;
         private int clientsDied;
         private int clientsGood;
+        private bool levelFinished;
 
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             EventManager.AddListener(ClientEvent.Died, HandleClientDied);
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            EventManager.AddListener(GameStatus.LevelFinished, StopSpawn);
         }
 
         private void OnDestroy()
         {
             EventManager.RemoveListener(ClientEvent.Died, HandleClientDied);
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
+            EventManager.RemoveListener(GameStatus.LevelFinished, StopSpawn);
         }
 
         private void Start() =>
@@ -43,6 +46,9 @@ namespace Kitchen
 
         private void Update()
         {
+            if (levelFinished)
+                return;
+
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= nextSpawnTime)
             {
@@ -109,5 +115,8 @@ namespace Kitchen
            if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.LevelFinished);
         }
+
+        private void StopSpawn() =>
+            levelFinished = true;
     }
 }

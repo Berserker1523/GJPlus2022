@@ -28,6 +28,7 @@ public class TutorialManager : MonoBehaviour
     private float standardWaitStep = 0.1f;
     WaitForSeconds coroutineWaitStep;
     WaitForSeconds waitSecondsToShow;
+    WaitForSeconds halfSecond = new WaitForSeconds(0.5f);
 
     [ContextMenuItem("MoveObject", "Move")]
     [SerializeField] Transform currentPos;
@@ -63,7 +64,6 @@ public class TutorialManager : MonoBehaviour
 
         vignetteInstance.intensity.value = 0f;
         waitSecondsToShow = new WaitForSeconds(waitToShowTimer);
-
         LevelManager.CurrentLevel = 0;
 
         tutorialElements[(int)TutorialActors.Mortar] = GameObject.Find("Mortar(Clone)").GetComponent<Transform>();
@@ -74,7 +74,7 @@ public class TutorialManager : MonoBehaviour
         foreach (var tutorialActor in tutorialElements)
             SwitchObjectCollider(tutorialActor, false);
 
-        targetResolution = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
+        targetResolution = new Vector2(Screen.width, Screen.height);
     }
 
     void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
@@ -212,6 +212,28 @@ public class TutorialManager : MonoBehaviour
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
     }
     private void callFourthCoroutine() => StartCoroutine(fourthVignetteCoroutine());
+
+
+    private IEnumerator VignetteGlow(float seconds)
+    {
+        float tempSeconds = 0;
+        while (tempSeconds <= seconds)
+        {
+            float currentVignetteIntensity = vignetteInstance.intensity.value;
+            float targetVignetteIntensity = currentVignetteIntensity == 1 ? 0.8f : 1;
+            float tempT = 0f;
+            while (vignetteInstance.intensity.value != targetVignetteIntensity)
+            {
+                tempSeconds += 0.05f;
+                tempT += 0.05f;
+                vignetteInstance.intensity.value = Mathf.Lerp(currentVignetteIntensity, targetVignetteIntensity, tempT);
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+
+        vignetteInstance.intensity.value = 1f;
+    }
+
     private IEnumerator fourthVignetteCoroutine()
     {
         //deactivate colliders
@@ -223,6 +245,10 @@ public class TutorialManager : MonoBehaviour
         yield return StartCoroutine(DisplayVignette());
 
         //vignette waits
+        yield return waitSecondsToShow;
+
+        yield return StartCoroutine(VignetteGlow(3f));
+
         yield return waitSecondsToShow;
 
         //vignette disappears
@@ -281,9 +307,9 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator DisplayMythsUpdatedPopUP()
     {
-        updatedMythsGO.SetActive(false);
-        yield return new WaitForSeconds(2f);
         updatedMythsGO.SetActive(true);
+        yield return new WaitForSecondsRealtime(5f);
+        updatedMythsGO.SetActive(false);
     }
 }
 

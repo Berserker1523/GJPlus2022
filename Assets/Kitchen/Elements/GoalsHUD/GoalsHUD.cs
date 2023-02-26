@@ -1,4 +1,5 @@
 using Events;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -31,12 +32,14 @@ namespace Kitchen
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
+            EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
             // comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
         }
 
         private void OnDestroy()
         {
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
+            EventManager.RemoveListener(GameStatus.LevelFinished, HandleLevelFinished);
         }
 
         private void Start()
@@ -50,6 +53,12 @@ namespace Kitchen
             streakBar.value = 0;
             currentTime = levelInstantiator.LevelData.time;
             StartCoroutine(LevelTimer());
+        }
+
+        private void HandleLevelFinished()
+        {
+            streakBar.value = 0;
+            StopAllCoroutines();
         }
 
         private void SetGoal() =>
