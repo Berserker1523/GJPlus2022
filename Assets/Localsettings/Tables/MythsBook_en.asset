@@ -238,7 +238,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2828520156659712
-    m_Localized: '[Earn Stars To Unlock More]'
+    m_Localized: '
+
+      [Earn Stars To Unlock More]
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 3325962866229248

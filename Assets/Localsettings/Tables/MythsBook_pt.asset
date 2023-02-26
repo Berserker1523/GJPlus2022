@@ -239,7 +239,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2828520156659712
-    m_Localized: '[Ganhe Estrelas Para Desbloquear Mais]'
+    m_Localized: '
+
+      [Ganhe Estrelas Para Desbloquear Mais]
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 3325962866229248
