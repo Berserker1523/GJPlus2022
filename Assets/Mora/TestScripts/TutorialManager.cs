@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 using Kitchen;
 using Events;
 using System;
+using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 public class TutorialManager : MonoBehaviour
 {
     private Volume vignetteVolume;
@@ -15,7 +17,7 @@ public class TutorialManager : MonoBehaviour
     {
         Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Stove = 4, Client = 5
     }
-
+    public PlayableDirector finalTimeline;
     //Assing Pequi Water an client from inspector
     [SerializeField] private Transform[] tutorialElements = new Transform[5];
 
@@ -39,19 +41,19 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         EventManager.AddListener(IngredientState.Cooked, CallSecondCoroutine);
-        EventManager.AddListener(PotionEvent.AddIngredient, UnusefulMethod);
-        EventManager.AddListener(PotionEvent.AddWater, UnusefulMethod);
-        EventManager.AddListener(PotionEvent.Poof, UnusefulMethod);
-        EventManager.AddListener(ClientEvent.Served, UnusefulMethod);
+        EventManager.AddListener(PotionEvent.AddIngredient, CallThirdCoroutine);
+        EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
+        EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
+        EventManager.AddListener(ClientEvent.Served, sixthVignetteCoroutine);
     }
 
     void OnDestroy()
     {
-        EventManager.RemoveListener(IngredientState.Cooked, UnusefulMethod);
-        EventManager.RemoveListener(PotionEvent.AddIngredient, UnusefulMethod);
-        EventManager.RemoveListener(PotionEvent.AddWater, UnusefulMethod);
-        EventManager.RemoveListener(PotionEvent.Poof, UnusefulMethod);
-        EventManager.RemoveListener(ClientEvent.Served, UnusefulMethod);
+        EventManager.RemoveListener(IngredientState.Cooked, CallSecondCoroutine);
+        EventManager.RemoveListener(PotionEvent.AddIngredient, CallThirdCoroutine);
+        EventManager.RemoveListener(PotionEvent.AddWater, callFourthCoroutine);
+        EventManager.RemoveListener(PotionEvent.Poof, callFifhtCoroutine);
+        EventManager.RemoveListener(ClientEvent.Served, sixthVignetteCoroutine);
     }
 
     private void Start()
@@ -131,9 +133,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator FirstVignetteCoroutine()
     {
         //The vignette appears
-        StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Pequi]));
-
-        yield return new WaitForSeconds(deactivaterTimer);
+        StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Pequi]));;
 
         yield return StartCoroutine(DisplayVignette());
 
@@ -158,7 +158,115 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator SecondVignetteCoroutine()
     {
-        yield return null;
+        //deactivate colliders
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], false);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
+        // vignette moves to mortar
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Mortar]));
+
+        //vignette appears on mortar
+        yield return StartCoroutine(DisplayVignette());
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //move vignette to shaker
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Shaker]));
+
+        //vignette stops in shake
+        yield return waitSecondsToShow;
+
+        //vignette disappears
+        yield return StartCoroutine(DispelVignette());
+
+        //activates colliders
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
     }
+    private void CallThirdCoroutine() => StartCoroutine(ThirdVignetteCoroutine());
+    private IEnumerator ThirdVignetteCoroutine()
+    {
+        //turn off the colliders
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
+
+        //vignette moves to water
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Water]));
+
+        //vignette shows on water
+        yield return StartCoroutine(DisplayVignette());
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //vignette moves to shaker
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Shaker]));
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //vignette disappears
+        yield return StartCoroutine(DispelVignette());
+
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], true);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+    }
+    private void callFourthCoroutine() => StartCoroutine(fourthVignetteCoroutine());
+    private IEnumerator fourthVignetteCoroutine()
+    {
+        //deactivate colliders
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], false);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
+
+        //vignette shows on shaker
+        yield return StartCoroutine(DisplayVignette());
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //vignette disappears
+        yield return StartCoroutine(DispelVignette());
+
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+    }
+    private void callFifhtCoroutine() => StartCoroutine(fifthVignetteCoroutine());
+    private IEnumerator fifthVignetteCoroutine()
+    {
+        //deactivate colliders
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
+
+        //vignette shows on shaker
+        yield return StartCoroutine(DisplayVignette());
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //vignette moves to Client
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Client]));
+
+        //vignette waits
+        yield return waitSecondsToShow;
+
+        //vignette disappears
+        yield return StartCoroutine(DispelVignette());
+
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
+    }
+    public void sixthVignetteCoroutine()
+    {
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
+        SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], false);
+        finalTimeline.Play();
+        StartCoroutine(endOfTutorial());
+    }
+    public IEnumerator endOfTutorial()
+    {
+        yield return new WaitForSeconds(9f);
+        EventManager.Dispatch(GlobalEvent.TutorialCompleted);
+        LoadKitchen1();
+
+    }
+    void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
 }
 
