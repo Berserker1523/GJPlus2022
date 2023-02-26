@@ -11,7 +11,7 @@ namespace Kitchen
     [RequireComponent(typeof(DropView))]
     public class ClientController : MonoBehaviour
     {
-        public const float MaxWaitingSeconds = 70f;
+        public const float MaxWaitingSeconds = 5f; //TODO burned variable
 
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;
@@ -45,17 +45,20 @@ namespace Kitchen
         {
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
+            potionImage.GetComponent<ImageResizeInBounds>().ResizeImageToBounds();
 
             int i = 0;
             while (i < requiredRecipe.ingredients.Length)
             {
                 ingredientsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.rawSprite;
+                ingredientsImages[i].GetComponent<ImageResizeInBounds>().ResizeImageToBounds();
                 if (requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Mortar)
                     cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.mortarRawSprite;
                 else if (requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
                     cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.stoveRawSprite;
                 else
                     cookingToolsImages[i].enabled = false;
+                cookingToolsImages[i].GetComponent<ImageResizeInBounds>().ResizeImageToBounds();
                 i++;
             }
 

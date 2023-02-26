@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22621f19048b9a64d9aac8260b7d566f
+guid: b0d734f7a1e547f4ea945ed1f5b11811
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,9 +47,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -129,169 +129,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Remedios_0
+      name: carnauba_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
+        x: 35
+        y: 427
+        width: 310
+        height: 229
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d16f82c38c1b1469bdffddd4b48209
-      internalID: 1647915234
+      spriteID: 89a9e76f2368cc64e8bec5d087426cd9
+      internalID: 1481005924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remedios_1
+      name: carnauba_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
+        x: 416
+        y: 427
+        width: 310
+        height: 229
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941bd7e8a5602af408b26a00f4dd1549
-      internalID: 1631752840
+      spriteID: eb73ccb6b70a8c241bd6825d4802af42
+      internalID: 91992812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remedios_2
+      name: carnauba_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
+        x: 35
+        y: 96
+        width: 310
+        height: 229
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1f54aa6b3a9cd64099049f0e8cc1e5b
-      internalID: 202713676
+      spriteID: e38526578692aa64f816913dd3e4b18b
+      internalID: 1160163736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remedios_3
+      name: carnauba_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 416
+        y: 96
+        width: 310
+        height: 229
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5793e1569e5b2bb468b471a1fe330876
-      internalID: -297921847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remedios_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b2d571cec79de24793dede1c967cd78
-      internalID: -625112638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remedios_5
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12fc9eecd2f5ae549af15ff861051b4f
-      internalID: 1973950467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remedios_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08d0e6abe43db32428a9a60e34ee0756
-      internalID: -57509593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remedios_7
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 50
-        width: 136
-        height: 141
-      alignment: 9
-      pivot: {x: 0.41177547, y: 0.5245706}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d24d3188ff289bd4ca711096bf6d4e93
-      internalID: -2068719087
+      spriteID: 5f93d27126b88404dbc18be36bac5576
+      internalID: 427434612
       vertices: []
       indices: 
       edges: []
@@ -307,14 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Remedios_3: -297921847
-      Remedios_1: 1631752840
-      Remedios_0: 1647915234
-      Remedios_6: -57509593
-      Remedios_7: -2068719087
-      Remedios_2: 202713676
-      Remedios_4: -625112638
-      Remedios_5: 1973950467
+      carnauba_1: 91992812
+      carnauba_2: 1160163736
+      carnauba_3: 427434612
+      carnauba_0: 1481005924
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

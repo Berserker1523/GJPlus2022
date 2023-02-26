@@ -15,9 +15,9 @@ MonoBehaviour:
   ingredientName: 1
   necessaryCookingTool: 2
   rawSprite: {fileID: -1680578388, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
-  dishSprite: {fileID: -1023077913, guid: 37432db797511734499b65eca1cd14bb, type: 3}
-  stoveRawSprite: {fileID: -1098315772, guid: c26f22afe0dc8614c9b0e2a52e197bfb, type: 3}
-  stoveCookedSprite: {fileID: 249294560, guid: c26f22afe0dc8614c9b0e2a52e197bfb, type: 3}
-  stoveBurntSprite: {fileID: -1983727761, guid: c26f22afe0dc8614c9b0e2a52e197bfb, type: 3}
+  dishSprite: {fileID: -1680578388, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
+  stoveRawSprite: {fileID: 91992812, guid: b0d734f7a1e547f4ea945ed1f5b11811, type: 3}
+  stoveCookedSprite: {fileID: 1160163736, guid: b0d734f7a1e547f4ea945ed1f5b11811, type: 3}
+  stoveBurntSprite: {fileID: 427434612, guid: b0d734f7a1e547f4ea945ed1f5b11811, type: 3}
   mortarRawSprite: {fileID: 0}
   mortarCrushedSprite: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: 
   recipeName: 3
   diseasesItCures: 0
-  sprite: {fileID: -625112638, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
+  sprite: {fileID: -249744331, guid: 6d0bcd9a499841341b066210f0643e43, type: 3}
   ingredients:
   - name: 
     ingredient: {fileID: 11400000, guid: a051d7945e85d8945b9baa9356ce1b52, type: 2}
@@ -28,5 +28,5 @@ MonoBehaviour:
     cookingToolName: 4
   popUp: 000000000000000000000000
   clientSprites:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 0fc487764141ad143a0ebb75235f3c3d, type: 3}
+  - {fileID: 21300000, guid: cf50644c690f3744287d7a92629b5eeb, type: 3}

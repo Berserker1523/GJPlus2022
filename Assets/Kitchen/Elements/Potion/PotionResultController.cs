@@ -7,13 +7,13 @@ namespace Kitchen
     {
         [SerializeField] private SpriteRenderer resultSprite;
 
-        private Collider2D collider;
+        private BoxCollider2D collider;
 
         public RecipeData CurrentRecipe { get; private set; }
 
         private void Awake()
         {
-            collider = GetComponent<Collider2D>();
+            collider = GetComponent<BoxCollider2D>();
             collider.enabled = false;
             resultSprite.enabled = false;
         }
@@ -24,6 +24,8 @@ namespace Kitchen
             resultSprite.enabled = true;
             collider.enabled = true;
             resultSprite.sprite = recipeSprite;
+            collider.size = Vector3.Scale(resultSprite.localBounds.size, resultSprite.transform.localScale);
+            collider.offset = Vector3.Scale(resultSprite.localBounds.center, resultSprite.transform.localScale);
         }
 
         public void Release()

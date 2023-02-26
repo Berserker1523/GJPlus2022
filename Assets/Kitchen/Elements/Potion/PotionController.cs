@@ -17,6 +17,7 @@ namespace Kitchen
         [SerializeField] private Sprite defaultPotionSkin;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private SpriteRenderer[] potionBranchesSprites;
+        [SerializeField] private ObjectScalerInBounds[] potionBranchesScalers;
         [SerializeField] private PotionResultController potionResult;
 
         private Animator anim;
@@ -96,6 +97,7 @@ namespace Kitchen
             PotionIngredient potionIngredient = new(ingredientData, usedCookingTool);
             potionIngredients.Add(potionIngredient);
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
+            potionBranchesScalers[potionIngredients.Count - 1].ScaleSpriteToBounds();
             EventManager.Dispatch(PotionEvent.AddIngredient);
         }
 
