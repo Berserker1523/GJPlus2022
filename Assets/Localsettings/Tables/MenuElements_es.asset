@@ -80,6 +80,10 @@ MonoBehaviour:
     m_Localized: Mitos
     m_Metadata:
       m_Items: []
+  - m_Id: 7599135946276864
+    m_Localized: Los mitos han sido actualizados
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -31,6 +31,7 @@ namespace Kitchen
 
         [SerializeField] private LocalizedString adviceString;
         [SerializeField] private LocalizeStringEvent adviceStringEvent;
+        [SerializeField] private GameObject mythsUpdatedGO;
 
         private MoneyUI moneyUI;
         private LevelInstantiator levelInstantiator;
@@ -44,10 +45,12 @@ namespace Kitchen
 
         private void Awake()
         {
+            mythsUpdatedGO.SetActive(false);
             moneyUI = FindObjectOfType<MoneyUI>();
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
             SetFmodParameter();
+
         }
 
         private void OnDestroy() =>
@@ -59,7 +62,8 @@ namespace Kitchen
             if (levelInstantiator.LevelData.stars[0])
             {
                 HandleWon();
-                EventManager.Dispatch(GameStatus.Won);
+                StartCoroutine(CheckMythsData());
+                
             }
             else
             {
@@ -91,6 +95,27 @@ namespace Kitchen
             positiveButtonText.text = retryString.GetLocalizedString();
             positiveButton.onClick.AddListener(TryAgain);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
+        }
+
+        private IEnumerator CheckMythsData()
+        {
+            GameData gameData = SaveManager.LoadStarsData();
+
+            if (gameData != null)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    if (gameData.stars[LevelManager.CurrentLevel, i] == false && levelInstantiator.LevelData.stars[i] == true)
+                    {
+                        mythsUpdatedGO.SetActive(true);
+                        yield return new WaitForSeconds(2f);
+                        mythsUpdatedGO.SetActive(false);
+                        break;
+                    }
+                }
+            }
+
+            EventManager.Dispatch(GameStatus.Won);
         }
 
         private IEnumerator DisplayStars()

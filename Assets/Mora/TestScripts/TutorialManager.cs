@@ -34,6 +34,8 @@ public class TutorialManager : MonoBehaviour
 
     Vector2 targetResolution = new Vector2(1920f, 1080f);
 
+    [SerializeField] private GameObject updatedMythsGO;
+
     private void Awake()
     {
         EventManager.AddListener(IngredientState.Cooked, CallSecondCoroutine);
@@ -41,6 +43,8 @@ public class TutorialManager : MonoBehaviour
         EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
         EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
         EventManager.AddListener(ClientEvent.Served, sixthVignetteCoroutine);
+
+        updatedMythsGO.SetActive(false);
     }
 
     void OnDestroy()
@@ -259,9 +263,17 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(9f);
         EventManager.Dispatch(GlobalEvent.TutorialCompleted);
+        yield return StartCoroutine(DisplayMythsUpdatedPopUP());
         LoadKitchen1();
 
     }
     void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
+
+    IEnumerator DisplayMythsUpdatedPopUP()
+    {
+        updatedMythsGO.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        updatedMythsGO.SetActive(true);
+    }
 }
 

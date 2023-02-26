@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: MM_Myths_Button
     m_Metadata:
       m_Items: []
+  - m_Id: 7599135946276864
+    m_Key: PopUp_MythsUpdate
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
