@@ -11,7 +11,7 @@ namespace Kitchen
     [RequireComponent(typeof(DropView))]
     public class ClientController : MonoBehaviour
     {
-        public const float MaxWaitingSeconds = 5f; //TODO burned variable
+        public const float MaxWaitingSeconds = 70f; //TODO burned variable
 
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;

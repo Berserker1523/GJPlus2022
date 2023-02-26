@@ -29,6 +29,7 @@ namespace Kitchen
         [SerializeField] private LocalizedString retryString;
 
         private MoneyUI moneyUI;
+        private LevelInstantiator levelInstantiator;
 
         //FMOD Parameter
         public PARAMETER_ID starsParameterId;
@@ -40,16 +41,26 @@ namespace Kitchen
         private void Awake()
         {
             moneyUI = FindObjectOfType<MoneyUI>();
-
-            EventManager.AddListener(GameStatus.Lost, HandleLost);
-            EventManager.AddListener(GameStatus.Won, HandleWon);
+            levelInstantiator = FindObjectOfType<LevelInstantiator>();
+            EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
             SetFmodParameter();
         }
 
-        private void OnDestroy()
+        private void OnDestroy() =>
+            EventManager.RemoveListener(GameStatus.LevelFinished, HandleLevelFinished);
+
+        private void HandleLevelFinished()
         {
-            EventManager.RemoveListener(GameStatus.Lost, HandleLost);
-            EventManager.RemoveListener(GameStatus.Won, HandleWon);
+            if (levelInstantiator.LevelData.stars[0])
+            {
+                HandleWon();
+                EventManager.Dispatch(GameStatus.Won);
+            }
+            else
+            {
+                HandleLost();
+                EventManager.Dispatch(GameStatus.Lost);
+            }
         }
 
         private void HandleWon()
@@ -85,14 +96,14 @@ namespace Kitchen
 
         private IEnumerator DisplayStars()
         {
-            int starsAmount =0;
+            int starsAmount = 0;
             for (int i = 0; i < 3; i++)
             {
                 if (starsData.stars[LevelManager.CurrentLevel, i])
                 {
                     stars[i].SetTrigger("TriggerStar");
                     starsAmount++;
-                    yield return new WaitForSeconds(1f); 
+                    yield return new WaitForSeconds(1f);
                 }
             }
             PlayStarsParameter(starsAmount);
@@ -103,7 +114,7 @@ namespace Kitchen
             if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
-               
+
                 SceneManager.LoadScene("Credits", LoadSceneMode.Single);
 
             }

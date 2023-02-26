@@ -20,24 +20,26 @@ namespace Kitchen
             LoadStarsDataFileIfExists();
         }
 
-
-        public void CallSaveData()
+        private void OnDisable()
         {
-           
+            EventManager.RemoveListener(LevelEvents.Goal, SetGoalStar);
+            EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
+            EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
+            EventManager.RemoveListener(GameStatus.Won, CallSaveData);
+            EventManager.RemoveListener(GlobalEvent.TutorialCompleted, TutorialCompleted);
+        }
+
+        public void CallSaveData() =>
             SaveManager.SavePlayerData(this);
-        }
 
+        public void SetGoalStar() =>
+            stars[LevelManager.CurrentLevel, 0] = true;
 
-        public void SetGoalStar()
-        {
-            stars[LevelManager.CurrentLevel, 0] =true;          
-        }
+        public void SetSpeedStar() =>
+           stars[LevelManager.CurrentLevel, 1] = true;
 
-         public void SetSpeedStar()=>       
-            stars[LevelManager.CurrentLevel, 1] =true;
-
-         public void SetStreak()=>       
-            stars[LevelManager.CurrentLevel, 2] =true;
+        public void SetStreak() =>
+           stars[LevelManager.CurrentLevel, 2] = true;
 
         public void TutorialCompleted()
         {
@@ -50,19 +52,10 @@ namespace Kitchen
 
         void LoadStarsDataFileIfExists()
         {
-          GameData gameData= SaveManager.LoadStarsData();
+            GameData gameData = SaveManager.LoadStarsData();
 
             if (gameData != null)
                 stars = gameData.stars;
-        }
-
-
-        private void OnDisable()
-        {
-            EventManager.RemoveListener(LevelEvents.Goal, SetGoalStar);
-            EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
-            EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
-            EventManager.RemoveListener(GameStatus.Won, CallSaveData);
         }
     }
 

@@ -8,7 +8,8 @@ namespace Kitchen
     public enum GameStatus
     {
         Lost,
-        Won
+        Won,
+        LevelFinished
     }
 
     public class ClientSpawner : MonoBehaviour
@@ -98,16 +99,15 @@ namespace Kitchen
            /*if (clientsDied >= spawnPoints.Count)
                 EventManager.Dispatch(GameStatus.Lost);*/
 
-            //Call Victory if no more clients will arrive
-            /*else if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
-                EventManager.Dispatch(GameStatus.Won);*/
+            if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
+                EventManager.Dispatch(GameStatus.LevelFinished);
         }
 
         private void HandleClientServed()
         {
             clientsGood++;
-           /* if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
-                EventManager.Dispatch(GameStatus.Won);*/
+           if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
+                EventManager.Dispatch(GameStatus.LevelFinished);
         }
     }
 }
