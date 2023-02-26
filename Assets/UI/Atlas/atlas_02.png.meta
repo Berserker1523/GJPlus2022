@@ -230,7 +230,7 @@ TextureImporter:
         width: 509
         height: 449
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,6 +238,69 @@ TextureImporter:
       bones: []
       spriteID: 893f6ab16c5411440bed5c9e4e89ba7a
       internalID: -2120772806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_02_6
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 473
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e74c5fcbc5fc49458097676448f59b5
+      internalID: -2041105727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_02_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 473
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21281562a323de40806e4539f97583d
+      internalID: -2006442022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_02_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 52
+        width: 460
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 92, y: 0, z: 98, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f930e3d98e1241f458ad7279287c738c
+      internalID: 1748528752
       vertices: []
       indices: 
       edges: []
@@ -255,6 +318,9 @@ TextureImporter:
     nameFileIdTable:
       atlas_02_3: 404019399
       atlas_02_2: -1543694724
+      atlas_02_8: 1748528752
+      atlas_02_6: -2041105727
+      atlas_02_7: -2006442022
       atlas_02_0: 487444472
       atlas_02_4: -1080235586
       atlas_02_5: -2120772806
