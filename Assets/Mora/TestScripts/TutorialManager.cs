@@ -157,7 +157,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator SecondVignetteCoroutine()
     {
         //deactivate colliders
-        yield return waitSecondsToShow;
+        yield return new WaitForSeconds(0.1f);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
         // vignette moves to mortar
@@ -186,7 +186,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator ThirdVignetteCoroutine()
     {
         //turn off the colliders
-        yield return waitSecondsToShow;
+        yield return new WaitForSeconds(0.1f);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
 
@@ -215,7 +215,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator fourthVignetteCoroutine()
     {
         //deactivate colliders
-        yield return waitSecondsToShow;
+        yield return new WaitForSeconds(0.1f);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
 
@@ -234,7 +234,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator fifthVignetteCoroutine()
     {
         //deactivate colliders
-        yield return waitSecondsToShow;
+        yield return new WaitForSeconds(0.1f);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], false);
 
         //vignette shows on potion result
@@ -262,7 +262,7 @@ public class TutorialManager : MonoBehaviour
 
     public IEnumerator sixthVignetteCoroutine()
     {
-        yield return waitSecondsToShow;
+        yield return new WaitForSeconds(0.1f);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], false);
         finalTimeline.Play();
@@ -271,7 +271,7 @@ public class TutorialManager : MonoBehaviour
 
     public IEnumerator endOfTutorial()
     {
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(14f);
         EventManager.Dispatch(GlobalEvent.TutorialCompleted);
         yield return StartCoroutine(DisplayMythsUpdatedPopUP());
         LoadKitchen1();
