@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Level1Data
   m_EditorClassIdentifier: 
   level: 1
-  clientNumber: 14
+  clientNumber: 6
   initialSpawnSeconds: 5
-  minSpawnSeconds: 15
-  maxSpawnSeconds: 35
+  minSpawnSeconds: 10
+  maxSpawnSeconds: 15
   minNumberOfPotionRecipients: 2
   minNumberOfMortars: 2
   minNumberOfStoves: 0
   minNumberOfPainKillers: 2
-  time: 260
-  goal: 10
+  time: 200
+  goal: 5
   streak: 3
   streakWaitTime: 15
   levelRecipes:
