@@ -38,7 +38,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.AddListener(IngredientState.Cooked, UnusefulMethod);
+        EventManager.AddListener(IngredientState.Cooked, CallSecondCoroutine);
         EventManager.AddListener(PotionEvent.AddIngredient, UnusefulMethod);
         EventManager.AddListener(PotionEvent.AddWater, UnusefulMethod);
         EventManager.AddListener(PotionEvent.Poof, UnusefulMethod);
@@ -152,6 +152,13 @@ public class TutorialManager : MonoBehaviour
 
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], true);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
+    }
+
+    private void CallSecondCoroutine () => StartCoroutine(SecondVignetteCoroutine());
+
+    private IEnumerator SecondVignetteCoroutine()
+    {
+        yield return null;
     }
 }
 
