@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     private enum TutorialActors
     {
-        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Client = 4, PotionResult =5,
+        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Client = 4, PotionResult = 5,
     }
     public PlayableDirector finalTimeline;
     //Assing Pequi Water an client from inspector
@@ -42,7 +42,7 @@ public class TutorialManager : MonoBehaviour
         EventManager.AddListener(PotionEvent.AddIngredient, CallThirdCoroutine);
         EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
         EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
-        EventManager.AddListener(ClientEvent.Served, sixthVignetteCoroutine);
+        EventManager.AddListener(ClientEvent.Served, sixthVignetteCoroutineStart);
 
         updatedMythsGO.SetActive(false);
     }
@@ -53,7 +53,7 @@ public class TutorialManager : MonoBehaviour
         EventManager.RemoveListener(PotionEvent.AddIngredient, CallThirdCoroutine);
         EventManager.RemoveListener(PotionEvent.AddWater, callFourthCoroutine);
         EventManager.RemoveListener(PotionEvent.Poof, callFifhtCoroutine);
-        EventManager.RemoveListener(ClientEvent.Served, sixthVignetteCoroutine);
+        EventManager.RemoveListener(ClientEvent.Served, sixthVignetteCoroutineStart);
     }
 
     private void Start()
@@ -74,7 +74,7 @@ public class TutorialManager : MonoBehaviour
         foreach (var tutorialActor in tutorialElements)
             SwitchObjectCollider(tutorialActor, false);
 
-        targetResolution = new Vector2( Screen.currentResolution.width, Screen.currentResolution.height);
+        targetResolution = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
     }
 
     void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
@@ -132,7 +132,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator FirstVignetteCoroutine()
     {
         //The vignette appears
-        StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Pequi]));;
+        StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Pequi])); ;
 
         yield return StartCoroutine(DisplayVignette());
 
@@ -152,11 +152,12 @@ public class TutorialManager : MonoBehaviour
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
     }
 
-    private void CallSecondCoroutine () => StartCoroutine(SecondVignetteCoroutine());
+    private void CallSecondCoroutine() => StartCoroutine(SecondVignetteCoroutine());
 
     private IEnumerator SecondVignetteCoroutine()
     {
         //deactivate colliders
+        yield return waitSecondsToShow;
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
         // vignette moves to mortar
@@ -185,6 +186,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator ThirdVignetteCoroutine()
     {
         //turn off the colliders
+        yield return waitSecondsToShow;
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
 
@@ -213,6 +215,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator fourthVignetteCoroutine()
     {
         //deactivate colliders
+        yield return waitSecondsToShow;
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
 
@@ -231,6 +234,7 @@ public class TutorialManager : MonoBehaviour
     private IEnumerator fifthVignetteCoroutine()
     {
         //deactivate colliders
+        yield return waitSecondsToShow;
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], false);
 
         //vignette shows on potion result
@@ -252,13 +256,19 @@ public class TutorialManager : MonoBehaviour
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
     }
-    public void sixthVignetteCoroutine()
+
+    private void sixthVignetteCoroutineStart() =>
+        StartCoroutine(sixthVignetteCoroutine());
+
+    public IEnumerator sixthVignetteCoroutine()
     {
+        yield return waitSecondsToShow;
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], false);
         SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], false);
         finalTimeline.Play();
         StartCoroutine(endOfTutorial());
     }
+
     public IEnumerator endOfTutorial()
     {
         yield return new WaitForSeconds(9f);

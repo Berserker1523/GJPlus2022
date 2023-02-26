@@ -319,6 +319,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 129293420}
     - target: {fileID: 1947978712, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: tutorialElements.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947978712, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
       propertyPath: tutorialElements.Array.data[0]
       value: 
       objectReference: {fileID: 2069276534}
@@ -327,9 +331,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2113954258}
     - target: {fileID: 1947978712, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
-      propertyPath: tutorialElements.Array.data[5]
+      propertyPath: tutorialElements.Array.data[4]
       value: 
       objectReference: {fileID: 737830989}
+    - target: {fileID: 1947978712, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: tutorialElements.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 789642637965407037, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -618,6 +626,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3239111157804677405, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204876136624752117, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
