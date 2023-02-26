@@ -41,19 +41,8 @@ namespace Kitchen
             if (gameData == null)
                 gameData = new GameData();
 
+            stars = new bool[3];
 
-            if (level == gameData.currentLevel)
-            {
-                if (gameData.stars != null)
-                {
-                    for (int i = 0; i < stars.Length; i++)
-                    {
-                        stars[i] = gameData.stars[level - 1, i];
-                        // Debug.Log(gameData.stars[level-1, i]);
-                    }
-
-                }
-            }
             EventManager.AddListener(LevelEvents.Goal, SetGoalStar);
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);

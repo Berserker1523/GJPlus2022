@@ -5,6 +5,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -27,6 +28,9 @@ namespace Kitchen
         [SerializeField] private LocalizedString levelFailedString;
         [SerializeField] private LocalizedString continueString;
         [SerializeField] private LocalizedString retryString;
+
+        [SerializeField] private LocalizedString adviceString;
+        [SerializeField] private LocalizeStringEvent adviceStringEvent;
 
         private MoneyUI moneyUI;
         private LevelInstantiator levelInstantiator;
@@ -51,6 +55,7 @@ namespace Kitchen
 
         private void HandleLevelFinished()
         {
+            DisplayAdvice();
             if (levelInstantiator.LevelData.stars[0])
             {
                 HandleWon();
@@ -99,7 +104,7 @@ namespace Kitchen
             int starsAmount = 0;
             for (int i = 0; i < 3; i++)
             {
-                if (starsData.stars[LevelManager.CurrentLevel, i])
+                if (levelInstantiator.LevelData.stars[i])
                 {
                     stars[i].SetTrigger("TriggerStar");
                     starsAmount++;
@@ -107,6 +112,23 @@ namespace Kitchen
                 }
             }
             PlayStarsParameter(starsAmount);
+        }
+        private void DisplayAdvice()
+        {
+            string reference = "";
+            if (!levelInstantiator.LevelData.stars[0])          
+                reference = "Ad_Goal";          
+            else if(!levelInstantiator.LevelData.stars[1])        
+                reference = "Ad_Time";           
+            else if(!levelInstantiator.LevelData.stars[2])           
+                reference = "Ad_Combo";            
+            else
+                reference = "Ad_Win";
+
+            adviceString.TableEntryReference = reference;
+            adviceStringEvent.StringReference = adviceString;
+
+            adviceString.RefreshString();
         }
 
         public void NextLevel()
