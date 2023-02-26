@@ -9,8 +9,7 @@ namespace Kitchen
     {
         Lost,
         Won,
-        LevelFinished,
-        ReturningToMainMenu
+        LevelFinished
     }
 
     public class ClientSpawner : MonoBehaviour

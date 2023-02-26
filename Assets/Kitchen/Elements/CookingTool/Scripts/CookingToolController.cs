@@ -1,6 +1,7 @@
 ﻿using Events;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace Kitchen
 {
@@ -36,7 +37,7 @@ namespace Kitchen
             if (shakingMortarParticle != null)
                 shakingMortarParticle.Stop();
 
-            EventManager.AddListener(GameStatus.ReturningToMainMenu, StopCookingSoundsOnReturningMainMenu);
+           SceneManager.sceneLoaded += StopCookingSoundsOnNewSceneLoaded;
         }
 
         private void OnDestroy() =>
@@ -128,7 +129,7 @@ namespace Kitchen
             timer.gameObject.SetActive(false);
         }
 
-        public void StopCookingSoundsOnReturningMainMenu()=>        
+        public void StopCookingSoundsOnNewSceneLoaded(Scene scene, LoadSceneMode mode) =>        
            cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         
     }
