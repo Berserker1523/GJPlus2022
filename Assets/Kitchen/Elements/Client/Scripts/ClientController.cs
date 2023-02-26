@@ -2,6 +2,7 @@ using Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -26,11 +27,23 @@ namespace Kitchen
         private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
-        private int clientGender = 0;
+        private enum Gender { female = 0, male = 1 };
+        private Gender clientGender;
+
+        //Animation Params
+        [SerializeField] AnimatorController[] animators = new AnimatorController[2];
+        Animator animator;
+
+        private string animatorIllnessParameter = "Illness";
+        private string animatorRecuperatedParameter = "Recuperated";
+        private string animatorDiedParameter ="Died";
+
+        private string[] animsDie = new string []{ "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
+        private bool clientDied;
 
         protected void Awake()
         {
-            clientSpriteRenderer = GetComponent<SpriteRenderer>();
+            clientSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             dropView = GetComponent<DropView>();
 
             waitingTimer = MaxWaitingSeconds;
@@ -39,6 +52,8 @@ namespace Kitchen
 
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
+
+            animator = GetComponentInChildren<Animator>();     
         }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
@@ -68,9 +83,11 @@ namespace Kitchen
                 cookingToolsImages[i].enabled = false;
             }
 
-            clientGender = UnityEngine.Random.Range(0, 2);
-            if (requiredRecipe.clientSprites != null)
-                clientSpriteRenderer.sprite = requiredRecipe.clientSprites[clientGender];
+            clientGender = (Gender)UnityEngine.Random.Range(0, 2); 
+            animator.runtimeAnimatorController = animators[(int)clientGender];
+
+            if (requiredRecipe.diseasesItCures != null)
+                animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
         }
 
         private void Update()
@@ -103,11 +120,21 @@ namespace Kitchen
                 sliderBarImage.color = color;
             }
 
-            if (waitingTimer <= 0)
+            if (waitingTimer <= 0 && !clientDied)          
+                StartCoroutine(DiedClientCoroutine());          
+        }
+
+        IEnumerator DiedClientCoroutine()
+        {
+            clientDied = true;
+            animator.SetBool(animatorDiedParameter, true);
+            foreach(var animation in animsDie)
             {
-                Destroy(gameObject);
-                EventManager.Dispatch(ClientEvent.Died);
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName(animation)) ;
+                    yield return new WaitForSeconds(0.1f);
             }
+            Destroy(gameObject);
+            EventManager.Dispatch(ClientEvent.Died);
         }
 
         private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData) =>
@@ -152,7 +179,8 @@ namespace Kitchen
         {
             //Display Happy Animation Here!
             clientServed = true;
-            clientSpriteRenderer.sprite = happyClientSprite[clientGender];
+            //clientSpriteRenderer.sprite = happyClientSprite[(int)clientGender];
+            animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 

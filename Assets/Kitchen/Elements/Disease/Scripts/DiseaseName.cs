@@ -1,11 +1,12 @@
 ﻿namespace Kitchen
 {
-    [System.Flags]
     public enum DiseaseName
     {
-        HeadAche = (1 << 0), 
-        ToothAche = (1 << 1), 
-        StomachAche = (1 << 2), 
-        Appendicitis = (1 << 3), 
+        YellowFever = 0,
+        Viruela = 1,
+        HeadAche = 2, 
+        ToothAche = 3, 
+        StomachAche = 4,
+        Appendicitis = 5,
     }
 }

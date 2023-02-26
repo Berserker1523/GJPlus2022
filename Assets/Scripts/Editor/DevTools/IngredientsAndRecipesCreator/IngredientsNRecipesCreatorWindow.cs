@@ -176,7 +176,7 @@ namespace DevTools
                     EditorGUILayout.BeginVertical(GUI.skin.FindStyle("Badge"));
                     ingredientsBools[i] = EditorGUILayout.Foldout(recipesBools[i], Enum.GetName(typeof(RecipeName), currentObject.FindProperty("recipeName").enumValueFlag));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("recipeName"), new GUIContent("Recipe Name"));
-                    //EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
+                    EditorGUILayout.PropertyField(currentObject.FindProperty("diseasesItCures"), new GUIContent("Disease(s) it cures"));
                     EditorGUILayout.PropertyField(currentObject.FindProperty("sprite"));
                   //  EditorGUILayout.PropertyField(currentObject.FindProperty("clientSprite"), new GUIContent("Sick Client Sprite"));
 
