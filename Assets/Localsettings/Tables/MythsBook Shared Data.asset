@@ -119,6 +119,22 @@ MonoBehaviour:
     m_Key: Text_GetStarsToUnlock
     m_Metadata:
       m_Items: []
+  - m_Id: 3325962866229248
+    m_Key: Ad_Goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326695632109568
+    m_Key: Ad_Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326721846509568
+    m_Key: Ad_Combo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326747893137408
+    m_Key: Ad_Win
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

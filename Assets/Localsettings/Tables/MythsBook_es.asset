@@ -242,6 +242,28 @@ MonoBehaviour:
     m_Localized: "[Gana Estrellas Para Desbloquear M\xE1s]"
     m_Metadata:
       m_Items: []
+  - m_Id: 3325962866229248
+    m_Localized: "\xA1Recuerda, un Kumu nunca abandona a un paciente! \xA1As\xED
+      que aseg\xFArate de curar tantos clientes como sea posible y salvar el d\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326695632109568
+    m_Localized: "\xA1El tiempo no espera a ning\xFAn Kumu! \xA1Apres\xFArate y prepara
+      esas pociones para vencer el reloj y ganar otra estrella!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326721846509568
+    m_Localized: "\xA1Canaliza tu esp\xEDritu Kumu interior y convi\xE9rtete en un
+      maestro de la entrega de pociones! Haz las combinaciones perfectas para impresionar
+      a tus clientes y ganar esa codiciada tercera estrella."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326747893137408
+    m_Localized: "\xA1Felicidades, est\xE1s en camino de convertirte en un verdadero
+      maestro Kumu! \xA1Sigue con el buen trabajo y sigue curando a aquellos que
+      lo necesiten!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -241,6 +241,31 @@ MonoBehaviour:
     m_Localized: '[Earn Stars To Unlock More]'
     m_Metadata:
       m_Items: []
+  - m_Id: 3325962866229248
+    m_Localized: Remember, a Kumu never leaves a patient behind! So make sure to
+      heal as many clients as possible and save the day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326695632109568
+    m_Localized: 'Time waits for no Kumu! Hurry up and brew those potions to beat
+      the clock and earn another star!
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326721846509568
+    m_Localized: 'Channel your inner Kumu spirit and become a master of potion delivery!
+      Make the perfect combos to impress your clients and earn that coveted third
+      star.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3326747893137408
+    m_Localized: Congratulations, you're on your way to become a true Kumu master!
+      Keep up the good work and continue to heal those in need!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
