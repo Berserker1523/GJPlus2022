@@ -112,12 +112,12 @@ namespace HistoryBook {
             if (gameData.stars[buttonPos, 1])
                 value1 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP1.TableReference, mythP1.TableEntryReference);
             else
-                value1 = "\n\n" + LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference); 
+                value1 = LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference); 
 
             if (gameData.stars[buttonPos, 2])
                 value2 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP2.TableReference, mythP2.TableEntryReference);
             else
-                value2 = "\n\n" + LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference);
+                value2 = LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference);
 
             string mythText = value1 + value2;
             historyText.text = mythText; 
