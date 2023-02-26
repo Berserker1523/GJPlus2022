@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using Kitchen;
 using Events;
-using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 public class TutorialManager : MonoBehaviour
@@ -20,18 +18,16 @@ public class TutorialManager : MonoBehaviour
     public PlayableDirector finalTimeline;
     //Assing Pequi Water an client from inspector
     [SerializeField] private Transform[] tutorialElements = new Transform[5];
+    [SerializeField] private StarsData starsData;
 
     //Post procees Intensity
     private float activeIntensity = 1f, initialIntensity;
 
-    //timer setter
-    [SerializeField] private float deactivaterTimer, initialDeactivaterTimer;
     private float waitToShowTimer = 1f, waitToMoveTimer = 3f;
 
     private float standardWaitStep = 0.1f;
     WaitForSeconds coroutineWaitStep;
     WaitForSeconds waitSecondsToShow;
-    WaitForSeconds waitSecondsToMove;
 
     [ContextMenuItem("MoveObject", "Move")]
     [SerializeField] Transform currentPos;
@@ -62,10 +58,7 @@ public class TutorialManager : MonoBehaviour
         vignetteVolume.profile.TryGet<Vignette>(out vignetteInstance);
 
         vignetteInstance.intensity.value = 0f;
-
-        coroutineWaitStep = new WaitForSeconds(standardWaitStep);
         waitSecondsToShow = new WaitForSeconds(waitToShowTimer);
-        waitSecondsToMove = new WaitForSeconds(waitToMoveTimer);
 
         LevelManager.CurrentLevel = 0;
 
@@ -76,6 +69,7 @@ public class TutorialManager : MonoBehaviour
         foreach (var tutorialActor in tutorialElements)
             SwitchObjectCollider(tutorialActor, false);
 
+        targetResolution = new Vector2( Screen.currentResolution.width, Screen.currentResolution.height);
     }
 
     void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
@@ -141,8 +135,7 @@ public class TutorialManager : MonoBehaviour
         yield return waitSecondsToShow;
 
         // Move givnette to morter
-        StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Mortar]));
-        yield return waitSecondsToMove;
+        yield return StartCoroutine(MoveVignetteCoroutine(tutorialElements[(int)TutorialActors.Mortar]));
 
         // Wait to show the morter
         yield return waitSecondsToShow;

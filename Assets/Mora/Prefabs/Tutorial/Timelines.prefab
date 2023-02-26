@@ -737,7 +737,6 @@ GameObject:
   - component: {fileID: 789642639237645626}
   - component: {fileID: 789642639237645630}
   - component: {fileID: 789642639237645624}
-  - component: {fileID: 789642639237645625}
   - component: {fileID: 1947978712}
   m_Layer: 0
   m_Name: VignetteTutorial
@@ -817,7 +816,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 789642639237645625}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: VignetteManagerScript, Assembly-CSharp
           m_MethodName: initialVignette
           m_Mode: 1
@@ -841,50 +840,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &789642639237645625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789642639237645605}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b59a859628165e42a22af72250e15fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xCoordenates: 0
-  yCoordenates: 0
-  deactivaterTimer: 0.8
-  FirstTimer: 0.02
-  secondTimer: 3
-  thirdTimer: 0.02
-  fourthTimer: 3
-  fifthTimer: 0.02
-  sixthTimer: 0.02
-  seventhTimer: 3
-  eightTimer: 0.02
-  ninethTimer: 3
-  tenthTimer: 0.02
-  eleventhTimer: 0.02
-  twelthTimer: 3
-  thirteenthTimer: 0.02
-  fourteenthTimer: 3
-  fifthteenthTimer: 0.02
-  sixteenthTimer: 0.02
-  seventeenthTimer: 3
-  eighteenthTimer: 0.02
-  nineteenthTimer: 0.02
-  twentiethTimer: 3
-  twentyfirstTimer: 0.02
-  twentysecondTimer: 3
-  twentythirdTimer: 0.02
-  twentyfourthTimer: 5
-  PequiObject: {fileID: 0}
-  WaterObject: {fileID: 0}
-  MortarObject: {fileID: 0}
-  stoveObject: {fileID: 0}
-  shakerObject: {fileID: 0}
 --- !u!114 &1947978712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,8 +860,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  deactivaterTimer: 0.8
-  initialDeactivaterTimer: 0
+  starsData: {fileID: 11400000, guid: 72af623b995d89d48a51ac9c4f4afe1c, type: 2}
   currentPos: {fileID: 1221739211421877506}
 --- !u!1 &789642639245653510
 GameObject:
