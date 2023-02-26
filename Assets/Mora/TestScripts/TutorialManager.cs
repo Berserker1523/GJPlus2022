@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     private enum TutorialActors
     {
-        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Stove = 4, Client = 5, PotionResult =6,
+        Pequi = 0, Water = 1, Mortar = 2, Shaker = 3, Client = 4, PotionResult =5,
     }
     public PlayableDirector finalTimeline;
     //Assing Pequi Water an client from inspector
@@ -68,7 +68,7 @@ public class TutorialManager : MonoBehaviour
 
         tutorialElements[(int)TutorialActors.Mortar] = GameObject.Find("Mortar(Clone)").GetComponent<Transform>();
         tutorialElements[(int)TutorialActors.Shaker] = GameObject.Find("Potion(Clone)").GetComponent<Transform>();
-        tutorialElements[(int)TutorialActors.Stove] = GameObject.Find("Stove(Clone)").GetComponent<Transform>();
+        //tutorialElements[(int)TutorialActors.Stove] = GameObject.Find("Stove(Clone)").GetComponent<Transform>();
         tutorialElements[(int)TutorialActors.PotionResult] = GameObject.Find("Result").GetComponent<Transform>();
 
         foreach (var tutorialActor in tutorialElements)
