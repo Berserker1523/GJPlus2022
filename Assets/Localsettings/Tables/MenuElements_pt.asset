@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10674615713792
-    m_Localized: "N\xEDvel Ffalhou"
+    m_Localized: "N\xEDvel Falhou"
     m_Metadata:
       m_Items: []
   - m_Id: 10893176700928
@@ -74,6 +74,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6741597788930048
     m_Localized: Confirme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7555858979192832
+    m_Localized: Mitos
     m_Metadata:
       m_Items: []
   references:

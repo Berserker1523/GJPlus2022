@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: MM_Confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 7555858979192832
+    m_Key: MM_Myths_Button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
