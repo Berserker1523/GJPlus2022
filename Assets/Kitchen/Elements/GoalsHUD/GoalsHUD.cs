@@ -95,6 +95,8 @@ namespace Kitchen
                 //Time Star
                 if (currentTime > 0)
                     EventManager.Dispatch(LevelEvents.Speed);
+
+                EventManager.Dispatch(GameStatus.LevelFinished);
             }
         }
 
