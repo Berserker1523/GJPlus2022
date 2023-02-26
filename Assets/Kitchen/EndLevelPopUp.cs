@@ -79,8 +79,6 @@ namespace Kitchen
             positiveButton.onClick.AddListener(NextLevel);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
             StartCoroutine(DisplayStars());
-
-            LevelManager.CurrentLevel = 1;
         }
 
         private void HandleLost()
@@ -132,7 +130,7 @@ namespace Kitchen
             if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
-
+                LevelManager.CurrentLevel = 1;
                 SceneManager.LoadScene("Credits", LoadSceneMode.Single);
 
             }
