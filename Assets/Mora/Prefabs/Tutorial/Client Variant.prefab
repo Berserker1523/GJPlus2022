@@ -70,8 +70,8 @@ MonoBehaviour:
   m_text: "Por favor, \xA1ay\xFAdeme! Siento que estoy muy enferma, con mucha fiebre
     y dolores por todo el cuerpo. \xBFPuede ayudarme, Kumu?\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
+  m_sharedMaterial: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 8639427401676184675}
   - component: {fileID: 6609047148364869556}
   - component: {fileID: 1973690692720437562}
+  - component: {fileID: 737830986}
   m_Layer: 5
   m_Name: EndTutorialText
   m_TagString: Untagged
@@ -246,8 +247,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1Muchas gracias, ya me siento mejor!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
+  m_sharedMaterial: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -353,6 +354,26 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!95 &737830986
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191478418385415616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &350293719835062450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362,6 +383,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 530915282898998498, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 620216815474986866, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 620216815474986866, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 620216815474986866, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1509416955426359195, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
@@ -430,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964778235840464446, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_Name
-      value: Client Variant
+      value: Client Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 4457050025299396745, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_Sprite
@@ -534,11 +567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945920437877362160, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 5945920437877362160, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6445720549912182630, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_AnchorMax.y
@@ -592,6 +625,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7976962721539336504, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cbcadcb6df8d5ae4d924643c2b1350f8, type: 2}
     - target: {fileID: 8277662260854193511, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -631,6 +668,31 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1450327192403000067, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+--- !u!1 &2405775983801198905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2720023312233355659, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+  m_PrefabInstance: {fileID: 350293719835062450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &129293420
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405775983801198905}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3736235639770265228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3964778235840464446, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
@@ -670,8 +732,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredRecipe: {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   happyClientSprite: {fileID: 21300000, guid: a5aef3e14073df840a129de3872fd028, type: 3}
+  animator: {fileID: 7669528033676695946}
 --- !u!224 &6221821200968711490 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5945920437877362160, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+  m_PrefabInstance: {fileID: 350293719835062450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7669528033676695946 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7976962721539336504, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
   m_PrefabInstance: {fileID: 350293719835062450}
   m_PrefabAsset: {fileID: 0}

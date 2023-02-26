@@ -86,8 +86,7 @@ namespace Kitchen
             clientGender = (Gender)UnityEngine.Random.Range(0, 2); 
             animator.runtimeAnimatorController = animators[(int)clientGender];
 
-            if (requiredRecipe.diseasesItCures != null)
-                animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
+            animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
         }
 
         private void Update()
