@@ -75,8 +75,6 @@ namespace Kitchen
             titleDilateText.text = levelCompletedString.GetLocalizedString();
             titleText.color = wonTitleColor;
 
-            //TODO set advice text
-
             positiveButtonText.text = continueString.GetLocalizedString();
             positiveButton.onClick.AddListener(NextLevel);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
@@ -91,8 +89,6 @@ namespace Kitchen
             titleText.text = levelFailedString.GetLocalizedString();
             titleDilateText.text = levelFailedString.GetLocalizedString();
             titleText.color = lostTitleColor;
-
-            //TODO set advice text
 
             positiveButtonText.text = retryString.GetLocalizedString();
             positiveButton.onClick.AddListener(TryAgain);

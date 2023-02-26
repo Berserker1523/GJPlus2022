@@ -7,7 +7,6 @@ namespace Kitchen
     public class LevelInstantiator : MonoBehaviour
     {
         [SerializeField] private LevelData levelData;
-        [SerializeField] private StarsData starsData;
 
         [Header("Potions")]
         [SerializeField] private GameObject potionLockPrefab;
