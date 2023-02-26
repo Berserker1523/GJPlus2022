@@ -35,6 +35,8 @@ namespace Kitchen
 
             if (shakingMortarParticle != null)
                 shakingMortarParticle.Stop();
+
+            EventManager.AddListener(GameStatus.ReturningToMainMenu, StopCookingSoundsOnReturningMainMenu);
         }
 
         private void OnDestroy() =>
@@ -125,5 +127,9 @@ namespace Kitchen
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             timer.gameObject.SetActive(false);
         }
+
+        public void StopCookingSoundsOnReturningMainMenu()=>        
+           cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
     }
 }
