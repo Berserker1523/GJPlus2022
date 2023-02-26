@@ -23,7 +23,7 @@ namespace Kitchen
         [Range(1, 4)] public int minNumberOfPainKillers;
 
         [Header("LevelGoals")]
-        [Range(1, 200)] public int time = 200;
+        [Range(1, 400)] public int time = 200;
         [Range(1, 200)] public int goal = 5;
         [Range(1, 10)] public int streak = 3;
         public float streakWaitTime = 15f;

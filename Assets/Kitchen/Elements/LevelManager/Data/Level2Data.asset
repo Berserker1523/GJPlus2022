@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 2
   clientNumber: 20
+  initialSpawnSeconds: 0
   minSpawnSeconds: 15
   maxSpawnSeconds: 35
   minNumberOfPotionRecipients: 2
   minNumberOfMortars: 3
   minNumberOfStoves: 1
   minNumberOfPainKillers: 1
-  time: 200
+  time: 400
   goal: 15
+  streak: 3
+  streakWaitTime: 15
   levelRecipes:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
