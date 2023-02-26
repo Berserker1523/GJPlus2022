@@ -12,6 +12,9 @@ namespace Kitchen
     {
         [SerializeField] private CookingToolData cookingToolData;
         [SerializeField] private ParticleSystem shakingMortarParticle;
+        [SerializeField] private ParticleSystem cookingParticle;
+        [SerializeField] private ParticleSystem overcookingParticle;
+        [SerializeField] private ParticleSystem overcookedParticle;
 
         private SpriteRenderer spriteRenderer;
         private DropView dropView;
@@ -50,7 +53,10 @@ namespace Kitchen
 
             CurrentCookingIngredient.currentCookingSeconds += Time.deltaTime;
             if (CurrentCookingIngredient.state == IngredientState.Cooked)
+            {
                 timer.SetFillAmount((CurrentCookingIngredient.currentCookingSeconds - cookingToolData.cookingSeconds) / (cookingToolData.burningSeconds - cookingToolData.cookingSeconds));
+                spriteRenderer.material.SetFloat("_Temperature", ((CurrentCookingIngredient.currentCookingSeconds - cookingToolData.cookingSeconds) / (cookingToolData.burningSeconds - cookingToolData.cookingSeconds)));
+            }    
             else
                 timer.SetFillAmount(CurrentCookingIngredient.currentCookingSeconds / cookingToolData.cookingSeconds);
 
@@ -67,10 +73,13 @@ namespace Kitchen
                 }
                 else
                     timer.SetBurning();
+                overcookingParticle.Play();
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)
             {
                 CurrentCookingIngredient.state = IngredientState.Burnt;
+                overcookedParticle.Play();
+                spriteRenderer.material.SetFloat("_Temperature",0f);
                 spriteRenderer.sprite = CurrentCookingIngredient.data.stoveBurntSprite;
                 timer.gameObject.SetActive(false);
                 EventManager.Dispatch(IngredientState.Burnt);
@@ -112,6 +121,7 @@ namespace Kitchen
                 cookingSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Enciende Sarten");
                 cookingSound.start();
                 cookingSound.setParameterByName("Cocinando", 1);
+                cookingParticle.Play();
             }
             else if (cookingToolData.cookingToolName == CookingToolName.Mortar)
             {
