@@ -125,7 +125,7 @@ TextureImporter:
         width: 627
         height: 298
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 238
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
         width: 156
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: atlas_02_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 279
+        x: 16
+        y: 331
         width: 664
         height: 381
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
         width: 156
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: 5f824207ee002654386474b2ee5d20b9
       internalID: -1080235586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_02_5
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 0
+        width: 509
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893f6ab16c5411440bed5c9e4e89ba7a
+      internalID: -2120772806
       vertices: []
       indices: 
       edges: []
@@ -236,6 +257,7 @@ TextureImporter:
       atlas_02_2: -1543694724
       atlas_02_0: 487444472
       atlas_02_4: -1080235586
+      atlas_02_5: -2120772806
       atlas_02_1: -612814335
   spritePackingTag: 
   pSDRemoveMatte: 0
