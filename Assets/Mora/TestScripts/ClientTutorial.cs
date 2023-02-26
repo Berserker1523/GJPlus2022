@@ -3,6 +3,7 @@ using Kitchen;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,6 +16,11 @@ namespace tutorial
         [SerializeField] private RecipeData requiredRecipe;
         private SpriteRenderer clientSpriteRend;
         [SerializeField] private Sprite happyClientSprite;
+
+        //Animation Params
+        [SerializeField] Animator animator;
+        private string animatorIllnessParameter = "Illness";
+        private string animatorRecuperatedParameter = "Recuperated";
 
         public void OnDrop(PointerEventData pointerEventData)
         {
@@ -46,19 +52,18 @@ namespace tutorial
         protected void Awake()
         {
             clientSpriteRend = GetComponent<SpriteRenderer>();
+            animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
         }
 
         public IEnumerator ClientServedRoutine()
         {
-            //Display Happy Animation Here!
             clientServed = true;
-            clientSpriteRend.sprite = happyClientSprite;
+            animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
             yield return new WaitForSeconds(3f);
 
             //Destroy(gameObject);
         }
-
     }
 
 }
