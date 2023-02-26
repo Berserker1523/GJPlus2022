@@ -26,10 +26,10 @@ namespace Mainmenu
             EventManager.Dispatch(GlobalEvent.Play);
             yield return new WaitForSeconds(2f);
 
-           // if (gameData != null && gameData.tutorialCompleted)
-                SceneManager.LoadScene($"{SceneName.Kitchen}{/*LevelManager.CurrentLevel*/1}", LoadSceneMode.Single); //Todo level save
-            //else
-               // SceneManager.LoadScene("Tutorial");
+            if (gameData != null && gameData.tutorialCompleted)
+                SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single); //Todo level save
+            else
+               SceneManager.LoadScene("Tutorial2");
         }
 
 
