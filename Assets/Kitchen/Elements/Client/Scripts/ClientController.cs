@@ -2,7 +2,6 @@ using Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,9 +18,7 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private List<Image> ingredientsImages;
         [SerializeField] private List<Image> cookingToolsImages;
-        [SerializeField] private Sprite[] happyClientSprite = new Sprite[2];
 
-        private SpriteRenderer clientSpriteRenderer;
         private DropView dropView;
 
         private bool clientServed = false;
@@ -31,7 +28,7 @@ namespace Kitchen
         private Gender clientGender;
 
         //Animation Params
-        [SerializeField] AnimatorController[] animators = new AnimatorController[2];
+        [SerializeField] RuntimeAnimatorController[] animators = new RuntimeAnimatorController[2];
         Animator animator;
 
         private string animatorIllnessParameter = "Illness";
@@ -43,7 +40,6 @@ namespace Kitchen
 
         protected void Awake()
         {
-            clientSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             dropView = GetComponent<DropView>();
 
             waitingTimer = MaxWaitingSeconds;
