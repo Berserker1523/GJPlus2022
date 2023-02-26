@@ -17,21 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AnimExport/Scenes/Credits.unity
     guid: 5eb5df47d0f06654db4ee7f82aca60bd
-  - enabled: 0
-    path: Assets/AnimExport/Scenes/Garden.unity
-    guid: d33121b6821f32845a77c660d7fd0802
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Kitchen2.unity
     guid: 89a475ba580166741981311188e48f93
-  - enabled: 0
-    path: Assets/AnimExport/Scenes/Kitchen/Kitchen3.unity
-    guid: d11e61112f77e3f449ba06e171b00101
-  - enabled: 0
-    path: Assets/AnimExport/Scenes/Kitchen/Kitchen4.unity
-    guid: 2705a417eec32164dad878fc7ac9c5bb
-  - enabled: 0
-    path: Assets/AnimExport/Scenes/Kitchen/Kitchen5.unity
-    guid: e5f074407e106a24981ecf2a680ce008
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Tutorial.unity
     guid: fb0e08267ee307f4182b7ea6f134de64
