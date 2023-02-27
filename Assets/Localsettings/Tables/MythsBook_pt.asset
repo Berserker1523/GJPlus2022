@@ -52,10 +52,10 @@ MonoBehaviour:
       com sangue da ca\xE7a. Chegou ent\xE3o ao alto de uma montanha, levando sua
       arma, e come\xE7ou a gritar. Seus gritos soaram como fortes trov\xF5es. Girou
       fortemente a borduna no ar e de suas pontas sa\xEDram rel\xE2mpagos.\r\nEm
-      meio ao barulho e \xE0s luzes, Begorotire subiu aos c\xE9us. Os \xEDndios assustados
+      meio do barulho e das luzes, Begorotire subiu aos c\xE9us. Os \xEDndios assustados
       atiraram suas flechas, mas nada conseguiu impedir que o \xEDndio desaparecesse
       no firmamento. As nuvens, tamb\xE9m assustadas, derramaram chuva. Por isso
-      Begorotire tornou-se o homem chuva.\r\nTempos depois, levou toda a fam\xEDlia
+      Begorotire tornou-se o homem chuva.\nTempos depois, levou toda a fam\xEDlia
       para o c\xE9u, onde nada lhes faltava, e de l\xE1 muito fez para ajudar os
       que na terra ficaram. Juntou sementes de suas fartas ro\xE7as, secou-as sobre
       o girau, entregando-as a uma filha para traz\xEA-las.\r"
@@ -146,26 +146,27 @@ MonoBehaviour:
       origem da carna\xFAba, carnaubeira ou carna\xEDba (Copernicia prunifera ou
       cerifera), palmeira nativa das regi\xF5es caatinga brasileira e comum em todo
       o Nordeste, que salvou um povo da extin\xE7\xE3o. A hist\xF3ria conta que este
-      povo viveu feliz com a natureza, o sol aqueceu as cabanas e amadureceu os frutos,
-      as nuvens deram sombra, a chuva molhou as plantas e aumentou os rios. Com o
-      tempo, por\xE9m, o sol come\xE7ou a ficar muito quente: t\xE3o quente que secou
-      os rios, matou plantas e animais. As pessoas rezavam, dan\xE7avam e imploravam
-      a Tup\xE3 para mandar a chuva novamente, mas o sol continuava queimando tudo.
-      Ent\xE3o as pessoas come\xE7aram a morrer, at\xE9 que aquele povo forte s\xF3
-      deixou um casal e seu filho, for\xE7ados a abandonar suas terras em busca de
-      outras melhores. Mastigando as ra\xEDzes que lhes restavam, eles caminharam
-      a noite toda, e quando novamente o sol queimou no c\xE9u, o menino viu uma
-      palmeira sozinha, no que parecia ser um deserto, balan\xE7ando suas palmeiras
-      verdes. Exausto, eles pararam para descansar \xE0 sombra daquela palmeira e
-      os pais adormeceram. Somente o filho ainda estava acordado e preocupado, pedindo
-      ajuda a Tup\xE3. Foi quando ele ouviu uma voz e viu, no alto da palmeira, uma
-      mulher indiana, que lhe disse: \"Meu nome \xE9 Carnaubeira. Estou aqui para
-      ajud\xE1-la. H\xE1 muitos anos atr\xE1s, minha tribo tamb\xE9m foi assolada
-      pela seca. Ajudei a todos, e quando morri, a lua me transformou nesta \xE1rvore
-      destinada a salvar os indefesos. Fa\xE7a o que eu lhe aconselho e voc\xEA ainda
-      ser\xE1 feliz. Remova meu tronco, e com minha seiva, sacie a sede de seus pais
-      e a sua. Coma meus frutos, e n\xE3o ter\xE1 mais fome. Cozinhe algumas de minhas
-      ra\xEDzes, e rem\xE9dios que, b\xEAbados, fecham as feridas"
+      povo viveu feliz com a natureza, o sol aquecia as cabanas e amadurecia os frutos,
+      as nuvens ofereciam cobertura, a chuva molhava as plantas e acrescentava os
+      rios. Com o passar do tempo, por\xE9m, o sol come\xE7ou a ficar quente demais:
+      t\xE3o quente que secou os rios, matou plantas e animais. As pessoas rezavam,
+      dan\xE7avam e imploravam a Tup\xE3 mandar a chuva de volta, mas o sol continuava
+      queimando tudo. Ent\xE3o as pessoas come\xE7aram a morrer, at\xE9 que aquele
+      povo forte s\xF3 deixou um casal e seu filho, for\xE7ados a abandonar suas
+      terras na busca de outras melhores. Mastigando as ra\xEDzes que ainda traziam
+      restavam, eles caminharam a noite toda, e quando novamente o sol queimou no
+      c\xE9u, o menino viu uma palmeira sozinha, num local que parecia ser um deserto,
+      balan\xE7ando suas palmeiras verdes. Exaustos, eles pararam para descansar
+      \xE0 sombra daquela palmeira e os pais adormeceram. Somente o filho ainda estava
+      acordado e preocupado, pedindo ajuda ao Tup\xE3. Foi quando ele ouviu uma voz
+      e viu, na cima da palmeira, uma mulher indiana, que lhe disse: \"Meu nome \xE9
+      Carnaubeira. Estou aqui para ajud\xE1-lo. H\xE1 muitos anos atr\xE1s, minha
+      tribo tamb\xE9m foi assolada pela seca. Ajudei a todos, e quando morri, a lua
+      me transformou nesta \xE1rvore destinada a salvar os indefesos. Fa\xE7a o que
+      eu lhe aconselho e voc\xEA ainda ser\xE1 feliz. Remova meu tronco, e com minha
+      seiva, sacie a sede dos seus pais e a sua. Coma meus frutos, e n\xE3o ter\xE1
+      mais fome. Cozinhe algumas das minhas ra\xEDzes, e rem\xE9dios que, ingeridos,
+      fecham as feridas.\n"
     m_Metadata:
       m_Items: []
   - m_Id: 1857535102976
