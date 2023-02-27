@@ -21,8 +21,8 @@ MonoBehaviour:
   - m_Id: 8534196224
     m_Localized: "\n\n\nGAME DESIGN\r\n\rSystems Design \r\nMario Antonio Llaque\r\n\r\nCreative
       Design\r\n Maria Castro\r\n\r\nMusic & SFX Design\r\nJuan Pablo Correa\r\n\r\nPRODUCTION\r\nExecutive
-      Producer\r\nDavid Vargas\r\n\r\nART\r\nEnvironment & Props Art \r\nCarmen\r\n\r\nUI
-      Design\r\nCamila Ni\xF1o\r\n\r\nCharacter Design\r\nAngel Farf\xE1n\r\n\r\nTechnical
+      Producer\r\nDavid Vargas\r\n\r\nART\r\nEnvironment & Props Art \r\nCarmen\r
+      Moreno\n\r\nUI Design\r\nCamila Ni\xF1o\r\n\r\nCharacter Design\r\nAngel Farf\xE1n\r\n\r\nTechnical
       Art \r\nSantiago Mora\r\n\r\nVFX Design\r\nSantiago Mora\r\n\r\nANIMATION\r\nCharacters
       Animation\r\nAngel Farf\xE1n\r\n\r\nTutorial Animation\r\nSantiago Mora\r\n\r\nEnd-Of-Level
       Animation\r\nJuan Pablo Camacho\r\n\r\nPROGRAMMING\r\nGameplay Programming\r\nJes\xFAs
@@ -30,13 +30,13 @@ MonoBehaviour:
       Pablo Camacho\r\nJes\xFAs C\xE1rcamo\r\n\r\nDevTools Programming\r\nJuan Pablo
       Camacho\r\n\r\nMusic & SFX Programming\r\nJes\xFAs C\xE1rcamo\r\nJuan Pablo
       Correa\r\n\r\nLocalization Programming\r\nJuan Pablo Camacho\r\n\r\nQUALITY
-      ASSURANCE\nCarmen\r\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nLOCALIZA\xC7\xC3O\nLocalization
-      Programming\r\nJuan Pablo Camacho\r\n\r\nPortuguese Localization QA\r\nJhoan
-      Jes\xFAs Sandoval\r\n\r\nEnglish Localization QA\r\nMario Antonio Llaque\n\r\nWRITING\r\nDialogues
-      Writing\nMario Antonio Llaque\n\nMyths writing\r\nGamejam+ 2022 Staff\r\n\r\nWe
-      want to express our sincere thanks for trying our game demo, we are very excited
-      to keep improving and developing the game to give you an even better experience
-      in the future.\n\n\n  "
+      ASSURANCE\nCarmen\r Moreno\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo
+      Correa\r\n\r\nLOCALIZA\xC7\xC3O\nLocalization Programming\r\nJuan Pablo Camacho\r\n\r\nPortuguese
+      Localization QA\r\nJhoan Jes\xFAs Sandoval\r\n\r\nEnglish Localization QA\r\nMario
+      Antonio Llaque\n\r\nWRITING\r\nDialogues Writing\nMario Antonio Llaque\n\nMyths
+      writing\r\nGamejam+ 2022 Staff\r\n\r\nWe want to express our sincere thanks
+      for trying our game demo, we are very excited to keep improving and developing
+      the game to give you an even better experience in the future.\n\n\n  "
     m_Metadata:
       m_Items: []
   references:
