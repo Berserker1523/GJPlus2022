@@ -31,7 +31,7 @@ namespace Kitchen
         private RecipeData currentRecipe;
         private IEnumerator updateTimerRoutine;
 
-        private FMOD.Studio.EventInstance shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
+        private FMOD.Studio.EventInstance shakerSound;
 
         private void Awake()
         {
@@ -43,6 +43,7 @@ namespace Kitchen
             dropView = GetComponent<DropView>();
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
+            shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
         }
 
         private void OnDestroy()
