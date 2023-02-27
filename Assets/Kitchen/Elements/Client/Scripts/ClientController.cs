@@ -190,6 +190,7 @@ namespace Kitchen
             //clientSpriteRenderer.sprite = happyClientSprite[(int)clientGender];
             animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
+            GetComponent<BoxCollider2D>().enabled = false;
             yield return new WaitForSeconds(3f);
 
             Destroy(gameObject);
