@@ -1,17 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace Mainmenu
+namespace Credits
 {
     public class CreditsManager : MonoBehaviour
     {
-        [HideInInspector] public string mainMenuSceneName = "MainMenu";
-
-        public void Back()
+        [SerializeField] Scrollbar scrollbar;
+        [SerializeField] float scrollVelocity =0.01f;
+        [SerializeField] float updateWaitTime =0.1f;
+        private void Awake()
         {
-            SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+            StartCoroutine(MoveScrollCoroutine());
+        }
+
+        IEnumerator MoveScrollCoroutine()
+        {
+            yield return new WaitForSeconds(1f);
+            scrollbar.value = 1f;
+            while (scrollbar.value >= 0f) 
+            { 
+                scrollbar.value -= scrollVelocity;
+                yield return new WaitForSeconds(updateWaitTime);
+            }
+
+            yield return new WaitForSeconds(5f);
+            StartCoroutine(MoveScrollCoroutine());
         }
     }
 }

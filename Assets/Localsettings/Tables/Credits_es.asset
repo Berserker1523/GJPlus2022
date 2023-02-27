@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Credits_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 5a26cf419df84f8479558140526c734e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8534196224
+    m_Localized: "\n\n\nDISE\xD1O DE JUEGO\nDise\xF1o de sistemas\nMario Antonio
+      Llaque\r\n\r\nDise\xF1o Creativo\n Maria Castro\r\n\r\nDise\xF1o de m\xFAsica
+      y SFX\nJuan Pablo Correa\r\n\r\nPRODUCCI\xD3N\nProductor Ejecutivo\nDavid Vargas\r\n\r\nARTE\nArte
+      de Ambientes y Adornos\nCarmen\r\n\r\nDise\xF1o de Interfaz de Usuario\nCamila
+      Ni\xF1o\r\n\r\nDise\xF1o de Personajes\nAngel Farf\xE1n\r\n\r\nArte T\xE9cnica\nSantiago
+      Mora\r\n\r\nDise\xF1o de VFX\nSantiago Mora\r\n\r\nANIMACI\xD3N\nAnimaci\xF3n
+      de Personajes\nAngel Farf\xE1n\r\n\r\nAnimaci\xF3n del Tutorial\nSantiago Mora\r\n\r\nAnimaci\xF3n
+      de Fin de Nivel\nJuan Pablo Camacho\r\n\r\nPROGRAMACI\xD3N\nProgramaci\xF3n
+      de Jugabilidad\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nProgramaci\xF3n
+      de Interfaz de usuario\nCamila Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs C\xE1rcamo\r\n\r\nProgramaci\xF3n
+      de Herramientas de Desarrollo\nJuan Pablo Camacho\r\n\r\nProgramaci\xF3n de
+      M\xFAsica y SFX\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Correa\r\n\r\nProgramaci\xF3n
+      de Localizaci\xF3n\r\nJuan Pablo Camacho\r\n\r\nCONTROL DE CALIDAD\nCarmen\r\nDavid
+      Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nLOCALIZACI\xD3N\nProgramaci\xF3n
+      de Localizac\xF3n\nJuan Pablo Camacho\r\n\r\nLocalizaci\xF3n en Portugu\xE9s
+      QA\nJhoan Jes\xFAs Sandoval\r\n\r\nLocalizaci\xF3n en Ingl\xE9s QA\nMario Antonio
+      Llaque\n\r\nREDACCI\xD3N\nRedacci\xF3n de Di\xE1logos\nMario Antonio Llaque\n\nRedacci\xF3n
+      de los Mitos\nGamejam+ 2022 Staff\r\n\r\nQueremos expresar nuestras agradecimientos
+      especials por probar nuestra Demo. Estamos muy emocionados en continuar mejorando
+      y desarrollando el  juego para darte una mejor experiencia en el futuro.\n\n\n  "
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
