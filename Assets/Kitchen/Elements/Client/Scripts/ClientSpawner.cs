@@ -83,7 +83,7 @@ namespace Kitchen
                 currentProbability += (int)probabilities[i];
                 if (randomNum <= currentProbability)
                 {
-                    Debug.Log("Seted recipe " + i + " With a probability of " + ((int)probabilities[i]) + "\n % random num=" + randomNum + " | Cummulative % = " + currentProbability+"%");
+                    Debug.Log("Seted recipe " + i + " With a probability of " + ((int)probabilities[i]) + "\n % random num=" + randomNum + " | Cummulative % = " + currentProbability + "%");
                     return i;
                 }
             }
@@ -102,8 +102,8 @@ namespace Kitchen
         private void HandleClientDied()
         {
             clientsDied++;
-           /*if (clientsDied >= spawnPoints.Count)
-                EventManager.Dispatch(GameStatus.Lost);*/
+            /*if (clientsDied >= spawnPoints.Count)
+                 EventManager.Dispatch(GameStatus.Lost);*/
 
             if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.LevelFinished);
@@ -112,7 +112,7 @@ namespace Kitchen
         private void HandleClientServed()
         {
             clientsGood++;
-           if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
+            if (clientsGood + clientsDied >= levelInstantiator.LevelData.clientNumber)
                 EventManager.Dispatch(GameStatus.LevelFinished);
         }
 
