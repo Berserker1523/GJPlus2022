@@ -139,9 +139,9 @@ namespace Kitchen
                     stars[i].SetTrigger("TriggerStar");
                     starsAmount++;
                     yield return new WaitForSecondsRealtime(1f);
+                    PlayStarsParameter(i);
                 }
             }
-            PlayStarsParameter(starsAmount);
         }
         private void DisplayAdvice()
         {
@@ -181,11 +181,6 @@ namespace Kitchen
             fmodParameterName = SoundsManager.endLevelStarsParameter;
 
             starsInstance = RuntimeManager.CreateInstance(fmodEvent);
-            EventDescription pitchEventDescription;
-            starsInstance.getDescription(out pitchEventDescription);
-            PARAMETER_DESCRIPTION pitchParameterDescription;
-            pitchEventDescription.getParameterDescriptionByName(fmodParameterName, out pitchParameterDescription);
-            starsParameterId = pitchParameterDescription.id;
         }
 
         void PlayStarsParameter(int starsAmount)

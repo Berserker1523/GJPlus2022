@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 267585818}
   - component: {fileID: 267585817}
   - component: {fileID: 267585820}
+  - component: {fileID: 1244097679024832994}
   m_Layer: 5
   m_Name: ButtonContinue
   m_TagString: Untagged
@@ -136,6 +137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 5110028782144296401}
+--- !u!114 &1244097679024832994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267585815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6ecc255dd53f041941309aa570f7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: event:/SFX/UI/Click button
 --- !u!1 &1544197430
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +435,7 @@ GameObject:
   - component: {fileID: 8393930633847129088}
   - component: {fileID: 4620073619400272225}
   - component: {fileID: 1529717241798551897}
+  - component: {fileID: 6747096345965493666}
   m_Layer: 5
   m_Name: ButtonLeave
   m_TagString: Untagged
@@ -544,6 +559,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 0
+--- !u!114 &6747096345965493666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3930035619335209305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6ecc255dd53f041941309aa570f7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: event:/SFX/UI/Click button
 --- !u!1001 &1135868289196917907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -670,7 +698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5271764812633088086, guid: 0afe9e13d44d9ff4c839c9a4d8167d95, type: 3}
       propertyPath: m_Name
-      value: PauseMenuPopUp
+      value: PauseMenuPopUp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5271764812633088087, guid: 0afe9e13d44d9ff4c839c9a4d8167d95, type: 3}
       propertyPath: m_Pivot.x

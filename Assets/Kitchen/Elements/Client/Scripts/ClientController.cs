@@ -8,6 +8,12 @@ using UnityEngine.UI;
 
 namespace Kitchen
 {
+    public enum Gender 
+    {
+        female = 0, 
+        male = 1 
+    }
+
     [RequireComponent(typeof(DropView))]
     public class ClientController : MonoBehaviour
     {
@@ -24,7 +30,7 @@ namespace Kitchen
         private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
-        private enum Gender { female = 0, male = 1 };
+        
         private Gender clientGender;
 
         //Animation Params
@@ -37,6 +43,7 @@ namespace Kitchen
 
         private string[] animsDie = new string []{ "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
         private bool clientDied;
+        private bool gruntDispatched;
 
         protected void Awake()
         {
@@ -98,6 +105,12 @@ namespace Kitchen
             {
                 ColorUtility.TryParseHtmlString("#ef2424", out Color color);
                 sliderBarImage.color = color;
+
+                if (!gruntDispatched)
+                {
+                    gruntDispatched = true;
+                    EventManager.Dispatch(ClientEvent.Grunt, clientGender);
+                }
             }
             else if (waitingTimer <= MaxWaitingSeconds * 0.5)
             {

@@ -33,7 +33,6 @@ namespace Kitchen
             comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
-            // comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
         }
 
         private void OnDestroy()
@@ -129,7 +128,19 @@ namespace Kitchen
         private void CheckStreak()
         {
             currentStreakProgress++;
-            EventManager.Dispatch(LevelEvents.StreakCheckpoint); //TODO Sound
+            EventManager.Dispatch(LevelEvents.StreakCheckpoint);
+
+            int comboParamater = 0;
+            if (currentStreakProgress >= levelInstantiator.LevelData.streak * 0.75f)
+                comboParamater = 3;
+            else if (currentStreakProgress >= levelInstantiator.LevelData.streak * 0.5f)
+                comboParamater = 2;
+            else if (currentStreakProgress >= levelInstantiator.LevelData.streak * 0.25f)
+                comboParamater = 1;
+
+            comboSound.setParameterByName("Combo counter", comboParamater);
+            comboSound.start();
+            
             SetBarProgress();
 
             if (currentStreakProgress == levelInstantiator.LevelData.streak)

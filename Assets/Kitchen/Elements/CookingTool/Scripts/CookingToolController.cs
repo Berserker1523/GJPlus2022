@@ -74,7 +74,10 @@ namespace Kitchen
                 else
                 {
                     timer.SetBurning();
-                    overcookingParticle.Play();
+                    if (overcookedParticle != null)
+                    {
+                        overcookingParticle.Play();
+                    }
                 }
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)

@@ -15,14 +15,15 @@ namespace Kitchen
 
         //Ingredients SFX Events
         string takesWaterEvent = "event:/SFX/Cocina/Coge Agua";
+        string takesIngredientEvent = "event:/SFX/Cocina/Coge Ingrediente";
 
         //Cooking Tools SFX Events
         string foodReadyEvent = "event:/SFX/Cocina/Comida Lista";
         string foodBurntEvent = "event:/SFX/Cocina/Comida Quemada";
-        string addIngredientEvent = "event:/SFX/Cocina/Infusi�n";
-        string addWaterEvent = "";
+        string addIngredientEvent = "event:/SFX/Cocina/Infusión";
+        string addWaterEvent = "event:/SFX/Cocina/Sirve agua";
         string shakeIngredientsEvent = "event:/SFX/Cocina/Shaker";
-        string shakerPoofEvent = "event:/SFX/Jugabilidad/Completa receta";
+        string shakerPoofEvent = "event:/SFX/Cocina/Completa receta";
         string failedRecipeEvent = "event:/SFX/Cocina/Receta incorrecta";
         string hoverEvent = "event:/SFX/Cocina/Snap Object";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
@@ -31,8 +32,8 @@ namespace Kitchen
         public static string backgroundMusic = "event:/Music/MusicaFondo";
         public static string hurryParameter = "Hurry";
 
-        public static string endlevelStarsMusic = "";
-        public static string endLevelStarsParameter = "";
+        public static string endlevelStarsMusic = "event:/SFX/UI/Stars";
+        public static string endLevelStarsParameter = "Stars Count";
 
         //Game Status SFX Events
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
@@ -57,9 +58,12 @@ namespace Kitchen
             Events.EventManager.AddListener(ClientEvent.Arrived, PlayClientArriveSFX);
             Events.EventManager.AddListener(ClientEvent.Died, PlayClientDieSFX);
             Events.EventManager.AddListener(ClientEvent.Served, PlayClientServedSFX);
+            Events.EventManager.AddListener<Gender>(ClientEvent.Grunt, PlayClientGruntSFX);
 
             //Ingredients SFX
             Events.EventManager.AddListener(IngredientName.Water, PlayWaterSFX);
+            Events.EventManager.AddListener(IngredientName.Carnauba, PlayIngredientSFX);
+            Events.EventManager.AddListener(IngredientName.Pequi, PlayIngredientSFX);
 
             //Cooking Tools SFX
             Events.EventManager.AddListener(IngredientState.Cooked, PlayFoodReadySFX);
@@ -69,6 +73,8 @@ namespace Kitchen
             Events.EventManager.AddListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
             Events.EventManager.AddListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
             Events.EventManager.AddListener(TrashEvent.Throw, PlayThrowTrashSFX);
+
+            Events.EventManager.AddListener(PotionEvent.Poof, PlayPoofSFX);
 
             //Game Status SFX
             Events.EventManager.AddListener(GameStatus.Won, PlayWonSFX);
@@ -84,6 +90,44 @@ namespace Kitchen
             //TODO: General UI SFX
         }
 
+        private void OnDestroy()
+        {
+            //Clients SFX
+            Events.EventManager.RemoveListener(ClientEvent.Arrived, PlayClientArriveSFX);
+            Events.EventManager.RemoveListener(ClientEvent.Died, PlayClientDieSFX);
+            Events.EventManager.RemoveListener(ClientEvent.Served, PlayClientServedSFX);
+            Events.EventManager.RemoveListener<Gender>(ClientEvent.Grunt, PlayClientGruntSFX);
+
+            //Ingredients SFX
+            Events.EventManager.RemoveListener(IngredientName.Water, PlayWaterSFX);
+            Events.EventManager.RemoveListener(IngredientName.Carnauba, PlayIngredientSFX);
+            Events.EventManager.RemoveListener(IngredientName.Pequi, PlayIngredientSFX);
+
+            //Cooking Tools SFX
+            Events.EventManager.RemoveListener(IngredientState.Cooked, PlayFoodReadySFX);
+            Events.EventManager.RemoveListener(IngredientState.Burnt, PlayFoodBurntSFX);
+            Events.EventManager.RemoveListener(PotionEvent.AddIngredient, PlayAddIngredientSFX);
+            Events.EventManager.RemoveListener(PotionEvent.AddWater, PlayAddWater);
+            Events.EventManager.RemoveListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
+            Events.EventManager.RemoveListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
+            Events.EventManager.RemoveListener(TrashEvent.Throw, PlayThrowTrashSFX);
+
+            Events.EventManager.RemoveListener(PotionEvent.Poof, PlayPoofSFX);
+
+            //Game Status SFX
+            Events.EventManager.RemoveListener(GameStatus.Won, PlayWonSFX);
+            Events.EventManager.RemoveListener(GameStatus.Lost, PlayLostSFX);
+
+            //Main Menu SFX
+            Events.EventManager.RemoveListener(Events.GlobalEvent.Play, PlayplayButtonSFX);
+
+            //History Book SFX
+            Events.EventManager.RemoveListener(Events.GlobalEvent.Locked, PlayLockedButtonSFX);
+            Events.EventManager.RemoveListener(Events.GlobalEvent.Unlocked, PlayUnLockedButtonSFX);
+
+            //TODO: General UI SFX
+        }
+
         void PlaySFX(string sFX) =>
             RuntimeManager.PlayOneShot(sFX);
 
@@ -91,9 +135,12 @@ namespace Kitchen
         void PlayClientArriveSFX() => PlaySFX(clientArriveEvent);
         void PlayClientDieSFX() => PlaySFX(clientDieEvent);
         void PlayClientServedSFX() => PlaySFX(clientServedEvent);
+        void PlayClientGruntSFX(Gender gender) =>
+            PlaySFX(gender == Gender.female ? clientFemaleGruntEvent : clientMaleGruntEvent);
 
         //Ingredients SFX
         void PlayWaterSFX() => PlaySFX(takesWaterEvent);
+        void PlayIngredientSFX() => PlaySFX(takesIngredientEvent);
 
         //Cooking Tools SFX
         void PlayFoodReadySFX() => PlaySFX(foodReadyEvent);
@@ -103,6 +150,8 @@ namespace Kitchen
         void PlayFailedRecipeSFX() => PlaySFX(failedRecipeEvent);
         void PlayHoverSFX() => PlaySFX(hoverEvent);
         void PlayThrowTrashSFX() => PlaySFX(throwTrashEvent);
+
+        void PlayPoofSFX() => PlaySFX(shakerPoofEvent);
 
         //Game Status SFX
         void PlayWonSFX() => PlaySFX(wonEvent);
@@ -118,39 +167,5 @@ namespace Kitchen
         //General UI SFX
         void PlayClickSFX() => PlaySFX(buttonSound);
         void MenuPopUpSFX() => PlaySFX(openMenu);
-
-
-        private void OnDestroy()
-        {
-            //Clients SFX
-            Events.EventManager.RemoveListener(ClientEvent.Arrived, PlayClientArriveSFX);
-            Events.EventManager.RemoveListener(ClientEvent.Died, PlayClientDieSFX);
-            Events.EventManager.RemoveListener(ClientEvent.Served, PlayClientServedSFX);
-
-            //Ingredients SFX
-            Events.EventManager.RemoveListener(IngredientName.Water, PlayWaterSFX);
-
-            //Cooking Tools SFX
-            Events.EventManager.RemoveListener(IngredientState.Cooked, PlayFoodReadySFX);
-            Events.EventManager.RemoveListener(IngredientState.Burnt, PlayFoodBurntSFX);
-            Events.EventManager.RemoveListener(PotionEvent.AddIngredient, PlayAddIngredientSFX);
-            Events.EventManager.RemoveListener(PotionEvent.AddWater, PlayAddWater);
-            Events.EventManager.RemoveListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
-            Events.EventManager.RemoveListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
-            Events.EventManager.RemoveListener(TrashEvent.Throw, PlayThrowTrashSFX);
-
-            //Game Status SFX
-            Events.EventManager.RemoveListener(GameStatus.Won, PlayWonSFX);
-            Events.EventManager.RemoveListener(GameStatus.Lost, PlayLostSFX);
-
-            //Main Menu SFX
-            Events.EventManager.RemoveListener(Events.GlobalEvent.Play, PlayplayButtonSFX);
-
-            //History Book SFX
-            Events.EventManager.RemoveListener(Events.GlobalEvent.Locked, PlayLockedButtonSFX);
-            Events.EventManager.RemoveListener(Events.GlobalEvent.Unlocked, PlayUnLockedButtonSFX);
-
-            //TODO: General UI SFX
-        }
     }
 }

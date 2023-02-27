@@ -31,6 +31,8 @@ namespace Kitchen
         private RecipeData currentRecipe;
         private IEnumerator updateTimerRoutine;
 
+        private FMOD.Studio.EventInstance shakerSound;
+
         private void Awake()
         {
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
@@ -41,6 +43,7 @@ namespace Kitchen
             dropView = GetComponent<DropView>();
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
+            shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
         }
 
         private void OnDestroy()
@@ -146,6 +149,7 @@ namespace Kitchen
             anim.SetBool("Shake", false);
             StopCoroutine(updateTimerRoutine);
             timer.gameObject.SetActive(false);
+            shakerSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             CheckRecipe();
         }
 
@@ -158,6 +162,7 @@ namespace Kitchen
             EventManager.Dispatch(PotionEvent.Shake);
             timer.gameObject.SetActive(true);
             timer.SetCooking();
+            shakerSound.start();
             updateTimerRoutine = ShakingTimerRoutine(2);
             StartCoroutine(updateTimerRoutine);
         }
