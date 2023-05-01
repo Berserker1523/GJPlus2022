@@ -33,7 +33,7 @@ namespace Mainmenu
                     if (!gameData.tutorials[i])
                     {
                         SceneManager.LoadScene("Tutorial"+(i+1));
-                        break;
+                        yield return null;
                     }
                 }
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single); //Todo level save

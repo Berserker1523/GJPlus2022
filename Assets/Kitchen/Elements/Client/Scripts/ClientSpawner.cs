@@ -25,6 +25,7 @@ namespace Kitchen
         private int clientsDied;
         private int clientsGood;
         private bool levelFinished;
+        private bool inTutorial;
 
         private void Awake()
         {
@@ -32,6 +33,7 @@ namespace Kitchen
             EventManager.AddListener(ClientEvent.Died, HandleClientDied);
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
             EventManager.AddListener(GameStatus.LevelFinished, StopSpawn);
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
         }
 
         private void OnDestroy()
@@ -39,6 +41,7 @@ namespace Kitchen
             EventManager.RemoveListener(ClientEvent.Died, HandleClientDied);
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
             EventManager.RemoveListener(GameStatus.LevelFinished, StopSpawn);
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
         }
 
         private void Start() =>
@@ -46,7 +49,7 @@ namespace Kitchen
 
         private void Update()
         {
-            if (levelFinished)
+            if (levelFinished || inTutorial)
                 return;
 
             spawnTimer += Time.deltaTime;
@@ -118,5 +121,8 @@ namespace Kitchen
 
         private void StopSpawn() =>
             levelFinished = true;
+
+        private void WaitForTutorial(bool tutorial) =>
+            inTutorial = tutorial;
     }
 }

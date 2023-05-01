@@ -47,11 +47,18 @@ namespace Kitchen
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
-            streakText.text = "0";
-            streakBar.maxValue = levelInstantiator.LevelData.streakWaitTime;
-            streakBar.value = 0;
-            currentTime = levelInstantiator.LevelData.time;
-            StartCoroutine(LevelTimer());
+            if(streakBar!= null) 
+            {
+                streakText.text = "0";
+                streakBar.maxValue = levelInstantiator.LevelData.streakWaitTime;
+                streakBar.value = 0;               
+            }
+
+            if (speedText != null)
+            {
+                currentTime = levelInstantiator.LevelData.time;
+                StartCoroutine(LevelTimer());
+            }
         }
 
         private void HandleLevelFinished()
@@ -87,6 +94,7 @@ namespace Kitchen
 
         private void HandleClientServed()
         {
+            if(streakBar !=null)
             CheckStreak();
             currentGoal--;
 

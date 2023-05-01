@@ -16,12 +16,12 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
-            EventManager.AddListener(GlobalEvent.Tutorial1Completed, Tutorial1Completed);
-            EventManager.AddListener<int>(GlobalEvent.Tutorial2Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalEvent.Tutorial3Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalEvent.Tutorial4Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalEvent.Tutorial6Completed, MarkTutorialAsComplete);
+            EventManager.AddListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial6Completed, MarkTutorialAsComplete);
 
             LoadStarsDataFileIfExists();
         }
@@ -32,12 +32,12 @@ namespace Kitchen
             EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
             EventManager.RemoveListener(GameStatus.Won, CallSaveData);
-            EventManager.RemoveListener(GlobalEvent.Tutorial1Completed, Tutorial1Completed);
-            EventManager.RemoveListener<int>(GlobalEvent.Tutorial2Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalEvent.Tutorial3Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalEvent.Tutorial4Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalEvent.Tutorial6Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial6Completed, MarkTutorialAsComplete);
         }
 
         public void CallSaveData() =>
