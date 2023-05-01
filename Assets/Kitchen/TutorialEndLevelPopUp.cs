@@ -23,7 +23,6 @@ public class TutorialEndLevelPopUp : MonoBehaviour
     private void HandleWon()
     {
         gameObject.SetActive(true);
-
         positiveButton.onClick.AddListener(NextLevel);
     }
 

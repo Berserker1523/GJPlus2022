@@ -12,12 +12,12 @@ namespace Kitchen
 
         private void Awake()
         {
-            EventManager.AddListener(GameStatus.Won, DispatchTutorial);
+            EventManager.AddListener(GameStatus.LevelFinished, DispatchTutorial);
         }
 
         private void OnDestroy()
         {
-            EventManager.RemoveListener(GameStatus.Won, DispatchTutorial);
+            EventManager.RemoveListener(GameStatus.LevelFinished, DispatchTutorial);
         }
 
         void Start()

@@ -22,6 +22,7 @@ namespace Kitchen
 
         private int currentStreakProgress;
         private int streakCheckpoint;
+        private bool inTutorial;
 
         Coroutine streakCoroutine;
 
@@ -33,12 +34,16 @@ namespace Kitchen
             comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
+
         }
 
         private void OnDestroy()
         {
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
             EventManager.RemoveListener(GameStatus.LevelFinished, HandleLevelFinished);
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
+
         }
 
         private void Start()
@@ -73,6 +78,9 @@ namespace Kitchen
         private IEnumerator LevelTimer()
         {
             speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
+
+            while (inTutorial)
+                yield return new WaitForSeconds(1f);
 
             while (currentTime > 0)
             {
@@ -165,5 +173,8 @@ namespace Kitchen
         }
 
         private void UpdateStreakText() => streakText.text = currentStreakProgress.ToString();
+
+        private void WaitForTutorial(bool tutorial) =>
+            inTutorial = tutorial;
     }
 }

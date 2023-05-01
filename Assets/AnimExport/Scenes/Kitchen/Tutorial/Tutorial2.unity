@@ -244,6 +244,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1160219864405125757, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1173107353333032186, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
       propertyPath: m_Name
       value: CanvasGameTutorial
@@ -332,6 +336,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3880582522445986513, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880582522445986513, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006581745318271886, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: tutorialId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875249067167, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262071, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_text
+      value: Heal everyone before the time runs out!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262071, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_margin.x
+      value: -371.8368
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262071, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_margin.z
+      value: -765.29333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262072, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262072, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240087131260707946, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929435432267167878, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
 --- !u!1001 &4882368684202585917
@@ -409,7 +469,7 @@ PrefabInstance:
     - target: {fileID: 8280109857328242250, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: levelData
       value: 
-      objectReference: {fileID: 11400000, guid: bccab6fb36065504b81964fefa208f36, type: 2}
+      objectReference: {fileID: 11400000, guid: 0a228d73193e11c4f917370456c58c5c, type: 2}
     - target: {fileID: 8280109857328242251, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: m_RootOrder
       value: 3
