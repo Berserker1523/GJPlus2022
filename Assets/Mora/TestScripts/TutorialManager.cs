@@ -298,7 +298,7 @@ public class TutorialManager : MonoBehaviour
     public IEnumerator endOfTutorial()
     {
         yield return new WaitForSeconds(14f);
-        EventManager.Dispatch(GlobalEvent.TutorialCompleted);
+        EventManager.Dispatch(GlobalEvent.Tutorial1Completed);
         yield return StartCoroutine(DisplayMythsUpdatedPopUP());
         LoadKitchen1();
 

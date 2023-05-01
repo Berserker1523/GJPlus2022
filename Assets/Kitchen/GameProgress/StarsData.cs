@@ -8,6 +8,7 @@ namespace Kitchen
     public class StarsData : ScriptableObject
     {
         [SerializeField] public bool[,] stars = new bool[5, 3];
+        [SerializeField] public bool[] tutorials = new bool[6];
 
         private void OnEnable()
         {
@@ -15,7 +16,12 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
-            EventManager.AddListener(GlobalEvent.TutorialCompleted, TutorialCompleted);
+            EventManager.AddListener(GlobalEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.AddListener<int>(GlobalEvent.Tutorial2Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalEvent.Tutorial5Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalEvent.Tutorial6Completed, MarkTutorialAsComplete);
 
             LoadStarsDataFileIfExists();
         }
@@ -26,7 +32,12 @@ namespace Kitchen
             EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
             EventManager.RemoveListener(GameStatus.Won, CallSaveData);
-            EventManager.RemoveListener(GlobalEvent.TutorialCompleted, TutorialCompleted);
+            EventManager.RemoveListener(GlobalEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.RemoveListener<int>(GlobalEvent.Tutorial2Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalEvent.Tutorial5Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalEvent.Tutorial6Completed, MarkTutorialAsComplete);
         }
 
         public void CallSaveData() =>
@@ -41,12 +52,21 @@ namespace Kitchen
         public void SetStreak() =>
            stars[LevelManager.CurrentLevel, 2] = true;
 
-        public void TutorialCompleted()
+        public void Tutorial1Completed()
         {
             SetGoalStar();
             SetSpeedStar();
             SetStreak();
-            LevelManager.CurrentLevel = 1;
+            MarkTutorialAsComplete(0);
+            CallSaveData();
+        }
+
+        public void MarkTutorialAsComplete(int id)
+        {
+            tutorials[id] = true;
+            if(id == tutorials.Length+1)
+                LevelManager.CurrentLevel = 1;
+
             CallSaveData();
         }
 
