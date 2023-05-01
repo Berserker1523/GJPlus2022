@@ -244,10 +244,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1160219864405125757, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1173107353333032186, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
       propertyPath: m_Name
       value: CanvasGameTutorial
@@ -336,56 +332,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3880582522445986513, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 3880582522445986513, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5821216557193959418, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.732
-      objectReference: {fileID: 0}
-    - target: {fileID: 5821216557193959418, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5821216557193959418, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.732
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240087131260707946, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366510239652222161, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420164180546324147, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.732
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420164180546324147, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844686484044880454, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6142141875678982990, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
 --- !u!1001 &4882368684202585917
 PrefabInstance:
@@ -444,25 +391,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8c773d7e9759d64187f3183f00c1b11, type: 3}
---- !u!1 &5006581745318271885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6142141875754404204, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
-  m_PrefabInstance: {fileID: 1173107353164321505}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5006581745318271886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5006581745318271885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b3048676b3e7294b869f824177677fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialId: 2
-  closeButton: {fileID: 0}
 --- !u!1001 &8280109858290728337
 PrefabInstance:
   m_ObjectHideFlags: 0
