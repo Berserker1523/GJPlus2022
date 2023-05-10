@@ -97,6 +97,7 @@ namespace Kitchen
                     hurryDispatched = true;
                 }
             }
+            EventManager.Dispatch(LevelEvents.TimeOut);
             yield return null;
         }
 
@@ -137,6 +138,7 @@ namespace Kitchen
             }
 
             currentStreakProgress = 0;
+            EventManager.Dispatch(LevelEvents.StreakLost);
             UpdateStreakText();
             yield return null;
         }

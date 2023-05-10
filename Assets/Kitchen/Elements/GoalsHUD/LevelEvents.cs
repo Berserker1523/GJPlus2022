@@ -6,6 +6,8 @@ namespace Kitchen
         Speed,
         Streak,
         StreakCheckpoint,
+        StreakLost,
         Hurry,
+        TimeOut,
     }
 }
