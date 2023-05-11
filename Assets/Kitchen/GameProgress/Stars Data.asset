@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b39a1a53c3568045bd461cd6dda0e16, type: 3}
   m_Name: Stars Data
   m_EditorClassIdentifier: 
-  tutorials: 000000000000
+  tutorials: 00000000
+  trigerrableTutorials: 00

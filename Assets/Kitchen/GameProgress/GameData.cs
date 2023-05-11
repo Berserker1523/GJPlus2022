@@ -8,8 +8,9 @@ namespace Kitchen
     public class GameData
     {
         public int currentLevel;
-        public bool[,] stars = new bool[5,3];
-        public bool[] tutorials = new bool[6];
+        [HideInInspector] public bool[,] stars = new bool[5,3];
+        [HideInInspector] public bool[] tutorials = new bool[4];
+        public bool[] trigerrableTutorials = new bool[1];
 
         public int[] attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
         [SerializeField]
@@ -26,7 +27,8 @@ namespace Kitchen
         {
             currentLevel = LevelManager.CurrentLevel;
             stars= new bool[5, 3];
-            tutorials = new bool[6];
+            tutorials = new bool[4];
+            trigerrableTutorials = new bool[1];
             attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
         }
 

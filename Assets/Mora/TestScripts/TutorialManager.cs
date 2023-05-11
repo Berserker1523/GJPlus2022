@@ -303,7 +303,7 @@ public class TutorialManager : MonoBehaviour
         LoadKitchen1();
 
     }
-    void LoadKitchen1() => SceneManager.LoadScene("Tutorial2");
+    void LoadKitchen1() => SceneManager.LoadScene("Tutorial1");
 
     IEnumerator DisplayMythsUpdatedPopUP()
     {

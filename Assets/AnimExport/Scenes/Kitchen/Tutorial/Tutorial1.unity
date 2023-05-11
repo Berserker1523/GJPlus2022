@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: tutorialId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6142141875719262071, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_text
+      value: Try to heal 3 patients !
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
 --- !u!1001 &4882368684202585917

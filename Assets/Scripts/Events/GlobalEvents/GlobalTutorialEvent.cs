@@ -1,10 +1,12 @@
 public enum GlobalTutorialEvent
 {
-    Tutorial1Completed,
-    Tutorial2Completed,
-    Tutorial3Completed,
-    Tutorial4Completed,
-    Tutorial5Completed,
-    Tutorial6Completed,
+    Tutorial1Completed=1,
+    Tutorial2Completed=2,
+    Tutorial3Completed=3,
     inTutorial
+}
+
+public enum GlobalTrigerableTutorialEvent
+{
+    TrashTutorialTriggered,
 }

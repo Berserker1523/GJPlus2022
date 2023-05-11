@@ -8,11 +8,9 @@ public class TutorialEndLevelPopUp : MonoBehaviour
 {
     int tutorialId;
     [SerializeField] protected Button positiveButton;
-    [HideInInspector] public int currentlevel;
 
     private void Awake()
     {
-        currentlevel = LevelManager.CurrentLevel;
         tutorialId = FindObjectOfType<TutorialPopUpComponent>().tutorialId;    
         EventManager.AddListener(GameStatus.LevelFinished, HandleWon);
     }
@@ -28,7 +26,7 @@ public class TutorialEndLevelPopUp : MonoBehaviour
 
     public void NextLevel()
     {
-        if (currentlevel !=0)
+        if (LevelManager.CurrentLevel != 0)
             SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
         else
           SceneManager.LoadScene(("Tutorial" + (tutorialId + 1)));

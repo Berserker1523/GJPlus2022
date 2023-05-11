@@ -7,8 +7,9 @@ namespace Kitchen
     [System.Serializable]
     public class StarsData : ScriptableObject
     {
-        [SerializeField] public bool[,] stars = new bool[5, 3];
-        [SerializeField] public bool[] tutorials = new bool[6];
+        [HideInInspector] public bool[,] stars = new bool[5, 3];
+        [HideInInspector] public bool[] tutorials = new bool[4];
+        public bool[] trigerrableTutorials = new bool[1];
 
         private void OnEnable()
         {
@@ -19,9 +20,7 @@ namespace Kitchen
             EventManager.AddListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial6Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
 
             LoadStarsDataFileIfExists();
         }
@@ -35,9 +34,7 @@ namespace Kitchen
             EventManager.RemoveListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial6Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
         }
 
         public void CallSaveData() =>
@@ -64,9 +61,15 @@ namespace Kitchen
         public void MarkTutorialAsComplete(int id)
         {
             tutorials[id] = true;
-            if(id == tutorials.Length+1)
+            if(id == tutorials.Length-1)
                 LevelManager.CurrentLevel = 1;
 
+            CallSaveData();
+        }
+
+        public void MarkTriggerableTutorialAsComplete(int id)
+        {
+            trigerrableTutorials[id] = true;
             CallSaveData();
         }
 
