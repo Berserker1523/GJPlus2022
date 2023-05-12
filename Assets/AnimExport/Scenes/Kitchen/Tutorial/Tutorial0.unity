@@ -156,6 +156,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 996103871, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 996103871, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
@@ -163,6 +167,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
+    - target: {fileID: 996103871, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 884690833114005440, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -242,26 +250,6 @@ PrefabInstance:
     - target: {fileID: 5646855783497885816, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221821200968711490, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221821200968711490, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221821200968711490, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221821200968711490, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221821200968711490, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6609047148364869556, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
       propertyPath: m_fontAsset
