@@ -23,6 +23,8 @@ public class AudioVolumeController : MonoBehaviour
         set => PlayerPrefs.SetFloat(vcaName, value);
     }
 
+    public float previousVolume = 1.0f;
+
     private void Awake()
     {
         audioVolumeViews = GetComponentsInChildren<IAudioVolumeView>();
@@ -42,6 +44,7 @@ public class AudioVolumeController : MonoBehaviour
 
     private void SetVolume(float volume)
     {
+        previousVolume = Volume;
         Volume = volume;
         vcaController.setVolume(volume);
         foreach (IAudioVolumeView audioVolumeView in audioVolumeViews)
