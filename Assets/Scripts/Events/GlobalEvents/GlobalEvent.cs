@@ -4,8 +4,7 @@ namespace Events
     {
         Play,
         Unlocked,
-        Locked,
-        TutorialCompleted
+        Locked
     }
 
 }

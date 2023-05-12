@@ -22,6 +22,7 @@ namespace Kitchen
 
         private int currentStreakProgress;
         private int streakCheckpoint;
+        private bool inTutorial;
 
         Coroutine streakCoroutine;
 
@@ -33,12 +34,16 @@ namespace Kitchen
             comboSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Combo");
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
+
         }
 
         private void OnDestroy()
         {
             EventManager.RemoveListener(ClientEvent.Served, HandleClientServed);
             EventManager.RemoveListener(GameStatus.LevelFinished, HandleLevelFinished);
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, WaitForTutorial);
+
         }
 
         private void Start()
@@ -47,11 +52,18 @@ namespace Kitchen
             currentGoal = levelInstantiator.LevelData.goal;
             SetGoal();
 
-            streakText.text = "0";
-            streakBar.maxValue = levelInstantiator.LevelData.streakWaitTime;
-            streakBar.value = 0;
-            currentTime = levelInstantiator.LevelData.time;
-            StartCoroutine(LevelTimer());
+            if(streakBar!= null) 
+            {
+                streakText.text = "0";
+                streakBar.maxValue = levelInstantiator.LevelData.streakWaitTime;
+                streakBar.value = 0;               
+            }
+
+            if (speedText != null)
+            {
+                currentTime = levelInstantiator.LevelData.time;
+                StartCoroutine(LevelTimer());
+            }
         }
 
         private void HandleLevelFinished()
@@ -66,6 +78,9 @@ namespace Kitchen
         private IEnumerator LevelTimer()
         {
             speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
+
+            while (inTutorial)
+                yield return new WaitForSeconds(1f);
 
             while (currentTime > 0)
             {
@@ -82,11 +97,13 @@ namespace Kitchen
                     hurryDispatched = true;
                 }
             }
+            EventManager.Dispatch(LevelEvents.TimeOut);
             yield return null;
         }
 
         private void HandleClientServed()
         {
+            if(streakBar !=null)
             CheckStreak();
             currentGoal--;
 
@@ -121,6 +138,7 @@ namespace Kitchen
             }
 
             currentStreakProgress = 0;
+            EventManager.Dispatch(LevelEvents.StreakLost);
             UpdateStreakText();
             yield return null;
         }
@@ -157,5 +175,8 @@ namespace Kitchen
         }
 
         private void UpdateStreakText() => streakText.text = currentStreakProgress.ToString();
+
+        private void WaitForTutorial(bool tutorial) =>
+            inTutorial = tutorial;
     }
 }

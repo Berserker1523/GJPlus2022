@@ -298,17 +298,17 @@ public class TutorialManager : MonoBehaviour
     public IEnumerator endOfTutorial()
     {
         yield return new WaitForSeconds(14f);
-        EventManager.Dispatch(GlobalEvent.TutorialCompleted);
+        EventManager.Dispatch(GlobalTutorialEvent.Tutorial1Completed);
         yield return StartCoroutine(DisplayMythsUpdatedPopUP());
         LoadKitchen1();
 
     }
-    void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
+    void LoadKitchen1() => SceneManager.LoadScene("Tutorial1");
 
     IEnumerator DisplayMythsUpdatedPopUP()
     {
         updatedMythsGO.SetActive(true);
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(3f);
         updatedMythsGO.SetActive(false);
     }
 }

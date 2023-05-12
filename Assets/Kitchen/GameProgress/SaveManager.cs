@@ -28,8 +28,8 @@ public static class SaveManager
         }
         else
         {
-            Debug.LogError("Data Save File not Found");
-            return null;
+            return new GameData();
         }
     }
 }
+                                                
