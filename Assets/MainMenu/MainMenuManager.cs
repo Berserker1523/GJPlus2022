@@ -11,6 +11,7 @@ namespace Mainmenu
         GameData gameData;
         [SerializeField] GameObject _triggerablesTutorialsCanvas;
         [SerializeField] GameObject _trashTutorialPrefab;
+        GameObject _musicObject;
         public void Awake()
         {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
@@ -20,6 +21,7 @@ namespace Mainmenu
         {
             gameData = SaveManager.LoadStarsData();
             CheckTriggerableTutorials();
+            _musicObject = GameObject.Find("Music");
         }
 
         public void PlayGame() => StartCoroutine(OpenKitchenScene());
@@ -27,6 +29,7 @@ namespace Mainmenu
         private IEnumerator OpenKitchenScene()
         {
             EventManager.Dispatch(GlobalEvent.Play);
+            Destroy(_musicObject);
             yield return new WaitForSeconds(2f);
 
             if (gameData != null)
