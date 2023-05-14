@@ -117,6 +117,7 @@ namespace Kitchen
             PlayCookingSound();
             timer.gameObject.SetActive(true);
             timer.SetCooking();
+            EventManager.Dispatch(IngredientState.Cooking);
         }
 
         private void PlayCookingSound()

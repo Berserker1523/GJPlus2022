@@ -5609,6 +5609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 7440539505593966517, guid: 29eea78524abe364c8aa245ed1728712, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7440539505593966519, guid: 29eea78524abe364c8aa245ed1728712, type: 3}
       propertyPath: _points.Array.data[0]
       value: 

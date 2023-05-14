@@ -4,6 +4,7 @@
     {
         None,
         Raw,
+        Cooking,
         Cooked,
         Burnt
     }

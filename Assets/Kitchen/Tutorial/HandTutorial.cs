@@ -13,7 +13,7 @@ namespace Kitchen.Tutorial
         Animator _animator;
         const string _animParamTap = "Tap";
 
-        public void SwitchEnableHand() => gameObject.SetActive(gameObject.activeSelf ? false : true);
+        public void SwitchEnableHand(bool enable) => gameObject.SetActive(enable);
 
         private void Awake()
         {
@@ -59,8 +59,10 @@ namespace Kitchen.Tutorial
 
         public void StartNewSequence(Transform[] newPoints)
         {
+            SwitchEnableHand(false);
             SetNewPoints(newPoints);
-            SwitchEnableHand();
+            MoveBetweenPoints();
+            SwitchEnableHand(true);
         }
     }
 
