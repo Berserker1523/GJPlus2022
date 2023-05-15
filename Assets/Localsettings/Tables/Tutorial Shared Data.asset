@@ -31,6 +31,26 @@ MonoBehaviour:
     m_Key: Kumu_Dialogue2
     m_Metadata:
       m_Items: []
+  - m_Id: 28399564076462080
+    m_Key: Kumu_Think1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399608301203456
+    m_Key: Kumu_Think2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399633009848320
+    m_Key: Kumu_Think3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399644158308352
+    m_Key: Kumu_Think4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399655415820288
+    m_Key: Kumu_Think5
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

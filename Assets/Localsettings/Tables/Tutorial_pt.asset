@@ -38,6 +38,29 @@ MonoBehaviour:
       como voc\xEA. Se precisar dos meus servi\xE7os novamente, basta voltar aqui."
     m_Metadata:
       m_Items: []
+  - m_Id: 28399564076462080
+    m_Localized: "Para empezar. Debo tomar el pequi y colocarlo sobre el mortero
+      para as\xED poder machacarlo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399608301203456
+    m_Localized: "Bien, ahora debo poner el pequi machacado dentro de mi coctelera
+      m\xE1gica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399633009848320
+    m_Localized: Lo siguiente es adicionar un poco de agua, la puedo tomar de mi
+      dispensador...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399644158308352
+    m_Localized: Listo! Ahora solo debo mezclar los ingredientes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399655415820288
+    m_Localized: Finalmente, debo entregarle la medicina a la paciente
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -2,10 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
-using Kitchen;
 using Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
 
 namespace Kitchen.Tutorial
 {
@@ -14,6 +15,12 @@ namespace Kitchen.Tutorial
         private Volume vignetteVolume;
         private Vignette vignetteInstance;
         private HandTutorial handTutorial;
+
+        [SerializeField] Animator playerTextObject;
+        const string animParamBoolDisplay = "Display";
+
+        [SerializeField] LocalizeStringEvent playerText;
+        [SerializeField] TutorialTextScriptableObject textsDatabase;
 
         private enum TutorialActors
         {
@@ -40,6 +47,13 @@ namespace Kitchen.Tutorial
         Vector2 targetResolution = new Vector2(1920f, 1080f);
 
         [SerializeField] private GameObject updatedMythsGO;
+        private void Update()
+        {
+            if(Input.GetKey(KeyCode.Alpha1))
+                Time.timeScale= 1f;   
+            if(Input.GetKey(KeyCode.Alpha5))
+                Time.timeScale= 5f;
+        }
 
         private void Awake()
         {
@@ -98,6 +112,7 @@ namespace Kitchen.Tutorial
             handTutorial.SwitchEnableHand(false);
             foreach (var element in tutorialElements)
                 SwitchObjectCollider(element, false);
+            playerTextObject.SetBool(animParamBoolDisplay, false);
         }
 
         public void EnableVignetteFirstTime()
@@ -106,6 +121,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
+            DisplayDialogueBox(textsDatabase.texts[0]);
         }
 
         private void CallSecondCoroutine()
@@ -114,6 +130,7 @@ namespace Kitchen.Tutorial
             //activates colliders
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[1]);
         }
        
         private void CallThirdCoroutine() 
@@ -122,6 +139,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[2]);
         }
 
 
@@ -129,6 +147,7 @@ namespace Kitchen.Tutorial
         {
             handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[3]);
         }
 
         private void callFifhtCoroutine()
@@ -137,6 +156,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
+            DisplayDialogueBox(textsDatabase.texts[4]);
         }
 
 
@@ -169,7 +189,11 @@ namespace Kitchen.Tutorial
             yield return new WaitForSecondsRealtime(3f);
             updatedMythsGO.SetActive(false);
         }
+
+        void DisplayDialogueBox(LocalizedString text)
+        {
+            playerTextObject.SetBool(animParamBoolDisplay, true);
+            playerText.StringReference = text;
+        }
     }
-
-
 }
