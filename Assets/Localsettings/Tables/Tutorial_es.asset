@@ -62,6 +62,23 @@ MonoBehaviour:
     m_Localized: Finalmente, debo entregarle la medicina a la paciente
     m_Metadata:
       m_Items: []
+  - m_Id: 28403513147895808
+    m_Localized: Intenta curar a 3 pacientes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403639945900032
+    m_Localized: Cura a todos antes de que se acabe el tiempo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403790781460480
+    m_Localized: Cura a todos de seguido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403833567555584
+    m_Localized: "Un remedio mal preparado puede llegar a ser muy peligroso. T\xEDralo
+      a la basura!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

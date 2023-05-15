@@ -61,6 +61,22 @@ MonoBehaviour:
     m_Localized: Finally, I must give the medicine to the patient
     m_Metadata:
       m_Items: []
+  - m_Id: 28403513147895808
+    m_Localized: Try to heal 3 patients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403639945900032
+    m_Localized: Heal everyone before the time runs out!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403790781460480
+    m_Localized: Heal everyone in a row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403833567555584
+    m_Localized: A wrong-prepared potion could be dangerous. Throw it into the trash!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
