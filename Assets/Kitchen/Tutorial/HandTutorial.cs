@@ -12,6 +12,7 @@ namespace Kitchen.Tutorial
 
         Animator _animator;
         const string _animParamTap = "Tap";
+        const string _animParamEndDrag = "EndDrag";
 
         public void SwitchEnableHand(bool enable) => gameObject.SetActive(enable);
 
@@ -40,8 +41,11 @@ namespace Kitchen.Tutorial
             transform.position = path[0];
             if (path.Length > 1)
             {
-                transform.DOPath(path, duration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Restart);
                 _animator.SetBool(_animParamTap, false);
+                transform.DOPath(path, duration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Restart).OnStepComplete(() =>
+                {
+                    _animator.SetTrigger(_animParamEndDrag);
+                });
             }
             else
                 _animator.SetBool(_animParamTap, true);

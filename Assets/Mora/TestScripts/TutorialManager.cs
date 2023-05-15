@@ -46,7 +46,7 @@ namespace Kitchen.Tutorial
             EventManager.AddListener(IngredientState.Cooking, HideHand);
             EventManager.AddListener(IngredientState.Cooked, CallSecondCoroutine);
             EventManager.AddListener(PotionEvent.AddIngredient, CallThirdCoroutine);
-           // EventManager.AddListener(PotionEvent.AddIngredient, HideHand);
+            EventManager.AddListener(PotionEvent.Shake, HideHand);
             EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.AddListener(ClientEvent.Served, FinalCoroutineStart);
@@ -60,7 +60,7 @@ namespace Kitchen.Tutorial
             EventManager.RemoveListener(IngredientState.Cooking, HideHand);
             EventManager.RemoveListener(IngredientState.Cooked, CallSecondCoroutine);
             EventManager.RemoveListener(PotionEvent.AddIngredient, CallThirdCoroutine);
-            //EventManager.RemoveListener(PotionEvent.AddIngredient, HideHand);
+            EventManager.RemoveListener(PotionEvent.Shake, HideHand);
             EventManager.RemoveListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.RemoveListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.RemoveListener(ClientEvent.Served, FinalCoroutineStart);
