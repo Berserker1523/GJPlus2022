@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.Rendering;
 using Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
@@ -12,8 +10,6 @@ namespace Kitchen.Tutorial
 {
     public class TutorialManager : MonoBehaviour
     {
-        private Volume vignetteVolume;
-        private Vignette vignetteInstance;
         private HandTutorial handTutorial;
 
         [SerializeField] Animator playerTextObject;
@@ -31,29 +27,10 @@ namespace Kitchen.Tutorial
         [SerializeField] private Transform[] tutorialElements = new Transform[5];
         [SerializeField] private StarsData starsData;
 
-        //Post procees Intensity
-        private float activeIntensity = 1f, initialIntensity;
-
-        private float waitToShowTimer = 1f, waitToMoveTimer = 3f;
-
-        private float standardWaitStep = 0.1f;
-        WaitForSeconds coroutineWaitStep;
-        WaitForSeconds waitSecondsToShow;
-        WaitForSeconds halfSecond = new WaitForSeconds(0.5f);
-
         [ContextMenuItem("MoveObject", "Move")]
         [SerializeField] Transform currentPos;
 
-        Vector2 targetResolution = new Vector2(1920f, 1080f);
-
         [SerializeField] private GameObject updatedMythsGO;
-        private void Update()
-        {
-            if(Input.GetKey(KeyCode.Alpha1))
-                Time.timeScale= 1f;   
-            if(Input.GetKey(KeyCode.Alpha5))
-                Time.timeScale= 5f;
-        }
 
         private void Awake()
         {
@@ -82,30 +59,16 @@ namespace Kitchen.Tutorial
 
         private void Start()
         {
-            vignetteVolume = this.gameObject.GetComponent<Volume>();
-            vignetteVolume.profile.TryGet<Vignette>(out vignetteInstance);
-
-            vignetteInstance.intensity.value = 0f;
-            waitSecondsToShow = new WaitForSeconds(waitToShowTimer);
             LevelManager.CurrentLevel = 0;
-
             tutorialElements[(int)TutorialActors.Mortar] = GameObject.Find("Mortar(Clone)").GetComponent<Transform>();
             tutorialElements[(int)TutorialActors.Shaker] = GameObject.Find("Potion(Clone)").GetComponent<Transform>();
-            //tutorialElements[(int)TutorialActors.Stove] = GameObject.Find("Stove(Clone)").GetComponent<Transform>();
             tutorialElements[(int)TutorialActors.PotionResult] = GameObject.Find("Result").GetComponent<Transform>();
 
             foreach (var tutorialActor in tutorialElements)
                 SwitchObjectCollider(tutorialActor, false);
-
-            targetResolution = new Vector2(Screen.width, Screen.height);
         }
 
         void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
-        void UnusefulMethod()
-        {
-            //TODO Replace Unuseful method to the correspondant listener Method
-            Debug.Log(" Replace Unuseful method to the correspondant listener Method");
-        }
 
         private void HideHand()
         {
