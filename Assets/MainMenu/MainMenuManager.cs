@@ -9,8 +9,6 @@ namespace Mainmenu
     public class MainMenuManager : MonoBehaviour
     {
         GameData gameData;
-        [SerializeField] GameObject _triggerablesTutorialsCanvas;
-        [SerializeField] GameObject _trashTutorialPrefab;
         GameObject _musicObject;
         public void Awake()
         {
@@ -20,7 +18,6 @@ namespace Mainmenu
         private void Start()
         {
             gameData = SaveManager.LoadStarsData();
-            CheckTriggerableTutorials();
             _musicObject = GameObject.Find("Music");
         }
 
@@ -46,11 +43,14 @@ namespace Mainmenu
             }
         }
 
-        public void CheckTriggerableTutorials()
-        {
-            if (!gameData.tutorials[(int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered])           
-               Instantiate(_trashTutorialPrefab, _triggerablesTutorialsCanvas.transform);          
-        }
+        /* ==== ICase of want to only display trash tutorial once   ====
+         [SerializeField] GameObject _triggerablesTutorialsCanvas;
+         [SerializeField] GameObject _trashTutorialPrefab;
+         public void CheckTriggerableTutorials()
+         {
+             if (!gameData.tutorials[(int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered])           
+                Instantiate(_trashTutorialPrefab, _triggerablesTutorialsCanvas.transform);          
+         }   */
 
         public void Credits()
         {
