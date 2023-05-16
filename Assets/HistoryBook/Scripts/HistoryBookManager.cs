@@ -88,7 +88,7 @@ namespace HistoryBook {
 
                 index++;
                 //Myths limitation for vertical slice
-                if (buttonsList.Count >= 3 || index >=5)
+                if (index >=5)
                     break;
             }
 

@@ -78,13 +78,13 @@ namespace Kitchen
         private IEnumerator LevelTimer()
         {
             speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
-
-            while (inTutorial)
-                yield return new WaitForSeconds(1f);
-
+        
             while (currentTime > 0)
             {
-                yield return new WaitForSeconds(1f);
+                while (inTutorial)
+                    yield return new WaitForSeconds(1f);
+
+                yield return new WaitForSeconds(0.5f);
                 currentTime--;
                 speedText.text = string.Format("{0:0}:{1:00}", currentTime / 60 % 60, currentTime % 60);
 
@@ -132,6 +132,9 @@ namespace Kitchen
             UpdateStreakText();
             while (currentStreakTime < levelInstantiator.LevelData.streakWaitTime)
             {
+                while (inTutorial)
+                    yield return new WaitForSeconds(1f);
+
                 yield return new WaitForSeconds(0.1f);
                 currentStreakTime += 0.1f;
                 streakBar.value -= 0.1f;

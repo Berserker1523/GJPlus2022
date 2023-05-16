@@ -33,6 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 3219685167348727767}
   - {fileID: 2950168915670748289}
+  - {fileID: 3330192006668349939}
   - {fileID: 8449924070588992741}
   - {fileID: 4426991571275524405}
   - {fileID: 3369320589270581005}
@@ -260,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868013929243573887, guid: e5d807e8533bceb47b5724f58767f468, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5868013929243573887, guid: e5d807e8533bceb47b5724f58767f468, type: 3}
       propertyPath: m_AnchorMax.x
@@ -396,6 +397,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354345152732478943}
     m_Modifications:
+    - target: {fileID: 239799897739837946, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
+      propertyPath: m_text
+      value: Objetivo
+      objectReference: {fileID: 0}
     - target: {fileID: 287888360378023597, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -406,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 287888360378023597, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 287888360378023597, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
       propertyPath: m_AnchorMax.x
@@ -480,6 +485,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1558566620388654245, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
+      propertyPath: m_text
+      value: Objetivo
+      objectReference: {fileID: 0}
     - target: {fileID: 4894704193503448386, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
       propertyPath: m_Name
       value: ObjectivesPopUp
@@ -490,6 +499,108 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 287888360378023597, guid: 557bc2e58d66bb84288094fb687c9993, type: 3}
   m_PrefabInstance: {fileID: 4508417209555195800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4608139604510627199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8354345152732478943}
+    m_Modifications:
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 368.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 184.1601
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237745440826511, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_Name
+      value: TrashTutorial
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+--- !u!224 &3330192006668349939 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1280237745440826508, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+  m_PrefabInstance: {fileID: 4608139604510627199}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5100398797953062275
 PrefabInstance:
@@ -508,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7496939316475832974, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7496939316475832974, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
       propertyPath: m_AnchorMax.x
@@ -581,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 7496939316475832974, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013144612259236177, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
+      propertyPath: m_text
+      value: Los mitos han sido actualizados
       objectReference: {fileID: 0}
     - target: {fileID: 8228516911994902542, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
       propertyPath: m_Name
@@ -609,6 +724,16 @@ PrefabInstance:
       propertyPath: mythsUpdatedGO
       value: 
       objectReference: {fileID: 3817312128550981005}
+    - target: {fileID: 5442655630743194524, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_text
+      value: "\xA1Felicidades, est\xE1s en camino de convertirte en un verdadero
+        maestro Kumu! \xA1Sigue con el buen trabajo y sigue curando a aquellos que
+        lo necesiten!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442655630743194524, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_fontSize
+      value: 39.35
+      objectReference: {fileID: 0}
     - target: {fileID: 9019887086538076450, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

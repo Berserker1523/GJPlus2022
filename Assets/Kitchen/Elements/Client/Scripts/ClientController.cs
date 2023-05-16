@@ -32,6 +32,7 @@ namespace Kitchen
         private float waitingTimer;
         
         private Gender clientGender;
+        public static bool inTutorial;
 
         //Animation Params
         [SerializeField] RuntimeAnimatorController[] animators = new RuntimeAnimatorController[2];
@@ -94,7 +95,7 @@ namespace Kitchen
 
         private void Update()
         {
-            if (clientServed)
+            if (clientServed || inTutorial)
                 return;
 
             waitingTimer -= Time.deltaTime;

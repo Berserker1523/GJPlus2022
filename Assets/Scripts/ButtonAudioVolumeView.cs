@@ -13,12 +13,14 @@ public class ButtonAudioVolumeView : MonoBehaviour, IAudioVolumeView
 
     private Button button;
     private Image buttonImage;
+    AudioVolumeController audioVolumeController;
 
     private void Awake()
     {
         button = GetComponent<Button>();
         buttonImage = GetComponent<Image>();
         button.onClick.AddListener(OnClicked);
+        audioVolumeController = GetComponentInParent<AudioVolumeController>();
     }
 
     private void OnDestroy() =>
@@ -30,6 +32,6 @@ public class ButtonAudioVolumeView : MonoBehaviour, IAudioVolumeView
     private void OnClicked()
     {
         bool muted = buttonImage.sprite == mutedSprite;
-        VolumeChanged?.Invoke(muted ? 1 : 0);
+        VolumeChanged?.Invoke(muted ? audioVolumeController.previousVolume : 0);
     }
 }
