@@ -37,6 +37,9 @@ namespace Kitchen.Tutorial
 
         private void MoveBetweenPoints()
         {
+            if (_points.Length<=0)
+                return;
+
             Vector3[] path = CalculatePointsCoordinates();
             transform.position = path[0];
             if (path.Length > 1)

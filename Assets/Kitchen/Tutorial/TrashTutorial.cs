@@ -5,14 +5,20 @@ namespace Kitchen.Tutorial
 {
     public class TrashTutorial : MonoBehaviour
     {
+        [SerializeField] HandTutorial handTutorial;
+        TrashController trashController;
         private void Awake()
         {
-            EventManager.AddListener(PotionEvent.FailedRecipe, ShowPotionTutorial);
+            EventManager.AddListener<Transform>(PotionEvent.FailedRecipe, ShowPotionTutorial);
+            trashController = FindObjectOfType<TrashController>();
+            trashController.gameObject.SetActive(false);
         }
 
-        private void ShowPotionTutorial()
+        private void ShowPotionTutorial(Transform failedRecipeTransform)
         {
             gameObject.SetActive(true);
+            trashController.gameObject.SetActive(true);
+            handTutorial.StartNewSequence( new Transform[] { failedRecipeTransform, trashController.transform });
             EventManager.AddListener(TrashEvent.Throw, EndPotionTutorial);
         }
 
@@ -25,7 +31,7 @@ namespace Kitchen.Tutorial
 
         private void OnDestroy()
         {
-            EventManager.RemoveListener(PotionEvent.FailedRecipe, ShowPotionTutorial);
+            EventManager.RemoveListener<Transform>(PotionEvent.FailedRecipe, ShowPotionTutorial);
             EventManager.RemoveListener(TrashEvent.Throw, EndPotionTutorial);           
         }
     }
