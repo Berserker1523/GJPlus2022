@@ -122,7 +122,10 @@ namespace Kitchen
         private void StopSpawn() =>
             levelFinished = true;
 
-        private void WaitForTutorial(bool tutorial) =>
+        private void WaitForTutorial(bool tutorial)
+        {
             inTutorial = tutorial;
+            ClientController.inTutorial = tutorial;
+        }
     }
 }

@@ -38,6 +38,45 @@ MonoBehaviour:
       ever need my services again, just come back here.
     m_Metadata:
       m_Items: []
+  - m_Id: 28399564076462080
+    m_Localized: To start, I should take the Pequi and put it over the mortar, in
+      order to squash it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399608301203456
+    m_Localized: Well, now I should put the squashed pequi into my magic shaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399633009848320
+    m_Localized: The next step is to add some water, I can take it from my dispenser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399644158308352
+    m_Localized: 'Ready! Now, I should mix the ingredients
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28399655415820288
+    m_Localized: Finally, I must give the medicine to the patient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403513147895808
+    m_Localized: Try to heal 3 patients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403639945900032
+    m_Localized: Heal everyone before the time runs out!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403790781460480
+    m_Localized: Heal everyone in a row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28403833567555584
+    m_Localized: A wrong-prepared potion could be dangerous. Throw it into the trash!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

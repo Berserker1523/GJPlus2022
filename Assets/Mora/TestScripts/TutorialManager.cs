@@ -1,19 +1,22 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.Rendering;
-using Kitchen;
 using Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
 
 namespace Kitchen.Tutorial
 {
     public class TutorialManager : MonoBehaviour
     {
-        private Volume vignetteVolume;
-        private Vignette vignetteInstance;
         private HandTutorial handTutorial;
+
+        [SerializeField] Animator playerTextObject;
+        const string animParamBoolDisplay = "Display";
+
+        [SerializeField] LocalizeStringEvent playerText;
+        [SerializeField] TutorialTextScriptableObject textsDatabase;
 
         private enum TutorialActors
         {
@@ -24,20 +27,8 @@ namespace Kitchen.Tutorial
         [SerializeField] private Transform[] tutorialElements = new Transform[5];
         [SerializeField] private StarsData starsData;
 
-        //Post procees Intensity
-        private float activeIntensity = 1f, initialIntensity;
-
-        private float waitToShowTimer = 1f, waitToMoveTimer = 3f;
-
-        private float standardWaitStep = 0.1f;
-        WaitForSeconds coroutineWaitStep;
-        WaitForSeconds waitSecondsToShow;
-        WaitForSeconds halfSecond = new WaitForSeconds(0.5f);
-
         [ContextMenuItem("MoveObject", "Move")]
         [SerializeField] Transform currentPos;
-
-        Vector2 targetResolution = new Vector2(1920f, 1080f);
 
         [SerializeField] private GameObject updatedMythsGO;
 
@@ -46,7 +37,7 @@ namespace Kitchen.Tutorial
             EventManager.AddListener(IngredientState.Cooking, HideHand);
             EventManager.AddListener(IngredientState.Cooked, CallSecondCoroutine);
             EventManager.AddListener(PotionEvent.AddIngredient, CallThirdCoroutine);
-           // EventManager.AddListener(PotionEvent.AddIngredient, HideHand);
+            EventManager.AddListener(PotionEvent.Shake, HideHand);
             EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.AddListener(ClientEvent.Served, FinalCoroutineStart);
@@ -60,7 +51,7 @@ namespace Kitchen.Tutorial
             EventManager.RemoveListener(IngredientState.Cooking, HideHand);
             EventManager.RemoveListener(IngredientState.Cooked, CallSecondCoroutine);
             EventManager.RemoveListener(PotionEvent.AddIngredient, CallThirdCoroutine);
-            //EventManager.RemoveListener(PotionEvent.AddIngredient, HideHand);
+            EventManager.RemoveListener(PotionEvent.Shake, HideHand);
             EventManager.RemoveListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.RemoveListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.RemoveListener(ClientEvent.Served, FinalCoroutineStart);
@@ -68,36 +59,23 @@ namespace Kitchen.Tutorial
 
         private void Start()
         {
-            vignetteVolume = this.gameObject.GetComponent<Volume>();
-            vignetteVolume.profile.TryGet<Vignette>(out vignetteInstance);
-
-            vignetteInstance.intensity.value = 0f;
-            waitSecondsToShow = new WaitForSeconds(waitToShowTimer);
             LevelManager.CurrentLevel = 0;
-
             tutorialElements[(int)TutorialActors.Mortar] = GameObject.Find("Mortar(Clone)").GetComponent<Transform>();
             tutorialElements[(int)TutorialActors.Shaker] = GameObject.Find("Potion(Clone)").GetComponent<Transform>();
-            //tutorialElements[(int)TutorialActors.Stove] = GameObject.Find("Stove(Clone)").GetComponent<Transform>();
             tutorialElements[(int)TutorialActors.PotionResult] = GameObject.Find("Result").GetComponent<Transform>();
 
             foreach (var tutorialActor in tutorialElements)
                 SwitchObjectCollider(tutorialActor, false);
-
-            targetResolution = new Vector2(Screen.width, Screen.height);
         }
 
         void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
-        void UnusefulMethod()
-        {
-            //TODO Replace Unuseful method to the correspondant listener Method
-            Debug.Log(" Replace Unuseful method to the correspondant listener Method");
-        }
 
         private void HideHand()
         {
             handTutorial.SwitchEnableHand(false);
             foreach (var element in tutorialElements)
                 SwitchObjectCollider(element, false);
+            playerTextObject.SetBool(animParamBoolDisplay, false);
         }
 
         public void EnableVignetteFirstTime()
@@ -106,6 +84,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
+            DisplayDialogueBox(textsDatabase.texts[0]);
         }
 
         private void CallSecondCoroutine()
@@ -114,6 +93,7 @@ namespace Kitchen.Tutorial
             //activates colliders
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[1]);
         }
        
         private void CallThirdCoroutine() 
@@ -122,6 +102,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[2]);
         }
 
 
@@ -129,6 +110,7 @@ namespace Kitchen.Tutorial
         {
             handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            DisplayDialogueBox(textsDatabase.texts[3]);
         }
 
         private void callFifhtCoroutine()
@@ -137,6 +119,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
+            DisplayDialogueBox(textsDatabase.texts[4]);
         }
 
 
@@ -169,7 +152,11 @@ namespace Kitchen.Tutorial
             yield return new WaitForSecondsRealtime(3f);
             updatedMythsGO.SetActive(false);
         }
+
+        void DisplayDialogueBox(LocalizedString text)
+        {
+            playerTextObject.SetBool(animParamBoolDisplay, true);
+            playerText.StringReference = text;
+        }
     }
-
-
 }
