@@ -17,13 +17,15 @@ namespace Kitchen.Tutorial
         {
             gameObject.SetActive(true);
             handTutorial.StartNewSequence( new Transform[] { failedRecipeTransform, trashController.transform });
+            EventManager.Dispatch(GlobalTutorialEvent.inTutorial,true);
             EventManager.AddListener(TrashEvent.Throw, EndPotionTutorial);
         }
 
         private void EndPotionTutorial()
         {
             gameObject.SetActive(false);
-            EventManager.Dispatch(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, (int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered);
+            EventManager.Dispatch(GlobalTutorialEvent.inTutorial,false);
+            //EventManager.Dispatch(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, (int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered);
             Destroy(gameObject);
         }
 
