@@ -11,13 +11,11 @@ namespace Kitchen.Tutorial
         {
             EventManager.AddListener<Transform>(PotionEvent.FailedRecipe, ShowPotionTutorial);
             trashController = FindObjectOfType<TrashController>();
-            trashController.gameObject.SetActive(false);
         }
 
         private void ShowPotionTutorial(Transform failedRecipeTransform)
         {
             gameObject.SetActive(true);
-            trashController.gameObject.SetActive(true);
             handTutorial.StartNewSequence( new Transform[] { failedRecipeTransform, trashController.transform });
             EventManager.AddListener(TrashEvent.Throw, EndPotionTutorial);
         }
