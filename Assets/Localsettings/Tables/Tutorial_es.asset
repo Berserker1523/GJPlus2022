@@ -79,6 +79,10 @@ MonoBehaviour:
       a la basura!"
     m_Metadata:
       m_Items: []
+  - m_Id: 28792046146650112
+    m_Localized: "Oh no, se ha quemado un ingrediente. T\xEDralo a la basura!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

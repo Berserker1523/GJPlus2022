@@ -87,7 +87,7 @@ namespace Kitchen
                 spriteRenderer.material.SetFloat("_Temperature", 0f);
                 spriteRenderer.sprite = CurrentCookingIngredient.data.stoveBurntSprite;
                 timer.gameObject.SetActive(false);
-                EventManager.Dispatch(IngredientState.Burnt);
+                EventManager.Dispatch(IngredientState.Burnt, transform);
                 cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }

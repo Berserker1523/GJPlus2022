@@ -64,7 +64,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28403833567555584
-    m_Key: TrashTutorial
+    m_Key: TrashTutorial1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28792046146650112
+    m_Key: TrashTutorial2
     m_Metadata:
       m_Items: []
   m_Metadata:

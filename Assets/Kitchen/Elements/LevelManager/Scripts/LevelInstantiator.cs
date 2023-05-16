@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Events;
 
 namespace Kitchen
 {
@@ -25,12 +26,23 @@ namespace Kitchen
         [SerializeField] private GameObject painkillerPrefab;
         [SerializeField] private List<Transform> painkillersPositions;
 
+        Collider2D[] kitchenElementsColliders;
         public LevelData LevelData => levelData;
 
         private void Awake()
         {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
             SetLevelData(levelData);
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);
+        }
+        private void Start()
+        {
+            kitchenElementsColliders = GetComponentsInChildren<Collider2D>();
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);           
         }
 
         private void InstantiatePotions(int quantity)
@@ -76,5 +88,9 @@ namespace Kitchen
 
         }
 
+        public void SwitchCollidersActivation(bool enable)
+        {
+            foreach(var collider in kitchenElementsColliders) collider.enabled = !enable;
+        }
     }
 }

@@ -77,6 +77,10 @@ MonoBehaviour:
     m_Localized: A wrong-prepared potion could be dangerous. Throw it into the trash!
     m_Metadata:
       m_Items: []
+  - m_Id: 28792046146650112
+    m_Localized: Oh no! an ingredient has burned. Throw it into the trash!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
