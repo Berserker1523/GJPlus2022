@@ -76,6 +76,8 @@ namespace Kitchen.Tutorial
             EventManager.RemoveListener<Transform>(PotionEvent.FailedRecipe, ShowPotionTutorial);
             EventManager.RemoveListener(TrashEvent.Throw, EndPotionTutorial);           
         }
+
+        public void ReEnableBurntTrigger() => alreadyBurntFoodDisplayed = true;
     }
 
 }

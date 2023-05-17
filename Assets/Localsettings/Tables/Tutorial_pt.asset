@@ -82,6 +82,43 @@ MonoBehaviour:
     m_Localized: "Oh no, se ha quemado un ingrediente. T\xEDralo a la basura!"
     m_Metadata:
       m_Items: []
+  - m_Id: 29123393358770176
+    m_Localized: "Por favor, !Ay\xFAdeme! Me siento fatigado y me han salido granos
+      por todo el cuerpo. \xBFPuede ayudarme Kumu?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124409596686336
+    m_Localized: "La luna me  ha otorgado un nuevo ingrediente:  La carna\xFAba.
+      estoy seguro de que con ella podr\xE9 curar sus s\xEDntomas\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124567164104704
+    m_Localized: "De acuerdo a sus instrucciones, debo sumergirla en agua hirviendo.
+      Me indic\xF3 que no deber\xEDa  dejarla al fuego mucho tiempo, puesto que 
+      se convetir\xE1 en cenizas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124590316662784
+    m_Localized: "Ahora est\xE1 en el punto perfecto. R\xE1pido!!, debo ponerla dentro
+      de mi coctelera m\xE1gica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124590933225472
+    m_Localized: "Intentar\xE9 cocinar nuevamente la carna\xFAba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124591558176768
+    m_Localized: "Ahor\xE1 agregar\xE9 pequi  a la receta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29124592074076160
+    m_Localized: Eureka! El resultado es un nuevo remedio! Debo entregarselo al paciente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29159821341995008
+    m_Localized: "Oh no, se me ha quemado la carna\xFAba. Debo tirarla a la basura"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

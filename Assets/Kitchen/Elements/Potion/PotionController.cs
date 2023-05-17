@@ -32,6 +32,7 @@ namespace Kitchen
         private IEnumerator updateTimerRoutine;
 
         private FMOD.Studio.EventInstance shakerSound;
+        private bool shakerEnabled = true;
 
         private void Awake()
         {
@@ -103,7 +104,7 @@ namespace Kitchen
             potionBranchesScalers[potionIngredients.Count - 1].ScaleSpriteToBounds();
 
             if(ingredientData.ingredientName != IngredientName.Water)
-                EventManager.Dispatch(PotionEvent.AddIngredient);
+                EventManager.Dispatch(PotionEvent.AddIngredient, ingredientData);
         }
 
         private void CheckRecipe()
@@ -155,7 +156,7 @@ namespace Kitchen
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1)
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1 || !shakerEnabled)
                 return;
 
             anim.SetBool("Shake", true);
@@ -177,5 +178,7 @@ namespace Kitchen
                 timer.SetFillAmount(currentTime / seconds);
             }
         }
+
+        public void SwitchShakerEnabled(bool enabled) => shakerEnabled= enabled;
     }
 }

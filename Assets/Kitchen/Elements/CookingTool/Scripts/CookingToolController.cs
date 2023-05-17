@@ -64,7 +64,7 @@ namespace Kitchen
             {
                 CurrentCookingIngredient.state = IngredientState.Cooked;
                 spriteRenderer.sprite = cookingToolData.cookingToolName == CookingToolName.Stove ? CurrentCookingIngredient.data.stoveCookedSprite : CurrentCookingIngredient.data.mortarCrushedSprite;
-                EventManager.Dispatch(IngredientState.Cooked);
+                EventManager.Dispatch(IngredientState.Cooked, CurrentCookingIngredient.data);
                 if (cookingToolData.cookingToolName == CookingToolName.Mortar)
                 {
                     shakingMortarParticle.Stop();
