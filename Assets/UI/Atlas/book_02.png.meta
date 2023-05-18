@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ee952abaabb1ba9498c363473436527f
+guid: a89e593a2e33ee546bf9ce9f0714cde4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,76 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Atlas_04_0
+      name: book_02_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 883
-        width: 131
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d6da0f731f5fb74fbe1a992fa4bb98c
-      internalID: -1262953667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_04_1
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 883
-        width: 131
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3737641097aa17048ac85392ac59bc32
-      internalID: 780711468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_04_2
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 882
-        width: 131
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ce952259c9a5394e804d77b700a156f
-      internalID: 759831635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_04_3
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 706
-        width: 154
-        height: 146
+        x: 173
+        y: 220
+        width: 1569
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +131,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c65eb716235aab4eb4182fca1d00c4d
-      internalID: 1127632923
+      spriteID: 9cea10500b2a5fa4ba8e3332de145c08
+      internalID: 1307606927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_04_4
+      name: book_02_1
       rect:
         serializedVersion: 2
-        x: 223
-        y: 747
-        width: 333
-        height: 84
+        x: 366
+        y: 39
+        width: 1189
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 80, y: 0, z: 80, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fced088c77824e54eb8da73c6dbdbded
-      internalID: -55780796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_04_5
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 92
-        width: 232
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 19, y: 21, z: 20, w: 21}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f08fd45649ff4954183d820f869ab269
-      internalID: 1550322058
+      spriteID: ce799b8a5358a9b418062d193c268c9e
+      internalID: 1107165799
       vertices: []
       indices: 
       edges: []
@@ -253,13 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Atlas_04_0: -1262953667
-      Atlas_04_1: 780711468
-      Atlas_04_4: -55780796
-      Atlas_04_5: 1550322058
-      Atlas_04_2: 759831635
-      Atlas_04_6: 1545738599
-      Atlas_04_3: 1127632923
+      book_02_0: 1307606927
+      book_02_1: 1107165799
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
