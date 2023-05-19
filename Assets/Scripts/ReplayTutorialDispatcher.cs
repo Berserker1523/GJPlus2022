@@ -10,15 +10,19 @@ public class ReplayTutorialDispatcher : MonoBehaviour
     void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(OnSceneLoaded);
+        button.onClick.AddListener(DispatchReplay);
     }
 
     private void OnDestroy()
     {
-        button.onClick.RemoveListener(OnSceneLoaded);       
+        button.onClick.RemoveListener(DispatchReplay);       
     }
 
-    void OnSceneLoaded() => SceneManager.sceneLoaded += DispatchReplay;
+    void DispatchReplay()
+    {
+        EventManager.Dispatch(GlobalEvent.Play);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-    private void DispatchReplay(Scene arg0, LoadSceneMode arg1) => EventManager.Dispatch(GlobalTutorialEvent.replayingTutorial);
+    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1) => EventManager.Dispatch(GlobalTutorialEvent.replayingTutorial);
 }

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 492856602}
   - component: {fileID: 492856603}
   - component: {fileID: 492856604}
+  - component: {fileID: 492856605}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -230,6 +231,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 
+--- !u!114 &492856605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492856599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e8abd474ffabd4da69b2aaec1fdb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1200215339
 PrefabInstance:
   m_ObjectHideFlags: 0
