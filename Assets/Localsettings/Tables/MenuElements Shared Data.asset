@@ -87,6 +87,18 @@ MonoBehaviour:
     m_Key: Title_Objective
     m_Metadata:
       m_Items: []
+  - m_Id: 37353820829626368
+    m_Key: Button_Tutorials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386266652553216
+    m_Key: Tutorial1_Replay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386303558234112
+    m_Key: Tutorial2_Replay
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

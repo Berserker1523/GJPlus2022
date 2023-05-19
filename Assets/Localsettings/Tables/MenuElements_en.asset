@@ -92,6 +92,18 @@ MonoBehaviour:
     m_Localized: Objective
     m_Metadata:
       m_Items: []
+  - m_Id: 37353820829626368
+    m_Localized: Tutorials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386266652553216
+    m_Localized: Revive the first steps about how to play kumu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386303558234112
+    m_Localized: Remember how to cook ingredients at the perfect point
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

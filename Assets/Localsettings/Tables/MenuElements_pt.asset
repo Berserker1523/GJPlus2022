@@ -92,6 +92,18 @@ MonoBehaviour:
     m_Localized: Objetivo
     m_Metadata:
       m_Items: []
+  - m_Id: 37353820829626368
+    m_Localized: Tutoriais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386266652553216
+    m_Localized: "Revive los primeros pasos sobre c\xF3mo jugar kumu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386303558234112
+    m_Localized: "Recuerda c\xF3mo cocinar los ingredientes en el punto perfecto"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
