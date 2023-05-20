@@ -59,7 +59,7 @@ namespace Mainmenu
 
         public void History()
         {
-            SceneManager.LoadSceneAsync(SceneName.HistoryBook.ToString(), LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneName.HistoryBook.ToString(), LoadSceneMode.Additive);
         }
 
         public void Quit()

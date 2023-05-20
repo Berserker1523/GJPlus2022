@@ -32,6 +32,7 @@ namespace Kitchen
         [SerializeField] private LocalizedString adviceString;
         [SerializeField] private LocalizeStringEvent adviceStringEvent;
         [SerializeField] private GameObject mythsUpdatedGO;
+        [SerializeField] private GameObject buttonsLayoutGO;
 
         private MoneyUI moneyUI;
         private LevelInstantiator levelInstantiator;
@@ -48,6 +49,7 @@ namespace Kitchen
         private void Awake()
         {
             mythsUpdatedGO.SetActive(false);
+            buttonsLayoutGO.SetActive(false);
             moneyUI = FindObjectOfType<MoneyUI>();
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             currentlevel = LevelManager.CurrentLevel;
@@ -66,6 +68,7 @@ namespace Kitchen
             if (levelInstantiator.LevelData.stars[0])
             {
                 gameObject.SetActive(true);
+                HandleWon();
                 StartCoroutine(CheckMythsData());
             }
             else
@@ -77,6 +80,15 @@ namespace Kitchen
 
         private void HandleWon()
         {
+            EventManager.Dispatch(GameStatus.Won);
+            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
+            {
+                PlayerPrefs.DeleteAll();
+                LevelManager.CurrentLevel = 1;
+            }
+            else
+                LevelManager.CurrentLevel++;
+
             gameObject.SetActive(true);
             titleText.text = levelCompletedString.GetLocalizedString();
             titleDilateText.text = levelCompletedString.GetLocalizedString();
@@ -85,7 +97,7 @@ namespace Kitchen
             positiveButtonText.text = continueString.GetLocalizedString();
             positiveButton.onClick.AddListener(NextLevel);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
-            StartCoroutine(DisplayStars());
+            StartCoroutine(CheckMythsData());
         }
 
         private void HandleLost()
@@ -102,6 +114,7 @@ namespace Kitchen
 
         private IEnumerator CheckMythsData()
         {
+            yield return StartCoroutine(DisplayStars());
             GameData gameData = SaveManager.LoadStarsData();
 
             if (gameData != null)
@@ -111,22 +124,12 @@ namespace Kitchen
                     if (gameData.stars[LevelManager.CurrentLevel, i] == false && levelInstantiator.LevelData.stars[i] == true)
                     {
                         mythsUpdatedGO.SetActive(true);
-                        yield return new WaitForSecondsRealtime(5f);
-                        mythsUpdatedGO.SetActive(false);
+                        yield return new WaitForSecondsRealtime(3f);
                         break;
                     }
                 }
             }
-
-            HandleWon();
-            EventManager.Dispatch(GameStatus.Won);
-            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
-            {
-                PlayerPrefs.DeleteAll();
-                LevelManager.CurrentLevel = 1;
-            }
-            else
-                LevelManager.CurrentLevel++;
+            buttonsLayoutGO.SetActive(true);
         }
 
         private IEnumerator DisplayStars()
@@ -143,6 +146,7 @@ namespace Kitchen
                 }
             }
         }
+
         private void DisplayAdvice()
         {
             string reference = "";
