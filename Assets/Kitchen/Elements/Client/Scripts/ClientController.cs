@@ -24,6 +24,7 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private List<Image> ingredientsImages;
         [SerializeField] private List<Image> cookingToolsImages;
+        private ParticleSystem healingVFX;
 
         private DropView dropView;
 
@@ -57,7 +58,8 @@ namespace Kitchen
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
 
-            animator = GetComponentInChildren<Animator>();     
+            animator = GetComponentInChildren<Animator>();    
+            healingVFX = GetComponentInChildren<ParticleSystem>();
         }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
@@ -192,6 +194,7 @@ namespace Kitchen
             animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
             GetComponent<BoxCollider2D>().enabled = false;
+            healingVFX.Play();
             yield return new WaitForSeconds(3f);
 
             Destroy(gameObject);

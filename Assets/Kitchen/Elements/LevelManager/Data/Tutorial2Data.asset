@@ -15,8 +15,8 @@ MonoBehaviour:
   level: 0
   clientNumber: 3
   initialSpawnSeconds: 5
-  minSpawnSeconds: 10
-  maxSpawnSeconds: 17
+  minSpawnSeconds: 7
+  maxSpawnSeconds: 10
   minNumberOfPotionRecipients: 1
   minNumberOfMortars: 1
   minNumberOfStoves: 0
@@ -28,4 +28,4 @@ MonoBehaviour:
   levelRecipes:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   levelPercentages: 64000000
-  stars: 010001
+  stars: 010101
