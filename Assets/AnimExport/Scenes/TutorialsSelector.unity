@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 629754846411906019, guid: 1339019cee6755744900474e1e30dbc3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 629754846411906019, guid: 1339019cee6755744900474e1e30dbc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -319,6 +319,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2464528479577624304, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464528479577624304, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464528479577624304, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3987621276018115448, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
       propertyPath: m_Name
       value: TutorialSelector
@@ -333,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3987621276018115460, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3987621276018115460, guid: b87c1ad82f2957f40bfca5b054c140a6, type: 3}
       propertyPath: m_AnchorMax.x
