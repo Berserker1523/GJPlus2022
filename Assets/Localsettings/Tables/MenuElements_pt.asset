@@ -101,7 +101,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37386303558234112
+    m_Localized: Aprende sobre la cantidad de pacientes que debes salvar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493995440275456
     m_Localized: "Recuerda c\xF3mo cocinar los ingredientes en el punto perfecto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493963353849856
+    m_Localized: 'Aprende sobre el valor del tiempo. Cada segundo es de vida o muerte! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493987517235200
+    m_Localized: ' Aprende sobre las rachas'
     m_Metadata:
       m_Items: []
   references:
