@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChangeSceneButton : MonoBehaviour
 {
     [SerializeField] private SceneName sceneName;
+    [SerializeField] private LoadSceneMode loadSceneMode = LoadSceneMode.Single;
 
     private Button button;
     private void Awake()
@@ -17,5 +18,5 @@ public class ChangeSceneButton : MonoBehaviour
     private void OnDestroy() =>
         button.onClick.RemoveListener(ChangeScene);
 
-    private void ChangeScene() => SceneManager.LoadScene(sceneName.ToString());
+    protected virtual void ChangeScene() => SceneManager.LoadScene(sceneName.ToString(), loadSceneMode);
 }

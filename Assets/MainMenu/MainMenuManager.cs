@@ -9,7 +9,6 @@ namespace Mainmenu
     public class MainMenuManager : MonoBehaviour
     {
         GameData gameData;
-        GameObject _musicObject;
         public void Awake()
         {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
@@ -18,7 +17,6 @@ namespace Mainmenu
         private void Start()
         {
             gameData = SaveManager.LoadStarsData();
-            _musicObject = GameObject.Find("Music");
         }
 
         public void PlayGame() => StartCoroutine(OpenKitchenScene());
@@ -26,7 +24,6 @@ namespace Mainmenu
         private IEnumerator OpenKitchenScene()
         {
             EventManager.Dispatch(GlobalEvent.Play);
-            Destroy(_musicObject);
             yield return new WaitForSeconds(2f);
 
             if (gameData != null)
@@ -59,7 +56,7 @@ namespace Mainmenu
 
         public void History()
         {
-            SceneManager.LoadSceneAsync(SceneName.HistoryBook.ToString(), LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneName.HistoryBook.ToString(), LoadSceneMode.Additive);
         }
 
         public void Quit()

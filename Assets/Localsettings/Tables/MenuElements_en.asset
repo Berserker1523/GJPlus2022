@@ -92,6 +92,35 @@ MonoBehaviour:
     m_Localized: Objective
     m_Metadata:
       m_Items: []
+  - m_Id: 37353820829626368
+    m_Localized: Tutorials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386266652553216
+    m_Localized: Revive the first steps about how to play kumu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37386303558234112
+    m_Localized: Learn about the patients amount that you must help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493995440275456
+    m_Localized: Practice eveything that you have learned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493963353849856
+    m_Localized: Learn about the time value. Every second could be the difference
+      betweeen life and dead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37493987517235200
+    m_Localized: Learn about the streaks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37506975292817408
+    m_Localized: Remember how to cook ingredients at the perfect point
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
