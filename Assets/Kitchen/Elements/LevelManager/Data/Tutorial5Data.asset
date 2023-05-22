@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc8ed744b13a5847931fb34a8852261, type: 3}
+  m_Name: Tutorial5Data
+  m_EditorClassIdentifier: 
+  level: 0
+  clientNumber: 10
+  initialSpawnSeconds: 5
+  minSpawnSeconds: 10
+  maxSpawnSeconds: 17
+  minNumberOfPotionRecipients: 1
+  minNumberOfMortars: 1
+  minNumberOfStoves: 1
+  minNumberOfPainKillers: 1
+  time: 1
+  goal: 3
+  streak: 1
+  streakWaitTime: 15
+  levelRecipes:
+  - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
+  levelPercentages: 64000000
+  stars: 000000
