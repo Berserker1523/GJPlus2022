@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization;
-using System.Xml.Linq;
 
 namespace Kitchen.Tutorial
 {
@@ -183,12 +182,10 @@ namespace Kitchen.Tutorial
         public IEnumerator endOfTutorial()
         {
             yield return new WaitForSeconds(14f);
-            EventManager.Dispatch(GlobalTutorialEvent.Tutorial1Completed);
             yield return StartCoroutine(DisplayMythsUpdatedPopUP());
+            EventManager.Dispatch(GlobalTutorialEvent.Tutorial5Completed, 5);
             LoadKitchen1();
-
         }
-        void LoadKitchen1() => SceneManager.LoadScene("Tutorial1");
 
         IEnumerator DisplayMythsUpdatedPopUP()
         {
@@ -196,6 +193,7 @@ namespace Kitchen.Tutorial
             yield return new WaitForSecondsRealtime(3f);
             updatedMythsGO.SetActive(false);
         }
+        void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
 
         void DisplayDialogueBox(LocalizedString text)
         {
