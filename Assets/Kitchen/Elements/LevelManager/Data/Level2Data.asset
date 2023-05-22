@@ -28,5 +28,5 @@ MonoBehaviour:
   levelRecipes:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
-  levelPercentages: 280000003c000000
+  levelPercentages: 3200000032000000
   stars: 000000
