@@ -697,6 +697,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Los mitos han sido actualizados
       objectReference: {fileID: 0}
+    - target: {fileID: 8013144612259236177, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
+      propertyPath: m_fontSize
+      value: 66.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8228516911994902542, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
       propertyPath: m_Name
       value: NewMythsPopUp
@@ -721,9 +725,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 8354345152732478943}
     m_Modifications:
     - target: {fileID: 1660123593687513940, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: buttonsLayout
+      value: 
+      objectReference: {fileID: 4958452680941710454}
+    - target: {fileID: 1660123593687513940, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
       propertyPath: mythsUpdatedGO
       value: 
       objectReference: {fileID: 3817312128550981005}
+    - target: {fileID: 1660123593687513940, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: buttonsLayoutGO
+      value: 
+      objectReference: {fileID: 4958452680941710454}
+    - target: {fileID: 2685351117203631228, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685351117203631228, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685351117203631228, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685351117203631228, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228690435940633269, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228690435940633269, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228690435940633269, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228690435940633269, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5442655630743194524, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
       propertyPath: m_text
       value: "\xA1Felicidades, est\xE1s en camino de convertirte en un verdadero
@@ -733,6 +777,22 @@ PrefabInstance:
     - target: {fileID: 5442655630743194524, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
       propertyPath: m_fontSize
       value: 39.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525932085866816306, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525932085866816306, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525932085866816306, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525932085866816306, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9019887086538076450, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
       propertyPath: m_Pivot.x
@@ -827,5 +887,10 @@ PrefabInstance:
 --- !u!224 &2950168915670748289 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9019887086538076450, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
+  m_PrefabInstance: {fileID: 6186830414381350307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4958452680941710454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1230607544667689429, guid: c3ed6ac904efac64c860d370cf3756cf, type: 3}
   m_PrefabInstance: {fileID: 6186830414381350307}
   m_PrefabAsset: {fileID: 0}

@@ -8,7 +8,7 @@ namespace Kitchen
     public class StarsData : ScriptableObject
     {
         [HideInInspector] public bool[,] stars = new bool[5, 3];
-        [HideInInspector] public bool[] tutorials = new bool[4];
+        [HideInInspector] public bool[] tutorials = new bool[6];
         public bool[] trigerrableTutorials = new bool[1];
 
         private void OnEnable()
@@ -17,9 +17,12 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
-            EventManager.AddListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.AddListener(GlobalTutorialEvent.Tutorial0Completed, Tutorial0Completed);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial1Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
 
             LoadStarsDataFileIfExists();
@@ -31,9 +34,12 @@ namespace Kitchen
             EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
             EventManager.RemoveListener(GameStatus.Won, CallSaveData);
-            EventManager.RemoveListener(GlobalTutorialEvent.Tutorial1Completed, Tutorial1Completed);
+            EventManager.RemoveListener(GlobalTutorialEvent.Tutorial0Completed, Tutorial0Completed);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial1Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
         }
 
@@ -49,7 +55,7 @@ namespace Kitchen
         public void SetStreak() =>
            stars[LevelManager.CurrentLevel, 2] = true;
 
-        public void Tutorial1Completed()
+        public void Tutorial0Completed()
         {
             SetGoalStar();
             SetSpeedStar();

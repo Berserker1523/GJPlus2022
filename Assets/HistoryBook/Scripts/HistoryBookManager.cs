@@ -165,7 +165,7 @@ namespace HistoryBook {
         public void Back()
         {
             EventManager.Dispatch(GlobalEvent.Unlocked);
-            SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+            SceneManager.UnloadSceneAsync(SceneName.HistoryBook.ToString());
         }
 
         public void HandleClickLockedButton() =>

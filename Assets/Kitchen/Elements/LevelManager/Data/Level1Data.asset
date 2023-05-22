@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Level1Data
   m_EditorClassIdentifier: 
   level: 1
-  clientNumber: 6
+  clientNumber: 10
   initialSpawnSeconds: 5
-  minSpawnSeconds: 10
-  maxSpawnSeconds: 15
+  minSpawnSeconds: 15
+  maxSpawnSeconds: 20
   minNumberOfPotionRecipients: 2
-  minNumberOfMortars: 2
-  minNumberOfStoves: 0
-  minNumberOfPainKillers: 2
-  time: 200
-  goal: 5
+  minNumberOfMortars: 3
+  minNumberOfStoves: 2
+  minNumberOfPainKillers: 1
+  time: 250
+  goal: 8
   streak: 3
   streakWaitTime: 15
   levelRecipes:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
-  levelPercentages: 64000000
+  - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
+  levelPercentages: 280000003c000000
   stars: 000000

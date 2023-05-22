@@ -32,6 +32,9 @@ namespace Kitchen.Tutorial
 
         [SerializeField] private GameObject updatedMythsGO;
 
+        [SerializeField] private bool replaying;
+        [SerializeField] GameObject pauseMenu;
+
         private void Awake()
         {
             EventManager.AddListener(IngredientState.Cooking, HideHand);
@@ -41,6 +44,7 @@ namespace Kitchen.Tutorial
             EventManager.AddListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.AddListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.AddListener(ClientEvent.Served, FinalCoroutineStart);
+            EventManager.AddListener(GlobalTutorialEvent.replayingTutorial, SetTutorialReplay);
 
             updatedMythsGO.SetActive(false);
             handTutorial = FindObjectOfType<HandTutorial>();
@@ -55,6 +59,7 @@ namespace Kitchen.Tutorial
             EventManager.RemoveListener(PotionEvent.AddWater, callFourthCoroutine);
             EventManager.RemoveListener(PotionEvent.Poof, callFifhtCoroutine);
             EventManager.RemoveListener(ClientEvent.Served, FinalCoroutineStart);
+            EventManager.RemoveListener(GlobalTutorialEvent.replayingTutorial, SetTutorialReplay);
         }
 
         private void Start()
@@ -139,12 +144,21 @@ namespace Kitchen.Tutorial
         public IEnumerator endOfTutorial()
         {
             yield return new WaitForSeconds(14f);
-            EventManager.Dispatch(GlobalTutorialEvent.Tutorial1Completed);
+            EventManager.Dispatch(GlobalTutorialEvent.Tutorial0Completed);
             yield return StartCoroutine(DisplayMythsUpdatedPopUP());
             LoadKitchen1();
 
         }
-        void LoadKitchen1() => SceneManager.LoadScene("Tutorial1");
+        void LoadKitchen1()
+        {
+            SceneName scene;
+            if (replaying)
+                scene = SceneName.TutorialsSelector;
+            else
+                scene = SceneName.Tutorial1;
+
+            SceneManager.LoadScene(scene.ToString());
+        }
 
         IEnumerator DisplayMythsUpdatedPopUP()
         {
@@ -157,6 +171,12 @@ namespace Kitchen.Tutorial
         {
             playerTextObject.SetBool(animParamBoolDisplay, true);
             playerText.StringReference = text;
+        }
+
+        void SetTutorialReplay()
+        {
+            replaying = true;
+            pauseMenu.SetActive(true);
         }
     }
 }
