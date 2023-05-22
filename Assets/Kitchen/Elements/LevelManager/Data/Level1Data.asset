@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc8ed744b13a5847931fb34a8852261, type: 3}
   m_Name: Level1Data
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   clientNumber: 6
   initialSpawnSeconds: 5
   minSpawnSeconds: 10

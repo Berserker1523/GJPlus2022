@@ -55,7 +55,6 @@ namespace Kitchen
             currentlevel = LevelManager.CurrentLevel;
             EventManager.AddListener(GameStatus.LevelFinished, HandleLevelFinished);
             SetFmodParameter();
-
         }
 
         private void OnDestroy() =>
@@ -81,7 +80,11 @@ namespace Kitchen
         private void HandleWon()
         {
             EventManager.Dispatch(GameStatus.Won);
-            if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
+            if (currentlevel == 0)
+            {
+                EventManager.Dispatch(GlobalTutorialEvent.Tutorial4Completed, 4);
+            }
+            else if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
@@ -167,6 +170,13 @@ namespace Kitchen
 
         public void NextLevel()
         {
+            if (currentlevel == 0)
+            {
+                SceneManager.LoadScene(SceneName.Tutorial5.ToString(), LoadSceneMode.Single);
+                return;
+            }
+
+
             if (currentlevel == 2)
                 SceneManager.LoadScene(SceneName.Credits2.ToString(), LoadSceneMode.Single);
             else

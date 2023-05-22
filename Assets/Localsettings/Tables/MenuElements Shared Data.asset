@@ -111,6 +111,10 @@ MonoBehaviour:
     m_Key: Tutorial5_Replay
     m_Metadata:
       m_Items: []
+  - m_Id: 37506975292817408
+    m_Key: Tutorial6_Replay
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
