@@ -33,6 +33,7 @@ namespace Kitchen
 
         private FMOD.Studio.EventInstance shakerSound;
         private bool shakerEnabled = true;
+        private bool inTutorial;
 
         private void Awake()
         {
@@ -45,6 +46,13 @@ namespace Kitchen
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
             shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTimer);
+        }
+
+        private void StopTimer(bool tutorial)
+        {
+            inTutorial = tutorial;
+            anim.speed = tutorial ? 0:1;
         }
 
         private void OnDestroy()
@@ -173,6 +181,8 @@ namespace Kitchen
             float currentTime = 0;
             while(true)
             {
+                while (inTutorial)
+                    yield return new WaitForSeconds(0.1f);
                 yield return new WaitForEndOfFrame();
                 currentTime += Time.deltaTime;
                 timer.SetFillAmount(currentTime / seconds);
