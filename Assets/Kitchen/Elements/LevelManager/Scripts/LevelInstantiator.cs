@@ -90,7 +90,11 @@ namespace Kitchen
 
         public void SwitchCollidersActivation(bool enable)
         {
-            foreach(var collider in kitchenElementsColliders) collider.enabled = !enable;
+            foreach (var collider in kitchenElementsColliders)
+            {
+                if (collider.gameObject.name != "LogicalScene")                 
+                    collider.enabled = !enable;
+            }
         }
     }
 }
