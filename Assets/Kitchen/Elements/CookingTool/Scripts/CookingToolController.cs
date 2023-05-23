@@ -1,4 +1,5 @@
 ﻿using Events;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,7 @@ namespace Kitchen
         [SerializeField] private ParticleSystem cookingParticle;
         [SerializeField] private ParticleSystem overcookingParticle;
         [SerializeField] private ParticleSystem overcookedParticle;
+        private bool inTutorial;
 
         private SpriteRenderer spriteRenderer;
         private DropView dropView;
@@ -41,14 +43,21 @@ namespace Kitchen
                 shakingMortarParticle.Stop();
 
             SceneManager.sceneLoaded += StopCookingSoundsOnNewSceneLoaded;
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTimers);
         }
 
-        private void OnDestroy() =>
+        private void StopTimers(bool tutorial) => inTutorial = tutorial;
+
+        private void OnDestroy() 
+        {
             dropView.OnDropped -= HandleDropped;
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, StopTimers);
+        }
+
 
         private void Update()
         {
-            if (CurrentCookingIngredient == null)
+            if (CurrentCookingIngredient == null  || inTutorial)
                 return;
 
             CurrentCookingIngredient.currentCookingSeconds += Time.deltaTime;
@@ -159,4 +168,5 @@ namespace Kitchen
            cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
     }
+
 }
