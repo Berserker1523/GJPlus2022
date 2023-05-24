@@ -69,8 +69,7 @@ namespace Kitchen.Tutorial
             tutorialElements[(int)TutorialActors.Shaker] = GameObject.Find("Potion(Clone)").GetComponent<Transform>();
             tutorialElements[(int)TutorialActors.PotionResult] = GameObject.Find("Result").GetComponent<Transform>();
 
-            foreach (var tutorialActor in tutorialElements)
-                SwitchObjectCollider(tutorialActor, false);
+            DisableAllColliders();
         }
 
         void SwitchObjectCollider(Transform collider, bool enabled) => collider.GetComponent<BoxCollider2D>().enabled = enabled;
@@ -78,52 +77,51 @@ namespace Kitchen.Tutorial
         private void HideHand()
         {
             handTutorial.SwitchEnableHand(false);
+            DisableAllColliders();
+            playerTextObject.SetBool(animParamBoolDisplay, false);
+        }
+
+        private void StartTutorialSequence(Transform[] elements)
+        {
+            DisableAllColliders();
+            handTutorial.StartNewSequence(elements);
+            foreach (Transform element in elements)
+                SwitchObjectCollider(element, true);
+        }
+        private void DisableAllColliders()
+        {
             foreach (var element in tutorialElements)
                 SwitchObjectCollider(element, false);
-            playerTextObject.SetBool(animParamBoolDisplay, false);
         }
 
         public void EnableVignetteFirstTime()
         {
-            handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Pequi], tutorialElements[(int)TutorialActors.Mortar] });
-
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], true);
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
+            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Pequi], tutorialElements[(int)TutorialActors.Mortar] });
             DisplayDialogueBox(textsDatabase.tutorial1Texts[0]);
         }
 
         private void CallSecondCoroutine()
         {
-            handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Mortar], tutorialElements[(int)TutorialActors.Shaker] });
-            //activates colliders
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Mortar], tutorialElements[(int)TutorialActors.Shaker] });
             DisplayDialogueBox(textsDatabase.tutorial1Texts[1]);
         }
        
         private void CallThirdCoroutine() 
         {
-            handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Water], tutorialElements[(int)TutorialActors.Shaker] });
-
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], true);
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Water], tutorialElements[(int)TutorialActors.Shaker] });
             DisplayDialogueBox(textsDatabase.tutorial1Texts[2]);
         }
 
 
         private void callFourthCoroutine() 
         {
-            handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
+            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
             DisplayDialogueBox(textsDatabase.tutorial1Texts[3]);
         }
 
         private void callFifhtCoroutine()
         {
-            handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] });
-
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
-            SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
+            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] });
             DisplayDialogueBox(textsDatabase.tutorial1Texts[4]);
         }
 
