@@ -14,7 +14,6 @@ namespace Kitchen.Tutorial
        protected void Awake()
        {
             EventManager.AddListener(_levelEvent,ShowPopup);
-            _okButton = GetComponentInChildren<Button>();
             _okButton.onClick.AddListener(RestartLevel);
        }
 
