@@ -81,8 +81,9 @@ namespace Kitchen.Tutorial
             playerTextObject.SetBool(animParamBoolDisplay, false);
         }
 
-        private void StartTutorialSequence(Transform[] elements)
+        private IEnumerator StartTutorialSequence(Transform[] elements)
         {
+            yield return new WaitForSeconds(0.1f);
             DisableAllColliders();
             handTutorial.StartNewSequence(elements);
             foreach (Transform element in elements)
@@ -96,32 +97,32 @@ namespace Kitchen.Tutorial
 
         public void EnableVignetteFirstTime()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Pequi], tutorialElements[(int)TutorialActors.Mortar] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Pequi], tutorialElements[(int)TutorialActors.Mortar] }));
             DisplayDialogueBox(textsDatabase.tutorial1Texts[0]);
         }
 
         private void CallSecondCoroutine()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Mortar], tutorialElements[(int)TutorialActors.Shaker] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Mortar], tutorialElements[(int)TutorialActors.Shaker] }));
             DisplayDialogueBox(textsDatabase.tutorial1Texts[1]);
         }
        
         private void CallThirdCoroutine() 
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Water], tutorialElements[(int)TutorialActors.Shaker] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Water], tutorialElements[(int)TutorialActors.Shaker] }));
             DisplayDialogueBox(textsDatabase.tutorial1Texts[2]);
         }
 
 
         private void callFourthCoroutine() 
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] }));
             DisplayDialogueBox(textsDatabase.tutorial1Texts[3]);
         }
 
         private void callFifhtCoroutine()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] }));
             DisplayDialogueBox(textsDatabase.tutorial1Texts[4]);
         }
 

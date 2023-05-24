@@ -88,8 +88,9 @@ namespace Kitchen.Tutorial
             playerTextObject.SetBool(animParamBoolDisplay, false);
         }
 
-        private void StartTutorialSequence(Transform[] elements)
+        private IEnumerator StartTutorialSequence(Transform[] elements)
         {
+            yield return new WaitForSeconds(0.1f);
             DisableAllColliders();
             handTutorial.StartNewSequence(elements);
             foreach (Transform element in elements)
@@ -104,7 +105,7 @@ namespace Kitchen.Tutorial
 
         public void EnableVignetteFirstTime()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Carnauba], tutorialElements[(int)TutorialActors.Stove] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Carnauba], tutorialElements[(int)TutorialActors.Stove] }));
             DisplayDialogueBox(textsDatabase.tutorial2Texts[1]);
         }
 
@@ -121,7 +122,7 @@ namespace Kitchen.Tutorial
                 elements = new Transform[] { tutorialElements[(int)TutorialActors.Mortar], tutorialElements[(int)TutorialActors.Shaker] };
                 tutorialShaker.SwitchShakerEnabled(false);
            }
-            StartTutorialSequence(elements);
+            StartCoroutine(StartTutorialSequence(elements));
         }
 
         private void CallAfterAddIngredientToShaker(IngredientData ingredientData) 
@@ -137,32 +138,32 @@ namespace Kitchen.Tutorial
                 elements = new Transform[] { tutorialElements[(int)TutorialActors.Water], tutorialElements[(int)TutorialActors.Shaker] };
                 DisplayDialogueBox(textsDatabase.tutorial2Texts[5]);
             }
-            StartTutorialSequence(elements);
+            StartCoroutine(StartTutorialSequence(elements));
         }
 
 
         private void CallShakeIngredients() 
         {
             tutorialShaker.SwitchShakerEnabled(true);
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] }));
             DisplayDialogueBox(textsDatabase.tutorial2Texts[6]);
         }
 
         private void CallServeToClient()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.PotionResult], tutorialElements[(int)TutorialActors.Client] }));
             DisplayDialogueBox(textsDatabase.tutorial2Texts[7]);
         }
 
         private void CallThrowBurntIngredient()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Stove], tutorialElements[(int)TutorialActors.Trash] });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Stove], tutorialElements[(int)TutorialActors.Trash] }));
             DisplayDialogueBox(textsDatabase.tutorial2Texts[8]);
         }
 
         private void CallTryAgain()
         {
-            StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Carnauba], tutorialElements[(int)TutorialActors.Stove]  });
+            StartCoroutine(StartTutorialSequence(new Transform[] { tutorialElements[(int)TutorialActors.Carnauba], tutorialElements[(int)TutorialActors.Stove]  }));
             DisplayDialogueBox(textsDatabase.tutorial2Texts[3]);
         }
 
