@@ -12,45 +12,37 @@ public class LegendsScriptableObject : ScriptableObject
     [SerializeField] public Place[] places;
 }
 
-[Serializable]
-public class Myth
+public abstract class BookEntry
 {
-    [SerializeField] public LocalizedString ingredient;
+    public abstract ENUM_bookTabs bookEntryType { get; }
     [SerializeField] public LocalizedString name;
-    [SerializeField] public LocalizedString region;
-    [SerializeField] public LocalizedString description;
-    [SerializeField] public LocalizedString mythP1;
-    [SerializeField] public LocalizedString mythP2;
-    [SerializeField] public LocalizedString mythP3;
-    [SerializeField] public Sprite mythSprite;
+    [SerializeField] public Sprite sprite;
+    [SerializeField] public LocalizedString[] texts;
+    [SerializeField] public LocalizedString[] goals;
+}
+
+[Serializable]
+public class Myth : BookEntry
+{
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Myths;
     [SerializeField] public IngredientName refIngredient;
-    [SerializeField] public LocalizedString[] goals;
 }
 
 [Serializable]
-public class IndigenousCommunity
+public class IndigenousCommunity : BookEntry
 {
-    [SerializeField] public LocalizedString name;
-    [SerializeField] public Sprite indigenousSprite;
-    [SerializeField] public LocalizedString[] texts;
-    [SerializeField] public LocalizedString[] goals;
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Indigenous;    
 }
 
 [Serializable]
-public class Ingredient
+public class Ingredient : BookEntry
 {
-    [SerializeField] public string name;
-    [SerializeField] public IngredientName refIngredient;
-    [SerializeField] public Sprite ingredientSprite;
-    [SerializeField] public LocalizedString[] texts;
-    [SerializeField] public LocalizedString[] goals;
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Ingredients;
+    [SerializeField] public IngredientName refIngredient;    
 }
 
 [Serializable]
-public class Place
+public class Place : BookEntry
 {
-    [SerializeField] public string name;
-    [SerializeField] public Sprite placeSprite;
-    [SerializeField] public LocalizedString[] texts;
-    [SerializeField] public LocalizedString[] goals;
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Places;
 }

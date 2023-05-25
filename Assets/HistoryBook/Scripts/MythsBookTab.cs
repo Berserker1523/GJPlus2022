@@ -4,34 +4,28 @@ using UnityEngine.UI;
 
 namespace HistoryBook
 {
-    public class MythsBookTab : MonoBehaviour
+    public abstract class MythsBookTab : MonoBehaviour
     {
         [SerializeField] Image highlightedImage;
         [SerializeField] private bool currentTab;
         [SerializeField] Button button;
-        [SerializeField] ENUM_bookTabs tabType;
-        static UnityAction<MythsBookTab> currentTabSwitchedEvent;
+        [SerializeField] protected ENUM_bookTabs _bookEntryType;
 
-        private void Start()
+        protected virtual void Start()
         {
             button = GetComponentInChildren<Button>();
             button.onClick.AddListener(SetAsCurrentTab);
-            currentTabSwitchedEvent += CheckCurrentTab;
             highlightedImage.enabled = currentTab;
         }
 
-        private void OnDestroy()
+        protected void OnDestroy()
         {
             button.onClick.RemoveListener(SetAsCurrentTab);          
         }
 
+        protected abstract void SetAsCurrentTab();
 
-        public void SetAsCurrentTab( )
-        {
-            currentTabSwitchedEvent?.Invoke(this);
-        }
-
-        public void CheckCurrentTab(MythsBookTab tab)
+        protected void CheckCurrentTab(MythsBookTab tab)
         {
             currentTab = tab == this ? true : false;
             highlightedImage.enabled = currentTab;
