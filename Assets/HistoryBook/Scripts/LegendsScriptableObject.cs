@@ -24,6 +24,7 @@ public class Myth
     [SerializeField] public LocalizedString mythP3;
     [SerializeField] public Sprite mythSprite;
     [SerializeField] public IngredientName refIngredient;
+    [SerializeField] public LocalizedString[] goals;
 }
 
 [Serializable]
@@ -32,6 +33,7 @@ public class IndigenousCommunity
     [SerializeField] public LocalizedString name;
     [SerializeField] public Sprite indigenousSprite;
     [SerializeField] public LocalizedString[] texts;
+    [SerializeField] public LocalizedString[] goals;
 }
 
 [Serializable]
@@ -41,6 +43,7 @@ public class Ingredient
     [SerializeField] public IngredientName refIngredient;
     [SerializeField] public Sprite ingredientSprite;
     [SerializeField] public LocalizedString[] texts;
+    [SerializeField] public LocalizedString[] goals;
 }
 
 [Serializable]
@@ -49,4 +52,5 @@ public class Place
     [SerializeField] public string name;
     [SerializeField] public Sprite placeSprite;
     [SerializeField] public LocalizedString[] texts;
+    [SerializeField] public LocalizedString[] goals;
 }
