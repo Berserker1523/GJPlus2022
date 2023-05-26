@@ -21,11 +21,11 @@ MonoBehaviour:
   minNumberOfMortars: 1
   minNumberOfStoves: 0
   minNumberOfPainKillers: 1
-  time: 60
+  time: 90
   goal: 3
   streak: 3
   streakWaitTime: 15
   levelRecipes:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   levelPercentages: 64000000
-  stars: 010101
+  stars: 000000
