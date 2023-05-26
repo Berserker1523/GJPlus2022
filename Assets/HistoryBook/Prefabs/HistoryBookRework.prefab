@@ -3619,6 +3619,7 @@ MonoBehaviour:
   titleText: {fileID: 2059457477239632465}
   lockedTextTag: {fileID: 6253476316914222132}
   refImage: {fileID: 6253476316125568182}
+  scrollbar: {fileID: 6253476315541821997}
 --- !u!1 &6253476316734599302
 GameObject:
   m_ObjectHideFlags: 0

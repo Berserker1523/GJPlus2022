@@ -20,6 +20,8 @@ namespace HistoryBook
         [SerializeField] public LocalizeStringEvent lockedTextTag;
         [SerializeField] public Image refImage;
 
+        [SerializeField] Scrollbar scrollbar;
+
         private void Start()
         {
             MythsBookTopTab.currentTabSwitchedEvent += TopTabSwitched;
@@ -66,7 +68,7 @@ namespace HistoryBook
                 GameObject newTab = Instantiate(leftTabPrefab, leftList.transform);
                 MythsBookLeftTab leftTab = newTab.GetComponent<MythsBookLeftTab>();
 
-                leftTab.SetBookEntry(bookEntries[i].bookEntryType, bookEntries[i].name, bookEntries[i].texts[0], bookEntries[i].goals[0], bookEntries[i].sprite);
+                leftTab.SetBookEntry(bookEntries[i].bookEntryType, bookEntries[i].name, bookEntries[i].texts, bookEntries[i].goals, bookEntries[i].sprite);
                 if (i == 0)
                 {
                     Debug.Log(leftTab.name);
@@ -87,7 +89,14 @@ namespace HistoryBook
             titleText.StringReference = leftTab._title;
             lockedTextTag.StringReference = leftTab._goal;
             refImage.sprite = leftTab._sprite;
-           // descriptionText.text = leftTab._description;
+            descriptionText.text = leftTab._description;
+            StartCoroutine(ResetHandlePos());
+        }
+
+        private IEnumerator ResetHandlePos()
+        {
+            yield return new WaitForSeconds(0.1f);
+            scrollbar.value = 0.9999f;
         }
     }
 }
