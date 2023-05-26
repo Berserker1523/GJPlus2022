@@ -12,13 +12,13 @@ namespace tutorial
     {
         private bool clientServed = false;
         [SerializeField] private RecipeData requiredRecipe;
-        private SpriteRenderer clientSpriteRend;
-        [SerializeField] private Sprite happyClientSprite;
 
         //Animation Params
         [SerializeField] Animator animator;
         private string animatorIllnessParameter = "Illness";
         private string animatorRecuperatedParameter = "Recuperated";
+        private ParticleSystem healingVFX;
+
 
         public void OnDrop(PointerEventData pointerEventData)
         {
@@ -49,8 +49,8 @@ namespace tutorial
 
         protected void Awake()
         {
-            clientSpriteRend = GetComponent<SpriteRenderer>();
             animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
+            healingVFX = GetComponentInChildren<ParticleSystem>();
         }
 
         public IEnumerator ClientServedRoutine()
@@ -58,9 +58,8 @@ namespace tutorial
             clientServed = true;
             animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
+            healingVFX.Play();
             yield return new WaitForSeconds(3f);
-
-            //Destroy(gameObject);
         }
     }
 
