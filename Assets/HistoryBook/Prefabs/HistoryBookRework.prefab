@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mythsDatabase: {fileID: 11400000, guid: 577d8ff28c17beb48826a5f1ee84b016, type: 2}
   leftList: {fileID: 6253476315959004497}
-  leftTabPrefab: {fileID: 0}
+  leftTabPrefab: {fileID: 1631437768759333520, guid: 0e23164f2ce8d774fa36832a7cab004e, type: 3}
 --- !u!1 &6253476316734599302
 GameObject:
   m_ObjectHideFlags: 0

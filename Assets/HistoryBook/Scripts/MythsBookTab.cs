@@ -9,7 +9,7 @@ namespace HistoryBook
         [SerializeField] Image highlightedImage;
         [SerializeField] private bool currentTab;
         [SerializeField] Button button;
-        [SerializeField] protected ENUM_bookTabs _bookEntryType;
+        [SerializeField] public ENUM_bookTabs _bookEntryType;
 
         protected virtual void Start()
         {
@@ -18,7 +18,7 @@ namespace HistoryBook
             highlightedImage.enabled = currentTab;
         }
 
-        protected void OnDestroy()
+        protected virtual void OnDestroy()
         {
             button.onClick.RemoveListener(SetAsCurrentTab);          
         }

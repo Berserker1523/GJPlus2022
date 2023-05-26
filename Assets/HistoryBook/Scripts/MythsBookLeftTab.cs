@@ -3,18 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 
 public class MythsBookLeftTab : MythsBookTab
 {
-    [SerializeField] LocalizeStringEvent _title;
-    [SerializeField] LocalizeStringEvent _description;
-    [SerializeField] LocalizeStringEvent _goal;
+    [SerializeField] LocalizedString _title;
+    [SerializeField] LocalizedString _description;
+    [SerializeField] LocalizedString _goal;
     [SerializeField] Sprite _sprite;
 
-    static UnityAction<MythsBookLeftTab> currentTabSwitchedEvent;
+    public static UnityAction<MythsBookLeftTab> currentTabSwitchedEvent;
 
-    public void SetBookEntry(ENUM_bookTabs bookEntryType, LocalizeStringEvent title, LocalizeStringEvent description, LocalizeStringEvent goal, Sprite sprite)
+    public void SetBookEntry(ENUM_bookTabs bookEntryType, LocalizedString title, LocalizedString description, LocalizedString goal, Sprite sprite)
     {
        _bookEntryType= bookEntryType;
         _title= title;
@@ -27,6 +28,12 @@ public class MythsBookLeftTab : MythsBookTab
     {
         base.Start();
         currentTabSwitchedEvent += CheckCurrentTab;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        currentTabSwitchedEvent -= CheckCurrentTab;
     }
 
     protected override void SetAsCurrentTab()

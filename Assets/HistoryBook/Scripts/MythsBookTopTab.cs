@@ -5,7 +5,7 @@ namespace HistoryBook
 {
     public class MythsBookTopTab : MythsBookTab
     {
-        static UnityAction<MythsBookTopTab> currentTabSwitchedEvent;
+        public static UnityAction<MythsBookTopTab> currentTabSwitchedEvent;
 
         protected override void Start()
         {
@@ -16,6 +16,12 @@ namespace HistoryBook
         protected override void SetAsCurrentTab()
         {
             currentTabSwitchedEvent?.Invoke(this);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            currentTabSwitchedEvent-= CheckCurrentTab;
         }
     }
 }

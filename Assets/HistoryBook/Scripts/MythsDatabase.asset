@@ -22,9 +22,33 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    sprite: {fileID: 0}
-    texts: []
-    goals: []
+    sprite: {fileID: 1519564248, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
+    texts:
+    - m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 1730649018368
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 1765671456768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    goals:
+    - m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 2828520156659712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     refIngredient: 6
   - name:
       m_TableReference:
@@ -35,7 +59,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    sprite: {fileID: 0}
+    sprite: {fileID: -1573586799, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
     texts:
     - m_TableReference:
         m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
@@ -53,7 +77,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    goals: []
+    goals:
+    - m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 2828520156659712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     refIngredient: 2
   - name:
       m_TableReference:
@@ -64,7 +96,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    sprite: {fileID: 0}
+    sprite: {fileID: -1680578388, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
     texts:
     - m_TableReference:
         m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
@@ -82,7 +114,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    goals: []
+    goals:
+    - m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 2828520156659712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     refIngredient: 1
   - name:
       m_TableReference:
@@ -136,9 +176,84 @@ MonoBehaviour:
     texts: []
     goals: []
     refIngredient: 0
-  indigenousCommunities: []
-  ingredients: []
-  places: []
+  indigenousCommunities:
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
+  ingredients:
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
+    refIngredient: 0
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
+    refIngredient: 0
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
+    refIngredient: 0
+  places:
+  - name:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: 0}
+    texts: []
+    goals: []
   references:
     version: 2
     RefIds: []
