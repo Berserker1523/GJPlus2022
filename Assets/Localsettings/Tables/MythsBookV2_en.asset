@@ -49,26 +49,30 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1411018679746560
-    m_Localized: Use the {0} {1}  times more to expand
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00> Use the <color=#5e9341> {0} <color=#a06f47> 
+      {1}  times more to expand ] </color>'
     m_Metadata:
       m_Items:
       - rid: 8010823519888998402
   - m_Id: 1411247244148736
-    m_Localized: Earn {0} stars more  in the level {1} to expand
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00>Earn <color=#5e9341>{0} <color=#a06f47>
+      stars more  in the level {1} to expand ] </color>'
     m_Metadata:
       m_Items:
       - rid: 8010823519888998402
   - m_Id: 1411365854871552
-    m_Localized: Entry Full
+    m_Localized: ' <color=#a06f47> Entry Full </color>'
     m_Metadata:
       m_Items: []
   - m_Id: 1411301770100736
-    m_Localized: 'Do {0} x3 streaks more to expand '
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00> Do <color=#5e9341>{0} <color=#a06f47>
+      x3 streaks more to expand  ] </color>'
     m_Metadata:
       m_Items:
       - rid: 8010823519888998402
   - m_Id: 1411319834968064
-    m_Localized: Complete the level {0} to expand
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00>Complete the level <color=#5e9341>{0} 
+      <color=#a06f47>to expand ] </color>'
     m_Metadata:
       m_Items:
       - rid: 8010823519888998402
