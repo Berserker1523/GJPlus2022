@@ -5,6 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class MythsBookLeftTab : MythsBookTab
@@ -125,10 +127,7 @@ public class MythsBookLeftTab : MythsBookTab
                 _goal.Arguments[0] = _goalsInt[position];
                 break;
             case ENUM_bookTabs.Places:
-                if (position == 0)
-                    _goal.Arguments[0] = "tutorial";
-                else
-                    _goal.Arguments[0] = position;           
+                _goal.Arguments[0] = GetArgumentTakingInAccountTheTutorialCompletion(position);
                 break;
         }
 
@@ -149,9 +148,21 @@ public class MythsBookLeftTab : MythsBookTab
 
         int restantStars = 3 - currentStars;
         if(restantStars != 0)
-            goals.Arguments[0] = restantStars;
+        {
+            _goal.SetReference(goals.TableReference, goals.TableEntryReference);
+            _goal.Arguments[0] = restantStars;
+            _goal.Arguments[1] = GetArgumentTakingInAccountTheTutorialCompletion(pos);
+        }
 
         return mythText;
+    }
+
+    string GetArgumentTakingInAccountTheTutorialCompletion(int position)
+    {
+        if (position == 0)
+            return "tutorial";
+        else
+            return position.ToString();
     }
 
     bool CheckLevelCompletions(int pos)
