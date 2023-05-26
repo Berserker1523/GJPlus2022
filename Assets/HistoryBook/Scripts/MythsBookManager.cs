@@ -97,12 +97,8 @@ namespace HistoryBook
                         break;
                 }
 
-
                 if (i == 0)
-                {
-                    Debug.Log(leftTab.name);
-                    MythsBookLeftTab.currentTabSwitchedEvent?.Invoke(leftTab); 
-                }
+                    MythsBookLeftTab.currentTabSwitchedEvent?.Invoke(leftTab);                
             }
         }
 

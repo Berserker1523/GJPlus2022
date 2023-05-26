@@ -5,9 +5,6 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
-using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class MythsBookLeftTab : MythsBookTab
 {
@@ -32,14 +29,9 @@ public class MythsBookLeftTab : MythsBookTab
         _index = index;
         _tabName.StringReference = entry.name;
        _bookEntryType = entry.bookEntryType;
-        _title= entry.name;
-        
-        //_goal.StringChanged += UpdateText;
-        Debug.Log(entry.goal.Arguments);
+        _title= entry.name;     
         _description = SetMythText(entry.texts, entry.goal); 
-        //_goal= GetCurrentGoal(entry.goal);
         _sprite= entry.sprite;
-
     }
 
     public void SetBookEntry(GameData gameData, IndigenousCommunity entry)
@@ -124,9 +116,7 @@ public class MythsBookLeftTab : MythsBookTab
             case ENUM_bookTabs.Places:
                 _goal.Arguments[0] = GetArgumentTakingInAccountTheTutorialCompletion(position);
                 break;
-        }
-
-        
+        }       
         return goals;
     }
 
