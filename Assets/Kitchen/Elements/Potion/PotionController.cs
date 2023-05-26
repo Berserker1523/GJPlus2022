@@ -32,6 +32,8 @@ namespace Kitchen
         private IEnumerator updateTimerRoutine;
 
         private FMOD.Studio.EventInstance shakerSound;
+        private bool shakerEnabled = true;
+        private bool inTutorial;
 
         private void Awake()
         {
@@ -44,6 +46,13 @@ namespace Kitchen
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
             shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTimer);
+        }
+
+        private void StopTimer(bool tutorial)
+        {
+            inTutorial = tutorial;
+            anim.speed = tutorial ? 0:1;
         }
 
         private void OnDestroy()
@@ -103,7 +112,7 @@ namespace Kitchen
             potionBranchesScalers[potionIngredients.Count - 1].ScaleSpriteToBounds();
 
             if(ingredientData.ingredientName != IngredientName.Water)
-                EventManager.Dispatch(PotionEvent.AddIngredient);
+                EventManager.Dispatch(PotionEvent.AddIngredient, ingredientData);
         }
 
         private void CheckRecipe()
@@ -155,7 +164,7 @@ namespace Kitchen
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1)
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1 || !shakerEnabled)
                 return;
 
             anim.SetBool("Shake", true);
@@ -172,10 +181,14 @@ namespace Kitchen
             float currentTime = 0;
             while(true)
             {
+                while (inTutorial)
+                    yield return new WaitForSeconds(0.1f);
                 yield return new WaitForEndOfFrame();
                 currentTime += Time.deltaTime;
                 timer.SetFillAmount(currentTime / seconds);
             }
         }
+
+        public void SwitchShakerEnabled(bool enabled) => shakerEnabled= enabled;
     }
 }

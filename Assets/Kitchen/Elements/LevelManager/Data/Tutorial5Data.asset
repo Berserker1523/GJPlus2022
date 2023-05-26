@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc8ed744b13a5847931fb34a8852261, type: 3}
-  m_Name: Level2Data
+  m_Name: Tutorial5Data
   m_EditorClassIdentifier: 
-  level: 2
+  level: 0
   clientNumber: 10
   initialSpawnSeconds: 5
-  minSpawnSeconds: 15
-  maxSpawnSeconds: 20
-  minNumberOfPotionRecipients: 2
-  minNumberOfMortars: 3
-  minNumberOfStoves: 2
+  minSpawnSeconds: 10
+  maxSpawnSeconds: 17
+  minNumberOfPotionRecipients: 1
+  minNumberOfMortars: 1
+  minNumberOfStoves: 1
   minNumberOfPainKillers: 1
-  time: 250
-  goal: 8
-  streak: 3
+  time: 1
+  goal: 3
+  streak: 1
   streakWaitTime: 15
   levelRecipes:
-  - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
-  levelPercentages: 3200000032000000
+  levelPercentages: 64000000
   stars: 000000

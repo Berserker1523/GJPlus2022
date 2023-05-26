@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AnimExport/Scenes/MainMenu.unity
     guid: 683ba143eb21e9849a34f89cff16b0ed
-  - enabled: 1
-    path: Assets/AnimExport/Scenes/HistoryBook.unity
-    guid: 22286fa24d160c649a3be069a07d3ca6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Kitchen1.unity
     guid: 89a475ba580166741981311188e48f93
@@ -30,11 +30,17 @@ EditorBuildSettings:
     path: Assets/AnimExport/Scenes/Kitchen/Tutorial/Tutorial4.unity
     guid: b17d1dd2961020e4f935a3cccd63da98
   - enabled: 1
+    path: Assets/AnimExport/Scenes/Kitchen/Tutorial/Tutorial5.unity
+    guid: 48462563267ca7441aeb8c08d5cacc0b
+  - enabled: 1
     path: Assets/AnimExport/Scenes/Credits2.unity
     guid: 8122cfa21d4270847b5e115786da5efe
   - enabled: 1
     path: Assets/AnimExport/Scenes/TutorialsSelector.unity
     guid: 4c303353c464520499a79615fd66e238
+  - enabled: 1
+    path: Assets/AnimExport/Scenes/Kitchen/Kitchen2.unity
+    guid: 016bf21dc68780a40904b3dae588df08
   - enabled: 1
     path: Assets/AnimExport/Scenes/HistoryBook.unity
     guid: b12683c08a61796489eeb046a9e932ac

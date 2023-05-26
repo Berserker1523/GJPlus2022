@@ -89,7 +89,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Pequi], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
-            DisplayDialogueBox(textsDatabase.texts[0]);
+            DisplayDialogueBox(textsDatabase.tutorial1Texts[0]);
         }
 
         private void CallSecondCoroutine()
@@ -98,7 +98,7 @@ namespace Kitchen.Tutorial
             //activates colliders
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Mortar], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
-            DisplayDialogueBox(textsDatabase.texts[1]);
+            DisplayDialogueBox(textsDatabase.tutorial1Texts[1]);
         }
        
         private void CallThirdCoroutine() 
@@ -107,7 +107,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Water], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
-            DisplayDialogueBox(textsDatabase.texts[2]);
+            DisplayDialogueBox(textsDatabase.tutorial1Texts[2]);
         }
 
 
@@ -115,7 +115,7 @@ namespace Kitchen.Tutorial
         {
             handTutorial.StartNewSequence(new Transform[] { tutorialElements[(int)TutorialActors.Shaker] });
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Shaker], true);
-            DisplayDialogueBox(textsDatabase.texts[3]);
+            DisplayDialogueBox(textsDatabase.tutorial1Texts[3]);
         }
 
         private void callFifhtCoroutine()
@@ -124,7 +124,7 @@ namespace Kitchen.Tutorial
 
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.PotionResult], true);
             SwitchObjectCollider(tutorialElements[(int)TutorialActors.Client], true);
-            DisplayDialogueBox(textsDatabase.texts[4]);
+            DisplayDialogueBox(textsDatabase.tutorial1Texts[4]);
         }
 
 

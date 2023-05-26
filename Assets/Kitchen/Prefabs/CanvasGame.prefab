@@ -595,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashTutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 9046988670229661382, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
 --- !u!224 &3330192006668349939 stripped
