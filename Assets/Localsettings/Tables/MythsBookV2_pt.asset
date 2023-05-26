@@ -49,7 +49,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1411018679746560
-    m_Localized: "Usa el {0} {1} veces m\xE1s para expandir"
+    m_Localized: "Usa {0} {1} veces m\xE1s para expandir"
     m_Metadata:
       m_Items:
       - rid: 8010823519888998403
