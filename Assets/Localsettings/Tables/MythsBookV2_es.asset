@@ -16,13 +16,66 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 76127b2dd3da0e54ca69ffc7aea3a347, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8010823519888998404
   m_TableData:
   - m_Id: 12854329344
     m_Localized: '<color=#a06f47>[ <color=#e55c00> CURA <color=#5e9341> 22 <color=#a06f47>
       INDIGENAS DE ESTA TRIBU PARA EXPANDIR  ]  </color> '
     m_Metadata:
       m_Items: []
+  - m_Id: 1410477933297664
+    m_Localized: Mitos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410686524424192
+    m_Localized: Ingredientes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410803084132352
+    m_Localized: "Ind\xEDgenas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410865772199936
+    m_Localized: Lugares
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410902602383360
+    m_Localized: Munduruku
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410959892381696
+    m_Localized: Amazonas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1411018679746560
+    m_Localized: "Usa el {0} {1} veces m\xE1s para expandir"
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998404
+  - m_Id: 1411365854871552
+    m_Localized: Entrada Completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1411247244148736
+    m_Localized: "Consigue {0} estrellas m\xE1s en el nivel {1}  to expand"
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998404
+  - m_Id: 1411319834968064
+    m_Localized: Completa el nivel {0} para expandir
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998404
+  - m_Id: 1411301770100736
+    m_Localized: "Realiza {0} rachas x3 m\xE1s para expandir"
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998404
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8010823519888998404
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00802d63500305000080ad9a850305000080ad4c9203050000806d8196030500

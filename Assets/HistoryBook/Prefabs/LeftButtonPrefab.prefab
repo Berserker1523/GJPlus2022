@@ -104,26 +104,20 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _description:
-    m_TableReference:
-      m_TableCollectionName: 
-    m_TableEntryReference:
-      m_KeyId: 0
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _description: 
   _goal:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:76127b2dd3da0e54ca69ffc7aea3a347
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1411365854871552
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _sprite: {fileID: 0}
   _tabName: {fileID: 3610028627098059652}
+  _goalsInt: 
+  _refIngredient: 0
   references:
     version: 2
     RefIds: []

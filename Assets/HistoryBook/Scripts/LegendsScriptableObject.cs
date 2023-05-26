@@ -18,13 +18,14 @@ public abstract class BookEntry
     [SerializeField] public LocalizedString name;
     [SerializeField] public Sprite sprite;
     [SerializeField] public LocalizedString[] texts;
-    [SerializeField] public LocalizedString[] goals;
+    [SerializeField] public abstract LocalizedString goal { get; }
 }
 
 [Serializable]
 public class Myth : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Myths;
+    public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Stars");   
     [SerializeField] public IngredientName refIngredient;
 }
 
@@ -32,6 +33,7 @@ public class Myth : BookEntry
 public class IndigenousCommunity : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Indigenous;
+    public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Streaks");
     public int[] goalsInt;
 }
 
@@ -39,6 +41,7 @@ public class IndigenousCommunity : BookEntry
 public class Ingredient : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Ingredients;
+    public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Ingredients");
     [SerializeField] public IngredientName refIngredient;    
     public int[] goalsInt;
 }
@@ -47,4 +50,5 @@ public class Ingredient : BookEntry
 public class Place : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Places;
+    public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Places");
 }

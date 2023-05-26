@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class MythsBookLeftTab : MythsBookTab
 {
@@ -17,6 +18,8 @@ public class MythsBookLeftTab : MythsBookTab
     [SerializeField] public IngredientName _refIngredient;
     private int _index;
 
+    private int _argument0, argument1;
+
     public static UnityAction<MythsBookLeftTab> currentTabSwitchedEvent;
 
     GameData _gameData;
@@ -28,9 +31,13 @@ public class MythsBookLeftTab : MythsBookTab
         _tabName.StringReference = entry.name;
        _bookEntryType = entry.bookEntryType;
         _title= entry.name;
-        _description= SetMythText(entry.texts);
-        _goal= GetCurrentGoal(entry.goals);
+        
+        //_goal.StringChanged += UpdateText;
+        Debug.Log(entry.goal.Arguments);
+        _description = SetMythText(entry.texts, entry.goal); 
+        //_goal= GetCurrentGoal(entry.goal);
         _sprite= entry.sprite;
+
     }
 
     public void SetBookEntry(GameData gameData, IndigenousCommunity entry)
@@ -44,6 +51,10 @@ public class MythsBookLeftTab : MythsBookTab
         _goalsInt = entry.goalsInt;
         _refIngredient = entry.refIngredient;
         SetBookEntry(gameData,  (BookEntry)entry);
+    }
+    private void OnEnable()
+    {
+        _goal.Arguments = new object[] { _argument0, argument1 };
     }
 
     protected override void Start()
@@ -63,11 +74,12 @@ public class MythsBookLeftTab : MythsBookTab
         currentTabSwitchedEvent?.Invoke(this);
     }
 
-    protected string SetMythText(LocalizedString[] texts)
-    {
-        string mythText = "";
+    protected string SetMythText(LocalizedString[] texts, LocalizedString goal)
+    {              
         if(_bookEntryType== ENUM_bookTabs.Myths)
-            return CheckMythsStars(_index,texts); 
+            return CheckMythsStars(_index,texts, goal);
+        
+        string mythText = "";
 
         for (int i=0; i<texts.Length; i++)
         {    // TODO check the current Goal
@@ -87,6 +99,12 @@ public class MythsBookLeftTab : MythsBookTab
             }
              if(entryUnlocked)
             mythText += GetStringFromLocalizedString(texts[i]);
+            else
+            {
+                GetCurrentGoal(goal, i);
+                break;
+            }
+
         }
         return mythText;
     }
@@ -94,13 +112,31 @@ public class MythsBookLeftTab : MythsBookTab
     protected string GetStringFromLocalizedString(LocalizedString localizedString)=>   
         LocalizationSettings.StringDatabase.GetLocalizedString(localizedString.TableReference, localizedString.TableEntryReference);  
 
-    protected LocalizedString GetCurrentGoal(LocalizedString[] goals)
+    protected LocalizedString GetCurrentGoal(LocalizedString goals, int position)
     {
-        // TODO check the current Goal
-        return goals[0];
+        _goal.SetReference(goals.TableReference, goals.TableEntryReference);
+        switch (_bookEntryType)
+        {
+            case ENUM_bookTabs.Ingredients:
+                _goal.Arguments[0] = _refIngredient.ToString();
+                _goal.Arguments[1] = _goalsInt[position];
+                break;
+            case ENUM_bookTabs.Indigenous:
+                _goal.Arguments[0] = _goalsInt[position];
+                break;
+            case ENUM_bookTabs.Places:
+                if (position == 0)
+                    _goal.Arguments[0] = "tutorial";
+                else
+                    _goal.Arguments[0] = position;           
+                break;
+        }
+
+        
+        return goals;
     }
 
-    string CheckMythsStars(int pos, LocalizedString[] texts)
+    string CheckMythsStars(int pos, LocalizedString[] texts, LocalizedString goals)
     {
         int currentStars=0;
         foreach (bool star in GetRow(_gameData.stars, pos))      
@@ -110,7 +146,12 @@ public class MythsBookLeftTab : MythsBookTab
         string mythText = "";
        for (int i=0; i<currentStars;i++)                
             mythText += GetStringFromLocalizedString(texts[i]);
-       return mythText;
+
+        int restantStars = 3 - currentStars;
+        if(restantStars != 0)
+            goals.Arguments[0] = restantStars;
+
+        return mythText;
     }
 
     bool CheckLevelCompletions(int pos)
