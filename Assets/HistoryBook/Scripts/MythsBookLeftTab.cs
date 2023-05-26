@@ -108,10 +108,10 @@ public class MythsBookLeftTab : MythsBookTab
         {
             case ENUM_bookTabs.Ingredients:
                 _goal.Arguments[0] = _refIngredient.ToString();
-                _goal.Arguments[1] =  _goalsInt[position]- GlobalCounter.attendedClients[(int)_refIngredient];
+                _goal.Arguments[1] =  _goalsInt[position]- _gameData.attendedClients[(int)_refIngredient];
                 break;
             case ENUM_bookTabs.Indigenous:
-                _goal.Arguments[0] = _goalsInt[position] - GlobalCounter.streaksAmount;
+                _goal.Arguments[0] = _goalsInt[position] - _gameData.streaksAmount;
                 break;
             case ENUM_bookTabs.Places:
                 _goal.Arguments[0] = GetArgumentTakingInAccountTheTutorialCompletion(position);
