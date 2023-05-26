@@ -13,6 +13,7 @@ namespace Kitchen
         public bool[] trigerrableTutorials = new bool[1];
 
         public int[] attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
+        public int streaksAmount;
         [SerializeField]
 
         public GameData(StarsData starsData)
@@ -20,7 +21,8 @@ namespace Kitchen
             currentLevel = LevelManager.CurrentLevel;
             stars = starsData.stars;
             tutorials = starsData.tutorials;
-            attendedClients = GlobalCounter.attendedClients;         
+            attendedClients = GlobalCounter.attendedClients;
+            streaksAmount = GlobalCounter.streaksAmount;         
         }
 
         public GameData()
@@ -30,6 +32,7 @@ namespace Kitchen
             tutorials = new bool[6];
             trigerrableTutorials = new bool[1];
             attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
+            streaksAmount = 0;
         }
 
        /* public GameData(bool tutorial)

@@ -31,7 +31,8 @@ public class Myth : BookEntry
 [Serializable]
 public class IndigenousCommunity : BookEntry
 {
-    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Indigenous;    
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Indigenous;
+    public int[] goalsInt;
 }
 
 [Serializable]
@@ -39,6 +40,7 @@ public class Ingredient : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Ingredients;
     [SerializeField] public IngredientName refIngredient;    
+    public int[] goalsInt;
 }
 
 [Serializable]

@@ -48,7 +48,10 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
 
             if (gameData.attendedClients != null)
+            {
                 GlobalCounter.attendedClients = gameData.attendedClients;
+                GlobalCounter.streaksAmount = gameData.streaksAmount;
+            }
         }
 
         public void SetGoalStar()

@@ -1,3 +1,5 @@
+using Events;
+using Kitchen;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace HistoryBook
@@ -21,18 +24,30 @@ namespace HistoryBook
         [SerializeField] public Image refImage;
 
         [SerializeField] Scrollbar scrollbar;
+        GameData gameData;
 
-        private void Start()
+        private void Awake()
         {
+            gameData = SaveManager.LoadStarsData();
+            if (gameData == null)
+                gameData = new GameData();
+
             MythsBookTopTab.currentTabSwitchedEvent += TopTabSwitched;
             MythsBookLeftTab.currentTabSwitchedEvent += LeftTabSwitched;
-            TopTabSwitched(new MythsBookTopTab());
+            TopTabSwitched(new MythsBookTopTab()); 
+
         }
 
         private void OnDestroy()
         {
             MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
             MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
+        }
+
+        public void Back()
+        {
+            EventManager.Dispatch(GlobalEvent.Unlocked);
+            SceneManager.UnloadSceneAsync(SceneName.HistoryBookRework.ToString());
         }
 
         private void TopTabSwitched(MythsBookTopTab newTab)
@@ -68,7 +83,21 @@ namespace HistoryBook
                 GameObject newTab = Instantiate(leftTabPrefab, leftList.transform);
                 MythsBookLeftTab leftTab = newTab.GetComponent<MythsBookLeftTab>();
 
-                leftTab.SetBookEntry(bookEntries[i].bookEntryType, bookEntries[i].name, bookEntries[i].texts, bookEntries[i].goals, bookEntries[i].sprite);
+                ENUM_bookTabs type = bookEntries[i].bookEntryType;
+                switch (type)
+                {
+                    case ENUM_bookTabs.Indigenous:
+                    leftTab.SetBookEntry(gameData,(IndigenousCommunity) bookEntries[i]);
+                        break;
+                    case ENUM_bookTabs.Ingredients:
+                        leftTab.SetBookEntry(gameData, (Ingredient) bookEntries[i]);
+                        break;
+                    default:
+                        leftTab.SetBookEntry(gameData, bookEntries[i]);
+                        break;
+                }
+
+
                 if (i == 0)
                 {
                     Debug.Log(leftTab.name);
