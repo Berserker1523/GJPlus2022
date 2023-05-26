@@ -57,11 +57,6 @@ public class MythsBookLeftTab : MythsBookTab
     private void OnEnable()
     {
         _goal.Arguments = new object[] { _argument0, argument1 };
-    }
-
-    protected override void Start()
-    {
-        base.Start();
         currentTabSwitchedEvent += CheckCurrentTab;       
     }
 
