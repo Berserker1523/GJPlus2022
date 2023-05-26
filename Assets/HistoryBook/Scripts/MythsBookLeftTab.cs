@@ -8,16 +8,18 @@ using UnityEngine.Localization.Components;
 
 public class MythsBookLeftTab : MythsBookTab
 {
-    [SerializeField] LocalizedString _title;
-    [SerializeField] LocalizedString _description;
-    [SerializeField] LocalizedString _goal;
-    [SerializeField] Sprite _sprite;
+    [SerializeField] public LocalizedString _title;
+    [SerializeField] public LocalizedString _description;
+    [SerializeField] public LocalizedString _goal;
+    [SerializeField] public Sprite _sprite;
+    [SerializeField] public LocalizeStringEvent _tabName;
 
     public static UnityAction<MythsBookLeftTab> currentTabSwitchedEvent;
 
     public void SetBookEntry(ENUM_bookTabs bookEntryType, LocalizedString title, LocalizedString description, LocalizedString goal, Sprite sprite)
     {
-       _bookEntryType= bookEntryType;
+        _tabName.StringReference = title;
+       _bookEntryType = bookEntryType;
         _title= title;
         _description= description;
         _goal= goal;

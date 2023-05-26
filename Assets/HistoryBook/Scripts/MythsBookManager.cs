@@ -1,7 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.UI;
 
 namespace HistoryBook
 {
@@ -11,15 +15,21 @@ namespace HistoryBook
         [SerializeField] public GameObject leftList;
         [SerializeField] public GameObject leftTabPrefab;
 
+        [SerializeField] public TextMeshProUGUI descriptionText;
+        [SerializeField] public LocalizeStringEvent titleText;
+        [SerializeField] public LocalizeStringEvent lockedTextTag;
+        [SerializeField] public Image refImage;
 
         private void Start()
         {
             MythsBookTopTab.currentTabSwitchedEvent += TopTabSwitched;
+            MythsBookLeftTab.currentTabSwitchedEvent += LeftTabSwitched;
             TopTabSwitched(new MythsBookTopTab());
         }
 
         private void OnDestroy()
         {
+            MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
             MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
         }
 
@@ -69,6 +79,15 @@ namespace HistoryBook
         {
             foreach(Transform tab in leftList.transform)
                 Destroy(tab.gameObject);
+        }
+
+
+        private void LeftTabSwitched(MythsBookLeftTab leftTab)
+        {
+            titleText.StringReference = leftTab._title;
+            lockedTextTag.StringReference = leftTab._goal;
+            refImage.sprite = leftTab._sprite;
+           // descriptionText.text = leftTab._description;
         }
     }
 }

@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6253476315541821986}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2896,6 +2896,7 @@ GameObject:
   - component: {fileID: 6253476316548454584}
   - component: {fileID: 6253476316548454590}
   - component: {fileID: 6253476316548454585}
+  - component: {fileID: 2059457477239632465}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -3020,6 +3021,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2059457477239632465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253476316548454587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6253476316548454585}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &6253476316583086734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,7 +3341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 19.25, y: -0.000011920929}
+  m_AnchoredPosition: {x: 19.25, y: -0.0000095665455}
   m_SizeDelta: {x: 38.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6253476316671841752
@@ -3574,6 +3615,10 @@ MonoBehaviour:
   mythsDatabase: {fileID: 11400000, guid: 577d8ff28c17beb48826a5f1ee84b016, type: 2}
   leftList: {fileID: 6253476315959004497}
   leftTabPrefab: {fileID: 1631437768759333520, guid: 0e23164f2ce8d774fa36832a7cab004e, type: 3}
+  descriptionText: {fileID: 6253476316671841755}
+  titleText: {fileID: 2059457477239632465}
+  lockedTextTag: {fileID: 6253476316914222132}
+  refImage: {fileID: 6253476316125568182}
 --- !u!1 &6253476316734599302
 GameObject:
   m_ObjectHideFlags: 0
