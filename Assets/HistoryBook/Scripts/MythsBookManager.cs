@@ -93,7 +93,7 @@ namespace HistoryBook
                         leftTab.SetBookEntry(gameData, (Ingredient) bookEntries[i]);
                         break;
                     default:
-                        leftTab.SetBookEntry(gameData, bookEntries[i]);
+                        leftTab.SetBookEntry(gameData, bookEntries[i], i);
                         break;
                 }
 

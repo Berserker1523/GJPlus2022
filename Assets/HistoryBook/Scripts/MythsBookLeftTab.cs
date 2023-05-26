@@ -15,20 +15,22 @@ public class MythsBookLeftTab : MythsBookTab
     [SerializeField] public LocalizeStringEvent _tabName;
     [SerializeField] public int[] _goalsInt;
     [SerializeField] public IngredientName _refIngredient;
+    private int _index;
 
     public static UnityAction<MythsBookLeftTab> currentTabSwitchedEvent;
 
     GameData _gameData;
 
-    public void SetBookEntry(GameData gameData, BookEntry entry)
+    public void SetBookEntry(GameData gameData, BookEntry entry, int index=0)
     {
+        _gameData = gameData;
+        _index = index;
         _tabName.StringReference = entry.name;
        _bookEntryType = entry.bookEntryType;
         _title= entry.name;
         _description= SetMythText(entry.texts);
         _goal= GetCurrentGoal(entry.goals);
         _sprite= entry.sprite;
-        _gameData = gameData;
     }
 
     public void SetBookEntry(GameData gameData, IndigenousCommunity entry)
@@ -63,19 +65,16 @@ public class MythsBookLeftTab : MythsBookTab
 
     protected string SetMythText(LocalizedString[] texts)
     {
-        if (_gameData == null)
-            _gameData = new GameData();
-
         string mythText = "";
-        for(int i=0; i<texts.Length; i++)
+        if(_bookEntryType== ENUM_bookTabs.Myths)
+            return CheckMythsStars(_index,texts); 
+
+        for (int i=0; i<texts.Length; i++)
         {    // TODO check the current Goal
             bool entryUnlocked=false;
 
             switch (_bookEntryType)
-            {
-                case ENUM_bookTabs.Myths:
-                    mythText = CheckMythsStars(i, texts);
-                    break;
+            {                 
                 case ENUM_bookTabs.Ingredients:
                     entryUnlocked = CheckAttendedClients(i);
                     break;
@@ -109,7 +108,7 @@ public class MythsBookLeftTab : MythsBookTab
                 currentStars++;
 
         string mythText = "";
-       for (int i=0; i<currentStars;i++)
+       for (int i=0; i<currentStars;i++)                
             mythText += GetStringFromLocalizedString(texts[i]);
        return mythText;
     }
