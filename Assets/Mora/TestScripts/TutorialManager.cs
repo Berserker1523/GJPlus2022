@@ -144,7 +144,7 @@ namespace Kitchen.Tutorial
         public IEnumerator endOfTutorial()
         {
             yield return new WaitForSeconds(14f);
-            EventManager.Dispatch(GlobalTutorialEvent.Tutorial0Completed);
+            EventManager.Dispatch(GlobalTutorialEvent.Tutorial0Completed,0);
             yield return StartCoroutine(DisplayMythsUpdatedPopUP());
             LoadKitchen1();
 
