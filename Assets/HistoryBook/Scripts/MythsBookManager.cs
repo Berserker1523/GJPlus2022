@@ -47,7 +47,7 @@ namespace HistoryBook
         public void Back()
         {
             EventManager.Dispatch(GlobalEvent.Unlocked);
-            SceneManager.UnloadSceneAsync(SceneName.HistoryBookRework.ToString());
+            SceneManager.UnloadSceneAsync(SceneName.HistoryBook.ToString());
         }
 
         private void TopTabSwitched(MythsBookTopTab newTab)
