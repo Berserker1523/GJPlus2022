@@ -40,8 +40,8 @@ namespace HistoryBook
 
         private void OnDestroy()
         {
-            MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
-            MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;            
+            MythsBookTopTab.currentTabSwitchedEvent -= TopTabSwitched;
+            MythsBookLeftTab.currentTabSwitchedEvent -= LeftTabSwitched;            
         }
 
         public void Back()
