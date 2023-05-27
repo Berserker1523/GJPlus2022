@@ -30,7 +30,7 @@ namespace Kitchen.Tutorial
         [ContextMenuItem("MoveObject", "Move")]
         [SerializeField] Transform currentPos;
 
-        [SerializeField] private GameObject updatedMythsGO;
+        //[SerializeField] private GameObject updatedMythsGO;
 
         [SerializeField] private bool replaying;
         [SerializeField] GameObject pauseMenu;
@@ -46,7 +46,7 @@ namespace Kitchen.Tutorial
             EventManager.AddListener(ClientEvent.Served, FinalCoroutineStart);
             EventManager.AddListener(GlobalTutorialEvent.replayingTutorial, SetTutorialReplay);
 
-            updatedMythsGO.SetActive(false);
+            //updatedMythsGO.SetActive(false);
             handTutorial = FindObjectOfType<HandTutorial>();
         }
 
@@ -144,7 +144,7 @@ namespace Kitchen.Tutorial
         {
             yield return new WaitForSeconds(14f);
             EventManager.Dispatch(GlobalTutorialEvent.Tutorial0Completed,0);
-            yield return StartCoroutine(DisplayMythsUpdatedPopUP());
+            //yield return StartCoroutine(DisplayMythsUpdatedPopUP());
             LoadKitchen1();
 
         }
@@ -159,12 +159,12 @@ namespace Kitchen.Tutorial
             SceneManager.LoadScene(scene.ToString());
         }
 
-        IEnumerator DisplayMythsUpdatedPopUP()
+       /* IEnumerator DisplayMythsUpdatedPopUP()
         {
             updatedMythsGO.SetActive(true);
             yield return new WaitForSecondsRealtime(3f);
             updatedMythsGO.SetActive(false);
-        }
+        }*/
 
         void DisplayDialogueBox(LocalizedString text)
         {
