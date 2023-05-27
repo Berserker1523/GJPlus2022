@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &1502770106 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4882368683352426014, guid: d8c773d7e9759d64187f3183f00c1b11, type: 3}
+  m_PrefabInstance: {fileID: 4882368684202585917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &401271888342976594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +341,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1173107353333032191, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1502770106}
+    - target: {fileID: 2184107875153792739, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184107875153792739, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184107875153792739, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184107875153792739, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079418621759076170, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.2000732
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959356394612451172, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959356394612451172, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959356394612451172, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959356394612451172, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5006581745318271886, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
       propertyPath: tutorialId
       value: 1
@@ -343,6 +388,26 @@ PrefabInstance:
     - target: {fileID: 6142141875719262071, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
       propertyPath: m_text
       value: Try to heal 3 patients !
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142141875754404204, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005804624647995138, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005804624647995138, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005804624647995138, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005804624647995138, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}

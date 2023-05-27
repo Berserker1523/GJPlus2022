@@ -58,6 +58,7 @@ namespace Kitchen
         private void OnDestroy()
         {
             dropView.OnDropped -= HandleDropped;
+            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, StopTimer);
         }
 
         private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData)

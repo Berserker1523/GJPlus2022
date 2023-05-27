@@ -23,7 +23,6 @@ namespace Kitchen
         void Start()
         {
             EventManager.Dispatch(GlobalTutorialEvent.inTutorial, true);
-            closeButton = GetComponentInChildren<Button>();
             closeButton.onClick.AddListener(StartGame);
         }
 
