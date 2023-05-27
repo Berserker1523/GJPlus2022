@@ -94,9 +94,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 29124567164104704
-    m_Localized: "De acuerdo a sus instrucciones, debo sumergirla en agua hirviendo.
-      Me indic\xF3 que no deber\xEDa  dejarla al fuego mucho tiempo, puesto que 
-      se convetir\xE1 en cenizas"
+    m_Localized: "De acuerdo a \nsus instrucciones, debo sumergirla en agua hirviendo.
+      Me indic\xF3 que no deber\xEDa  dejarla al fuego mucho tiempo, o  se convetir\xE1
+      en cenizas"
     m_Metadata:
       m_Items: []
   - m_Id: 29124590316662784

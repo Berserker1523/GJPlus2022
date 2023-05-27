@@ -72,8 +72,8 @@ MonoBehaviour:
     grave. Preparar\xE9 una poci\xF3n especial que aliviar\xE1 sus s\xEDntomas y
     ayudar\xE1 a curar la infecci\xF3n."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
+  m_sharedMaterial: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 685626334}
   - component: {fileID: 685626333}
   - component: {fileID: 685626332}
-  - component: {fileID: 8452955448473610039}
   m_Layer: 0
   m_Name: PlayerCanvasTutorial
   m_TagString: Untagged
@@ -303,36 +302,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8452955448473610039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685626330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: abe7a4d6c61602842adcfa67d7dfca56, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1947978712}
-          m_TargetAssemblyTypeName: TutorialManager, Tutorial
-          m_MethodName: endOfTutorial
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1106823610
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,8 +529,8 @@ MonoBehaviour:
     como t\xFA. Si alguna vez necesitas mis servicios de nuevo, simplemente vuelve
     aqu\xED."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
+  m_sharedMaterial: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -585,8 +554,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -815,6 +784,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 51ebd8ced74adac489f985113847f088, type: 2}
+    - {fileID: 11400000, guid: abe7a4d6c61602842adcfa67d7dfca56, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -842,6 +812,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1947978712}
+          m_TargetAssemblyTypeName: TutorialManager, Tutorial
+          m_MethodName: endOfTutorial
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1947978712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,9 +838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dcbe4a74ddc7d4fbdfca423aef2802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTextObject: {fileID: 0}
-  playerText: {fileID: 0}
-  textsDatabase: {fileID: 0}
+  playerTextObject: {fileID: 2864857393548782195}
+  playerText: {fileID: 6255269869213223481}
+  textsDatabase: {fileID: 11400000, guid: 9167314b144e07044860ab390d7e4522, type: 2}
   finalTimeline: {fileID: 1106823612}
   tutorialElements:
   - {fileID: 0}
@@ -865,10 +849,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   starsData: {fileID: 11400000, guid: 72af623b995d89d48a51ac9c4f4afe1c, type: 2}
   currentPos: {fileID: 1221739211421877506}
-  updatedMythsGO: {fileID: 5970967039460073451}
+  replaying: 0
+  pauseMenu: {fileID: 0}
 --- !u!1 &789642639245653510
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,8 +955,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 219292417, guid: c6b0d18c6fb18854bb028aefeeade266, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e08a864ae84b0b248b8b0614c58a8e37, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1038,8 +1022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: -30, y: 0}
+  m_AnchoredPosition: {x: 11.5913, y: -2.2001}
+  m_SizeDelta: {x: -44.7053, y: -29.545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4427876804612569647
 CanvasRenderer:
@@ -1362,15 +1346,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewMythsPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 8228516911994902542, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
 --- !u!224 &5253107006916980075 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7496939316475832974, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
-  m_PrefabInstance: {fileID: 2372467280229779429}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5970967039460073451 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8228516911994902542, guid: 2f305d789b0dcd946ad4e8de3c82fe80, type: 3}
   m_PrefabInstance: {fileID: 2372467280229779429}
   m_PrefabAsset: {fileID: 0}
