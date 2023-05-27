@@ -64,9 +64,13 @@ namespace Kitchen
             EventManager.AddListener(GameStatus.LevelFinished, StopCounter);
         }
 
-        private void OnDestroy() =>  EventManager.RemoveListener(GameStatus.LevelFinished, StopCounter);            
-        
-        private void StopCounter() => clientServed = true;       
+        private void OnDestroy() =>  EventManager.RemoveListener(GameStatus.LevelFinished, StopCounter);
+
+        private void StopCounter() 
+        {
+            if (!clientServed)
+                Destroy(gameObject);
+        }
 
         public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
         {
