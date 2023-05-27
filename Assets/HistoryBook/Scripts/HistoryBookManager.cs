@@ -80,8 +80,8 @@ namespace HistoryBook {
                 if (prefab == buttonPrefab)
                 {
                     buttonsList.Add(newbutton);
-                    button.GetComponentsInChildren<Image>()[1].sprite = myth.ingredientSprite;
-                    newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText(myth.ingredient, myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.ingredientSprite, buttonsList.IndexOf(newbutton)); });
+                    //button.GetComponentsInChildren<Image>()[1].sprite = myth.mythSprite;
+                  //  newbutton.onClick.AddListener((UnityEngine.Events.UnityAction)delegate { HandleChangeText(myth.ingredient, myth.name, myth.description, myth.region, myth.mythP1, myth.mythP2, myth.mythSprite, buttonsList.IndexOf(newbutton)); });
                 }
                 else
                     newbutton.onClick.AddListener(HandleClickLockedButton);
@@ -159,7 +159,7 @@ namespace HistoryBook {
         public void SetDefaultEntry(int entryId)
         {
             buttonsList[entryId].Select();
-            HandleChangeText(mythsDatabase.myths[entryId].ingredient, mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description, mythsDatabase.myths[entryId].region, mythsDatabase.myths[entryId].mythP1, mythsDatabase.myths[entryId].mythP2, mythsDatabase.myths[entryId].ingredientSprite, 0);
+            //HandleChangeText(mythsDatabase.myths[entryId].ingredient, mythsDatabase.myths[entryId].name, mythsDatabase.myths[entryId].description, mythsDatabase.myths[entryId].region, mythsDatabase.myths[entryId].mythP1, mythsDatabase.myths[entryId].mythP2, mythsDatabase.myths[entryId].mythSprite, 0);
         }
 
         public void Back()

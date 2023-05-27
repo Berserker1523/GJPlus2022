@@ -17,7 +17,7 @@ namespace Kitchen
             EventManager.AddListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.AddListener(LevelEvents.Streak, SetStreak);
             EventManager.AddListener(GameStatus.Won, CallSaveData);
-            EventManager.AddListener(GlobalTutorialEvent.Tutorial0Completed, Tutorial0Completed);
+            EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial0Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial1Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
@@ -34,7 +34,7 @@ namespace Kitchen
             EventManager.RemoveListener(LevelEvents.Speed, SetSpeedStar);
             EventManager.RemoveListener(LevelEvents.Streak, SetStreak);
             EventManager.RemoveListener(GameStatus.Won, CallSaveData);
-            EventManager.RemoveListener(GlobalTutorialEvent.Tutorial0Completed, Tutorial0Completed);
+            EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial0Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial1Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial2Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
@@ -55,21 +55,13 @@ namespace Kitchen
         public void SetStreak() =>
            stars[LevelManager.CurrentLevel, 2] = true;
 
-        public void Tutorial0Completed()
-        {
-            SetGoalStar();
-            SetSpeedStar();
-            SetStreak();
-            MarkTutorialAsComplete(0);
-            CallSaveData();
-        }
-
         public void MarkTutorialAsComplete(int id)
         {
             tutorials[id] = true;
             if(id == tutorials.Length-1)
                 LevelManager.CurrentLevel = 1;
-
+            if(id <4)
+                stars = new bool[5, 3];
             CallSaveData();
         }
 

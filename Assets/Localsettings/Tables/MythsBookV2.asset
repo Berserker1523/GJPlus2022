@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: MythsBookV2
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 76127b2dd3da0e54ca69ffc7aea3a347, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 6a9668b4a325e0a40acab4f205d0d0d2, type: 2}
+  - {fileID: 11400000, guid: 05b872385fb512c4fb7d328a371bf24e, type: 2}
+  - {fileID: 11400000, guid: ae9967c35cebe2f4e8085569cee4188d, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

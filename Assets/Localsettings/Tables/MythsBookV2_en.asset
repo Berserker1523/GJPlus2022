@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MythsBookV2_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 76127b2dd3da0e54ca69ffc7aea3a347, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8010823519888998402
+  m_TableData:
+  - m_Id: 12854329344
+    m_Localized: "<color=#a06f47>[ <color=#e55c00> HEAL <color=#5e9341> 22 <color=#a06f47>
+      INDIGENOUS OF THIS TRIBE TO EXPAND ]  </color> \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410477933297664
+    m_Localized: Myths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410686524424192
+    m_Localized: Ingredients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410803084132352
+    m_Localized: Indigenous
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410865772199936
+    m_Localized: Places
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410902602383360
+    m_Localized: Munduruku
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1410959892381696
+    m_Localized: Amazon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1411018679746560
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00> Use the <color=#5e9341> {0} <color=#a06f47> 
+      {1}  times more to expand ] </color>'
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998402
+  - m_Id: 1411247244148736
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00>Earn <color=#5e9341>{0} <color=#a06f47>
+      stars more  in the level {1} to expand ] </color>'
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998402
+  - m_Id: 1411365854871552
+    m_Localized: ' <color=#a06f47> Entry Full </color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1411301770100736
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00> Do <color=#5e9341>{0} <color=#a06f47>
+      x3 streaks more to expand  ] </color>'
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998402
+  - m_Id: 1411319834968064
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00>Complete the level <color=#5e9341>{0} 
+      <color=#a06f47>to expand ] </color>'
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998402
+  references:
+    version: 2
+    RefIds:
+    - rid: 8010823519888998402
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00802d63500305000080ad4c920305000080ad9a8503050000806d8196030500

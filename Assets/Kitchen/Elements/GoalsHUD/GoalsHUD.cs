@@ -164,8 +164,11 @@ namespace Kitchen
             
             SetBarProgress();
 
-            if (currentStreakProgress == levelInstantiator.LevelData.streak)
+            if (currentStreakProgress % levelInstantiator.LevelData.streak == 0)
+            {
                 EventManager.Dispatch(LevelEvents.Streak);
+                GlobalCounter.streaksAmount++;
+            }
         }
 
         private void SetBarProgress()

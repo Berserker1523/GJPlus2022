@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: Assets/Localsettings/Tables/Credits Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 76127b2dd3da0e54ca69ffc7aea3a347
+    m_Address: Assets/Localsettings/Tables/MythsBookV2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: af67620bcdf644242ad668575b01b8e9, type: 2}
   m_SchemaSet:
