@@ -38,6 +38,8 @@ namespace Kitchen
         private void Start()
         {
             kitchenElementsColliders = GetComponentsInChildren<Collider2D>();
+            if (levelData.level == 0)           
+                levelData.stars = new bool[3];          
         }
 
         private void OnDestroy()
