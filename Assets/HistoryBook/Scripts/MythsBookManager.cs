@@ -120,8 +120,17 @@ namespace HistoryBook
 
         private IEnumerator ResetHandlePos()
         {
+            descriptionText.color = new Color(0f,0f,0f,0f); 
             yield return new WaitForSeconds(0.1f);
             scrollbar.value = 0.9999f;
+
+            float alpha = 0f;
+            while(descriptionText.color.a <= 1f)
+            {
+                alpha += 0.1f;
+                yield return new WaitForSeconds(0.1f);
+                descriptionText.color = new Color(0f,0f,0f, alpha); 
+            }
         }
     }
 }

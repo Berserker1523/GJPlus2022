@@ -60,6 +60,7 @@ public class MythsBookLeftTab : MythsBookTab
 
     protected override void SetAsCurrentTab()
     {
+        if (!currentTab)
         currentTabSwitchedEvent?.Invoke(this);
     }
 

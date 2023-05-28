@@ -14,7 +14,7 @@ namespace HistoryBook
         }
 
         protected override void SetAsCurrentTab()
-        {
+        {   if(!currentTab)
             currentTabSwitchedEvent?.Invoke(this);
         }
 

@@ -7,7 +7,7 @@ namespace HistoryBook
     public abstract class MythsBookTab : MonoBehaviour
     {
         [SerializeField] Image highlightedImage;
-        [SerializeField] private bool currentTab;
+        [SerializeField] protected bool currentTab;
         [SerializeField] Button button;
         [SerializeField] public ENUM_bookTabs _bookEntryType;
 
