@@ -213,6 +213,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065793690701502212, guid: d71b5ba659a1653489ae183ffbfb46d4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065793690701502212, guid: d71b5ba659a1653489ae183ffbfb46d4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065793690701502212, guid: d71b5ba659a1653489ae183ffbfb46d4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.48627454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611398160147435544, guid: d71b5ba659a1653489ae183ffbfb46d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9115652553358318120, guid: d71b5ba659a1653489ae183ffbfb46d4, type: 3}
       propertyPath: m_Name
       value: GoalsHUD
