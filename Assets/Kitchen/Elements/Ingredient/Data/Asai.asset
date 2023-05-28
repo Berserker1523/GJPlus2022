@@ -19,5 +19,5 @@ MonoBehaviour:
   stoveRawSprite: {fileID: 0}
   stoveCookedSprite: {fileID: 0}
   stoveBurntSprite: {fileID: 0}
-  mortarRawSprite: {fileID: 1547659511, guid: 65bb109d33779d54488b023679a2a0f6, type: 3}
-  mortarCrushedSprite: {fileID: 1430075714, guid: 65bb109d33779d54488b023679a2a0f6, type: 3}
+  mortarRawSprite: {fileID: -1668749009, guid: 602bba7a4ad41284192cb96638c6d8ca, type: 3}
+  mortarCrushedSprite: {fileID: -1943501325, guid: 602bba7a4ad41284192cb96638c6d8ca, type: 3}
