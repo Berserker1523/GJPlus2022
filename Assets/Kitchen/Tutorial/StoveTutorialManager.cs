@@ -35,7 +35,7 @@ namespace Kitchen.Tutorial
         [SerializeField] TrashTutorial trashTutorialPopUp;
         private PotionController tutorialShaker;
 
-        [SerializeField] private GameObject updatedMythsGO;
+        //[SerializeField] private GameObject updatedMythsGO;
 
         private void Awake()
         {
@@ -49,7 +49,7 @@ namespace Kitchen.Tutorial
             EventManager.AddListener(IngredientState.Burnt, CallThrowBurntIngredient);
             EventManager.AddListener(TrashEvent.Throw, CallTryAgain);
 
-            updatedMythsGO.SetActive(false);
+            //updatedMythsGO.SetActive(false);
             handTutorial = FindObjectOfType<HandTutorial>();
         }
 
@@ -183,17 +183,17 @@ namespace Kitchen.Tutorial
         public IEnumerator endOfTutorial()
         {
             yield return new WaitForSeconds(14f);
-            yield return StartCoroutine(DisplayMythsUpdatedPopUP());
+            //yield return StartCoroutine(DisplayMythsUpdatedPopUP());
             EventManager.Dispatch(GlobalTutorialEvent.Tutorial5Completed, 5);
             LoadKitchen1();
         }
 
-        IEnumerator DisplayMythsUpdatedPopUP()
-        {
-            updatedMythsGO.SetActive(true);
-            yield return new WaitForSecondsRealtime(3f);
-            updatedMythsGO.SetActive(false);
-        }
+        //IEnumerator DisplayMythsUpdatedPopUP()
+        //{
+        //    updatedMythsGO.SetActive(true);
+        //    yield return new WaitForSecondsRealtime(3f);
+        //    updatedMythsGO.SetActive(false);
+        //}
         void LoadKitchen1() => SceneManager.LoadScene("Kitchen1");
 
         void DisplayDialogueBox(LocalizedString text)
