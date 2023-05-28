@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTutorial: {fileID: 0}
+  handCanvas: {fileID: 7440539505095943621, guid: 29eea78524abe364c8aa245ed1728712, type: 3}
 --- !u!114 &7338238715909618629
 MonoBehaviour:
   m_ObjectHideFlags: 0
