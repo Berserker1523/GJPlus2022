@@ -87,36 +87,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 29124409596686336
-    m_Localized: "La luna me  ha otorgado un nuevo ingrediente:  La  carna\xFAba.
-      estoy seguro de que con ella podr\xE9 curar sus s\xEDntomas\n"
+    m_Localized: "The moon gave me a new ingredient: the carna\xFAba, I'm sure that
+      with it I can heal your symptoms"
     m_Metadata:
       m_Items: []
   - m_Id: 29124567164104704
-    m_Localized: "De acuerdo a sus instrucciones, debo sumergirla en agua hirviendo.
-      Me indic\xF3 que no deber\xEDa  dejarla al fuego mucho tiempo, puesto que 
-      se convetir\xE1 en cenizas"
+    m_Localized: "According to \ntheir instructions, I must submerge it into boiling
+      water. She told me that I should not leave it on the fire for a long time because
+      it will become ashes."
     m_Metadata:
       m_Items: []
   - m_Id: 29124590316662784
-    m_Localized: "Ahora est\xE1 en el punto perfecto. R\xE1pido!!, debo ponerla dentro
-      de mi coctelera m\xE1gica"
+    m_Localized: Now is the perfect point. Hurry! I must put it on my magic shaker.
     m_Metadata:
       m_Items: []
   - m_Id: 29124590933225472
-    m_Localized: "Intentar\xE9 cocinar nuevamente la carna\xFAba"
+    m_Localized: "I will try to cook the carna\xFAba again"
     m_Metadata:
       m_Items: []
   - m_Id: 29124591558176768
-    m_Localized: "Ahor\xE1 agregar\xE9 pequi  a la receta"
+    m_Localized: Now I will add pequi to the recipe
     m_Metadata:
       m_Items: []
   - m_Id: 29124592074076160
-    m_Localized: Eureka! El resultado es un nuevo remedio!. Debo entregarselo al
-      paciente
+    m_Localized: Eureka! The result is a new potion. Hurry! I must give it to the
+      patient.
     m_Metadata:
       m_Items: []
   - m_Id: 29159821341995008
-    m_Localized: "Oh no, se me ha quemado la carna\xFAba. Debo tirarla a la basura"
+    m_Localized: Oh no! The carnauba burned. I must throw it into the trash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33096182384132096
+    m_Localized: Thank you so much, I already feel better!
     m_Metadata:
       m_Items: []
   references:

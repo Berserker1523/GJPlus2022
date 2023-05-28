@@ -39,84 +39,88 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28399564076462080
-    m_Localized: "Para empezar. Debo tomar el pequi y colocarlo sobre el mortero
-      para as\xED poder machacarlo"
+    m_Localized: "Para come\xE7ar, tenho que pegar o pequi e coloc\xE1-lo na argamassa
+      para esmag\xE1-lo"
     m_Metadata:
       m_Items: []
   - m_Id: 28399608301203456
-    m_Localized: "Bien, ahora debo poner el pequi machacado dentro de mi coctelera
+    m_Localized: "Bom, agora eu tenho que colocar o pequi dentro da coqueteleira
       m\xE1gica"
     m_Metadata:
       m_Items: []
   - m_Id: 28399633009848320
-    m_Localized: Lo siguiente es adicionar un poco de agua, la puedo tomar de mi
-      dispensador...
+    m_Localized: "O pr\xF3ximo passo \xE9 adicionar um pouco de \xE1gua, posso beb\xEA-la
+      no meu dispensador"
     m_Metadata:
       m_Items: []
   - m_Id: 28399644158308352
-    m_Localized: Listo! Ahora solo debo mezclar los ingredientes.
+    m_Localized: "Pronto! Agora s\xF3 tenho que misturar os ingredientes"
     m_Metadata:
       m_Items: []
   - m_Id: 28399655415820288
-    m_Localized: Finalmente, debo entregarle la medicina a la paciente
+    m_Localized: "Por \xFAltimo, tenho que dar o rem\xE9dio ao paciente"
     m_Metadata:
       m_Items: []
   - m_Id: 28403513147895808
-    m_Localized: Intenta curar a 3 pacientes
+    m_Localized: Tente curar 3 pacientes
     m_Metadata:
       m_Items: []
   - m_Id: 28403639945900032
-    m_Localized: Cura a todos antes de que se acabe el tiempo!
+    m_Localized: Cure todo mundo antes do tempo acabar
     m_Metadata:
       m_Items: []
   - m_Id: 28403790781460480
-    m_Localized: Cura a todos de seguido
+    m_Localized: Cure todo mundo sucessivamente
     m_Metadata:
       m_Items: []
   - m_Id: 28403833567555584
-    m_Localized: "Un remedio mal preparado puede llegar a ser muy peligroso. T\xEDralo
-      a la basura!"
+    m_Localized: "Um rem\xE9dio mal preparado pode ser perigoso, jogue isso no lixo!"
     m_Metadata:
       m_Items: []
   - m_Id: 28792046146650112
-    m_Localized: "Oh no, se ha quemado un ingrediente. T\xEDralo a la basura!"
+    m_Localized: Caraca, um ingrediente acabou queimado, jogue isso no lixo!
     m_Metadata:
       m_Items: []
   - m_Id: 29123393358770176
-    m_Localized: "Por favor, !Ay\xFAdeme! Me siento fatigado y me han salido granos
-      por todo el cuerpo. \xBFPuede ayudarme Kumu?"
+    m_Localized: "Por favor, \xA1me ajude!, estou me sentindo exausto e t\xEAm muitas
+      p\xFAstulas no meu corpo. Poderia me ajudar Kumu?"
     m_Metadata:
       m_Items: []
   - m_Id: 29124409596686336
-    m_Localized: "La luna me  ha otorgado un nuevo ingrediente:  La carna\xFAba.
-      estoy seguro de que con ella podr\xE9 curar sus s\xEDntomas\n"
+    m_Localized: "A lua me deu um novo ingrediente: A carna\xFAba. Tenho certeza
+      que vou poder curar seus sintomas com ela"
     m_Metadata:
       m_Items: []
   - m_Id: 29124567164104704
-    m_Localized: "De acuerdo a sus instrucciones, debo sumergirla en agua hirviendo.
-      Me indic\xF3 que no deber\xEDa  dejarla al fuego mucho tiempo, puesto que 
-      se convetir\xE1 en cenizas"
+    m_Localized: "De acordo com \nsuas instru\xE7\xF5es, tenho que mergulh\xE1-la
+      em \xE1gua fervente. Me indicou que nao deveria deixar no fogo muito tempo,
+      ou vai se tornar cinzas"
     m_Metadata:
       m_Items: []
   - m_Id: 29124590316662784
-    m_Localized: "Ahora est\xE1 en el punto perfecto. R\xE1pido!!, debo ponerla dentro
-      de mi coctelera m\xE1gica"
+    m_Localized: "Agora est\xE1 no ponto certo. Se apresse, tenho que coloc\xE1-la
+      dentro da minha coqueteleira m\xE1gica"
     m_Metadata:
       m_Items: []
   - m_Id: 29124590933225472
-    m_Localized: "Intentar\xE9 cocinar nuevamente la carna\xFAba"
+    m_Localized: "Vou tentar conzinhar a carna\xFAba mais uma vez"
     m_Metadata:
       m_Items: []
   - m_Id: 29124591558176768
-    m_Localized: "Ahor\xE1 agregar\xE9 pequi  a la receta"
+    m_Localized: "Agora vou adicionar pequi \xE0 receita"
     m_Metadata:
       m_Items: []
   - m_Id: 29124592074076160
-    m_Localized: Eureka! El resultado es un nuevo remedio! Debo entregarselo al paciente
+    m_Localized: "Que demais! o resultado \xE9 um novo rem\xE9dio! R\xE1pido, tenho
+      que dar o rem\xE9dio ao paciente"
     m_Metadata:
       m_Items: []
   - m_Id: 29159821341995008
-    m_Localized: "Oh no, se me ha quemado la carna\xFAba. Debo tirarla a la basura"
+    m_Localized: "Nossa, a carna\xFAba acabou queimada. Terei que jog\xE1-la no lixo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33096182384132096
+    m_Localized: "Muito obrigado, j\xE1 me sinto melhor!"
     m_Metadata:
       m_Items: []
   references:

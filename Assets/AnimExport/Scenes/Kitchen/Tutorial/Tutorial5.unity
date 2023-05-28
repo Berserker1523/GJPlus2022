@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 29123393358770176
       objectReference: {fileID: 0}
+    - target: {fileID: 1973690692720437562, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 33096182384132096
+      objectReference: {fileID: 0}
     - target: {fileID: 2591929312464649394, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0

@@ -121,6 +121,10 @@ MonoBehaviour:
     m_Localized: "Oh no, se me ha quemado la carna\xFAba. Debo tirarla a la basura"
     m_Metadata:
       m_Items: []
+  - m_Id: 33096182384132096
+    m_Localized: "\xA1Muchas gracias, ya me siento mejor!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
