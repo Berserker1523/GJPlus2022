@@ -9,6 +9,7 @@ namespace Kitchen.Tutorial
     public class TrashTutorial : MonoBehaviour
     {
         [SerializeField] HandTutorial handTutorial;
+        [SerializeField] Canvas handCanvas;
         TrashController trashController;
         LocalizeStringEvent stringEvent;
 
@@ -26,6 +27,7 @@ namespace Kitchen.Tutorial
             stringEvent = GetComponentInChildren<LocalizeStringEvent>();
             potionString = new LocalizedString("Tutorial", "TrashTutorial1");
             burntString = new LocalizedString("Tutorial", "TrashTutorial2");
+            handTutorial = Instantiate(handCanvas).GetComponentInChildren<HandTutorial>();
         }
 
 
