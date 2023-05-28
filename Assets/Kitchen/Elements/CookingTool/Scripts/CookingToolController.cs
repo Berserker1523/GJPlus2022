@@ -1,5 +1,6 @@
 ﻿using Events;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,7 @@ namespace Kitchen
 
         private Sprite initialSprite;
         private FMOD.Studio.EventInstance cookingSound;
+        private FMOD.Studio.EventInstance burningSound;
 
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
@@ -48,16 +50,18 @@ namespace Kitchen
 
         private void StopTimers(bool tutorial) => inTutorial = tutorial;
 
-        private void OnDestroy() 
+        private void OnDestroy()
         {
             dropView.OnDropped -= HandleDropped;
             EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, StopTimers);
+            SceneManager.sceneLoaded -= StopCookingSoundsOnNewSceneLoaded;
+            StopCookingSoundsOnNewSceneLoaded(new(), new());
         }
 
 
         private void Update()
         {
-            if (CurrentCookingIngredient == null  || inTutorial)
+            if (CurrentCookingIngredient == null || inTutorial)
                 return;
 
             CurrentCookingIngredient.currentCookingSeconds += Time.deltaTime;
@@ -82,11 +86,11 @@ namespace Kitchen
                 }
                 else
                 {
+                    burningSound = FMODUnity.RuntimeManager.CreateInstance(SoundsManager.BurningFood);
+                    StartCoroutine(StartBurningSoundRoutine());
                     timer.SetBurning();
                     if (overcookedParticle != null)
-                    {
                         overcookingParticle.Play();
-                    }
                 }
             }
             else if (CurrentCookingIngredient.state == IngredientState.Cooked && CurrentCookingIngredient.currentCookingSeconds >= cookingToolData.burningSeconds)
@@ -98,6 +102,7 @@ namespace Kitchen
                 timer.gameObject.SetActive(false);
                 EventManager.Dispatch(IngredientState.Burnt, transform);
                 cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                burningSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
 
@@ -151,6 +156,7 @@ namespace Kitchen
             CurrentCookingIngredient = null;
             spriteRenderer.sprite = initialSprite;
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            burningSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             spriteRenderer.material.SetFloat("_Temperature", 0f);
             timer.gameObject.SetActive(false);
 
@@ -160,13 +166,21 @@ namespace Kitchen
                 cookingParticle.Stop();
             if (overcookingParticle != null)
                 overcookingParticle.Stop();
-            if(overcookedParticle != null)
+            if (overcookedParticle != null)
                 overcookedParticle.Stop();
         }
 
-        public void StopCookingSoundsOnNewSceneLoaded(Scene scene, LoadSceneMode mode) =>
-           cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
+        public void StopCookingSoundsOnNewSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            burningSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+           
+        private IEnumerator StartBurningSoundRoutine()
+        {
+            yield return new WaitForSeconds(1f);
+            burningSound.start();
+        }
     }
 
 }

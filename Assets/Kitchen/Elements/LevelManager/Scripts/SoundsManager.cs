@@ -19,7 +19,7 @@ namespace Kitchen
 
         //Cooking Tools SFX Events
         string foodReadyEvent = "event:/SFX/Cocina/Comida Lista";
-        string burningFood = "event:/SFX/Cocina/Comida quemándose";
+        public const string BurningFood = "event:/SFX/Cocina/Comida quemándose";
         string foodBurntEvent = "event:/SFX/Cocina/Comida Quemada";
         string addIngredientEvent = "event:/SFX/Cocina/Infusión";
         string addWaterEvent = "event:/SFX/Cocina/Sirve agua";
