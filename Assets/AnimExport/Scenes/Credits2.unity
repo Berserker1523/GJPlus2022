@@ -883,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 0
+  loadSceneMode: 0
 --- !u!114 &1387678810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,10 +1011,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 142502529}
     m_Modifications:
-    - target: {fileID: 8388252525079228320, guid: 3025b7abeb546eb429aa0828190f281e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8388252526886649425, guid: 3025b7abeb546eb429aa0828190f281e, type: 3}
       propertyPath: m_Name
       value: ScrollCredits

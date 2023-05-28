@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ namespace Credits
         [SerializeField] Scrollbar scrollbar;
         [SerializeField] float scrollVelocity =0.01f;
         [SerializeField] float updateWaitTime =0.1f;
+        [SerializeField] TextMeshProUGUI text;
         private void Awake()
         {
             StartCoroutine(MoveScrollCoroutine());
@@ -18,6 +20,7 @@ namespace Credits
         {
             yield return new WaitForSeconds(1f);
             scrollbar.value = 1f;
+            text.transform.localScale= Vector3.one;
             while (scrollbar.value >= 0f) 
             { 
                 scrollbar.value -= scrollVelocity;

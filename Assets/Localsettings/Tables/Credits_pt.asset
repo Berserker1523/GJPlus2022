@@ -19,28 +19,28 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8534196224
-    m_Localized: "\n\n\nDESIGN DO JOGO\n\rDesign De Sistemas\nMario Antonio Llaque\r\n\r\nDesign
-      Criativo\n Maria Castro\r\n\r\nDesign De Som E Efeitos Sonoros\nJuan Pablo
-      Correa\r\n\r\nPRODU\xC7\xC3O\nProdutor Executivo\nDavid Vargas\r\n\r\nARTE\nArte
-      Ambiente E Decora\xE7\xF5es\nCarmen Moreno\n\nDesign Da Interface Do Usu\xE1rio\nCamila
-      Ni\xF1o\r\n\r\nDesign de Personagens\nAngel Farf\xE1n\r\n\r\nArte T\xE9cnica\nSantiago
-      Mora\r\n\r\nDesign de Efeitos Visuais\nSantiago Mora\r\n\r\nANIMA\xC7\xC3O\nAnima\xE7\xE3o
-      De Personagens\nAngel Farf\xE1n\r\n\r\nAnima\xE7\xE3o Do Tutorial\nSantiago
-      Mora\r\n\r\nAnima\xE7\xE3o Da Fim De N\xEDvel\nJuan Pablo Camacho\r\n\r\nPROGRAMA\xC7\xC3O\nPrograma\xE7\xE3o
-      Da Jogabilidade\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o
-      Da Interface Do Usu\xE1rio\nCamila Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs
-      C\xE1rcamo\r\n\r\nPrograma\xE7\xE3o De Ferramentas De Desenvolvimento\nJuan
-      Pablo Camacho\r\n\r\nPrograma\xE7\xE3o De Som E Efeitos Sonoros\nJes\xFAs C\xE1rcamo\r\nJuan
-      Pablo Correa\r\n\r\nPrograma\xE7\xE3o De Localiza\xE7\xE3o\nJuan Pablo Camacho\r\n\r\nGARANTIA
-      DE QUALIDADE\nCarmen Moreno\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo
-      Correa\r\n\r\nLOCALIZA\xC7\xC3O\nPrograma\xE7\xE3o De Localiza\xE7\xE3o\nJuan
-      Pablo Camacho\r\n\r\nLocaliza\xE7\xE3o Em Portugu\xEAs GQ\nJhoan Jes\xFAs Sandoval\r\n\r\nLocaliza\xE7\xE3o
-      Em Ingl\xEAs GQ\nMario Antonio Llaque\n\r\nREDA\xC7\xC3O\nReda\xE7\xE3o de
-      di\xE1logos\nMario Antonio Llaque\n\nReda\xE7\xE3o dos Mitos\nGamejam+ 2022
-      Funcion\xE1rios\r\n\nFeito com FMOD\n\nQueremos expressar nossos sinceros agradecimentos
-      por experimentar a demo do nosso game, estamos muito empolgados por continuar
-      melhorando e desenvolvendo o jogo para proporcionar uma experi\xEAncia ainda
-      melhor no futuro.\n\n\n\n\n\n\n\n\n\n\n  "
+    m_Localized: "\n\n\n\n\n\nDESIGN DO JOGO\n\rDesign De Sistemas\nMario Antonio
+      Llaque\r\n\r\nDesign Criativo\n Maria Castro\r\n\r\nDesign De Som E Efeitos
+      Sonoros\nJuan Pablo Correa\r\n\r\nPRODU\xC7\xC3O\nProdutor Executivo\nDavid
+      Vargas\r\n\r\nARTE\nArte Ambiente E Decora\xE7\xF5es\nCarmen Moreno\n\nDesign
+      Da Interface Do Usu\xE1rio\nCamila Ni\xF1o\r\n\r\nDesign de Personagens\nAngel
+      Farf\xE1n\r\n\r\nArte T\xE9cnica\nSantiago Mora\r\n\r\nDesign de Efeitos Visuais\nSantiago
+      Mora\r\n\r\nANIMA\xC7\xC3O\nAnima\xE7\xE3o De Personagens\nAngel Farf\xE1n\r\n\r\nAnima\xE7\xE3o
+      Do Tutorial\nSantiago Mora\r\n\r\nAnima\xE7\xE3o Da Fim De N\xEDvel\nJuan Pablo
+      Camacho\r\n\r\nPROGRAMA\xC7\xC3O\nPrograma\xE7\xE3o Da Jogabilidade\nJes\xFAs
+      C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o Da Interface Do Usu\xE1rio\nCamila
+      Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs C\xE1rcamo\r\n\r\nPrograma\xE7\xE3o
+      De Ferramentas De Desenvolvimento\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o
+      De Som E Efeitos Sonoros\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Correa\r\n\r\nPrograma\xE7\xE3o
+      De Localiza\xE7\xE3o\nJuan Pablo Camacho\r\n\r\nGARANTIA DE QUALIDADE\nCarmen
+      Moreno\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nLOCALIZA\xC7\xC3O\nPrograma\xE7\xE3o
+      De Localiza\xE7\xE3o\nJuan Pablo Camacho\r\n\r\nLocaliza\xE7\xE3o Em Portugu\xEAs
+      GQ\nJhoan Jes\xFAs Sandoval\r\n\r\nLocaliza\xE7\xE3o Em Ingl\xEAs GQ\nMario
+      Antonio Llaque\n\r\nREDA\xC7\xC3O\nReda\xE7\xE3o de di\xE1logos\nMario Antonio
+      Llaque\n\nReda\xE7\xE3o dos Mitos\nGamejam+ 2022 Funcion\xE1rios\r\n\nFeito
+      com FMOD\n\nQueremos expressar nossos sinceros agradecimentos por experimentar
+      a demo do nosso game, estamos muito empolgados por continuar melhorando e desenvolvendo
+      o jogo para proporcionar uma experi\xEAncia ainda melhor no futuro.\n\n\n\n\n\n\n\n\n\n\n  "
     m_Metadata:
       m_Items: []
   references:
