@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5058824, g: 0.3137255, b: 0.25490198, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7061,7 +7061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.454902, g: 0.2784314, b: 0.24313727, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8749,6 +8749,24 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4659862192952361246, guid: 142ed1c391f998f41b30c17818374d07, type: 3}
+      propertyPath: m_text
+      value: Mitos
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659862192952361246, guid: 142ed1c391f998f41b30c17818374d07, type: 3}
+      propertyPath: m_fontSize
+      value: 52.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997025576742631820, guid: 142ed1c391f998f41b30c17818374d07, type: 3}
+      propertyPath: m_text
+      value: "\xA1Felicidades, est\xE1s en camino de convertirte en un verdadero
+        maestro Kumu! \xA1Sigue con el buen trabajo y sigue curando a aquellos que
+        lo necesiten!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997025576742631820, guid: 142ed1c391f998f41b30c17818374d07, type: 3}
+      propertyPath: m_fontSize
+      value: 39.35
+      objectReference: {fileID: 0}
     - target: {fileID: 8357592086296347442, guid: 142ed1c391f998f41b30c17818374d07, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8958,6 +8976,11 @@ PrefabInstance:
     - target: {fileID: 1280237745440826511, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
       propertyPath: m_Name
       value: TrashTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280237746090345068, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
+      propertyPath: m_text
+      value: "Un remedio mal preparado puede llegar a ser muy peligroso. T\xEDralo
+        a la basura!"
       objectReference: {fileID: 0}
     - target: {fileID: 2402038219518759504, guid: f746554e2e332264ca0b72de69a2103c, type: 3}
       propertyPath: m_IsActive
