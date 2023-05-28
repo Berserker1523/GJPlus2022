@@ -21,7 +21,7 @@ MonoBehaviour:
   minNumberOfMortars: 2
   minNumberOfStoves: 2
   minNumberOfPainKillers: 1
-  time: 250
+  time: 300
   goal: 8
   streak: 3
   streakWaitTime: 15
