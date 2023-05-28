@@ -32,6 +32,7 @@ namespace Kitchen.Tutorial
 
         private void OnEnable()
         {
+            if(_points != null)
             MoveBetweenPoints();
         }
 
