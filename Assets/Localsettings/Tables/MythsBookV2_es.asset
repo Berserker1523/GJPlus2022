@@ -20,8 +20,9 @@ MonoBehaviour:
     - rid: 8010823519888998404
   m_TableData:
   - m_Id: 12854329344
-    m_Localized: '<color=#a06f47>[ <color=#e55c00> CURA <color=#5e9341> 22 <color=#a06f47>
-      INDIGENAS DE ESTA TRIBU PARA EXPANDIR  ]  </color> '
+    m_Localized: 'PLACEHOLDER
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 1410477933297664

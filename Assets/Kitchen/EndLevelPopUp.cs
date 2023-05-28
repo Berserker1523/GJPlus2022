@@ -84,7 +84,7 @@ namespace Kitchen
             {
                 EventManager.Dispatch(GlobalTutorialEvent.Tutorial4Completed, 4);
             }
-            else if (LevelManager.CurrentLevel == 2) //TODO Burned Variable
+            else if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
             {
                 PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;

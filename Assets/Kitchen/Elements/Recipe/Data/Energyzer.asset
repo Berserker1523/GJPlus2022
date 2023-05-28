@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0347b3ac5aca8314082ff98abddfaf47, type: 3}
-  m_Name: TapewormKiller
+  m_Name: Energyzer
   m_EditorClassIdentifier: 
   name: 
-  recipeName: 1
+  recipeName: 5
   diseasesItCures: 1
-  sprite: {fileID: 1084799438, guid: 6d0bcd9a499841341b066210f0643e43, type: 3}
+  sprite: {fileID: 1316906939, guid: 6d0bcd9a499841341b066210f0643e43, type: 3}
   ingredients:
   - name: 
     ingredient: {fileID: 11400000, guid: 19524fb5a3271824c93f5d4232ffbbb3, type: 2}
-    cookingToolName: 2
-  - name: 
-    ingredient: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
     cookingToolName: 1
   - name: 
-    ingredient: {fileID: 11400000, guid: a051d7945e85d8945b9baa9356ce1b52, type: 2}
-    cookingToolName: 2
-  popUp: 000000000000000000000000
+    ingredient: {fileID: 11400000, guid: 206fdf01312cc8141ab17a608b1a8161, type: 2}
+    cookingToolName: 1
+  - name: 
+    ingredient: {fileID: 11400000, guid: 7117ec916a7b371468c9d93d4dcbf14b, type: 2}
+    cookingToolName: 4
+  popUp: 010000000000000000000000
   clientSprites:
-  - {fileID: 21300000, guid: d9f2d0b44361c3e438e0711a9f68306c, type: 3}
-  - {fileID: 21300000, guid: 513203d978466f440a2406bb9326793e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
