@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 namespace Kitchen.Tutorial
 {
@@ -8,23 +9,27 @@ namespace Kitchen.Tutorial
     public class HandTutorial : MonoBehaviour
     {
         [SerializeField] Transform[] _points;
-        [SerializeField, Range(0f, 10f)] float duration =2f;
+        private float duration = 1.5f;
+        private float backwardsDurationMultiplier = 0.75f;
+        private Ease easeForward = Ease.InOutSine;
+        private Ease easeBackwards = Ease.InOutSine;
 
         Animator _animator;
+        const string _animParamIdle = "Idle";
         const string _animParamTap = "Tap";
-        const string _animParamEndDrag = "EndDrag";
-
+        const string _animParamDrag = "Drag";
         public void SwitchEnableHand(bool enable) => gameObject.SetActive(enable);
 
         private void Awake()
         {
-            _animator= GetComponent<Animator>();          
+            _animator = GetComponent<Animator>();
         }
 
         private void Start()
         {
             gameObject.SetActive(false);
         }
+
         private void OnEnable()
         {
             MoveBetweenPoints();
@@ -37,32 +42,39 @@ namespace Kitchen.Tutorial
 
         private void MoveBetweenPoints()
         {
-            if (_points.Length<=0)
+            if (_points.Length <= 0)
                 return;
 
             Vector3[] path = CalculatePointsCoordinates();
             transform.position = path[0];
+
             if (path.Length > 1)
-            {
-                _animator.SetBool(_animParamTap, false);
-                transform.DOPath(path, duration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Restart).OnStepComplete(() =>
-                {
-                    _animator.SetTrigger(_animParamEndDrag);
-                });
-            }
+                DoCycle(path);
             else
-                _animator.SetBool(_animParamTap, true);
+                _animator.SetTrigger(_animParamTap);
+        }
+
+        private void DoCycle(Vector3[] path, bool forward = true)
+        {
+            _animator.SetTrigger(forward ? _animParamDrag : _animParamIdle);
+            transform.DOPath(path, forward ? duration : duration * backwardsDurationMultiplier, pathType: PathType.CatmullRom)
+                    .SetEase(forward ? easeForward : easeBackwards)
+                    .OnComplete(() =>
+                    {
+                        Array.Reverse(path);
+                        DoCycle(path, !forward);
+                    });
         }
 
         private Vector3[] CalculatePointsCoordinates()
         {
             List<Vector3> pointsTemp = new List<Vector3>();
             foreach (var point in _points)
-                pointsTemp.Add (Camera.main.WorldToScreenPoint(point.position));
+                pointsTemp.Add(Camera.main.WorldToScreenPoint(point.position));
             return pointsTemp.ToArray();
         }
-        
-        private void SetNewPoints(Transform[] newPoints) => _points= newPoints;
+
+        private void SetNewPoints(Transform[] newPoints) => _points = newPoints;
 
         public void StartNewSequence(Transform[] newPoints)
         {
