@@ -134,10 +134,10 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 467
-        width: 284
-        height: 158
+        width: 287
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,7 +158,7 @@ TextureImporter:
         width: 284
         height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,10 +176,10 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 166
-        width: 284
+        width: 287
         height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,6 +187,90 @@ TextureImporter:
       bones: []
       spriteID: 2a6e25c1aa948494d81ba189c073e317
       internalID: -682050635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coca_2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 461
+        width: 287
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63750c3a4132ea4c824c69b362b5786
+      internalID: 2129066346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coca_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 161
+        width: 286
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f24c58b52ccce34388094f830edf189
+      internalID: -1048585233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asai_1
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 466
+        width: 285
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06c71130d5aba24ba07e45218915822
+      internalID: 1078385292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asai_2
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 167
+        width: 288
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ea110886e92f44f849278e45914071
+      internalID: -1697812639
       vertices: []
       indices: 
       edges: []
@@ -202,8 +286,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      coca_1: -1048585233
       pequi_0: -1185035391
+      coca_2: 2129066346
       pequi_2: -682050635
+      pequi_3: 378849161
+      pequi_6: 1405783870
+      asai_2: -1697812639
+      asai_1: 1078385292
       pequi_1: -1720065939
   spritePackingTag: 
   pSDRemoveMatte: 0
