@@ -2,6 +2,6 @@
 {
     public enum RecipeName
     {
-        ToothSaver, TapewormKiller, YellowFeverKiller, CarnaubaAntibodies
+        ToothSaver, TapewormKiller, YellowFeverKiller, CarnaubaAntibodies, VitaminMix, Energyzer
     }
 }
