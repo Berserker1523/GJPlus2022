@@ -57,7 +57,7 @@ namespace Kitchen
         {
             //Clients SFX
             Events.EventManager.AddListener(ClientEvent.Arrived, PlayClientArriveSFX);
-            Events.EventManager.AddListener(ClientEvent.Died, PlayClientDieSFX);
+            Events.EventManager.AddListener(ClientEvent.Dying, PlayClientDieSFX);
             Events.EventManager.AddListener(ClientEvent.Served, PlayClientServedSFX);
             Events.EventManager.AddListener<Gender>(ClientEvent.Grunt, PlayClientGruntSFX);
 
@@ -95,7 +95,7 @@ namespace Kitchen
         {
             //Clients SFX
             Events.EventManager.RemoveListener(ClientEvent.Arrived, PlayClientArriveSFX);
-            Events.EventManager.RemoveListener(ClientEvent.Died, PlayClientDieSFX);
+            Events.EventManager.RemoveListener(ClientEvent.Dying, PlayClientDieSFX);
             Events.EventManager.RemoveListener(ClientEvent.Served, PlayClientServedSFX);
             Events.EventManager.RemoveListener<Gender>(ClientEvent.Grunt, PlayClientGruntSFX);
 

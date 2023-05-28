@@ -149,11 +149,8 @@ namespace Kitchen
         {
             clientDied = true;
             animator.SetBool(animatorDiedParameter, true);
-            foreach(var animation in animsDie)
-            {
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName(animation)) ;
-                    yield return new WaitForSeconds(0.1f);
-            }
+            EventManager.Dispatch(ClientEvent.Dying);
+            yield return new WaitForSeconds(1f);
             Destroy(gameObject);
             EventManager.Dispatch(ClientEvent.Died);
         }

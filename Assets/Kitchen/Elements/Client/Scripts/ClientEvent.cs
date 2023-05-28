@@ -4,6 +4,7 @@
     {
         Arrived,
         Served,
+        Dying,
         Died,
         Grunt
     }
