@@ -49,31 +49,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1411018679746560
-    m_Localized: " <color=#a06f47>[ <color=#e55c00> Usa <color=#5e9341> {0} <color=#a06f47>{1}
-      veces m\xE1s para expandir ] </color>"
+    m_Localized: ' <color=#a06f47>[ <color=#e55c00> Use mais <color=#5e9341> {0}
+      <color=#a06f47>{1} vezes para expandir ] </color>'
     m_Metadata:
       m_Items:
       - rid: 8010823519888998403
   - m_Id: 1411247244148736
-    m_Localized: " <color=#a06f47>[ <color=#e55c00>Consigue <color=#5e9341>{0} <color=#a06f47>
-      estrellas m\xE1s en el nivel {1} para expandir ] </color>"
+    m_Localized: " <color=#a06f47>[ <color=#e55c00>Consiga mais <color=#5e9341>{0}
+      <color=#a06f47> estrelas no n\xEDvel  {1} para expandir ] </color>"
     m_Metadata:
       m_Items:
       - rid: 8010823519888998403
   - m_Id: 1411319834968064
-    m_Localized: <color=#a06f47>[ <color=#e55c00>irCompleta el nivel <color=#5e9341>{0} 
-      <color=#a06f47> para expandir ] </color>
+    m_Localized: "<color=#a06f47>[ <color=#e55c00>Complete o n\xEDvel <color=#5e9341>{0} 
+      <color=#a06f47> para expandir ] </color>"
     m_Metadata:
       m_Items:
       - rid: 8010823519888998403
   - m_Id: 1411301770100736
-    m_Localized: " <color=#a06f47>[ <color=#e55c00>Realiza<color=#5e9341> {0}  <color=#a06f47>rachas
-      x3 m\xE1s para expandir ] </color>"
+    m_Localized: " <color=#a06f47>[ <color=#e55c00>Fa\xE7a mais<color=#5e9341> {0} 
+      <color=#a06f47> fases x3 para expandir ] </color>"
     m_Metadata:
       m_Items:
       - rid: 8010823519888998403
   - m_Id: 1411365854871552
-    m_Localized: ' <color=#a06f47> Entrada Completa </color>'
+    m_Localized: ' <color=#a06f47> Entrada Plena </color>'
     m_Metadata:
       m_Items: []
   references:
