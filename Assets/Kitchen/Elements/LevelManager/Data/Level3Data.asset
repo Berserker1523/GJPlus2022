@@ -16,7 +16,7 @@ MonoBehaviour:
   clientNumber: 32
   initialSpawnSeconds: 0
   minSpawnSeconds: 10
-  maxSpawnSeconds: 17
+  maxSpawnSeconds: 15
   minNumberOfPotionRecipients: 3
   minNumberOfMortars: 2
   minNumberOfStoves: 2

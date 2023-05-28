@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7204876137205530979, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280109857328242248, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: m_Name
       value: LevelLayout
