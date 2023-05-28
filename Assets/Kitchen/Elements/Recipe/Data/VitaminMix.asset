@@ -15,7 +15,7 @@ MonoBehaviour:
   name: 
   recipeName: 4
   diseasesItCures: 0
-  sprite: {fileID: 1647915234, guid: 22621f19048b9a64d9aac8260b7d566f, type: 3}
+  sprite: {fileID: 1207732168, guid: 6d0bcd9a499841341b066210f0643e43, type: 3}
   ingredients:
   - name: 
     ingredient: {fileID: 11400000, guid: 206fdf01312cc8141ab17a608b1a8161, type: 2}

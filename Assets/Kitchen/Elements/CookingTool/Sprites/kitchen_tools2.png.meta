@@ -132,8 +132,8 @@ TextureImporter:
       name: Potion1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 640
+        x: 11
+        y: 315
         width: 168
         height: 185
       alignment: 9
@@ -153,8 +153,8 @@ TextureImporter:
       name: Potion2
       rect:
         serializedVersion: 2
-        x: 27
-        y: 335
+        x: 33
+        y: 7
         width: 141
         height: 282
       alignment: 9
@@ -174,8 +174,8 @@ TextureImporter:
       name: Trash
       rect:
         serializedVersion: 2
-        x: 220
-        y: 601
+        x: 219
+        y: 277
         width: 272
         height: 208
       alignment: 0
@@ -195,8 +195,8 @@ TextureImporter:
       name: Potion3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 397
+        x: 221
+        y: 72
         width: 145
         height: 167
       alignment: 9
@@ -217,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 520
-        y: 388
+        y: 67
         width: 197
         height: 219
       alignment: 9
@@ -229,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: 57ca1daed26335e4fb0edfbd9bbe9a68
       internalID: 1084799438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potion_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 29
+        width: 127
+        height: 234
+      alignment: 9
+      pivot: {x: 0.45374352, y: 0.32785442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09586c6163db261408443e44e13498e0
+      internalID: 1207732168
       vertices: []
       indices: 
       edges: []
@@ -248,6 +269,7 @@ TextureImporter:
       Trash: -1530816345
       Potion4: 1084799438
       Potion2: -249744331
+      Potion_5: 1207732168
       Potion1: 437666987
   spritePackingTag: 
   pSDRemoveMatte: 0
