@@ -195,12 +195,12 @@ TextureImporter:
       name: Potion3
       rect:
         serializedVersion: 2
-        x: 221
+        x: 220
         y: 397
         width: 145
         height: 167
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42506987, y: 0.5559053}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,8 +220,8 @@ TextureImporter:
         y: 388
         width: 197
         height: 219
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5276464, y: 0.42089552}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
