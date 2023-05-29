@@ -57,6 +57,11 @@ namespace Kitchen
             anim.speed = tutorial ? 0 : 1;
         }
 
+        private void Update()
+        {
+            shakerSound.setVolume(Time.timeScale);
+        }
+
         private void OnDestroy()
         {
             dropView.OnDropped -= HandleDropped;
