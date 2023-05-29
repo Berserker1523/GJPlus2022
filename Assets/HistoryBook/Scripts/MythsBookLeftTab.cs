@@ -74,7 +74,7 @@ public class MythsBookLeftTab : MythsBookTab
         string mythText = "";
 
         for (int i=0; i<texts.Length; i++)
-        {    // TODO check the current Goal
+        {   
             bool entryUnlocked=false;
 
             switch (_bookEntryType)

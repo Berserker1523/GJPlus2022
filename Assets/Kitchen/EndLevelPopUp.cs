@@ -84,9 +84,8 @@ namespace Kitchen
             {
                 EventManager.Dispatch(GlobalTutorialEvent.Tutorial4Completed, 4);
             }
-            else if (LevelManager.CurrentLevel == 5) //TODO Burned Variable
+            else if (LevelManager.CurrentLevel == 4) //TODO Burned Variable
             {
-                PlayerPrefs.DeleteAll();
                 LevelManager.CurrentLevel = 1;
             }
             else
@@ -177,7 +176,7 @@ namespace Kitchen
             }
 
 
-            if (currentlevel == 5) //TODO Burned Variable
+            if (currentlevel == 4) //TODO Burned Variable
                 SceneManager.LoadScene(SceneName.Credits2.ToString(), LoadSceneMode.Single);
             else
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
