@@ -8,17 +8,19 @@ using UnityEngine.UI;
 
 namespace Kitchen
 {
-    public enum Gender 
+    public enum Gender
     {
-        female = 0, 
-        male = 1 
+        female = 0,
+        male = 1
     }
 
     [RequireComponent(typeof(DropView))]
     public class ClientController : MonoBehaviour
     {
-        public const float MaxWaitingSeconds = 70f; //TODO burned variable
+        public const float MaxWaitingSeconds = 70; //TODO burned variable
 
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private Canvas canvas;
         [SerializeField] private Slider slider;
         [SerializeField] private Image sliderBarImage;
         [SerializeField] private Image potionImage;
@@ -36,7 +38,7 @@ namespace Kitchen
         private bool clientServed = false;
         private RecipeData requiredRecipe;
         private float waitingTimer;
-        
+
         private Gender clientGender;
         public static bool inTutorial;
 
@@ -46,11 +48,12 @@ namespace Kitchen
 
         private string animatorIllnessParameter = "Illness";
         private string animatorRecuperatedParameter = "Recuperated";
-        private string animatorDiedParameter ="Died";
+        private string animatorDiedParameter = "Died";
 
-        private string[] animsDie = new string []{ "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
+        private string[] animsDie = new string[] { "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
         private bool clientDied;
         private bool gruntDispatched;
+        private bool sicknessParticlesActivated;
         private BoxCollider2D bc;
 
         protected void Awake()
@@ -64,15 +67,15 @@ namespace Kitchen
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
 
-            animator = GetComponentInChildren<Animator>();    
+            animator = GetComponentInChildren<Animator>();
             bc = GetComponent<BoxCollider2D>();
 
             EventManager.AddListener(GameStatus.LevelFinished, StopCounter);
         }
 
-        private void OnDestroy() =>  EventManager.RemoveListener(GameStatus.LevelFinished, StopCounter);
+        private void OnDestroy() => EventManager.RemoveListener(GameStatus.LevelFinished, StopCounter);
 
-        private void StopCounter() 
+        private void StopCounter()
         {
             if (!clientServed)
                 Destroy(gameObject);
@@ -109,7 +112,7 @@ namespace Kitchen
                 arrowsImages[i].enabled = false;
             }
 
-            clientGender = (Gender)UnityEngine.Random.Range(0, 2); 
+            clientGender = (Gender)UnityEngine.Random.Range(0, 2);
             animator.runtimeAnimatorController = animators[(int)clientGender];
 
             animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
@@ -128,17 +131,23 @@ namespace Kitchen
             {
                 ColorUtility.TryParseHtmlString("#ef2424", out Color color);
                 sliderBarImage.color = color;
+            }
+            else if (waitingTimer <= MaxWaitingSeconds * 0.5)
+            {
+                ColorUtility.TryParseHtmlString("#ef7824", out Color color);
+                sliderBarImage.color = color;
 
                 if (!gruntDispatched)
                 {
                     gruntDispatched = true;
                     EventManager.Dispatch(ClientEvent.Grunt, clientGender);
                 }
-            }
-            else if (waitingTimer <= MaxWaitingSeconds * 0.5)
-            {
-                ColorUtility.TryParseHtmlString("#ef7824", out Color color);
-                sliderBarImage.color = color;
+
+                if (!sicknessParticlesActivated)
+                {
+                    sicknessParticlesActivated = true;
+                    SicknessVFX.Play();
+                }
             }
             else if (waitingTimer <= MaxWaitingSeconds * 0.75)
             {
@@ -151,17 +160,38 @@ namespace Kitchen
                 sliderBarImage.color = color;
             }
 
-            if (waitingTimer <= 0 && !clientDied)          
-                StartCoroutine(DiedClientCoroutine());          
+            if (waitingTimer <= 0 && !clientDied)
+                StartCoroutine(DiedClientCoroutine());
+
+            if (SicknessVFX.isEmitting)
+            {
+                var emission1 = SicknessVFX.emission;
+                emission1.rateOverTime = 1.5f - (waitingTimer / (MaxWaitingSeconds / 2f));
+
+                var emission2 = Sickness2VFX.emission;
+                emission2.rateOverTime = 1.5f - (waitingTimer / (MaxWaitingSeconds / 2f));
+
+                var sparkEmission = SicknessSparkVFX.emission;
+                sparkEmission.rateOverTime = 2f - waitingTimer / (MaxWaitingSeconds / 2f) * 1.5f;
+
+                spriteRenderer.material.SetFloat("_SicknessColorMultiplier", 1f - waitingTimer / (MaxWaitingSeconds / 2f) * 0.5f);
+            }
         }
 
         IEnumerator DiedClientCoroutine()
         {
+            SicknessVFX.Stop();
+            spriteRenderer.material.SetFloat("_SicknessColorMultiplier", 0);
             clientDied = true;
             animator.SetBool(animatorDiedParameter, true);
             EventManager.Dispatch(ClientEvent.Dying);
             DeathVFX.Play();
-            yield return new WaitForSeconds(1f);
+            canvas.enabled = false;
+            yield return new WaitForSeconds(0.3f);
+            spriteRenderer.material.SetFloat("_DeathColorMultiplier", 1);
+            yield return new WaitForSeconds(0.83f - 0.3f);
+            spriteRenderer.enabled = false;
+            yield return new WaitForSeconds(2.17f - 0.3f);
             Destroy(gameObject);
             EventManager.Dispatch(ClientEvent.Died);
         }
@@ -207,15 +237,25 @@ namespace Kitchen
         public IEnumerator ClientServedRoutine()
         {
             //Display Happy Animation Here!
+            SicknessVFX.Stop();
+            spriteRenderer.material.SetFloat("_SicknessColorMultiplier", 0);
             clientServed = true;
             //clientSpriteRenderer.sprite = happyClientSprite[(int)clientGender];
             animator.SetBool(animatorRecuperatedParameter, clientServed);
             EventManager.Dispatch(ClientEvent.Served);
             GetComponent<BoxCollider2D>().enabled = false;
             healingVFX.Play();
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(0.3f);
+            spriteRenderer.material.SetFloat("_HealColorMultiplier", 1);
+            float green = 5f;
+            while(green > 0)
+            {
+                yield return new WaitForSeconds(0.126f);
+                green -= 1f;
+                spriteRenderer.material.SetFloat("_HealColorMultiplier", green / 5f);
+            }
+            yield return new WaitForSeconds(1.31f);
             bc.enabled = false;
-
             Destroy(gameObject);
         }
 
