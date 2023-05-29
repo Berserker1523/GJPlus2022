@@ -258,7 +258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.1, y: -135}
+  m_AnchoredPosition: {x: 331, y: -135}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3155958548979783172
@@ -787,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 333, y: -135}
+  m_AnchoredPosition: {x: 45.4, y: -135}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6952654779652394496
@@ -962,6 +962,10 @@ MonoBehaviour:
   - {fileID: 8480341019211629733}
   - {fileID: 7913729770480753531}
   - {fileID: 5600226633313767149}
+  arrowsImages:
+  - {fileID: 2207721077901855259}
+  - {fileID: 6808888602549952609}
+  - {fileID: 8517765999593603818}
   animators:
   - {fileID: 9100000, guid: cbcadcb6df8d5ae4d924643c2b1350f8, type: 2}
   - {fileID: 9100000, guid: f8ca7b9fbe480164caf7920b24b9af6b, type: 2}

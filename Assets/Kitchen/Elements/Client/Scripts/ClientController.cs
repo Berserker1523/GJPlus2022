@@ -24,6 +24,7 @@ namespace Kitchen
         [SerializeField] private Image potionImage;
         [SerializeField] private List<Image> ingredientsImages;
         [SerializeField] private List<Image> cookingToolsImages;
+        [SerializeField] private List<Image> arrowsImages;
         private ParticleSystem healingVFX;
 
         private DropView dropView;
@@ -88,7 +89,10 @@ namespace Kitchen
                 else if (requiredRecipe.ingredients[i].cookingToolName == CookingToolName.Stove)
                     cookingToolsImages[i].sprite = requiredRecipe.ingredients[i].ingredient.stoveRawSprite;
                 else
+                {
                     cookingToolsImages[i].enabled = false;
+                    arrowsImages[i].enabled = false;
+                }
                 cookingToolsImages[i].GetComponent<ImageResizeInBounds>().ResizeImageToBounds();
                 i++;
             }
@@ -97,6 +101,7 @@ namespace Kitchen
             {
                 ingredientsImages[i].enabled = false;
                 cookingToolsImages[i].enabled = false;
+                arrowsImages[i].enabled = false;
             }
 
             clientGender = (Gender)UnityEngine.Random.Range(0, 2); 
