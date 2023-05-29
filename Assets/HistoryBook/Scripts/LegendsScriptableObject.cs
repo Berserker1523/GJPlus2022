@@ -16,6 +16,7 @@ public abstract class BookEntry
 {
     public abstract ENUM_bookTabs bookEntryType { get; }
     [SerializeField] public LocalizedString name;
+    [SerializeField] public LocalizedString title;
     [SerializeField] public Sprite sprite;
     [SerializeField] public LocalizedString[] texts;
     [SerializeField] public abstract LocalizedString goal { get; }

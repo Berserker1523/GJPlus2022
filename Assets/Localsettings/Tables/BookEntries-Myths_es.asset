@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-Myths_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: a2d2411716ddaf84dba678e07809e0de, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 213400780800
+    m_Localized: "Begorotire era un indio feliz en Brasil, pero un d\xEDa se enfad\xF3
+      y decidi\xF3 buscar un nuevo hogar. Pint\xF3 a su familia de negro con el tinte
+      del fruto del jenipap y cre\xF3 un bast\xF3n m\xE1gico. Subi\xF3 a una monta\xF1a,
+      agit\xF3 su bast\xF3n y se elev\xF3 al cielo, convirti\xE9ndose en el Hombre
+      de la Lluvia. Desde all\xED, ayud\xF3 a los que quedaron en la tierra, enviando
+      semillas a su hija a trav\xE9s de una calabaza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 251820605440
+    m_Localized: "La hija de Begorotire fue encontrada por un joven en la calabaza
+      y regres\xF3 a la aldea. Se cas\xF3 con \xE9l y, con la ayuda de su padre,
+      trajo prosperidad a todos. La hija ense\xF1\xF3 a cultivar las semillas y a
+      cuidar los campos. Sin embargo, sent\xEDa nostalgia y decidi\xF3 visitar a
+      sus padres en el cielo. Utiliz\xF3 un \xE1rbol de Pinda\xEDba, doblando su
+      copa al suelo y lanz\xE1ndose al cielo. Regres\xF3 con su familia y cestas
+      llenas de frutas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 262281199616
+    m_Localized: "Begorotire ense\xF1\xF3 a todos a cuidar los campos y mantenerlos
+      verdes y abundantes. Hasta el d\xEDa de hoy, como Hombre de la Lluvia, trae
+      lluvia a los campos cuando las plantas necesitan agua. Esta leyenda de Brasil
+      nos ense\xF1a sobre la importancia de valorar la naturaleza, trabajar juntos
+      y ser agradecidos por las bendiciones que recibimos de la lluvia. Nos invita
+      a cuidar de la tierra y a ser conscientes de c\xF3mo nuestra conexi\xF3n con
+      la naturaleza puede traer prosperidad y alegr\xEDa a nuestras vidas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 271013740544
+    m_Localized: "Hab\xEDa una vez, una pareja ind\xEDgena enamorada que viv\xEDa
+      felizmente. Se llamaban Tain\xE1-Racan y Malu\xE1. Tras tres a\xF1os de matrimonio,
+      anhelaban tener un hijo, hasta que finalmente naci\xF3 Uadi, un ni\xF1o con
+      el cabello dorado como las flores del \xE1rbol de ipe amarillo. Aunque era
+      especial, Uadi fue objeto de burlas por parte de la tribu, quienes dec\xEDan
+      que era hijo del caim\xE1n que siempre estaba cerca de Tain\xE1-Racan. A pesar
+      de las bromas, Uadi creci\xF3 siendo encantador y dotado de una inteligencia
+      excepcional"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292543102976
+    m_Localized: "Un d\xEDa, Cananxiu\xE9, el dios del cielo, decidi\xF3 llevarse
+      a Uadi de regreso al cielo. Tain\xE1-Racan y Malu\xE1 se desesperaron y lloraron
+      durante tres d\xEDas y tres noches por la partida de su hijo. En ese momento,
+      el caim\xE1n, quien hab\xEDa sido un amigo leal de Tain\xE1-Racan, suplic\xF3
+      a Cananxiu\xE9 que mostrara compasi\xF3n y devolviera a Uadi. Conmovido por
+      la s\xFAplica del caim\xE1n, Cananxiu\xE9 accedi\xF3 y cre\xF3 el \xE1rbol
+      de pequi a partir de las l\xE1grimas de Tain\xE1-Racan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306434637824
+    m_Localized: "El \xE1rbol de pequi ten\xEDa frutos dorados y espinosos, cuyo
+      aroma era inolvidable. Tain\xE1-Racan y Malu\xE1 encontraron consuelo bajo
+      la sombra del pequizeiro, el \xE1rbol de pequi. Cada vez que el \xE1rbol de
+      pequi daba frutos maduros, que serv\xEDan como alimento para todos, Tain\xE1-Racan
+      y Malu\xE1 eran bendecidos con m\xE1s hijos. Plantaron m\xE1s \xE1rboles de
+      pequi con cada nuevo nacimiento y vivieron felices para siempre, recordando
+      a Uadi y el amor que compartieron"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333479510016
+    m_Localized: "En un tiempo pasado, un pueblo sufr\xEDa por la sequ\xEDa y el
+      ardiente sol que secaba todo a su paso. Una pareja y su hijo se vieron obligados
+      a abandonar sus tierras en busca de un nuevo hogar. Durante su viaje, el hijo
+      encontr\xF3 una solitaria palma de carnauba en medio del desierto. Bajo su
+      sombra, el joven pidi\xF3 ayuda a Tup\xE3 y escuch\xF3 la voz de Carnaubeira,
+      una mujer ind\xEDgena convertida en \xE1rbol de carnauba por la luna."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368506142720
+    m_Localized: "Carnaubeira comparti\xF3 sus sabios consejos con el joven. Le ense\xF1\xF3
+      a aprovechar la savia de la palma para saciar la sed, a comer los frutos para
+      evitar el hambre, a utilizar las ra\xEDces como medicina y a obtener cera de
+      las hojas para iluminar su camino en las noches oscuras. Adem\xE1s, le pidi\xF3
+      al joven que plantara los cocos de carnauba para ayudar a otros pueblos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379885289472
+    m_Localized: "El joven sigui\xF3 los consejos de Carnaubeira al pie de la letra
+      y un enorme \xE1rbol de carnauba creci\xF3 en la regi\xF3n. Convertido en adulto,
+      llev\xF3 los frutos de la \"palma de la vida\" a los pueblos cercanos, cumpliendo
+      el pedido de Carnaubeira y esperando que esos frutos brindaran ayuda y salvaci\xF3n
+      a quienes los recibieran. La leyenda de la carna\xFAba nos ense\xF1a sobre
+      la importancia de la sabidur\xEDa de la naturaleza y c\xF3mo podemos encontrar
+      soluciones en momentos dif\xEDciles si escuchamos con atenci\xF3n y cuidamos
+      de los recursos que nos brinda la tierra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389674795008
+    m_Localized: "Itaki, jefe de la tribu, tom\xF3 una decisi\xF3n radical que dej\xF3
+      a todos preocupados y conmocionados. Para controlar la poblaci\xF3n de su tribu,
+      decidi\xF3 que todos los ni\xF1os nacidos a partir de cierta fecha deb\xEDan
+      ser sacrificados. Sin embargo, esta medida afect\xF3 a su propia familia cuando
+      su hija Ia\xE7\xE3 dio a luz a un ni\xF1o que tuvo que ser sacrificado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427905875968
+    m_Localized: "ia\xE7\xE3 sufri\xF3 mucho por la p\xE9rdida de su hija y suplic\xF3
+      a Tup\xE3, que encontrara una soluci\xF3n para evitar los sacrificios de los
+      ni\xF1os. Un d\xEDa, Ia\xE7\xE3 escuch\xF3 el llanto de un ni\xF1o afuera de
+      su choza y al salir vio a su hija junto a una palmera. La abraz\xF3 con alegr\xEDa,
+      pero la ni\xF1a desapareci\xF3 misteriosamente en sus brazos. ia\xE7\xE3 muri\xF3
+      de tristeza esa noche y su cuerpo fue encontrado abrazado a la palmera al d\xEDa
+      siguiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 429780729856
+    m_Localized: "\"Itaki not\xF3 que los ojos de Ia\xE7\xE3 estaban fijos en la
+      copa del \xE1rbol, donde abundaban peque\xF1os frutos oscuros: el a\xE7a\xED.\nEl
+      jefe orden\xF3 recolectar todos los frutos y se hizo un jugo espeso y rojizo
+      que aliment\xF3 a la tribu, poniendo fin a la escasez de alimentos. El fruto
+      recibi\xF3 el nombre de a\xE7a\xED en honor a su hija, cuyo nombre al rev\xE9s
+      era Ia\xE7\xE3. A partir de entonces, el a\xE7a\xED se convirti\xF3 en el alimento
+      principal de la tribu, lo que llev\xF3 a Itaki a suspender la orden de sacrificar
+      a los ni\xF1os.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476085846016
+    m_Localized: "Un d\xEDa, en su b\xFAsqueda incansable, el cham\xE1n se adentr\xF3
+      a\xFAn m\xE1s en la espesura de la selva y descubri\xF3 una planta m\xE1gica
+      y desconocida: la hoja de coca. Fascinado por su belleza y energ\xEDa vibrante,
+      el cham\xE1n reconoci\xF3 de inmediato su potencial \xFAnico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450374762496
+    m_Localized: "En lo profundo de la exuberante selva amaz\xF3nica, se despliega
+      una historia ancestral que habla del poder y la magia de la hoja de coca. En
+      tiempos remotos, un sabio cham\xE1n exploraba los secretos de la naturaleza,
+      buscando plantas sagradas que pudieran brindar sabidur\xEDa y sanaci\xF3n a
+      su tribu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485128765440
+    m_Localized: "El cham\xE1n comparti\xF3 este tesoro con su tribu, revelando los
+      poderes curativos y espirituales de la hoja de coca. Pronto, la planta se convirti\xF3
+      en una parte integral de la vida de la tribu amaz\xF3nica. Durante ceremonias
+      sagradas, los miembros de la tribu masticaban las hojas de coca y dejaban que
+      su energ\xEDa se infundiera en sus cuerpos. Sent\xEDan una conexi\xF3n profunda
+      con el mundo espiritual y recib\xEDan revelaciones y gu\xEDa para sus vidas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 503097163776
+    m_Localized: "El cacique de la tribu tup\xED se encontraba muy triste, pues su
+      hija result\xF3 embarazada sin estar casada con un valiente guerrero. Hasta
+      que un sue\xF1o le revel\xF3 la verdad: man\xED se manten\xEDa pura. Con esta
+      revelaci\xF3n el cacique acept\xF3 el embarazo y esper\xF3 con alegr\xEDa el
+      nacimiento de su nieta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 536802590720
+    m_Localized: "Tiempo despu\xE9s, naci\xF3 Mani, la cual siempre estaba sonriendo,
+      y se volvi\xF3 una ni\xF1a ind\xEDgena muy querida entre su tribu.  Desafortunadamente,
+      Mani fue encontrada muerta una ma\xF1ana, pero su madre la enterr\xF3 en su
+      choza (\"oca\") y sus l\xE1grimas regaron la tierra. De ese lugar, creci\xF3
+      una planta especial que la madre comenz\xF3 a cuidar. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546642427904
+    m_Localized: "Con una mezcla de tristeza y esperanza, la madre cav\xF3 en la
+      tierra, esperando encontrar a su hija con vida. Sin embargo, en lugar de Mani, 
+      encontr\xF3 una ra\xEDz, la mandioca, que recibi\xF3 este nombre como resultado
+      de la combinaci\xF3n del nombre Mani y la palabra oca."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

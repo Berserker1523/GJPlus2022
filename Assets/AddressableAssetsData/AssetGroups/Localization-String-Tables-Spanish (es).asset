@@ -45,6 +45,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     - Preload
+  - m_GUID: 05226912d99766a41a27094583c9f532
+    m_Address: BookEntries-Myths_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 49c91ce2feb1e454d9ac5a0686116ea2
+    m_Address: BookEntries-Ingredients_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 2ac28936c4f333f43a5aecd99fde735f
+    m_Address: BookEntries-PlacesEIndegenous_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: af67620bcdf644242ad668575b01b8e9, type: 2}
   m_SchemaSet:

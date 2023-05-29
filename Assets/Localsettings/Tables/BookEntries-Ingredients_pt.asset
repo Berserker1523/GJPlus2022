@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-Ingredients_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 11b2fabee7a2d894489750fb39538163, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3228983721984
+    m_Localized: "Uma fruta ex\xF3tica e deliciosa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2463795871744
+    m_Localized: "O pequi \xE9 uma fruta fascinante que cresce na floresta amaz\xF4nica
+      do Brasil. Essa fruta tem formato redondo e uma casca dura, espinhosa e amarela
+      brilhante. Dentro da casca h\xE1 uma polpa macia e amarela que \xE9 muito saborosa
+      - imagine um cruzamento entre uma manga e um p\xEAssego! O pequi \xE9 muito
+      popular na culin\xE1ria brasileira e \xE9 especialmente apreciado por seu sabor
+      \xFAnico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3124851736576
+    m_Localized: "O pequi \xE9 muito especial porque amadurece apenas uma vez por
+      ano, durante a esta\xE7\xE3o chuvosa na floresta amaz\xF4nica. As \xE1rvores
+      de pequi podem crescer at\xE9 15 metros de altura e produzir muitos frutos,
+      mas somente em determinadas \xE9pocas do ano. Durante o resto do ano, as \xE1rvores
+      ficam cheias de folhas verdes e belas flores brancas que atraem borboletas
+      e abelhas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3186319261696
+    m_Localized: "Al\xE9m de seu sabor delicioso, o pequi traz benef\xEDcios \xE0
+      sa\xFAde. Ele \xE9 rico em vitamina C, que ajuda a fortalecer o sistema imunol\xF3gico
+      e a proteger nosso corpo contra doen\xE7as. Ele tamb\xE9m cont\xE9m vitamina
+      A, que \xE9 boa para a vis\xE3o e a pele, portanto, comer pequi pode ser muito
+      bom para n\xF3s!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3203536879616
+    m_Localized: "Na cultura brasileira, o pequi tem um lugar especial. Ele \xE9
+      considerado um s\xEDmbolo da regi\xE3o amaz\xF4nica e \xE9 usado em muitos
+      pratos tradicionais. O povo da floresta amaz\xF4nica vem colhendo os benef\xEDcios
+      do pequi h\xE1 s\xE9culos e descobriu diferentes formas de cozinh\xE1-lo. Ele
+      pode ser usado em molhos, sopas, saladas e at\xE9 mesmo em sorvetes - a variedade
+      de pratos que podem ser feitos com o pequi \xE9 incr\xEDvel!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3212428804096
+    m_Localized: "Entretanto, como acontece com muitos outros alimentos, \xE9 importante
+      apreciar o pequi com modera\xE7\xE3o. Embora seja delicioso e saud\xE1vel,
+      sua casca dura e espinhosa pode ser perigosa se n\xE3o for manuseada com cuidado.
+      Portanto, \xE9 melhor pedir a ajuda de um adulto para abri-lo e aproveitar
+      sua deliciosa polpa - lembre-se, o pequi \xE9 um tesouro da floresta amaz\xF4nica
+      que pode ser apreciado com cautela!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3242879451136
+    m_Localized: "A \xE1rvore m\xE1gica do Brasil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3279231483904
+    m_Localized: "A carna\xFAba \xE9 uma \xE1rvore incr\xEDvel encontrada na regi\xE3o
+      nordeste do Brasil. Ela \xE9 conhecida como \"a \xE1rvore da vida\" devido
+      aos v\xE1rios benef\xEDcios que oferece. Essa \xE1rvore majestosa pode atingir
+      uma altura de at\xE9 20 metros e tem folhas grandes e brilhantes. Al\xE9m disso,
+      a carna\xFAba \xE9 famosa por sua cera, que \xE9 considerada uma das mais duras
+      do mundo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301788450816
+    m_Localized: "A cera de carna\xFAba \xE9 um tesouro natural com v\xE1rios usos.
+      Ela \xE9 extra\xEDda das folhas da \xE1rvore e \xE9 usada para fabricar produtos
+      como ceras para assoalho, polidores de autom\xF3veis e at\xE9 mesmo na fabrica\xE7\xE3o
+      de produtos cosm\xE9ticos, como batons e batons. Al\xE9m disso, essa cera \xE9
+      muito \xFAtil na ind\xFAstria aliment\xEDcia, onde \xE9 usada para revestir
+      frutas e chocolates, protegendo-os e dando-lhes um brilho especial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317751971840
+    m_Localized: "Mas n\xE3o \xE9 s\xF3 isso, a carna\xFAba tamb\xE9m oferece outros
+      benef\xEDcios. Suas folhas s\xE3o uma importante fonte de alimento para o gado,
+      e seu tronco \xE9 usado para construir casas e m\xF3veis. At\xE9 mesmo sua
+      raiz tem propriedades medicinais e \xE9 usada na medicina tradicional para
+      tratar v\xE1rias doen\xE7as."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333807767552
+    m_Localized: "A carna\xFAba \xE9 um s\xEDmbolo da regi\xE3o nordeste do Brasil
+      e \xE9 considerada uma \xE1rvore m\xE1gica. Em muitas festividades e tradi\xE7\xF5es
+      culturais, as folhas da carna\xFAba s\xE3o usadas para fazer chap\xE9us, cestas
+      e ornamentos. Al\xE9m disso, a \xE1rvore \xE9 um ref\xFAgio para muitas esp\xE9cies
+      de p\xE1ssaros e outros animais, o que a torna um elemento vital para a biodiversidade
+      da regi\xE3o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3343614050304
+    m_Localized: "No entanto, \xE9 importante proteger e conservar as carnaubeiras.
+      Embora sejam resistentes e possam suportar condi\xE7\xF5es adversas, elas est\xE3o
+      amea\xE7adas pelo desmatamento e pela explora\xE7\xE3o irrespons\xE1vel. A
+      carna\xFAba \xE9 um recurso valioso, mas \xE9 essencial garantir que ela seja
+      usada de forma sustent\xE1vel e ecologicamente correta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3356868050944
+    m_Localized: "O tesouro nutricional da Amaz\xF4nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3390602838016
+    m_Localized: "O a\xE7a\xED \xE9 uma fruta pequena e redonda que cresce nas florestas
+      tropicais da Amaz\xF4nia. \xC9 conhecido como \"o fruto da energia\" devido
+      \xE0s suas incr\xEDveis propriedades nutricionais. O a\xE7a\xED tem uma cor
+      roxa escura e sua polpa \xE9 macia e cremosa, seu sabor \xE9 delicioso e lembra
+      uma mistura de chocolate e frutas vermelhas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3411549192192
+    m_Localized: "Essa fruta \xE9 muito apreciada pelas comunidades ind\xEDgenas
+      da regi\xE3o, que v\xEAm aproveitando seus benef\xEDcios h\xE1 s\xE9culos.
+      O a\xE7a\xED \xE9 rico em antioxidantes, que ajudam a proteger nosso corpo
+      contra os radicais livres e nos mant\xEAm saud\xE1veis. Ele tamb\xE9m \xE9
+      uma fonte natural de energia, o que o torna um excelente alimento para atletas
+      e pessoas ativas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3432826896384
+    m_Localized: "Uma das formas mais populares de consumir a\xE7a\xED \xE9 como
+      smoothie ou em tigelas de caf\xE9 da manh\xE3. Ele \xE9 misturado com outras
+      frutas, granola e mel, criando uma combina\xE7\xE3o deliciosa e nutritiva.
+      Tamb\xE9m \xE9 usado para fazer sorvete, doces e produtos de panifica\xE7\xE3o
+      - o a\xE7a\xED nos d\xE1 uma variedade de op\xE7\xF5es deliciosas para desfrutar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3441777541120
+    m_Localized: "O a\xE7a\xED n\xE3o \xE9 apenas ben\xE9fico para a nossa sa\xFAde,
+      mas tamb\xE9m desempenha um papel importante na sustentabilidade da Amaz\xF4nia.
+      Seu cultivo e colheita proporcionam emprego para muitas comunidades locais,
+      fomentando a economia e a preserva\xE7\xE3o da regi\xE3o. Al\xE9m disso, o
+      a\xE7a\xED \xE9 colhido de forma sustent\xE1vel, respeitando os ciclos naturais
+      da planta e evitando o esgotamento dos recursos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3449264373760
+    m_Localized: "Entretanto, \xE9 importante observar que o a\xE7a\xED n\xE3o \xE9
+      uma solu\xE7\xE3o m\xE1gica para todos os nossos problemas de sa\xFAde. Embora
+      seja nutritivo e ben\xE9fico, \xE9 essencial manter uma dieta equilibrada e
+      um estilo de vida saud\xE1vel em geral. Al\xE9m disso, devemos consumir o a\xE7a\xED
+      em sua forma natural ou em prepara\xE7\xF5es saud\xE1veis, evitando produtos
+      processados com alto teor de a\xE7\xFAcar e gordura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459213262848
+    m_Localized: "A planta sagrada dos povos ind\xEDgenas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3489315782656
+    m_Localized: "A folha de coca \xE9 uma planta sagrada que cresce nas regi\xF5es
+      montanhosas da Am\xE9rica do Sul, como os Andes. \xC9 uma planta muito especial
+      para os povos ind\xEDgenas, que a utilizam h\xE1 milhares de anos por suas
+      propriedades medicinais e espirituais. A folha de coca tem formato oval e \xE9
+      verde, sendo usada de diferentes maneiras pelas comunidades ind\xEDgenas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3505077977088
+    m_Localized: "Para os povos ind\xEDgenas, a folha de coca \xE9 considerada um
+      presente da M\xE3e Natureza. Ela \xE9 tradicionalmente usada para aliviar o
+      cansa\xE7o e a fome, pois cont\xE9m nutrientes que fornecem energia e ajudam
+      a resistir ao frio das montanhas. Al\xE9m disso, a folha de coca \xE9 valorizada
+      por sua capacidade de manter a mente afiada e melhorar a concentra\xE7\xE3o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3513923764224
+    m_Localized: "A folha de coca tamb\xE9m tem um significado espiritual para os
+      povos ind\xEDgenas. Ela \xE9 usada em rituais e cerim\xF4nias como uma forma
+      de se conectar com a natureza e os ancestrais. Mastigar folhas de coca \xE9
+      uma pr\xE1tica antiga que ajuda as comunidades a se manterem em harmonia com
+      o mundo natural e a encontrarem respostas para perguntas importantes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3522618556416
+    m_Localized: "\xC9 importante observar que a folha de coca sozinha n\xE3o tem
+      os mesmos efeitos negativos associados aos seus derivados ilegais. Esses derivados
+      s\xE3o subst\xE2ncias qu\xEDmicas obtidas da folha de coca que podem ser prejudiciais
+      \xE0 sa\xFAde. Entretanto, a folha de coca em sua forma natural n\xE3o causa
+      depend\xEAncia e n\xE3o causa danos \xE0s pessoas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3534366801920
+    m_Localized: "A folha de coca \xE9 um tesouro da sabedoria ind\xEDgena e deve
+      ser respeitada e valorizada. \xC9 importante entender que seu uso tradicional
+      e espiritual faz parte de uma cultura ancestral que existe h\xE1 gera\xE7\xF5es.
+      Ao aprender sobre a folha de coca, podemos apreciar e respeitar as diferentes
+      maneiras pelas quais os povos ind\xEDgenas se relacionam com a natureza e suas
+      pr\xF3prias tradi\xE7\xF5es."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

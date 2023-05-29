@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-PlacesEIndegenous_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 77d06748f4be02642af162a3439a012c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2375732264960
+    m_Localized: "Guardi\xF5es da floresta e de sua cultura ancestral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2414101757952
+    m_Localized: "A comunidade ind\xEDgena Munduruku \xE9 um grupo corajoso e resiliente
+      que vive na regi\xE3o amaz\xF4nica do Brasil. Eles s\xE3o guardi\xF5es de uma
+      rica cultura ancestral e t\xEAm uma profunda conex\xE3o com a terra e a natureza
+      que os cerca. Seu modo de vida \xE9 baseado no respeito m\xFAtuo e na harmonia
+      com o meio ambiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2424231002112
+    m_Localized: "Os Munduruku habitam a floresta amaz\xF4nica h\xE1 gera\xE7\xF5es
+      e desenvolveram um vasto conhecimento sobre plantas medicinais, t\xE9cnicas
+      sustent\xE1veis de ca\xE7a e pesca e a preserva\xE7\xE3o do equil\xEDbrio ecol\xF3gico.
+      Sua sabedoria \xE9 transmitida de pai para filho, e suas tradi\xE7\xF5es e
+      rituais s\xE3o parte fundamental de sua identidade cultural."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2438604881920
+    m_Localized: "A floresta amaz\xF4nica \xE9 seu lar e sua fonte de subsist\xEAncia.
+      Os Munduruku dependem dos recursos naturais que a floresta oferece, como alimentos,
+      materiais de constru\xE7\xE3o e plantas medicinais. Al\xE9m disso, sua vis\xE3o
+      de mundo est\xE1 intimamente relacionada \xE0 natureza, pois eles acreditam
+      que todos os seres vivos t\xEAm esp\xEDritos e merecem respeito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449401020416
+    m_Localized: "A comunidade Munduruku tamb\xE9m enfrentou desafios. H\xE1 muito
+      tempo eles lutam para proteger seu territ\xF3rio e modo de vida contra o desmatamento
+      e a invas\xE3o de empresas extrativistas. Eles organizaram protestos pac\xEDficos
+      e defenderam seus direitos nos tribunais, mostrando ao mundo sua coragem e
+      determina\xE7\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2458301333504
+    m_Localized: "\xC9 importante reconhecer e valorizar a import\xE2ncia da comunidade
+      Munduruku e de todas as comunidades ind\xEDgenas. Elas s\xE3o guardi\xE3s da
+      floresta e do conhecimento ancestral que podem nos ensinar li\xE7\xF5es importantes
+      sobre sustentabilidade e respeito \xE0 natureza. Devemos ouvir e apoiar suas
+      vozes e trabalhar juntos para proteger seus direitos e preservar sua cultura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2745862815744
+    m_Localized: "O pulm\xE3o verde de nosso planeta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641349148672
+    m_Localized: "A Amaz\xF4nia \xE9 o nome da maior e mais biodiversa floresta tropical
+      do mundo. Ela se estende por v\xE1rios pa\xEDses da Am\xE9rica do Sul, incluindo
+      Brasil, Peru e Col\xF4mbia. \xC9 um lugar m\xE1gico cheio de \xE1rvores altas,
+      rios caudalosos e uma variedade incr\xEDvel de plantas e animais - \xE9 como
+      um mundo cheio de vida e maravilhas naturais!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2699452841984
+    m_Localized: "Essa floresta tropical \xE9 conhecida como o \"pulm\xE3o verde\"
+      do nosso planeta porque produz uma grande quantidade de oxig\xEAnio. As \xE1rvores
+      e plantas da Amaz\xF4nia realizam um processo chamado fotoss\xEDntese, no qual
+      convertem di\xF3xido de carbono em oxig\xEAnio, ajudando a manter o equil\xEDbrio
+      do ar que respiramos - \xE9 como se a Amaz\xF4nia estivesse nos dando o ar
+      fresco de que precisamos para viver!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2708088913920
+    m_Localized: "Al\xE9m disso, a Amaz\xF4nia \xE9 o lar de milh\xF5es de esp\xE9cies
+      de plantas e animais. Podemos encontrar on\xE7as-pintadas, anacondas, macacos,
+      papagaios coloridos e muitas outras criaturas incr\xEDveis. \xC9 um verdadeiro
+      tesouro de biodiversidade, o que significa que h\xE1 uma grande variedade de
+      seres vivos vivendo nesse lugar. \xC9 como se a Amaz\xF4nia fosse uma enorme
+      biblioteca cheia de hist\xF3rias de vida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2717035364352
+    m_Localized: "As comunidades ind\xEDgenas que vivem na Amaz\xF4nia t\xEAm uma
+      conex\xE3o especial com essa floresta. Elas aprenderam a viver em harmonia
+      com a natureza e desenvolveram conhecimentos ancestrais sobre plantas medicinais
+      e a conserva\xE7\xE3o dos recursos naturais. Para eles, a Amaz\xF4nia \xE9
+      muito mais do que um lugar f\xEDsico, \xE9 um lar cheio de hist\xF3ria, cultura
+      e espiritualidade."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2726162169856
+    m_Localized: "No entanto, a Amaz\xF4nia enfrenta desafios e amea\xE7as. O desmatamento,
+      que ocorre quando as \xE1rvores s\xE3o cortadas indiscriminadamente, amea\xE7a
+      o equil\xEDbrio desse ecossistema \xFAnico. H\xE1 tamb\xE9m atividades como
+      a minera\xE7\xE3o ilegal e a ca\xE7a ilegal, que prejudicam a vida selvagem
+      e colocam em risco a sobreviv\xEAncia de muitas esp\xE9cies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2916482908160
+    m_Localized: "\xC9 essencial que todos n\xF3s nos conscientizemos da import\xE2ncia
+      de proteger a Amaz\xF4nia. Podemos fazer isso aprendendo mais sobre esse lugar
+      incr\xEDvel e compartilhando essas informa\xE7\xF5es com outras pessoas. Tamb\xE9m
+      podemos tomar medidas para reduzir nossa pegada ambiental, como reciclar, usar
+      menos pl\xE1stico e apoiar projetos e organiza\xE7\xF5es que trabalham para
+      conservar essa maravilhosa floresta tropical."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

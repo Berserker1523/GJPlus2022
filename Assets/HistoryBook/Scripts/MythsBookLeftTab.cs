@@ -30,7 +30,7 @@ public class MythsBookLeftTab : MythsBookTab
         _index = index;
         _tabName.StringReference = entry.name;
        _bookEntryType = entry.bookEntryType;
-        _title= entry.name;     
+        _title= entry.title;     
         _description = SetMythText(entry.texts, entry.goal); 
         _sprite= entry.sprite;
     }

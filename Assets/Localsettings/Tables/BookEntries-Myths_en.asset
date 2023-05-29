@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-Myths_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a2d2411716ddaf84dba678e07809e0de, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 213400780800
+    m_Localized: Begorotire was a happy Indian in Brazil, but one day he became angry
+      and decided to look for a new home. He painted his family black with the dye
+      from the jenipap fruit and created a magic staff. He climbed a mountain, waved
+      his staff and soared into the sky, becoming the Rain Man. From there, he helped
+      those left on earth, sending seeds to his daughter through a gourd.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 251820605440
+    m_Localized: "Begorotire's daughter was found by a young man in the calabash
+      and returned to the village. She married him and, with her father's help, brought
+      prosperity to all. The daughter taught how to cultivate the seeds and care
+      for the fields. However, she was homesick and decided to visit her parents
+      in heaven. She used a Pinda\xEDba tree, bending its top to the ground and launching
+      herself into the sky. He returned with his family and baskets full of fruit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 262281199616
+    m_Localized: Begorotire taught everyone to take care of the fields and keep them
+      green and plentiful. To this day, as the Rain Man, he brings rain to the fields
+      when the plants need water. This legend from Brazil teaches us about the importance
+      of valuing nature, working together and being grateful for the blessings we
+      receive from the rain. It invites us to care for the earth and to be aware
+      of how our connection with nature can bring prosperity and joy to our lives.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 271013740544
+    m_Localized: "Once upon a time, there was an indigenous couple in love who lived
+      happily. Their names were Tain\xE1-Racan and Malu\xE1. After three years of
+      marriage, they longed to have a child, until finally Uadi was born, a boy with
+      golden hair like the flowers of the yellow ipe tree. Although he was special,
+      Uadi was teased by the tribe, who said he was the son of the alligator that
+      was always near Tain\xE1-Racan. Despite the jokes, Wadi grew up to be charming
+      and gifted with exceptional intelligence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292543102976
+    m_Localized: "One day, Cananxiu\xE9, the god of the sky, decided to take Uadi
+      back to heaven. Tain\xE1-Racan and Malu\xE1 despaired and cried for three days
+      and three nights over the departure of their son. At that moment, the alligator,
+      who had been a loyal friend of Tain\xE1-Racan, begged Cananxiu\xE9 to show
+      compassion and return Uadi. Moved by the alligator's plea, Cananxiu\xE9 agreed
+      and created the pequi tree from Tain\xE1-Racan's tears."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306434637824
+    m_Localized: "The pequi tree had golden and thorny fruits, whose aroma was unforgettable.
+      Tain\xE1-Racan and Malu\xE1 found comfort under the shade of the pequizeiro,
+      the pequi tree. Each time the pequi tree bore ripe fruit, which served as food
+      for all, Tain\xE1-Racan and Malu\xE1 were blessed with more children. They
+      planted more pequi trees with each new birth and lived happily ever after,
+      remembering Uadi and the love they shared."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333479510016
+    m_Localized: "Once upon a time, a village suffered from drought and the scorching
+      sun that dried up everything in its path. A couple and their son were forced
+      to leave their land in search of a new home. During their journey, the son
+      found a solitary carnauba palm in the middle of the desert. Under its shade,
+      the young man asked Tup\xE3 for help and heard the voice of Carnaubeira, an
+      indigenous woman turned into a carnauba tree by the moon."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368506142720
+    m_Localized: Carnaubeira shared his wise advice with the young man. He taught
+      him to use the sap of the palm to quench his thirst, to eat the fruits to avoid
+      hunger, to use the roots as medicine and to obtain wax from the leaves to light
+      his way in the dark nights. In addition, he asked the young man to plant the
+      carnauba coconuts to help other villages.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379885289472
+    m_Localized: "The young man followed Carnaubeira's advice to the letter and a
+      huge carnauba tree grew in the region. As an adult, he took the fruits of the
+      \"palm of life\" to nearby villages, fulfilling Carnaubeira's request and hoping
+      that these fruits would bring help and salvation to those who received them.
+      The legend of the carna\xFAba teaches us about the importance of the wisdom
+      of nature and how we can find solutions in difficult times if we listen carefully
+      and take care of the resources the earth provides us with."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389674795008
+    m_Localized: "Itaki, chief of the tribe, made a radical decision that left everyone
+      worried and shocked. To control the population of his tribe, he decided that
+      all children born after a certain date should be sacrificed. However, this
+      measure affected his own family when his daughter Ia\xE7\xE3 gave birth to
+      a child who had to be sacrificed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427905875968
+    m_Localized: "ia\xE7\xE3 suffered greatly for the loss of her daughter and begged
+      Tup\xE3 to find a solution to avoid child sacrifices. One day, ia\xE7\xE3 heard
+      a child crying outside her hut and when she went outside she saw her daughter
+      next to a palm tree. He embraced her with joy, but the child mysteriously disappeared
+      in his arms. ia\xE7\xE3 died of sadness that night and her body was found hugging
+      the palm tree the next day."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 429780729856
+    m_Localized: "\"Itaki noticed that Ia\xE7\xE3's eyes were fixed on the top of
+      the tree, where small dark fruits abounded: the a\xE7a\xED.\nThe chief ordered
+      all the fruits to be harvested and a thick, reddish juice was made that fed
+      the tribe, putting an end to the food shortage. The fruit was named a\xE7a\xED
+      in honor of his daughter, whose name in reverse was Ia\xE7\xE3. From then on,
+      a\xE7a\xED became the main food of the tribe, which led Itaki to suspend the
+      order to sacrifice the children.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450374762496
+    m_Localized: Deep in the lush Amazon jungle, an ancestral story unfolds that
+      speaks of the power and magic of the coca leaf. In ancient times, a wise shaman
+      explored the secrets of nature, searching for sacred plants that could bring
+      wisdom and healing to his tribe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476085846016
+    m_Localized: 'One day, in his tireless search, the shaman went deeper into the
+      jungle and discovered a magical and unknown plant: the coca leaf. Fascinated
+      by its beauty and vibrant energy, the shaman immediately recognized its unique
+      potential.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485128765440
+    m_Localized: The shaman shared this treasure with his tribe, revealing the healing
+      and spiritual powers of the coca leaf. Soon, the plant became an integral part
+      of Amazonian tribal life. During sacred ceremonies, tribal members would chew
+      the coca leaves and allow its energy to infuse their bodies. They felt a deep
+      connection to the spiritual world and received revelations and guidance for
+      their lives.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 503097163776
+    m_Localized: 'The chief of the Tupi tribe was very sad because his daughter was
+      pregnant without being married to a brave warrior. Until a dream revealed to
+      him the truth: peanuts remained pure. With this revelation, the cacique accepted
+      the pregnancy and awaited the birth of his granddaughter with joy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 536802590720
+    m_Localized: Some time later, Mani was born, who was always smiling, and became
+      a beloved Indian girl among her tribe.  Unfortunately, Mani was found dead
+      one morning, but her mother buried her in her hut ("oca") and her tears watered
+      the earth. From that place, a special plant grew, which the mother began to
+      care for.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546642427904
+    m_Localized: With a mixture of sadness and hope, the mother dug in the earth,
+      hoping to find her daughter alive. However, instead of Mani, she found a root,
+      the manioc, which received this name as a result of the combination of the
+      name Mani and the word oca.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

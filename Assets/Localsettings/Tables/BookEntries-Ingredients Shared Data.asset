@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: BookEntries-Ingredients Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: BookEntries-Ingredients
+  m_TableCollectionNameGuidString: 11b2fabee7a2d894489750fb39538163
+  m_Entries:
+  - m_Id: 2463795871744
+    m_Key: Pequi_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3124851736576
+    m_Key: Pequi_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3186319261696
+    m_Key: Pequi_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3203536879616
+    m_Key: Pequi_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3212428804096
+    m_Key: Pequi_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3228983721984
+    m_Key: Pequi_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3242879451136
+    m_Key: Carnauba_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3279231483904
+    m_Key: Carnauba_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301788450816
+    m_Key: Carnauba_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317751971840
+    m_Key: Carnauba_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333807767552
+    m_Key: Carnauba_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3343614050304
+    m_Key: Carnauba_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3356868050944
+    m_Key: Acai_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3390602838016
+    m_Key: Acai_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3411549192192
+    m_Key: Acai_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3432826896384
+    m_Key: Acai_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3441777541120
+    m_Key: Acai_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3449264373760
+    m_Key: Acai_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459213262848
+    m_Key: Coca_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3489315782656
+    m_Key: Coca_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3505077977088
+    m_Key: Coca_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3513923764224
+    m_Key: Coca_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3522618556416
+    m_Key: Coca_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3534366801920
+    m_Key: Coca_5
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8010823587074408457
+  references:
+    version: 2
+    RefIds:
+    - rid: 8010823587074408457
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1685395472002

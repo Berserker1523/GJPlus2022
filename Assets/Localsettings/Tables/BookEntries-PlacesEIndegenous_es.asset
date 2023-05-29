@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-PlacesEIndegenous_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 77d06748f4be02642af162a3439a012c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2375732264960
+    m_Localized: Guardianes de la selva y su cultura ancestral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2414101757952
+    m_Localized: "La comunidad ind\xEDgena Munduruku es un grupo valiente y resistente
+      que vive en la regi\xF3n amaz\xF3nica de Brasil. Son custodios de una rica
+      cultura ancestral y tienen una profunda conexi\xF3n con la tierra y la naturaleza
+      que los rodea. Su forma de vida se basa en el respeto mutuo y en la armon\xEDa
+      con el entorno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2424231002112
+    m_Localized: "Los Munduruku han habitado la selva amaz\xF3nica durante generaciones
+      y han desarrollado un vasto conocimiento sobre las plantas medicinales, las
+      t\xE9cnicas de caza y pesca sostenibles, y la preservaci\xF3n del equilibrio
+      ecol\xF3gico. Su sabidur\xEDa es transmitida de padres a hijos, y sus tradiciones
+      y rituales son parte fundamental de su identidad cultural."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2438604881920
+    m_Localized: "La selva amaz\xF3nica es su hogar y fuente de sustento. Los Munduruku
+      dependen de los recursos naturales que la selva les proporciona, como alimentos,
+      materiales de construcci\xF3n y plantas medicinales. Adem\xE1s, su cosmovisi\xF3n
+      est\xE1 estrechamente relacionada con la naturaleza, ya que creen que todos
+      los seres vivos tienen esp\xEDritus y merecen respeto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449401020416
+    m_Localized: "La comunidad Munduruku tambi\xE9n ha enfrentado desaf\xEDos. Han
+      luchado durante mucho tiempo para proteger su territorio y su forma de vida
+      contra la deforestaci\xF3n y la invasi\xF3n de empresas extractivas. Han organizado
+      protestas pac\xEDficas y han defendido sus derechos en los tribunales, mostrando
+      al mundo su valent\xEDa y determinaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2458301333504
+    m_Localized: "Es importante reconocer y valorar la importancia de la comunidad
+      Munduruku y de todas las comunidades ind\xEDgenas. Ellos son guardianes de
+      la selva y de un conocimiento ancestral que puede ense\xF1arnos lecciones importantes
+      sobre la sostenibilidad y el respeto por la naturaleza. Debemos escuchar y
+      apoyar sus voces, y trabajar juntos para proteger sus derechos y preservar
+      su cultura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2745862815744
+    m_Localized: " El pulm\xF3n verde de nuestro planeta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641349148672
+    m_Localized: "El Amazonas es el nombre de la selva tropical m\xE1s grande y biodiversa
+      del mundo. Se extiende a lo largo de varios pa\xEDses de Am\xE9rica del Sur,
+      como Brasil, Per\xFA y Colombia. Es un lugar m\xE1gico lleno de \xE1rboles
+      altos, r\xEDos caudalosos y una variedad incre\xEDble de plantas y animales.
+      \xA1Es como un mundo lleno de vida y maravillas naturales!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2699452841984
+    m_Localized: "Esta selva es conocida como el \"pulm\xF3n verde\" de nuestro planeta
+      porque produce una gran cantidad de ox\xEDgeno. Los \xE1rboles y las plantas
+      del Amazonas realizan un proceso llamado fotos\xEDntesis, en el cual convierten
+      el di\xF3xido de carbono en ox\xEDgeno, ayudando a mantener el equilibrio del
+      aire que respiramos. \xA1Es como si el Amazonas nos diera el aire fresco que
+      necesitamos para vivir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2708088913920
+    m_Localized: "Adem\xE1s, el Amazonas es el hogar de millones de especies de plantas
+      y animales. Podemos encontrar jaguares, anacondas, monos, loros de colores
+      y muchas otras criaturas asombrosas. Es un verdadero tesoro de la biodiversidad,
+      lo que significa que hay una gran variedad de seres vivos viviendo en este
+      lugar. Es como si el Amazonas fuera una enorme biblioteca llena de historias
+      de vida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2717035364352
+    m_Localized: "Las comunidades ind\xEDgenas que viven en el Amazonas tienen una
+      conexi\xF3n especial con esta selva. Han aprendido a vivir en armon\xEDa con
+      la naturaleza y han desarrollado conocimientos ancestrales sobre las plantas
+      medicinales y la conservaci\xF3n de los recursos naturales. Para ellos, el
+      Amazonas es mucho m\xE1s que un lugar f\xEDsico, es un hogar lleno de historia,
+      cultura y espiritualidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2726162169856
+    m_Localized: "Sin embargo, el Amazonas enfrenta desaf\xEDos y amenazas. La deforestaci\xF3n,
+      que es cuando se cortan los \xE1rboles de manera indiscriminada, pone en peligro
+      el equilibrio de este ecosistema \xFAnico. Tambi\xE9n existen actividades como
+      la miner\xEDa ilegal y la caza furtiva, que da\xF1an la vida silvestre y ponen
+      en riesgo la supervivencia de muchas especies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2916482908160
+    m_Localized: "Es fundamental que todos tomemos conciencia de la importancia de
+      proteger el Amazonas. Podemos hacerlo aprendiendo m\xE1s sobre este incre\xEDble
+      lugar y compartiendo esa informaci\xF3n con los dem\xE1s. Tambi\xE9n podemos
+      tomar medidas para reducir nuestra huella ambiental, como reciclar, usar menos
+      pl\xE1stico y apoyar proyectos y organizaciones que trabajen en la conservaci\xF3n
+      de esta maravillosa selva."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

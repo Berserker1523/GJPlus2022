@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-Ingredients_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 11b2fabee7a2d894489750fb39538163, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3228983721984
+    m_Localized: "Un fruto ex\xF3tico y delicioso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2463795871744
+    m_Localized: "El pequi es un fruto fascinante que crece en la selva amaz\xF3nica
+      de Brasil. Este fruto tiene forma redonda y una c\xE1scara dura y espinosa
+      de color amarillo brillante. Dentro de su c\xE1scara, se encuentra una pulpa
+      suave y amarilla que es muy sabrosa. \xA1Imagina una mezcla entre el mango
+      y el melocot\xF3n! El pequi es muy popular en la cocina de Brasil y es especialmente
+      querido por su sabor \xFAnico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3186319261696
+    m_Localized: "Adem\xE1s de su delicioso sabor, el pequi tiene beneficios para
+      la salud. Est\xE1 lleno de vitamina C, que ayuda a fortalecer el sistema inmunol\xF3gico
+      y a proteger nuestro cuerpo contra enfermedades. Tambi\xE9n contiene vitamina
+      A, que es buena para nuestra vista y piel. \xA1As\xED que, comer pequi puede
+      ser muy bueno para nosotros!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3124851736576
+    m_Localized: "El pequi es muy especial porque solo madura una vez al a\xF1o,
+      durante la temporada de lluvias en la selva amaz\xF3nica. Los \xE1rboles de
+      pequi pueden crecer hasta 15 metros de altura y producir muchos frutos, pero
+      solo en ciertas \xE9pocas del a\xF1o. Durante el resto del a\xF1o, los \xE1rboles
+      est\xE1n llenos de hojas verdes y hermosas flores blancas que atraen a mariposas
+      y abejas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3203536879616
+    m_Localized: "En la cultura de Brasil, el pequi tiene un lugar especial. Es considerado
+      un s\xEDmbolo de la regi\xF3n amaz\xF3nica y se utiliza en muchos platos tradicionales.
+      La gente de la selva amaz\xF3nica ha aprovechado los beneficios del pequi durante
+      siglos, y han descubierto diferentes formas de cocinarlo. Puede ser utilizado
+      en salsas, sopas, ensaladas y hasta en helados. \xA1La variedad de platos que
+      se pueden hacer con pequi es incre\xEDble!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3212428804096
+    m_Localized: "Sin embargo, al igual que con muchos otros alimentos, es importante
+      disfrutar del pequi con moderaci\xF3n. Aunque es delicioso y saludable, su
+      c\xE1scara dura y espinosa puede ser peligrosa si no se maneja con cuidado.
+      Por eso, es mejor que un adulto nos ayude a abrirlo y a disfrutar de su deliciosa
+      pulpa. \xA1Recuerda, el pequi es un tesoro de la selva amaz\xF3nica que podemos
+      disfrutar con precauci\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3242879451136
+    m_Localized: " El \xE1rbol m\xE1gico de Brasil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3279231483904
+    m_Localized: "La carna\xFAba es un \xE1rbol sorprendente que se encuentra en
+      la regi\xF3n nordeste de Brasil. Es conocido como \"el \xE1rbol de la vida\"
+      debido a los diversos beneficios que ofrece. Este \xE1rbol majestuoso puede
+      alcanzar una altura de hasta 20 metros y tiene hojas grandes y brillantes.
+      Adem\xE1s, la carna\xFAba es famosa por su cera, que es considerada una de
+      las m\xE1s duras del mundo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301788450816
+    m_Localized: "La cera de carna\xFAba es un tesoro natural con m\xFAltiples usos.
+      Se extrae de las hojas del \xE1rbol y se utiliza para hacer productos como
+      ceras para pisos, pulidores para autom\xF3viles y incluso en la fabricaci\xF3n
+      de productos cosm\xE9ticos como labiales y l\xE1pices labiales. Adem\xE1s,
+      esta cera es muy \xFAtil en la industria alimentaria, donde se utiliza para
+      recubrir frutas y chocolates, protegi\xE9ndolos y d\xE1ndoles un brillo especial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317751971840
+    m_Localized: "Pero eso no es todo, el \xE1rbol de carna\xFAba tambi\xE9n ofrece
+      otros beneficios. Sus hojas son una fuente importante de alimento para el ganado,
+      y su tronco se utiliza para construir casas y muebles. Incluso su ra\xEDz tiene
+      propiedades medicinales y se utiliza en la medicina tradicional para tratar
+      diversas dolencias."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333807767552
+    m_Localized: "La carna\xFAba es un s\xEDmbolo de la regi\xF3n nordeste de Brasil
+      y es considerada un \xE1rbol m\xE1gico. En muchas festividades y tradiciones
+      culturales, las hojas de carna\xFAba se utilizan para hacer sombreros, canastas
+      y adornos. Adem\xE1s, este \xE1rbol es un refugio para muchas especies de aves
+      y otros animales, lo que lo convierte en un elemento vital para la biodiversidad
+      de la regi\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3343614050304
+    m_Localized: "Sin embargo, es importante proteger y conservar los \xE1rboles
+      de carna\xFAba. Aunque son resistentes y pueden soportar condiciones dif\xEDciles,
+      est\xE1n en peligro debido a la deforestaci\xF3n y la explotaci\xF3n irresponsable.
+      La carna\xFAba es un recurso valioso, pero es fundamental asegurarnos de que
+      se utilice de manera sostenible y respetuosa con el medio ambiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3356868050944
+    m_Localized: "El tesoro nutritivo de la Amazon\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3390602838016
+    m_Localized: "El asa\xED es un fruto peque\xF1o y redondo que crece en las selvas
+      tropicales de la Amazon\xEDa. Es conocido como \"el fruto de la energ\xEDa\"
+      debido a sus incre\xEDbles propiedades nutritivas. El asa\xED tiene un color
+      morado oscuro y su pulpa es suave y cremosa. \xA1Su sabor es delicioso y se
+      asemeja a una mezcla entre el chocolate y las bayas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3411549192192
+    m_Localized: "Este fruto es muy apreciado por las comunidades ind\xEDgenas de
+      la regi\xF3n, quienes han aprovechado sus beneficios durante siglos. El asa\xED
+      es rico en antioxidantes, que nos ayudan a proteger nuestro cuerpo contra los
+      radicales libres y a mantenernos saludables. Tambi\xE9n es una fuente natural
+      de energ\xEDa, lo que lo convierte en un excelente alimento para deportistas
+      y personas activas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3432826896384
+    m_Localized: "Una de las formas m\xE1s populares de consumir el asa\xED es en
+      forma de batido o en tazones de desayuno. Se mezcla con otras frutas, granola
+      y miel, creando una combinaci\xF3n deliciosa y nutritiva. Tambi\xE9n se utiliza
+      para hacer helados, dulces y productos de reposter\xEDa. \xA1El asa\xED nos
+      brinda una variedad de opciones deliciosas para disfrutar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3441777541120
+    m_Localized: "El asa\xED no solo es beneficioso para nuestra salud, sino que
+      tambi\xE9n desempe\xF1a un papel importante en la sostenibilidad de la Amazon\xEDa.
+      Su cultivo y cosecha proporcionan empleo a muchas comunidades locales, fomentando
+      la econom\xEDa y la preservaci\xF3n de la regi\xF3n. Adem\xE1s, el asa\xED
+      se recolecta de forma sostenible, respetando los ciclos naturales de la planta
+      y evitando el agotamiento de los recursos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3449264373760
+    m_Localized: "Sin embargo, es importante tener en cuenta que el asa\xED no es
+      una soluci\xF3n m\xE1gica para todos nuestros problemas de salud. Si bien es
+      nutritivo y beneficioso, es fundamental mantener una dieta equilibrada y llevar
+      un estilo de vida saludable en general. Adem\xE1s, debemos consumir el asa\xED
+      en su forma natural o en preparaciones saludables, evitando los productos procesados
+      con alto contenido de az\xFAcar y grasas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459213262848
+    m_Localized: "La planta sagrada de los pueblos ind\xEDgenas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3489315782656
+    m_Localized: "La hoja de coca es una planta sagrada que crece en las regiones
+      monta\xF1osas de Am\xE9rica del Sur, como los Andes. Es una planta muy especial
+      para los pueblos ind\xEDgenas, quienes la han utilizado durante miles de a\xF1os
+      por sus propiedades medicinales y espirituales. La hoja de coca tiene forma
+      ovalada y verde, y se utiliza de diferentes maneras por las comunidades ind\xEDgenas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3505077977088
+    m_Localized: "Para los pueblos ind\xEDgenas, la hoja de coca es considerada un
+      regalo de la Madre Naturaleza. Se utiliza tradicionalmente para aliviar el
+      cansancio y el hambre, ya que contiene nutrientes que brindan energ\xEDa y
+      ayudan a resistir el fr\xEDo de las monta\xF1as. Adem\xE1s, la hoja de coca
+      es valorada por su capacidad para mantener la mente despierta y mejorar la
+      concentraci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3513923764224
+    m_Localized: "La hoja de coca tambi\xE9n tiene un significado espiritual para
+      los pueblos ind\xEDgenas. Se utiliza en rituales y ceremonias como una forma
+      de conectarse con la naturaleza y los antepasados. Masticar las hojas de coca
+      es una pr\xE1ctica ancestral que ayuda a las comunidades a mantenerse en armon\xEDa
+      con el mundo natural y a encontrar respuestas a preguntas importantes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3522618556416
+    m_Localized: "Es importante destacar que la hoja de coca por s\xED sola no tiene
+      los mismos efectos negativos que se asocian a sus derivados ilegales. Estos
+      derivados son productos qu\xEDmicos que se obtienen a partir de la hoja de
+      coca y que pueden ser perjudiciales para la salud. Sin embargo, la hoja de
+      coca en su forma natural no es adictiva ni causa da\xF1o a las personas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3534366801920
+    m_Localized: "La hoja de coca es un tesoro de la sabidur\xEDa ind\xEDgena y debe
+      ser respetada y valorada. Es importante entender que su uso tradicional y espiritual
+      es parte de una cultura ancestral que ha existido por generaciones. Al aprender
+      sobre la hoja de coca, podemos apreciar y respetar las diferentes formas en
+      que los pueblos ind\xEDgenas se relacionan con la naturaleza y sus propias
+      tradiciones."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-Ingredients_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 11b2fabee7a2d894489750fb39538163, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3228983721984
+    m_Localized: An exotic and delicious fruit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2463795871744
+    m_Localized: The pequi is a fascinating fruit that grows in the Amazon rainforest
+      of Brazil. This fruit has a round shape and a hard, spiny, bright yellow peel.
+      Inside its shell is a soft, yellow pulp that is very tasty - imagine a cross
+      between a mango and a peach! The pequi is very popular in Brazilian cuisine
+      and is especially loved for its unique flavor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3124851736576
+    m_Localized: The pequi is very special because it only ripens once a year, during
+      the rainy season in the Amazon rainforest. Pequi trees can grow up to 15 meters
+      tall and produce a lot of fruit, but only at certain times of the year. During
+      the rest of the year, the trees are full of green leaves and beautiful white
+      flowers that attract butterflies and bees.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3186319261696
+    m_Localized: In addition to its delicious taste, pequi has health benefits. It
+      is full of vitamin C, which helps strengthen the immune system and protect
+      our body against disease. It also contains vitamin A, which is good for our
+      eyesight and skin, so eating pequi can be very good for us!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3203536879616
+    m_Localized: In Brazilian culture, the pequi has a special place. It is considered
+      a symbol of the Amazon region and is used in many traditional dishes. The people
+      of the Amazon rainforest have been taking advantage of the benefits of the
+      pequi for centuries, and have discovered different ways to cook it. It can
+      be used in sauces, soups, salads and even ice cream - the variety of dishes
+      that can be made with pequi is incredible!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3212428804096
+    m_Localized: However, as with many other foods, it is important to enjoy pequi
+      in moderation. Although it is delicious and healthy, its hard and thorny peel
+      can be dangerous if not handled carefully. Therefore, it is best to have an
+      adult help us open it and enjoy its delicious pulp. Remember, the pequi is
+      a treasure of the Amazon rainforest that we can enjoy with caution!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3242879451136
+    m_Localized: The magic tree of Brazil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3279231483904
+    m_Localized: "Carna\xFAba is an amazing tree found in the northeastern region
+      of Brazil. It is known as \"the tree of life\" due to the various benefits
+      it offers. This majestic tree can reach a height of up to 20 meters and has
+      large, shiny leaves. In addition, the carna\xFAba is famous for its wax, which
+      is considered one of the hardest in the world."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301788450816
+    m_Localized: Carnauba wax is a natural treasure with multiple uses. It is extracted
+      from the leaves of the tree and is used to make products such as floor waxes,
+      car polishes and even in the manufacture of cosmetic products such as lipsticks
+      and lipsticks. In addition, this wax is very useful in the food industry, where
+      it is used to coat fruits and chocolates, protecting them and giving them a
+      special shine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317751971840
+    m_Localized: "But that's not all, the carna\xFAba tree also offers other benefits.
+      Its leaves are an important source of food for livestock, and its trunk is
+      used to build houses and furniture. Even its root has medicinal properties
+      and is used in traditional medicine to treat various ailments."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333807767552
+    m_Localized: "The carna\xFAba is a symbol of the northeastern region of Brazil
+      and is considered a magical tree. In many festivities and cultural traditions,
+      carna\xFAba leaves are used to make hats, baskets and ornaments. In addition,
+      this tree is a refuge for many species of birds and other animals, which makes
+      it a vital element for the biodiversity of the region."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3343614050304
+    m_Localized: "However, it is important to protect and conserve carnauba trees.
+      Although they are hardy and can withstand harsh conditions, they are endangered
+      by deforestation and irresponsible exploitation. Carna\xFAba is a valuable
+      resource, but it is essential to ensure that it is used in a sustainable and
+      environmentally friendly manner."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3356868050944
+    m_Localized: The nutritional treasure of the Amazon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3390602838016
+    m_Localized: The acai is a small, round fruit that grows in the rainforests of
+      the Amazon. It is known as "the fruit of energy" due to its incredible nutritional
+      properties. Acai has a dark purple color and its pulp is smooth and creamy,
+      its flavor is delicious and resembles a mix between chocolate and berries!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3411549192192
+    m_Localized: This fruit is highly appreciated by the indigenous communities of
+      the region, who have taken advantage of its benefits for centuries. Acai is
+      rich in antioxidants, which help us protect our body against free radicals
+      and keep us healthy. It is also a natural source of energy, which makes it
+      an excellent food for athletes and active people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3432826896384
+    m_Localized: One of the most popular ways to consume acai is as a smoothie or
+      in breakfast bowls. It is mixed with other fruits, granola and honey, creating
+      a delicious and nutritious combination. Also used to make ice cream, candies
+      and baked goods, the acai gives us a variety of delicious options to enjoy!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3441777541120
+    m_Localized: "A\xE7a\xED is not only beneficial to our health, but also plays
+      an important role in the sustainability of the Amazon. Its cultivation and
+      harvesting provide employment to many local communities, promoting the economy
+      and preservation of the region. In addition, the acai is harvested in a sustainable
+      manner, respecting the natural cycles of the plant and avoiding the depletion
+      of resources."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3449264373760
+    m_Localized: However, it is important to keep in mind that acai is not a magic
+      bullet for all our health problems. Although it is nutritious and beneficial,
+      it is essential to maintain a balanced diet and lead a healthy lifestyle in
+      general. In addition, we should consume acai in its natural form or in healthy
+      preparations, avoiding processed products with high sugar and fat content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3489315782656
+    m_Localized: The coca leaf is a sacred plant that grows in the mountainous regions
+      of South America, such as the Andes. It is a very special plant for indigenous
+      peoples, who have used it for thousands of years for its medicinal and spiritual
+      properties. The coca leaf is oval-shaped and green, and is used in different
+      ways by indigenous communities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459213262848
+    m_Localized: The sacred plant of indigenous peoples
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3505077977088
+    m_Localized: For indigenous peoples, the coca leaf is considered a gift from
+      Mother Nature. It is traditionally used to relieve fatigue and hunger, as it
+      contains nutrients that provide energy and help resist the cold of the mountains.
+      In addition, coca leaf is valued for its ability to keep the mind awake and
+      improve concentration.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3513923764224
+    m_Localized: The coca leaf also has a spiritual significance for indigenous peoples.
+      It is used in rituals and ceremonies as a way to connect with nature and ancestors.
+      Chewing coca leaves is an ancient practice that helps communities stay in harmony
+      with the natural world and find answers to important questions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3522618556416
+    m_Localized: It is important to note that coca leaf alone does not have the same
+      negative effects associated with its illegal derivatives. These derivatives
+      are chemicals obtained from the coca leaf that can be harmful to health. However,
+      coca leaf in its natural form is not addictive and does not cause harm to people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3534366801920
+    m_Localized: The coca leaf is a treasure of indigenous wisdom and should be respected
+      and valued. It is important to understand that its traditional and spiritual
+      use is part of an ancestral culture that has existed for generations. By learning
+      about the coca leaf, we can appreciate and respect the different ways in which
+      indigenous peoples relate to nature and their own traditions.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

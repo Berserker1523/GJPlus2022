@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BookEntries-PlacesEIndegenous_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 77d06748f4be02642af162a3439a012c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2375732264960
+    m_Localized: Guardians of the jungle and its ancestral culture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2414101757952
+    m_Localized: The Munduruku indigenous community is a brave and resilient group
+      living in the Amazon region of Brazil. They are custodians of a rich ancestral
+      culture and have a deep connection with the land and nature that surrounds
+      them. Their way of life is based on mutual respect and harmony with the environment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2424231002112
+    m_Localized: The Munduruku have inhabited the Amazon rainforest for generations
+      and have developed a vast knowledge of medicinal plants, sustainable hunting
+      and fishing techniques, and the preservation of ecological balance. Their wisdom
+      is passed down from father to son, and their traditions and rituals are a fundamental
+      part of their cultural identity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2438604881920
+    m_Localized: The Amazon rainforest is their home and source of livelihood. The
+      Munduruku depend on the natural resources that the rainforest provides, such
+      as food, construction materials and medicinal plants. In addition, their worldview
+      is closely related to nature, as they believe that all living beings have spirits
+      and deserve respect.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449401020416
+    m_Localized: The Munduruku community has also faced challenges. They have long
+      struggled to protect their territory and way of life against deforestation
+      and encroachment by extractive companies. They have organized peaceful protests
+      and defended their rights in court, showing the world their courage and determination.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2458301333504
+    m_Localized: It is important to recognize and value the importance of the Munduruku
+      community and all indigenous communities. They are guardians of the forest
+      and of ancestral knowledge that can teach us important lessons about sustainability
+      and respect for nature. We must listen to and support their voices, and work
+      together to protect their rights and preserve their culture.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2745862815744
+    m_Localized: The green lung of our planet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641349148672
+    m_Localized: The Amazon is the name of the largest and most biodiverse rainforest
+      in the world. It stretches across several South American countries, such as
+      Brazil, Peru and Colombia. It is a magical place full of tall trees, rushing
+      rivers and an incredible variety of plants and animals - it's like a world
+      full of life and natural wonders!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2699452841984
+    m_Localized: This rainforest is known as the "green lung" of our planet because
+      it produces a large amount of oxygen. The trees and plants of the Amazon perform
+      a process called photosynthesis, in which they convert carbon dioxide into
+      oxygen, helping to maintain the balance of the air we breathe. It's as if the
+      Amazon is giving us the fresh air we need to live!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2717035364352
+    m_Localized: The indigenous communities living in the Amazon have a special connection
+      to this rainforest. They have learned to live in harmony with nature and have
+      developed ancestral knowledge about medicinal plants and the conservation of
+      natural resources. For them, the Amazon is much more than a physical place,
+      it is a home full of history, culture and spirituality.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2708088913920
+    m_Localized: In addition, the Amazon is home to millions of species of plants
+      and animals. We can find jaguars, anacondas, monkeys, colorful parrots and
+      many other amazing creatures. It is a true treasure of biodiversity, which
+      means that there is a great variety of living beings living in this place.
+      It is as if the Amazon is a huge library full of life stories.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2726162169856
+    m_Localized: However, the Amazon faces challenges and threats. Deforestation,
+      which is when trees are cut indiscriminately, threatens the balance of this
+      unique ecosystem. There are also activities such as illegal mining and poaching,
+      which damage wildlife and put the survival of many species at risk.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2916482908160
+    m_Localized: It is critical that we all become aware of the importance of protecting
+      the Amazon. We can do this by learning more about this amazing place and sharing
+      that information with others. We can also take steps to reduce our environmental
+      footprint, such as recycling, using less plastic and supporting projects and
+      organizations that work to conserve this wonderful rainforest.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
