@@ -4,11 +4,11 @@ namespace Kitchen
 {
     public static class UpgradesManager
     {
-        private const string ClientsUpgradesPlayerPrefsKey = "UPGRADECLIENTS";
-        private const string MedicineUpgradesPlayerPrefsKey = "UPGRADEMEDICINE";
-        private const string KitchenUpgradesPlayerPrefsKey = "UPGRADEKITCHEN";
-        private const string MortarsUpgradesPlayerPrefsKey = "UPGRADEMORTARS";
-        private const string PainkillerUpgradesPlayerPrefsKey = "UPGRADEPAINKILLER";
+        private const string ClientsUpgradesPlayerPrefsKey = "UPGRADECLIENTS1";
+        private const string MedicineUpgradesPlayerPrefsKey = "UPGRADEMEDICINE1";
+        private const string KitchenUpgradesPlayerPrefsKey = "UPGRADEKITCHEN1";
+        private const string MortarsUpgradesPlayerPrefsKey = "UPGRADEMORTARS1";
+        private const string PainkillerUpgradesPlayerPrefsKey = "UPGRADEPAINKILLER1";
 
         public static int ClientsUpgrades
         {

@@ -4,7 +4,7 @@ namespace Kitchen
 {
     public static class LevelManager
     {
-        private const string CurrentLevelPlayerPrefsKey = "CURRENT_LEVEL";
+        private const string CurrentLevelPlayerPrefsKey = "LEVEL_CURRENT";
 
         public static int CurrentLevel
         {
