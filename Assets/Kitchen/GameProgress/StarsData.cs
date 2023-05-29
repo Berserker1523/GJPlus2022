@@ -9,7 +9,6 @@ namespace Kitchen
     {
         [HideInInspector] public bool[,] stars = new bool[5, 3];
         [HideInInspector] public bool[] tutorials = new bool[6];
-        public bool[] trigerrableTutorials = new bool[1];
 
         private void OnEnable()
         {
@@ -23,8 +22,6 @@ namespace Kitchen
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
             EventManager.AddListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.AddListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
-
             LoadStarsDataFileIfExists();
         }
 
@@ -40,7 +37,6 @@ namespace Kitchen
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial3Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial4Completed, MarkTutorialAsComplete);
             EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
-            EventManager.RemoveListener<int>(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, MarkTriggerableTutorialAsComplete);
         }
 
         public void CallSaveData() =>
@@ -63,12 +59,6 @@ namespace Kitchen
                 stars = new bool[5, 3];
 
             tutorials[id] = true;
-            CallSaveData();
-        }
-
-        public void MarkTriggerableTutorialAsComplete(int id)
-        {
-            trigerrableTutorials[id] = true;
             CallSaveData();
         }
 

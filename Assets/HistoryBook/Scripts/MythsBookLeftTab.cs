@@ -15,6 +15,7 @@ public class MythsBookLeftTab : MythsBookTab
     [SerializeField] public LocalizeStringEvent _tabName;
     [SerializeField] public int[] _goalsInt;
     [SerializeField] public IngredientName _refIngredient;
+    [SerializeField] public LocalizedString _ingredientName;
     private int _index;
 
     private int _argument0, argument1;
@@ -44,6 +45,7 @@ public class MythsBookLeftTab : MythsBookTab
     {
         _goalsInt = entry.goalsInt;
         _refIngredient = entry.refIngredient;
+        _ingredientName= entry.ingredientName;
         SetBookEntry(gameData,  (BookEntry)entry);
     }
     private void OnEnable()
@@ -108,7 +110,7 @@ public class MythsBookLeftTab : MythsBookTab
         switch (_bookEntryType)
         {
             case ENUM_bookTabs.Ingredients:
-                _goal.Arguments[0] = _refIngredient.ToString();
+                _goal.Arguments[0] = _ingredientName.GetLocalizedString();
                 _goal.Arguments[1] =  _goalsInt[position]- _gameData.attendedClients[(int)_refIngredient];
                 break;
             case ENUM_bookTabs.Indigenous:

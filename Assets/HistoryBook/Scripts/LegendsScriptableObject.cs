@@ -44,6 +44,7 @@ public class Ingredient : BookEntry
     public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Ingredients");
     [SerializeField] public IngredientName refIngredient;    
     public int[] goalsInt;
+    public LocalizedString ingredientName;
 }
 
 [Serializable]

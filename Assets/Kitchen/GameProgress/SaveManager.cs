@@ -8,7 +8,7 @@ public static class SaveManager
     public static void SavePlayerData(StarsData starsData)
     {
         GameData gameData = new GameData(starsData);
-        string dataPath = Application.persistentDataPath + "/kumuData.save";
+        string dataPath = Application.persistentDataPath + "/kumuFinalData.save";
         FileStream fileStream = new FileStream(dataPath, FileMode.Create);
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         binaryFormatter.Serialize(fileStream, gameData);
@@ -17,7 +17,7 @@ public static class SaveManager
 
     public static GameData LoadStarsData()
     {
-        string dataPath = Application.persistentDataPath + "/kumuData.save";
+        string dataPath = Application.persistentDataPath + "/kumuFinalData.save";
         if(File.Exists(dataPath))
         {
             FileStream fileStream = new FileStream(dataPath, FileMode.Open);
