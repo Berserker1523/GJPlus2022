@@ -292,6 +292,15 @@ MonoBehaviour:
       m_LocalVariables: []
     refIngredient: 6
     goalsInt: 0a0000000f00000019000000280000003c000000
+    ingredientName:
+      m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 45939707904
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - name:
       m_TableReference:
         m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
@@ -345,6 +354,15 @@ MonoBehaviour:
       m_LocalVariables: []
     refIngredient: 2
     goalsInt: 0a0000000f00000019000000280000003c000000
+    ingredientName:
+      m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 6637615599616
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - name:
       m_TableReference:
         m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
@@ -398,6 +416,15 @@ MonoBehaviour:
       m_LocalVariables: []
     refIngredient: 1
     goalsInt: 0a0000000f00000019000000280000003c000000
+    ingredientName:
+      m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 178597154816
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - name:
       m_TableReference:
         m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
@@ -451,11 +478,20 @@ MonoBehaviour:
       m_LocalVariables: []
     refIngredient: 3
     goalsInt: 0a0000000f00000019000000280000003c000000
+    ingredientName:
+      m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 153280335872
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - name:
       m_TableReference:
-        m_TableCollectionName: GUID:76127b2dd3da0e54ca69ffc7aea3a347
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
       m_TableEntryReference:
-        m_KeyId: 12854329344
+        m_KeyId: 7247052165120
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -504,6 +540,15 @@ MonoBehaviour:
       m_LocalVariables: []
     refIngredient: 5
     goalsInt: 0a0000000f00000019000000280000003c000000
+    ingredientName:
+      m_TableReference:
+        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
+      m_TableEntryReference:
+        m_KeyId: 7247052165120
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   places:
   - name:
       m_TableReference:
