@@ -22,6 +22,7 @@ namespace HistoryBook
 
         [SerializeField] Scrollbar scrollbar;
         GameData gameData;
+        protected Coroutine resetHandlePos;
 
         private void Awake()
         {
@@ -112,7 +113,9 @@ namespace HistoryBook
             lockedTextTag.StringReference = leftTab._goal;
             refImage.sprite = leftTab._sprite;
             descriptionText.text = leftTab._description;
-            StartCoroutine(ResetHandlePos());
+            if (resetHandlePos != null)
+                StopCoroutine(resetHandlePos);
+            resetHandlePos = StartCoroutine(ResetHandlePos());
         }
 
         private IEnumerator ResetHandlePos()
