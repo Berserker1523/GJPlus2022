@@ -646,14 +646,6 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
-      m_TableEntryReference:
-        m_KeyId: 2916482908160
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
   references:
     version: 2
     RefIds: []
