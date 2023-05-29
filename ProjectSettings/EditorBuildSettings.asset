@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Kitchen4.unity
     guid: 6f1e8f7d663e31942989f9a97355665c
-  - enabled: 0
+  - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Kitchen5.unity
     guid: a1e0b380ee8b20f4886098a429fd8b9d
   m_configObjects:
