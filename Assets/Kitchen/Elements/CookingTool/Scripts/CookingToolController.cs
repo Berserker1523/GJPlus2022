@@ -64,6 +64,9 @@ namespace Kitchen
         {
             if (CurrentCookingIngredient == null || inTutorial)
                 return;
+            
+            cookingSound.setVolume(Time.timeScale);
+            burningSound.setVolume(Time.timeScale);
 
             CurrentCookingIngredient.currentCookingSeconds += Time.deltaTime;
             if (CurrentCookingIngredient.state == IngredientState.Cooked)
