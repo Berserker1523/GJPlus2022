@@ -27,7 +27,7 @@ namespace Kitchen
 
         public GameData()
         {
-            currentLevel = LevelManager.CurrentLevel;
+            currentLevel = 0;
             stars= new bool[5, 3];
             tutorials = new bool[6];
             trigerrableTutorials = new bool[1];

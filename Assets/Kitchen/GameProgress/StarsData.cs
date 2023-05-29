@@ -57,11 +57,12 @@ namespace Kitchen
 
         public void MarkTutorialAsComplete(int id)
         {
-            tutorials[id] = true;
             if(id == tutorials.Length-1)
                 LevelManager.CurrentLevel = 1;
             if(id <4)
                 stars = new bool[5, 3];
+
+            tutorials[id] = true;
             CallSaveData();
         }
 
