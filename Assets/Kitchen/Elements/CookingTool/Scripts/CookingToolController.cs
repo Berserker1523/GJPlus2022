@@ -26,6 +26,7 @@ namespace Kitchen
         private Sprite initialSprite;
         private FMOD.Studio.EventInstance cookingSound;
         private FMOD.Studio.EventInstance burningSound;
+        private IEnumerator startBurningSoundRoutine;
 
         public CookingIngredient CurrentCookingIngredient { get; private set; }
         public CookingToolData CookingToolData => cookingToolData;
@@ -87,7 +88,8 @@ namespace Kitchen
                 else
                 {
                     burningSound = FMODUnity.RuntimeManager.CreateInstance(SoundsManager.BurningFood);
-                    StartCoroutine(StartBurningSoundRoutine());
+                    startBurningSoundRoutine = StartBurningSoundRoutine();
+                    StartCoroutine(startBurningSoundRoutine);
                     timer.SetBurning();
                     if (overcookedParticle != null)
                         overcookingParticle.Play();
@@ -155,6 +157,8 @@ namespace Kitchen
         {
             CurrentCookingIngredient = null;
             spriteRenderer.sprite = initialSprite;
+            if (startBurningSoundRoutine != null)
+                StopCoroutine(startBurningSoundRoutine);
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             burningSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             spriteRenderer.material.SetFloat("_Temperature", 0f);
@@ -175,7 +179,7 @@ namespace Kitchen
             cookingSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             burningSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
-           
+
         private IEnumerator StartBurningSoundRoutine()
         {
             yield return new WaitForSeconds(1f);
