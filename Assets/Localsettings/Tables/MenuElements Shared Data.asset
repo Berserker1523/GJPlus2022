@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Key: Tutorial6_Replay
     m_Metadata:
       m_Items: []
+  - m_Id: 40749870011482112
+    m_Key: Button_Leave
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

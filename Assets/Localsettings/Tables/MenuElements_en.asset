@@ -121,6 +121,10 @@ MonoBehaviour:
     m_Localized: Remember how to cook ingredients at the perfect point
     m_Metadata:
       m_Items: []
+  - m_Id: 40749870011482112
+    m_Localized: Leave
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

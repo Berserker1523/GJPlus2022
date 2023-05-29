@@ -120,6 +120,10 @@ MonoBehaviour:
     m_Localized: "Recuerda c\xF3mo cocinar los ingredientes en el punto perfecto"
     m_Metadata:
       m_Items: []
+  - m_Id: 40749870011482112
+    m_Localized: Sair
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
