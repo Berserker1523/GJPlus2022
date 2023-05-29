@@ -238,51 +238,6 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     refIngredient: 5
-  - name:
-      m_TableReference:
-        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
-      m_TableEntryReference:
-        m_KeyId: 36880993313718272
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    title:
-      m_TableReference:
-        m_TableCollectionName: GUID:8a8c794817939ba458237a9fd42a2fee
-      m_TableEntryReference:
-        m_KeyId: 36880993313718272
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    sprite: {fileID: -1389790632, guid: 0a7315e60a5e51f45aebef9c5e6a03eb, type: 3}
-    texts:
-    - m_TableReference:
-        m_TableCollectionName: GUID:a2d2411716ddaf84dba678e07809e0de
-      m_TableEntryReference:
-        m_KeyId: 503097163776
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:a2d2411716ddaf84dba678e07809e0de
-      m_TableEntryReference:
-        m_KeyId: 536802590720
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    - m_TableReference:
-        m_TableCollectionName: GUID:a2d2411716ddaf84dba678e07809e0de
-      m_TableEntryReference:
-        m_KeyId: 546642427904
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    refIngredient: 0
   indigenousCommunities:
   - name:
       m_TableReference:
