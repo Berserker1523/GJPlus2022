@@ -25,7 +25,11 @@ namespace Kitchen
         [SerializeField] private List<Image> ingredientsImages;
         [SerializeField] private List<Image> cookingToolsImages;
         [SerializeField] private List<Image> arrowsImages;
-        private ParticleSystem healingVFX;
+        [SerializeField] private ParticleSystem healingVFX;
+        [SerializeField] private ParticleSystem SicknessVFX;
+        [SerializeField] private ParticleSystem Sickness2VFX;
+        [SerializeField] private ParticleSystem SicknessSparkVFX;
+        [SerializeField] private ParticleSystem DeathVFX;
 
         private DropView dropView;
 
@@ -61,7 +65,6 @@ namespace Kitchen
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
 
             animator = GetComponentInChildren<Animator>();    
-            healingVFX = GetComponentInChildren<ParticleSystem>();
             bc = GetComponent<BoxCollider2D>();
 
             EventManager.AddListener(GameStatus.LevelFinished, StopCounter);
@@ -157,6 +160,7 @@ namespace Kitchen
             clientDied = true;
             animator.SetBool(animatorDiedParameter, true);
             EventManager.Dispatch(ClientEvent.Dying);
+            DeathVFX.Play();
             yield return new WaitForSeconds(1f);
             Destroy(gameObject);
             EventManager.Dispatch(ClientEvent.Died);
