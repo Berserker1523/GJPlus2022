@@ -177,7 +177,7 @@ namespace Kitchen
             }
 
 
-            if (currentlevel == 2)
+            if (currentlevel == 5) //TODO Burned Variable
                 SceneManager.LoadScene(SceneName.Credits2.ToString(), LoadSceneMode.Single);
             else
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single);
