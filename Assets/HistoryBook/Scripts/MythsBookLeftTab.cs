@@ -90,7 +90,7 @@ public class MythsBookLeftTab : MythsBookTab
                     break;
             }
              if(entryUnlocked)
-            mythText += GetStringFromLocalizedString(texts[i]);
+            mythText += "\n\n" + GetStringFromLocalizedString(texts[i]);
             else
             {
                 GetCurrentGoal(goal, i);
@@ -132,7 +132,7 @@ public class MythsBookLeftTab : MythsBookTab
 
         string mythText = "";
        for (int i=0; i<currentStars;i++)                
-            mythText += GetStringFromLocalizedString(texts[i]);
+            mythText += "\n\n"+GetStringFromLocalizedString(texts[i]);
 
         int restantStars = 3 - currentStars;
         if(restantStars != 0)
