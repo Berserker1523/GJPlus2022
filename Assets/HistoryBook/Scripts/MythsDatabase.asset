@@ -604,7 +604,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    sprite: {fileID: -569457064, guid: 3f6d5ade7be5fe54f89c77e79d81a16d, type: 3}
+    sprite: {fileID: 0}
     texts:
     - m_TableReference:
         m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c

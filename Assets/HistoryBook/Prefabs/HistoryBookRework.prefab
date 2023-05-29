@@ -3098,8 +3098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.7057, y: 202.83392}
-  m_SizeDelta: {x: 534.0829, y: 67.6678}
+  m_AnchoredPosition: {x: 297.46, y: 190.05257}
+  m_SizeDelta: {x: 753.73, y: 136.9551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6253476316548454590
 CanvasRenderer:
@@ -3156,7 +3156,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.2
+  m_fontSize: 68.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3518,7 +3518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 19.25, y: 0.0000333786}
+  m_AnchoredPosition: {x: 19.25, y: 0}
   m_SizeDelta: {x: 38.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6253476316671841752
@@ -3798,6 +3798,7 @@ MonoBehaviour:
   titleText: {fileID: 2059457477239632465}
   lockedTextTag: {fileID: 6253476316914222132}
   refImage: {fileID: 6253476316125568182}
+  parentImage: {fileID: 6253476316082946267}
   scrollbar: {fileID: 6253476315541821997}
 --- !u!1 &6253476316734599302
 GameObject:

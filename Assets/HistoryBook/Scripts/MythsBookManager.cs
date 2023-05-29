@@ -19,6 +19,7 @@ namespace HistoryBook
         [SerializeField] public LocalizeStringEvent titleText;
         [SerializeField] public LocalizeStringEvent lockedTextTag;
         [SerializeField] public Image refImage;
+        [SerializeField] public GameObject parentImage;
 
         [SerializeField] Scrollbar scrollbar;
         GameData gameData;
@@ -109,9 +110,15 @@ namespace HistoryBook
 
         private void LeftTabSwitched(MythsBookLeftTab leftTab)
         {
+            if (leftTab._sprite)
+            {
+                parentImage.SetActive(true);
+                refImage.sprite = leftTab._sprite;
+            }
+            else parentImage.SetActive(false);
+
             titleText.StringReference = leftTab._title;
             lockedTextTag.StringReference = leftTab._goal;
-            refImage.sprite = leftTab._sprite;
             descriptionText.text = leftTab._description;
             if (resetHandlePos != null)
                 StopCoroutine(resetHandlePos);
