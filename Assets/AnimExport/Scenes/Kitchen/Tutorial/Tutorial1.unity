@@ -345,6 +345,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1502770106}
+    - target: {fileID: 1609210041311416889, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 28403513147895808
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609210041311416889, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7428f515900933945a073642358f9131
+      objectReference: {fileID: 0}
     - target: {fileID: 2184107875153792739, guid: 4de27fec82eff84458a0c8c2d7a28b50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
