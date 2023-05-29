@@ -26,19 +26,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1410477933297664
-    m_Localized: Myths
+    m_Localized: MYTHS
     m_Metadata:
       m_Items: []
   - m_Id: 1410686524424192
-    m_Localized: Ingredients
+    m_Localized: INGREDIENTS
     m_Metadata:
       m_Items: []
   - m_Id: 1410803084132352
-    m_Localized: Indigenous
+    m_Localized: INDIGENOUS
     m_Metadata:
       m_Items: []
   - m_Id: 1410865772199936
-    m_Localized: Places
+    m_Localized: PLACES
     m_Metadata:
       m_Items: []
   - m_Id: 1410902602383360

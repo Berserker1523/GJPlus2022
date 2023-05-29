@@ -26,19 +26,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1410477933297664
-    m_Localized: Mitos
+    m_Localized: MITOS
     m_Metadata:
       m_Items: []
   - m_Id: 1410686524424192
-    m_Localized: Ingredientes
+    m_Localized: INGREDIENTES
     m_Metadata:
       m_Items: []
   - m_Id: 1410803084132352
-    m_Localized: "Ind\xEDgenas"
+    m_Localized: "IND\xCDGENAS"
     m_Metadata:
       m_Items: []
   - m_Id: 1410865772199936
-    m_Localized: Lugares
+    m_Localized: LUGARES
     m_Metadata:
       m_Items: []
   - m_Id: 1410902602383360

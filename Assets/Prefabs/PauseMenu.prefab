@@ -374,7 +374,7 @@ MonoBehaviour:
   m_UpdateString:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3190167634182979325}
+      - m_Target: {fileID: 1568296015764351117}
         m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
         m_MethodName: set_text
         m_Mode: 0
@@ -389,6 +389,17 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &1568296015764351117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4145128485107352392, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
+  m_PrefabInstance: {fileID: 3190167635726052293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478730896733134560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3190167634182979315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1544197430, guid: 7379aa7c01d0ce043b2ed2929c62504a, type: 3}
