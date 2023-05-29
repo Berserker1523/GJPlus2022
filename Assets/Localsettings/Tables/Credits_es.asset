@@ -19,27 +19,35 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8534196224
-    m_Localized: "\n\n\n\n\n\nDISE\xD1O DE JUEGO\nDise\xF1o de sistemas\nMario Antonio
-      Llaque\r\n\r\nDise\xF1o Creativo\n Maria Castro\r\n\r\nDise\xF1o de m\xFAsica
-      y SFX\nJuan Pablo Correa\r\n\r\nPRODUCCI\xD3N\nProductor Ejecutivo\nDavid Vargas\r\n\r\nARTE\nArte
-      de Ambientes y Adornos\nCarmen Moreno\n\r\nDise\xF1o de Interfaz de Usuario\nCamila
-      Ni\xF1o\r\n\r\nDise\xF1o de Personajes\nAngel Farf\xE1n\r\n\r\nArte T\xE9cnica\nSantiago
-      Mora\r\n\r\nDise\xF1o de VFX\nSantiago Mora\r\n\r\nANIMACI\xD3N\nAnimaci\xF3n
-      de Personajes\nAngel Farf\xE1n\r\n\r\nAnimaci\xF3n del Tutorial\nSantiago Mora\r\n\r\nAnimaci\xF3n
-      de Fin de Nivel\nJuan Pablo Camacho\r\n\r\nPROGRAMACI\xD3N\nProgramaci\xF3n
-      de Jugabilidad\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nProgramaci\xF3n
-      de Interfaz de usuario\nCamila Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs C\xE1rcamo\r\n\r\nProgramaci\xF3n
-      de Herramientas de Desarrollo\nJuan Pablo Camacho\r\n\r\nProgramaci\xF3n de
-      M\xFAsica y SFX\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Correa\r\n\r\nProgramaci\xF3n
-      de Localizaci\xF3n\r\nJuan Pablo Camacho\r\n\r\nCONTROL DE CALIDAD\nCarmen
-      Moreno\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nLOCALIZACI\xD3N\nProgramaci\xF3n
-      de Localizac\xF3n\nJuan Pablo Camacho\r\n\r\nLocalizaci\xF3n en Portugu\xE9s
-      QA\nJhoan Jes\xFAs Sandoval\r\n\r\nLocalizaci\xF3n en Ingl\xE9s QA\nMario Antonio
-      Llaque\n\r\nREDACCI\xD3N\nRedacci\xF3n de Di\xE1logos\nMario Antonio Llaque\n\nRedacci\xF3n
-      de los Mitos\nGamejam+ 2022 Staff\r\n\n\nHecho con FMOD\n\r\nQueremos expresar
-      nuestras agradecimientos especials por probar nuestra Demo. Estamos muy emocionados
+    m_Localized: "\r\n\r\n\r\n\r\n\r\n\r\nDISE\xD1O DE JUEGO\r\nDise\xF1o de sistemas\r\nMario
+      Antonio Llaque\r\n\r\nDise\xF1o de m\xFAsica y SFX\r\nJuan Pablo Correa\r\n\r\nDise\xF1o
+      de tutoriales\r\nJuan Pablo Camacho\r\n\r\nPRODUCCI\xD3N\r\nProductor Ejecutivo\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nARTE\r\nArte de Ambientes\r\nCarmen Moreno\r\n\r\nDise\xF1o
+      de Interfaz de Usuario\r\nCamila Ni\xF1o\r\n\r\nDise\xF1o de Personajes\r\nAngel
+      Farf\xE1n\r\n\r\nArte T\xE9cnica\r\nSantiago Mora\r\n\r\nDise\xF1o de VFX\r\nSantiago
+      Mora\r\n\r\nArte de elementos de cocina\r\nCarmen Moreno\r\nMar\xEDa Olarte\r\nPedro
+      Vel\xE1zquez\r\nSebasti\xE1n Calder\xF3n\r\nSergio Pinz\xF3n\r\n\r\nANIMACI\xD3N\r\nAnimaci\xF3n
+      de Personajes\r\nAngel Farf\xE1n\r\n\r\nAnimaci\xF3n del Tutorial\r\nSantiago
+      Mora\r\n\r\nAnimaci\xF3n de Fin de Nivel\r\nJuan Pablo Camacho\r\n\r\nPROGRAMACI\xD3N\r\nProgramaci\xF3n
+      de Jugabilidad\r\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nProgramaci\xF3n
+      de Interfaz de usuario\r\nCamila Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nProgramaci\xF3n de Herramientas de Desarrollo\r\nJuan Pablo
+      Camacho\r\n\r\nProgramaci\xF3n de M\xFAsica y SFX\r\nJes\xFAs C\xE1rcamo\r\nJuan
+      Pablo Correa\r\n\r\nLOCALIZACI\xD3N\r\nProgramaci\xF3n de Localizac\xF3n\r\nJuan
+      Pablo Camacho\r\n\r\nLocalizaci\xF3n en Portugu\xE9s QA\r\nJhoan Jes\xFAs Sandoval\r\n\r\nLocalizaci\xF3n
+      en Ingl\xE9s QA\r\nMario Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nCONTROL
+      DE CALIDAD\r\nCarmen Moreno\r\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo
+      Correa\r\n\r\nTesting\r\nJuli\xE1n Gait\xE1n\r\nC\xE9sar Mu\xF1oz\r\nPedro
+      Vel\xE1zquez\r\nRen\xE9 Barrera\r\n\r\nUSER TESTING\r\nCamila Ni\xF1o\r\nJes\xFAs
+      Carcamo\r\nSantiago Mora\r\n\r\nTesters\r\nMaria Olarte\r\n\r\nREDACCI\xD3N\r\nRedacci\xF3n
+      de Di\xE1logos\r\nMario Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nRedacci\xF3n
+      de los Mitos\r\nGamejam+ 2022 Staff\r\n\r\nINVESTIGACI\xD3N\r\nCarmen Moreno\r\nJuan
+      Pablo Correa\r\nAngel Farf\xE1n\r\nMario Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nBUSINESS
+      DEVELOPMENT\r\nCamila Ni\xF1o\r\nCarmen Moreno\r\nJuan Pablo Camacho\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nSPECIAL THANKS!\r\nMar\xEDa Castro\r\n\r\nQueremos expresar
+      nuestras agradecimientos especiales por probar nuestra Demo. Estamos muy emocionados
       en continuar mejorando y desarrollando el  juego para darte una mejor experiencia
-      en el futuro.\n\n\n\n\n\n\n\n\n\n\n\n\n  "
+      en el futuro."
     m_Metadata:
       m_Items: []
   references:

@@ -19,28 +19,36 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8534196224
-    m_Localized: "\n\n\n\n\n\nDESIGN DO JOGO\n\rDesign De Sistemas\nMario Antonio
-      Llaque\r\n\r\nDesign Criativo\n Maria Castro\r\n\r\nDesign De Som E Efeitos
-      Sonoros\nJuan Pablo Correa\r\n\r\nPRODU\xC7\xC3O\nProdutor Executivo\nDavid
-      Vargas\r\n\r\nARTE\nArte Ambiente E Decora\xE7\xF5es\nCarmen Moreno\n\nDesign
-      Da Interface Do Usu\xE1rio\nCamila Ni\xF1o\r\n\r\nDesign de Personagens\nAngel
-      Farf\xE1n\r\n\r\nArte T\xE9cnica\nSantiago Mora\r\n\r\nDesign de Efeitos Visuais\nSantiago
-      Mora\r\n\r\nANIMA\xC7\xC3O\nAnima\xE7\xE3o De Personagens\nAngel Farf\xE1n\r\n\r\nAnima\xE7\xE3o
-      Do Tutorial\nSantiago Mora\r\n\r\nAnima\xE7\xE3o Da Fim De N\xEDvel\nJuan Pablo
-      Camacho\r\n\r\nPROGRAMA\xC7\xC3O\nPrograma\xE7\xE3o Da Jogabilidade\nJes\xFAs
-      C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o Da Interface Do Usu\xE1rio\nCamila
-      Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs C\xE1rcamo\r\n\r\nPrograma\xE7\xE3o
-      De Ferramentas De Desenvolvimento\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o
-      De Som E Efeitos Sonoros\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Correa\r\n\r\nPrograma\xE7\xE3o
-      De Localiza\xE7\xE3o\nJuan Pablo Camacho\r\n\r\nGARANTIA DE QUALIDADE\nCarmen
-      Moreno\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nLOCALIZA\xC7\xC3O\nPrograma\xE7\xE3o
-      De Localiza\xE7\xE3o\nJuan Pablo Camacho\r\n\r\nLocaliza\xE7\xE3o Em Portugu\xEAs
-      GQ\nJhoan Jes\xFAs Sandoval\r\n\r\nLocaliza\xE7\xE3o Em Ingl\xEAs GQ\nMario
-      Antonio Llaque\n\r\nREDA\xC7\xC3O\nReda\xE7\xE3o de di\xE1logos\nMario Antonio
-      Llaque\n\nReda\xE7\xE3o dos Mitos\nGamejam+ 2022 Funcion\xE1rios\r\n\nFeito
-      com FMOD\n\nQueremos expressar nossos sinceros agradecimentos por experimentar
-      a demo do nosso game, estamos muito empolgados por continuar melhorando e desenvolvendo
-      o jogo para proporcionar uma experi\xEAncia ainda melhor no futuro.\n\n\n\n\n\n\n\n\n\n\n  "
+    m_Localized: "\r\n\r\n\r\n\r\n\r\n\r\nDESENHO DO JOGO\r\n\r\nDesenho De Sistemas\r\nMario
+      Antonio Llaque\r\n\r\nDesenho De Som E Efeitos Sonoros\r\nJuan Pablo Correa\r\n\r\nDesenho
+      De Tutoriais\r\nJuan Pablo Camacho\r\n\r\nPRODU\xC7\xC3O\r\nProdutor Executivo\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nARTE\r\nArte Ambiental \r\nCarmen Moreno\r\n\r\nDesenho Da
+      Interface Do Usu\xE1rio\r\nCamila Ni\xF1o\r\n\r\nDesenho de Personagens\r\nAngel
+      Farf\xE1n\r\n\r\nArte T\xE9cnica\r\nSantiago Mora\r\n\r\nDesenho de Efeitos
+      Visuais\r\nSantiago Mora\r\n\r\nArte de Elementos da cozinha\r\nCarmen Moreno\r\nMar\xEDa
+      Olarte\r\nPedro Vel\xE1zquez\r\nSebasti\xE1n Calder\xF3n\r\nSergio Pinz\xF3n\r\n\r\nANIMA\xC7\xC3O\r\nAnima\xE7\xE3o
+      De Personagens\r\nAngel Farf\xE1n\r\n\r\nAnima\xE7\xE3o Do Tutorial\r\nSantiago
+      Mora\r\n\r\nAnima\xE7\xE3o Da Fim De N\xEDvel\r\nJuan Pablo Camacho\r\n\r\nPROGRAMA\xC7\xC3O\r\nPrograma\xE7\xE3o
+      Da Jogabilidade\r\nJes\xFAs C\xE1rcamo\r\nJuan Pablo Camacho\r\n\r\nPrograma\xE7\xE3o
+      Da Interface Do Usu\xE1rio\r\nCamila Ni\xF1o\r\nJuan Pablo Camacho\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nPrograma\xE7\xE3o De Ferramentas De Desenvolvimento\r\nJuan
+      Pablo Camacho\r\n\r\nPrograma\xE7\xE3o De Som E Efeitos Sonoros\r\nJes\xFAs
+      C\xE1rcamo\r\nJuan Pablo Correa\r\n\r\nLOCALIZA\xC7\xC3O\r\nPrograma\xE7\xE3o
+      De Localiza\xE7\xE3o\r\nJuan Pablo Camacho\r\n\r\nLocaliza\xE7\xE3o Em Portugu\xEAs
+      GQ\r\nJhoan Jes\xFAs Sandoval\r\n\r\nLocaliza\xE7\xE3o Em Ingl\xEAs GQ\r\nMario
+      Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nREDA\xC7\xC3O\r\nReda\xE7\xE3o
+      de di\xE1logos\r\nMario Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nReda\xE7\xE3o
+      dos Mitos\r\nGamejam+ 2022 Funcion\xE1rios\r\n\r\nGARANTIA DE QUALIDADE\r\nCarmen
+      Moreno\r\nDavid Vargas\r\nJuan Pablo Camacho\r\nJuan Pablo Correa\r\n\r\nTESTE\r\nJuli\xE1n
+      Gait\xE1n\r\nC\xE9sar Mu\xF1oz\r\nPedro Vel\xE1zquez\r\nRen\xE9 Barrera\r\n\r\nTESTE
+      DE USU\xC1RIO\r\nCamila Ni\xF1o\r\nJes\xFAs Carcamo\r\nSantiago Mora\r\n\r\nTestadores\r\nMaria
+      Olarte\r\n\r\nINVESTIGA\xC7\xC3O\r\nCarmen Moreno\r\nJuan Pablo Correa\r\nAngel
+      Farf\xE1n\r\nMario Antonio Llaque\r\nJuan Pablo Camacho\r\n\r\nDESENVOLVIMIENTO
+      DE NEG\xD3CIOS\r\nCamila Ni\xF1o\r\nCarmen Moreno\r\nJuan Pablo Camacho\r\nJes\xFAs
+      C\xE1rcamo\r\n\r\nAGRADECIMENTOS ESPECIAIS\r!\nMar\xEDa Castro\r\n\r\nQueremos
+      expressar nossos sinceros agradecimentos por experimentar nossa demonstra\xE7\xE3o
+      de jogo, estamos muito entusiasmados em continuar melhorando e desenvolvendo
+      o jogo para lhe proporcionar uma experi\xEAncia ainda melhor no futuro\r\n\r\n\r\n  "
     m_Metadata:
       m_Items: []
   references:
