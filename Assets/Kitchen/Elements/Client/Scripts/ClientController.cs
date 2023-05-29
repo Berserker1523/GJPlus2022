@@ -47,6 +47,7 @@ namespace Kitchen
         private string[] animsDie = new string []{ "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
         private bool clientDied;
         private bool gruntDispatched;
+        private BoxCollider2D bc;
 
         protected void Awake()
         {
@@ -61,6 +62,7 @@ namespace Kitchen
 
             animator = GetComponentInChildren<Animator>();    
             healingVFX = GetComponentInChildren<ParticleSystem>();
+            bc = GetComponent<BoxCollider2D>();
 
             EventManager.AddListener(GameStatus.LevelFinished, StopCounter);
         }
@@ -208,6 +210,7 @@ namespace Kitchen
             GetComponent<BoxCollider2D>().enabled = false;
             healingVFX.Play();
             yield return new WaitForSeconds(3f);
+            bc.enabled = false;
 
             Destroy(gameObject);
         }
