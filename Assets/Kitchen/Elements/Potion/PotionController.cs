@@ -54,7 +54,7 @@ namespace Kitchen
         private void StopTimer(bool tutorial)
         {
             inTutorial = tutorial;
-            anim.speed = tutorial ? 0:1;
+            anim.speed = tutorial ? 0 : 1;
         }
 
         private void OnDestroy()
@@ -68,7 +68,7 @@ namespace Kitchen
             if (potionIngredients.Count == MaxAllowedIngredients)
                 return false;
 
-            if (pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController) && 
+            if (pointerEventData.pointerDrag.TryGetComponent(out CookingToolController cookingToolController) &&
                 cookingToolController.CurrentCookingIngredient.state == IngredientState.Cooked ||
                 pointerEventData.pointerDrag.TryGetComponent(out IngredientController ingredientController) &&
                 ingredientController.IngredientData.necessaryCookingTool == CookingToolName.None)
@@ -114,7 +114,7 @@ namespace Kitchen
             potionBranchesSprites[potionIngredients.Count - 1].sprite = potionIngredient.data.rawSprite;
             potionBranchesScalers[potionIngredients.Count - 1].ScaleSpriteToBounds();
 
-            if(ingredientData.ingredientName != IngredientName.Water)
+            if (ingredientData.ingredientName != IngredientName.Water)
                 EventManager.Dispatch(PotionEvent.AddIngredient, ingredientData);
         }
 
@@ -128,14 +128,15 @@ namespace Kitchen
                 foreach (var ingredient in recipe.ingredients)
                     recipeIngredients.Add(new(ingredient.ingredient, ingredient.cookingToolName));
 
-                if (!recipeIngredients.OrderBy(x => x.data.ingredientName).SequenceEqual(potionIngredients.OrderBy(x => x.data.ingredientName)) || !recipeIngredients.OrderBy(x => x.usedCookingTool).SequenceEqual(potionIngredients.OrderBy(x => x.usedCookingTool)))
+                if (!recipeIngredients.OrderBy(x => x.data.ingredientName).SequenceEqual(potionIngredients.OrderBy(x => x.data.ingredientName)) ||
+                     !recipeIngredients.OrderBy(x => $"{x.usedCookingTool}+{x.data.ingredientName}").SequenceEqual(potionIngredients.OrderBy(x => $"{x.usedCookingTool}+{x.data.ingredientName}")))
                     continue;
 
                 currentRecipe = recipe;
                 potionResult.SetPotion(currentRecipe, recipe.sprite);
                 EventManager.Dispatch(PotionEvent.Poof);
                 potionParticles.SuccesActivator();
-                
+
                 ClearShaker();
                 return;
             }
@@ -184,7 +185,7 @@ namespace Kitchen
         private IEnumerator ShakingTimerRoutine(float seconds)
         {
             float currentTime = 0;
-            while(true)
+            while (true)
             {
                 while (inTutorial)
                     yield return new WaitForSeconds(0.1f);
@@ -194,6 +195,6 @@ namespace Kitchen
             }
         }
 
-        public void SwitchShakerEnabled(bool enabled) => shakerEnabled= enabled;
+        public void SwitchShakerEnabled(bool enabled) => shakerEnabled = enabled;
     }
 }
