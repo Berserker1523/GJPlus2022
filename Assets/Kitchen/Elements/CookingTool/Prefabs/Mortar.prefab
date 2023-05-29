@@ -104,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23886967, y: 0}
+  m_Offset: {x: -0.047059655, y: 0.06943858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -115,7 +115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2996912, y: 1.42}
+  m_Size: {x: 2.9606712, y: 1.7668259}
   m_EdgeRadius: 0
 --- !u!114 &3754922573171479887
 MonoBehaviour:
@@ -131,6 +131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookingToolData: {fileID: 11400000, guid: 602ddcadf8a8c9b49829c641fcea5ee7, type: 2}
   shakingMortarParticle: {fileID: 8363014367205665855}
+  cookingParticle: {fileID: 0}
+  overcookingParticle: {fileID: 0}
+  overcookedParticle: {fileID: 0}
 --- !u!114 &934993098367615919
 MonoBehaviour:
   m_ObjectHideFlags: 0
