@@ -112,6 +112,7 @@ namespace Kitchen
             positiveButtonText.text = retryString.GetLocalizedString();
             positiveButton.onClick.AddListener(TryAgain);
             moneyText.text = moneyUI.GetCurrentLevelMoney().ToString();
+            buttonsLayoutGO.SetActive(true);
         }
 
         private IEnumerator CheckMythsData()
