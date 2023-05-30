@@ -309,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLayout
       objectReference: {fileID: 0}
+    - target: {fileID: 8280109857328242250, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 507027c837dc2c04bb7c44ec9b98a0b7, type: 2}
     - target: {fileID: 8280109857328242251, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: m_RootOrder
       value: 3

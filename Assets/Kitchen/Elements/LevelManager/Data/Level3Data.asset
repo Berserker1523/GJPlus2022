@@ -29,6 +29,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53fa1c4110f0e86418c1cbfd3f7b47fe, type: 2}
   - {fileID: 11400000, guid: b26659aec8660764da342e3f09197144, type: 2}
   - {fileID: 11400000, guid: c23fc0e3055c0bc4da139172e24938af, type: 2}
-  - {fileID: 11400000, guid: 2db822341adc12e47acdf5d48df25e8a, type: 2}
+  - {fileID: 11400000, guid: 823698452e6a9d2488f0905e1891c1d7, type: 2}
   levelPercentages: 0a000000140000001e00000028000000
   stars: 000000
