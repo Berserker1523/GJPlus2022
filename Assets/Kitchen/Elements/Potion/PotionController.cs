@@ -1,4 +1,5 @@
 using Events;
+using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,12 +50,19 @@ namespace Kitchen
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
             shakerSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cocina/Shaker");
             EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTimer);
+            EventManager.AddListener(LevelEvents.TryAgain, StopSound);
+        }
+
+        private void StopSound()
+        {
+            shakerSound.stop(STOP_MODE.ALLOWFADEOUT);
         }
 
         private void StopTimer(bool tutorial)
         {
             inTutorial = tutorial;
             anim.speed = tutorial ? 0 : 1;
+            shakerSound.setVolume( tutorial ? 0 : 1);
         }
 
         private void Update()
@@ -66,6 +74,7 @@ namespace Kitchen
         {
             dropView.OnDropped -= HandleDropped;
             EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, StopTimer);
+            EventManager.RemoveListener(LevelEvents.TryAgain, StopSound);
         }
 
         private bool IsDraggedObjectInteractableWithMe(PointerEventData pointerEventData)

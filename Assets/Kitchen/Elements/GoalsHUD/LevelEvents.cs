@@ -9,5 +9,6 @@ namespace Kitchen
         StreakLost,
         Hurry,
         TimeOut,
+        TryAgain,
     }
 }

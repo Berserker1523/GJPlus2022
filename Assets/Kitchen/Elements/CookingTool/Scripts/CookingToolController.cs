@@ -47,14 +47,23 @@ namespace Kitchen
 
             SceneManager.sceneLoaded += StopCookingSoundsOnNewSceneLoaded;
             EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTimers);
+            EventManager.AddListener(LevelEvents.TryAgain, StopSound);
         }
 
-        private void StopTimers(bool tutorial) => inTutorial = tutorial;
+        void StopSound() => StopCookingSoundsOnNewSceneLoaded(new(), new());
+
+        private void StopTimers(bool tutorial) 
+        {
+            inTutorial = tutorial;
+            cookingSound.setVolume(tutorial ? 0 : 1);
+            burningSound.setVolume(tutorial ? 0 : 1);
+        }
 
         private void OnDestroy()
         {
             dropView.OnDropped -= HandleDropped;
             EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, StopTimers);
+            EventManager.RemoveListener(LevelEvents.TryAgain, StopSound);
             SceneManager.sceneLoaded -= StopCookingSoundsOnNewSceneLoaded;
             StopCookingSoundsOnNewSceneLoaded(new(), new());
         }

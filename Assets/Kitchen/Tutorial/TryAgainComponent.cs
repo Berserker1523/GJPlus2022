@@ -17,7 +17,11 @@ namespace Kitchen.Tutorial
             _okButton.onClick.AddListener(RestartLevel);
        }
 
-        protected void ShowPopup() =>  gameObject.SetActive(true);
+        protected void ShowPopup()
+        {
+            gameObject.SetActive(true);
+            EventManager.Dispatch(LevelEvents.TryAgain);
+        }
 
         private void OnDestroy()
         {
