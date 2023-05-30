@@ -41,11 +41,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3186319261696
-    m_Localized: "Al\xE9m de seu sabor delicioso, o pequi traz benef\xEDcios \xE0
-      sa\xFAde. Ele \xE9 rico em vitamina C, que ajuda a fortalecer o sistema imunol\xF3gico
-      e a proteger nosso corpo contra doen\xE7as. Ele tamb\xE9m cont\xE9m vitamina
-      A, que \xE9 boa para a vis\xE3o e a pele, portanto, comer pequi pode ser muito
-      bom para n\xF3s!"
+    m_Localized: "Al\xE9m de seu sabor ser delicioso, o pequi traz benef\xEDcios
+      \xE0 sa\xFAde. Ele \xE9 rico em vitamina C, que ajuda a refor\xE7ar o sistema
+      imunol\xF3gico e a proteger nosso corpo contra doen\xE7as. Ele tamb\xE9m cont\xE9m
+      vitamina A, que \xE9 boa para a vis\xE3o e a pele, portanto, comer pequi pode
+      ser muito bom para n\xF3s!"
     m_Metadata:
       m_Items: []
   - m_Id: 3203536879616
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_Localized: "A cera de carna\xFAba \xE9 um tesouro natural com v\xE1rios usos.
       Ela \xE9 extra\xEDda das folhas da \xE1rvore e \xE9 usada para fabricar produtos
       como ceras para assoalho, polidores de autom\xF3veis e at\xE9 mesmo na fabrica\xE7\xE3o
-      de produtos cosm\xE9ticos, como batons e batons. Al\xE9m disso, essa cera \xE9
-      muito \xFAtil na ind\xFAstria aliment\xEDcia, onde \xE9 usada para revestir
-      frutas e chocolates, protegendo-os e dando-lhes um brilho especial."
+      de produtos cosm\xE9ticos, como batons. Al\xE9m disso, essa cera \xE9 muito
+      \xFAtil na ind\xFAstria aliment\xEDcia, onde \xE9 usada para revestir frutas
+      e chocolates, os protegendo e lhes dando um brilho especial."
     m_Metadata:
       m_Items: []
   - m_Id: 3317751971840
@@ -183,9 +183,9 @@ MonoBehaviour:
   - m_Id: 3513923764224
     m_Localized: "A folha de coca tamb\xE9m tem um significado espiritual para os
       povos ind\xEDgenas. Ela \xE9 usada em rituais e cerim\xF4nias como uma forma
-      de se conectar com a natureza e os ancestrais. Mastigar folhas de coca \xE9
-      uma pr\xE1tica antiga que ajuda as comunidades a se manterem em harmonia com
-      o mundo natural e a encontrarem respostas para perguntas importantes."
+      de se ligar \xE0 natureza e aos ancestrais. Mastigar folhas de coca \xE9 uma
+      pr\xE1tica antiga que ajuda as comunidades a se manterem em harmonia com o
+      mundo natural e a encontrarem respostas para perguntas importantes."
     m_Metadata:
       m_Items: []
   - m_Id: 3522618556416

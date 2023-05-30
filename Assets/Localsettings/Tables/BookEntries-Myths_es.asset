@@ -22,29 +22,24 @@ MonoBehaviour:
     m_Localized: "Begorotire era un indio feliz en Brasil, pero un d\xEDa se enfad\xF3
       y decidi\xF3 buscar un nuevo hogar. Pint\xF3 a su familia de negro con el tinte
       del fruto del jenipap y cre\xF3 un bast\xF3n m\xE1gico. Subi\xF3 a una monta\xF1a,
-      agit\xF3 su bast\xF3n y se elev\xF3 al cielo, convirti\xE9ndose en el Hombre
-      de la Lluvia. Desde all\xED, ayud\xF3 a los que quedaron en la tierra, enviando
-      semillas a su hija a trav\xE9s de una calabaza."
+      agit\xF3 su bast\xF3n y se elev\xF3 al cielo, junto a su familia, convirti\xE9ndose
+      en el Hombre de la Lluvia. Desde all\xED, ayud\xF3 a los que quedaron en la
+      tierra, enviando a su hija con semillas, a trav\xE9s de una calabaza."
     m_Metadata:
       m_Items: []
   - m_Id: 251820605440
-    m_Localized: "La hija de Begorotire fue encontrada por un joven en la calabaza
-      y regres\xF3 a la aldea. Se cas\xF3 con \xE9l y, con la ayuda de su padre,
-      trajo prosperidad a todos. La hija ense\xF1\xF3 a cultivar las semillas y a
-      cuidar los campos. Sin embargo, sent\xEDa nostalgia y decidi\xF3 visitar a
-      sus padres en el cielo. Utiliz\xF3 un \xE1rbol de Pinda\xEDba, doblando su
-      copa al suelo y lanz\xE1ndose al cielo. Regres\xF3 con su familia y cestas
-      llenas de frutas."
+    m_Localized: "La hija de Begorotire fue encontrada por un joven en la calabaza.
+      Se cas\xF3 con \xE9l, y volvi\xF3 a vivir en la tierra. Sin embargo, sent\xEDa
+      nostalgia y decidi\xF3 visitar a sus padres en el cielo. Utiliz\xF3 un \xE1rbol
+      de Pinda\xEDba, doblando su copa al suelo y lanz\xE1ndose al cielo. "
     m_Metadata:
       m_Items: []
   - m_Id: 262281199616
-    m_Localized: "Begorotire ense\xF1\xF3 a todos a cuidar los campos y mantenerlos
-      verdes y abundantes. Hasta el d\xEDa de hoy, como Hombre de la Lluvia, trae
-      lluvia a los campos cuando las plantas necesitan agua. Esta leyenda de Brasil
-      nos ense\xF1a sobre la importancia de valorar la naturaleza, trabajar juntos
-      y ser agradecidos por las bendiciones que recibimos de la lluvia. Nos invita
-      a cuidar de la tierra y a ser conscientes de c\xF3mo nuestra conexi\xF3n con
-      la naturaleza puede traer prosperidad y alegr\xEDa a nuestras vidas."
+    m_Localized: "Tiempo despu\xE9s, Begorotire y su familia regresaron a la tierra.
+      Begorotire ense\xF1\xF3 a todos a cultivar las semillas y a cuidar los campos,
+      y luego regres\xF3 a su hogar. Hasta el d\xEDa de hoy, cuando las plantas necesitan
+      agua, el hombre de la lluvia hace caer truenos sobre los campos para mantenerlos
+      siempre verdes y abundantes."
     m_Metadata:
       m_Items: []
   - m_Id: 271013740544
@@ -52,9 +47,11 @@ MonoBehaviour:
       felizmente. Se llamaban Tain\xE1-Racan y Malu\xE1. Tras tres a\xF1os de matrimonio,
       anhelaban tener un hijo, hasta que finalmente naci\xF3 Uadi, un ni\xF1o con
       el cabello dorado como las flores del \xE1rbol de ipe amarillo. Aunque era
-      especial, Uadi fue objeto de burlas por parte de la tribu, quienes dec\xEDan
-      que era hijo del caim\xE1n que siempre estaba cerca de Tain\xE1-Racan. A pesar
-      de las bromas, Uadi creci\xF3 siendo encantador y dotado de una inteligencia
+      especial. Malu\xE1 recibi\xF3 el nacimiento de su hijo con alegr\xEDa y para
+      explicar su diferencia hizo correr la voz por toda la tribu de que Uadi era
+      hijo de Cananxiu\xE9., Uadi fue objeto de burlas por parte de la tribu, quienes
+      dec\xEDan que era hijo del caim\xE1n que siempre estaba cerca de Tain\xE1-Racan.
+      A pesar de las bromas, Uadi creci\xF3 siendo encantador y dotado de una inteligencia
       excepcional"
     m_Metadata:
       m_Items: []
@@ -115,7 +112,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 427905875968
-    m_Localized: "ia\xE7\xE3 sufri\xF3 mucho por la p\xE9rdida de su hija y suplic\xF3
+    m_Localized: "ia\xE7\xE3 sufri\xF3 mucho por la p\xE9rdida de su hijo y suplic\xF3
       a Tup\xE3, que encontrara una soluci\xF3n para evitar los sacrificios de los
       ni\xF1os. Un d\xEDa, Ia\xE7\xE3 escuch\xF3 el llanto de un ni\xF1o afuera de
       su choza y al salir vio a su hija junto a una palmera. La abraz\xF3 con alegr\xEDa,
@@ -160,11 +157,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 503097163776
-    m_Localized: "El cacique de la tribu tup\xED se encontraba muy triste, pues su
-      hija result\xF3 embarazada sin estar casada con un valiente guerrero. Hasta
-      que un sue\xF1o le revel\xF3 la verdad: man\xED se manten\xEDa pura. Con esta
-      revelaci\xF3n el cacique acept\xF3 el embarazo y esper\xF3 con alegr\xEDa el
-      nacimiento de su nieta"
+    m_Localized: "ia\xE7\xE3 suffered greatly for the loss of her son and begged
+      Tup\xE3 to find a solution to avoid child sacrifices. One day, ia\xE7\xE3 heard
+      a child crying outside her hut and when she went outside she saw her daughter
+      next to a palm tree. He embraced her with joy, but the child mysteriously disappeared
+      in his arms. ia\xE7\xE3 died of sadness that night and her body was found hugging
+      the palm tree the next day."
     m_Metadata:
       m_Items: []
   - m_Id: 536802590720
