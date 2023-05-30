@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+﻿using Events;
 using System.Collections.Generic;
 using System.Linq;
-using Events;
+using UnityEngine;
 
 namespace Kitchen
 {
@@ -29,6 +29,8 @@ namespace Kitchen
 
         private void Awake()
         {
+            inTutorial = false;
+            ClientController.inTutorial = false;
             levelInstantiator = FindObjectOfType<LevelInstantiator>();
             EventManager.AddListener(ClientEvent.Died, HandleClientDied);
             EventManager.AddListener(ClientEvent.Served, HandleClientServed);
