@@ -8,7 +8,7 @@ namespace Kitchen
     public class StarsData : ScriptableObject
     {
         [HideInInspector] public bool[,] stars = new bool[5, 3];
-        [HideInInspector] public bool[] tutorials = new bool[6];
+        [SerializeField] public bool[] tutorials = new bool[6];
 
         private void OnEnable()
         {

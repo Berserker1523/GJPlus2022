@@ -36,7 +36,13 @@ namespace Mainmenu
                         yield return null;
                     }
                 }
+                if (LevelManager.CurrentLevel == 0)
+                    LevelManager.CurrentLevel = 1;
                 SceneManager.LoadScene($"{SceneName.Kitchen}{LevelManager.CurrentLevel}", LoadSceneMode.Single); //Todo level save
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneName.Tutorial0.ToString(), LoadSceneMode.Single);
             }
         }
 
