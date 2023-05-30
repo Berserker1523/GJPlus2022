@@ -22,10 +22,7 @@ EditorBuildSettings:
     guid: 4fb4cd2e92f155944b045f09274f5aff
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Tutorial/Tutorial4.unity
-    guid: 284e6e91a2c668a4e97367b01533e54f
-  - enabled: 1
-    path: Assets/AnimExport/Scenes/Kitchen/Kitchen1.unity
-    guid: b17d1dd2961020e4f935a3cccd63da98
+    guid: 43624728e762d0b4bb4476bfea4d2364
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Tutorial/Tutorial5.unity
     guid: 48462563267ca7441aeb8c08d5cacc0b
@@ -41,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AnimExport/Scenes/HistoryBook.unity
     guid: b12683c08a61796489eeb046a9e932ac
+  - enabled: 1
+    path: Assets/AnimExport/Scenes/Kitchen/Kitchen1.unity
+    guid: b17d1dd2961020e4f935a3cccd63da98
   - enabled: 1
     path: Assets/AnimExport/Scenes/Kitchen/Kitchen3.unity
     guid: 71919e2391eeeb248a899926173b5f48
