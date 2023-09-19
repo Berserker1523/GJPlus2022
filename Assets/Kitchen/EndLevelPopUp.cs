@@ -1,6 +1,7 @@
 using Events;
 using FMOD.Studio;
 using FMODUnity;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Kitchen
     public class EndLevelPopUp : MonoBehaviour
     {
         [SerializeField] private Animator[] stars = new Animator[3];
-        [SerializeField] private StarsData starsData;
+        [SerializeField] private GameData starsData;
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI titleDilateText;
         [SerializeField] private Color wonTitleColor;
@@ -122,9 +123,18 @@ namespace Kitchen
 
             if (gameData != null)
             {
+                int currentLevel = LevelManager.CurrentLevel;
                 for (int i = 0; i < 3; i++)
                 {
-                    if (gameData.stars[LevelManager.CurrentLevel, i] == false && levelInstantiator.LevelData.stars[i] == true)
+                    bool star = i switch
+                    {
+                        0 => gameData.stars[currentLevel].goalStar,
+                        1 => gameData.stars[currentLevel].timeStar,
+                        2 => gameData.stars[currentLevel].streakStar,
+                        _ => throw new Exception("Outisde of array bounds")
+                    }; ;
+
+                    if (star == false && levelInstantiator.LevelData.stars[i] == true)
                     {
                         mythsUpdatedGO.SetActive(true);
                         yield return new WaitForSecondsRealtime(3f);

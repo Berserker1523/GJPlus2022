@@ -1,35 +1,31 @@
 using Kitchen;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public static class SaveManager 
 {
-    public static void SavePlayerData(StarsData starsData)
+    public static readonly string path = "/kumuData29_05.json";
+    public static void SavePlayerData(GameData starsData)
     {
-        GameData gameData = new GameData(starsData);
-        string dataPath = Application.persistentDataPath + "/kumuData29_05.save";
-        FileStream fileStream = new FileStream(dataPath, FileMode.Create);
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        binaryFormatter.Serialize(fileStream, gameData);
-        fileStream.Close();
+
+        string dataPath = Application.persistentDataPath + path;
+        string json = JsonUtility.ToJson(starsData);
+        File.WriteAllText(dataPath, json);
     }
 
     public static GameData LoadStarsData()
     {
-        string dataPath = Application.persistentDataPath + "/kumuData29_05.save";
+        string dataPath = Application.persistentDataPath + path;
         if(File.Exists(dataPath))
         {
-            FileStream fileStream = new FileStream(dataPath, FileMode.Open);
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            GameData starsData = (GameData) binaryFormatter.Deserialize(fileStream);
-            fileStream.Close();
-            return starsData;
+
+            string json = File.ReadAllText(dataPath);
+            GameData data = JsonUtility.FromJson<GameData>(json);
+            return data;
         }
         else
         {
             return new GameData();
         }
     }
-}
-                                                
+}                                                

@@ -69,7 +69,7 @@ namespace HistoryBook {
             {
                 GameObject prefab;
 
-                if (gameData.stars[index, 0])             
+                if (gameData.stars[index].goalStar)             
                     prefab = buttonPrefab;                             
                 else             
                     prefab = buttonLockedPrefab;
@@ -109,12 +109,12 @@ namespace HistoryBook {
 
             string value1, value2;
 
-            if (gameData.stars[buttonPos, 1])
+            if (gameData.stars[buttonPos].timeStar)
                 value1 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP1.TableReference, mythP1.TableEntryReference);
             else
                 value1 = LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference); 
 
-            if (gameData.stars[buttonPos, 2])
+            if (gameData.stars[buttonPos].streakStar)
                 value2 = LocalizationSettings.StringDatabase.GetLocalizedString(mythP2.TableReference, mythP2.TableEntryReference);
             else
                 value2 = LocalizationSettings.StringDatabase.GetLocalizedString(lockedTextTag.TableReference, lockedTextTag.TableEntryReference);
