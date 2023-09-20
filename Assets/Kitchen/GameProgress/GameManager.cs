@@ -33,8 +33,12 @@ public class GameManager : SinglentonParent<GameManager>
         EventManager.RemoveListener<int>(GlobalTutorialEvent.Tutorial5Completed, MarkTutorialAsComplete);
     }
 
-    public void CallSaveData() =>
+    public void CallSaveData() 
+    {
+        gameData.attendedClients = GlobalCounter.attendedClients;
+        gameData.streaksAmount = GlobalCounter.streaksAmount;
         SaveManager.SavePlayerData(gameData);
+    }
 
     public void SetGoalStar() =>
         gameData.stars[LevelManager.CurrentLevel].goalStar = true;
