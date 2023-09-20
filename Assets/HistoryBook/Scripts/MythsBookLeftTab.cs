@@ -127,15 +127,15 @@ public class MythsBookLeftTab : MythsBookTab
 
     string CheckMythsStars(int pos, LocalizedString[] texts, LocalizedString goals)
     {
-        int currentStars=0, currentLevel = LevelManager.CurrentLevel;
+        int currentStars=0;
 
         for (int i = 0; i < 3; i++)
         {
             bool star = i switch
             {
-                0 => _gameData.stars[currentLevel].goalStar,
-                1 => _gameData.stars[currentLevel].timeStar,
-                2 => _gameData.stars[currentLevel].streakStar,
+                0 => _gameData.stars[pos].goalStar,
+                1 => _gameData.stars[pos].timeStar,
+                2 => _gameData.stars[pos].streakStar,
                 _ => throw new Exception("Outisde of array bounds")
             };
 
