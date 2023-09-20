@@ -56,7 +56,8 @@ namespace Kitchen.Tutorial
             EventManager.Dispatch(GlobalTutorialEvent.inTutorial, true);
             Transform[] tutorialTargets = { toTrashTranform, trashController.transform };
             handTutorial.StartNewSequence(tutorialTargets);
-            EnableColliders(tutorialTargets);
+            toTrashTranform.GetComponent<DragView>().ForceAllowDragging();
+            //EnableColliders(tutorialTargets);
             EventManager.AddListener(TrashEvent.Throw, EndPotionTutorial);
         }
 
@@ -68,11 +69,11 @@ namespace Kitchen.Tutorial
             //EventManager.Dispatch(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, (int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered);
         }
 
-        private void EnableColliders(Transform[] tutorialTargets)
-        {
-            foreach(var tranform in tutorialTargets)
-                tranform.GetComponent<Collider2D>().enabled = true;
-        }
+        //private void EnableColliders(Transform[] tutorialTargets)
+        //{
+        //    foreach(var tranform in tutorialTargets)
+        //        tranform.GetComponent<DragView>().is = true;
+        //}
 
         private void OnDestroy()
         {

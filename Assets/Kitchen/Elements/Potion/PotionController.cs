@@ -183,7 +183,7 @@ namespace Kitchen
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1 || !shakerEnabled)
+            if (potionResult.CurrentRecipe != null || potionIngredients.Count <= 1 || !shakerEnabled || inTutorial)
                 return;
 
             anim.SetBool("Shake", true);
