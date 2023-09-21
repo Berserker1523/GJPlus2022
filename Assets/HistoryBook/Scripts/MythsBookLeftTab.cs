@@ -1,10 +1,12 @@
 using HistoryBook;
 using Kitchen;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Playables;
 
 public class MythsBookLeftTab : MythsBookTab
 {
@@ -126,10 +128,21 @@ public class MythsBookLeftTab : MythsBookTab
     string CheckMythsStars(int pos, LocalizedString[] texts, LocalizedString goals)
     {
         int currentStars=0;
-        foreach (bool star in GetRow(_gameData.stars, pos))      
-              if(star)
-                currentStars++;
 
+        for (int i = 0; i < 3; i++)
+        {
+            bool star = i switch
+            {
+                0 => _gameData.stars[pos].goalStar,
+                1 => _gameData.stars[pos].timeStar,
+                2 => _gameData.stars[pos].streakStar,
+                _ => throw new Exception("Outisde of array bounds")
+            };
+
+            if (star)
+                currentStars++;
+        }
+            
         string mythText = "";
        for (int i=0; i<currentStars;i++)                
             mythText += "\n\n"+GetStringFromLocalizedString(texts[i]);
@@ -155,7 +168,7 @@ public class MythsBookLeftTab : MythsBookTab
 
     bool CheckLevelCompletions(int pos)
     {
-        if (_gameData.stars[pos,0])
+        if (_gameData.stars[pos].goalStar)
             return true;
         else
             return false;

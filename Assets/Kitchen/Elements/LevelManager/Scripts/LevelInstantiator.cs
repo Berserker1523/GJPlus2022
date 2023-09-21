@@ -33,7 +33,7 @@ namespace Kitchen
         {
             new GameObject("SoundsManager").AddComponent<SoundsManager>();
             SetLevelData(levelData);
-            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);
+            //EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);
         }
         private void Start()
         {
@@ -44,7 +44,7 @@ namespace Kitchen
 
         private void OnDestroy()
         {
-            EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);           
+           // EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, SwitchCollidersActivation);           
         }
 
         private void InstantiatePotions(int quantity)
