@@ -30,7 +30,6 @@ public class AppCenterBehavior : MonoBehaviour
             return;
         }
         _instance = this;
-        DontDestroyOnLoad(gameObject);
 #if UNITY_WSA_10_0
         StartAppCenter();
 #endif
