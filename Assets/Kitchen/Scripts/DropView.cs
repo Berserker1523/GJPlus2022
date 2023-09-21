@@ -15,7 +15,7 @@ namespace Kitchen
         public Func<PointerEventData, bool> IsDraggedObjectInteractableWithMe;
 
         private Vector3 initialHoveredObjectScale;
-
+        private static GameObject currentPointerDrag;
         public void OnDrop(PointerEventData eventData)
         {
             //Debug.Log($"OnDrop {eventData.position}", gameObject);
@@ -27,7 +27,7 @@ namespace Kitchen
         {
             //Debug.Log($"OnPointerEnter {eventData.position}", gameObject);
             OnPointerEntered?.Invoke(eventData);
-
+            currentPointerDrag = eventData.pointerDrag;
             if (eventData.pointerDrag == null || IsDraggedObjectInteractableWithMe == null || !IsDraggedObjectInteractableWithMe(eventData))
                 return;
             
@@ -41,13 +41,14 @@ namespace Kitchen
             //Debug.Log($"OnPointerExit {eventData.position}", gameObject);
             OnPointerExited?.Invoke(eventData);
             RestoreHoveredObjectScale(eventData);
+            currentPointerDrag = null;
         }
 
         private void RestoreHoveredObjectScale(PointerEventData eventData)
         {
             if (initialHoveredObjectScale == Vector3.zero)
                 return;
-            eventData.pointerDrag.transform.localScale = initialHoveredObjectScale;
+            currentPointerDrag.transform.localScale = initialHoveredObjectScale;
             initialHoveredObjectScale = Vector3.zero;
         }
     }

@@ -1,39 +1,44 @@
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Kitchen
 {
-    [System.Serializable]
+    [Serializable]
     public class GameData
     {
         public int currentLevel;
-        [HideInInspector] public bool[,] stars = new bool[5,3];
+        [HideInInspector] public LevelStars[] stars = NewLevelStarsArray(6);
         [HideInInspector] public bool[] tutorials = new bool[6];
 
         public int[] attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
-        public int streaksAmount;
+        public int streaksAmount; 
         [SerializeField]
-
-        public GameData(StarsData starsData)
-        {
-            currentLevel = LevelManager.CurrentLevel;
-            stars = starsData.stars;
-            tutorials = starsData.tutorials;
-            attendedClients = GlobalCounter.attendedClients;
-            streaksAmount = GlobalCounter.streaksAmount;         
-        }
 
         public GameData()
         {
             currentLevel = 0;
-            stars= new bool[5, 3];
+            stars = NewLevelStarsArray(6);
             tutorials = new bool[6];
             attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
             streaksAmount = 0;
         }
 
-    }
-    
-}
+        public static LevelStars[] NewLevelStarsArray(int lenght)
+        {
+            LevelStars[] stars = Enumerable.Range(0, lenght)
+            .Select(levelIndex => new LevelStars { level = levelIndex })
+            .ToArray();
 
+            return stars;
+        }
+    }
+
+    [Serializable]
+    public class LevelStars
+    {
+        //public (int levelWorld, int levelIndex) level;
+        public int level;
+        public bool goalStar, timeStar, streakStar;
+    }
+}

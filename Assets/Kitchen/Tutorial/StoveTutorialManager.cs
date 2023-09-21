@@ -25,7 +25,7 @@ namespace Kitchen.Tutorial
         public PlayableDirector finalTimeline;
         //Assing Pequi Water an client from inspector
         [SerializeField] private Transform[] tutorialElements = new Transform[7];
-        [SerializeField] private StarsData starsData;
+        [SerializeField] private GameData starsData;
 
         [ContextMenuItem("MoveObject", "Move")]
         [SerializeField] Transform currentPos;
