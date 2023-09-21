@@ -25,11 +25,6 @@ namespace Kitchen.Tutorial
             _animator = GetComponent<Animator>();
         }
 
-        private void Start()
-        {
-            gameObject.SetActive(false);
-        }
-
         private void OnEnable()
         {
             if(_points != null)

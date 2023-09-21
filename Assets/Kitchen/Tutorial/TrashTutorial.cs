@@ -66,6 +66,7 @@ namespace Kitchen.Tutorial
             handTutorial.SwitchEnableHand(false);
             gameObject.SetActive(false);
             EventManager.Dispatch(GlobalTutorialEvent.inTutorial,false);
+            EventManager.RemoveListener(TrashEvent.Throw, EndPotionTutorial);
             //EventManager.Dispatch(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, (int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered);
         }
 
