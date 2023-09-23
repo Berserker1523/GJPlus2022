@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Events;
 using System;
 using System.Collections;
@@ -56,6 +57,8 @@ namespace Kitchen
         private bool sicknessParticlesActivated;
         private BoxCollider2D bc;
 
+        Tween walkTween, scaleTween;
+
         protected void Awake()
         {
             dropView = GetComponent<DropView>();
@@ -71,6 +74,21 @@ namespace Kitchen
             bc = GetComponent<BoxCollider2D>();
 
             EventManager.AddListener(GameStatus.LevelFinished, StopCounter);
+            EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, StopTweens);
+        }
+
+        private void StopTweens(bool inTutorial)
+        {
+            if(inTutorial == true)
+            {
+                walkTween.Pause();
+                scaleTween.Pause();
+            }
+            else
+            {
+                walkTween.Play();
+                scaleTween.Play();
+            }
         }
 
         private void OnDestroy() => EventManager.RemoveListener(GameStatus.LevelFinished, StopCounter);
@@ -81,8 +99,19 @@ namespace Kitchen
                 Destroy(gameObject);
         }
 
-        public void Initialize(RecipeData requiredRecipe, Sprite potionSprite)
+        public void Initialize(RecipeData requiredRecipe, Sprite potionSprite, Transform finalDestination)
         {
+            SetClientGenderAndIllnessAnimations(requiredRecipe);
+
+            transform.localScale = Vector3.one * 0.01f;
+            scaleTween = transform.DOScale(0.55f, 15f).SetEase(Ease.InSine);
+            walkTween = transform.DOMove(finalDestination.position, 15f).SetEase(Ease.InSine)
+            .OnComplete(() => { InitCanvas(requiredRecipe, potionSprite); });
+        }
+
+        private void InitCanvas(RecipeData requiredRecipe, Sprite potionSprite)
+        {
+            canvas.gameObject.SetActive(true);
             this.requiredRecipe = requiredRecipe;
             potionImage.sprite = potionSprite;
             potionImage.GetComponent<ImageResizeInBounds>().ResizeImageToBounds();
@@ -111,10 +140,12 @@ namespace Kitchen
                 cookingToolsImages[i].enabled = false;
                 arrowsImages[i].enabled = false;
             }
+        }
 
+        private void SetClientGenderAndIllnessAnimations(RecipeData requiredRecipe)
+        {
             clientGender = (Gender)UnityEngine.Random.Range(0, 2);
             animator.runtimeAnimatorController = animators[(int)clientGender];
-
             animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
         }
 
