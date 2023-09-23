@@ -122,6 +122,10 @@ MonoBehaviour:
     m_Localized: Thank you so much, I already feel better!
     m_Metadata:
       m_Items: []
+  - m_Id: 75837207761383424
+    m_Localized: A marmoset monkey! I must chase it away before it steals ingredients!!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

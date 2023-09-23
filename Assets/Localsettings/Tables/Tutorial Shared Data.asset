@@ -107,6 +107,10 @@ MonoBehaviour:
     m_Key: Pot_Client_Dialogue2
     m_Metadata:
       m_Items: []
+  - m_Id: 75837207761383424
+    m_Key: Monkey_Tutorial
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

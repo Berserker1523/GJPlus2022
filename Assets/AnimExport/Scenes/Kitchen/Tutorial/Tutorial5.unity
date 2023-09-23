@@ -329,11 +329,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5646855783497885816, guid: ed793622f9830774ba89c330e7afdcc2, type: 3}
   m_PrefabInstance: {fileID: 737830983}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1112053995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5970967039460073451, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
-  m_PrefabInstance: {fileID: 1947978710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1259188617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3553479505178817885, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
@@ -5203,12 +5198,40 @@ MonoBehaviour:
   - {fileID: 1259188617}
   - {fileID: 0}
   - {fileID: 1711525164}
-  starsData: {fileID: 11400000, guid: 72af623b995d89d48a51ac9c4f4afe1c, type: 2}
+  starsData:
+    currentLevel: 0
+    stars:
+    - level: 0
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 1
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 2
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 3
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 4
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 5
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    tutorials: 000000000000
+    attendedClients: 0000000000000000000000000000000000000000000000000000000000000000
+    streaksAmount: 0
   currentPos: {fileID: 1902126786}
   pequi: {fileID: 11400000, guid: b992ab57f71f33b44a8960695eae2a60, type: 2}
   carnauba: {fileID: 11400000, guid: a051d7945e85d8945b9baa9356ce1b52, type: 2}
   trashTutorialPopUp: {fileID: 0}
-  updatedMythsGO: {fileID: 1112053995}
 --- !u!4 &1902126786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1221739211421877506, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
@@ -5298,8 +5321,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4378569765635575599, guid: 7e5342cdc8822bc478f873c40dd59161, type: 2}
     - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -402
+      objectReference: {fileID: 0}
+    - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 310.79004
+      objectReference: {fileID: 0}
+    - target: {fileID: 684387183952174638, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 690
+      value: 201.00012
       objectReference: {fileID: 0}
     - target: {fileID: 789642637965407037, guid: cd37d29a97cd75f4b9c3bc925229fbff, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -5727,6 +5770,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2314157356300195437, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2498690801328389224, guid: dffb659c8b5e7044f8b3246092781bcf, type: 3}
       propertyPath: m_IsActive
       value: 1

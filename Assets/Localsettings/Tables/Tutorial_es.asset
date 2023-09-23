@@ -125,6 +125,10 @@ MonoBehaviour:
     m_Localized: "\xA1Muchas gracias, ya me siento mejor!"
     m_Metadata:
       m_Items: []
+  - m_Id: 75837207761383424
+    m_Localized: "Un mono tit\xED!! Debo ahuyentarlo antes de que se robe los ingredientes!!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

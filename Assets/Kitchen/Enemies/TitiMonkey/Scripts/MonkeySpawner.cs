@@ -46,7 +46,7 @@ namespace Kitchen
             {
                foreach (CookingToolController mortar in mortars)
                {
-                    if (mortar.CurrentCookingIngredient != null)
+                    if (mortar !=null &&  mortar.CurrentCookingIngredient != null)
                     {
                         StartCoroutine(MonkeyCounter(mortar.transform));
                         elapsedTime = 0.0f;
@@ -72,6 +72,7 @@ namespace Kitchen
         {
             GameObject monkey =  Instantiate(monkeyPrefab, transform.position, Quaternion.identity);
             monkey.GetComponent<TitiMonkeyBehaviour>().targetPos = target;
+            EventManager.Dispatch(MonkeyEvents.spawn, monkey.transform);
         }
     }
 }

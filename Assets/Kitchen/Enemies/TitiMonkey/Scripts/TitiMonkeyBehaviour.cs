@@ -14,6 +14,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
 
     private Tween tween;
     private bool inTutorial;
+    public bool inMonkeyTutorial;
 
     private void Awake() => EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
 
@@ -30,7 +31,8 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     private void OnDestroy() => EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (inTutorial) return;
+        if (inTutorial &&!inMonkeyTutorial) return;
+        EventManager.Dispatch(MonkeyEvents.frightened);
         Flee();
     }
 
