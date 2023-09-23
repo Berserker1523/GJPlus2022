@@ -1,4 +1,5 @@
 using Events;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -54,11 +55,16 @@ namespace Kitchen.Tutorial
         {
             gameObject.SetActive(true);
             EventManager.Dispatch(GlobalTutorialEvent.inTutorial, true);
-            Transform[] tutorialTargets = { toTrashTranform, trashController.transform };
+            Transform[] tutorialTargets = { toTrashTranform.parent, trashController.transform };
             handTutorial.StartNewSequence(tutorialTargets);
-            toTrashTranform.GetComponent<DragView>().ForceAllowDragging();
-            //EnableColliders(tutorialTargets);
+            StartCoroutine(AllowDragOnTutorialTarget(toTrashTranform));
             EventManager.AddListener(TrashEvent.Throw, EndPotionTutorial);
+        }
+
+        IEnumerator AllowDragOnTutorialTarget(Transform toTrashTranform)
+        {
+            yield return new WaitForSeconds(0.5f);
+            toTrashTranform.GetComponent<DragView>().ForceAllowDragging();
         }
 
         private void EndPotionTutorial()
@@ -67,14 +73,7 @@ namespace Kitchen.Tutorial
             gameObject.SetActive(false);
             EventManager.Dispatch(GlobalTutorialEvent.inTutorial,false);
             EventManager.RemoveListener(TrashEvent.Throw, EndPotionTutorial);
-            //EventManager.Dispatch(GlobalTrigerableTutorialEvent.TrashTutorialTriggered, (int)GlobalTrigerableTutorialEvent.TrashTutorialTriggered);
         }
-
-        //private void EnableColliders(Transform[] tutorialTargets)
-        //{
-        //    foreach(var tranform in tutorialTargets)
-        //        tranform.GetComponent<DragView>().is = true;
-        //}
 
         private void OnDestroy()
         {
@@ -85,5 +84,4 @@ namespace Kitchen.Tutorial
 
         public void ReEnableBurntTrigger() => alreadyBurntFoodDisplayed = true;
     }
-
 }
