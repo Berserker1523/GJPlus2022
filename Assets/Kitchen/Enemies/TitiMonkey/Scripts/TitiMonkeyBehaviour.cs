@@ -1,5 +1,7 @@
 using DG.Tweening;
+using Events;
 using Kitchen;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,12 +9,28 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
 {
 
     [SerializeField] Vector3 startPos;
-    [SerializeField] Transform targetPos;
+    [SerializeField] public Transform targetPos;
     [SerializeField, Range(1f, 10f)] float fallDuration, fleeDuration;
 
     private Tween tween;
+    private bool inTutorial;
+
+    private void Awake() => EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
+
+    private void PauseMonkeyBehaviourWhileInTutorial(bool _inTutorial) 
+    {
+        if (_inTutorial)
+            tween.Pause();
+        else
+            tween.Play();
+
+        inTutorial = _inTutorial;
+    }
+
+    private void OnDestroy() => EventManager.RemoveListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (inTutorial) return;
         Flee();
     }
 
@@ -25,7 +43,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     [ContextMenu("Start movement")]
     void MoveToFruit()
     {
-        tween = transform.DOMove(targetPos.position, fallDuration).OnComplete(() =>
+        tween = transform.DOMove(targetPos.parent.position, fallDuration).OnComplete(() =>
         {
             Steal();
             Flee();
@@ -34,6 +52,13 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
 
     void Steal()
     {
+        if (targetPos.position != transform.position)
+        {
+            //Miss steal()
+            Flee();
+            return;
+        }
+
         CookingToolController mortar = targetPos.GetComponent<CookingToolController>();
         mortar.Release();
     }
@@ -41,7 +66,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     void Flee()
     {
         tween.Kill();
-        transform.DOMove(startPos, fleeDuration).OnComplete(() =>
+        tween = transform.DOMove(startPos, fleeDuration).OnComplete(() =>
         {
            Destroy(gameObject);
         });
