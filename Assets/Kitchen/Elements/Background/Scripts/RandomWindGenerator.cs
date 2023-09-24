@@ -9,7 +9,7 @@ namespace Kitchen
         [SerializeField] GameObject windPrefab;
 
         [Header("Counter Timer")]
-        private float timeInterval = 5f;
+        private float timeInterval = 10f;
         private float elapsedTime = 0.0f;
 
         [Header("Global Stopper")]
