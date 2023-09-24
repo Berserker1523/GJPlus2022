@@ -104,7 +104,7 @@ namespace Kitchen
         {
             SetClientGenderAndIllnessAnimations(requiredRecipe);
 
-            transform.localScale = Vector3.one * 0.01f;
+            transform.localScale = Vector3.one * 0.05f;
             scaleTween = transform.DOScale(0.55f, 15f).SetEase(Ease.InSine);
             walkTween = transform.DOMove(finalDestination.position, 15f).SetEase(Ease.InSine)
             .OnComplete(() => { 
