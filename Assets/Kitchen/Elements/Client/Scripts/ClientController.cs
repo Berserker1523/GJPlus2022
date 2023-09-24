@@ -47,9 +47,10 @@ namespace Kitchen
         [SerializeField] RuntimeAnimatorController[] animators = new RuntimeAnimatorController[2];
         Animator animator;
 
-        private string animatorIllnessParameter = "Illness";
-        private string animatorRecuperatedParameter = "Recuperated";
-        private string animatorDiedParameter = "Died";
+        private readonly string animatorIllnessParameter = "Illness";
+        private readonly string animatorRecuperatedParameter = "Recuperated";
+        private readonly string animatorDiedParameter = "Died";
+        private readonly string animatorArriveParameter = "Arrive";
 
         private string[] animsDie = new string[] { "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
         private bool clientDied;
@@ -106,7 +107,10 @@ namespace Kitchen
             transform.localScale = Vector3.one * 0.01f;
             scaleTween = transform.DOScale(0.55f, 15f).SetEase(Ease.InSine);
             walkTween = transform.DOMove(finalDestination.position, 15f).SetEase(Ease.InSine)
-            .OnComplete(() => { InitCanvas(requiredRecipe, potionSprite); });
+            .OnComplete(() => { 
+                InitCanvas(requiredRecipe, potionSprite);
+                animator.SetTrigger(animatorArriveParameter);
+            });
         }
 
         private void InitCanvas(RecipeData requiredRecipe, Sprite potionSprite)
