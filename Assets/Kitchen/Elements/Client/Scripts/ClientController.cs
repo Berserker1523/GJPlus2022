@@ -53,7 +53,7 @@ namespace Kitchen
         private readonly string animatorArriveParameter = "Arrive";
 
         private string[] animsDie = new string[] { "char1_viruelaToMuerte", "char2_viruelaToMuerte", "char1_fiebreToMuerte", "char2_fiebreToMuerte" };
-        private bool clientDied;
+        private bool clientDied, clientArrived;
         private bool gruntDispatched;
         private bool sicknessParticlesActivated;
         private BoxCollider2D bc;
@@ -66,7 +66,6 @@ namespace Kitchen
 
             waitingTimer = MaxWaitingSeconds;
             slider.value = 1;
-            EventManager.Dispatch(ClientEvent.Arrived);
 
             dropView.OnDropped += HandleDropped;
             dropView.IsDraggedObjectInteractableWithMe = IsDraggedObjectInteractableWithMe;
@@ -110,6 +109,8 @@ namespace Kitchen
             .OnComplete(() => { 
                 InitCanvas(requiredRecipe, potionSprite);
                 animator.SetTrigger(animatorArriveParameter);
+                clientArrived = true;
+                EventManager.Dispatch(ClientEvent.Arrived);
             });
         }
 
@@ -155,7 +156,7 @@ namespace Kitchen
 
         private void Update()
         {
-            if (clientServed || inTutorial)
+            if (clientServed || inTutorial || !clientArrived)
                 return;
 
             waitingTimer -= Time.deltaTime;
