@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 675435458439337140}
   - component: {fileID: 7315185481738124839}
   - component: {fileID: 4600525010706921119}
+  - component: {fileID: 7166942170982409325}
   m_Layer: 0
   m_Name: MiniPalm
   m_TagString: Untagged
@@ -105,3 +106,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7166942170982409325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672693124645613796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4552e53b60c0d5840adc153aa24cfee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
