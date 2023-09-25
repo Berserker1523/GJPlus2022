@@ -154,7 +154,7 @@ namespace Kitchen
                 ClearShaker();
                 return;
             }
-            potionResult.SetPotion(currentRecipe, failedPotionSkin);
+            potionResult.SetPotion(new RecipeData(), failedPotionSkin);
 
             EventManager.Dispatch(PotionEvent.FailedRecipe, potionResult.transform);
             potionParticles.FailureActivator();
