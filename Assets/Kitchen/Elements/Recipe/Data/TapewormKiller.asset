@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   recipeName: 1
-  diseasesItCures: 1
+  diseasesItCures: 2
   sprite: {fileID: 1084799438, guid: 6d0bcd9a499841341b066210f0643e43, type: 3}
   ingredients:
   - name: 

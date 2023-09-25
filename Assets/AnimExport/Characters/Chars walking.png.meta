@@ -704,6 +704,300 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Chars walking_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1352
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81efb1a5cc1e8cf4cacf76c62103a336
+      internalID: 979723834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_52
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1352
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40724489456c7394180f1d3d049ad459
+      internalID: -226082771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_67
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1352
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edeac75fb1a836f45a113f7268d7b0bd
+      internalID: -1093230742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_81
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1353
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af85cd42a6ea87141afaa8da32fa3b30
+      internalID: 303486246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_98
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1353
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8864e586f292034681c16e99b8095a9
+      internalID: -1233998616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_105
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1352
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80aeb16513f41548b42a2256e093ca4
+      internalID: -1449958780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_118
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1353
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7889ef95ddcec894bba853ddfd0ff95e
+      internalID: -1166174290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_28
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 769
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4803043feb089bc499b119f389a0a3f6
+      internalID: 1166176588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_29
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 771
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797da5aac0932c140a7c29ce9b49537b
+      internalID: 1470985610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_30
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 764
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9ff3dcc04e7ba40b15d06548d1fee6
+      internalID: 1075141373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_31
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 766
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36186de0bb755a418c3e2ba3ff34cf1
+      internalID: -351503075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 752
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0762447cb8345fe498fd4219aa7c7608
+      internalID: 776527995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_33
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 753
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb861582023f65a4ea4fbf7f3a5ba51c
+      internalID: -40440865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chars walking_34
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 751
+        width: 213
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63217335ad2aba5479e9b9e015d7d4ee
+      internalID: 2062381934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -716,34 +1010,134 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Chars walking_16: 676749460
-      Chars walking_7: 556857198
-      Chars walking_18: 1401174471
-      Chars walking_17: -1755073433
+      Chars walking_111: 314262123
+      Chars walking_32: 776527995
+      Chars walking_33: -40440865
       Chars walking_13: 1931205585
-      Chars walking_12: -1302727383
+      Chars walking_37: -1528768637
+      Chars walking_73: 1750414813
       Chars walking_0: -164953203
       Chars walking_25: -1634529424
-      Chars walking_2: 3718659
       Chars walking_3: 222873280
-      Chars walking_24: -570865616
-      Chars walking_1: -241425315
-      Chars walking_20: -183318987
-      Chars walking_10: -356224339
-      Chars walking_11: 1094656559
+      Chars walking_105: -1449958780
+      Chars walking_102: -2044453427
       Chars walking_21: -1922867353
-      Chars walking_15: 514306885
+      Chars walking_49: -474198777
+      Chars walking_77: 1853597022
+      Chars walking_94: 1497035901
+      Chars walking_82: -1535871741
+      Chars walking_110: -1301580316
+      Chars walking_127: -351736584
+      Chars walking_67: -1093230742
       Chars walking_4: -628312514
       Chars walking_26: 227562723
-      Chars walking_8: 1567208126
+      Chars walking_97: 926499627
+      Chars walking_71: 1075969778
+      Chars walking_62: 1541697748
       Chars walking_5: 1568669334
       Chars walking_14: 436592304
-      Chars walking_19: 1426848765
+      Chars walking_72: -1750360407
+      Chars walking_95: 436789142
+      Chars walking_109: 1473130650
+      Chars walking_47: -1299301043
+      Chars walking_44: -289722481
+      Chars walking_80: 488425950
+      Chars walking_7: 556857198
+      Chars walking_42: -292007777
+      Chars walking_51: -1455852372
+      Chars walking_85: -1376510087
+      Chars walking_63: 1984669825
+      Chars walking_86: -1843498395
+      Chars walking_81: 303486246
+      Chars walking_40: -1942756831
+      Chars walking_120: -1347927811
+      Chars walking_29: 1470985610
+      Chars walking_118: -1166174290
+      Chars walking_108: 1666883435
+      Chars walking_89: 2124417127
+      Chars walking_91: -1432547061
+      Chars walking_10: -356224339
+      Chars walking_11: 1094656559
+      Chars walking_52: -226082771
+      Chars walking_31: -351503075
+      Chars walking_55: 1187478519
+      Chars walking_15: 514306885
+      Chars walking_64: -700322278
+      Chars walking_121: 927226587
+      Chars walking_66: 230366766
+      Chars walking_45: 979723834
+      Chars walking_128: 13674804
+      Chars walking_88: -674364675
+      Chars walking_117: -1795324366
       Chars walking_6: 1954429567
-      Chars walking_28: 1166176588
-      Chars walking_22: -1858166794
+      Chars walking_50: -685689252
+      Chars walking_79: -1065232807
       Chars walking_23: 1038909100
       Chars walking_9: 507342937
+      Chars walking_43: -1649789121
       Chars walking_27: 339387176
+      Chars walking_101: 268723846
+      Chars walking_93: -1458391980
+      Chars walking_38: 205746378
+      Chars walking_60: -1343631811
+      Chars walking_65: 19197120
+      Chars walking_107: -1213590778
+      Chars walking_18: 1401174471
+      Chars walking_104: 1385872580
+      Chars walking_48: -1056811480
+      Chars walking_100: -1604112214
+      Chars walking_20: -183318987
+      Chars walking_2: 3718659
+      Chars walking_24: -570865616
+      Chars walking_1: -241425315
+      Chars walking_68: -1472216520
+      Chars walking_36: 1913544291
+      Chars walking_113: -1081130178
+      Chars walking_70: -2024855705
+      Chars walking_46: -677861829
+      Chars walking_119: 878606685
+      Chars walking_8: 1567208126
+      Chars walking_83: 1151748005
+      Chars walking_96: 554679895
+      Chars walking_99: -622604746
+      Chars walking_19: 1426848765
+      Chars walking_112: 2033331651
+      Chars walking_126: -553591330
+      Chars walking_116: -837087388
+      Chars walking_28: 1166176588
+      Chars walking_84: -481244508
+      Chars walking_103: -35976715
+      Chars walking_124: 1004998975
+      Chars walking_122: -1335915565
+      Chars walking_115: -1787938303
+      Chars walking_106: -1340338025
+      Chars walking_61: 1424446337
+      Chars walking_98: -1233998616
+      Chars walking_17: -1755073433
+      Chars walking_56: -727913772
+      Chars walking_12: -1302727383
+      Chars walking_75: -130730187
+      Chars walking_53: 2118671136
+      Chars walking_34: 2062381934
+      Chars walking_114: 855295665
+      Chars walking_39: -842928549
+      Chars walking_123: 1731281848
+      Chars walking_74: -465434022
+      Chars walking_90: 1134396482
+      Chars walking_41: -1295913456
+      Chars walking_125: 304947816
+      Chars walking_30: 1075141373
+      Chars walking_92: -1408432833
+      Chars walking_59: -902035453
+      Chars walking_54: -1930482484
+      Chars walking_78: 484827585
+      Chars walking_35: -1388689828
+      Chars walking_87: 2123812631
+      Chars walking_22: -1858166794
+      Chars walking_76: -1718874518
+      Chars walking_69: 1038737227
+      Chars walking_57: -1756660508
+      Chars walking_58: -811701751
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
