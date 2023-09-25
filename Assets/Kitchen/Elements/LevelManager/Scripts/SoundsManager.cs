@@ -30,7 +30,7 @@ namespace Kitchen
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
 
         //InGameEvents
-        public static string backgroundMusic = "event:/Music/MusicaFondo";
+        public static string backgroundMusic = "event:/Music - AMBX/MusicaFondo";
         public static string hurryParameter = "Hurry";
 
         public static string endlevelStarsMusic = "event:/SFX/UI/Stars";

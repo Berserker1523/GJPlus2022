@@ -177,7 +177,7 @@ MonoBehaviour:
       Data2: 1122011631
       Data3: 1671705262
       Data4: -1735821957
-    Path: event:/Music/Selva
+    Path: event:/Music - AMBX/Selva
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -207,7 +207,7 @@ MonoBehaviour:
       Data2: 1176341054
       Data3: 940155014
       Data4: 52610504
-    Path: "event:/Music/M\xFAsica Men\xFA"
+    Path: "event:/Music - AMBX/M\xFAsica Men\xFA"
   Event: 
   PlayEvent: 1
   StopEvent: 2
