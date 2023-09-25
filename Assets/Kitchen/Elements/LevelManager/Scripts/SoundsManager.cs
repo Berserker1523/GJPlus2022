@@ -28,6 +28,7 @@ namespace Kitchen
         string failedRecipeEvent = "event:/SFX/Cocina/Receta incorrecta";
         string hoverEvent = "event:/SFX/Cocina/Snap Object";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
+        public static readonly string monkeyFrightenedEvent = "event:/SFX/Jugabilidad/Macaco";
 
         //InGameEvents
         public static string backgroundMusic = "event:/Music/MusicaFondo";
@@ -76,6 +77,7 @@ namespace Kitchen
             Events.EventManager.AddListener(TrashEvent.Throw, PlayThrowTrashSFX);
 
             Events.EventManager.AddListener(PotionEvent.Poof, PlayPoofSFX);
+            Events.EventManager.AddListener(MonkeyEvents.frightened, PlayMonkeyFrightenedSFX);
 
             //Game Status SFX
             Events.EventManager.AddListener(GameStatus.Won, PlayWonSFX);
@@ -112,6 +114,7 @@ namespace Kitchen
             Events.EventManager.RemoveListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
             Events.EventManager.RemoveListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
             Events.EventManager.RemoveListener(TrashEvent.Throw, PlayThrowTrashSFX);
+            Events.EventManager.RemoveListener(MonkeyEvents.frightened, PlayMonkeyFrightenedSFX);
 
             Events.EventManager.RemoveListener(PotionEvent.Poof, PlayPoofSFX);
 
@@ -151,6 +154,7 @@ namespace Kitchen
         void PlayFailedRecipeSFX() => PlaySFX(failedRecipeEvent);
         void PlayHoverSFX() => PlaySFX(hoverEvent);
         void PlayThrowTrashSFX() => PlaySFX(throwTrashEvent);
+        void PlayMonkeyFrightenedSFX() => PlaySFX(monkeyFrightenedEvent);
 
         void PlayPoofSFX() => PlaySFX(shakerPoofEvent);
 
