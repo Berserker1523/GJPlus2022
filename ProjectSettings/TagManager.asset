@@ -59,6 +59,9 @@ TagManager:
   - name: Draggable
     uniqueID: 2073871431
     locked: 0
+  - name: MonkeyLayout
+    uniqueID: 3409468577
+    locked: 0
   - name: Dragged
     uniqueID: 2907678249
     locked: 0
