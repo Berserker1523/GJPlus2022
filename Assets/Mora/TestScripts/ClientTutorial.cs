@@ -17,6 +17,7 @@ namespace tutorial
         [SerializeField] Animator animator;
         private string animatorIllnessParameter = "Illness";
         private string animatorRecuperatedParameter = "Recuperated";
+        private readonly string animatorArriveParameter = "Arrive";
         private ParticleSystem healingVFX;
 
 
@@ -50,6 +51,7 @@ namespace tutorial
         protected void Awake()
         {
             animator.SetInteger(animatorIllnessParameter, (int)requiredRecipe.diseasesItCures);
+            animator.SetTrigger(animatorArriveParameter);
             healingVFX = GetComponentInChildren<ParticleSystem>();
         }
 
