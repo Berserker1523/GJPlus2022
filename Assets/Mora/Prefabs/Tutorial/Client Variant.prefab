@@ -429,6 +429,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2022946399098424140, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022946399098424140, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -951686349
+      objectReference: {fileID: 0}
     - target: {fileID: 2130681133293801131, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -463,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964778235840464446, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_Name
-      value: Client Tutorial
+      value: Client Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4457050025299396745, guid: 5ba2cd9fdb8238e408ae748a73c38d24, type: 3}
       propertyPath: m_Sprite
