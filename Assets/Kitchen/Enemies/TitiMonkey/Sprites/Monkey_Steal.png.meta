@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 9109805eee5dd364c8f79d938f6e80ac
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monkey_Steal_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2072
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.052408814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b04c9b70b8a4d640ac625d57ab50b1d
+      internalID: -1603132050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2072
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.05725684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2edb479ab3a2447bb9fdc0aebd0662
+      internalID: -1076351357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_2
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 2072
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.07299939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619888323c0af2541af5982197624555
+      internalID: -953537215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_3
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 2069
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.04030542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a1b0c5b3c2b5347b856cca81327747
+      internalID: -1665666885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_4
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 2065
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.033470947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111c62e40f13899458da0707bbf7fef6
+      internalID: 64202983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_5
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 2035
+        width: 600
+        height: 2037
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.03229272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7130271d7ebeed249b8d96a84149ed46
+      internalID: 1740724917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_6
+      rect:
+        serializedVersion: 2
+        x: 4265
+        y: 2072
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.062239625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6865a273c106f4e871796899e768a5
+      internalID: -1720260242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 35
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.10112522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f8789027f3eca428f2d5447f73f614
+      internalID: 729975596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_8
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 41
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.12548329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230b0a5dc1be4734089fd24b4815630b
+      internalID: 1450684418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_9
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 37
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.13873158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a87de20db118db49b810e6ff673b678
+      internalID: -827710466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_10
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 37
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.13502818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71005c6d8a7fc44585a00990e0daa69
+      internalID: -776987673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_11
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 37
+        width: 600
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.1579557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56662798cd29f6e4e8c4cd511493ac66
+      internalID: -892875094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_12
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 37
+        width: 600
+        height: 1992
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.16988297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b683bec96b6e64f9891848c78d8b5f
+      internalID: -219837021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_Steal_13
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 52
+        width: 600
+        height: 1979
+      alignment: 9
+      pivot: {x: 0.1239189, y: 0.1505833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38799dabc80debf44b1767ca5be4a6ce
+      internalID: 1213001962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Monkey_Steal_5: 1740724917
+      Monkey_Steal_10: -776987673
+      Monkey_Steal_13: 1213001962
+      Monkey_Steal_9: -827710466
+      Monkey_Steal_12: -219837021
+      Monkey_Steal_11: -892875094
+      Monkey_Steal_3: -1665666885
+      Monkey_Steal_4: 64202983
+      Monkey_Steal_1: -1076351357
+      Monkey_Steal_8: 1450684418
+      Monkey_Steal_2: -953537215
+      Monkey_Steal_7: 729975596
+      Monkey_Steal_0: -1603132050
+      Monkey_Steal_6: -1720260242
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

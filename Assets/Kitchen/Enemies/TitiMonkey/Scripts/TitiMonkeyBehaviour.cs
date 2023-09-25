@@ -2,6 +2,7 @@ using DG.Tweening;
 using Events;
 using Kitchen;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,6 +17,8 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     private bool inTutorial;
     public bool inMonkeyTutorial;
 
+    private Animator animator;
+    private readonly string stealAnimationParam = "Steal";
     private void Awake() => EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
 
     private void PauseMonkeyBehaviourWhileInTutorial(bool _inTutorial) 
@@ -38,6 +41,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
 
     void Start()
     {
+        animator = GetComponent <Animator>();
         startPos = transform.position;
         MoveToFruit();
     }
@@ -47,22 +51,31 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     {
         tween = transform.DOMove(targetPos.parent.position, fallDuration).OnComplete(() =>
         {
-            Steal();
-            Flee();
+            StartCoroutine(Steal());
         });
     }
 
-    void Steal()
+    IEnumerator Steal()
     {
         if (targetPos.position != transform.position)
         {
             //Miss steal()
             Flee();
-            return;
+            yield break;
         }
 
+        animator.SetTrigger(stealAnimationParam);
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => !IsAnimationPlaying(animator, stealAnimationParam));
         CookingToolController mortar = targetPos.GetComponent<CookingToolController>();
         mortar.Release();
+        Flee();
+    }
+
+    bool IsAnimationPlaying(Animator anim, string animName)
+    {
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        return stateInfo.IsName(animName) && stateInfo.normalizedTime < 1.0f;
     }
 
     void Flee()
