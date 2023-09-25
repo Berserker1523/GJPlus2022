@@ -32,7 +32,7 @@ namespace Kitchen
         public static readonly string monkeyFrightenedEvent = "event:/SFX/Jugabilidad/Macaco";
 
         //InGameEvents
-        public static string backgroundMusic = "event:/Music/MusicaFondo";
+        public static string backgroundMusic = "event:/Music - AMBX/MusicaFondo";
         public static string hurryParameter = "Hurry";
 
         public static string endlevelStarsMusic = "event:/SFX/UI/Stars";
