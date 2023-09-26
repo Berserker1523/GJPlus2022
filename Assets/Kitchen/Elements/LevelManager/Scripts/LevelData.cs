@@ -51,6 +51,7 @@ namespace Kitchen
             {
                 GlobalCounter.attendedClients = gameData.attendedClients;
                 GlobalCounter.streaksAmount = gameData.streaksAmount;
+                GlobalCounter.frightenedMonkeys = gameData.frightenedMonkeys;
             }
         }
 

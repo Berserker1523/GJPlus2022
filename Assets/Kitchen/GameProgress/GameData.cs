@@ -12,7 +12,7 @@ namespace Kitchen
         [HideInInspector] public bool[] tutorials = new bool[6];
 
         public int[] attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
-        public int streaksAmount; 
+        public int streaksAmount , frightenedMonkeys; 
         [SerializeField]
 
         public GameData()

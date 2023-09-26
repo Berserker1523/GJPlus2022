@@ -36,6 +36,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
     {
         if (inTutorial &&!inMonkeyTutorial) return;
         EventManager.Dispatch(MonkeyEvents.frightened);
+        GlobalCounter.frightenedMonkeys++;
         Flee();
     }
 

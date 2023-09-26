@@ -6,6 +6,6 @@ namespace Kitchen
     {
         public static int[] attendedClients = new int[Enum.GetValues((typeof(IngredientName))).Length];
         public static int streaksAmount = 0;
+        public static int frightenedMonkeys=0;
     }
-
 }

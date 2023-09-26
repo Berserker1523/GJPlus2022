@@ -119,6 +119,43 @@ MonoBehaviour:
       de esta maravillosa selva."
     m_Metadata:
       m_Items: []
+  - m_Id: 43154700380934144
+    m_Localized: "En el coraz\xF3n del Amazonas podr\xE1s encontrarte con el mono
+      tit\xED, un peque\xF1o primate conocido por su pelaje suave y variados colores,
+      desde tonos grises y marrones hasta vibrantes tonos de blanco, negro y naranja. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154875786727424
+    m_Localized: "Estos traviesos monos son considerados guardianes juguetones y
+      curiosos de la selva en las leyendas de las tribus locales tambi\xE9n son un
+      s\xEDmbolo de armon\xEDa y en muchas ocasiones no es raro ver algunos c\xF3mo
+      mascotas sagradas para los chamanes de mayor rango."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154878345252864
+    m_Localized: "Aunque m\xE1s all\xE1 de su papel espiritual, los tit\xEDes tienen
+      una debilidad especial por las frutas y las pociones m\xE1gicas que los jugadores
+      crean en su b\xFAsqueda. Mientras exploras y curas a los miembros de t\xFA
+      tribu, debes estar alerta, ya que estos curiosos guardianes a menudo intentan
+      robar una fruta de tus provisiones."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154917637492736
+    m_Localized: "Recuerda, para proteger tus valiosos ingredientes, deber\xE1s hacer
+      clic en los monos tit\xED para espantarlos antes de que sean demasiado r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154926684606464
+    m_Localized: "\xBFLograr\xE1s mantener a raya a estos juguetones guardianes de
+      la selva mientras descubres los secretos de la selva amaz\xF3nica en tu emocionante
+      aventura? Contin\xFAa tu camino y \xE1brete paso para convertirte en el pr\xF3ximo
+      \"Kumu\" \xA1La decisi\xF3n est\xE1 en tus manos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43169056384618496
+    m_Localized: "Guardianes juguetones de la amazon\xEDa"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -111,6 +111,42 @@ MonoBehaviour:
       organizations that work to conserve this wonderful rainforest.
     m_Metadata:
       m_Items: []
+  - m_Id: 43154700380934144
+    m_Localized: In the heart of the Amazon, you can encounter the titi monkey, a
+      small primate known for its soft fur and a range of colors, from shades of
+      gray and brown to vibrant hues of white, black, and orange.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154878345252864
+    m_Localized: ' These mischievous monkeys are considered playful and curious guardians
+      of the jungle in the legends of local tribes, and they are also a symbol of
+      harmony. In many cases, it''s not uncommon to see some of them as sacred pets
+      for the highest-ranking shamans.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154875786727424
+    m_Localized: ' These mischievous monkeys are considered playful and curious guardians
+      of the jungle in the legends of local tribes, and they are also a symbol of
+      harmony. In many cases, it''s not uncommon to see some of them as sacred pets
+      for the highest-ranking shamans.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154917637492736
+    m_Localized: Remember, to protect your valuable ingredients, you'll need to click
+      on the titi monkeys to scare them away before they become too quick.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154926684606464
+    m_Localized: Will you manage to keep these playful jungle guardians at bay while
+      uncovering the secrets of the Amazon rainforest in your thrilling adventure?
+      Forge ahead on your path and strive to become the next "Kumu." The decision
+      is in your hands!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43169056384618496
+    m_Localized: Playful guardians of the Amazon
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

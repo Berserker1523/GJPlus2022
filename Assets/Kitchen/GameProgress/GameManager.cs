@@ -37,6 +37,7 @@ public class GameManager : SinglentonParent<GameManager>
     {
         gameData.attendedClients = GlobalCounter.attendedClients;
         gameData.streaksAmount = GlobalCounter.streaksAmount;
+        gameData.frightenedMonkeys = GlobalCounter.frightenedMonkeys;
         SaveManager.SavePlayerData(gameData);
     }
 

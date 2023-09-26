@@ -123,6 +123,43 @@ MonoBehaviour:
       para conservar essa maravilhosa floresta tropical."
     m_Metadata:
       m_Items: []
+  - m_Id: 43154700380934144
+    m_Localized: "No cora\xE7\xE3o da Amaz\xF4nia, voc\xEA pode encontrar o macaco-titi,
+      um pequeno primata conhecido por sua pelagem macia e variada, que vai desde
+      tons de cinza e marrom at\xE9 tons vibrantes de branco, preto e laranja."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154875786727424
+    m_Localized: "Esses macacos travessos s\xE3o considerados guardi\xF5es brincalh\xF5es
+      e curiosos da selva nas lendas das tribos locais e tamb\xE9m s\xE3o um s\xEDmbolo
+      de harmonia. Em muitos casos, n\xE3o \xE9 incomum v\xEA-los como animais de
+      estima\xE7\xE3o sagrados para os xam\xE3s de mais alto escal\xE3o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154878345252864
+    m_Localized: "Al\xE9m de seu papel espiritual, os macacos-titi t\xEAm uma fraqueza
+      especial por frutas e po\xE7\xF5es m\xE1gicas que os jogadores criam em sua
+      busca. Enquanto voc\xEA explora e cura os membros de sua tribo, deve permanecer
+      vigilante, pois esses guardi\xF5es curiosos muitas vezes tentam roubar uma
+      fruta de suas provis\xF5es. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154917637492736
+    m_Localized: "Lembre-se, para proteger seus ingredientes valiosos, voc\xEA precisar\xE1
+      clicar nos macacos-titi para assust\xE1-los antes que fiquem muito r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43154926684606464
+    m_Localized: "Voc\xEA conseguir\xE1 manter esses guardi\xF5es brincalh\xF5es
+      da floresta \xE0 dist\xE2ncia enquanto desvenda os segredos da floresta tropical
+      amaz\xF4nica em sua emocionante aventura? Avance em seu caminho e lute para
+      se tornar o pr\xF3ximo \"Kumu\". A decis\xE3o est\xE1 em suas m\xE3os!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43169056384618496
+    m_Localized: "Guardi\xF5es brincalh\xF5es da Amaz\xF4nia"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

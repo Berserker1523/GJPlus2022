@@ -7,6 +7,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Playables;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class MythsBookLeftTab : MythsBookTab
 {
@@ -50,6 +51,12 @@ public class MythsBookLeftTab : MythsBookTab
         _ingredientName= entry.ingredientName;
         SetBookEntry(gameData,  (BookEntry)entry);
     }
+
+    public void SetBookEntry(GameData gameData, Animal entry)
+    {
+        _goalsInt = entry.goalsInt;
+        SetBookEntry(gameData, (BookEntry)entry);
+    }
     private void OnEnable()
     {
         _goal.Arguments = new object[] { _argument0, argument1 };
@@ -90,6 +97,9 @@ public class MythsBookLeftTab : MythsBookTab
                 case ENUM_bookTabs.Places:
                     entryUnlocked = CheckLevelCompletions(i);
                     break;
+                case ENUM_bookTabs.Animals:
+                    entryUnlocked = CheckFrightenedMonkeys(i);
+                    break;
             }
              if(entryUnlocked)
             mythText += "\n\n" + GetStringFromLocalizedString(texts[i]);
@@ -120,6 +130,9 @@ public class MythsBookLeftTab : MythsBookTab
                 break;
             case ENUM_bookTabs.Places:
                 _goal.Arguments[0] = GetArgumentTakingInAccountTheTutorialCompletion(position);
+                break;
+            case ENUM_bookTabs.Animals:
+                _goal.Arguments[0] = _goalsInt[position] - _gameData.frightenedMonkeys;
                 break;
         }       
         return goals;
@@ -185,6 +198,14 @@ public class MythsBookLeftTab : MythsBookTab
     bool CheckAttendedClients(int pos)
     {
         if (_gameData.attendedClients[(int)_refIngredient] >= _goalsInt[pos])
+            return true;
+        else
+            return false;
+    }
+
+    bool CheckFrightenedMonkeys(int pos)
+    {
+        if (_gameData.frightenedMonkeys >= _goalsInt[pos])
             return true;
         else
             return false;

@@ -77,10 +77,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 8010823519888998404
+  - m_Id: 45691681728106496
+    m_Localized: "Mono Tit\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45691914952380416
+    m_Localized: " <color=#a06f47>[ <color=#e55c00> ahuyenta  <color=#5e9341>{0}
+      <color=#a06f47>monos tit\xEDes m\xE1s para expandir ] </color>"
+    m_Metadata:
+      m_Items:
+      - rid: 8010823519888998404
+  - m_Id: 45693121896910848
+    m_Localized: ANIMALES
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 8010823519888998404
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00802d63500305000080ad9a850305000080ad4c9203050000806d8196030500
+        m_Entries: 00802d63500305000080ad9a850305000080ad4c9203050000806d81960305000010d8f78d54a200
