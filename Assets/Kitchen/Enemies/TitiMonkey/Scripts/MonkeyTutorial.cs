@@ -7,6 +7,7 @@ public class MonkeyTutorial : MonoBehaviour
 {
     private HandTutorial handTutorial;
     [SerializeField] Animator thinkGlobeImage;
+    [SerializeField] Transform handTargetPos;
 
     private void Awake()
     {
@@ -24,15 +25,15 @@ public class MonkeyTutorial : MonoBehaviour
     private void CallMonkeyTutorialRoutine(Transform monkeyTransform)
     {
         monkeyTransform.GetComponent<TitiMonkeyBehaviour>().inMonkeyTutorial = true;
-        StartCoroutine(MonkeyTutorialRoutine(monkeyTransform));
+        StartCoroutine(MonkeyTutorialRoutine());
     }
 
-    private IEnumerator MonkeyTutorialRoutine(Transform monkeyTransform)
+    private IEnumerator MonkeyTutorialRoutine()
     {
         thinkGlobeImage.SetBool("Display",true);
         yield return new WaitForSeconds(1f);
         EventManager.Dispatch(GlobalTutorialEvent.inTutorial, true);
-        handTutorial.StartNewSequence(new Transform[]{monkeyTransform});
+        handTutorial.StartNewSequence(new Transform[]{ handTargetPos });
     }
     private void FinishTutorial()
     {
