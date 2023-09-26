@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 8161785557535336412}
   - component: {fileID: 242488867238123467}
   - component: {fileID: 6612423317363664666}
+  - component: {fileID: 5227565415345895247}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -286,6 +287,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5227565415345895247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348976013925902830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:69d786c88acdd364d99d064d633c7737
+    m_TableEntryReference:
+      m_KeyId: 10893176700928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6612423317363664666}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1230607544667689429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +2057,37 @@ MonoBehaviour:
   - {fileID: 3519202724223396797}
   - {fileID: 4381487315324566696}
   - {fileID: 8658592364957229591}
-  starsData: {fileID: 11400000, guid: 72af623b995d89d48a51ac9c4f4afe1c, type: 2}
+  starsData:
+    currentLevel: 0
+    stars:
+    - level: 0
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 1
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 2
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 3
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 4
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    - level: 5
+      goalStar: 0
+      timeStar: 0
+      streakStar: 0
+    tutorials: 000000000000
+    attendedClients: 0000000000000000000000000000000000000000000000000000000000000000
+    streaksAmount: 0
+    frightenedMonkeys: 0
   titleText: {fileID: 9019887087193056903}
   titleDilateText: {fileID: 9019887086730697209}
   wonTitleColor: {r: 0.9960785, g: 0.40784317, b: 0, a: 1}
@@ -2072,7 +2143,7 @@ MonoBehaviour:
     m_LocalVariables: []
   adviceStringEvent: {fileID: 8424639216573246705}
   mythsUpdatedGO: {fileID: 0}
-  buttonsLayout: {fileID: 0}
+  buttonsLayoutGO: {fileID: 0}
   fmodEvent: 
   fmodParameterName: 
   references:
