@@ -19,6 +19,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
 
     private Animator animator;
     private readonly string stealAnimationParam = "Steal";
+    private readonly string frightAnimationParam = "Frightened";
     private void Awake() => EventManager.AddListener<bool>(GlobalTutorialEvent.inTutorial, PauseMonkeyBehaviourWhileInTutorial);
 
     private void PauseMonkeyBehaviourWhileInTutorial(bool _inTutorial) 
@@ -37,6 +38,7 @@ public class TitiMonkeyBehaviour : MonoBehaviour, IPointerDownHandler
         if (inTutorial &&!inMonkeyTutorial) return;
         EventManager.Dispatch(MonkeyEvents.frightened);
         GlobalCounter.frightenedMonkeys++;
+        animator.SetTrigger(frightAnimationParam);
         Flee();
     }
 
