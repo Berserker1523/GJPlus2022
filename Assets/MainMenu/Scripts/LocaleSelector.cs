@@ -9,6 +9,7 @@ public class LocaleSelector : MonoBehaviour
     [SerializeField] LocaleID localeID;
     RectTransform rectTransform;
     Button flagButton;
+    GetLocalizationSettingsOnStartApplication localizationSettings;
     private void Awake()
     {
         circle.enabled = false;
@@ -19,7 +20,8 @@ public class LocaleSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        if (GetDefaultLocale() == (int)localeID)
+        localizationSettings = FindObjectOfType<GetLocalizationSettingsOnStartApplication>();
+        if (localizationSettings.GetDefaultLocale() == (int)localeID)
             SetCircleSelector();
     }
 
@@ -39,6 +41,4 @@ public class LocaleSelector : MonoBehaviour
         circle.rectTransform.localPosition = Vector2.zero;
         circle.enabled = true;
     }
-
-    public int GetDefaultLocale() => PlayerPrefs.GetInt("LocaleKey", 0);
 }

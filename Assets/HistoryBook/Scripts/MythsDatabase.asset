@@ -646,6 +646,68 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  animals:
+  - name:
+      m_TableReference:
+        m_TableCollectionName: GUID:76127b2dd3da0e54ca69ffc7aea3a347
+      m_TableEntryReference:
+        m_KeyId: 45691681728106496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    title:
+      m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43169056384618496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    sprite: {fileID: -1603132050, guid: 9109805eee5dd364c8f79d938f6e80ac, type: 3}
+    texts:
+    - m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43154700380934144
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43154875786727424
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43154878345252864
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43154917637492736
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:77d06748f4be02642af162a3439a012c
+      m_TableEntryReference:
+        m_KeyId: 43154926684606464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    goalsInt: 050000000a0000000f000000140000001e000000
   references:
     version: 2
     RefIds: []

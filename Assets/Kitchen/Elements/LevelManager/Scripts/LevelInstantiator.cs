@@ -16,7 +16,7 @@ namespace Kitchen
 
         [Header("Mortars")]
         [SerializeField] private GameObject mortarPrefab;
-        [SerializeField] private List<Transform> mortarsPositions;
+        [SerializeField] public List<Transform> mortarsPositions;
 
         [Header("Stoves")]
         [SerializeField] private GameObject stovePrefab;

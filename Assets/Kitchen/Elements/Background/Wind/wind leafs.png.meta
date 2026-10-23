@@ -1,0 +1,3699 @@
+fileFormatVersion: 2
+guid: 4204500373a2f3f4daed6981e8e9aaff
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 711, z: 543, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wind leafs_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1962
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2bb502e06bbd44dafd024a7d3d6658
+      internalID: -1878081179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1962
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb34ad91baa193489eb2fadc85c0e8c
+      internalID: 528369509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1962
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a001d1dc0a8a458428fe8bb0fe81fc38
+      internalID: 2009497143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1961
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe4daccc3a0f5146b68d34b8f55dec0
+      internalID: -1762770743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1960
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27b355f78733084298a18ea77a2b8a1
+      internalID: 1649446053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1959
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09af9ad4f8265c64181fa494b13fcbc5
+      internalID: -551862479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1955
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a8ee94eb2252e4fb5ea8a677899c60
+      internalID: 2080668169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1954
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aaeea6477371984a9a97e1718263d4a
+      internalID: -1553380171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_8
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1954
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc67f727e8b13814fb19c1aeb7d9de19
+      internalID: 1760410346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_9
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1954
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a53faa88713c454b8c9ded5763d8c88
+      internalID: -1468958598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_10
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1952
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5d1d0c1bd0ac043b5484b06ab0154e
+      internalID: 1993036557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_11
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1953
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3321f5a59d83a9643ae3be64abe13d92
+      internalID: -1285322005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1950
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42180a495bcefa74d811a0295e6ae4e1
+      internalID: -1821099899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_13
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1954
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2364fc8f1a4834ca38b7e2f1b33a51
+      internalID: 2101395604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_14
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1955
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59ebc920b7057d4e80977d32055d701
+      internalID: 1056022077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_15
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1955
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f07ef3bff8b9044e81fda64b6ff41ea
+      internalID: 1141935222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_16
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1955
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff70325182c7b94e8f207d8f9cbe8a9
+      internalID: 1657095878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_17
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1954
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12ebc275b7919e4cb74e09c9ae956be
+      internalID: -1999482932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_18
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1950
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d20942081ba2949947cd932414b017
+      internalID: -614586951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_19
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1886
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc4a36df7494cc499b9a4325b868497
+      internalID: 683187913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_20
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1883
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad594267911f4d44a9df015295e6510
+      internalID: 2020362846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1883
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c45c030731ed054d8c9af38a6f987aa
+      internalID: 1405211737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1883
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9798fcac47506d4449ecae7dfb08b268
+      internalID: 151147466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_23
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1882
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd409843e3c1a9e408ac5dca407fb0a6
+      internalID: 1303291238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1883
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfcc8d82172c874ea557c9b52c0b50c
+      internalID: 1268548135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_25
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1883
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfe58fb919a6e64591d63462edcfb8e
+      internalID: 409633780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_26
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1883
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692e943c1aadcff4c8da249f3329d659
+      internalID: -1258817664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_27
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1883
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f0eea6146f1484bbff9bbea4d30dd6
+      internalID: 2061107038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_28
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1883
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4dd13c5f8b4284983b22290f28ffa8
+      internalID: 1220143571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_29
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1883
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d94a4a8bcd5264389702f08cf88a77
+      internalID: 1259664475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_30
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1883
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d2788a346e9ea46a14f6a3ae5490e1
+      internalID: 1699630107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_31
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 1882
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00c7c07a1441cd4ca195fe11c07fff4
+      internalID: -1860698427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_32
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1883
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83d6b96c894fa74f97f9d22688a8c7b
+      internalID: 2145652869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_33
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1883
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cad296b671b8a4f9190c732070efb0
+      internalID: 826100253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_34
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1883
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a258c7d8245f7b478c88154fc4166be
+      internalID: 956846911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_35
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1886
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a206335b3a000314eb633dd90ae07b63
+      internalID: -1053003209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1811
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a9f0d1f91dde3408b87df5a0ab8bda
+      internalID: -900109127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_37
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1814
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c65333861f24b47b71b99a82d7b491
+      internalID: 1069301998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_38
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1814
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4401229e5d587409973cc456a8e3cb
+      internalID: -1914998282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_39
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1817
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a951b84cf5a7184bbdfd2878f118dce
+      internalID: 264055714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_40
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1818
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e8a7c3217299748a1e080ac44177d6
+      internalID: -434391115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_41
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1820
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9df5ddf6d8f06943806d0f77ef2876e
+      internalID: -22850928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_42
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1823
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb579e6e76e8594fafb8855a88b512a
+      internalID: -975995239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_43
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1824
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665b021819150b243bb3488ee757a44a
+      internalID: -1739742466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_44
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1828
+        width: 49
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1a0d06a915ca54fb111d39411d4497
+      internalID: 78960367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_45
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1832
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c096d8619a1a54bb9f6ef3498271e3
+      internalID: -1189650003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_46
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1830
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ef65957eb2b4942933b3027a47a58a
+      internalID: -1542774679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_47
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1830
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b4edb5fd9c11148a29e2cbab4b797f
+      internalID: 1772379959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_48
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1830
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f417ff308324ce43924b108ac6ac044
+      internalID: 1112129352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_49
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1830
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734bd5df488d5664eb3039f548b96e78
+      internalID: -1456589411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_50
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1827
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fd223a161a08240830caefd7f92049
+      internalID: -836966134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_51
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1825
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e93f98c8a61ec64baeafc4ee46c40be
+      internalID: 307100521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_52
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1824
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b8d28f6e2151f4ea72494c31e38bad
+      internalID: 145821069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_53
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1823
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c11461a80575847a5793fe272a986d
+      internalID: 1963029694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_54
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1824
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba03883a829b0ac4ab2eded5264344ed
+      internalID: -1704744433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_55
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1826
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ac2d7df9b6c7849984440d4854cf14
+      internalID: 981707311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_56
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1829
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8888b00768465b4b97efa3c538e8050
+      internalID: 1061906742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_57
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1828
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a66434b3b418f4088971f6616d0b28
+      internalID: 1391219113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1756
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92fc7cb6e7af4d49b8f193d1e85d7b7
+      internalID: 1431524120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_59
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1756
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c5183f5cd4ef24caa7ad321726965d
+      internalID: 1018838477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_60
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1757
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9f776a66d82eb4b9250bd505e7cf29
+      internalID: 1029874521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_61
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1758
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741cf0eb3e1904744853415585fa76cb
+      internalID: -2090731212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_62
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1760
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63ea763124bfc14a86e0abc200ac251
+      internalID: 1683352984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_63
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1762
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d46ef050f11524ab43108c41a69bde
+      internalID: 1916263141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_64
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1758
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5c08cf78c33074d97e2cf231af08c2
+      internalID: -1375794769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_65
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1764
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4ffcd8fdb077340a34c9fa3ca6b3bf
+      internalID: -1444994756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_66
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1764
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7347f55e01bcca0489fa8a6cbfc88375
+      internalID: -129473120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_67
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1764
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c00f3f475a89b4fb76cf5998219c3b
+      internalID: -1080332355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_68
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1764
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59320a3c79a5d7b4282c5f4ae4b29c60
+      internalID: 624925074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_69
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1765
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cae32bda86b83a469d3a71b0e9d27c3
+      internalID: -396064895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_70
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1758
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58727e6e628f004b96abbb62358c54a
+      internalID: -1889933694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_71
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1761
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6737681fd1b9b7f44bec77d1e1ba5d53
+      internalID: 1620192905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_72
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1757
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803d210e1e4ecc947a3ebcd479b95745
+      internalID: -1643832771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_73
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1752
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3c0e0ae57c8554db1975cfb6647575
+      internalID: 891267215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_74
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1752
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b62aeb4ba3cbb4794c5ab870fe380f
+      internalID: 1118016311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_75
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1755
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a368bdc4dd32f5549bd2f58607f09d0a
+      internalID: -674617374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_76
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1756
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83cdf88ff4df1b418bf5f25fd6e8781
+      internalID: 832406540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_77
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1757
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f771cae12477c4a41addc3e6721511a2
+      internalID: 153145611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_78
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1760
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7922d8a0773e454189c963646814fcc
+      internalID: -519253509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_79
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1762
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dccee183290ed44489536bfbd0fe374
+      internalID: -1365260319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_80
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1703
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab8e2331e9154e4f8f74337683003cf
+      internalID: 1882584157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_81
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1702
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5324221962869e498640b4314f325e6
+      internalID: -1406295767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_82
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1698
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb0c05bfcab26c4ca5aba02d0b4a88d
+      internalID: 1519202472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_83
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1699
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e57e26571b2afd46a64605c8f1dfbb8
+      internalID: -195561932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_84
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1700
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac5a2b72e7b40d429f5a9acc4dc769b
+      internalID: -1262869861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_85
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1697
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c98378ba6210d43b8b5ee3c977888f
+      internalID: 1911001561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_86
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1692
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a596095d7d4a1408b14bbc4708f16d
+      internalID: 2073320840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_87
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1696
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb4116b9e8eef940a2766ea1e912e8e
+      internalID: -1833105550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_88
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1692
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6122edd907643a4eb5da8f7f230e892
+      internalID: -349488974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_89
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1694
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6745ad07c4132439ecf023739ded93
+      internalID: 1179538146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_90
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1692
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06bee52bc03165439389f8856a4e947
+      internalID: -1339094105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_91
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1693
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faff3f00fee720e4cb565b0d3d9a4ad2
+      internalID: -111996429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_92
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1695
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32bfc9507cdbd44db5409fc277d625b
+      internalID: -1373324908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_93
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1696
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408f0bb86e4c21e4eb2b1fe209342249
+      internalID: -570063980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_94
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1697
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6686ec6cfe212d14facd4877dfa06986
+      internalID: -1140056185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_95
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1697
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac2f6071cb8f0a4caa71e0fb9af75ea
+      internalID: -1305690134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_96
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1696
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5430bb0c6afd052459584aaa16cf975d
+      internalID: -438256393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_97
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1694
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c96cae6bde57f4496e3d7becae4fda
+      internalID: 353424738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_98
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1692
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612afb7906f2e43489bfedef95d39fd3
+      internalID: 591285183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_99
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1680
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc2c3f553488864e80f3da66cce66b7
+      internalID: -255549862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_100
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1680
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b221b11f7d054a648978a314bedc949f
+      internalID: -1068032405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_101
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1626
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff12512ac4a2a4419f537f1472a2162
+      internalID: -637754583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_102
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1623
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff9028e45c5948429fa70a0c92cd1bd
+      internalID: -1377661945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_103
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1623
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ea20f68f2bd21439181fd13a1b1e03
+      internalID: 1474140319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_104
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1623
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3129381cfd128964d8231de6bde356ae
+      internalID: 1115453722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_105
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1621
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a503e5353f3687248b1cd0c904cdd370
+      internalID: 628740369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_106
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1623
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409a9e631fc8a7643b724642fb145bb1
+      internalID: -859943627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_107
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1623
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a791ece70dde84b93c065d5bafba7a
+      internalID: -134637037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_108
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1623
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3747cefcb99d1134b8746fbf7e791a67
+      internalID: 979792524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_109
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1623
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f4097f716849b449653b7b5729eeab
+      internalID: -495358539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_110
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1623
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38711ddede1d26c419d3cdbb224a4bd0
+      internalID: 1351522325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_111
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1623
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018c3be211237a341a2f85bf1e8f4d6e
+      internalID: 764391453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_112
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1623
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a099e41dcb39d41982593af6690a38
+      internalID: -381997780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_113
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1622
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13bea0331149374896e9b5e8c97b3d2
+      internalID: 511725306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_114
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1623
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32aafcf952a8fe1419074061af2cbb0b
+      internalID: 215801877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_115
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1623
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6e30861589610438d5e481c1499ff8
+      internalID: -1488500041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_116
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1623
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5573ffcb3a80842ad0c3557bddf155
+      internalID: 43621885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_117
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1626
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca1d005030db18449f61d3028bb7953
+      internalID: 1171071612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_118
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1551
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018f56cebbe0b2b48b3ae6da912a884e
+      internalID: 1384901874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_119
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1554
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40afd01f8ee47b48a5719f1e50da294
+      internalID: -569563370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_120
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1556
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fc49a942c5568448ab041a3b24cfcb
+      internalID: -1513038035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_121
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1557
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed5b4ea9e064154ea1047bb782218aa
+      internalID: 104617033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_122
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1554
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e25c0a88dcc05f4db8f274356a50ec3
+      internalID: 1531963379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_123
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1560
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a691390c6c0de814fb272be1b43308ec
+      internalID: -1541703132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_124
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1560
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acede462520db749a4a486705dde70e
+      internalID: -1675493054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_125
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1565
+        width: 47
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c813245f35fa3cc4b8161004bdd77882
+      internalID: -1276637261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_126
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1568
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6a92bd883ac714688b2eb461657981
+      internalID: 525918269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_127
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1572
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1ab018fb664e745872bd61c347c25b
+      internalID: -1859598919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_128
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1572
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1eebf4b71967141b40c83320bb5bd0
+      internalID: 996288056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_129
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1574
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f9cb4f2e75eae498d7e1afef5701db
+      internalID: 726481958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_130
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1572
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa10e1f42145aca4b81b0cee9100d8c8
+      internalID: -1474148313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_131
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1570
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1af798285602794ab5e3ad8181773ea
+      internalID: -435325584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_132
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1567
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a3856fe2a6147419f39dd7a6ab3625
+      internalID: -826993642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_133
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1565
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35073ccece6403d41897a22ddd230413
+      internalID: -264106533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_134
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1560
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c183cdc4020a7ff4ca711e0acfc337f2
+      internalID: 1563451468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_135
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1563
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca0cbb04be161547ae24be8aed35312
+      internalID: 871584236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_136
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1564
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bae4eddb544284884506b26be8a880
+      internalID: -1360439252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_137
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1565
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f0ce13d12ae1342b86eca91ac18693
+      internalID: -966631078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_138
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1568
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebec19cf6c4f27f47bca5e6fb43b4c01
+      internalID: 1176470944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_139
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1568
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde78342954f5c746ac7646c9947cf80
+      internalID: 359364557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_140
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1478
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edf7ebda9a7ee6419d7c6c4a7685b10
+      internalID: -781224373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_141
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1478
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe682c1743a30f4c9c0e72d8e3bed74
+      internalID: -726238357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_142
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1479
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4872603e6ffe02946af6a7bdf263e5e5
+      internalID: 1805690339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_143
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1480
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0165e6061b4996b40ba9931a6b6aca93
+      internalID: 1762393615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_144
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1480
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6569362416f66594e97cc65a09f8bcd5
+      internalID: -1759479719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_145
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1484
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae9cc4e1c6c1c4408ea2212903ef6a1
+      internalID: -1647168617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_146
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1484
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efb52d8caaf32b49bdb4bcd50339fc4
+      internalID: 434441583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_147
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1486
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814146b810c7c63418092cdf71f987bf
+      internalID: -909518461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_148
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1486
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93213658f74d92448732912dcdbcfca
+      internalID: -1575563336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_149
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1486
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4910da0b0f8ffed419ad3b338b67f7fe
+      internalID: -1618039095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_150
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1486
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f142a7bcde107549b81b9f0abae796d
+      internalID: 1343759958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_151
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1486
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2fbe72b1c49404da1940f1d8b6a4cb
+      internalID: -317484581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_152
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1482
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eef2668a27e6734ab2053f1b04c1b94
+      internalID: 1031237936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_153
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1480
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4019620469de434b8308675f5309622
+      internalID: 481660043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_154
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1480
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd12516174ca1d0479e42a448a01aac3
+      internalID: -2043301749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_155
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1478
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ec758db606f36418105096b5f00202
+      internalID: 1331405662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_156
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1477
+        width: 12
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f3cdc2ad4d8244f89cc1ebdcd1be2e
+      internalID: -1778078415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_157
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1475
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ac415027aebc1489a0fb545bc73228
+      internalID: -386153574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_158
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1478
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96be6b872b65a464cac4e1fe572203d2
+      internalID: -1269922850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_159
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1476
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698db4adada5eed4abe70f465b7f63c6
+      internalID: -627583037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_160
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 1483
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3db0417d92de74d8bc9a6f862645b5
+      internalID: -1525165067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind leafs_161
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1484
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed64f978d74e284d80168da8c43169a
+      internalID: -720406213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wind leafs_29: 1259664475
+      wind leafs_44: 78960367
+      wind leafs_148: -1575563336
+      wind leafs_108: 979792524
+      wind leafs_142: 1805690339
+      wind leafs_69: -396064895
+      wind leafs_143: 1762393615
+      wind leafs_83: -195561932
+      wind leafs_33: 826100253
+      wind leafs_92: -1373324908
+      wind leafs_90: -1339094105
+      wind leafs_61: -2090731212
+      wind leafs_13: 2101395604
+      wind leafs_51: 307100521
+      wind leafs_68: 624925074
+      wind leafs_14: 1056022077
+      wind leafs_55: 981707311
+      wind leafs_155: 1331405662
+      wind leafs_23: 1303291238
+      wind leafs_101: -637754583
+      wind leafs_12: -1821099899
+      wind leafs_150: 1343759958
+      wind leafs_127: -1859598919
+      wind leafs_118: 1384901874
+      wind leafs_0: -1878081179
+      wind leafs_11: -1285322005
+      wind leafs_21: 1405211737
+      wind leafs_132: -826993642
+      wind leafs_53: 1963029694
+      wind leafs_31: -1860698427
+      wind leafs_95: -1305690134
+      wind leafs_120: -1513038035
+      wind leafs_87: -1833105550
+      wind leafs_117: 1171071612
+      wind leafs_152: 1031237936
+      wind leafs_130: -1474148313
+      wind leafs_133: -264106533
+      wind leafs_115: -1488500041
+      wind leafs_19: 683187913
+      wind leafs_72: -1643832771
+      wind leafs_88: -349488974
+      wind leafs_36: -900109127
+      wind leafs_41: -22850928
+      wind leafs_48: 1112129352
+      wind leafs_62: 1683352984
+      wind leafs_78: -519253509
+      wind leafs_125: -1276637261
+      wind leafs_137: -966631078
+      wind leafs_140: -781224373
+      wind leafs_147: -909518461
+      wind leafs_66: -129473120
+      wind leafs_154: -2043301749
+      wind leafs_49: -1456589411
+      wind leafs_75: -674617374
+      wind leafs_122: 1531963379
+      wind leafs_113: 511725306
+      wind leafs_105: 628740369
+      wind leafs_156: -1778078415
+      wind leafs_145: -1647168617
+      wind leafs_149: -1618039095
+      wind leafs_159: -627583037
+      wind leafs_77: 153145611
+      wind leafs_136: -1360439252
+      wind leafs_8: 1760410346
+      wind leafs_104: 1115453722
+      wind leafs_30: 1699630107
+      wind leafs_16: 1657095878
+      wind leafs_26: -1258817664
+      wind leafs_102: -1377661945
+      wind leafs_126: 525918269
+      wind leafs_85: 1911001561
+      wind leafs_42: -975995239
+      wind leafs_129: 726481958
+      wind leafs_37: 1069301998
+      wind leafs_114: 215801877
+      wind leafs_70: -1889933694
+      wind leafs_17: -1999482932
+      wind leafs_38: -1914998282
+      wind leafs_91: -111996429
+      wind leafs_27: 2061107038
+      wind leafs_81: -1406295767
+      wind leafs_121: 104617033
+      wind leafs_24: 1268548135
+      wind leafs_109: -495358539
+      wind leafs_39: 264055714
+      wind leafs_138: 1176470944
+      wind leafs_84: -1262869861
+      wind leafs_97: 353424738
+      wind leafs_22: 151147466
+      wind leafs_67: -1080332355
+      wind leafs_123: -1541703132
+      wind leafs_18: -614586951
+      wind leafs_32: 2145652869
+      wind leafs_10: 1993036557
+      wind leafs_96: -438256393
+      wind leafs_56: 1061906742
+      wind leafs_60: 1029874521
+      wind leafs_25: 409633780
+      wind leafs_119: -569563370
+      wind leafs_94: -1140056185
+      wind leafs_71: 1620192905
+      wind leafs_58: 1431524120
+      wind leafs_131: -435325584
+      wind leafs_153: 481660043
+      wind leafs_1: 528369509
+      wind leafs_59: 1018838477
+      wind leafs_134: 1563451468
+      wind leafs_65: -1444994756
+      wind leafs_160: -1525165067
+      wind leafs_7: -1553380171
+      wind leafs_43: -1739742466
+      wind leafs_5: -551862479
+      wind leafs_82: 1519202472
+      wind leafs_161: -720406213
+      wind leafs_79: -1365260319
+      wind leafs_40: -434391115
+      wind leafs_64: -1375794769
+      wind leafs_50: -836966134
+      wind leafs_57: 1391219113
+      wind leafs_93: -570063980
+      wind leafs_54: -1704744433
+      wind leafs_141: -726238357
+      wind leafs_107: -134637037
+      wind leafs_63: 1916263141
+      wind leafs_98: 591285183
+      wind leafs_20: 2020362846
+      wind leafs_144: -1759479719
+      wind leafs_116: 43621885
+      wind leafs_15: 1141935222
+      wind leafs_3: -1762770743
+      wind leafs_89: 1179538146
+      wind leafs_124: -1675493054
+      wind leafs_100: -1068032405
+      wind leafs_112: -381997780
+      wind leafs_34: 956846911
+      wind leafs_139: 359364557
+      wind leafs_157: -386153574
+      wind leafs_73: 891267215
+      wind leafs_158: -1269922850
+      wind leafs_47: 1772379959
+      wind leafs_2: 2009497143
+      wind leafs_135: 871584236
+      wind leafs_28: 1220143571
+      wind leafs_86: 2073320840
+      wind leafs_110: 1351522325
+      wind leafs_111: 764391453
+      wind leafs_146: 434441583
+      wind leafs_74: 1118016311
+      wind leafs_6: 2080668169
+      wind leafs_45: -1189650003
+      wind leafs_80: 1882584157
+      wind leafs_46: -1542774679
+      wind leafs_76: 832406540
+      wind leafs_4: 1649446053
+      wind leafs_99: -255549862
+      wind leafs_35: -1053003209
+      wind leafs_52: 145821069
+      wind leafs_103: 1474140319
+      wind leafs_106: -859943627
+      wind leafs_128: 996288056
+      wind leafs_9: -1468958598
+      wind leafs_151: -317484581
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

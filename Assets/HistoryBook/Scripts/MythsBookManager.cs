@@ -67,6 +67,9 @@ namespace HistoryBook
                     case ENUM_bookTabs.Places:
                     bookEntry = mythsDatabase.places;
                 break;
+                case ENUM_bookTabs.Animals:
+                    bookEntry = mythsDatabase.animals;
+                break;
                     default:
                         bookEntry = mythsDatabase.myths;
                     break;
@@ -90,6 +93,9 @@ namespace HistoryBook
                         break;
                     case ENUM_bookTabs.Ingredients:
                         leftTab.SetBookEntry(gameData, (Ingredient) bookEntries[i]);
+                        break;
+                    case ENUM_bookTabs.Animals:
+                        leftTab.SetBookEntry(gameData, (Animal)bookEntries[i]); 
                         break;
                     default:
                         leftTab.SetBookEntry(gameData, bookEntries[i], i);

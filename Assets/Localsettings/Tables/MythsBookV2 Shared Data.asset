@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: Goal_EntryFull
     m_Metadata:
       m_Items: []
+  - m_Id: 45691681728106496
+    m_Key: Title_Monkey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45691914952380416
+    m_Key: Goal_Animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45693121896910848
+    m_Key: Title_Animals
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

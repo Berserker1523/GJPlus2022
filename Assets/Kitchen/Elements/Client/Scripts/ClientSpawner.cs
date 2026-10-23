@@ -71,10 +71,10 @@ namespace Kitchen
             if (spawnPoint == null)
                 return;
 
-            ClientController client = Instantiate(clientPrefab, spawnPoint.transform);
-
+            ClientController client = Instantiate(clientPrefab, spawnPoint.transform.position + Vector3.up, Quaternion.identity);
+            client.transform.parent = spawnPoint;
             int recipeNumber = SetRandomRecipe(Random.Range(0, 101));
-            client.Initialize(levelInstantiator.LevelData.levelRecipes[recipeNumber], levelInstantiator.LevelData.levelRecipes[recipeNumber].sprite);
+            client.Initialize(levelInstantiator.LevelData.levelRecipes[recipeNumber], levelInstantiator.LevelData.levelRecipes[recipeNumber].sprite, spawnPoint.transform);
             SetRandomNextSpawnTime();
             clientsSpawned += 1;
         }

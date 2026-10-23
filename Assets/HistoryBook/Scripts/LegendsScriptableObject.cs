@@ -10,6 +10,7 @@ public class LegendsScriptableObject : ScriptableObject
     [SerializeField] public IndigenousCommunity[] indigenousCommunities;
     [SerializeField] public Ingredient[] ingredients;
     [SerializeField] public Place[] places;
+    [SerializeField] public Animal[] animals;
 }
 
 public abstract class BookEntry
@@ -53,4 +54,13 @@ public class Place : BookEntry
 {
     public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Places;
     public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Places");
+}
+
+
+[Serializable]
+public class Animal : BookEntry
+{
+    public override ENUM_bookTabs bookEntryType => ENUM_bookTabs.Animals;
+    public override LocalizedString goal => new LocalizedString("MythsBookV2", "Goal_Animals");
+    public int[] goalsInt;
 }

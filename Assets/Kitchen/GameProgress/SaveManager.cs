@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class SaveManager 
 {
-    public static readonly string path = "/kumuData29_05.json";
+    public static readonly string path = "/kumuData25_09.json";
     public static void SavePlayerData(GameData starsData)
     {
 

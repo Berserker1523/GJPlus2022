@@ -1,4 +1,5 @@
 using FMODUnity;
+using System;
 using UnityEngine;
 
 namespace Kitchen
@@ -28,6 +29,7 @@ namespace Kitchen
         string failedRecipeEvent = "event:/SFX/Cocina/Receta incorrecta";
         string hoverEvent = "event:/SFX/Cocina/Snap Object";
         string throwTrashEvent = "event:/SFX/Cocina/Trash";
+        public static readonly string monkeyFrightenedEvent = "event:/SFX/Jugabilidad/Macaco";
 
         //InGameEvents
         public static string backgroundMusic = "event:/Music - AMBX/MusicaFondo";
@@ -35,7 +37,7 @@ namespace Kitchen
 
         public static string endlevelStarsMusic = "event:/SFX/UI/Stars";
         public static string endLevelStarsParameter = "Stars Count";
-
+        public static readonly string windEvent = "event:/Music - AMBX/Viento";
         //Game Status SFX Events
         string wonEvent = "event:/SFX/Jugabilidad/Gana Nivel";
         string lostEvent = "event:/SFX/Jugabilidad/Pierde Nivel";
@@ -76,6 +78,7 @@ namespace Kitchen
             Events.EventManager.AddListener(TrashEvent.Throw, PlayThrowTrashSFX);
 
             Events.EventManager.AddListener(PotionEvent.Poof, PlayPoofSFX);
+            Events.EventManager.AddListener(MonkeyEvents.frightened, PlayMonkeyFrightenedSFX);
 
             //Game Status SFX
             Events.EventManager.AddListener(GameStatus.Won, PlayWonSFX);
@@ -88,8 +91,13 @@ namespace Kitchen
             Events.EventManager.AddListener(Events.GlobalEvent.Locked, PlayLockedButtonSFX);
             Events.EventManager.AddListener(Events.GlobalEvent.Unlocked, PlayUnLockedButtonSFX);
             
+            //InGameEvents
+            Events.EventManager.AddListener(BackgroundEvent.windRight, PlayWindEvent);
+            Events.EventManager.AddListener(BackgroundEvent.windLeft, PlayWindEvent);
+
             //TODO: General UI SFX
         }
+
 
         private void OnDestroy()
         {
@@ -112,6 +120,7 @@ namespace Kitchen
             Events.EventManager.RemoveListener(PotionEvent.FailedRecipe, PlayFailedRecipeSFX);
             Events.EventManager.RemoveListener(ObjectInteractionEvents.Hover, PlayHoverSFX);
             Events.EventManager.RemoveListener(TrashEvent.Throw, PlayThrowTrashSFX);
+            Events.EventManager.RemoveListener(MonkeyEvents.frightened, PlayMonkeyFrightenedSFX);
 
             Events.EventManager.RemoveListener(PotionEvent.Poof, PlayPoofSFX);
 
@@ -125,6 +134,10 @@ namespace Kitchen
             //History Book SFX
             Events.EventManager.RemoveListener(Events.GlobalEvent.Locked, PlayLockedButtonSFX);
             Events.EventManager.RemoveListener(Events.GlobalEvent.Unlocked, PlayUnLockedButtonSFX);
+
+            //InGameEvents
+            Events.EventManager.RemoveListener(BackgroundEvent.windRight, PlayWindEvent);
+            Events.EventManager.RemoveListener(BackgroundEvent.windLeft, PlayWindEvent);
 
             //TODO: General UI SFX
         }
@@ -151,12 +164,16 @@ namespace Kitchen
         void PlayFailedRecipeSFX() => PlaySFX(failedRecipeEvent);
         void PlayHoverSFX() => PlaySFX(hoverEvent);
         void PlayThrowTrashSFX() => PlaySFX(throwTrashEvent);
+        void PlayMonkeyFrightenedSFX() => PlaySFX(monkeyFrightenedEvent);
 
         void PlayPoofSFX() => PlaySFX(shakerPoofEvent);
 
         //Game Status SFX
         void PlayWonSFX() => PlaySFX(wonEvent);
         void PlayLostSFX() => PlaySFX(lostEvent);
+
+        //In Game Events
+        private void PlayWindEvent() => PlaySFX(windEvent);
 
         //Main Menu SFX
         void PlayplayButtonSFX() => PlaySFX(playButtonEvent);

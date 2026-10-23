@@ -123,6 +123,11 @@ MonoBehaviour:
     m_Localized: "Muito obrigado, j\xE1 me sinto melhor!"
     m_Metadata:
       m_Items: []
+  - m_Id: 75837207761383424
+    m_Localized: "Um macaco saguim! Preciso afugent\xE1-lo antes que ele roube os
+      ingredientes!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
